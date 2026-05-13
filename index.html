@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>내 월세 적정한가? 강서구 화곡동 시세 검증</title>
+<meta name="description" content="강서구 화곡동 월세·전세 실거래 데이터로 본인 계약 조건이 적정한지 즉시 확인하세요. 국토교통부 공개 자료 기반.">
+<style>
+:root{
+  --navy:#0d1f3c;
+  --blue:#1565c0;
+  --blue-light:#e8f1fb;
+  --blue-50:#f4f8fd;
+  --gold:#d4a73a;
+  --green:#2e7d32;
+  --green-light:#e8f5e9;
+  --red:#c62828;
+  --red-light:#ffebee;
+  --yellow:#f9a825;
+  --yellow-light:#fff8e1;
+  --gray:#4a4a4a;
+  --gray-lite:#888;
+  --gray-bg:#f5f5f5;
+  --border:#e0e0e0;
+  --shadow:0 2px 12px rgba(13,31,60,.08);
+  --shadow-lg:0 8px 24px rgba(13,31,60,.12);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Malgun Gothic','맑은 고딕','Apple SD Gothic Neo',sans-serif;
+  background:linear-gradient(180deg,#f8fafc 0%,#eef2f7 100%);
+  min-height:100vh;
+  color:#222;
+  line-height:1.6;
+}
+.container{max-width:780px;margin:0 auto;padding:20px 16px 60px}
+
+/* HEADER */
+header{
+  background:linear-gradient(135deg,var(--navy),var(--blue));
+  color:#fff;
+  padding:28px 24px;
+  border-radius:16px;
+  margin-bottom:20px;
+  box-shadow:var(--shadow-lg);
+  position:relative;
+  overflow:hidden;
+}
+header::before{
+  content:'';
+  position:absolute;
+  top:-60%;right:-20%;
+  width:300px;height:300px;
+  background:radial-gradient(circle,rgba(212,167,58,.18) 0%,transparent 60%);
+}
+.brand{font-size:11px;letter-spacing:3px;opacity:.8;margin-bottom:6px}
+h1{font-size:22px;font-weight:700;line-height:1.4;margin-bottom:8px;position:relative}
+.subtitle{font-size:13px;opacity:.85;position:relative}
+.subtitle strong{color:var(--gold)}
+
+/* CARD */
+.card{
+  background:#fff;
+  border-radius:14px;
+  padding:24px;
+  margin-bottom:16px;
+  box-shadow:var(--shadow);
+  border:1px solid var(--border);
+}
+.card h2{
+  font-size:16px;
+  font-weight:700;
+  color:var(--navy);
+  margin-bottom:16px;
+  padding-left:10px;
+  border-left:4px solid var(--blue);
+}
+
+/* FORM */
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:520px){.form-grid{grid-template-columns:1fr}}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:13px;color:var(--gray);font-weight:500}
+.field label .req{color:var(--red);font-size:11px;margin-left:2px}
+.field select,.field input{
+  padding:12px 14px;
+  border:1.5px solid var(--border);
+  border-radius:10px;
+  font-size:15px;
+  font-family:inherit;
+  background:#fafafa;
+  color:#222;
+  transition:all .15s;
+}
+.field select:focus,.field input:focus{
+  outline:none;border-color:var(--blue);
+  background:#fff;
+  box-shadow:0 0 0 3px rgba(21,101,192,.12);
+}
+.field .unit{font-size:11px;color:var(--gray-lite);margin-top:2px}
+.btn-primary{
+  width:100%;
+  padding:16px;
+  background:linear-gradient(135deg,var(--navy),var(--blue));
+  color:#fff;
+  border:none;
+  border-radius:12px;
+  font-size:16px;
+  font-weight:700;
+  cursor:pointer;
+  margin-top:16px;
+  letter-spacing:.5px;
+  transition:transform .15s;
+  font-family:inherit;
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+.btn-primary:disabled{opacity:.5;cursor:not-allowed;transform:none}
+
+/* SEGMENTED */
+.seg{display:flex;gap:6px;flex-wrap:wrap}
+.seg button{
+  flex:1;
+  min-width:60px;
+  padding:10px 8px;
+  border:1.5px solid var(--border);
+  background:#fafafa;
+  color:var(--gray);
+  border-radius:8px;
+  font-size:13px;
+  cursor:pointer;
+  font-family:inherit;
+  transition:all .15s;
+}
+.seg button.active{
+  background:var(--navy);
+  color:#fff;
+  border-color:var(--navy);
+}
+.seg button:hover:not(.active){border-color:var(--blue);color:var(--blue)}
+
+/* RESULT */
+#result{display:none}
+.verdict{
+  border-radius:14px;
+  padding:24px;
+  text-align:center;
+  margin-bottom:16px;
+  position:relative;
+  overflow:hidden;
+}
+.verdict.good{background:linear-gradient(135deg,var(--green),#43a047);color:#fff}
+.verdict.warn{background:linear-gradient(135deg,var(--yellow),#fbc02d);color:#fff}
+.verdict.bad{background:linear-gradient(135deg,var(--red),#e53935);color:#fff}
+.verdict.cheap{background:linear-gradient(135deg,var(--blue),#1976d2);color:#fff}
+.verdict.nodata{background:linear-gradient(135deg,#757575,#9e9e9e);color:#fff}
+.verdict .icon{font-size:42px;margin-bottom:10px}
+.verdict .title{font-size:22px;font-weight:700;margin-bottom:8px;letter-spacing:-.5px}
+.verdict .sub{font-size:14px;opacity:.95;line-height:1.6}
+.verdict .delta{
+  display:inline-block;
+  margin-top:12px;
+  padding:6px 16px;
+  background:rgba(255,255,255,.2);
+  border-radius:20px;
+  font-size:13px;
+  font-weight:600;
+}
+
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}
+.stat{
+  background:var(--blue-50);
+  padding:14px 8px;
+  border-radius:10px;
+  text-align:center;
+}
+.stat .label{font-size:11px;color:var(--gray-lite);margin-bottom:4px}
+.stat .value{font-size:18px;font-weight:700;color:var(--navy)}
+.stat .value .small{font-size:11px;font-weight:400;color:var(--gray-lite)}
+
+/* TABLE */
+.deals-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
+.deals-table th{
+  background:var(--navy);color:#fff;
+  padding:10px 6px;text-align:center;font-weight:500;font-size:12px;
+}
+.deals-table td{
+  padding:10px 6px;
+  border-bottom:1px solid var(--border);
+  text-align:center;
+}
+.deals-table tr.user-input{background:var(--yellow-light);font-weight:600}
+.deals-table tr:nth-child(even):not(.user-input){background:#fafafa}
+.tag{
+  display:inline-block;padding:2px 8px;border-radius:10px;
+  font-size:10px;font-weight:600;letter-spacing:.3px;
+}
+.tag-월세{background:var(--blue-light);color:var(--blue)}
+.tag-전세{background:var(--green-light);color:var(--green)}
+
+.notice{
+  background:var(--yellow-light);
+  border-left:4px solid var(--yellow);
+  padding:12px 16px;
+  border-radius:8px;
+  font-size:12px;
+  color:#665;
+  line-height:1.7;
+  margin-top:12px;
+}
+
+footer{
+  text-align:center;
+  padding:30px 20px;
+  color:var(--gray-lite);
+  font-size:11px;
+  line-height:1.7;
+}
+footer a{color:var(--blue);text-decoration:none}
+
+.loading{
+  display:none;text-align:center;padding:40px;color:var(--gray-lite);
+}
+.loading.show{display:block}
+.spinner{
+  display:inline-block;
+  width:32px;height:32px;
+  border:3px solid var(--border);
+  border-top-color:var(--blue);
+  border-radius:50%;
+  animation:spin .8s linear infinite;
+  margin-bottom:10px;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.no-data{
+  text-align:center;padding:30px;
+  color:var(--gray-lite);font-size:13px;
+  background:var(--gray-bg);
+  border-radius:10px;
+  margin-top:10px;
+}
+
+@media(max-width:480px){
+  h1{font-size:18px}
+  .card{padding:18px}
+  .stat .value{font-size:15px}
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <div class="brand">RENT CHECKER</div>
+    <h1>내 월세, <span style="color:var(--gold)">적정</span>한가요?</h1>
+    <div class="subtitle">강서구 <strong>화곡동</strong> 실거래 데이터 기반 시세 검증 · 국토교통부 공개자료</div>
+  </header>
+
+  <div class="card">
+    <h2>📝 본인 계약 정보 입력</h2>
+
+    <div class="field" style="margin-bottom:16px">
+      <label>유형 <span class="req">*</span></label>
+      <div class="seg" id="segType">
+        <button data-value="" class="active">전체</button>
+        <button data-value="오피스텔">오피스텔</button>
+        <button data-value="빌라">빌라</button>
+        <button data-value="아파트">아파트</button>
+      </div>
+    </div>
+
+    <div class="field" style="margin-bottom:16px">
+      <label>거래 유형 <span class="req">*</span></label>
+      <div class="seg" id="segDealKind">
+        <button data-value="월세" class="active">월세</button>
+        <button data-value="전세">전세</button>
+      </div>
+    </div>
+
+    <div class="form-grid">
+      <div class="field">
+        <label>전용면적 <span class="req">*</span></label>
+        <input type="number" id="area" placeholder="예: 49.5" step="0.1" inputmode="decimal">
+        <div class="unit">㎡ 단위 (등기부등본 또는 계약서 확인)</div>
+      </div>
+      <div class="field">
+        <label>보증금 <span class="req">*</span></label>
+        <input type="number" id="deposit" placeholder="예: 1000" inputmode="numeric">
+        <div class="unit">만원 단위 (예: 보증금 1000만원 → 1000 입력)</div>
+      </div>
+      <div class="field" id="rentField">
+        <label>월세 <span class="req">*</span></label>
+        <input type="number" id="rent" placeholder="예: 65" inputmode="numeric">
+        <div class="unit">만원 단위 (월세 65만원 → 65 입력)</div>
+      </div>
+    </div>
+
+    <button class="btn-primary" id="checkBtn" onclick="check()">🔍 내 월세 시세 확인하기</button>
+  </div>
+
+  <div class="loading" id="loading">
+    <div class="spinner"></div>
+    <div>실거래 데이터 분석 중...</div>
+  </div>
+
+  <div id="result">
+    <div id="verdictBox"></div>
+
+    <div class="card">
+      <h2>📊 시세 비교</h2>
+      <div class="stat-grid" id="statGrid"></div>
+      <div id="rangeNote" style="font-size:12px;color:var(--gray-lite);text-align:center;margin-bottom:8px"></div>
+    </div>
+
+    <div class="card">
+      <h2>📋 비슷한 조건의 최근 실거래 5건</h2>
+      <div id="dealsContainer"></div>
+      <div class="notice">
+        💡 <strong>표시된 데이터</strong>: 본인 입력 조건과 가장 가까운 실거래 5건<br>
+        🔒 <strong>익명화</strong>: 개인정보 보호를 위해 단지명은 유형별 익명코드(오피스텔 A 등)로 표시.
+        동일 알파벳은 같은 단지를 의미합니다.<br>
+        ⚠️ <strong>주의</strong>: 본 데이터는 국토교통부 신고 자료 기반이며, 시점·층·향·옵션 등에 따라 실제 가격은 다를 수 있습니다.
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div>본 도구는 국토교통부 실거래가 공개자료를 기반으로 합니다.</div>
+    <div style="margin-top:6px">데이터 갱신: <span id="updated">-</span></div>
+    <div style="margin-top:10px">© 강서구 부동산 블로그</div>
+  </footer>
+</div>
+
+<script>
+let DATA = null;
+
+// 데이터 로드
+async function loadData(){
+  try{
+    const r = await fetch('widget_data.json');
+    if(!r.ok) throw new Error('데이터 파일을 불러올 수 없습니다');
+    DATA = await r.json();
+    document.getElementById('updated').textContent = (DATA.generated_at||'').slice(0,10);
+  }catch(e){
+    // 로컬 테스트용 폴백
+    console.warn('데이터 로드 실패. 임베드 데이터 사용 시도:', e);
+    if(window.EMBED_DATA){
+      DATA = window.EMBED_DATA;
+      document.getElementById('updated').textContent = (DATA.generated_at||'').slice(0,10);
+    } else {
+      alert('데이터를 불러올 수 없습니다. widget_data.json 파일이 같은 폴더에 있는지 확인하세요.');
+    }
+  }
+}
+
+// 세그먼트 버튼
+document.querySelectorAll('.seg').forEach(seg=>{
+  seg.addEventListener('click', e=>{
+    if(e.target.tagName !== 'BUTTON') return;
+    seg.querySelectorAll('button').forEach(b=>b.classList.remove('active'));
+    e.target.classList.add('active');
+    // 거래유형 바뀌면 월세 입력란 보이기/숨기기
+    if(seg.id === 'segDealKind'){
+      const kind = e.target.dataset.value;
+      document.getElementById('rentField').style.display = kind === '월세' ? '' : 'none';
+    }
+  });
+});
+
+function getSegValue(segId){
+  return document.querySelector(`#${segId} button.active`).dataset.value;
+}
+
+function check(){
+  if(!DATA){alert('데이터 로딩 중입니다. 잠시 후 다시 시도하세요.');return}
+
+  const type = getSegValue('segType');
+  const dealKind = getSegValue('segDealKind');
+  const area = parseFloat(document.getElementById('area').value);
+  const deposit = parseInt(document.getElementById('deposit').value) || 0;
+  const rent = parseInt(document.getElementById('rent').value) || 0;
+
+  // 유효성 검사
+  if(!area || area <= 0){alert('전용면적을 입력하세요');return}
+  if(dealKind === '월세' && !rent){alert('월세 금액을 입력하세요');return}
+  if(dealKind === '전세' && !deposit){alert('전세 보증금을 입력하세요');return}
+
+  const userPyung = area / 3.3058;
+
+  // 로딩
+  document.getElementById('loading').classList.add('show');
+  document.getElementById('result').style.display = 'none';
+
+  setTimeout(()=>{
+    // 1. 같은 거래유형 필터
+    let candidates = DATA.deals.filter(d => {
+      if(dealKind === '월세') return !d.is_jeonse;
+      if(dealKind === '전세') return d.is_jeonse;
+      return true;
+    });
+
+    // 2. 유형 필터 (선택했으면)
+    if(type){
+      candidates = candidates.filter(d => d.type === type);
+    }
+
+    // 3. 평형 ±2평 매칭
+    const PYUNG_MARGIN = 2;
+    let matched = candidates.filter(d => Math.abs(d.pyung - userPyung) <= PYUNG_MARGIN);
+
+    // 4. 월세면 보증금 비슷한 것 우선 (±50% 범위)
+    if(dealKind === '월세' && deposit > 0){
+      const sim = matched.filter(d => Math.abs(d.deposit - deposit) <= deposit * 0.5 + 500);
+      if(sim.length >= 3) matched = sim;
+    }
+
+    // 5. 평형 차이 작은 순으로 정렬 → 5건
+    matched.sort((a,b)=>Math.abs(a.pyung - userPyung) - Math.abs(b.pyung - userPyung));
+    const top5 = matched.slice(0, 5);
+
+    renderResult({
+      dealKind, type, area, deposit, rent, userPyung,
+      matched, top5,
+    });
+
+    document.getElementById('loading').classList.remove('show');
+    document.getElementById('result').style.display = 'block';
+    document.getElementById('result').scrollIntoView({behavior:'smooth', block:'start'});
+  }, 400);
+}
+
+function renderResult({dealKind, type, area, deposit, rent, userPyung, matched, top5}){
+  const verdictBox = document.getElementById('verdictBox');
+  const statGrid = document.getElementById('statGrid');
+  const rangeNote = document.getElementById('rangeNote');
+  const dealsContainer = document.getElementById('dealsContainer');
+
+  // 비교 기준값
+  const priceField = dealKind === '월세' ? 'monthly_rent' : 'deposit';
+  const userPrice = dealKind === '월세' ? rent : deposit;
+
+  if(matched.length < 3){
+    verdictBox.innerHTML = `
+      <div class="verdict nodata">
+        <div class="icon">🔍</div>
+        <div class="title">비교 데이터 부족</div>
+        <div class="sub">같은 조건의 실거래가 ${matched.length}건뿐이라 시세 판정이 어렵습니다.<br>유형 선택을 "전체"로 바꿔보거나, 평형 범위를 넓혀보세요.</div>
+      </div>
+    `;
+    statGrid.innerHTML = '';
+    rangeNote.innerHTML = '';
+    dealsContainer.innerHTML = top5.length === 0 
+      ? '<div class="no-data">매칭되는 거래가 없습니다.</div>'
+      : renderDealsTable(top5, dealKind, userPrice, area, deposit, rent);
+    return;
+  }
+
+  // 통계
+  const prices = matched.map(d => d[priceField]).filter(p => p > 0);
+  prices.sort((a,b)=>a-b);
+  const avg = Math.round(prices.reduce((a,b)=>a+b,0) / prices.length);
+  const median = prices[Math.floor(prices.length / 2)];
+  const min = prices[0];
+  const max = prices[prices.length - 1];
+  const p25 = prices[Math.floor(prices.length * 0.25)];
+  const p75 = prices[Math.floor(prices.length * 0.75)];
+
+  // 판정
+  const diff = userPrice - avg;
+  const diffPct = (diff / avg * 100);
+  let verdict;
+  if(userPrice > max){
+    verdict = {
+      cls: 'bad', icon: '🔴',
+      title: '시세보다 비쌉니다',
+      sub: `평균 대비 <strong>+${diff}만원</strong> 높은 수준입니다. 협상 또는 재검토를 권장합니다.`,
+      delta: `평균 대비 +${diffPct.toFixed(1)}%`
+    };
+  } else if(userPrice >= p75){
+    verdict = {
+      cls: 'warn', icon: '🟡',
+      title: '평균보다 약간 비쌉니다',
+      sub: `상위 25% 구간입니다. 위치·옵션이 좋다면 적정할 수 있습니다.`,
+      delta: `평균 대비 ${diff>0?'+':''}${diff}만원`
+    };
+  } else if(userPrice >= p25){
+    verdict = {
+      cls: 'good', icon: '✅',
+      title: '적정한 시세입니다',
+      sub: `${matched.length}건 비교 결과 평균 범위 안에 위치합니다.`,
+      delta: `평균 대비 ${diff>0?'+':''}${diff}만원`
+    };
+  } else if(userPrice >= min){
+    verdict = {
+      cls: 'cheap', icon: '🟢',
+      title: '평균보다 저렴합니다',
+      sub: `하위 25% 구간으로 가성비 좋은 계약입니다.`,
+      delta: `평균 대비 ${diff}만원`
+    };
+  } else {
+    verdict = {
+      cls: 'cheap', icon: '💎',
+      title: '시세보다 매우 저렴',
+      sub: `최저 실거래보다 ${Math.abs(userPrice-min)}만원 저렴합니다. 매물 상태 직접 확인 권장.`,
+      delta: `평균 대비 ${diff}만원`
+    };
+  }
+
+  verdictBox.innerHTML = `
+    <div class="verdict ${verdict.cls}">
+      <div class="icon">${verdict.icon}</div>
+      <div class="title">${verdict.title}</div>
+      <div class="sub">${verdict.sub}</div>
+      <div class="delta">${verdict.delta}</div>
+    </div>
+  `;
+
+  const unit = '만원';
+  statGrid.innerHTML = `
+    <div class="stat">
+      <div class="label">평균</div>
+      <div class="value">${avg.toLocaleString()}<span class="small">${unit}</span></div>
+    </div>
+    <div class="stat">
+      <div class="label">중위값</div>
+      <div class="value">${median.toLocaleString()}<span class="small">${unit}</span></div>
+    </div>
+    <div class="stat">
+      <div class="label">비교 거래</div>
+      <div class="value">${matched.length}<span class="small">건</span></div>
+    </div>
+  `;
+  rangeNote.innerHTML = `📈 거래 범위: <strong>${min.toLocaleString()}~${max.toLocaleString()}만원</strong> · 본인 입력: <strong style="color:var(--blue)">${userPrice.toLocaleString()}만원</strong>`;
+
+  dealsContainer.innerHTML = renderDealsTable(top5, dealKind, userPrice, area, deposit, rent);
+}
+
+function renderDealsTable(deals, dealKind, userPrice, userArea, userDeposit, userRent){
+  if(!deals || deals.length === 0){
+    return '<div class="no-data">매칭되는 거래가 없습니다.</div>';
+  }
+
+  let html = `<table class="deals-table">
+    <thead><tr>
+      <th>단지</th>
+      <th>평형</th>
+      <th>보증금</th>
+      ${dealKind === '월세' ? '<th>월세</th>' : ''}
+      <th>거래시기</th>
+    </tr></thead><tbody>`;
+
+  // 본인 입력 행
+  html += `<tr class="user-input">
+    <td><strong>🙋 나의 조건</strong></td>
+    <td>${(userArea/3.3058).toFixed(1)}평</td>
+    <td>${userDeposit.toLocaleString()}만</td>
+    ${dealKind === '월세' ? `<td><strong>${userRent}만</strong></td>` : ''}
+    <td>—</td>
+  </tr>`;
+
+  deals.forEach(d => {
+    const dealLabel = d.is_jeonse ? '전세' : '월세';
+    html += `<tr>
+      <td>${d.anon_name}</td>
+      <td>${d.pyung}평</td>
+      <td>${d.deposit.toLocaleString()}만</td>
+      ${dealKind === '월세' ? `<td>${d.monthly_rent}만</td>` : ''}
+      <td style="font-size:11px;color:var(--gray-lite)">${d.deal_period}</td>
+    </tr>`;
+  });
+
+  html += '</tbody></table>';
+  return html;
+}
+
+// 초기화
+loadData();
+</script>
+</body>
+</html>
