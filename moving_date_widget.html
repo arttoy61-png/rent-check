@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>이사날 체크 - 화곡동 | Rent Check 강서</title>
+<script src="https://cdn.jsdelivr.net/npm/lunar-javascript@1.6.12/lunar.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+    background: linear-gradient(135deg, #0d1f3c 0%, #1565c0 100%);
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .container {
+    max-width: 480px;
+    width: 100%;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  }
+  .header {
+    background: linear-gradient(135deg, #0d1f3c 0%, #1565c0 100%);
+    color: #fff;
+    padding: 24px 20px;
+    text-align: center;
+  }
+  .header .badge {
+    display: inline-block;
+    background: rgba(212, 167, 58, 0.2);
+    color: #d4a73a;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    border: 1px solid rgba(212, 167, 58, 0.4);
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  .header p {
+    font-size: 13px;
+    opacity: 0.8;
+  }
+  .content {
+    padding: 24px 20px;
+  }
+  .date-input-section {
+    background: #f8f9fb;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+  .date-input-section label {
+    display: block;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  .date-input-wrapper {
+    display: flex;
+    gap: 8px;
+  }
+  input[type="date"] {
+    flex: 1;
+    padding: 12px 14px;
+    border: 2px solid #e0e4ea;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    background: #fff;
+  }
+  input[type="date"]:focus {
+    outline: none;
+    border-color: #1565c0;
+  }
+  .btn-check {
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #d4a73a 0%, #b8902a 100%);
+    color: #0d1f3c;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .btn-check:active { transform: scale(0.97); }
+  
+  .result-section {
+    display: none;
+  }
+  .result-section.active { display: block; }
+  
+  .day-card {
+    background: linear-gradient(135deg, #0d1f3c 0%, #1565c0 100%);
+    color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  .day-card .day-date {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 4px;
+  }
+  .day-card .day-name {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .day-card .lunar {
+    font-size: 12px;
+    opacity: 0.7;
+    margin-bottom: 12px;
+  }
+  .son-badge {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  .son-badge.good {
+    background: rgba(212, 167, 58, 0.2);
+    color: #d4a73a;
+    border: 1px solid #d4a73a;
+  }
+  .son-badge.bad {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.4);
+  }
+  
+  .weather-card {
+    background: #f8f9fb;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+  }
+  .weather-card .section-title {
+    font-size: 13px;
+    color: #666;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .weather-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+  .weather-icon {
+    font-size: 48px;
+  }
+  .weather-temp {
+    font-size: 36px;
+    font-weight: 700;
+    color: #0d1f3c;
+  }
+  .weather-desc {
+    font-size: 14px;
+    color: #1565c0;
+    font-weight: 600;
+  }
+  .weather-detail {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    padding-top: 12px;
+    border-top: 1px solid #e0e4ea;
+  }
+  .weather-detail-item {
+    text-align: center;
+  }
+  .weather-detail-item .label {
+    font-size: 11px;
+    color: #999;
+    margin-bottom: 2px;
+  }
+  .weather-detail-item .value {
+    font-size: 13px;
+    font-weight: 700;
+    color: #0d1f3c;
+  }
+  
+  .alt-dates {
+    background: #fff7e6;
+    border: 1px solid #ffd980;
+    border-radius: 12px;
+    padding: 16px;
+  }
+  .alt-dates .title {
+    font-size: 13px;
+    color: #b8902a;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .alt-date-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .alt-date-chip {
+    background: #fff;
+    border: 1px solid #d4a73a;
+    color: #0d1f3c;
+    padding: 6px 10px;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  
+  .loading {
+    text-align: center;
+    padding: 30px;
+    color: #666;
+    font-size: 14px;
+  }
+  
+  .info-box {
+    background: #eaf4ff;
+    border-left: 3px solid #1565c0;
+    padding: 12px;
+    border-radius: 6px;
+    margin-top: 16px;
+    font-size: 12px;
+    color: #0d1f3c;
+    line-height: 1.6;
+  }
+  
+  .footer {
+    background: #f8f9fb;
+    padding: 12px;
+    text-align: center;
+    font-size: 11px;
+    color: #999;
+    border-top: 1px solid #e0e4ea;
+  }
+  .footer strong { color: #1565c0; }
+  
+  .cta-banner {
+    margin-top: 16px;
+    padding: 14px;
+    background: linear-gradient(135deg, #0d1f3c 0%, #1565c0 100%);
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    color: #fff;
+    transition: transform 0.2s;
+  }
+  .cta-banner:active { transform: scale(0.98); }
+  .cta-banner .cta-title {
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 2px;
+  }
+  .cta-banner .cta-sub {
+    font-size: 11px;
+    color: #d4a73a;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <span class="badge">📅 화곡동 이사날 체크</span>
+    <h1>이사 날짜 + 날씨 + 손없는날</h1>
+    <p>최적의 이사일을 한 번에 확인하세요</p>
+  </div>
+  
+  <div class="content">
+    <div class="date-input-section">
+      <label>📆 이사 예정 날짜 선택</label>
+      <div class="date-input-wrapper">
+        <input type="date" id="moveDate">
+        <button class="btn-check" onclick="checkDate()">확인</button>
+      </div>
+    </div>
+    
+    <div id="loading" class="loading" style="display:none;">
+      ⏳ 정보를 가져오는 중...
+    </div>
+    
+    <div class="result-section" id="result">
+      <div class="day-card">
+        <div class="day-date" id="resultDate"></div>
+        <div class="day-name" id="resultDay"></div>
+        <div class="lunar" id="resultLunar"></div>
+        <div id="sonBadge"></div>
+      </div>
+      
+      <div class="weather-card">
+        <div class="section-title">🌤️ 화곡동 날씨 예보</div>
+        <div class="weather-main">
+          <div class="weather-icon" id="weatherIcon">☀️</div>
+          <div style="text-align:right;">
+            <div class="weather-temp" id="weatherTemp">--°</div>
+            <div class="weather-desc" id="weatherDesc">--</div>
+          </div>
+        </div>
+        <div class="weather-detail">
+          <div class="weather-detail-item">
+            <div class="label">강수확률</div>
+            <div class="value" id="weatherRain">--%</div>
+          </div>
+          <div class="weather-detail-item">
+            <div class="label">최저기온</div>
+            <div class="value" id="weatherMin">--°</div>
+          </div>
+          <div class="weather-detail-item">
+            <div class="label">최고기온</div>
+            <div class="value" id="weatherMax">--°</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="alt-dates" id="altDates" style="display:none;">
+        <div class="title">💡 이번 달 손없는날 추천</div>
+        <div class="alt-date-list" id="altDateList"></div>
+      </div>
+      
+      <div class="info-box">
+        📌 <strong>손없는날</strong>: 음력 9·10·19·20·29·30일은 귀신이 활동하지 않는다는 전통 길일로, 이사·개업 등에 선호됩니다.<br>
+        📌 날씨 예보는 <strong>오늘부터 16일 후</strong>까지 확인 가능합니다.
+      </div>
+      
+      <a href="https://arttoy61-png.github.io/rent-check/" class="cta-banner">
+        <div class="cta-title">🔍 화곡동 월세 시세도 확인해보세요</div>
+        <div class="cta-sub">국토부 실거래 기반 · 무료 · 회원가입 불필요</div>
+      </a>
+    </div>
+  </div>
+  
+  <div class="footer">
+    화곡동 실거래 분석 · <strong>Rent Check 강서</strong> · Open-Meteo API
+  </div>
+</div>
+
+<script>
+// 화곡동 위경도
+const HWAGOK_LAT = 37.5408;
+const HWAGOK_LON = 126.8395;
+
+// 기본값: 오늘
+document.getElementById('moveDate').valueAsDate = new Date();
+
+// 정확한 음력 변환 (lunar-javascript 사용)
+function getLunarDay(year, month, day) {
+  try {
+    const solar = Solar.fromYmd(year, month, day);
+    const lunar = solar.getLunar();
+    return {
+      year: lunar.getYear(),
+      month: lunar.getMonth(),
+      day: lunar.getDay(),
+      monthName: lunar.getMonthInChinese(),
+      dayName: lunar.getDayInChinese()
+    };
+  } catch(e) {
+    console.error('음력 변환 오류:', e);
+    return null;
+  }
+}
+
+// 손없는날 체크 (음력 9·10·19·20·29·30일)
+function isSonEopNeunNal(lunarDay) {
+  const sonDays = [9, 10, 19, 20, 29, 30];
+  return sonDays.includes(lunarDay);
+}
+
+// 날씨 아이콘 매핑 (WMO weather code)
+function getWeatherIcon(code) {
+  if (code === 0) return '☀️';
+  if (code <= 3) return '⛅';
+  if (code <= 48) return '☁️';
+  if (code <= 67) return '🌧️';
+  if (code <= 77) return '❄️';
+  if (code <= 82) return '🌧️';
+  if (code <= 99) return '⛈️';
+  return '🌤️';
+}
+
+function getWeatherDesc(code) {
+  if (code === 0) return '맑음';
+  if (code <= 3) return '구름 조금';
+  if (code <= 48) return '흐림';
+  if (code <= 67) return '비';
+  if (code <= 77) return '눈';
+  if (code <= 82) return '소나기';
+  if (code <= 99) return '천둥번개';
+  return '대체로 맑음';
+}
+
+async function checkDate() {
+  const dateStr = document.getElementById('moveDate').value;
+  if (!dateStr) return;
+  
+  const loadingEl = document.getElementById('loading');
+  const resultEl = document.getElementById('result');
+  
+  loadingEl.style.display = 'block';
+  resultEl.classList.remove('active');
+  
+  const date = new Date(dateStr);
+  const year = date.getFullYear();
+  const month = date.getMonth() + 1;
+  const day = date.getDate();
+  const dayNames = ['일','월','화','수','목','금','토'];
+  const dayName = dayNames[date.getDay()];
+  
+  // 날짜 표시
+  document.getElementById('resultDate').textContent = `${year}년 ${month}월 ${day}일`;
+  document.getElementById('resultDay').textContent = `${dayName}요일`;
+  
+  // 정확한 음력 계산
+  const lunar = getLunarDay(year, month, day);
+  if (lunar) {
+    document.getElementById('resultLunar').textContent = 
+      `🌙 음력 ${lunar.month}월 ${lunar.day}일`;
+    
+    const sonBadge = document.getElementById('sonBadge');
+    if (isSonEopNeunNal(lunar.day)) {
+      sonBadge.innerHTML = '<span class="son-badge good">✨ 손없는날 (이사 길일)</span>';
+    } else {
+      sonBadge.innerHTML = '<span class="son-badge bad">📅 일반일</span>';
+    }
+  }
+  
+  // 날씨 API 호출 (Open-Meteo)
+  try {
+    const today = new Date();
+    today.setHours(0,0,0,0);
+    const targetDate = new Date(date);
+    targetDate.setHours(0,0,0,0);
+    const daysAhead = Math.floor((targetDate - today) / (1000 * 60 * 60 * 24));
+    
+    if (daysAhead < 0) {
+      // 과거 날짜
+      document.getElementById('weatherIcon').textContent = '📅';
+      document.getElementById('weatherTemp').textContent = '--';
+      document.getElementById('weatherDesc').textContent = '과거 날짜';
+      document.getElementById('weatherRain').textContent = '-';
+      document.getElementById('weatherMin').textContent = '-';
+      document.getElementById('weatherMax').textContent = '-';
+    } else if (daysAhead > 15) {
+      // 16일 초과
+      document.getElementById('weatherIcon').textContent = '🔮';
+      document.getElementById('weatherTemp').textContent = '--';
+      document.getElementById('weatherDesc').textContent = '16일 이후는 예보 불가';
+      document.getElementById('weatherRain').textContent = '-';
+      document.getElementById('weatherMin').textContent = '-';
+      document.getElementById('weatherMax').textContent = '-';
+    } else {
+      const url = `https://api.open-meteo.com/v1/forecast?latitude=${HWAGOK_LAT}&longitude=${HWAGOK_LON}&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=Asia%2FSeoul&start_date=${dateStr}&end_date=${dateStr}`;
+      const res = await fetch(url);
+      const data = await res.json();
+      
+      const code = data.daily.weather_code[0];
+      const tmax = Math.round(data.daily.temperature_2m_max[0]);
+      const tmin = Math.round(data.daily.temperature_2m_min[0]);
+      const rain = data.daily.precipitation_probability_max[0] || 0;
+      
+      document.getElementById('weatherIcon').textContent = getWeatherIcon(code);
+      document.getElementById('weatherTemp').textContent = `${Math.round((tmax+tmin)/2)}°`;
+      document.getElementById('weatherDesc').textContent = getWeatherDesc(code);
+      document.getElementById('weatherRain').textContent = `${rain}%`;
+      document.getElementById('weatherMin').textContent = `${tmin}°`;
+      document.getElementById('weatherMax').textContent = `${tmax}°`;
+    }
+  } catch(e) {
+    console.error(e);
+    document.getElementById('weatherDesc').textContent = '날씨 정보 오류';
+  }
+  
+  // 이번 달 + 다음 달 손없는날 추천
+  showAltDates(year, month);
+  
+  loadingEl.style.display = 'none';
+  resultEl.classList.add('active');
+}
+
+function showAltDates(year, month) {
+  const altList = document.getElementById('altDateList');
+  altList.innerHTML = '';
+  
+  const today = new Date();
+  today.setHours(0,0,0,0);
+  
+  let found = [];
+  
+  // 이번 달 + 다음 달까지 손없는날 찾기
+  for (let monthOffset = 0; monthOffset < 2; monthOffset++) {
+    let targetMonth = month + monthOffset;
+    let targetYear = year;
+    if (targetMonth > 12) {
+      targetMonth -= 12;
+      targetYear += 1;
+    }
+    
+    const daysInMonth = new Date(targetYear, targetMonth, 0).getDate();
+    
+    for (let d = 1; d <= daysInMonth; d++) {
+      const checkDate = new Date(targetYear, targetMonth - 1, d);
+      if (checkDate < today) continue;
+      
+      const lunar = getLunarDay(targetYear, targetMonth, d);
+      if (lunar && isSonEopNeunNal(lunar.day)) {
+        const dayName = ['일','월','화','수','목','금','토'][checkDate.getDay()];
+        found.push(`${targetMonth}/${d}(${dayName})`);
+        if (found.length >= 6) break;
+      }
+    }
+    if (found.length >= 6) break;
+  }
+  
+  if (found.length > 0) {
+    found.forEach(d => {
+      const chip = document.createElement('span');
+      chip.className = 'alt-date-chip';
+      chip.textContent = '✨ ' + d;
+      altList.appendChild(chip);
+    });
+    document.getElementById('altDates').style.display = 'block';
+  } else {
+    document.getElementById('altDates').style.display = 'none';
+  }
+}
+
+// 페이지 로드 시 자동 실행
+window.addEventListener('load', () => {
+  // lunar-javascript 로드 대기
+  setTimeout(checkDate, 100);
+});
+</script>
+</body>
+</html>
