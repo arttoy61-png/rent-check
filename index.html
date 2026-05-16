@@ -320,9 +320,8 @@ footer a{color:var(--blue);text-decoration:none}
       <div id="dealsContainer"></div>
       <div class="notice">
         💡 <strong>표시된 데이터</strong>: 본인 입력 조건과 가장 가까운 실거래 5건<br>
-        🔒 <strong>익명화</strong>: 개인정보 보호를 위해 단지명은 유형별 익명코드(오피스텔 A 등)로 표시.
-        동일 알파벳은 같은 단지를 의미합니다.<br>
-        ⚠️ <strong>주의</strong>: 본 데이터는 국토교통부 신고 자료 기반이며, 시점·층·향·옵션 등에 따라 실제 가격은 다를 수 있습니다.
+        📍 <strong>실거래 데이터</strong>: 국토교통부 공식 신고 자료 기반으로, 단지명은 실제 명칭 그대로 표시됩니다.<br>
+        ⚠️ <strong>주의</strong>: 시점·층·향·옵션 등에 따라 실제 가격은 다를 수 있으며, 본 도구는 참고용입니다.
       </div>
     </div>
   </div>
@@ -564,7 +563,7 @@ function renderDealsTable(deals, dealKind, userPrice, userArea, userDeposit, use
   deals.forEach(d => {
     const dealLabel = d.is_jeonse ? '전세' : '월세';
     html += `<tr>
-      <td>${d.anon_name}</td>
+      <td>${d.building_name}</td>
       <td>${d.pyung}평</td>
       <td>${d.deposit.toLocaleString()}만</td>
       ${dealKind === '월세' ? `<td>${d.monthly_rent}만</td>` : ''}
