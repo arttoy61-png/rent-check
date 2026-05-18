@@ -384,6 +384,48 @@ footer a{color:var(--blue);text-decoration:none}
 }
 .blog-link-btn:hover .arrow{color:#fff}
 
+/* 다음 단계 배너 (이사날 위젯 연결) */
+.next-step-banner{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  background:linear-gradient(135deg,var(--navy) 0%,var(--blue) 100%);
+  color:#fff;
+  padding:18px 20px;
+  border-radius:14px;
+  margin-bottom:16px;
+  text-decoration:none;
+  box-shadow:0 4px 12px rgba(13,31,60,.15);
+  transition:transform .15s, box-shadow .15s;
+}
+.next-step-banner:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(13,31,60,.25);
+}
+.next-step-icon{
+  font-size:32px;
+  flex-shrink:0;
+}
+.next-step-text{
+  flex:1;
+  min-width:0;
+}
+.next-step-title{
+  font-size:14px;
+  font-weight:700;
+  margin-bottom:2px;
+}
+.next-step-sub{
+  font-size:12px;
+  color:var(--gold);
+  opacity:.95;
+}
+.next-step-arrow{
+  font-size:24px;
+  color:var(--gold);
+  flex-shrink:0;
+}
+
 /* 단지명 자동완성 */
 .autocomplete-wrapper{position:relative}
 .autocomplete-list{
@@ -586,6 +628,16 @@ footer a{color:var(--blue);text-decoration:none}
       <h2>📝 더 자세한 시세 분석 보러가기</h2>
       <div id="blogRecommendContent"></div>
     </div>
+    
+    <!-- 다음 단계: 이사날 체크 위젯 안내 -->
+    <a href="https://arttoy61-png.github.io/moving-date/" target="_blank" rel="noopener" class="next-step-banner">
+      <div class="next-step-icon">📅</div>
+      <div class="next-step-text">
+        <div class="next-step-title">계약 확정하셨다면, 이사날도 체크해보세요</div>
+        <div class="next-step-sub">날씨 예보 + 손없는날 + 음력 한 번에 확인</div>
+      </div>
+      <div class="next-step-arrow">→</div>
+    </a>
   </div>
 
   <footer>
