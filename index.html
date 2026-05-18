@@ -297,6 +297,61 @@ footer a{color:var(--blue);text-decoration:none}
   .deals-table td:nth-child(1){max-width:96px}
 }
 
+/* 단지 바로가기 카드 */
+.card.apt-shortcut-card{
+  background:linear-gradient(135deg,#fff 0%,#f8fafd 100%);
+}
+.apt-shortcut-card h2{
+  border-left-color:var(--gold);
+}
+.apt-grid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:8px;
+}
+.apt-card{
+  background:#fff;
+  border:1.5px solid var(--border);
+  border-radius:10px;
+  padding:12px 8px;
+  cursor:pointer;
+  text-align:center;
+  transition:all .15s;
+  font-family:inherit;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  min-height:64px;
+}
+.apt-card:hover{
+  border-color:var(--blue);
+  background:var(--blue-light);
+  transform:translateY(-2px);
+  box-shadow:0 4px 12px rgba(21,101,192,.15);
+}
+.apt-card:active{
+  transform:translateY(0);
+}
+.apt-card .apt-name{
+  font-size:12px;
+  font-weight:700;
+  color:var(--navy);
+  margin-bottom:3px;
+  line-height:1.3;
+  word-break:keep-all;
+}
+.apt-card .apt-info{
+  font-size:10px;
+  color:var(--gray-lite);
+  line-height:1.2;
+}
+@media(max-width:520px){
+  .apt-grid{grid-template-columns:repeat(2, 1fr)}
+  .apt-card{padding:10px 6px;min-height:60px}
+  .apt-card .apt-name{font-size:11px}
+  .apt-card .apt-info{font-size:9px}
+}
+
 /* 블로그 글 추천 카드 */
 .card.blog-recommend{
   background:linear-gradient(135deg,#fafbff 0%,#f0f6ff 100%);
@@ -397,6 +452,52 @@ footer a{color:var(--blue);text-decoration:none}
       📍 운영: <a href="https://blog.naver.com/spitoon61" target="_blank" rel="noopener">렌트체크강서 블로그</a>
     </div>
   </header>
+
+  <!-- 화곡동 주요 단지 바로가기 -->
+  <div class="card apt-shortcut-card">
+    <h2>🏢 화곡동 주요 단지 바로가기</h2>
+    <p style="font-size:12px;color:var(--gray-lite);margin-bottom:12px">
+      300세대 이상 아파트 9개 · 클릭하면 해당 단지로 시세 검증
+    </p>
+    <div class="apt-grid">
+      <button class="apt-card" data-apt="강서금호어울림퍼스티어">
+        <div class="apt-name">강서금호어울림퍼스티어</div>
+        <div class="apt-info">487세대 · 까치산</div>
+      </button>
+      <button class="apt-card" data-apt="강서힐스테이트">
+        <div class="apt-name">강서힐스테이트</div>
+        <div class="apt-info">2,603세대 · 우장산</div>
+      </button>
+      <button class="apt-card" data-apt="우장산롯데캐슬">
+        <div class="apt-name">우장산롯데캐슬</div>
+        <div class="apt-info">1,164세대 · 우장산</div>
+      </button>
+      <button class="apt-card" data-apt="우장산숲아이파크">
+        <div class="apt-name">우장산숲아이파크</div>
+        <div class="apt-info">576세대 · 우장산</div>
+      </button>
+      <button class="apt-card" data-apt="우장산아이파크,이편한세상">
+        <div class="apt-name">우장산아이파크·이편한세상</div>
+        <div class="apt-info">2,517세대 · 우장산</div>
+      </button>
+      <button class="apt-card" data-apt="중앙하이츠빌">
+        <div class="apt-name">중앙하이츠빌</div>
+        <div class="apt-info">473세대 · 화곡</div>
+      </button>
+      <button class="apt-card" data-apt="화곡대림">
+        <div class="apt-name">화곡대림아파트</div>
+        <div class="apt-info">416세대 · 화곡</div>
+      </button>
+      <button class="apt-card" data-apt="화곡초록">
+        <div class="apt-name">화곡초록아파트</div>
+        <div class="apt-info">625세대 · 화곡</div>
+      </button>
+      <button class="apt-card" data-apt="화곡프루지오">
+        <div class="apt-name">화곡프루지오</div>
+        <div class="apt-info">2,176세대 · 우장산</div>
+      </button>
+    </div>
+  </div>
 
   <div class="card">
     <h2>📝 본인 계약 정보 입력</h2>
@@ -1046,6 +1147,37 @@ document.addEventListener('click', e => {
   if(!e.target.closest('.autocomplete-wrapper')){
     buildingList.classList.remove('show');
   }
+});
+
+// 단지 바로가기 카드 클릭
+document.querySelectorAll('.apt-card').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const aptName = btn.dataset.apt;
+    if(!aptName) return;
+    
+    // 단지명 input에 자동 입력
+    const input = document.getElementById('buildingSearch');
+    if(input){
+      input.value = aptName;
+      // 클리어 버튼 표시
+      const clearBtn = document.getElementById('clearBuildingBtn');
+      if(clearBtn) clearBtn.classList.add('show');
+    }
+    
+    // 입력 폼으로 부드럽게 스크롤
+    document.querySelector('.card:not(.apt-shortcut-card)').scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+    
+    // 시각적 피드백 - 잠깐 강조
+    btn.style.background = 'var(--blue)';
+    btn.style.color = '#fff';
+    setTimeout(() => {
+      btn.style.background = '';
+      btn.style.color = '';
+    }, 600);
+  });
 });
 
 loadData();
