@@ -57,6 +57,22 @@ header::before{
 h1{font-size:22px;font-weight:700;line-height:1.4;margin-bottom:8px;position:relative}
 .subtitle{font-size:13px;opacity:.85;position:relative}
 .subtitle strong{color:var(--gold)}
+.owner-info{
+  display:inline-block;
+  margin-top:14px;
+  padding:6px 14px;
+  background:rgba(255,255,255,.12);
+  border-radius:14px;
+  font-size:12px;
+  position:relative;
+  border:1px solid rgba(255,255,255,.18);
+}
+.owner-info a{
+  color:var(--gold);
+  text-decoration:none;
+  font-weight:600;
+}
+.owner-info a:hover{text-decoration:underline}
 
 /* CARD */
 .card{
@@ -281,15 +297,105 @@ footer a{color:var(--blue);text-decoration:none}
   .deals-table td:nth-child(1){max-width:96px}
 }
 
+/* 블로그 글 추천 카드 */
+.card.blog-recommend{
+  background:linear-gradient(135deg,#fafbff 0%,#f0f6ff 100%);
+  border:2px solid var(--blue);
+}
+.blog-link-btn{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:#fff;
+  border:1.5px solid var(--blue);
+  border-radius:10px;
+  padding:14px 18px;
+  text-decoration:none;
+  color:var(--navy);
+  font-weight:600;
+  font-size:14px;
+  margin-top:10px;
+  transition:all .15s;
+}
+.blog-link-btn:hover{
+  background:var(--blue);
+  color:#fff;
+  transform:translateY(-2px);
+  box-shadow:0 4px 12px rgba(21,101,192,.2);
+}
+.blog-link-btn .arrow{
+  font-size:18px;
+  color:var(--blue);
+}
+.blog-link-btn:hover .arrow{color:#fff}
+
+/* 단지명 자동완성 */
+.autocomplete-wrapper{position:relative}
+.autocomplete-list{
+  position:absolute;
+  top:100%;left:0;right:0;
+  background:#fff;
+  border:1.5px solid var(--blue);
+  border-top:none;
+  border-radius:0 0 10px 10px;
+  max-height:240px;
+  overflow-y:auto;
+  z-index:100;
+  box-shadow:var(--shadow-lg);
+  display:none;
+}
+.autocomplete-list.show{display:block}
+.autocomplete-item{
+  padding:10px 14px;
+  cursor:pointer;
+  font-size:14px;
+  border-bottom:1px solid #f0f0f0;
+  transition:background .1s;
+}
+.autocomplete-item:hover,
+.autocomplete-item.highlighted{
+  background:var(--blue-light);
+  color:var(--blue);
+}
+.autocomplete-item:last-child{border-bottom:none}
+.autocomplete-item .type-tag{
+  display:inline-block;
+  padding:2px 6px;
+  border-radius:8px;
+  font-size:10px;
+  margin-right:8px;
+  background:var(--gray-bg);
+  color:var(--gray);
+}
+.autocomplete-item .type-tag.아파트{background:#e3f2fd;color:#1565c0}
+.autocomplete-item .type-tag.오피스텔{background:#e8f5e9;color:#2e7d32}
+.autocomplete-item .type-tag.빌라{background:#fce4ec;color:#c2185b}
+.field .hint{font-size:11px;color:var(--gray-lite);margin-top:2px}
+.field .clear-btn{
+  position:absolute;
+  right:14px;
+  top:42px;
+  background:none;
+  border:none;
+  color:var(--gray-lite);
+  cursor:pointer;
+  font-size:18px;
+  display:none;
+}
+.field .clear-btn.show{display:block}
+
 </style>
 </head>
 <body>
 <div class="container">
 
   <header>
-    <div class="brand">RENT CHECKER</div>
+    <div class="brand">RENT CHECKER · by 렌트체크강서</div>
     <h1>내 월세, <span style="color:var(--gold)">적정</span>한가요?</h1>
     <div class="subtitle">강서구 <strong>화곡동</strong> 실거래 데이터 기반 시세 검증 · 국토교통부 공개자료</div>
+    <div class="owner-info">
+      📍 운영: <a href="https://blog.naver.com/spitoon61" target="_blank" rel="noopener">렌트체크강서 블로그</a>
+    </div>
   </header>
 
   <div class="card">
@@ -311,6 +417,16 @@ footer a{color:var(--blue);text-decoration:none}
         <button data-value="월세" class="active">월세</button>
         <button data-value="전세">전세</button>
       </div>
+    </div>
+
+    <div class="field" style="margin-bottom:16px">
+      <label>단지명 (선택)</label>
+      <div class="autocomplete-wrapper">
+        <input type="text" id="buildingSearch" placeholder="단지명 입력 (예: 화곡프루지오)" autocomplete="off">
+        <button type="button" class="clear-btn" id="clearBuildingBtn" onclick="clearBuildingSearch()">✕</button>
+        <div class="autocomplete-list" id="buildingList"></div>
+      </div>
+      <div class="hint">💡 특정 단지로 한정해서 시세 비교하려면 입력하세요. 비워두면 전체에서 비교합니다.</div>
     </div>
 
     <div class="basis-box" id="basisBox">
@@ -363,12 +479,26 @@ footer a{color:var(--blue);text-decoration:none}
         ⚠️ <strong>주의</strong>: 본 데이터는 국토교통부 신고 자료 기반이며, 시점·층·향·옵션·관리비 등에 따라 실제 체감 가격은 다를 수 있습니다.
       </div>
     </div>
+
+    <!-- 블로그 글 추천 (단지명 검색시 표시) -->
+    <div class="card blog-recommend" id="blogRecommend" style="display:none">
+      <h2>📝 더 자세한 시세 분석 보러가기</h2>
+      <div id="blogRecommendContent"></div>
+    </div>
   </div>
 
   <footer>
+    <div style="margin-bottom:12px">
+      📍 본 위젯은 <a href="https://blog.naver.com/spitoon61" target="_blank" rel="noopener"><strong>렌트체크강서</strong></a> 블로그 부속 도구입니다.
+    </div>
     <div>본 도구는 국토교통부 실거래가 공개자료를 기반으로 합니다.</div>
-    <div style="margin-top:6px">데이터 갱신: <span id="updated">-</span></div>
-    <div style="margin-top:10px">© 강서구 부동산 블로그</div>
+    <div style="margin-top:6px">
+      데이터 갱신: <span id="updated">-</span>
+      <span id="dataRange" style="display:block;font-size:10px;opacity:.7;margin-top:2px"></span>
+    </div>
+    <div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--border)">
+      © 렌트체크강서 · blog.naver.com/spitoon61
+    </div>
   </footer>
 </div>
 
@@ -432,18 +562,40 @@ async function loadData(){
     const r = await fetch('widget_data.json');
     if(!r.ok) throw new Error('데이터 파일을 불러올 수 없습니다');
     DATA = await r.json();
-    document.getElementById('updated').textContent = (DATA.generated_at||'').slice(0,10);
+    updateDataDate();
   }catch(e){
     // 로컬 테스트용 폴백
     console.warn('데이터 로드 실패. 임베드 데이터 사용 시도:', e);
     if(window.EMBED_DATA){
       DATA = window.EMBED_DATA;
-      document.getElementById('updated').textContent = (DATA.generated_at||'').slice(0,10);
+      updateDataDate();
     } else {
       alert('데이터를 불러올 수 없습니다. widget_data.json 파일이 같은 폴더에 있는지 확인하세요.');
     }
   }
   updateRateText();
+}
+
+// 데이터 갱신일 + 6개월 범위 표시
+function updateDataDate(){
+  if(!DATA || !DATA.generated_at) return;
+  const updatedDate = DATA.generated_at.slice(0, 10);
+  document.getElementById('updated').textContent = updatedDate;
+  
+  // 6개월 전 날짜 계산
+  try{
+    const d = new Date(DATA.generated_at);
+    const sixMonthsAgo = new Date(d);
+    sixMonthsAgo.setMonth(sixMonthsAgo.getMonth() - 6);
+    const startMonth = `${sixMonthsAgo.getFullYear()}-${String(sixMonthsAgo.getMonth()+1).padStart(2,'0')}`;
+    const endMonth = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}`;
+    const rangeEl = document.getElementById('dataRange');
+    if(rangeEl){
+      rangeEl.textContent = `└ 최근 6개월 실거래 (${startMonth} ~ ${endMonth})`;
+    }
+  }catch(e){
+    console.warn('데이터 범위 계산 실패', e);
+  }
 }
 
 function updateRateText(){
@@ -472,9 +624,10 @@ function getSegValue(segId){
   return document.querySelector(`#${segId} button.active`).dataset.value;
 }
 
-function getMatchedDeals(candidates, userPyung, dealKind, userDeposit, userRent){
+function getMatchedDeals(candidates, userPyung, dealKind, userDeposit, userRent, maxMargin){
   // 1차: ±3평, 부족하면 ±5평, 그래도 부족하면 ±8평까지 자동 확장
-  const margins = [3, 5, 8];
+  // maxMargin 지정시 더 넓은 범위까지 자동 확장 (단지명 검색시 유용)
+  const margins = maxMargin && maxMargin > 8 ? [3, 5, 8, maxMargin] : [3, 5, 8];
   let selected = [];
   let usedMargin = margins[0];
   for(const m of margins){
@@ -520,6 +673,7 @@ function check(){
   const area = parseFloat(document.getElementById('area').value);
   const deposit = parseInt(document.getElementById('deposit').value) || 0;
   const rent = parseInt(document.getElementById('rent').value) || 0;
+  const buildingFilter = document.getElementById('buildingSearch').value.trim();
 
   // 유효성 검사
   if(!area || area <= 0){alert('전용면적을 입력하세요');return}
@@ -545,12 +699,22 @@ function check(){
       candidates = candidates.filter(d => d.type === type);
     }
 
-    // 3. 평형 필터 + 가까운 순 정렬
-    const {matched, top5, usedMargin} = getMatchedDeals(candidates, userPyung, dealKind, deposit, rent);
+    // 3. 단지명 필터 (선택)
+    if(buildingFilter){
+      candidates = candidates.filter(d =>
+        d.building_name && d.building_name.includes(buildingFilter)
+      );
+    }
+
+    // 4. 평형 필터 + 가까운 순 정렬 (단지명 입력시 평형 범위 확장)
+    const {matched, top5, usedMargin} = getMatchedDeals(
+      candidates, userPyung, dealKind, deposit, rent,
+      buildingFilter ? 5 : undefined  // 단지명 입력시 ±5평까지 확장
+    );
 
     renderResult({
       dealKind, type, area, deposit, rent, userPyung,
-      matched, top5, usedMargin,
+      matched, top5, usedMargin, buildingFilter,
     });
 
     document.getElementById('loading').classList.remove('show');
@@ -559,7 +723,7 @@ function check(){
   }, 300);
 }
 
-function renderResult({dealKind, type, area, deposit, rent, userPyung, matched, top5, usedMargin}){
+function renderResult({dealKind, type, area, deposit, rent, userPyung, matched, top5, usedMargin, buildingFilter}){
   const verdictBox = document.getElementById('verdictBox');
   const statGrid = document.getElementById('statGrid');
   const rangeNote = document.getElementById('rangeNote');
@@ -570,11 +734,17 @@ function renderResult({dealKind, type, area, deposit, rent, userPyung, matched, 
   const compareLabel = dealKind === '월세' ? '환산월세' : '전세보증금';
 
   if(matched.length < 3){
+    let noDataMsg = `조건에 맞는 실거래가 ${matched.length}건뿐이라 시세 판정이 어렵습니다.`;
+    if(buildingFilter){
+      noDataMsg += `<br>「${escapeHtml(buildingFilter)}」 단지 조건을 풀거나, 다른 단지로 시도해보세요.`;
+    } else {
+      noDataMsg += `<br>유형 선택을 "전체"로 바꾸거나 면적 조건을 조금 넓혀보세요.`;
+    }
     verdictBox.innerHTML = `
       <div class="verdict nodata">
         <div class="icon">🔍</div>
         <div class="title">비교 데이터 부족</div>
-        <div class="sub">조건에 맞는 실거래가 ${matched.length}건뿐이라 시세 판정이 어렵습니다.<br>유형 선택을 "전체"로 바꾸거나 면적 조건을 조금 넓혀보세요.</div>
+        <div class="sub">${noDataMsg}</div>
       </div>
     `;
     statGrid.innerHTML = '';
@@ -582,6 +752,7 @@ function renderResult({dealKind, type, area, deposit, rent, userPyung, matched, 
     dealsContainer.innerHTML = top5.length === 0
       ? '<div class="no-data">매칭되는 거래가 없습니다.</div>'
       : renderDealsTable(top5, dealKind, area, deposit, rent);
+    renderBlogRecommend(buildingFilter);
     return;
   }
 
@@ -664,9 +835,54 @@ function renderResult({dealKind, type, area, deposit, rent, userPyung, matched, 
   const inputText = dealKind === '월세'
     ? `${fmt1(userConverted)}만원, 실제 월세 ${fmt0(rent)}만원`
     : `${fmt0(deposit)}만원`;
-  rangeNote.innerHTML = `📈 ${compareLabel} 범위: <strong>${fmt1(min)}~${fmt1(max)}만원</strong> · 본인 입력 기준: <strong style="color:var(--blue)">${inputText}</strong><br>면적 범위: 약 ±${usedMargin}평 · 적용 전환율: <strong>${formatRate(getConversionRate())}</strong>`;
+  let rangeText = `📈 ${compareLabel} 범위: <strong>${fmt1(min)}~${fmt1(max)}만원</strong> · 본인 입력 기준: <strong style="color:var(--blue)">${inputText}</strong><br>면적 범위: 약 ±${usedMargin}평 · 적용 전환율: <strong>${formatRate(getConversionRate())}</strong>`;
+  if(buildingFilter){
+    rangeText = `🏢 「${escapeHtml(buildingFilter)}」 ${matched.length}건 기준<br>` + rangeText;
+  }
+  rangeNote.innerHTML = rangeText;
 
   dealsContainer.innerHTML = renderDealsTable(top5, dealKind, area, deposit, rent);
+  
+  // 단지명 검색시 블로그 글 추천 표시
+  renderBlogRecommend(buildingFilter);
+}
+
+function renderBlogRecommend(buildingFilter){
+  const box = document.getElementById('blogRecommend');
+  const content = document.getElementById('blogRecommendContent');
+  if(!box || !content) return;
+  
+  if(!buildingFilter){
+    // 단지명 없으면 일반 블로그 안내
+    box.style.display = 'block';
+    content.innerHTML = `
+      <p style="font-size:13px;color:var(--gray);margin-bottom:10px">
+        화곡동 단지별 실거래가·시세 분석 글을 매주 발행합니다.
+      </p>
+      <a href="https://blog.naver.com/spitoon61" target="_blank" rel="noopener" class="blog-link-btn">
+        <span>📝 렌트체크강서 블로그 가기</span>
+        <span class="arrow">→</span>
+      </a>
+    `;
+    return;
+  }
+  
+  // 단지명 검색시 → 해당 단지 검색 결과로 연결
+  box.style.display = 'block';
+  const searchQuery = encodeURIComponent(buildingFilter + ' 시세');
+  const searchUrl = `https://search.naver.com/search.naver?query=${searchQuery}+site%3Ablog.naver.com%2Fspitoon61`;
+  content.innerHTML = `
+    <p style="font-size:13px;color:var(--gray);margin-bottom:10px">
+      🔍 "<strong>${escapeHtml(buildingFilter)}</strong>" 단지의 평형별 매매·전세·월세 실거래가 분석 글을 확인하세요.
+    </p>
+    <a href="${searchUrl}" target="_blank" rel="noopener" class="blog-link-btn">
+      <span>📝 「${escapeHtml(buildingFilter)}」 시세 글 보기</span>
+      <span class="arrow">→</span>
+    </a>
+    <p style="font-size:11px;color:var(--gray-lite);margin-top:10px;text-align:center">
+      블로그: <a href="https://blog.naver.com/spitoon61" target="_blank" rel="noopener" style="color:var(--blue)">blog.naver.com/spitoon61</a>
+    </p>
+  `;
 }
 
 function renderDiff(value){
@@ -739,6 +955,101 @@ function renderDealsTable(deals, dealKind, userArea, userDeposit, userRent){
 }
 
 // 초기화
+// 단지명 자동완성
+const buildingSearch = document.getElementById('buildingSearch');
+const buildingList = document.getElementById('buildingList');
+const clearBuildingBtn = document.getElementById('clearBuildingBtn');
+let highlightedIdx = -1;
+
+if(buildingSearch){
+  buildingSearch.addEventListener('input', e => {
+    const q = e.target.value.trim();
+    highlightedIdx = -1;
+    
+    // 클리어 버튼 표시/숨김
+    clearBuildingBtn.classList.toggle('show', q.length > 0);
+    
+    if(!q || !DATA || !DATA.building_index){
+      buildingList.classList.remove('show');
+      return;
+    }
+    
+    const matches = DATA.building_index
+      .filter(b => b.name.includes(q))
+      .slice(0, 15);
+    
+    if(matches.length === 0){
+      buildingList.innerHTML = '<div class="autocomplete-item" style="color:var(--gray-lite);cursor:default">매칭되는 단지가 없습니다</div>';
+      buildingList.classList.add('show');
+      return;
+    }
+    
+    buildingList.innerHTML = matches.map((b, i) => `
+      <div class="autocomplete-item" data-idx="${i}" data-name="${escapeHtml(b.name)}">
+        <span class="type-tag ${b.type}">${b.type}</span>${escapeHtml(b.name)}
+      </div>
+    `).join('');
+    
+    buildingList.classList.add('show');
+    
+    // 클릭으로 선택
+    buildingList.querySelectorAll('.autocomplete-item[data-name]').forEach(item => {
+      item.addEventListener('click', () => {
+        buildingSearch.value = item.dataset.name;
+        buildingList.classList.remove('show');
+        clearBuildingBtn.classList.add('show');
+      });
+    });
+  });
+
+  // 키보드 네비게이션
+  buildingSearch.addEventListener('keydown', e => {
+    const items = buildingList.querySelectorAll('.autocomplete-item[data-name]');
+    if(items.length === 0) return;
+    
+    if(e.key === 'ArrowDown'){
+      e.preventDefault();
+      highlightedIdx = Math.min(highlightedIdx + 1, items.length - 1);
+      updateHighlight(items);
+    } else if(e.key === 'ArrowUp'){
+      e.preventDefault();
+      highlightedIdx = Math.max(highlightedIdx - 1, -1);
+      updateHighlight(items);
+    } else if(e.key === 'Enter' && highlightedIdx >= 0){
+      e.preventDefault();
+      buildingSearch.value = items[highlightedIdx].dataset.name;
+      buildingList.classList.remove('show');
+      clearBuildingBtn.classList.add('show');
+    } else if(e.key === 'Escape'){
+      buildingList.classList.remove('show');
+    }
+  });
+}
+
+function updateHighlight(items){
+  items.forEach((item, i) => {
+    item.classList.toggle('highlighted', i === highlightedIdx);
+  });
+  // 하이라이트된 항목으로 스크롤
+  if(highlightedIdx >= 0 && items[highlightedIdx]){
+    items[highlightedIdx].scrollIntoView({block:'nearest'});
+  }
+}
+
+function clearBuildingSearch(){
+  buildingSearch.value = '';
+  buildingList.classList.remove('show');
+  clearBuildingBtn.classList.remove('show');
+  buildingSearch.focus();
+}
+
+// 자동완성 외부 클릭시 닫기
+document.addEventListener('click', e => {
+  if(!e.target.closest('.autocomplete-wrapper')){
+    buildingList.classList.remove('show');
+  }
+});
+
 loadData();
 </script>
 </body>
