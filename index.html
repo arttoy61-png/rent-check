@@ -1018,11 +1018,11 @@ function renderBlogRecommend(buildingFilter){
     return;
   }
   
-  // 단지명 검색시 → 블로그 내에서 해당 단지 글 검색
+  // 단지명 검색시 → 블로그 내부 검색 (내 블로그 안에서 직접 검색)
   box.style.display = 'block';
   const searchQuery = encodeURIComponent(buildingFilter);
-  // 네이버 블로그 내부 검색 URL (블로그 안에서만 검색)
-  const searchUrl = `https://section.blog.naver.com/Search/Post.naver?pageNo=1&rangeType=ALL&orderBy=sim&keyword=${searchQuery}&blogId=spitoon61`;
+  // 네이버 블로그 내부 검색 URL (블로그 안에서 바로 검색됨)
+  const searchUrl = `https://blog.naver.com/PostSearchList.naver?blogId=spitoon61&searchText=${searchQuery}`;
   content.innerHTML = `
     <p style="font-size:13px;color:var(--gray);margin-bottom:10px">
       🔍 "<strong>${escapeHtml(buildingFilter)}</strong>" 단지의 평형별 매매·전세·월세 실거래가 분석 글을 확인하세요.
