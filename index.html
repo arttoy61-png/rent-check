@@ -578,23 +578,21 @@ async function loadData(){
 
 // 데이터 갱신일 + 6개월 범위 표시
 function updateDataDate(){
-  if(!DATA || !DATA.generated_at) return;
-  const updatedDate = DATA.generated_at.slice(0, 10);
-  document.getElementById('updated').textContent = updatedDate;
+  if(!DATA) return;
   
-  // 6개월 전 날짜 계산
-  try{
-    const d = new Date(DATA.generated_at);
-    const sixMonthsAgo = new Date(d);
-    sixMonthsAgo.setMonth(sixMonthsAgo.getMonth() - 6);
-    const startMonth = `${sixMonthsAgo.getFullYear()}-${String(sixMonthsAgo.getMonth()+1).padStart(2,'0')}`;
-    const endMonth = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}`;
-    const rangeEl = document.getElementById('dataRange');
-    if(rangeEl){
-      rangeEl.textContent = `└ 최근 6개월 실거래 (${startMonth} ~ ${endMonth})`;
-    }
-  }catch(e){
-    console.warn('데이터 범위 계산 실패', e);
+  // 표시 기준일 = 오늘 (사용자가 보는 시점)
+  const today = new Date();
+  const todayStr = `${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,'0')}-${String(today.getDate()).padStart(2,'0')}`;
+  document.getElementById('updated').textContent = todayStr;
+  
+  // 6개월 전 ~ 오늘 (데이터 범위)
+  const sixMonthsAgo = new Date(today);
+  sixMonthsAgo.setMonth(sixMonthsAgo.getMonth() - 6);
+  const startMonth = `${sixMonthsAgo.getFullYear()}.${String(sixMonthsAgo.getMonth()+1).padStart(2,'0')}`;
+  const endMonth = `${today.getFullYear()}.${String(today.getMonth()+1).padStart(2,'0')}`;
+  const rangeEl = document.getElementById('dataRange');
+  if(rangeEl){
+    rangeEl.textContent = `└ 데이터 범위: 최근 6개월 (${startMonth} ~ ${endMonth})`;
   }
 }
 
