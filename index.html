@@ -652,6 +652,7 @@ footer a{color:var(--blue);text-decoration:none}
     <div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--border)">
       © 렌트체크강서 · blog.naver.com/spitoon61
     </div>
+    <div id="gc-visits" style="margin-top:8px;font-size:12px;opacity:.85">📊 방문 집계 불러오는 중…</div>
   </footer>
 </div>
 
@@ -1234,6 +1235,18 @@ document.querySelectorAll('.apt-card').forEach(btn => {
 });
 
 loadData();
+</script>
+<!-- 방문자 카운터 (GoatCounter) -->
+<script data-goatcounter="https://kangseo-rent.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script>
+(function(){
+  var base="https://kangseo-rent.goatcounter.com/counter/", t=new Date().toISOString().slice(0,10);
+  function get(u){return fetch(u).then(function(r){return r.ok?r.json():{count:"-"};}).then(function(j){return j.count;}).catch(function(){return "-";});}
+  Promise.all([get(base+"TOTAL.json"), get(base+"TOTAL.json?start="+t)]).then(function(a){
+    var el=document.getElementById("gc-visits");
+    if(el) el.innerHTML="📊 오늘 <b style='color:#1565c0'>"+a[1]+"</b> · 누적 <b style='color:#1565c0'>"+a[0]+"</b>";
+  });
+})();
 </script>
 </body>
 </html>
