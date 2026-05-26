@@ -1240,12 +1240,20 @@ loadData();
 <script data-goatcounter="https://kangseo-rent.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 <script>
 (function(){
-  var base="https://kangseo-rent.goatcounter.com/counter/", t=new Date().toISOString().slice(0,10);
-  function get(u){return fetch(u).then(function(r){return r.ok?r.json():{count:"-"};}).then(function(j){return j.count;}).catch(function(){return "-";});}
-  Promise.all([get(base+"TOTAL.json"), get(base+"TOTAL.json?start="+t)]).then(function(a){
-    var el=document.getElementById("gc-visits");
-    if(el) el.innerHTML="📊 오늘 <b style='color:#1565c0'>"+a[1]+"</b> · 누적 <b style='color:#1565c0'>"+a[0]+"</b>";
-  });
+  var base="https://kangseo-rent.goatcounter.com/counter/", today=new Date().toISOString().slice(0,10);
+  function get(u){return fetch(u).then(function(r){return r.ok?r.json():null;}).then(function(j){return j?j.count:null;}).catch(function(){return null;});}
+  function render(){
+    var p=(window.goatcounter&&window.goatcounter.get_data)?window.goatcounter.get_data().p:location.pathname.replace(/\/$/,'');
+    var enc=encodeURIComponent(p);
+    Promise.all([get(base+enc+".json"), get(base+enc+".json?start="+today)]).then(function(a){
+      if(a[0]==null){ return Promise.all([get(base+"TOTAL.json"), get(base+"TOTAL.json?start="+today)]); }
+      return a;
+    }).then(function(a){
+      var el=document.getElementById("gc-visits"); if(!el) return;
+      el.innerHTML="📊 오늘 <b style='color:#1565c0'>"+(a[1]==null?"-":a[1])+"</b> · 누적 <b style='color:#1565c0'>"+(a[0]==null?"-":a[0])+"</b>";
+    });
+  }
+  var n=0, iv=setInterval(function(){ if((window.goatcounter&&window.goatcounter.get_data)||n++>30){ clearInterval(iv); render(); } },100);
 })();
 </script>
 </body>
