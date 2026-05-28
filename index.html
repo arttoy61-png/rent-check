@@ -626,7 +626,7 @@ footer a{color:var(--blue);text-decoration:none}
       <h2>📋 내 조건과 가까운 최근 실거래 5건</h2>
       <div id="dealsContainer"></div>
       <div class="notice">
-        💡 <strong>표시된 데이터</strong>: 유형·거래유형·평형을 먼저 맞춘 뒤, <strong>최근 거래순</strong>으로 표시합니다. (시세 판정은 비슷한 조건 거래 전체를 분석)<br>
+        💡 <strong>표시된 데이터</strong>: 유형·평형이 비슷한 거래 중 <strong>정상 가격대(중간 50%)에서 최신순</strong>으로 표시합니다. (반전세 제외, 같은 단지 최대 2건)<br>
         ⚖️ <strong>환산월세</strong>: 월세 + (보증금 × 법정 전월세전환율 ÷ 12)<br>
         ⚠️ <strong>주의</strong>: 본 데이터는 국토교통부 신고 자료 기반이며, 시점·층·향·옵션·관리비 등에 따라 실제 체감 가격은 다를 수 있습니다.
       </div>
@@ -823,15 +823,7 @@ function getMatchedDeals(candidates, userPyung, dealKind, userDeposit, userRent,
     );
   }
 
-  // 표시용 5건은 "최신 거래 우선" (날짜 내림차순, 동일 날짜는 조건 근접순)
-  const top5 = [...selected].sort((a,b)=>
-    (parseDateValue(b.deal_period) - parseDateValue(a.deal_period)) ||
-    (dealKind === '월세'
-      ? (a.__convertedDiff - b.__convertedDiff)
-      : (a.__depositDiff - b.__depositDiff))
-  ).slice(0,5);
-
-  return {matched:selected, top5, usedMargin};
+  return {matched:selected, top5:selected.slice(0,5), usedMargin};
 }
 
 function check(){
@@ -858,7 +850,8 @@ function check(){
   setTimeout(()=>{
     // 1. 거래유형 필터
     let candidates = DATA.deals.filter(d => {
-      if(dealKind === '월세') return !d.is_jeonse && Number(d.monthly_rent || 0) > 0;
+      if(dealKind === '월세') return !d.is_jeonse && Number(d.monthly_rent || 0) > 0
+        && (Number(d.deposit || 0) * getConversionRate() / 12) < Number(d.monthly_rent);  // 반전세 제외
       if(dealKind === '전세') return d.is_jeonse;
       return true;
     });
@@ -925,8 +918,8 @@ function renderResult({dealKind, type, area, deposit, rent, userPyung, matched, 
     return;
   }
 
-  // 가까운 거래 30건 또는 전체 중 작은 값으로 통계 산정. 너무 먼 거래가 평균을 흔들지 않게 함.
-  const statSource = matched.slice(0, Math.min(30, matched.length));
+  // 비슷한 평형대 거래 전체로 분포 산정 (반전세는 이미 제외됨). 중위·사분위는 이상치에 강건.
+  const statSource = matched;
   const prices = statSource.map(d => dealKind === '월세' ? d.__converted : Number(d.deposit || 0)).filter(p => p > 0);
   prices.sort((a,b)=>a-b);
   const avg = prices.reduce((a,b)=>a+b,0) / prices.length;
@@ -936,44 +929,43 @@ function renderResult({dealKind, type, area, deposit, rent, userPyung, matched, 
   const p25 = prices[Math.floor(prices.length * 0.25)];
   const p75 = prices[Math.floor(prices.length * 0.75)];
 
-  // 판정
-  const diff = userCompareValue - avg;
-  const diffPct = avg ? (diff / avg * 100) : 0;
+  // 판정 (중위 기준)
+  const diff = userCompareValue - median;
   let verdict;
   if(userCompareValue > max){
     verdict = {
       cls: 'bad', icon: '🔴',
       title: '시세보다 비쌉니다',
-      sub: `${compareLabel} 기준 평균보다 <strong>${fmt1(Math.abs(diff))}만원</strong> 높은 수준입니다. 협상 또는 재검토를 권장합니다.`,
-      delta: `평균 대비 +${diffPct.toFixed(1)}%`
+      sub: `중위 시세보다 <strong>${fmt1(Math.abs(diff))}만원</strong> 높은 수준입니다. 협상 또는 재검토를 권장합니다.`,
+      delta: `중위 대비 +${fmt1(diff)}만원`
     };
   } else if(userCompareValue >= p75){
     verdict = {
       cls: 'warn', icon: '🟡',
-      title: '평균보다 약간 비쌉니다',
-      sub: `상위 25% 구간입니다. 위치·옵션·관리비 조건이 좋다면 적정할 수 있습니다.`,
-      delta: `평균 대비 ${diff>0?'+':''}${fmt1(diff)}만원`
+      title: '시세보다 약간 비쌉니다',
+      sub: `비슷한 거래 상위 25% 구간입니다. 위치·옵션·관리비 조건이 좋다면 적정할 수 있습니다.`,
+      delta: `중위 대비 ${diff>0?'+':''}${fmt1(diff)}만원`
     };
   } else if(userCompareValue >= p25){
     verdict = {
       cls: 'good', icon: '✅',
       title: '적정한 시세입니다',
-      sub: `${statSource.length}건 비교 결과 평균 범위 안에 위치합니다.`,
-      delta: `평균 대비 ${diff>0?'+':''}${fmt1(diff)}만원`
+      sub: `${statSource.length}건 비교 결과 정상 가격대(중간 50%) 안에 위치합니다.`,
+      delta: `중위 대비 ${diff>0?'+':''}${fmt1(diff)}만원`
     };
   } else if(userCompareValue >= min){
     verdict = {
       cls: 'cheap', icon: '🟢',
-      title: '평균보다 저렴합니다',
-      sub: `하위 25% 구간으로 비교적 유리한 조건입니다.`,
-      delta: `평균 대비 ${fmt1(diff)}만원`
+      title: '시세보다 저렴합니다',
+      sub: `비슷한 거래 하위 25% 구간으로 비교적 유리한 조건입니다.`,
+      delta: `중위 대비 ${fmt1(diff)}만원`
     };
   } else {
     verdict = {
       cls: 'cheap', icon: '💎',
       title: '시세보다 매우 저렴',
       sub: `최저 실거래보다 ${fmt1(Math.abs(userCompareValue-min))}만원 낮습니다. 매물 상태와 특약을 직접 확인하세요.`,
-      delta: `평균 대비 ${fmt1(diff)}만원`
+      delta: `중위 대비 ${fmt1(diff)}만원`
     };
   }
 
@@ -989,12 +981,12 @@ function renderResult({dealKind, type, area, deposit, rent, userPyung, matched, 
   const unit = '만원';
   statGrid.innerHTML = `
     <div class="stat">
-      <div class="label">평균 ${compareLabel}</div>
-      <div class="value">${fmt1(avg)}<span class="small">${unit}</span></div>
+      <div class="label">중위 ${compareLabel}</div>
+      <div class="value">${fmt1(median)}<span class="small">${unit}</span></div>
     </div>
     <div class="stat">
-      <div class="label">중위값</div>
-      <div class="value">${fmt1(median)}<span class="small">${unit}</span></div>
+      <div class="label">정상 범위(중간 50%)</div>
+      <div class="value" style="font-size:.68em">${fmt1(p25)}~${fmt1(p75)}<span class="small">${unit}</span></div>
     </div>
     <div class="stat">
       <div class="label">비교 거래</div>
@@ -1004,13 +996,30 @@ function renderResult({dealKind, type, area, deposit, rent, userPyung, matched, 
   const inputText = dealKind === '월세'
     ? `${fmt1(userConverted)}만원, 실제 월세 ${fmt0(rent)}만원`
     : `${fmt0(deposit)}만원`;
-  let rangeText = `📈 ${compareLabel} 범위: <strong>${fmt1(min)}~${fmt1(max)}만원</strong> · 본인 입력 기준: <strong style="color:var(--blue)">${inputText}</strong><br>면적 범위: 약 ±${usedMargin}평 · 적용 전환율: <strong>${formatRate(getConversionRate())}</strong>`;
+  let rangeText = `📈 ${compareLabel} 정상 범위(중간 50%): <strong>${fmt1(p25)}~${fmt1(p75)}만원</strong> · 중위 <strong>${fmt1(median)}만원</strong><br>본인 입력 기준: <strong style="color:var(--blue)">${inputText}</strong> · 면적 ±${usedMargin}평 · 전환율 <strong>${formatRate(getConversionRate())}</strong>`;
   if(buildingFilter){
     rangeText = `🏢 「${escapeHtml(buildingFilter)}」 ${matched.length}건 기준<br>` + rangeText;
   }
   rangeNote.innerHTML = rangeText;
 
-  dealsContainer.innerHTML = renderDealsTable(top5, dealKind, area, deposit, rent);
+  // 표시용 5건: 정상 가격대(중간 50%, p25~p75)에서 최신 거래순. 같은 단지 최대 2건. 부족하면 근접순으로 보충.
+  const inBand = matched.filter(d=>{
+    const v = dealKind === '월세' ? (d.__converted ?? convertedMonthlyRent(d.deposit, d.monthly_rent)) : Number(d.deposit || 0);
+    return v >= p25 && v <= p75;
+  }).sort((a,b)=> parseDateValue(b.deal_period) - parseDateValue(a.deal_period));
+  const displayDeals = [];
+  const bldgSeen = {};
+  for(const d of inBand){
+    const key = d.building_name || '-';
+    bldgSeen[key] = (bldgSeen[key] || 0) + 1;
+    if(bldgSeen[key] <= 2) displayDeals.push(d);
+    if(displayDeals.length >= 5) break;
+  }
+  if(displayDeals.length < 5){
+    for(const d of top5){ if(!displayDeals.includes(d)){ displayDeals.push(d); if(displayDeals.length >= 5) break; } }
+  }
+
+  dealsContainer.innerHTML = renderDealsTable(displayDeals, dealKind, area, deposit, rent);
   
   // 단지명 검색시 블로그 글 추천 표시
   renderBlogRecommend(buildingFilter);
