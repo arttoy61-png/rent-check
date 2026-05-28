@@ -626,7 +626,7 @@ footer a{color:var(--blue);text-decoration:none}
       <h2>📋 내 조건과 가까운 최근 실거래 5건</h2>
       <div id="dealsContainer"></div>
       <div class="notice">
-        💡 <strong>표시된 데이터</strong>: 유형·거래유형·평형을 먼저 맞추고, 월세는 법정 환산월세 차이가 가까운 순으로 표시합니다.<br>
+        💡 <strong>표시된 데이터</strong>: 유형·거래유형·평형을 먼저 맞춘 뒤, <strong>최근 거래순</strong>으로 표시합니다. (시세 판정은 비슷한 조건 거래 전체를 분석)<br>
         ⚖️ <strong>환산월세</strong>: 월세 + (보증금 × 법정 전월세전환율 ÷ 12)<br>
         ⚠️ <strong>주의</strong>: 본 데이터는 국토교통부 신고 자료 기반이며, 시점·층·향·옵션·관리비 등에 따라 실제 체감 가격은 다를 수 있습니다.
       </div>
@@ -823,7 +823,15 @@ function getMatchedDeals(candidates, userPyung, dealKind, userDeposit, userRent,
     );
   }
 
-  return {matched:selected, top5:selected.slice(0,5), usedMargin};
+  // 표시용 5건은 "최신 거래 우선" (날짜 내림차순, 동일 날짜는 조건 근접순)
+  const top5 = [...selected].sort((a,b)=>
+    (parseDateValue(b.deal_period) - parseDateValue(a.deal_period)) ||
+    (dealKind === '월세'
+      ? (a.__convertedDiff - b.__convertedDiff)
+      : (a.__depositDiff - b.__depositDiff))
+  ).slice(0,5);
+
+  return {matched:selected, top5, usedMargin};
 }
 
 function check(){
