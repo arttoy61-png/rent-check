@@ -8,7 +8,7 @@
 <!-- Open Graph (링크 공유 시 카드 썸네일) -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="내 월세 적정한가? 강서구 화곡동 시세 검증">
-<meta property="og:description" content="강서·화곡 실거래 시세로 내 보증금·월세가 적정한지 1초 비교. 국토부 공개 자료 기반·매월 자동 업데이트.">
+<meta property="og:description" content="강서·화곡 실거래 시세로 내 보증금·월세가 적정한지 1초 비교. 국토부 공개 자료 기반·주 1회 자동 업데이트.">
 <meta property="og:image" content="https://arttoy61-png.github.io/rent-check/og-thumb.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -528,19 +528,19 @@ footer a{color:var(--blue);text-decoration:none}
         <div class="apt-info">576세대 · 우장산</div>
       </button>
       <button class="apt-card" data-apt="우장산아이파크,이편한세상">
-        <div class="apt-name">우장산아이파크·이편한세상</div>
+        <div class="apt-name">우장산아이파크이편한세상</div>
         <div class="apt-info">2,517세대 · 우장산</div>
       </button>
-      <button class="apt-card" data-apt="중앙하이츠빌">
-        <div class="apt-name">중앙하이츠빌</div>
-        <div class="apt-info">473세대 · 화곡</div>
+      <button class="apt-card" data-apt="중앙화곡하이츠">
+        <div class="apt-name">중앙화곡하이츠</div>
+        <div class="apt-info">473세대 · 화곡 (1988년)</div>
       </button>
-      <button class="apt-card" data-apt="화곡대림">
+      <button class="apt-card" data-apt="대림e편한세상">
         <div class="apt-name">화곡대림아파트</div>
         <div class="apt-info">416세대 · 화곡</div>
       </button>
       <button class="apt-card" data-apt="초록">
-        <div class="apt-name">화곡초록아파트</div>
+        <div class="apt-name">초록 (화곡)</div>
         <div class="apt-info">625세대 · 화곡</div>
       </button>
       <button class="apt-card" data-apt="화곡푸르지오">
@@ -739,23 +739,29 @@ async function loadData(){
   updateRateText();
 }
 
-// 데이터 갱신일 + 6개월 범위 표시
+// 데이터 갱신일 + 6개월 범위 표시 (실제 generated_at 기준)
 function updateDataDate(){
   if(!DATA) return;
   
-  // 표시 기준일 = 오늘 (사용자가 보는 시점)
-  const today = new Date();
-  const todayStr = `${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,'0')}-${String(today.getDate()).padStart(2,'0')}`;
-  document.getElementById('updated').textContent = todayStr;
+  // 표시 기준일 = widget_data.json의 generated_at (실제 데이터 갱신 시점)
+  let updatedStr = '-';
+  if(DATA.generated_at){
+    const gen = new Date(DATA.generated_at);
+    updatedStr = `${gen.getFullYear()}-${String(gen.getMonth()+1).padStart(2,'0')}-${String(gen.getDate()).padStart(2,'0')}`;
+  }
+  document.getElementById('updated').textContent = updatedStr;
   
-  // 6개월 전 ~ 오늘 (데이터 범위)
-  const sixMonthsAgo = new Date(today);
-  sixMonthsAgo.setMonth(sixMonthsAgo.getMonth() - 6);
-  const startMonth = `${sixMonthsAgo.getFullYear()}.${String(sixMonthsAgo.getMonth()+1).padStart(2,'0')}`;
-  const endMonth = `${today.getFullYear()}.${String(today.getMonth()+1).padStart(2,'0')}`;
-  const rangeEl = document.getElementById('dataRange');
-  if(rangeEl){
-    rangeEl.textContent = `└ 데이터 범위: 최근 6개월 (${startMonth} ~ ${endMonth})`;
+  // 데이터 범위: generated_at 기준 6개월 전 ~ generated_at
+  if(DATA.generated_at){
+    const end = new Date(DATA.generated_at);
+    const start = new Date(end);
+    start.setMonth(start.getMonth() - 6);
+    const startMonth = `${start.getFullYear()}.${String(start.getMonth()+1).padStart(2,'0')}`;
+    const endMonth = `${end.getFullYear()}.${String(end.getMonth()+1).padStart(2,'0')}`;
+    const rangeEl = document.getElementById('dataRange');
+    if(rangeEl){
+      rangeEl.textContent = `└ 데이터 범위: 최근 6개월 (${startMonth} ~ ${endMonth}) · 주 1회 갱신`;
+    }
   }
 }
 
