@@ -983,6 +983,28 @@ function renderResult({dealKind, type, area, deposit, rent, userPyung, matched, 
     };
   }
 
+  // ── 판정 보정 3종 (2026.06.11) ──
+  // ③ 적정 세분화: 중간50% 안이어도 중위 대비 ±20% 이상이면 상단/하단권
+  if(verdict.cls === 'good' && median > 0){
+    const pct = diff / median;
+    if(pct >= 0.2){
+      verdict.icon = '☑️';
+      verdict.title = '적정 범위 (상단권)';
+      verdict.sub = `${statSource.length}건 비교 결과 정상 가격대(중간 50%) 안이지만, 중위보다 ${Math.round(pct*100)}% 높은 상단권입니다. 협상 여지를 확인해보세요.`;
+    } else if(pct <= -0.2){
+      verdict.title = '적정 범위 (하단권)';
+      verdict.sub = `${statSource.length}건 비교 결과 정상 가격대(중간 50%) 안이며, 중위보다 ${Math.round(Math.abs(pct)*100)}% 낮은 하단권 — 비교적 유리한 조건입니다.`;
+    }
+  }
+  // ② 비교군 범위 과대 경고: 중간50% 폭이 중위의 60% 초과면 참고용 표시
+  if(median > 0 && (p75 - p25) / median > 0.6){
+    verdict.sub += `<br><span style="opacity:.85">⚠️ 비교군 가격대 폭이 넓어(${fmt1(p25)}~${fmt1(p75)}만원) 판정은 참고용입니다.</span>`;
+  }
+  // ① 유형 '전체' 비교 안내
+  if(!type){
+    verdict.sub += `<br><span style="opacity:.85">💡 지금은 아파트·빌라·오피스텔이 섞인 비교입니다 — 정확한 판정은 유형을 선택하세요.</span>`;
+  }
+
   verdictBox.innerHTML = `
     <div class="verdict ${verdict.cls}">
       <div class="icon">${verdict.icon}</div>
