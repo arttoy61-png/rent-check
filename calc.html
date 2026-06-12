@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>재개발 분담금·총투입금 계산기 — 30초 계산 | Rent Check 강서</title>
+<meta name="description" content="소유주는 분담금, 매수자는 총투입금. 감정평가액·비례율·매매가만 알면 강서구 화곡동 재개발·모아타운 자금 규모가 30초 만에 나옵니다.">
+<meta property="og:title" content="재개발 분담금 30초 계산기 | Rent Check 강서">
+<meta property="og:description" content="감정평가액과 비례율만 알면 분담금이 나옵니다">
+<meta property="og:image" content="https://arttoy61-png.github.io/rent-check/og-thumb.png">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MPRR3J99YQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-MPRR3J99YQ');
+</script>
+<style>
+  :root{
+    --navy:#0d1f3c; --blue:#1565c0; --gold:#d4a73a; --gold-soft:#f0c75e;
+    --ink:#1c2733; --muted:#5b6b7d; --line:#dfe6f0; --bg:#f4f6fa; --rowA:#eef4fb;
+    --green:#2ea06e; --red:#d64c4c;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{background:var(--bg); color:var(--ink); font-family:"Malgun Gothic","Apple SD Gothic Neo",sans-serif; font-size:17px; line-height:1.7; -webkit-text-size-adjust:100%;}
+  .wrap{max-width:560px; margin:0 auto; background:#fff; min-height:100vh;}
+
+  .hero{background:linear-gradient(150deg,var(--navy) 0%,#13306b 100%); color:#fff; padding:28px 22px 22px; text-align:center;}
+  .hero .badge{display:inline-block; border:1.5px solid var(--gold); color:var(--gold-soft); font-size:13px; font-weight:700; letter-spacing:.5px; padding:5px 14px; border-radius:20px; margin-bottom:13px;}
+  .hero h1{font-size:24px; font-weight:800; line-height:1.4;}
+  .hero h1 .g{color:var(--gold-soft);}
+  .hero p{font-size:14px; color:#b9c9e2; margin-top:7px;}
+
+  /* 탭 */
+  .tabs{display:flex; gap:8px; padding:16px 22px 0;}
+  .tabs button{flex:1; font-family:inherit; font-size:14.5px; font-weight:800; padding:12px 4px; border-radius:12px; border:1.5px solid var(--line); background:#fafbfd; color:var(--muted); cursor:pointer;}
+  .tabs button.on{background:var(--navy); border-color:var(--navy); color:#fff;}
+  .tabs button.on .sub{color:var(--gold-soft);}
+  .tabs button .sub{display:block; font-size:11.5px; font-weight:700; color:#9aa8bd; margin-top:1px;}
+
+  .body{padding:20px 22px 10px;}
+  .step-label{font-size:13px; font-weight:800; color:var(--blue); letter-spacing:.4px; margin:4px 0 10px;}
+
+  .field{margin-bottom:15px;}
+  .field label{display:block; font-size:14.5px; font-weight:700; color:var(--navy); margin-bottom:6px;}
+  .field label .hint{font-weight:400; color:var(--muted); font-size:12.5px;}
+  .field label .opt{font-weight:700; color:var(--green); font-size:12px;}
+  .inwrap{position:relative;}
+  .inwrap input{width:100%; font-size:19px; font-weight:700; color:var(--navy); padding:13px 64px 13px 14px; border:1.5px solid var(--line); border-radius:12px; outline:none; background:#fff; font-family:inherit;}
+  .inwrap input:focus{border-color:var(--blue); box-shadow:0 0 0 3px rgba(21,101,192,.12);}
+  .inwrap .unit{position:absolute; right:14px; top:50%; transform:translateY(-50%); font-size:14px; color:var(--muted); font-weight:700;}
+  .eok{font-size:12.5px; color:var(--blue); font-weight:700; margin-top:4px; min-height:18px;}
+
+  .calc-btn{width:100%; background:linear-gradient(135deg,var(--gold),#b98a22); color:#fff; font-size:18px; font-weight:800; border:none; border-radius:12px; padding:15px; cursor:pointer; margin:6px 0 4px; font-family:inherit;}
+  .calc-btn:active{transform:scale(.99);}
+
+  .result{display:none; padding:4px 0 6px;}
+  .rcard{border:1.5px solid var(--line); border-radius:14px; padding:15px 18px; margin:11px 0;}
+  .rcard .cap{font-size:13px; font-weight:800; color:var(--blue);}
+  .rcard .calcline{font-size:14px; color:var(--muted); margin-top:4px;}
+  .rcard .val{font-size:22px; font-weight:800; color:var(--navy); margin-top:2px;}
+  .rcard.main{border:2px solid var(--gold); background:#fffdf6;}
+  .rcard.main .cap{color:#9a6b16;}
+  .rcard.main .val{font-size:28px;}
+  .rcard.main .val .g{color:#b8860b;}
+  .subnote{font-size:13px; font-weight:700; margin-top:6px; display:none;}
+  .subnote.green{color:var(--green);}
+  .subnote.red{color:var(--red);}
+
+  .slider-box{border:1.5px solid var(--line); border-radius:14px; padding:18px; margin:16px 0;}
+  .slider-box .cap{font-size:14px; font-weight:800; color:var(--navy);}
+  .slider-box .ratio-now{font-size:14px; color:var(--muted); margin:4px 0 10px;}
+  .slider-box .ratio-now b{color:var(--blue); font-size:17px;}
+  input[type=range]{width:100%; accent-color:#1565c0; height:30px;}
+  .slider-scale{display:flex; justify-content:space-between; font-size:12px; color:var(--muted); margin-top:2px;}
+  .sens{font-size:13.5px; color:#9a6b16; font-weight:700; margin-top:10px; background:#fffdf6; border:1px dashed var(--gold); border-radius:8px; padding:8px 10px;}
+
+  .notice{border:1px dashed #c9b58a; background:#fffaf0; border-radius:12px; padding:13px 15px; font-size:13px; color:#6b5a32; margin:16px 0; line-height:1.65;}
+  .notice b{color:#9a6b16;}
+  .notice a{color:#1565c0; font-weight:700;}
+
+  .cta-area{padding:4px 22px 26px;}
+  .cta{display:block; text-align:center; text-decoration:none; font-weight:800; font-size:15.5px; border-radius:12px; padding:14px; margin:10px 0;}
+  .cta.primary{background:var(--navy); color:#fff;}
+  .cta.primary .g{color:var(--gold-soft);}
+  .cta.sub{border:1.5px solid var(--blue); color:var(--blue); background:#fff;}
+
+  .foot{background:var(--navy); color:#fff; text-align:center; padding:20px; margin-top:8px;}
+  .foot .logo{font-size:17px; font-weight:800;}
+  .foot .logo .g{color:var(--gold-soft);}
+  .foot .tagline{font-size:12.5px; color:#a9bdd6; margin-top:3px;}
+  .foot a{color:#a9bdd6; font-size:12.5px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <span class="badge">재개발 · 모아타운</span>
+    <h1>재개발 자금 <span class="g">30초 계산기</span></h1>
+    <p>소유주는 분담금, 매수자는 총투입금 — 숫자 몇 개면 됩니다</p>
+  </header>
+
+  <div class="tabs">
+    <button id="tabOwner" class="on" onclick="switchTab('owner')">🏠 소유주<span class="sub">분담금 계산</span></button>
+    <button id="tabBuyer" onclick="switchTab('buyer')">💰 매수 검토<span class="sub">총투입금 계산</span></button>
+  </div>
+
+  <!-- ════ 탭 1: 소유주 분담금 ════ -->
+  <div class="body" id="panelOwner">
+    <p class="step-label">STEP 1 · 세 가지만 입력하세요</p>
+
+    <div class="field">
+      <label>감정평가액 <span class="hint">— 내 빌라·토지의 종전자산 평가액</span></label>
+      <div class="inwrap"><input type="text" id="appraisal" inputmode="numeric" placeholder="30,000"><span class="unit">만원</span></div>
+      <div class="eok" id="appraisalEok"></div>
+    </div>
+    <div class="field">
+      <label>비례율 <span class="hint">— 모르면 100 (방화3 실제 100.33%)</span></label>
+      <div class="inwrap"><input type="text" id="ratio" inputmode="decimal" placeholder="100"><span class="unit">%</span></div>
+      <div class="eok"></div>
+    </div>
+    <div class="field">
+      <label>조합원 분양가 <span class="hint">— 받을 새 아파트의 조합원 가격</span></label>
+      <div class="inwrap"><input type="text" id="memberPrice" inputmode="numeric" placeholder="90,000"><span class="unit">만원</span></div>
+      <div class="eok" id="memberPriceEok"></div>
+    </div>
+
+    <button class="calc-btn" onclick="runOwner()">분담금 계산하기</button>
+
+    <div class="result" id="ownerResult">
+      <p class="step-label" style="margin-top:14px">STEP 2 · 권리가액 — 내 몫으로 인정되는 금액</p>
+      <div class="rcard">
+        <div class="cap">권리가액 = 감정평가액 × 비례율</div>
+        <div class="calcline" id="rightsCalc"></div>
+        <div class="val" id="rightsVal"></div>
+      </div>
+      <p class="step-label" style="margin-top:14px">STEP 3 · 분담금 — 추가로 내야 하는 돈</p>
+      <div class="rcard main">
+        <div class="cap">분담금 = 조합원분양가 − 권리가액</div>
+        <div class="calcline" id="chargeCalc"></div>
+        <div class="val">분담금 <span class="g" id="chargeVal"></span></div>
+        <div class="subnote green" id="refundNote">✅ 권리가액이 분양가보다 큽니다 — 환급(청산금 수령) 대상일 수 있습니다.</div>
+      </div>
+
+      <div class="slider-box">
+        <div class="cap">📐 비례율이 바뀌면 분담금은?</div>
+        <div class="ratio-now">비례율 <b id="sliderRatioLabel">100%</b> 가정 시 분담금 <b id="sliderCharge" style="color:#9a6b16"></b></div>
+        <input type="range" id="ratioSlider" min="90" max="120" step="0.5" value="100" oninput="onSlider()">
+        <div class="slider-scale"><span>90%</span><span>100%</span><span>110%</span><span>120%</span></div>
+        <div class="sens" id="sensLine"></div>
+      </div>
+
+      <div class="notice">※ 비례율은 <b>관리처분인가 시점에 확정</b>됩니다. 그 전 수치는 추정치이며, 본 계산은 이해를 돕기 위한 참고용입니다.</div>
+    </div>
+  </div>
+
+  <!-- ════ 탭 2: 매수 검토 총투입금 ════ -->
+  <div class="body" id="panelBuyer" style="display:none">
+    <p class="step-label">STEP 1 · 매물 조건을 입력하세요</p>
+
+    <div class="field">
+      <label>매매가 <span class="hint">— 부르는 가격 (권리가액+프리미엄)</span></label>
+      <div class="inwrap"><input type="text" id="buyPrice" inputmode="numeric" placeholder="62,000"><span class="unit">만원</span></div>
+      <div class="eok" id="buyPriceEok"></div>
+    </div>
+    <div class="field">
+      <label>권리가액 <span class="hint">— 중개사·조합 확인 (감정가 × 비례율)</span></label>
+      <div class="inwrap"><input type="text" id="buyRights" inputmode="numeric" placeholder="32,400"><span class="unit">만원</span></div>
+      <div class="eok" id="buyRightsEok"></div>
+    </div>
+    <div class="field">
+      <label>조합원 분양가 <span class="hint">— 받을 평형의 조합원 가격</span></label>
+      <div class="inwrap"><input type="text" id="buyMember" inputmode="numeric" placeholder="81,700"><span class="unit">만원</span></div>
+      <div class="eok" id="buyMemberEok"></div>
+    </div>
+    <div class="field">
+      <label>이주비대출 승계액 <span class="opt">선택</span> <span class="hint">— 승계 가능한 대출</span></label>
+      <div class="inwrap"><input type="text" id="buyLoan" inputmode="numeric" placeholder="20,200"><span class="unit">만원</span></div>
+      <div class="eok" id="buyLoanEok"></div>
+    </div>
+
+    <button class="calc-btn" onclick="runBuyer()">총투입금 계산하기</button>
+
+    <div class="result" id="buyerResult">
+      <p class="step-label" style="margin-top:14px">STEP 2 · 계산 과정</p>
+      <div class="rcard">
+        <div class="cap">프리미엄 = 매매가 − 권리가액</div>
+        <div class="calcline" id="premCalc"></div>
+        <div class="val" id="premVal"></div>
+        <div class="subnote red" id="premWarn">⚠️ 마이너스 프리미엄 — 매매가가 권리가액보다 낮습니다. 입력값 확인을 권장합니다.</div>
+      </div>
+      <div class="rcard">
+        <div class="cap">추가 분담금 = 조합원분양가 − 권리가액</div>
+        <div class="calcline" id="addChargeCalc"></div>
+        <div class="val" id="addChargeVal"></div>
+      </div>
+      <div class="rcard main">
+        <div class="cap">총투입금 = 매매가 + 추가 분담금</div>
+        <div class="calcline" id="totalCalc"></div>
+        <div class="val">총투입금 <span class="g" id="totalVal"></span></div>
+      </div>
+      <div class="rcard" id="cashCard" style="display:none">
+        <div class="cap">초기 필요현금 = 매매가 − 이주비대출 승계액</div>
+        <div class="calcline" id="cashCalc"></div>
+        <div class="val" id="cashVal"></div>
+      </div>
+
+      <div class="notice">
+        ※ 총투입금은 <b>취득세·중도금 이자 등 부대비용을 제외</b>한 금액입니다.<br>
+        ⚠️ 매수 전 <b>권리산정기준일</b>과 <b>입주권 승계 가능 여부(현금청산 대상 여부)</b>를 반드시 확인하세요.
+        <!-- TODO: 아래 링크는 '현금청산 피하는 법' 글 URL로 교체 -->
+        → <a href="https://blog.naver.com/spitoon61" onclick="gaEvent('cta_click','guide')">현금청산 피하는 법 글 보기</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-area">
+    <!-- TODO: 아래 첫 링크는 '강서 재개발 체크 ① 분담금' 글 URL로 교체 -->
+    <a class="cta primary" href="https://blog.naver.com/spitoon61" onclick="gaEvent('cta_click','guide')">📖 분담금 <span class="g">단계별 가이드 글</span> 보기</a>
+    <a class="cta sub" href="https://blog.naver.com/spitoon61" onclick="gaEvent('cta_click','consult')">💬 내 구역 분담금이 궁금하면 — 블로그 댓글로 문의</a>
+  </div>
+
+  <div class="foot">
+    <div class="logo">Rent Check <span class="g">강서</span></div>
+    <div class="tagline">실거래로 더 정확하게</div>
+    <div style="margin-top:8px"><a href="index.html">← 전세·월세 시세 검증 위젯으로</a></div>
+  </div>
+</div>
+
+<script>
+let sliderUsed = false;
+
+function gaEvent(name, label){
+  if (typeof gtag === 'function') gtag('event', name, {event_label: label || ''});
+}
+
+function switchTab(t){
+  const owner = t === 'owner';
+  document.getElementById('tabOwner').className = owner ? 'on' : '';
+  document.getElementById('tabBuyer').className = owner ? '' : 'on';
+  document.getElementById('panelOwner').style.display = owner ? 'block' : 'none';
+  document.getElementById('panelBuyer').style.display = owner ? 'none' : 'block';
+  gaEvent('tab_switch', t);
+}
+
+function num(id){
+  const v = document.getElementById(id).value.replace(/[^0-9.]/g, '');
+  return v ? parseFloat(v) : NaN;
+}
+
+function toEokStr(man){
+  const neg = man < 0; man = Math.abs(Math.round(man));
+  const eok = Math.floor(man / 10000), rest = man % 10000;
+  let s = '';
+  if (eok > 0) s += eok.toLocaleString('ko-KR') + '억';
+  if (rest > 0) s += (eok > 0 ? ' ' : '') + rest.toLocaleString('ko-KR') + '만';
+  if (!s) s = '0';
+  return (neg ? '−' : '') + s + ' 원';
+}
+function eokShort(man){ return toEokStr(man).replace(' 원',''); }
+
+function liveEok(inputId, outId){
+  const el = document.getElementById(inputId);
+  el.addEventListener('input', function(){
+    const raw = el.value.replace(/[^0-9]/g, '');
+    el.value = raw ? parseInt(raw, 10).toLocaleString('ko-KR') : '';
+    if (outId) document.getElementById(outId).textContent = raw ? '= ' + toEokStr(parseInt(raw, 10)) : '';
+  });
+}
+liveEok('appraisal', 'appraisalEok');
+liveEok('memberPrice', 'memberPriceEok');
+liveEok('buyPrice', 'buyPriceEok');
+liveEok('buyRights', 'buyRightsEok');
+liveEok('buyMember', 'buyMemberEok');
+liveEok('buyLoan', 'buyLoanEok');
+
+/* ── 소유주 탭 ── */
+function calcCharge(appraisal, ratio, memberPrice){
+  const rights = appraisal * ratio / 100;
+  return {rights: rights, charge: memberPrice - rights};
+}
+
+function runOwner(){
+  const a = num('appraisal'), r = num('ratio'), m = num('memberPrice');
+  if (isNaN(a) || isNaN(r) || isNaN(m) || a <= 0 || r <= 0 || m <= 0){
+    alert('감정평가액·비례율·조합원분양가를 모두 입력해주세요.'); return;
+  }
+  const c = calcCharge(a, r, m);
+  document.getElementById('rightsCalc').textContent = eokShort(a) + ' × ' + r + '% =';
+  document.getElementById('rightsVal').textContent = toEokStr(c.rights);
+  document.getElementById('chargeCalc').textContent = eokShort(m) + ' − ' + eokShort(c.rights) + ' =';
+  document.getElementById('chargeVal').textContent = toEokStr(c.charge);
+  document.getElementById('refundNote').style.display = c.charge < 0 ? 'block' : 'none';
+
+  const slider = document.getElementById('ratioSlider');
+  slider.value = Math.min(120, Math.max(90, r));
+  onSlider(true);
+
+  document.getElementById('ownerResult').style.display = 'block';
+  gaEvent('calc_click', 'owner');  // 라벨은 탭 구분만 — 금액 등 개인 데이터 수집 금지
+  document.getElementById('ownerResult').scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+function onSlider(silent){
+  const a = num('appraisal'), m = num('memberPrice');
+  if (isNaN(a) || isNaN(m)) return;
+  const r = parseFloat(document.getElementById('ratioSlider').value);
+  const c = calcCharge(a, r, m);
+  document.getElementById('sliderRatioLabel').textContent = r + '%';
+  document.getElementById('sliderCharge').textContent = toEokStr(c.charge);
+  document.getElementById('sensLine').textContent =
+    '비례율 1%p가 바뀌면 분담금이 약 ' + toEokStr(a / 100) + ' 움직입니다.';
+  if (!silent && !sliderUsed){ sliderUsed = true; gaEvent('slider_use', ''); }
+}
+
+/* ── 매수 검토 탭 ── */
+function runBuyer(){
+  const p = num('buyPrice'), rg = num('buyRights'), mb = num('buyMember'), ln = num('buyLoan');
+  if (isNaN(p) || isNaN(rg) || isNaN(mb) || p <= 0 || rg <= 0 || mb <= 0){
+    alert('매매가·권리가액·조합원분양가를 입력해주세요. (이주비 승계액은 선택)'); return;
+  }
+  const prem = p - rg;
+  const addCharge = mb - rg;
+  const total = p + addCharge;
+
+  document.getElementById('premCalc').textContent = eokShort(p) + ' − ' + eokShort(rg) + ' =';
+  document.getElementById('premVal').textContent = '프리미엄 ' + toEokStr(prem);
+  document.getElementById('premWarn').style.display = prem < 0 ? 'block' : 'none';
+
+  document.getElementById('addChargeCalc').textContent = eokShort(mb) + ' − ' + eokShort(rg) + ' =';
+  document.getElementById('addChargeVal').textContent = toEokStr(addCharge);
+
+  document.getElementById('totalCalc').textContent = eokShort(p) + ' + ' + eokShort(addCharge) + ' =';
+  document.getElementById('totalVal').textContent = toEokStr(total);
+
+  if (!isNaN(ln) && ln > 0){
+    document.getElementById('cashCalc').textContent = eokShort(p) + ' − ' + eokShort(ln) + ' =';
+    document.getElementById('cashVal').textContent = toEokStr(p - ln);
+    document.getElementById('cashCard').style.display = 'block';
+  } else {
+    document.getElementById('cashCard').style.display = 'none';
+  }
+
+  document.getElementById('buyerResult').style.display = 'block';
+  gaEvent('calc_click', 'buyer');  // 라벨은 탭 구분만 — 금액 등 개인 데이터 수집 금지
+  document.getElementById('buyerResult').scrollIntoView({behavior:'smooth', block:'start'});
+}
+</script>
+</body>
+</html>
