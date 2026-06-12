@@ -730,7 +730,7 @@ function escapeHtml(v){
 // 데이터 로드
 async function loadData(){
   try{
-    const r = await fetch('widget_data.json');
+    const r = await fetch('widget_data.json', {cache: 'no-cache'});
     if(!r.ok) throw new Error('데이터 파일을 불러올 수 없습니다');
     DATA = await r.json();
     updateDataDate();
