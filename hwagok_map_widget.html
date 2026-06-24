@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>화곡 대표단지 시세 · 렌트체크강서</title>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MPRR3J99YQ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-MPRR3J99YQ');</script>
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="화곡 대표단지 시세 · 렌트체크강서">
+<meta property="og:description" content="검색·설치 없이 화곡 대표 9개 단지 매매·전세·월세를 한눈에.">
+<meta property="og:image" content="https://arttoy61-png.github.io/rent-check/hwagok_og.png">
+<meta property="og:url" content="https://arttoy61-png.github.io/rent-check/hwagok_map_widget.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
+<style>
+  :root{--navy:#0d1f3c;--navy2:#15294d;--ink:#1c2733;--gold:#d4a73a;--gold-bright:#f0c75e;--gold-deep:#b8860b;--orange:#c4661f;--blue:#1565c0;--green:#2e8b57;--line:#e7e2d6;--paper:#faf8f3;--mute:#8a8270;}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased}
+  .wrap{max-width:640px;margin:0 auto;background:var(--paper);min-height:100vh}
+  header{background:var(--navy);color:#fff;padding:18px 20px 15px;position:relative;overflow:hidden}
+  header::after{content:"";position:absolute;left:0;bottom:0;height:3px;width:100%;background:linear-gradient(90deg,var(--gold-deep),var(--gold),var(--gold-bright))}
+  .kicker{font-size:11px;letter-spacing:.16em;color:var(--gold);font-weight:700;margin-bottom:6px}
+  h1{font-size:21px;font-weight:800;letter-spacing:-.01em;line-height:1.25}
+  h1 .accent{color:var(--gold-bright)}
+  .sub{font-size:12.5px;color:#b9c4d6;margin-top:6px;line-height:1.4}
+  .summary{margin:13px 16px 0;background:var(--navy2);border:1.5px solid rgba(240,199,94,.3);border-radius:11px;padding:11px 15px;display:flex;flex-wrap:wrap;gap:4px 16px;align-items:baseline}
+  .summary .big{font-size:14px;font-weight:800;color:var(--gold-bright)}
+  .summary .it{font-size:12.5px;color:#cdd6e6;font-weight:600}
+  .summary .it b{color:#fff;font-weight:800}
+  .view-tabs{display:flex;gap:8px;padding:12px 16px 0}
+  .view-tab{flex:1;border:1.5px solid var(--line);background:#fff;border-radius:10px;padding:10px 8px;font-size:13.5px;font-weight:800;color:var(--mute);cursor:pointer;display:flex;align-items:center;justify-content:center;gap:7px;transition:.15s}
+  .view-tab.on{border-color:var(--navy);background:var(--navy);color:#fff}
+  .sort-row{display:flex;gap:6px;padding:12px 16px 0;flex-wrap:wrap}
+  .sort-lab{font-size:12px;color:var(--mute);font-weight:700;align-self:center;margin-right:2px}
+  .sort-btn{border:1.5px solid var(--line);background:#fff;border-radius:8px;padding:7px 12px;font-size:12.5px;font-weight:700;color:#6b5a32;cursor:pointer;transition:.15s}
+  .sort-btn.on{border-color:var(--orange);background:var(--orange);color:#fff}
+  .list{padding:12px 16px 0}
+  .card{display:flex;align-items:center;gap:13px;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:13px 15px;margin-bottom:9px;box-shadow:0 1px 5px rgba(13,31,60,.04);cursor:pointer;transition:.12s}
+  .card:active{transform:scale(.985);border-color:#c9bfa0}
+  .rank{flex-shrink:0;width:30px;height:30px;border-radius:50%;background:var(--navy);color:var(--gold-bright);font-size:14px;font-weight:800;display:flex;align-items:center;justify-content:center}
+  .rank.top{background:linear-gradient(135deg,var(--gold-deep),var(--gold))}
+  .rank.top span{color:var(--navy)}
+  .cinfo{flex:1;min-width:0}
+  .cname{font-size:15px;font-weight:800;color:var(--navy);line-height:1.2}
+  .cmeta{font-size:11.5px;color:var(--mute);margin-top:3px}
+  .cmeta .dot{color:#d8d2c4;margin:0 5px}
+  .cprice{text-align:right;flex-shrink:0;display:flex;align-items:center;gap:9px}
+  .cpwrap{text-align:right}
+  .cmain{font-size:17px;font-weight:800;color:var(--orange);line-height:1.15}
+  .csub{font-size:11.5px;color:#7a7363;font-weight:700;margin-top:2px}
+  .csub .pyeong-dot{display:inline-block;width:8px;height:8px;border-radius:50%;vertical-align:middle;margin-right:3px;border:1px solid rgba(0,0,0,.15)}
+  .chev{color:#c9bfa0;font-size:18px;font-weight:700}
+  .warn{display:inline-block;font-size:10px;font-weight:700;color:#fff;background:#c0883a;border-radius:4px;padding:1px 5px;margin-left:5px}
+
+  /* 상세 뷰 */
+  .detail-head{background:var(--navy);color:#fff;padding:14px 16px;display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:5}
+  .dback{background:rgba(255,255,255,.12);border:none;color:#fff;font-size:18px;font-weight:700;width:34px;height:34px;border-radius:9px;cursor:pointer;flex-shrink:0}
+  .dtitle{flex:1;min-width:0}
+  .dtitle .dn{font-size:17px;font-weight:800;color:var(--gold-bright);line-height:1.2}
+  .dtitle .dm{font-size:11.5px;color:#aeb9cc;margin-top:2px}
+  .dsummary{margin:13px 16px 0;display:flex;gap:8px}
+  .dsum-box{flex:1;border:1.5px solid var(--line);border-radius:10px;padding:10px 8px;text-align:center;background:#fff}
+  .dsum-box .l{font-size:10.5px;color:var(--mute);font-weight:700}
+  .dsum-box .v{font-size:15px;font-weight:800;color:var(--ink);margin-top:3px}
+  .d-notice{margin:14px 16px 0;background:#fff7e8;border:1.5px solid #e8d59a;border-radius:10px;padding:11px 14px;font-size:12px;color:#6b5a32;line-height:1.5;font-weight:600}
+  .d-notice b{color:var(--orange)}
+  .dsection{margin:16px 16px 0}
+  .dsec-h{display:flex;align-items:baseline;gap:8px;margin-bottom:8px;padding-bottom:7px;border-bottom:2px solid var(--line)}
+  .dsec-h .t{font-size:15px;font-weight:800}
+  .dsec-h.sale .t{color:var(--orange)} .dsec-h.je .t{color:var(--blue)} .dsec-h.wo .t{color:var(--gold-deep)}
+  .dsec-h .c{font-size:11.5px;color:var(--mute);font-weight:700}
+  .trow{display:flex;align-items:center;justify-content:space-between;padding:9px 2px;border-bottom:1px solid #f0ece2;font-size:13px}
+  .trow:last-child{border-bottom:none}
+  .tdate{color:var(--mute);font-size:12px;font-weight:600;width:84px;flex-shrink:0}
+  .tspec{flex:1;color:var(--ink);font-size:12.5px}
+  .tspec .fl{color:var(--mute)}
+  .tamt{font-weight:800;font-size:14px;flex-shrink:0;text-align:right}
+  .tamt.sale{color:var(--orange)} .tamt.je{color:var(--blue)} .tamt.wo{color:var(--gold-deep)}
+  .empty{padding:14px 2px;color:var(--mute);font-size:12.5px;text-align:center}
+
+  .legend-bar{margin:10px 16px 0;background:#fff;border:1.5px solid var(--line);border-radius:11px;padding:11px 14px 12px}
+  .legend-bar .row1{display:flex;align-items:center;gap:11px}
+  .legend-bar .lt{font-size:12.5px;font-weight:800;color:var(--navy);white-space:nowrap}
+  .legend-bar .scwrap{flex:1}
+  .legend-bar .scale{display:flex;height:13px;border-radius:7px;overflow:hidden}
+  .legend-bar .scale span{flex:1}
+  .legend-bar .slab{display:flex;justify-content:space-between;font-size:10.5px;color:var(--mute);font-weight:700;margin-top:3px}
+  .legend-bar .note{font-size:11.5px;line-height:1.5;color:var(--ink);font-weight:600;margin-top:9px;padding-top:9px;border-top:1px solid var(--line)}
+  .legend-bar .note b{color:var(--orange)}
+  .legend-bar .dotsize{display:inline-block;border-radius:50%;background:var(--gold);vertical-align:middle;margin:0 1px;border:1px solid #b8860b}
+  #map{height:54vh;min-height:360px;margin:10px 16px 0;border-radius:14px;border:1.5px solid var(--line);z-index:1;box-shadow:0 2px 12px rgba(13,31,60,.06)}
+  .map-foot{font-size:11px;color:var(--mute);margin:8px 16px 0;line-height:1.5}
+  .leaflet-popup-content-wrapper{border-radius:12px;box-shadow:0 6px 24px rgba(13,31,60,.18);padding:0;overflow:hidden}
+  .leaflet-popup-content{margin:0;width:224px!important}
+  .pop-h{background:var(--navy);color:#fff;padding:11px 14px}
+  .pop-h .nm{font-size:15px;font-weight:800;color:var(--gold-bright);line-height:1.25}
+  .pop-h .yr{font-size:11px;color:#aeb9cc;margin-top:2px}
+  .pop-b{padding:12px 14px;background:#fff}
+  .pop-row{display:flex;justify-content:space-between;align-items:baseline;padding:3px 0;font-size:13px}
+  .pop-row .k{color:#7a7363;font-size:11.5px}
+  .pop-row .v{font-weight:800;color:var(--ink)}
+  .pop-row .v.big{color:var(--orange);font-size:15.5px}
+  .pop-note{margin-top:7px;padding-top:7px;border-top:1px dashed var(--line);font-size:11.5px;color:var(--blue);font-weight:700}
+  footer{margin-top:18px;padding:15px 18px 26px;border-top:1px solid var(--line)}
+  .src{font-size:11px;color:#7a7363;line-height:1.6}
+  .src b{color:var(--ink)}
+  .disc{margin-top:8px;font-size:10.5px;color:#9a9485;line-height:1.55}
+  .brand{margin-top:11px;font-size:12.5px;font-weight:800;color:var(--navy)}
+  .brand .sl{color:var(--gold-deep);font-weight:700}
+  .hidden{display:none!important}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">화곡 대표단지 시세</div>
+    <h1>단지 검색 없이, <span class="accent">화곡 대표단지 한눈에</span></h1>
+    <div class="sub">호갱노노처럼 단지 찾고 평형 고를 필요 없이 — 카드를 누르면 매매·전세·월세가 한 화면에</div>
+  </header>
+  <div class="summary">
+    <span class="big">화곡 대표 9개</span>
+    <span class="it">매매 <b>4.3~15.3억</b></span>
+    <span class="it">평당 <b>0.25~0.73억</b></span>
+  </div>
+  <div class="view-tabs">
+    <button class="view-tab on" id="tabList">📋 순위</button>
+    <button class="view-tab" id="tabMap">🗺️ 지도</button>
+  </div>
+
+  <div id="listView">
+    <div class="sort-row">
+      <span class="sort-lab">정렬</span>
+      <button class="sort-btn on" data-sort="price">매매가순</button>
+      <button class="sort-btn" data-sort="pyeong">평당가순</button>
+      <button class="sort-btn" data-sort="year">신축순</button>
+      <button class="sort-btn" data-sort="deals">거래량순</button>
+    </div>
+    <div class="list" id="list"></div>
+  </div>
+
+  <div id="detailView" class="hidden">
+    <div class="detail-head">
+      <button class="dback" id="dback">‹</button>
+      <div class="dtitle"><div class="dn" id="dName"></div><div class="dm" id="dMeta"></div></div>
+    </div>
+    <div class="dsummary" id="dSummary"></div>
+    <div class="d-notice">📅 2026년 실거래 기준 · 매매 중위·평당가는 <b>전체 거래</b>로 계산했고, 아래 목록은 각 항목 <b>최신순</b>입니다.</div>
+    <div id="dBody"></div>
+  </div>
+
+  <div id="mapView" class="hidden">
+    <div class="legend-bar">
+      <div class="row1">
+        <span class="lt">전용 평당가</span>
+        <div class="scwrap">
+          <div class="scale"><span style="background:rgb(236,213,154)"></span><span style="background:rgb(222,184,90)"></span><span style="background:rgb(212,158,52)"></span><span style="background:rgb(201,118,38)"></span><span style="background:rgb(185,82,24)"></span></div>
+          <div class="slab"><span>0.25억</span><span>0.73억</span></div>
+        </div>
+      </div>
+      <div class="note">원의 <b>색</b>이 진할수록 평당가가 높고, <b>크기</b>는 거래량입니다 (<span class="dotsize" style="width:8px;height:8px"></span> 적음 ~ <span class="dotsize" style="width:15px;height:15px"></span> 많음). 단지를 누르면 시세가 나옵니다.</div>
+    </div>
+    <div id="map"></div>
+    <div class="map-foot">※ 화곡보람은 위치 확인 중이라 지도에는 곧 추가됩니다 (순위 목록엔 포함).</div>
+  </div>
+
+  <footer>
+    <div class="src"><b>데이터 ·</b> 국토교통부 실거래가 공개시스템 (2026년)<br><b>기준 ·</b> 단지별 주력 평형 매매 중위가 · 전용 평당가 · 상세는 최신 거래순</div>
+    <div class="disc">표시 시세는 실거래 기준이며 같은 단지라도 층·향·동·평형에 따라 달라집니다. 평당가는 작은 평수일수록 높게 잡히니(소형 착시) 평형을 함께 보세요. 투자 판단의 단독 근거로 삼지 마세요. 동별 인구 레이어는 행정안전부 주민등록 통계 연동 예정입니다.</div>
+    <div class="brand">렌트체크강서 · <span class="sl">실거래로 더 정확하게</span></div>
+  </footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+<script>
+  const complexes = [
+    {name:'우장산아이파크이편한세상', lat:37.5494, lng:126.8388, year:2008, area:'84㎡', price:15.3, pyeong:0.60, deals:44, note:'우장산 자락 · 화곡 최고가권', warn:false},
+    {name:'강서힐스테이트',           lat:37.5470, lng:126.8396, year:2015, area:'84㎡', price:14.8, pyeong:0.57, deals:61, note:'2,603세대 대단지 · 거래 최다', warn:false},
+    {name:'우장산숲아이파크',         lat:37.5451, lng:126.8390, year:2022, area:'59㎡', price:13.2, pyeong:0.73, deals:16, note:'2022 신축 · 주력 59㎡ 소형', warn:false},
+    {name:'우장산롯데캐슬',           lat:37.5556, lng:126.8485, year:2003, area:'84㎡', price:12.7, pyeong:0.49, deals:24, note:'1,164세대', warn:false},
+    {name:'화곡푸르지오',             lat:37.5430, lng:126.8318, year:2002, area:'84㎡', price:11.4, pyeong:0.44, deals:47, note:'우장산 자락 · 대우건설', warn:false},
+    {name:'우장산SK뷰',              lat:37.5481, lng:126.8430, year:2006, area:'84㎡', price:9.5,  pyeong:0.37, deals:13, note:'84㎡ 9억대', warn:false},
+    {name:'초록',                    lat:37.5455, lng:126.8341, year:1998, area:'59㎡', price:8.1,  pyeong:0.45, deals:18, note:'59㎡ 구축', warn:false},
+    {name:'화곡보람',                lat:null,    lng:null,     year:2004, area:'84㎡', price:8.1,  pyeong:0.32, deals:7,  note:'화곡동 1149 · 표본 적음', warn:true},
+    {name:'중앙화곡하이츠',          lat:37.5357, lng:126.8437, year:1988, area:'59㎡', price:4.3,  pyeong:0.25, deals:18, note:'1988 구축 · 까치산권', warn:false},
+  ];
+  const DETAIL = {"우장산아이파크이편한세상": {"nSale": 44, "nJe": 69, "nWo": 36, "sale": [{"date": "2026.05.27", "m2": 115.0, "py": 34.8, "fl": 4, "amt": 15.8}, {"date": "2026.05.27", "m2": 60.0, "py": 18.1, "fl": 3, "amt": 13.2}, {"date": "2026.05.19", "m2": 85.0, "py": 25.7, "fl": 16, "amt": 16.0}, {"date": "2026.05.18", "m2": 85.0, "py": 25.7, "fl": 1, "amt": 10.53}, {"date": "2026.05.16", "m2": 85.0, "py": 25.7, "fl": 16, "amt": 16.3}, {"date": "2026.05.15", "m2": 85.0, "py": 25.7, "fl": 6, "amt": 15.3}], "jeonse": [{"date": "2026.06.17", "m2": 85.0, "py": 25.7, "fl": 17, "dep": 8.5}, {"date": "2026.06.15", "m2": 85.0, "py": 25.7, "fl": 3, "dep": 6.17}, {"date": "2026.06.11", "m2": 60.0, "py": 18.1, "fl": 13, "dep": 6.7}, {"date": "2026.06.01", "m2": 115.0, "py": 34.8, "fl": 18, "dep": 9.45}, {"date": "2026.06.01", "m2": 60.0, "py": 18.1, "fl": 4, "dep": 6.8}, {"date": "2026.05.30", "m2": 85.0, "py": 25.7, "fl": 6, "dep": 7.9}], "wolse": [{"date": "2026.06.05", "m2": 85.0, "py": 25.7, "fl": 19, "dep": 6.5, "rent": 60}, {"date": "2026.06.05", "m2": 85.0, "py": 25.7, "fl": 22, "dep": 6.0, "rent": 100}, {"date": "2026.06.02", "m2": 85.0, "py": 25.7, "fl": 15, "dep": 3.0, "rent": 190}, {"date": "2026.05.27", "m2": 85.0, "py": 25.7, "fl": 18, "dep": 5.25, "rent": 84}, {"date": "2026.05.26", "m2": 60.0, "py": 18.1, "fl": 14, "dep": 6.5, "rent": 40}, {"date": "2026.05.13", "m2": 85.0, "py": 25.7, "fl": 9, "dep": 3.75, "rent": 190}]}, "강서힐스테이트": {"nSale": 61, "nJe": 61, "nWo": 42, "sale": [{"date": "2026.06.12", "m2": 128.8, "py": 39.0, "fl": 17, "amt": 16.95}, {"date": "2026.06.10", "m2": 85.0, "py": 25.7, "fl": 11, "amt": 16.0}, {"date": "2026.06.03", "m2": 60.0, "py": 18.1, "fl": 11, "amt": 14.0}, {"date": "2026.06.02", "m2": 85.0, "py": 25.7, "fl": 11, "amt": 13.9}, {"date": "2026.05.30", "m2": 60.0, "py": 18.1, "fl": 8, "amt": 14.0}, {"date": "2026.05.28", "m2": 85.0, "py": 25.7, "fl": 14, "amt": 15.3}], "jeonse": [{"date": "2026.06.19", "m2": 85.0, "py": 25.7, "fl": 12, "dep": 8.0}, {"date": "2026.06.13", "m2": 60.0, "py": 18.1, "fl": 20, "dep": 5.75}, {"date": "2026.06.05", "m2": 85.0, "py": 25.7, "fl": 17, "dep": 8.25}, {"date": "2026.05.30", "m2": 60.0, "py": 18.1, "fl": 2, "dep": 5.42}, {"date": "2026.05.25", "m2": 60.0, "py": 18.1, "fl": 10, "dep": 7.2}, {"date": "2026.05.23", "m2": 128.8, "py": 39.0, "fl": 7, "dep": 10.4}], "wolse": [{"date": "2026.06.06", "m2": 60.0, "py": 18.1, "fl": 2, "dep": 4.8, "rent": 65}, {"date": "2026.06.05", "m2": 85.0, "py": 25.7, "fl": 16, "dep": 7.5, "rent": 40}, {"date": "2026.06.02", "m2": 60.0, "py": 18.1, "fl": 5, "dep": 1.0, "rent": 196}, {"date": "2026.05.29", "m2": 60.0, "py": 18.1, "fl": 3, "dep": 6.0, "rent": 30}, {"date": "2026.05.21", "m2": 85.0, "py": 25.7, "fl": 13, "dep": 5.5, "rent": 130}, {"date": "2026.05.19", "m2": 85.0, "py": 25.7, "fl": 20, "dep": 3.0, "rent": 130}]}, "우장산숲아이파크": {"nSale": 16, "nJe": 13, "nWo": 4, "sale": [{"date": "2026.06.09", "m2": 60.0, "py": 18.1, "fl": 4, "amt": 13.45}, {"date": "2026.06.02", "m2": 85.0, "py": 25.7, "fl": 10, "amt": 15.0}, {"date": "2026.05.28", "m2": 75.0, "py": 22.7, "fl": 8, "amt": 14.0}, {"date": "2026.05.07", "m2": 60.0, "py": 18.1, "fl": 8, "amt": 13.0}, {"date": "2026.05.05", "m2": 60.0, "py": 18.1, "fl": 15, "amt": 13.92}, {"date": "2026.04.21", "m2": 85.0, "py": 25.7, "fl": 4, "amt": 14.5}], "jeonse": [{"date": "2026.06.19", "m2": 60.0, "py": 18.1, "fl": 8, "dep": 6.4}, {"date": "2026.06.13", "m2": 60.0, "py": 18.1, "fl": 14, "dep": 5.99}, {"date": "2026.06.03", "m2": 60.0, "py": 18.1, "fl": 5, "dep": 7.1}, {"date": "2026.05.01", "m2": 60.0, "py": 18.1, "fl": 14, "dep": 7.3}, {"date": "2026.04.30", "m2": 85.0, "py": 25.7, "fl": 8, "dep": 8.5}, {"date": "2026.04.25", "m2": 60.0, "py": 18.1, "fl": 3, "dep": 6.9}], "wolse": [{"date": "2026.06.10", "m2": 60.0, "py": 18.1, "fl": 5, "dep": 1.0, "rent": 240}, {"date": "2026.04.09", "m2": 60.0, "py": 18.1, "fl": 9, "dep": 2.0, "rent": 200}, {"date": "2026.03.14", "m2": 60.0, "py": 18.1, "fl": 5, "dep": 4.0, "rent": 145}, {"date": "2026.01.17", "m2": 60.0, "py": 18.1, "fl": 14, "dep": 5.0, "rent": 90}]}, "우장산롯데캐슬": {"nSale": 24, "nJe": 22, "nWo": 18, "sale": [{"date": "2026.06.12", "m2": 177.9, "py": 53.8, "fl": 1, "amt": 12.88}, {"date": "2026.06.05", "m2": 85.0, "py": 25.7, "fl": 13, "amt": 13.45}, {"date": "2026.06.01", "m2": 117.2, "py": 35.4, "fl": 1, "amt": 13.9}, {"date": "2026.05.30", "m2": 135.0, "py": 40.8, "fl": 18, "amt": 14.5}, {"date": "2026.05.16", "m2": 85.0, "py": 25.7, "fl": 13, "amt": 13.3}, {"date": "2026.05.08", "m2": 177.9, "py": 53.8, "fl": 13, "amt": 14.7}], "jeonse": [{"date": "2026.06.21", "m2": 85.0, "py": 25.7, "fl": 7, "dep": 6.6}, {"date": "2026.06.19", "m2": 85.0, "py": 25.7, "fl": 11, "dep": 7.1}, {"date": "2026.06.12", "m2": 85.0, "py": 25.7, "fl": 6, "dep": 7.3}, {"date": "2026.06.01", "m2": 85.0, "py": 25.7, "fl": 14, "dep": 7.2}, {"date": "2026.05.23", "m2": 135.0, "py": 40.8, "fl": 10, "dep": 7.0}, {"date": "2026.05.15", "m2": 85.0, "py": 25.7, "fl": 8, "dep": 8.3}], "wolse": [{"date": "2026.05.23", "m2": 135.0, "py": 40.8, "fl": 10, "dep": 7.0, "rent": 90}, {"date": "2026.05.23", "m2": 135.0, "py": 40.8, "fl": 10, "dep": 7.0, "rent": 90}, {"date": "2026.05.08", "m2": 117.2, "py": 35.4, "fl": 3, "dep": 4.2, "rent": 150}, {"date": "2026.04.15", "m2": 85.0, "py": 25.7, "fl": 8, "dep": 4.0, "rent": 133}, {"date": "2026.04.13", "m2": 85.0, "py": 25.7, "fl": 15, "dep": 0.5, "rent": 245}, {"date": "2026.04.11", "m2": 177.9, "py": 53.8, "fl": 13, "dep": 3.0, "rent": 190}]}, "화곡푸르지오": {"nSale": 47, "nJe": 25, "nWo": 13, "sale": [{"date": "2026.06.08", "m2": 129.2, "py": 39.1, "fl": 1, "amt": 10.7}, {"date": "2026.06.05", "m2": 156.9, "py": 47.5, "fl": 4, "amt": 14.3}, {"date": "2026.06.04", "m2": 144.1, "py": 43.6, "fl": 11, "amt": 13.9}, {"date": "2026.05.28", "m2": 144.1, "py": 43.6, "fl": 10, "amt": 12.1}, {"date": "2026.05.27", "m2": 103.9, "py": 31.4, "fl": 15, "amt": 11.25}, {"date": "2026.05.26", "m2": 144.1, "py": 43.6, "fl": 12, "amt": 13.55}], "jeonse": [{"date": "2026.05.30", "m2": 156.9, "py": 47.5, "fl": 9, "dep": 10.0}, {"date": "2026.05.29", "m2": 156.9, "py": 47.5, "fl": 5, "dep": 7.67}, {"date": "2026.05.06", "m2": 144.1, "py": 43.6, "fl": 3, "dep": 8.4}, {"date": "2026.04.20", "m2": 84.9, "py": 25.7, "fl": 7, "dep": 6.0}, {"date": "2026.04.15", "m2": 156.9, "py": 47.5, "fl": 12, "dep": 9.0}, {"date": "2026.04.15", "m2": 156.9, "py": 47.5, "fl": 12, "dep": 9.0}], "wolse": [{"date": "2026.05.26", "m2": 156.9, "py": 47.5, "fl": 7, "dep": 2.0, "rent": 300}, {"date": "2026.05.16", "m2": 144.1, "py": 43.6, "fl": 2, "dep": 1.0, "rent": 260}, {"date": "2026.04.23", "m2": 144.1, "py": 43.6, "fl": 3, "dep": 1.0, "rent": 300}, {"date": "2026.04.04", "m2": 125.0, "py": 37.8, "fl": 3, "dep": 5.0, "rent": 90}, {"date": "2026.03.28", "m2": 84.9, "py": 25.7, "fl": 5, "dep": 3.0, "rent": 70}, {"date": "2026.03.27", "m2": 156.9, "py": 47.5, "fl": 1, "dep": 6.0, "rent": 80}]}, "우장산에스케이뷰": {"nSale": 13, "nJe": 4, "nWo": 0, "sale": [{"date": "2026.05.29", "m2": 116.9, "py": 35.4, "fl": 4, "amt": 9.85}, {"date": "2026.05.22", "m2": 85.0, "py": 25.7, "fl": 11, "amt": 10.5}, {"date": "2026.05.04", "m2": 85.0, "py": 25.7, "fl": 7, "amt": 9.5}, {"date": "2026.05.01", "m2": 116.9, "py": 35.4, "fl": 13, "amt": 10.2}, {"date": "2026.04.20", "m2": 85.0, "py": 25.7, "fl": 13, "amt": 9.52}, {"date": "2026.04.15", "m2": 85.0, "py": 25.7, "fl": 8, "amt": 8.9}], "jeonse": [{"date": "2026.05.12", "m2": 85.0, "py": 25.7, "fl": 2, "dep": 4.8}, {"date": "2026.04.25", "m2": 85.0, "py": 25.7, "fl": 1, "dep": 5.56}, {"date": "2026.04.07", "m2": 85.0, "py": 25.7, "fl": 1, "dep": 4.9}, {"date": "2026.04.07", "m2": 85.0, "py": 25.7, "fl": 1, "dep": 4.9}], "wolse": []}, "초록": {"nSale": 18, "nJe": 18, "nWo": 8, "sale": [{"date": "2026.06.10", "m2": 59.3, "py": 18.0, "fl": 2, "amt": 8.1}, {"date": "2026.05.29", "m2": 84.3, "py": 25.5, "fl": 5, "amt": 9.75}, {"date": "2026.05.27", "m2": 84.2, "py": 25.5, "fl": 2, "amt": 8.85}, {"date": "2026.05.20", "m2": 84.3, "py": 25.5, "fl": 2, "amt": 8.5}, {"date": "2026.05.16", "m2": 49.8, "py": 15.1, "fl": 3, "amt": 7.35}, {"date": "2026.05.14", "m2": 59.3, "py": 18.0, "fl": 8, "amt": 8.5}], "jeonse": [{"date": "2026.06.19", "m2": 49.8, "py": 15.1, "fl": 10, "dep": 3.88}, {"date": "2026.06.03", "m2": 49.8, "py": 15.1, "fl": 8, "dep": 4.0}, {"date": "2026.05.25", "m2": 59.3, "py": 18.0, "fl": 10, "dep": 4.2}, {"date": "2026.05.23", "m2": 84.3, "py": 25.5, "fl": 2, "dep": 6.0}, {"date": "2026.05.19", "m2": 49.8, "py": 15.1, "fl": 2, "dep": 2.97}, {"date": "2026.05.11", "m2": 59.3, "py": 18.0, "fl": 5, "dep": 3.85}], "wolse": [{"date": "2026.05.30", "m2": 59.3, "py": 18.0, "fl": 8, "dep": 1.0, "rent": 105}, {"date": "2026.05.25", "m2": 59.3, "py": 18.0, "fl": 3, "dep": 3.0, "rent": 60}, {"date": "2026.05.02", "m2": 49.8, "py": 15.1, "fl": 11, "dep": 0.5, "rent": 95}, {"date": "2026.03.28", "m2": 59.3, "py": 18.0, "fl": 7, "dep": 0.9, "rent": 120}, {"date": "2026.03.09", "m2": 49.8, "py": 15.1, "fl": 6, "dep": 0.3, "rent": 150}, {"date": "2026.02.25", "m2": 49.8, "py": 15.1, "fl": 4, "dep": 1.0, "rent": 95}]}, "화곡보람": {"nSale": 7, "nJe": 1, "nWo": 4, "sale": [{"date": "2026.05.23", "m2": 59.2, "py": 17.9, "fl": 13, "amt": 7.8}, {"date": "2026.04.20", "m2": 84.5, "py": 25.6, "fl": 6, "amt": 8.05}, {"date": "2026.04.10", "m2": 112.0, "py": 33.9, "fl": 7, "amt": 9.2}, {"date": "2026.04.03", "m2": 84.5, "py": 25.6, "fl": 1, "amt": 7.55}, {"date": "2026.02.12", "m2": 84.5, "py": 25.6, "fl": 10, "amt": 9.47}, {"date": "2026.01.10", "m2": 59.2, "py": 17.9, "fl": 5, "amt": 7.2}], "jeonse": [{"date": "2026.03.28", "m2": 84.5, "py": 25.6, "fl": 7, "dep": 5.5}], "wolse": [{"date": "2026.04.30", "m2": 59.2, "py": 17.9, "fl": 9, "dep": 2.0, "rent": 90}, {"date": "2026.04.17", "m2": 84.5, "py": 25.6, "fl": 10, "dep": 3.0, "rent": 90}, {"date": "2026.03.06", "m2": 59.2, "py": 17.9, "fl": 9, "dep": 2.0, "rent": 80}, {"date": "2026.01.23", "m2": 84.5, "py": 25.6, "fl": 1, "dep": 2.0, "rent": 110}]}, "중앙화곡하이츠": {"nSale": 18, "nJe": 9, "nWo": 6, "sale": [{"date": "2026.06.12", "m2": 56.9, "py": 17.2, "fl": 1, "amt": 4.2}, {"date": "2026.06.03", "m2": 56.9, "py": 17.2, "fl": 8, "amt": 4.46}, {"date": "2026.05.23", "m2": 66.2, "py": 20.0, "fl": 10, "amt": 4.8}, {"date": "2026.05.22", "m2": 74.2, "py": 22.4, "fl": 5, "amt": 5.3}, {"date": "2026.05.15", "m2": 56.9, "py": 17.2, "fl": 5, "amt": 4.7}, {"date": "2026.05.04", "m2": 48.8, "py": 14.8, "fl": 3, "amt": 4.1}], "jeonse": [{"date": "2026.06.06", "m2": 56.9, "py": 17.2, "fl": 10, "dep": 2.83}, {"date": "2026.05.31", "m2": 74.2, "py": 22.4, "fl": 11, "dep": 3.1}, {"date": "2026.05.16", "m2": 56.9, "py": 17.2, "fl": 9, "dep": 3.0}, {"date": "2026.04.27", "m2": 48.8, "py": 14.8, "fl": 11, "dep": 2.8}, {"date": "2026.03.14", "m2": 74.2, "py": 22.4, "fl": 4, "dep": 3.3}, {"date": "2026.02.24", "m2": 74.2, "py": 22.4, "fl": 9, "dep": 3.4}], "wolse": [{"date": "2026.05.23", "m2": 56.9, "py": 17.2, "fl": 2, "dep": 1.5, "rent": 28}, {"date": "2026.04.15", "m2": 56.9, "py": 17.2, "fl": 12, "dep": 0.3, "rent": 145}, {"date": "2026.04.08", "m2": 56.9, "py": 17.2, "fl": 5, "dep": 1.2, "rent": 55}, {"date": "2026.03.27", "m2": 56.9, "py": 17.2, "fl": 4, "dep": 0.5, "rent": 100}, {"date": "2026.02.07", "m2": 56.9, "py": 17.2, "fl": 3, "dep": 0.2, "rent": 110}, {"date": "2026.01.24", "m2": 56.9, "py": 17.2, "fl": 7, "dep": 2.0, "rent": 55}]}};
+
+  function colorFor(p){
+    const t=Math.max(0,Math.min(1,(p-0.25)/(0.73-0.25)));
+    const stops=[[236,213,154],[222,184,90],[212,158,52],[201,118,38],[185,82,24]];
+    const seg=t*(stops.length-1),i=Math.floor(seg),f=seg-i;
+    const a=stops[i],b=stops[Math.min(i+1,stops.length-1)];
+    const c=a.map((v,k)=>Math.round(v+(b[k]-v)*f));
+    return `rgb(${c[0]},${c[1]},${c[2]})`;
+  }
+  function radiusFor(d){ return 13 + Math.min(26, d*0.42); }
+  const wMan = m => m>=10000 ? (m/10000).toFixed(0)+'억' : m+'만';
+
+  // 리스트
+  const listEl=document.getElementById('list');
+  function renderList(key){
+    const sorted=[...complexes].sort((a,b)=>b[key]-a[key]);
+    listEl.innerHTML=sorted.map((c,i)=>{
+      const rk=i+1, topCls=rk<=3?'rank top':'rank', rankInner=rk<=3?`<span>${rk}</span>`:rk;
+      return `<div class="card" data-name="${c.name}">
+        <div class="${topCls}">${rankInner}</div>
+        <div class="cinfo"><div class="cname">${c.name}${c.warn?'<span class="warn">표본적음</span>':''}</div>
+          <div class="cmeta">${c.year}년<span class="dot">·</span>주력 ${c.area}<span class="dot">·</span>거래 ${c.deals}건</div></div>
+        <div class="cprice"><div class="cpwrap"><div class="cmain">${c.price}억</div>
+          <div class="csub"><span class="pyeong-dot" style="background:${colorFor(c.pyeong)}"></span>평당 ${c.pyeong}억</div></div>
+          <span class="chev">›</span></div>
+      </div>`;
+    }).join('');
+    listEl.querySelectorAll('.card').forEach(el=>el.addEventListener('click',()=>showDetail(el.dataset.name)));
+  }
+  renderList('price');
+  document.querySelectorAll('.sort-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      document.querySelectorAll('.sort-btn').forEach(b=>b.classList.remove('on'));
+      btn.classList.add('on'); renderList(btn.dataset.sort);
+    });
+  });
+
+  // 상세
+  const listView=document.getElementById('listView'),detailView=document.getElementById('detailView'),mapView=document.getElementById('mapView');
+  const tabList=document.getElementById('tabList'),tabMap=document.getElementById('tabMap');
+  function rowsSale(arr){ return arr.length? arr.map(r=>`<div class="trow"><span class="tdate">${r.date}</span><span class="tspec">${r.m2}㎡(${r.py}평) <span class="fl">· ${r.fl}층</span></span><span class="tamt sale">${r.amt}억</span></div>`).join('') : '<div class="empty">최근 거래 없음</div>'; }
+  function rowsJe(arr){ return arr.length? arr.map(r=>`<div class="trow"><span class="tdate">${r.date}</span><span class="tspec">${r.m2}㎡(${r.py}평) <span class="fl">· ${r.fl}층</span></span><span class="tamt je">${r.dep}억</span></div>`).join('') : '<div class="empty">최근 거래 없음</div>'; }
+  function rowsWo(arr){ return arr.length? arr.map(r=>`<div class="trow"><span class="tdate">${r.date}</span><span class="tspec">${r.m2}㎡(${r.py}평) <span class="fl">· ${r.fl}층</span></span><span class="tamt wo">${wMan(r.dep*10000)}/${r.rent}</span></div>`).join('') : '<div class="empty">최근 거래 없음</div>'; }
+  function showDetail(name){
+    if(window.gtag) gtag('event','complex_view',{complex_name:name});
+    const c=complexes.find(x=>x.name===name), d=DETAIL[name]||{sale:[],jeonse:[],wolse:[]};
+    document.getElementById('dName').textContent=name;
+    document.getElementById('dMeta').textContent=`${c.year}년 준공 · 주력 ${c.area} · 2026년 ${c.deals}건 거래`;
+    document.getElementById('dSummary').innerHTML=`
+      <div class="dsum-box"><div class="l">매매 중위</div><div class="v" style="color:var(--orange)">${c.price}억</div></div>
+      <div class="dsum-box"><div class="l">전용 평당가</div><div class="v">${c.pyeong}억</div></div>
+      <div class="dsum-box"><div class="l">준공</div><div class="v">${c.year}</div></div>`;
+    document.getElementById('dBody').innerHTML=`
+      <div class="dsection"><div class="dsec-h sale"><span class="t">매매</span><span class="c">2026년 ${d.nSale}건 · 최신순</span></div>${rowsSale(d.sale)}</div>
+      <div class="dsection"><div class="dsec-h je"><span class="t">전세</span><span class="c">2026년 ${d.nJe}건 · 최신순</span></div>${rowsJe(d.jeonse)}</div>
+      <div class="dsection"><div class="dsec-h wo"><span class="t">월세</span><span class="c">2026년 ${d.nWo}건 · 최신순 · 보증금/월세</span></div>${rowsWo(d.wolse)}</div>`;
+    listView.classList.add('hidden'); mapView.classList.add('hidden'); detailView.classList.remove('hidden');
+    window.scrollTo(0,0);
+  }
+  document.getElementById('dback').addEventListener('click',()=>{
+    detailView.classList.add('hidden'); listView.classList.remove('hidden');
+    tabList.classList.add('on'); tabMap.classList.remove('on');
+  });
+
+  // 지도
+  let map=null;
+  function initMap(){
+    if(map) return;
+    map=L.map('map',{scrollWheelZoom:true,zoomControl:true}).setView([37.5475,126.8400],14);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap'}).addTo(map);
+    complexes.filter(c=>c.lat!=null).forEach(c=>{
+      const mk=L.circleMarker([c.lat,c.lng],{radius:radiusFor(c.deals),fillColor:colorFor(c.pyeong),color:'#0d1f3c',weight:2.2,fillOpacity:.93});
+      mk.bindPopup(`<div class="pop-h"><div class="nm">${c.name}</div><div class="yr">${c.year}년 준공 · 주력 ${c.area} · 2026년 ${c.deals}건</div></div><div class="pop-b"><div class="pop-row"><span class="k">매매 중위 (${c.area})</span><span class="v big">${c.price}억</span></div><div class="pop-row"><span class="k">전용 평당가</span><span class="v">${c.pyeong}억</span></div><div class="pop-note">${c.note}</div></div>`);
+      mk.addTo(map);
+      L.marker([c.lat,c.lng],{icon:L.divIcon({className:'',html:`<div style="font-size:11px;font-weight:800;color:#0d1f3c;white-space:nowrap;text-shadow:0 0 3px #faf8f3,0 0 3px #faf8f3,0 0 4px #faf8f3;transform:translate(12px,-7px)">${c.name}</div>`,iconSize:[0,0]}),interactive:false}).addTo(map);
+    });
+  }
+  tabList.addEventListener('click',()=>{tabList.classList.add('on');tabMap.classList.remove('on');listView.classList.remove('hidden');mapView.classList.add('hidden');detailView.classList.add('hidden');});
+  tabMap.addEventListener('click',()=>{tabMap.classList.add('on');tabList.classList.remove('on');mapView.classList.remove('hidden');listView.classList.add('hidden');detailView.classList.add('hidden');initMap();setTimeout(()=>{if(map)map.invalidateSize();},60);});
+</script>
+</body>
+</html>
