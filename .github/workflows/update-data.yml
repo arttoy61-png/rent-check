@@ -35,10 +35,16 @@ jobs:
           python widget_data_builder.py data/molit_kangseo.csv 화곡동
           cp outputs/widget/widget_data.json ../widget_data.json
 
+      - name: Build hwagok_apt_data.json (대표단지 시세 위젯)
+        working-directory: automation
+        run: |
+          python apt_widget_builder.py data/molit_kangseo.csv 화곡동
+          cp outputs/widget/hwagok_apt_data.json ../hwagok_apt_data.json
+
       - name: Commit if changed
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add widget_data.json
-          git commit -m "auto: update widget_data.json ($(date -u +%F))" || echo "변경 없음"
+          git add widget_data.json hwagok_apt_data.json
+          git commit -m "auto: update widget data ($(date -u +%F))" || echo "변경 없음"
           git push || echo "푸시 생략"
