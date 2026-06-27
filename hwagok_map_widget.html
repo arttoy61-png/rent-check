@@ -11,7 +11,7 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="화곡 대표단지 시세 · 렌트체크강서">
 <meta property="og:description" content="검색·설치 없이 화곡 대표 12개 단지 매매·전세·월세를 한눈에.">
-<meta property="og:image" content="https://arttoy61-png.github.io/rent-check/hwagok_og.png">
+<meta property="og:image" content="https://arttoy61-png.github.io/rent-check/hwagok_og.png?v=4">
 <meta property="og:url" content="https://arttoy61-png.github.io/rent-check/hwagok_map_widget.html">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
@@ -122,6 +122,21 @@
 </style>
 </head>
 <body>
+<div id="introModal" style="position:fixed;inset:0;background:rgba(13,31,60,0.55);z-index:9999;display:flex;align-items:center;justify-content:center;padding:20px;">
+  <div style="background:#fff;border-radius:16px;max-width:380px;width:100%;padding:24px 22px;box-shadow:0 10px 40px rgba(0,0,0,0.3);position:relative;">
+    <div style="font-size:13px;font-weight:700;color:#c4661f;letter-spacing:0.5px;">렌트체크강서 · 실거래로 더 정확하게</div>
+    <div style="font-size:19px;font-weight:800;color:#0d1f3c;margin:8px 0 14px;">화곡 대표단지 시세, 이렇게 보세요</div>
+    <div style="font-size:14.5px;color:#1c2733;line-height:1.85;">
+      ① 화면의 <b>단지 카드</b>를 누르면<br>
+      &nbsp;&nbsp;&nbsp;매매·전세·월세가 한 화면에 떠요.<br>
+      ② 지도의 <b>핀</b>을 눌러도 단지가 보여요.<br>
+      ③ 국토부 <b>실거래</b> 기준, <b style="color:#c4661f;">매일 자동 업데이트</b>입니다.<br>
+      ④ 분석 요청 단지는 <b>블로그 댓글</b> 주세요.
+    </div>
+    <a href="https://blog.naver.com/spitoon61" target="_blank" style="display:block;text-align:center;background:#0d1f3c;color:#fff;font-weight:800;font-size:15px;text-decoration:none;border-radius:10px;padding:13px;margin:18px 0 0;">▶ 렌트체크강서 블로그 가기</a>
+    <button onclick="document.getElementById('introModal').style.display='none'" style="display:block;width:100%;background:none;border:none;color:#888;font-size:14px;margin-top:12px;cursor:pointer;padding:6px;">닫고 시세 보기 →</button>
+  </div>
+</div>
 <div class="wrap">
   <header>
     <div class="kicker">화곡 대표단지 시세</div>
