@@ -37,6 +37,7 @@
   .sort-lab{font-size:13px;color:var(--mute);font-weight:700;align-self:center;margin-right:2px}
   .sort-btn{border:1.5px solid var(--line);background:#fff;border-radius:8px;padding:7px 12px;font-size:13.5px;font-weight:700;color:#6b5a32;cursor:pointer;transition:.15s}
   .sort-btn.on{border-color:var(--orange);background:var(--orange);color:#fff}
+  .sort-btn.newbtn.on{border-color:var(--green);background:var(--green);color:#fff}
   .list{padding:12px 16px 0}
   .card{display:flex;align-items:center;gap:13px;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:13px 15px;margin-bottom:9px;box-shadow:0 1px 5px rgba(13,31,60,.04);cursor:pointer;transition:.12s}
   .card:active{transform:scale(.985);border-color:#c9bfa0}
@@ -54,6 +55,15 @@
   .csub .pyeong-dot{display:inline-block;width:8px;height:8px;border-radius:50%;vertical-align:middle;margin-right:3px;border:1px solid rgba(0,0,0,.15)}
   .chev{color:#c9bfa0;font-size:18px;font-weight:700}
   .warn{display:inline-block;font-size:11px;font-weight:700;color:#fff;background:#c0883a;border-radius:4px;padding:1px 5px;margin-left:5px}
+  .cname .cyr{font-size:12px;font-weight:700;color:var(--mute);margin-left:5px}
+  .crecent{font-size:13px;margin-top:5px;display:flex;align-items:center;gap:5px;flex-wrap:wrap}
+  .crecent .led{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--green);flex-shrink:0;animation:ledbl 1.5s infinite}
+  @keyframes ledbl{0%,100%{opacity:1}50%{opacity:.3}}
+  .crecent .rdate{color:var(--green);font-weight:800}
+  .crecent .ttag{font-weight:800;font-size:12px;padding:1px 6px;border-radius:5px;color:#fff}
+  .crecent .ttag.sale{background:var(--orange)}.crecent .ttag.je{background:var(--blue)}.crecent .ttag.wo{background:var(--gold-deep)}
+  .crecent .rspec{color:var(--ink);font-weight:600}
+  .cnorec{font-size:13px;color:#b5ae9c;font-weight:700;margin-top:5px}
 
   /* 상세 뷰 */
   .detail-head{background:var(--navy);color:#fff;padding:14px 16px;display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:5}
@@ -166,7 +176,8 @@
   <div id="listView">
     <div class="sort-row">
       <span class="sort-lab">정렬</span>
-      <button class="sort-btn on" data-sort="price">매매가순</button>
+      <button class="sort-btn newbtn on" data-sort="recent">🟢 최신거래순</button>
+      <button class="sort-btn" data-sort="price">매매가순</button>
       <button class="sort-btn" data-sort="pyeong">평당가순</button>
       <button class="sort-btn" data-sort="year">신축순</button>
       <button class="sort-btn" data-sort="deals">거래량순</button>
@@ -229,10 +240,27 @@
   }
   function radiusFor(d){ return 13 + Math.min(26, d*0.42); }
   const py = m2 => (m2/3.3058).toFixed(0);
+  const TYPE={sale:['매매','sale'],je:['전세','je'],wo:['월세','wo']};
+  const pyN = m2 => Math.round(m2/3.3058);
+  const mdShort = s => s.slice(5).replace('.','/');
+  function attachRecent(){
+    complexes.forEach(c=>{
+      c._lastDate=null; c._recent=null;
+      const d=DETAIL[c.name]; if(!d||!d.areas) return;
+      let best=null;
+      d.areas.forEach(a=>{
+        (a.sale||[]).forEach(r=>{ if(!best||r.date>best.date) best={date:r.date,type:'sale',m2:r.m2,fl:r.fl}; });
+        (a.jeonse||[]).forEach(r=>{ if(!best||r.date>best.date) best={date:r.date,type:'je',m2:r.m2,fl:r.fl}; });
+        (a.wolse||[]).forEach(r=>{ if(!best||r.date>best.date) best={date:r.date,type:'wo',m2:r.m2,fl:r.fl}; });
+      });
+      if(best){ c._lastDate=best.date; c._recent=best; }
+    });
+  }
 
   const listEl=document.getElementById('list');
   function renderList(key){
     const sorted=[...complexes].sort((a,b)=>{
+      if(key==='recent'){ return (b._lastDate||'0').localeCompare(a._lastDate||'0'); }
       const av=a[key]==null?-1:a[key], bv=b[key]==null?-1:b[key];
       return bv-av;
     });
@@ -240,11 +268,17 @@
       const rk=i+1, topCls=rk<=3?'rank top':'rank', rankInner=rk<=3?`<span>${rk}</span>`:rk;
       const priceTxt=c.price!=null?`${c.price}억`:'실거래 전';
       const pyTxt=c.pyeong!=null?`평당 ${c.pyeong}억`:'전매제한';
-      const dealTxt=c.deals>0?`거래 ${c.deals}건`:'거래 0';
+      let recHtml;
+      if(c._recent){
+        const [tn,tc]=TYPE[c._recent.type];
+        recHtml=`<div class="crecent"><span class="led"></span><span class="rdate">${mdShort(c._recent.date)}</span><span class="ttag ${tc}">${tn}</span><span class="rspec">${Math.round(c._recent.m2)}㎡(${pyN(c._recent.m2)}평) · ${c._recent.fl}층</span></div>`;
+      } else {
+        recHtml=`<div class="cnorec">아직 실거래 없음</div>`;
+      }
       return `<div class="card" data-name="${c.name}">
         <div class="${topCls}">${rankInner}</div>
-        <div class="cinfo"><div class="cname">${c.name}${c.few?'<span class="warn">표본적음</span>':''}</div>
-          <div class="cmeta">${c.year}년<span class="dot">·</span>주력 ${c.area}<span class="dot">·</span>${dealTxt}</div></div>
+        <div class="cinfo"><div class="cname">${c.name}<span class="cyr">${c.year}</span>${c.few?'<span class="warn">표본적음</span>':''}</div>
+          ${recHtml}</div>
         <div class="cprice"><div class="cpwrap"><div class="cmain">${priceTxt}</div>
           <div class="csub"><span class="pyeong-dot" style="background:${colorFor(c.pyeong)}"></span>${pyTxt}</div></div>
           <span class="chev">›</span></div>
@@ -260,7 +294,7 @@
   }
   fetch('hwagok_apt_data.json?t='+Date.now())
     .then(r=>{ if(!r.ok) throw 0; return r.json(); })
-    .then(d=>{ complexes=d.complexes; DETAIL=d.detail; updateSummary(); renderList('price'); })
+    .then(d=>{ complexes=d.complexes; DETAIL=d.detail; attachRecent(); updateSummary(); renderList('recent'); })
     .catch(e=>{ document.getElementById('list').innerHTML='<div style="padding:42px 16px;text-align:center;color:#8a96a8;line-height:1.7">시세 데이터를 불러오지 못했습니다.<br>잠시 후 새로고침해 주세요.</div>'; });
   document.querySelectorAll('.sort-btn').forEach(btn=>{
     btn.addEventListener('click',()=>{
