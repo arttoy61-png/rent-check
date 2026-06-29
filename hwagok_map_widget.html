@@ -252,9 +252,9 @@
       const d=DETAIL[c.name]; if(!d||!d.areas) return;
       let best=null;
       d.areas.forEach(a=>{
-        (a.sale||[]).forEach(r=>{ if(!best||r.date>best.date) best={date:r.date,type:'sale',m2:r.m2,fl:r.fl,amt:r.amt+'억'}; });
-        (a.jeonse||[]).forEach(r=>{ if(!best||r.date>best.date) best={date:r.date,type:'je',m2:r.m2,fl:r.fl,amt:r.dep+'억'}; });
-        (a.wolse||[]).forEach(r=>{ if(!best||r.date>best.date){ const dd=r.dep>=1?r.dep+'억':Math.round(r.dep*10000)+'만'; best={date:r.date,type:'wo',m2:r.m2,fl:r.fl,amt:dd+'/'+r.rent}; } });
+        (a.sale||[]).forEach(r=>{ if(!best||r.date>best.date) best={date:r.date,type:'sale',gm2:a.m2,fl:r.fl,amt:r.amt+'억'}; });
+        (a.jeonse||[]).forEach(r=>{ if(!best||r.date>best.date) best={date:r.date,type:'je',gm2:a.m2,fl:r.fl,amt:r.dep+'억'}; });
+        (a.wolse||[]).forEach(r=>{ if(!best||r.date>best.date){ const dd=r.dep>=1?r.dep+'억':Math.round(r.dep*10000)+'만'; best={date:r.date,type:'wo',gm2:a.m2,fl:r.fl,amt:dd+'/'+r.rent}; } });
       });
       if(best){ c._lastDate=best.date; c._recent=best; }
     });
@@ -274,7 +274,7 @@
       let recHtml, priceHtml;
       if(c._recent){
         const [tn,tc]=TYPE[c._recent.type];
-        recHtml=`<div class="crecent"><span class="led"></span><span class="rdate">${mdShort(c._recent.date)}</span><span class="ttag ${tc}">${tn}</span><span class="rspec">${Math.round(c._recent.m2)}㎡(${pyN(c._recent.m2)}평) · ${c._recent.fl}층</span></div>`;
+        recHtml=`<div class="crecent"><span class="led"></span><span class="rdate">${mdShort(c._recent.date)}</span><span class="ttag ${tc}">${tn}</span><span class="rspec">${c._recent.gm2}㎡(${pyN(c._recent.gm2)}평) · ${c._recent.fl}층</span></div>`;
         priceHtml=`<div class="cmain ${tc}">${c._recent.amt}</div><div class="clab ${tc}">${tn} 실거래</div>`;
       } else {
         recHtml=`<div class="cnorec">🔒 전매제한 (실거래 전)</div>`;
