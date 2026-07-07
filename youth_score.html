@@ -69,7 +69,7 @@
   .hint{font-size:12.5px;color:var(--sub);text-align:center;padding:22px 10px;}
 
   /* 하단 고정 점수바 */
-  .sticky{position:fixed;left:0;right:0;bottom:0;background:#0d1f3c;color:#fff;padding:12px 16px;display:none;align-items:center;justify-content:space-between;box-shadow:0 -4px 20px rgba(0,0,0,.2);z-index:50;}
+  .sticky{position:fixed;left:50%;transform:translateX(-50%);bottom:0;width:100%;max-width:520px;background:#0d1f3c;color:#fff;padding:12px 16px;display:none;align-items:center;justify-content:space-between;box-shadow:0 -4px 20px rgba(0,0,0,.2);z-index:50;border-radius:14px 14px 0 0;}
   .sticky.on{display:flex;}
   .sticky .sc{font-size:13px;color:#b9c4d6;}
   .sticky .sc b{font-size:22px;color:var(--gold);font-weight:800;margin-left:4px;}
@@ -210,10 +210,11 @@
         ⚠️ 실제 당첨은 <b>신청순위 → 가점 → 동점자 처리 → 주택별 경쟁률</b> 순서로 결정됩니다.
         점수가 높아도 순위가 낮으면 상위 순위에 밀립니다.
       </div>
-      <a class="m-cta" id="ctaMain" href="https://blog.naver.com/spitoon61/224331611681" target="_blank" rel="noopener">강서구 공급주택 해설 보기 →</a>
+      <a class="m-cta" id="ctaMain" href="https://blog.naver.com/spitoon61/224331611681" target="_blank" rel="noopener">강서구 공급주택 해설 보기 ↗</a>
       <div class="m-links">
-        <a href="https://blog.naver.com/spitoon61/224330530329" target="_blank" rel="noopener">LH·SH 일정 비교 보기</a>
+        <a href="https://blog.naver.com/spitoon61/224330530329" target="_blank" rel="noopener">2026 SH 청년 매입임대 신청 설명 보기 ↗</a>
       </div>
+      <div style="font-size:11px;color:#9aa5b5;text-align:center;margin:-4px 0 12px;">↗ 새 창에서 열립니다 · 계산기는 그대로 유지돼요</div>
       <div class="m-note">
         <b>· 판정 근거</b>: 2021년 SH 청년매입임대 공개 커트라인 (당첨 컷 중앙값 5점·75%선 7점).
         연도·주택·회차·신청자 풀마다 달라지므로 참고용입니다.<br>
