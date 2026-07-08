@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>청년 매입임대 가점 계산기 | 렌트체크강서</title>
+<meta name="description" content="LH·SH 청년 매입임대 가점, 순위 선택하고 항목만 체크하면 내 점수가 바로 나옵니다. 2026 공고 배점 기준.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="청년 매입임대 가점 계산기 — 내 점수 몇 점?">
+<meta property="og:description" content="순위 선택 + 항목 체크 = 30초 자가진단. LH·SH 2026 공고 배점 기준.">
+<meta property="og:image" content="https://arttoy61-png.github.io/rent-check/youth_score_og.png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="1080">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  :root{
+    --navy:#0d1f3c; --blue:#1565c0; --orange:#c4661f;
+    --gold:#d4a73a; --ink:#1c2733; --sub:#6b7684;
+    --line:#e3e8ef; --bg:#eef1f6; --card:#ffffff;
+    --amber:#c4661f; --green:#2e9e5b;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+  body{font-family:'Apple SD Gothic Neo','Malgun Gothic',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;padding:16px 12px 90px;}
+  .wrap{max-width:520px;margin:0 auto;}
+  header{text-align:center;padding:24px 18px 20px;background:linear-gradient(135deg,#0d1f3c,#16345e);border-radius:16px 16px 0 0;color:#fff;}
+  header h1{font-size:21px;font-weight:800;letter-spacing:-.5px;line-height:1.35;}
+  header .sub{font-size:13px;color:#c3cde0;margin-top:8px;line-height:1.55;}
+  header .badge{display:inline-block;margin-top:12px;font-size:11px;color:var(--navy);background:var(--gold);padding:4px 11px;border-radius:20px;font-weight:700;}
+  header .trust{font-size:11px;color:#9fb0cc;margin-top:9px;}
+  .body{background:var(--card);border-radius:0 0 16px 16px;padding:18px 16px 24px;box-shadow:0 2px 14px rgba(13,31,60,.07);}
+
+  /* 순위 먼저 경고 */
+  .rank-warn{background:#fff5ec;border:1px solid #f0d3b0;border-radius:11px;padding:12px 14px;margin-bottom:18px;font-size:12.5px;color:#8a5a20;line-height:1.55;}
+  .rank-warn b{color:var(--amber);}
+
+  .step{margin-top:22px;}
+  .step:first-of-type{margin-top:4px;}
+  .step-t{font-size:14px;font-weight:800;color:var(--navy);display:flex;align-items:center;gap:8px;margin-bottom:12px;}
+  .step-t .n{background:var(--blue);color:#fff;width:22px;height:22px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;}
+
+  /* 순위 라디오 */
+  .rank label{display:block;border:1.5px solid var(--line);border-radius:11px;padding:13px 14px;margin-bottom:9px;cursor:pointer;transition:.15s;}
+  .rank label input{position:absolute;opacity:0;width:0;height:0;}
+  .rank label .rt{font-size:14px;font-weight:700;color:var(--ink);}
+  .rank label .rd{font-size:12px;color:var(--sub);margin-top:2px;line-height:1.45;}
+  .rank label .rtag{display:inline-block;font-size:10.5px;color:var(--blue);background:#eef4fc;padding:2px 7px;border-radius:5px;margin-top:6px;}
+  .rank label.sel{border-color:var(--blue);background:#f0f6ff;box-shadow:0 0 0 2px rgba(21,101,192,.12);}
+  .rank label.sel .rt{color:var(--blue);}
+
+  /* 순위 도움 아코디언 */
+  .help-btn{display:block;width:100%;background:none;border:1px dashed #c3cfe0;color:var(--blue);font-size:12.5px;padding:10px;border-radius:10px;margin-top:4px;cursor:pointer;font-weight:600;}
+  .help-box{display:none;background:#f6f9fc;border-radius:10px;padding:13px 14px;margin-top:9px;font-size:12.5px;color:#42506a;line-height:1.7;}
+  .help-box.on{display:block;}
+  .help-box b{color:var(--navy);}
+
+  /* 항목 체크 */
+  .items{display:none;}
+  .items.on{display:block;}
+  .chk{display:flex;align-items:flex-start;gap:11px;border:1.5px solid var(--line);border-radius:11px;padding:13px 14px;margin-bottom:9px;cursor:pointer;transition:.15s;}
+  .chk input{width:20px;height:20px;margin-top:1px;flex-shrink:0;accent-color:var(--blue);cursor:pointer;pointer-events:none;}
+  .chk .ct{font-size:14px;font-weight:600;color:var(--ink);}
+  .chk .cd{font-size:12px;color:var(--sub);margin-top:2px;line-height:1.5;}
+  .chk.disabled{opacity:.4;pointer-events:none;background:#f7f9fc;}
+  .chk.picked{border-color:var(--blue);background:#f0f6ff;}
+  .info3{display:none;background:#f0f6ff;border-left:3px solid var(--blue);border-radius:0 8px 8px 0;padding:10px 13px;margin:-3px 0 12px;font-size:12px;color:#365072;line-height:1.6;}
+  .info3.on{display:block;}
+  .info3 b{color:var(--navy);}
+
+  .sub-label{font-size:13px;font-weight:700;color:var(--navy);margin:18px 0 4px;}
+  .sub-note{font-size:11.5px;color:var(--amber);margin-bottom:10px;line-height:1.5;font-weight:600;}
+  .payq{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+  .payq label{border:1.5px solid var(--line);border-radius:10px;padding:12px 8px;text-align:center;font-size:13px;font-weight:600;cursor:pointer;transition:.15s;color:var(--ink);}
+  .payq label input{position:absolute;opacity:0;width:0;height:0;}
+  .payq label.sel{border-color:var(--blue);background:#f0f6ff;color:var(--blue);box-shadow:0 0 0 2px rgba(21,101,192,.12);}
+  .payq label.wide{grid-column:1/3;}
+
+  .hint{font-size:12.5px;color:var(--sub);text-align:center;padding:22px 10px;}
+
+  /* 하단 고정 점수바 */
+  .sticky{position:fixed;left:50%;transform:translateX(-50%);bottom:0;width:100%;max-width:520px;background:#0d1f3c;color:#fff;padding:12px 16px;display:none;align-items:center;justify-content:space-between;box-shadow:0 -4px 20px rgba(0,0,0,.2);z-index:50;border-radius:14px 14px 0 0;}
+  .sticky.on{display:flex;}
+  .sticky .sc{font-size:13px;color:#b9c4d6;}
+  .sticky .sc b{font-size:22px;color:var(--gold);font-weight:800;margin-left:4px;}
+  .sticky button{background:var(--gold);color:var(--navy);border:none;font-size:14px;font-weight:800;padding:11px 20px;border-radius:10px;cursor:pointer;}
+
+  /* 모달 */
+  .modal-bg{position:fixed;inset:0;background:rgba(13,31,60,.6);display:none;align-items:center;justify-content:center;z-index:100;padding:18px;}
+  .modal-bg.on{display:flex;}
+  .modal{background:#fff;border-radius:18px;max-width:440px;width:100%;max-height:90vh;overflow-y:auto;animation:pop .25s;}
+  @keyframes pop{from{opacity:0;transform:scale(.94);}to{opacity:1;transform:scale(1);}}
+  .m-top{padding:24px 22px 20px;text-align:center;border-radius:18px 18px 0 0;color:#fff;position:relative;}
+  .m-close{position:absolute;top:12px;right:14px;background:rgba(255,255,255,.2);border:none;color:#fff;width:32px;height:32px;border-radius:50%;font-size:20px;line-height:1;cursor:pointer;font-weight:400;}
+  .m-close:hover{background:rgba(255,255,255,.32);}
+  .m-top .ml{font-size:13px;opacity:.85;}
+  .m-top .msc{font-size:52px;font-weight:800;letter-spacing:-1px;margin:2px 0;}
+  .m-top .mjudge{font-size:19px;font-weight:800;margin-top:4px;}
+  .m-top .mdesc{font-size:12.5px;opacity:.9;margin-top:8px;line-height:1.55;}
+  .m-body{padding:18px 20px 22px;}
+  .m-break{background:#f6f8fb;border-radius:11px;padding:14px 15px;margin-bottom:16px;}
+  .m-break .bt{font-size:12px;font-weight:800;color:var(--navy);margin-bottom:8px;}
+  .m-break .br{display:flex;justify-content:space-between;font-size:13px;padding:5px 0;border-bottom:1px solid #eef1f6;}
+  .m-break .br:last-child{border-bottom:none;}
+  .m-break .br .pt{color:var(--blue);font-weight:700;}
+  .m-break .none{font-size:13px;color:var(--sub);text-align:center;padding:6px 0;}
+  .m-warn{background:#fff5ec;border:1px solid #f0d3b0;border-radius:11px;padding:13px 15px;font-size:12.5px;color:#8a5a20;line-height:1.6;margin-bottom:14px;}
+  .m-warn b{color:var(--amber);}
+  .m-cta{display:block;text-align:center;background:var(--blue);color:#fff;font-size:15px;font-weight:700;padding:15px;border-radius:12px;text-decoration:none;margin-bottom:9px;}
+  .m-links{display:flex;gap:8px;margin-bottom:14px;}
+  .m-links a{flex:1;text-align:center;border:1.5px solid var(--line);color:var(--ink);font-size:12.5px;font-weight:600;padding:11px 6px;border-radius:10px;text-decoration:none;}
+  .m-note{font-size:11px;color:var(--sub);line-height:1.65;padding-top:4px;border-top:1px solid #eef1f6;margin-top:4px;}
+  .m-note b{color:var(--navy);}
+  .m-reset{display:block;width:100%;background:none;border:1.5px solid var(--line);color:var(--sub);font-size:13px;padding:12px;border-radius:11px;margin-top:14px;cursor:pointer;font-weight:600;}
+
+  .foot{text-align:center;font-size:11px;color:var(--sub);margin-top:20px;line-height:1.7;}
+  .foot b{color:var(--navy);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>청년 매입임대,<br>내 점수로 가능할까?</h1>
+    <div class="sub">순위와 가점 항목만 체크하면<br>예상 점수 + 경쟁력 판정을 바로 확인합니다</div>
+    <div class="badge">LH · SH 2026 공고 배점 기준</div>
+    <div class="trust">공고문 기준 · 개인정보 저장 없음 · 30초 계산</div>
+  </header>
+
+  <div class="body">
+    <div class="rank-warn">
+      ⚠️ 청년 매입임대는 <b>순위가 먼저</b>, 그다음이 가점입니다.<br>
+      같은 순위 안에서 점수가 높은 사람이 유리합니다. (2순위 8점보다 1순위 0점이 먼저)
+    </div>
+
+    <!-- STEP 1 -->
+    <div class="step">
+      <div class="step-t"><span class="n">1</span>신청 순위를 고르세요</div>
+      <div class="rank" id="rankBox">
+        <label data-r="1"><input type="radio" name="rank" value="1"><span class="rt">1순위</span><span class="rd">수급자 · 차상위계층 · 지원대상 한부모 가구</span><br><span class="rtag">복지로·정부24 증명서 기준</span></label>
+        <label data-r="2"><input type="radio" name="rank" value="2"><span class="rt">2순위</span><span class="rd">본인+부모 소득·자산을 함께 봅니다</span><br><span class="rtag">부모 정보 입력 필요</span></label>
+        <label data-r="3"><input type="radio" name="rank" value="3"><span class="rt">3순위</span><span class="rd">본인 소득·자산만 봅니다</span><br><span class="rtag">부모 소득은 보지 않음</span></label>
+      </div>
+      <button class="help-btn" id="helpBtn">내 순위 모르겠어요 ▾</button>
+      <div class="help-box" id="helpBox">
+        차례로 확인해보세요:<br>
+        · <b>수급자·차상위·한부모</b> 증명 가능? → <b>1순위</b><br>
+        · 아니면 <b>본인+부모 합산</b> 소득이 도시근로자 100% 이하? → <b>2순위</b><br>
+        · 아니면 <b>본인</b> 소득이 100% 이하? → <b>3순위</b><br>
+        <span style="display:block;margin-top:7px;color:#6b5a32;font-size:12px;line-height:1.55;">2026년 100% 기준(월, 세금 공제 전 총소득)<br>· 1인 457.6만원 · 2인 645.3만원 · 3인 816.8만원<br>※ 2순위는 부모 포함 가구원 수로, 3순위는 본인 1인 기준으로 봅니다.</span>
+        <span style="display:block;margin-top:6px;color:#8a5a20;">※ 상위 순위부터 먼저 선정되니, 해당되면 낮은 번호가 유리합니다.</span>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="step" id="step2" style="display:none;">
+      <div class="step-t"><span class="n">2</span>해당하는 항목에 체크하세요</div>
+
+      <!-- 1순위 -->
+      <div class="items" id="items1">
+        <div class="chk" data-k="susub"><input type="checkbox"><div><div class="ct">1순위 추가 가점</div><div class="cd">수급자 또는 지원대상 한부모에 해당하는 경우 (차상위는 해당 없음)</div></div></div>
+      </div>
+      <!-- 2순위 소득 -->
+      <div class="items" id="items2">
+        <div class="chk" data-k="income50_2"><input type="checkbox"><div><div class="ct">본인+부모 합산 소득이 기준의 50% 이하</div><div class="cd">2026년 50% 기준(월, 세금 공제 전): 1인 266.9만 · 2인 351.9만 · 3인 408.4만</div></div></div>
+      </div>
+      <!-- 3순위 소득 -->
+      <div class="items" id="items3">
+        <div class="chk" data-k="income50_3"><input type="checkbox"><div><div class="ct">본인 소득이 기준의 50% 이하</div><div class="cd">2026년 50% 기준(월, 세금 공제 전): 1인 266.9만원 · 본인 소득만 봅니다</div></div></div>
+      </div>
+
+      <!-- 공통 -->
+      <div class="items" id="itemsCommon">
+        <div class="chk" data-k="parent_nohouse"><input type="checkbox"><div><div class="ct">부모가 무주택</div><div class="cd">신청일 기준 부모가 주택을 소유하지 않음</div></div></div>
+        <div class="info3" id="info3">💡 <b>3순위</b>는 소득은 본인만 보지만, <b>부모 무주택 가점은 3순위도 공통 적용</b>됩니다. (부모의 주택 소유 여부는 소득과 별개)</div>
+        <div class="chk" data-k="dis_self" id="disSelf"><input type="checkbox"><div><div class="ct">본인 장애 가점</div><div class="cd">본인 명의 장애인등록증이 있는 경우</div></div></div>
+        <div class="chk" data-k="dis_parent" id="disParent"><input type="checkbox"><div><div class="ct">부모 장애 가점</div><div class="cd">부모 중 장애인등록증이 있는 경우</div></div></div>
+
+        <div class="sub-label">청약통장 납입 횟수</div>
+        <div class="sub-note">통장 가입기간이 아니라 '납입인정회차' 기준입니다 (순위확인서로 확인)</div>
+        <div class="payq" id="payq">
+          <label data-p="3"><input type="radio" name="pay" value="3">24회 이상</label>
+          <label data-p="2"><input type="radio" name="pay" value="2">12~24회 미만</label>
+          <label data-p="1"><input type="radio" name="pay" value="1">6~12회 미만</label>
+          <label data-p="0"><input type="radio" name="pay" value="0">6회 미만</label>
+          <label data-p="x" class="wide"><input type="radio" name="pay" value="x">잘 모르겠음</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="hint" id="hint">먼저 신청 순위를 골라주세요 👆</div>
+
+    <div class="foot">
+      <b>렌트체크강서</b> · 실거래로 더 정확하게<br>
+      2026년 LH·SH 청년 매입임대 공고 배점 기준
+    </div>
+  </div>
+</div>
+
+<!-- 하단 고정 점수바 -->
+<div class="sticky" id="sticky">
+  <div class="sc">현재 예상 가점<b id="stickyScore">0</b>점</div>
+  <button id="showBtn">결과 보기 →</button>
+</div>
+
+<!-- 모달 -->
+<div class="modal-bg" id="modalBg">
+  <div class="modal">
+    <div class="m-top" id="mTop">
+      <button class="m-close" id="mClose" aria-label="닫기">×</button>
+      <div class="ml">내 예상 가점</div>
+      <div class="msc" id="mScoreBox"><span id="mScore">0점</span></div>
+      <div class="mjudge" id="mJudge">—</div>
+      <div class="mdesc" id="mDesc"></div>
+    </div>
+    <div class="m-body">
+      <div class="m-break">
+        <div class="bt">항목별 내역</div>
+        <div id="mBreak"></div>
+      </div>
+      <div class="m-warn">
+        ⚠️ 실제 당첨은 <b>신청순위 → 가점 → 동점자 처리 → 주택별 경쟁률</b> 순서로 결정됩니다.
+        점수가 높아도 순위가 낮으면 상위 순위에 밀립니다.
+      </div>
+      <a class="m-cta" id="ctaMain" href="https://blog.naver.com/spitoon61/224331611681" target="_blank" rel="noopener">강서구 공급주택 해설 보기 ↗</a>
+      <div class="m-links">
+        <a href="https://blog.naver.com/spitoon61/224330530329" target="_blank" rel="noopener">2026 SH 청년 매입임대 신청 설명 보기 ↗</a>
+      </div>
+      <div style="font-size:11px;color:#9aa5b5;text-align:center;margin:-4px 0 12px;">↗ 새 창에서 열립니다 · 계산기는 그대로 유지돼요</div>
+      <div class="m-note">
+        <b>· 판정 근거</b>: 2021년 SH 청년매입임대 공개 커트라인 (당첨 컷 중앙값 5점·75%선 7점).
+        연도·주택·회차·신청자 풀마다 달라지므로 참고용입니다.<br>
+        <b>· 청약</b>은 순위(가입)확인서의 납입인정회차 기준.<br>
+        <b>· 배점</b>은 이번 LH·SH 공고 기준이며, 정확한 건 해당 공고문을 확인하세요.
+      </div>
+      <button class="m-reset" id="resetBtn">처음부터 다시 계산하기</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var rank=null, pay=null, picks={};
+  var step2=document.getElementById('step2');
+  var items1=document.getElementById('items1'),items2=document.getElementById('items2'),items3=document.getElementById('items3');
+  var itemsCommon=document.getElementById('itemsCommon');
+  var hint=document.getElementById('hint');
+  var sticky=document.getElementById('sticky'),stickyScore=document.getElementById('stickyScore');
+  var modalBg=document.getElementById('modalBg');
+  var info3=document.getElementById('info3');
+
+  var LABEL={susub:'수급자/한부모',income50_2:'소득 50% 이하',income50_3:'소득 50% 이하',parent_nohouse:'부모 무주택',dis_self:'본인 장애',dis_parent:'부모 장애'};
+  var PT={susub:3,income50_2:3,income50_3:3,parent_nohouse:2,dis_self:2,dis_parent:1};
+
+  // 순위 선택
+  document.querySelectorAll('#rankBox label').forEach(function(lb){
+    lb.addEventListener('click',function(){
+      lb.querySelector('input').checked=true;
+      rank=lb.getAttribute('data-r');
+      document.querySelectorAll('#rankBox label').forEach(function(x){x.classList.remove('sel');});
+      lb.classList.add('sel');
+      step2.style.display='block';
+      hint.style.display='none';
+      items1.classList.remove('on');items2.classList.remove('on');items3.classList.remove('on');
+      if(rank==='1')items1.classList.add('on');
+      else if(rank==='2')items2.classList.add('on');
+      else if(rank==='3')items3.classList.add('on');
+      itemsCommon.classList.add('on');
+      info3.classList.toggle('on',rank==='3');
+      calc();
+      sticky.classList.add('on');
+    });
+  });
+
+  // 순위 도움
+  document.getElementById('helpBtn').addEventListener('click',function(){
+    document.getElementById('helpBox').classList.toggle('on');
+  });
+
+  // 체크박스
+  document.querySelectorAll('.chk').forEach(function(el){
+    el.addEventListener('click',function(){
+      if(el.classList.contains('disabled'))return;
+      var box=el.querySelector('input');
+      box.checked=!box.checked;
+      var k=el.getAttribute('data-k');
+      picks[k]=box.checked;
+      el.classList.toggle('picked',box.checked);
+      calc();
+    });
+  });
+
+  // 청약
+  document.querySelectorAll('#payq label').forEach(function(lb){
+    lb.addEventListener('click',function(){
+      lb.querySelector('input').checked=true;
+      var v=lb.getAttribute('data-p');
+      pay=(v==='x')?'x':parseInt(v,10);
+      document.querySelectorAll('#payq label').forEach(function(x){x.classList.remove('sel');});
+      lb.classList.add('sel');
+      calc();
+    });
+  });
+
+  function compute(){
+    var base=0,rows=[],unknownPay=false;
+    if(rank==='1'){if(picks.susub){base+=PT.susub;rows.push([LABEL.susub,PT.susub]);}}
+    else if(rank==='2'){if(picks.income50_2){base+=PT.income50_2;rows.push([LABEL.income50_2,PT.income50_2]);}}
+    else if(rank==='3'){if(picks.income50_3){base+=PT.income50_3;rows.push([LABEL.income50_3,PT.income50_3]);}}
+    if(picks.parent_nohouse){base+=PT.parent_nohouse;rows.push([LABEL.parent_nohouse,PT.parent_nohouse]);}
+    // 장애: 본인·부모 둘 다 체크 가능. SH=합산, LH=본인 우선(택일)
+    var dSelf=!!picks.dis_self, dParent=!!picks.dis_parent, disBoth=false;
+    var disSH=0, disLH=0;
+    if(dSelf){disSH+=PT.dis_self;}
+    if(dParent){disSH+=PT.dis_parent;}
+    if(dSelf){disLH+=PT.dis_self;}
+    else if(dParent){disLH+=PT.dis_parent;}
+    if(dSelf&&dParent){disBoth=true;}
+    if(dSelf&&dParent){
+      rows.push(['장애 가점','LH +2 / SH +3','special']);
+    }else{
+      if(dSelf){rows.push([LABEL.dis_self,PT.dis_self]);}
+      if(dParent){rows.push([LABEL.dis_parent,PT.dis_parent]);}
+    }
+    if(pay==='x'){unknownPay=true;}
+    else if(pay!==null&&pay>0){base+=pay;rows.push(['청약통장 ('+({3:'24회↑',2:'12~24회',1:'6~12회'}[pay])+')',pay]);}
+    // 최종 점수: SH=base+disSH, LH=base+disLH
+    var totalSH=base+disSH, totalLH=base+disLH;
+    return {total:totalSH, totalSH:totalSH, totalLH:totalLH, disBoth:disBoth, rows:rows, unknownPay:unknownPay};
+  }
+
+  function calc(){
+    if(!rank)return;
+    var r=compute();
+    stickyScore.textContent = r.disBoth ? (r.totalLH + '~' + r.totalSH) : r.total;
+  }
+
+  // 판정 4단계
+  function judge(score){
+    if(score>=8)return {t:'강한 편',c:'#2e9e5b',d:'과거 SH 커트라인 기준 상위권 점수입니다. 순위만 맞으면 경쟁력 있습니다.'};
+    if(score>=7)return {t:'승부권',c:'#1565c0',d:'과거 당첨 컷 75%선(7점)에 해당합니다. 해볼 만한 점수입니다.'};
+    if(score>=5)return {t:'예비 기대권',c:'#c4661f',d:'과거 당첨 컷 중앙값(5점) 근처입니다. 인기 단지는 예비, 여유 단지는 당첨을 기대할 수 있습니다.'};
+    return {t:'추가 전략 필요',c:'#8a6d3b',d:'점수만으로는 다소 불리합니다. 청약 회차를 늘리거나, 경쟁이 덜한 주택을 노리는 전략이 필요합니다.'};
+  }
+
+  // 결과 보기
+  document.getElementById('showBtn').addEventListener('click',function(){
+    var r=compute();
+    // 장애 본인+부모 둘 다: LH/SH 분기 표시
+    if(r.disBoth){
+      document.getElementById('mScore').innerHTML='<span style="font-size:26px">LH '+r.totalLH+'점 · SH '+r.totalSH+'점</span>';
+      var jLH=judge(r.totalLH), jSH=judge(r.totalSH);
+      var j=jSH;
+      var mTop=document.getElementById('mTop');
+      mTop.style.background='linear-gradient(135deg,'+j.c+','+shade(j.c)+')';
+      document.getElementById('mJudge').textContent='LH '+jLH.t+' · SH '+jSH.t;
+    }else{
+      document.getElementById('mScore').textContent=r.total+'점';
+      var j=judge(r.total);
+      var mTop=document.getElementById('mTop');
+      mTop.style.background='linear-gradient(135deg,'+j.c+','+shade(j.c)+')';
+      document.getElementById('mJudge').textContent='판정: '+j.t;
+    }
+    var desc=j.d;
+    if(r.unknownPay)desc+=' (청약 점수 미반영 — 순위확인서 발급 후 다시 계산하세요)';
+    document.getElementById('mDesc').textContent=desc;
+    var html='';
+    // 장애 분기 안내 박스 (둘 다 체크 시만)
+    if(r.disBoth){
+      html+='<div style="border:1px solid #d4a73a;border-radius:11px;padding:13px 15px;font-size:12.5px;color:#c4661f;line-height:1.6;margin-bottom:14px;"><b>장애 가점 안내</b><br>본인 장애와 부모 장애가 모두 해당되면 LH와 SH 계산이 다릅니다.<br>LH는 장애를 <b>본인 2점</b>으로만 보고, SH는 본인 2점 + 부모 1점으로 <b>3점</b>까지 인정합니다.</div>';
+    }
+    if(r.rows.length){
+      r.rows.forEach(function(x){
+        if(x[2]==='special'){
+          html+='<div class="br"><span>'+x[0]+'</span><span class="pt">'+x[1]+'</span></div>';
+        }else{
+          html+='<div class="br"><span>'+x[0]+'</span><span class="pt">+'+x[1]+'</span></div>';
+        }
+      });
+    }
+    else html+='<div class="none">아직 해당 항목이 없어요 · 가점 0점</div>';
+    if(r.unknownPay)html+='<div class="br"><span>청약통장</span><span style="color:#c4661f;font-weight:700;">확인 필요</span></div>';
+    document.getElementById('mBreak').innerHTML=html;
+    modalBg.classList.add('on');
+    sticky.style.visibility='hidden';
+  });
+
+  // X 닫기
+  document.getElementById('mClose').addEventListener('click',function(){
+    modalBg.classList.remove('on');
+    sticky.style.visibility='visible';
+  });
+
+  function shade(hex){
+    var c=hex.replace('#','');var n=parseInt(c,16);
+    var r=(n>>16)-24,g=((n>>8)&255)-24,b=(n&255)-24;
+    r=Math.max(0,r);g=Math.max(0,g);b=Math.max(0,b);
+    return '#'+((1<<24)+(r<<16)+(g<<8)+b).toString(16).slice(1);
+  }
+
+  modalBg.addEventListener('click',function(e){if(e.target===modalBg){modalBg.classList.remove('on');sticky.style.visibility='visible';}});
+
+  // 리셋
+  document.getElementById('resetBtn').addEventListener('click',function(){
+    rank=null;pay=null;picks={};
+    document.querySelectorAll('input').forEach(function(i){i.checked=false;});
+    document.querySelectorAll('.chk').forEach(function(c){c.classList.remove('picked','disabled');});
+    document.querySelectorAll('label').forEach(function(l){l.classList.remove('sel');});
+    step2.style.display='none';
+    items1.classList.remove('on');items2.classList.remove('on');items3.classList.remove('on');
+    itemsCommon.classList.remove('on');info3.classList.remove('on');
+    hint.style.display='block';
+    sticky.classList.remove('on');sticky.style.visibility='visible';
+    modalBg.classList.remove('on');
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+})();
+</script>
+</body>
+</html>
