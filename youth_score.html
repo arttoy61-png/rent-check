@@ -144,7 +144,8 @@
         · <b>수급자·차상위·한부모</b> 증명 가능? → <b>1순위</b><br>
         · 아니면 <b>본인+부모 합산</b> 소득이 도시근로자 100% 이하? → <b>2순위</b><br>
         · 아니면 <b>본인</b> 소득이 100% 이하? → <b>3순위</b><br>
-        <span style="color:#8a5a20;">※ 상위 순위부터 먼저 선정되니, 해당되면 낮은 번호가 유리합니다.</span>
+        <span style="display:block;margin-top:7px;color:#6b5a32;font-size:12px;line-height:1.55;">2026년 100% 기준(월, 세금 공제 전 총소득)<br>· 1인 457.6만원 · 2인 645.3만원 · 3인 816.8만원<br>※ 2순위는 부모 포함 가구원 수로, 3순위는 본인 1인 기준으로 봅니다.</span>
+        <span style="display:block;margin-top:6px;color:#8a5a20;">※ 상위 순위부터 먼저 선정되니, 해당되면 낮은 번호가 유리합니다.</span>
       </div>
     </div>
 
@@ -154,23 +155,23 @@
 
       <!-- 1순위 -->
       <div class="items" id="items1">
-        <div class="chk" data-k="susub"><input type="checkbox"><div><div class="ct">수급자 또는 지원대상 한부모 가구</div><div class="cd">생계·의료·주거·교육급여 수급자, 또는 한부모가족 지원대상</div></div></div>
+        <div class="chk" data-k="susub"><input type="checkbox"><div><div class="ct">1순위 추가 가점</div><div class="cd">수급자 또는 지원대상 한부모에 해당하는 경우 (차상위는 해당 없음)</div></div></div>
       </div>
       <!-- 2순위 소득 -->
       <div class="items" id="items2">
-        <div class="chk" data-k="income50_2"><input type="checkbox"><div><div class="ct">본인+부모 합산 소득이 기준의 50% 이하</div><div class="cd">2026년 50% 기준(월): 1인 266.9만 · 2인 351.9만 · 3인 408.4만</div></div></div>
+        <div class="chk" data-k="income50_2"><input type="checkbox"><div><div class="ct">본인+부모 합산 소득이 기준의 50% 이하</div><div class="cd">2026년 50% 기준(월, 세금 공제 전): 1인 266.9만 · 2인 351.9만 · 3인 408.4만</div></div></div>
       </div>
       <!-- 3순위 소득 -->
       <div class="items" id="items3">
-        <div class="chk" data-k="income50_3"><input type="checkbox"><div><div class="ct">본인 소득이 기준의 50% 이하</div><div class="cd">2026년 50% 기준(월): 1인 266.9만원 · 본인 소득만 봅니다</div></div></div>
+        <div class="chk" data-k="income50_3"><input type="checkbox"><div><div class="ct">본인 소득이 기준의 50% 이하</div><div class="cd">2026년 50% 기준(월, 세금 공제 전): 1인 266.9만원 · 본인 소득만 봅니다</div></div></div>
       </div>
 
       <!-- 공통 -->
       <div class="items" id="itemsCommon">
         <div class="chk" data-k="parent_nohouse"><input type="checkbox"><div><div class="ct">부모가 무주택</div><div class="cd">신청일 기준 부모가 주택을 소유하지 않음</div></div></div>
         <div class="info3" id="info3">💡 <b>3순위</b>는 소득은 본인만 보지만, <b>부모 무주택 가점은 3순위도 공통 적용</b>됩니다. (부모의 주택 소유 여부는 소득과 별개)</div>
-        <div class="chk" data-k="dis_self" id="disSelf"><input type="checkbox"><div><div class="ct">본인이 장애인</div><div class="cd">본인 명의 장애인등록증 교부</div></div></div>
-        <div class="chk" data-k="dis_parent" id="disParent"><input type="checkbox"><div><div class="ct">부모가 장애인</div><div class="cd">부모 중 장애인등록증 교부자 있음 <span style="color:#c4661f">(본인 장애 선택 시 제외)</span></div></div></div>
+        <div class="chk" data-k="dis_self" id="disSelf"><input type="checkbox"><div><div class="ct">본인 장애 가점</div><div class="cd">본인 명의 장애인등록증이 있는 경우</div></div></div>
+        <div class="chk" data-k="dis_parent" id="disParent"><input type="checkbox"><div><div class="ct">부모 장애 가점</div><div class="cd">부모 중 장애인등록증이 있는 경우</div></div></div>
 
         <div class="sub-label">청약통장 납입 횟수</div>
         <div class="sub-note">통장 가입기간이 아니라 '납입인정회차' 기준입니다 (순위확인서로 확인)</div>
@@ -205,7 +206,7 @@
     <div class="m-top" id="mTop">
       <button class="m-close" id="mClose" aria-label="닫기">×</button>
       <div class="ml">내 예상 가점</div>
-      <div class="msc"><span id="mScore">0</span>점</div>
+      <div class="msc" id="mScoreBox"><span id="mScore">0점</span></div>
       <div class="mjudge" id="mJudge">—</div>
       <div class="mdesc" id="mDesc"></div>
     </div>
@@ -243,7 +244,6 @@
   var hint=document.getElementById('hint');
   var sticky=document.getElementById('sticky'),stickyScore=document.getElementById('stickyScore');
   var modalBg=document.getElementById('modalBg');
-  var disParent=document.getElementById('disParent');
   var info3=document.getElementById('info3');
 
   var LABEL={susub:'수급자/한부모',income50_2:'소득 50% 이하',income50_3:'소득 50% 이하',parent_nohouse:'부모 무주택',dis_self:'본인 장애',dis_parent:'부모 장애'};
@@ -283,10 +283,6 @@
       var k=el.getAttribute('data-k');
       picks[k]=box.checked;
       el.classList.toggle('picked',box.checked);
-      if(k==='dis_self'){
-        if(box.checked){disParent.classList.add('disabled');disParent.querySelector('input').checked=false;disParent.classList.remove('picked');picks.dis_parent=false;}
-        else{disParent.classList.remove('disabled');}
-      }
       calc();
     });
   });
@@ -304,22 +300,36 @@
   });
 
   function compute(){
-    var total=0,rows=[],unknownPay=false;
-    if(rank==='1'){if(picks.susub){total+=PT.susub;rows.push([LABEL.susub,PT.susub]);}}
-    else if(rank==='2'){if(picks.income50_2){total+=PT.income50_2;rows.push([LABEL.income50_2,PT.income50_2]);}}
-    else if(rank==='3'){if(picks.income50_3){total+=PT.income50_3;rows.push([LABEL.income50_3,PT.income50_3]);}}
-    if(picks.parent_nohouse){total+=PT.parent_nohouse;rows.push([LABEL.parent_nohouse,PT.parent_nohouse]);}
-    if(picks.dis_self){total+=PT.dis_self;rows.push([LABEL.dis_self,PT.dis_self]);}
-    else if(picks.dis_parent){total+=PT.dis_parent;rows.push([LABEL.dis_parent,PT.dis_parent]);}
+    var base=0,rows=[],unknownPay=false;
+    if(rank==='1'){if(picks.susub){base+=PT.susub;rows.push([LABEL.susub,PT.susub]);}}
+    else if(rank==='2'){if(picks.income50_2){base+=PT.income50_2;rows.push([LABEL.income50_2,PT.income50_2]);}}
+    else if(rank==='3'){if(picks.income50_3){base+=PT.income50_3;rows.push([LABEL.income50_3,PT.income50_3]);}}
+    if(picks.parent_nohouse){base+=PT.parent_nohouse;rows.push([LABEL.parent_nohouse,PT.parent_nohouse]);}
+    // 장애: 본인·부모 둘 다 체크 가능. SH=합산, LH=본인 우선(택일)
+    var dSelf=!!picks.dis_self, dParent=!!picks.dis_parent, disBoth=false;
+    var disSH=0, disLH=0;
+    if(dSelf){disSH+=PT.dis_self;}
+    if(dParent){disSH+=PT.dis_parent;}
+    if(dSelf){disLH+=PT.dis_self;}
+    else if(dParent){disLH+=PT.dis_parent;}
+    if(dSelf&&dParent){disBoth=true;}
+    if(dSelf&&dParent){
+      rows.push(['장애 가점','LH +2 / SH +3','special']);
+    }else{
+      if(dSelf){rows.push([LABEL.dis_self,PT.dis_self]);}
+      if(dParent){rows.push([LABEL.dis_parent,PT.dis_parent]);}
+    }
     if(pay==='x'){unknownPay=true;}
-    else if(pay!==null&&pay>0){total+=pay;rows.push(['청약통장 ('+({3:'24회↑',2:'12~24회',1:'6~12회'}[pay])+')',pay]);}
-    return {total:total,rows:rows,unknownPay:unknownPay};
+    else if(pay!==null&&pay>0){base+=pay;rows.push(['청약통장 ('+({3:'24회↑',2:'12~24회',1:'6~12회'}[pay])+')',pay]);}
+    // 최종 점수: SH=base+disSH, LH=base+disLH
+    var totalSH=base+disSH, totalLH=base+disLH;
+    return {total:totalSH, totalSH:totalSH, totalLH:totalLH, disBoth:disBoth, rows:rows, unknownPay:unknownPay};
   }
 
   function calc(){
     if(!rank)return;
     var r=compute();
-    stickyScore.textContent=r.total;
+    stickyScore.textContent = r.disBoth ? (r.totalLH + '~' + r.totalSH) : r.total;
   }
 
   // 판정 4단계
@@ -333,17 +343,39 @@
   // 결과 보기
   document.getElementById('showBtn').addEventListener('click',function(){
     var r=compute();
-    document.getElementById('mScore').textContent=r.total;
-    var j=judge(r.total);
-    var mTop=document.getElementById('mTop');
-    mTop.style.background='linear-gradient(135deg,'+j.c+','+shade(j.c)+')';
-    document.getElementById('mJudge').textContent='판정: '+j.t;
+    // 장애 본인+부모 둘 다: LH/SH 분기 표시
+    if(r.disBoth){
+      document.getElementById('mScore').innerHTML='<span style="font-size:26px">LH '+r.totalLH+'점 · SH '+r.totalSH+'점</span>';
+      var jLH=judge(r.totalLH), jSH=judge(r.totalSH);
+      var j=jSH;
+      var mTop=document.getElementById('mTop');
+      mTop.style.background='linear-gradient(135deg,'+j.c+','+shade(j.c)+')';
+      document.getElementById('mJudge').textContent='LH '+jLH.t+' · SH '+jSH.t;
+    }else{
+      document.getElementById('mScore').textContent=r.total+'점';
+      var j=judge(r.total);
+      var mTop=document.getElementById('mTop');
+      mTop.style.background='linear-gradient(135deg,'+j.c+','+shade(j.c)+')';
+      document.getElementById('mJudge').textContent='판정: '+j.t;
+    }
     var desc=j.d;
     if(r.unknownPay)desc+=' (청약 점수 미반영 — 순위확인서 발급 후 다시 계산하세요)';
     document.getElementById('mDesc').textContent=desc;
     var html='';
-    if(r.rows.length)r.rows.forEach(function(x){html+='<div class="br"><span>'+x[0]+'</span><span class="pt">+'+x[1]+'</span></div>';});
-    else html='<div class="none">아직 해당 항목이 없어요 · 가점 0점</div>';
+    // 장애 분기 안내 박스 (둘 다 체크 시만)
+    if(r.disBoth){
+      html+='<div style="border:1px solid #d4a73a;border-radius:11px;padding:13px 15px;font-size:12.5px;color:#c4661f;line-height:1.6;margin-bottom:14px;"><b>장애 가점 안내</b><br>본인 장애와 부모 장애가 모두 해당되면 LH와 SH 계산이 다릅니다.<br>LH는 장애를 <b>본인 2점</b>으로만 보고, SH는 본인 2점 + 부모 1점으로 <b>3점</b>까지 인정합니다.</div>';
+    }
+    if(r.rows.length){
+      r.rows.forEach(function(x){
+        if(x[2]==='special'){
+          html+='<div class="br"><span>'+x[0]+'</span><span class="pt">'+x[1]+'</span></div>';
+        }else{
+          html+='<div class="br"><span>'+x[0]+'</span><span class="pt">+'+x[1]+'</span></div>';
+        }
+      });
+    }
+    else html+='<div class="none">아직 해당 항목이 없어요 · 가점 0점</div>';
     if(r.unknownPay)html+='<div class="br"><span>청약통장</span><span style="color:#c4661f;font-weight:700;">확인 필요</span></div>';
     document.getElementById('mBreak').innerHTML=html;
     modalBg.classList.add('on');
