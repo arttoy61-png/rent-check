@@ -37,10 +37,12 @@ jobs:
         run: |
           python auction_data.py data/molit_kangseo.csv
           cp auction_data.json ../auction_data.json
+      - name: Publish CSV (Claude 직접 접근용)
+        run: cp automation/data/molit_kangseo.csv molit_kangseo.csv
       - name: Commit if changed
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add widget_data.json hwagok_apt_data.json auction_data.json
+          git add widget_data.json hwagok_apt_data.json auction_data.json molit_kangseo.csv
           git commit -m "auto: update widget data ($(date -u +%F))" || echo "변경 없음"
           git push || echo "푸시 생략"
