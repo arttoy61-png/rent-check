@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>이 물건, 얼마에 써야 남을까｜경매 안전마진 계산기</title>
 <meta property="og:title" content="이 물건, 얼마에 써야 남을까｜경매 안전마진 계산기">
-<meta property="og:description" content="경매 물건을 입력하고 유사 실거래와 총투입금, 권리 위험을 함께 검산합니다.">
+<meta property="og:description" content="유사 실거래를 직접 고르고 총투입금과 비교해 예상 안전마진을 계산합니다.">
 <meta property="og:image" content="https://arttoy61-png.github.io/rent-check/auction_check_og.png">
 <meta property="og:type" content="website">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
@@ -224,27 +224,43 @@ input.hasunit{padding-right:52px;}
 }
 .r-actions{margin-top:8px;}
 
-.modepick{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px;}
-.modepick button{border:1px solid var(--line);background:var(--surface);border-radius:16px;padding:14px 12px;text-align:left;font-family:inherit;cursor:pointer;}
-.modepick button.on{border:2px solid var(--primary);background:var(--primary-soft);padding:13px 11px;}
-.modepick b{display:block;font-size:15px;color:var(--navy);}
-.modepick span{display:block;font-size:12.5px;color:var(--subtext);margin-top:4px;line-height:1.45;}
-.checkgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px;}
-.checkpill{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:12px;padding:10px 11px;font-size:13px;cursor:pointer;background:#fff;}
-.checkpill input{width:18px;height:18px;accent-color:var(--danger);}
-.riskgate{display:none;position:fixed;inset:0;background:rgba(0,0,0,.42);z-index:90;align-items:center;justify-content:center;padding:20px;}
-.riskgate.on{display:flex;}
-.riskbox{width:min(520px,100%);background:#fff;border-radius:22px;padding:24px;box-shadow:0 24px 80px rgba(20,35,60,.24);}
-.riskbox h3{font-size:23px;line-height:1.35;color:var(--navy);}
-.riskbox p{font-size:14px;color:var(--subtext);margin-top:10px;line-height:1.7;}
-.riskbox .btn{margin-top:18px;}
-.riskbox .btn-text{padding-top:12px;}
-.amount-help{font-size:13px;color:var(--primary);font-weight:600;margin-top:6px;min-height:20px;}
-@media (max-width:640px){
-  .grid2{grid-template-columns:1fr;gap:0;}
-  .modepick{grid-template-columns:1fr;}
-  .checkgrid{grid-template-columns:1fr;}
+/* ── 주소 기반 비교·복원 UI ── */
+.money-help{font-size:12.5px;color:var(--subtext);margin-top:8px;line-height:1.55;}
+.target-box{background:var(--primary-soft);border:1px solid #D7E3FF;border-radius:15px;padding:14px 16px;margin-bottom:14px;}
+.target-box .tb-cap{font-size:12px;font-weight:700;color:var(--primary);}
+.target-box .tb-addr{font-size:16px;font-weight:700;color:var(--navy);margin-top:3px;word-break:keep-all;}
+.target-box .tb-sub{font-size:12.5px;color:var(--subtext);margin-top:4px;}
+.deal-section{margin:16px 0 9px;}
+.deal-section:first-child{margin-top:0;}
+.ds-title{display:flex;align-items:center;justify-content:space-between;font-size:15px;font-weight:700;color:var(--navy);}
+.ds-title span{font-size:12px;font-weight:600;color:var(--subtext);}
+.ds-desc{font-size:12.5px;color:var(--subtext);margin-top:3px;line-height:1.5;}
+.dcard .d-addr{font-size:13px;font-weight:650;color:var(--text);margin-top:4px;word-break:keep-all;}
+.dcard .d-tags{display:flex;gap:5px;flex-wrap:wrap;margin-top:7px;}
+.dcard .d-tag{font-size:11.5px;padding:3px 7px;border-radius:8px;background:var(--bg);color:var(--subtext);}
+.dcard .d-tag.good{background:#E6F7F3;color:#00614f;}
+.dcard.ref{background:#FAFBFC;}
+.resume-card{display:none;background:#fff;border:1px solid var(--line);border-radius:16px;padding:15px 16px;margin-top:14px;}
+.resume-card.on{display:block;}
+.resume-card .rcap{font-size:12.5px;color:var(--subtext);}
+.resume-card .rmain{font-size:15px;font-weight:700;color:var(--navy);margin-top:2px;}
+.resume-actions{display:flex;gap:8px;margin-top:10px;}
+.resume-actions button{flex:1;height:42px;border-radius:11px;font-family:inherit;font-size:13.5px;font-weight:700;cursor:pointer;}
+.resume-primary{border:none;background:var(--primary);color:#fff;}
+.resume-secondary{border:1px solid var(--line);background:#fff;color:var(--subtext);}
+.result-nav{position:sticky;top:0;z-index:20;background:rgba(245,247,250,.96);backdrop-filter:blur(10px);margin:-28px -20px 16px;padding:12px 20px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:10px;}
+.result-nav button{border:none;background:none;font-family:inherit;font-size:14px;font-weight:700;color:var(--primary);cursor:pointer;padding:8px 0;}
+.result-nav .saved{font-size:12px;color:var(--positive);font-weight:600;}
+.result-bottom-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px;}
+.result-bottom-actions button{height:50px;border-radius:14px;font-family:inherit;font-size:14px;font-weight:700;cursor:pointer;}
+.rba-primary{border:1px solid var(--primary);background:var(--primary-soft);color:var(--primary);}
+.rba-secondary{border:1px solid var(--line);background:#fff;color:var(--subtext);}
+@media(max-width:640px){
+  .grid2.mobile-stack{grid-template-columns:1fr;}
+  .result-nav{margin-top:-28px;}
+  .deal-cards{padding-bottom:110px;}
 }
+
 </style>
 </head>
 <body>
@@ -253,41 +269,34 @@ input.hasunit{padding-right:52px;}
 <div class="wrap" id="landing">
   <div class="brandline"><b>RENT CHECK</b> · 경매분석</div>
   <div class="hero-title">보고 있는 경매 물건을<br>입력하세요</div>
-  <div class="hero-desc" id="heroDesc">경매 공고에 적힌 내용을 그대로 옮기면 됩니다.<br>강서구 유사 실거래를 불러와 가격을 검산합니다.</div>
-  <div class="modepick" id="modePick">
-    <button type="button" class="on" data-mode="quick"><b>간편 검산</b><span>비교 거래와 기본 비용을 자동 적용해 빠르게 확인</span></button>
-    <button type="button" data-mode="direct"><b>직접 계산</b><span>비교 거래와 비용을 직접 선택하고 수정</span></button>
-  </div>
+  <div class="hero-desc" id="heroDesc">경매 공고에 적힌 내용을 그대로 옮기면 됩니다.<br>강서구 유사 실거래를 불러와 안전마진을 계산합니다.</div>
 
   <div class="card">
-    <label>경매 물건 주소 <span class="opt">— 공고 주소 그대로</span></label>
-    <div class="field"><input type="text" id="address" autocomplete="street-address" placeholder="예: 서울 강서구 화곡동 372-18 신영베르디움에이"></div>
-    <div class="amount-help">같은 건물·같은 번지권·인접 주소의 실거래를 먼저 보여드립니다.</div>
     <label>지역</label>
     <select id="region"><option value="화곡동">화곡동</option><option value="etc">기타 지역 (직접입력)</option></select>
+    <label>경매 물건 주소 <span class="opt">— 공고 주소 그대로</span></label>
+    <div class="field"><input type="text" id="address" placeholder="예: 서울 강서구 화곡동 372-18" autocomplete="street-address"></div>
     <label>건물 유형</label>
-    <select id="btype"><option value="villa">다세대·연립 (도시형생활주택 포함)</option><option value="op">오피스텔</option><option value="apt">아파트</option><option value="shop">근린상가</option><option value="etcType">기타</option></select>
+    <select id="btype"><option value="villa">다세대·연립 (도시형생활주택 포함)</option><option value="apt">아파트</option><option value="op">오피스텔</option></select>
     <label>전용면적</label>
     <div class="field"><input type="number" id="area" min="0" class="hasunit" inputmode="decimal" placeholder="37.6"><span class="unit">㎡</span></div>
-    <div class="grid2">
+    <div class="grid2 mobile-stack">
       <div><label>감정가 <span class="opt">— 경매 공고 그대로</span></label>
-      <div class="field"><input type="number" min="0" id="apprPrice" class="hasunit" inputmode="numeric" placeholder="22500"><span class="unit">만원</span></div><div class="amount-help" id="apprHelp"></div></div>
+      <div class="field"><input type="number" id="apprPrice" min="0" class="hasunit" inputmode="numeric" placeholder="22500"><span class="unit">만원</span></div></div>
       <div><label>최저가 <span class="opt">— 경매 공고 그대로</span></label>
-      <div class="field"><input type="number" min="0" id="minPrice" class="hasunit" inputmode="numeric" placeholder="18000"><span class="unit">만원</span></div><div class="amount-help" id="minHelp"></div></div>
+      <div class="field"><input type="number" min="0" id="minPrice" class="hasunit" inputmode="numeric" placeholder="18000"><span class="unit">만원</span></div></div>
     </div>
-    <div class="tax-note" style="margin-top:10px;">감정가는 법원 감정평가 기준 가격, 최저가는 이번 회차 최소 입찰 가능 금액입니다. 최저가가 실제 시세나 적정 입찰가를 뜻하지는 않습니다.</div>
-    <label>유찰 횟수 <span class="opt">— 신건은 0회</span></label>
-    <div class="field"><input type="number" min="0" id="failCount" class="hasunit" inputmode="numeric" value="0"><span class="unit">회</span></div>
-    <label>권리 표시 <span class="opt">— 목록에 보이는 것만 체크</span></label>
-    <div class="checkgrid" id="riskChecks">
-      <label class="checkpill"><input type="checkbox" value="leaseReg">임차권등기</label>
-      <label class="checkpill"><input type="checkbox" value="tenantPower">대항력 있는 임차인</label>
-      <label class="checkpill"><input type="checkbox" value="priorReg">선순위 가등기</label>
-      <label class="checkpill"><input type="checkbox" value="trust">신탁</label>
-      <label class="checkpill"><input type="checkbox" value="injunction">가처분·가등기</label>
-      <label class="checkpill"><input type="checkbox" value="unknown">잘 모르겠음</label>
+    <div class="money-help">감정가는 법원 감정평가 기준 가격이고, 최저가는 이번 회차 최소 입찰 가능 금액입니다. 최저가가 실제 시세나 적정 입찰가를 뜻하지는 않습니다.</div>
+    <div class="grid2 mobile-stack">
+      <div><label>준공연도 <span class="opt">— 알면 입력</span></label><div class="field"><input type="number" min="1900" max="2100" id="targetYear" inputmode="numeric" placeholder="예: 2018"></div></div>
+      <div><label>물건 층 <span class="opt">— 알면 입력</span></label><div class="field"><input type="number" min="-5" max="100" id="targetFloor" inputmode="numeric" placeholder="예: 4"></div></div>
     </div>
-    <button class="btn" id="findBtn">이 물건의 가격을 검산하기</button>
+    <button class="btn" id="findBtn">이 물건의 유사 실거래 보기</button>
+  </div>
+  <div class="resume-card" id="resumeCard">
+    <div class="rcap">이전에 계산한 결과가 있습니다</div>
+    <div class="rmain" id="resumeSummary">-</div>
+    <div class="resume-actions"><button class="resume-primary" id="resumeBtn">이전 결과 이어보기</button><button class="resume-secondary" id="discardBtn">새로 계산하기</button></div>
   </div>
 
   <div class="foot-note">입력값을 이용한 참고 계산이며<br>권리분석 결과를 대신하지 않습니다.</div>
@@ -296,11 +305,12 @@ input.hasunit{padding-right:52px;}
 
 <!-- ═══ 결과 화면 ═══ -->
 <div class="wrap" id="resultView">
+  <div class="result-nav"><button id="resultBackBtn">← 입력값 수정</button><span class="saved">결과 저장됨</span></div>
   <div class="brandline"><b>RENT CHECK</b> · 경매분석 결과</div>
   <div class="hero-title" style="font-size:24px;">이 입찰가,<br>실거래보다 얼마나 남을까?</div>
 
   <div class="r-hero">
-    <div class="rh-label" id="rvLabel">예상 안전마진</div>
+    <div class="rh-label">예상 안전마진</div>
     <div class="rh-num" id="rvMargin">-</div>
     <div class="rh-sub">비교 실거래 <b id="rvSale">-</b><br>총투입금 <b id="rvTotal">-</b></div>
   </div>
@@ -356,21 +366,13 @@ input.hasunit{padding-right:52px;}
   <div id="blogLinks"></div>
 
   <button class="copybtn" id="copyBtn">📋 블로그용 요약 복사</button>
+  <div class="result-bottom-actions"><button class="rba-primary" id="repickBtn">비교 거래 다시 고르기</button><button class="rba-secondary" id="newCalcBtn">새 물건 계산하기</button></div>
   <div class="r-actions">
     <button class="btn-text" id="restartBtn">입력값 처음부터 다시 입력</button>
   </div>
 
   <div class="foot-note">입력값 기준 참고 계산입니다. 권리·명도·수리비 확인 전에는 입찰가를 확정하지 마세요.<br>본 도구는 투자 권유가 아닙니다.</div>
   <div class="footer"><b>Rent Check 강서</b><br>실거래로 더 정확하게.</div>
-</div>
-
-<div class="riskgate" id="riskGate">
-  <div class="riskbox">
-    <h3>가격 계산보다 권리 확인이 먼저인 물건입니다</h3>
-    <p id="riskText">최저가가 크게 낮거나 권리 표시가 있는 물건입니다. 싸게 보이는 이유가 권리 문제일 수 있습니다.</p>
-    <button class="btn" id="riskContinue">권리 미확인 상태로 가격만 검산하기</button>
-    <button class="btn-text" id="riskStop">이 물건 계산 중단</button>
-  </div>
 </div>
 
 <!-- ═══ 단계형 모달 ═══ -->
@@ -396,6 +398,7 @@ input.hasunit{padding-right:52px;}
 
 <!-- 단계 템플릿 -->
 <template id="tpl-s2">
+  <div id="targetSummary"></div>
   <div class="deal-cards" id="dealCards"></div>
   <div id="pickWarn"></div>
   <div class="etcbox" id="etcBox" style="display:none;">
@@ -462,44 +465,60 @@ input.hasunit{padding-right:52px;}
 <script>
 (function(){
 var $=function(id){return document.getElementById(id);};
-var DB=null, CAND=[], LAST=null, MODE='simple', FLOW='quick', STEP=0, JAUTO=0, WAUTO={dp:0,m:0};
-var S={address:'',region:'화곡동',type:'villa',area:0,sale:0,poolN:0,poolMin:0,poolMax:0,risks:[],riskOpen:false,failCount:0};
-var STORE_KEY='rentcheck_auction_easy_v2';
+var DB=null, CAND=[], LAST=null, MODE='simple', STEP=0, JAUTO=0, WAUTO={dp:0,m:0};
+var S={region:'화곡동',address:'',type:'villa',area:0,year:0,floor:0,sale:0,poolN:0,poolMin:0,poolMax:0};
+var STORAGE_KEY='rentcheck_auction_state_v3';
 
 function median(a){if(!a.length)return 0;var s=a.slice().sort(function(x,y){return x-y;});var m=Math.floor(s.length/2);return s.length%2?s[m]:(s[m-1]+s[m])/2;}
 function fmt(n){n=Math.round(n);if(n>=10000){var e=Math.floor(n/10000),r=n%10000;return r?e+'억 '+r.toLocaleString():e+'억';}return n.toLocaleString();}
 function fmtW(n){return fmt(n)+'만원';}
 function fd(ym,d){return ym?ym.slice(0,4)+'.'+ym.slice(4,6)+'.'+(d?String(d).padStart(2,'0'):''):'';}
 function num(id){var el=$(id);return el?(parseFloat(el.value)||0):0;}
-function norm(v){return String(v||'').toLowerCase().replace(/[()\[\],.]/g,' ').replace(/서울특별시/g,'서울').replace(/\s+/g,' ').trim();}
-function itemAddress(x){return [x.address,x.addr,x.jibun,x.road,x.roadAddr,x.road_address,x.u,x.b,x.bonbun,x.bubun].filter(Boolean).join(' ');}
-function numsIn(v){return (String(v||'').match(/\d+(?:-\d+)?/g)||[]);}
-function addressScore(x,q){
-  var qa=norm(q), xa=norm(itemAddress(x)), score=0, why=[];
-  if(!qa)return {score:0,why:'주소 미입력 · 면적·최근 거래 기준'};
-  if(xa&&xa===qa){score+=1000;why.push('같은 주소');}
-  if(x.b&&qa.indexOf(norm(x.b))>=0){score+=700;why.push('같은 건물');}
-  var qn=numsIn(qa), xn=numsIn(xa), hit=0;
-  qn.forEach(function(n){if(xn.indexOf(n)>=0)hit++;});
-  if(hit){score+=hit*140;why.push(hit>=2?'같은 번지권':'주소 번호 유사');}
-  var qtok=qa.split(' ').filter(function(t){return t.length>=3&&!/^\d/.test(t);});
-  var common=qtok.filter(function(t){return xa.indexOf(t)>=0;}).length;
-  if(common){score+=common*35;if(!why.length)why.push('인접 주소권');}
-  return {score:score,why:why.join(' · ')||'같은 동 유사 면적'};
+
+function esc(v){return String(v==null?'':v).replace(/[&<>'"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c];});}
+function norm(v){return String(v||'').toLowerCase().replace(/서울특별시|서울시|서울|강서구/g,'').replace(/\s+/g,'').replace(/[()]/g,'');}
+function getAddr(x){return x.addr||x.address||x.jibun||x.j||x.bunji||x.road||x.roadAddr||x.road_address||x.addr1||x.address_name||x.location||x.a1||x.ad||'';}
+function getLot(v){var m=String(v||'').match(/(?:^|\s)(\d{1,4})(?:-(\d{1,4}))?(?:\s|,|$)/);return m?{main:+m[1],sub:+(m[2]||0)}:null;}
+function getRoadStem(v){var m=String(v||'').match(/([가-힣A-Za-z0-9]+(?:로|길))\s*\d*/);return m?m[1]:'';}
+function dateScore(x){var y=+(String(x.ym||'0').slice(0,4)||0),m=+(String(x.ym||'0').slice(4,6)||0);if(!y)return 0;var now=new Date(),months=(now.getFullYear()-y)*12+(now.getMonth()+1-m);return months<=6?10:months<=12?7:months<=24?3:0;}
+function compareMeta(x){
+  var qa=norm(S.address), xa=norm(getAddr(x)), qb=norm(x.b||'');
+  var qlot=getLot(S.address), xlot=getLot(getAddr(x));
+  var sameBuilding=!!(qb&&qa&&qa.indexOf(qb)>=0);
+  var sameAddr=!!(qa&&xa&&qa===xa);
+  var sameMain=!!(qlot&&xlot&&qlot.main===xlot.main);
+  var roadA=getRoadStem(S.address),roadX=getRoadStem(getAddr(x));
+  var sameRoad=!!(roadA&&roadX&&roadA===roadX);
+  var areaPct=S.area?Math.abs(x.a-S.area)/S.area*100:999;
+  var yearDiff=(S.year&&x.y)?Math.abs(x.y-S.year):null;
+  var floorDiff=(S.floor!==0&&x.f!==undefined&&x.f!==null)?Math.abs(Number(x.f)-S.floor):null;
+  var score=0,tags=[];
+  if(sameAddr||sameBuilding){score+=60;tags.push('같은 건물');}
+  else if(sameMain){score+=40;tags.push('같은 번지권');}
+  else if(sameRoad){score+=25;tags.push('같은 도로명');}
+  else{score+=8;tags.push(S.region+' 내 거래');}
+  if(areaPct<=5){score+=25;tags.push('면적 매우 유사');}
+  else if(areaPct<=10){score+=20;tags.push('면적 유사');}
+  else if(areaPct<=15){score+=12;tags.push('면적 참고');}
+  else if(areaPct<=25){score+=3;tags.push('면적 차이 큼');}
+  if(yearDiff!==null){if(yearDiff<=3){score+=15;tags.push('준공 '+yearDiff+'년 차이');}else if(yearDiff<=5){score+=10;tags.push('준공 '+yearDiff+'년 차이');}else if(yearDiff<=10){score+=4;tags.push('준공 '+yearDiff+'년 차이');}else tags.push('준공 '+yearDiff+'년 차이');}
+  if(floorDiff!==null){if(floorDiff<=2)score+=5;else if(Number(x.f)<=1)tags.push('저층 거래');}
+  score+=dateScore(x);
+  var recommended=(score>=55&&areaPct<=15&&(yearDiff===null||yearDiff<=10));
+  return {score:score,tags:tags,recommended:recommended,areaPct:areaPct,yearDiff:yearDiff,address:getAddr(x)};
 }
 function saveState(){
-  try{localStorage.setItem(STORE_KEY,JSON.stringify({S:S,LAST:LAST,MODE:MODE,FLOW:FLOW,JAUTO:JAUTO,WAUTO:WAUTO,CAND:CAND,ts:Date.now()}));}catch(e){}
+  try{localStorage.setItem(STORAGE_KEY,JSON.stringify({S:S,LAST:LAST,MODE:MODE,CAND:CAND,JAUTO:JAUTO,WAUTO:WAUTO,rights:currentRights(),savedAt:Date.now()}));}catch(e){}
 }
-function clearSaved(){try{localStorage.removeItem(STORE_KEY);}catch(e){}}
-function restoreSaved(){
-  try{
-    var raw=localStorage.getItem(STORE_KEY);if(!raw)return false;
-    var z=JSON.parse(raw);if(!z||!z.LAST||!z.LAST.result)return false;
-    S=z.S||S;LAST=z.LAST;MODE=z.MODE||'simple';FLOW=z.FLOW||'quick';JAUTO=z.JAUTO||0;WAUTO=z.WAUTO||{dp:0,m:0};CAND=z.CAND||[];
-    document.querySelectorAll('#riskChecks input').forEach(function(i){i.checked=(S.risks||[]).indexOf(i.value)>=0;});
-    showResult(true);return true;
-  }catch(e){return false;}
+window.saveAuctionState=saveState;
+function clearSaved(){try{localStorage.removeItem(STORAGE_KEY);}catch(e){}}
+function readSaved(){try{return JSON.parse(localStorage.getItem(STORAGE_KEY)||'null');}catch(e){return null;}}
+function applySaved(st){
+  if(!st)return false;S=st.S||S;LAST=st.LAST||LAST;MODE=st.MODE||'simple';CAND=st.CAND||[];JAUTO=st.JAUTO||0;WAUTO=st.WAUTO||{dp:0,m:0};
+  if(st.rights)document.querySelectorAll('#rightsBox input').forEach(function(i){i.checked=!!st.rights[i.getAttribute('data-k')];});
+  return true;
 }
+function resetAll(){clearSaved();location.reload();}
 
 function loadDB(){
   if(DB)return Promise.resolve(DB);
@@ -507,17 +526,6 @@ function loadDB(){
     if(!r.ok)throw 0;return r.json();
   }).then(function(j){DB=j;return j;});
 }
-
-document.querySelectorAll('#modePick button').forEach(function(b){
-  b.addEventListener('click',function(){
-    FLOW=this.getAttribute('data-mode');
-    document.querySelectorAll('#modePick button').forEach(function(x){x.classList.toggle('on',x===b);});
-  });
-});
-function amountText(v){v=parseFloat(v)||0;return v>0?fmt(v)+'만원':'';}
-['apprPrice','minPrice'].forEach(function(id){
-  $(id).addEventListener('input',function(){ $(id==='apprPrice'?'apprHelp':'minHelp').textContent=amountText(this.value); });
-});
 $('region').addEventListener('change',function(){
   $('heroDesc').innerHTML=(this.value==='etc')
     ?'경매 공고에 적힌 내용을 그대로 옮기면 됩니다.<br>내가 확인한 실거래를 넣어 안전마진을 검산합니다.'
@@ -534,18 +542,17 @@ loadDB().then(function(db){
 
 /* ══ 모달 단계 엔진 ══ */
 var STEPS={
-  2:{title:'비교할 실거래를 확인해주세요',desc:'',btn:'선택한 실거래로 계산하기',time:'약 1분 남음'},
+  2:{title:'경매 물건 주변 실거래입니다',desc:'',btn:'선택한 실거래로 계산하기',time:'약 1분 남음'},
   3:{title:'얼마에 쓰시겠어요?',desc:'실거래를 확인했으니 이제 입찰가를 정해보세요.',btn:'추가 비용 계산하기',time:'약 40초 남음'},
   4:{title:'추가 비용을 입력해주세요',desc:'낙찰가보다 총투입금이 중요합니다.',btn:'내 안전마진 확인하기',time:'약 20초 남음'}
 };
 function openStep(n){
-  STEP=n;
-  try{history.pushState({auctionStep:n},'','#step'+n);}catch(e){}var st=STEPS[n];
+  STEP=n;var st=STEPS[n];
   $('pgStep').textContent=(n)+' / 4';
   $('pgTime').textContent=st.time;
   $('pgFill').style.width=(n/4*100)+'%';
   $('mTitle').textContent=st.title;
-  if(n===2&&S.minp>0){$('mDesc').innerHTML='최저가 <b>'+fmt(S.minp)+'만원</b>인데, 이 동네 실제 거래는 얼마일까요?<br>조건이 다른 거래는 빼세요 — 2~5건 선택 권장.';}
+  if(n===2&&S.minp>0){$('mDesc').innerHTML='입력한 주소를 기준으로 주소·면적·준공연도·층·거래일을 함께 비교했습니다.<br>추천거래와 참고거래를 확인하세요.';}
   else if(n===2){$('mDesc').textContent='같은 동·유형, 면적 ±15%의 최근 거래입니다. 조건이 다른 거래는 빼세요 — 2~5건 선택 권장.';}
   else $('mDesc').textContent=st.desc;
   $('mNext').textContent=st.btn;
@@ -563,49 +570,35 @@ function openStep(n){
 function closeOvl(){$('ovl').classList.remove('on');document.body.style.overflow='';}
 
 /* ══ 1단계 → 조회 ══ */
-function beginLookup(){
+$('findBtn').addEventListener('click',function(){
+  S.region=$('region').value;S.address=($('address').value||'').trim();S.type=$('btype').value;S.area=num('area');
+  S.appr=num('apprPrice');S.minp=num('minPrice');S.year=num('targetYear');S.floor=num('targetFloor');
+  if(S.region!=='etc'&&!S.address){alert('경매 공고의 주소를 입력해주세요.');return;}
+  if(S.region!=='etc'&&S.area<=0){alert('전용면적을 먼저 입력해주세요.');return;}
+  if(S.appr<=0){alert('감정가를 입력해주세요.');return;}
+  if(S.minp<=0){alert('최저가를 입력해주세요.');return;}
+  if(S.minp>S.appr){alert('최저가는 감정가보다 클 수 없습니다.');return;}
   LAST=LAST||{};LAST.apprPrice=S.appr;LAST.minPrice=S.minp;
-  if(S.region==='etc'||S.type==='shop'||S.type==='etcType'){CAND=[];openStep(2);renderS2();return;}
+  if(S.region==='etc'){CAND=[];openStep(2);renderS2();saveState();return;}
   loadDB().then(function(db){
     var tc={villa:'v',apt:'a',op:'o'}[S.type];
     var lo=S.area*0.70,hi=S.area*1.30;
     var mt=function(x){return x.u===S.region&&x.t===tc&&x.a>=lo&&x.a<=hi;};
     CAND=db.sale.filter(mt).map(function(x){
-      var ainfo=addressScore(x,S.address), areaGap=Math.abs((x.a||0)-S.area);
-      var recent=Number(String(x.ym||'0')+String(x.d||0).padStart(2,'0'));
-      x._score=ainfo.score-Math.min(200,areaGap*12);
-      x._why=ainfo.why+' · 면적 '+areaGap.toFixed(1)+'㎡ 차이';
-      x._recent=recent;x._on=false;return x;
-    }).sort(function(a,b){return (b._score-a._score)||(b._recent-a._recent);}).slice(0,12);
-    var js=db.jeonse.filter(mt).map(function(x){return x.p;});JAUTO=Math.round(median(js));
-    var ws=db.wolse.filter(mt);WAUTO={dp:Math.round(median(ws.map(function(x){return x.dp;}))),m:Math.round(median(ws.map(function(x){return x.m;})))};
+      var c=Object.assign({},x);c._meta=compareMeta(c);c._on=false;return c;
+    }).sort(function(a,b){
+      if(b._meta.score!==a._meta.score)return b._meta.score-a._meta.score;
+      return (b.ym+String(b.d||'').padStart(2,'0')).localeCompare(a.ym+String(a.d||'').padStart(2,'0'));
+    }).slice(0,20);
+    var rec=CAND.filter(function(x){return x._meta.recommended;}).slice(0,3);
+    rec.forEach(function(x){x._on=true;});
+    var rentMt=function(x){return x.u===S.region&&x.t===tc&&x.a>=S.area*0.85&&x.a<=S.area*1.15;};
+    var js=db.jeonse.filter(rentMt).map(function(x){return x.p;});JAUTO=Math.round(median(js));
+    var ws=db.wolse.filter(rentMt);WAUTO={dp:Math.round(median(ws.map(function(x){return x.dp;}))),m:Math.round(median(ws.map(function(x){return x.m;})))};
     try{gtag('event','auction_lookup',{region:S.region,type:S.type,found:CAND.length});}catch(e){}
-    if(FLOW==='quick'&&CAND.length){CAND.forEach(function(x,i){x._on=i<Math.min(3,CAND.length);});}
-    openStep(2);renderS2();
-  }).catch(function(){CAND=[];openStep(2);renderS2(true);});
-}
-$('findBtn').addEventListener('click',function(){
-  S.address=($('address').value||'').trim();S.region=$('region').value;S.type=$('btype').value;S.area=num('area');
-  S.appr=num('apprPrice');S.minp=num('minPrice');S.failCount=Math.max(0,num('failCount'));
-  S.risks=Array.prototype.map.call(document.querySelectorAll('#riskChecks input:checked'),function(x){return x.value;});
-  if(!S.address){alert('경매 물건 주소를 입력해주세요.');return;}
-  if(S.area<=0){alert('전용면적을 확인해주세요.');return;}
-  if(S.appr<=0){alert('감정가를 입력해주세요.');return;}
-  if(S.minp<=0){alert('최저가를 입력해주세요.');return;}
-  if(S.minp>S.appr){alert('최저가는 감정가보다 클 수 없습니다.');return;}
-  var severe=S.risks.length>0 || S.minp/S.appr<=0.2 || S.failCount>=8;
-  if(severe){
-    var msgs=[];
-    if(S.minp/S.appr<=0.2)msgs.push('최저가가 감정가의 '+(S.minp/S.appr*100).toFixed(1)+'%입니다.');
-    if(S.failCount>=8)msgs.push('유찰 '+S.failCount+'회 물건입니다.');
-    if(S.risks.length)msgs.push('권리 표시가 선택되어 있습니다.');
-    $('riskText').innerHTML=msgs.join('<br>')+'<br>싸게 보이는 이유가 권리 문제일 수 있습니다.';
-    $('riskGate').classList.add('on');return;
-  }
-  S.riskOpen=false;beginLookup();
+    openStep(2);renderS2();saveState();
+  }).catch(function(){CAND=[];openStep(2);renderS2(true);saveState();});
 });
-$('riskContinue').addEventListener('click',function(){S.riskOpen=true;$('riskGate').classList.remove('on');beginLookup();});
-$('riskStop').addEventListener('click',function(){$('riskGate').classList.remove('on');});
 
 /* ══ 2단계 ══ */
 function bindStep(n){
@@ -619,15 +612,15 @@ function bindStep(n){
       info='비교 실거래: <b>'+(S.poolN?S.poolN+'건 중위 '+fmt(S.sale)+'만원':fmt(S.sale)+'만원 (직접 입력)')+'</b>';
     }
     $('s3info').innerHTML=info;
-    $('bidPrice').addEventListener('input',function(){LAST=LAST||{};LAST.bidPrice=num('bidPrice');s3live();updateLive();});
+    $('bidPrice').addEventListener('input',function(){LAST=LAST||{};LAST.bidPrice=num('bidPrice');s3live();updateLive();saveState();});
     document.querySelectorAll('.quickbtns button').forEach(function(b){
       b.addEventListener('click',function(){
         var v=num('bidPrice')+parseInt(this.getAttribute('data-add'));
-        $('bidPrice').value=v;LAST=LAST||{};LAST.bidPrice=v;s3live();updateLive();
+        $('bidPrice').value=v;LAST=LAST||{};LAST.bidPrice=v;s3live();updateLive();saveState();
       });
     });
     if(LAST&&LAST.bidPrice)$('bidPrice').value=LAST.bidPrice;
-    if(FLOW==='quick'&&S.minp>0&&!$('bidPrice').value){$('bidPrice').value=S.minp;LAST=LAST||{};LAST.bidPrice=S.minp;}else if(S.minp>0&&!$('bidPrice').value)$('bidPrice').placeholder='최저가 '+S.minp+' 이상';
+    if(S.minp>0&&!$('bidPrice').value)$('bidPrice').placeholder='최저가 '+S.minp+' 이상';
     s3live();
   }
   if(n===4){
@@ -644,44 +637,35 @@ function bindStep(n){
 }
 function renderS2(failed){
   var box=$('dealCards');
-  if(FLOW==='quick'&&CAND.length){$('mTitle').textContent='비슷한 실거래를 자동으로 골랐습니다';$('mNext').textContent='자동 선택 거래로 계속하기';}
+  if($('targetSummary'))$('targetSummary').innerHTML='<div class="target-box"><div class="tb-cap">기준 경매물건</div><div class="tb-addr">'+esc(S.address||S.region)+'</div><div class="tb-sub">전용 '+S.area+'㎡ · 최저가 '+fmtW(S.minp)+(S.year?' · '+S.year+'년 준공':'')+(S.floor?' · '+S.floor+'층':'')+'</div></div>';
   if(S.region==='etc'||!CAND.length){
-    box.innerHTML='';
-    $('etcBox').style.display='block';
-    $('pickFixed').style.display='none';
-    $('pickWarn').innerHTML=(S.region==='etc')
-      ?'<div class="warn-card warn-yellow">기타 지역은 자동 조회를 지원하지 않습니다. 내가 확인한 실거래와 입찰가를 넣어 총투입금·안전마진을 검산합니다.</div>'
-      :(failed?'<div class="warn-card warn-yellow">실거래 데이터를 불러오지 못했습니다. 직접 입력으로 진행해주세요.</div>'
-        :'<div class="warn-card warn-yellow">조건에 맞는 실거래가 없습니다. 면적을 조정해 다시 찾거나 직접 입력해주세요.</div>');
+    box.innerHTML='';$('etcBox').style.display='block';$('pickFixed').style.display='none';
+    $('pickWarn').innerHTML=(S.region==='etc')?'<div class="warn-card warn-yellow">기타 지역은 자동 조회를 지원하지 않습니다. 내가 확인한 실거래를 직접 입력해주세요.</div>'
+      :(failed?'<div class="warn-card warn-yellow">실거래 데이터를 불러오지 못했습니다. 직접 입력으로 진행해주세요.</div>':'<div class="warn-card warn-yellow">주소·면적 조건에 맞는 거래가 없습니다. 아래에서 실거래를 직접 입력해주세요.</div>');
     return;
   }
-  $('etcBox').style.display='none';
-  $('pickFixed').style.display='flex';
-  box.innerHTML=CAND.map(function(x,i){
-    var diff=(x.a-S.area);
-    var dtxt=Math.abs(diff)<0.05?'내 물건과 같은 면적':('내 물건보다 '+Math.abs(diff).toFixed(1)+'㎡ '+(diff>0?'큼':'작음'));
-    var mtxt='';
-    if(S.minp>0){
-      var gap=x.p-S.minp, gp=gap/S.minp*100;
-      mtxt='<div class="d-min '+(gap>=0?'up':'dn')+'">최저가보다 '+fmt(Math.abs(gap))+'만원 '+(gap>=0?'높음':'낮음')+' ('+(gap>=0?'+':'−')+Math.abs(gp).toFixed(1)+'%)</div>';
-    }
-    return '<div class="dcard'+(x._on?' sel':'')+'" data-i="'+i+'">'
-      +'<div class="chk">✓</div>'
-      +'<div class="d-date">'+fd(x.ym,x.d)+' 거래</div>'
+  $('etcBox').style.display='none';$('pickFixed').style.display='flex';
+  var recommended=CAND.filter(function(x){return x._meta&&x._meta.recommended;});
+  var refs=CAND.filter(function(x){return !(x._meta&&x._meta.recommended);});
+  function card(x,i,isRef){
+    var diff=x.a-S.area,dtxt=Math.abs(diff)<0.05?'내 물건과 같은 면적':'면적 '+Math.abs(diff).toFixed(1)+'㎡ '+(diff>0?'큼':'작음');
+    var gap=x.p-S.minp,gp=S.minp?gap/S.minp*100:0;
+    var mtxt=S.minp?'<div class="d-min '+(gap>=0?'up':'dn')+'">최저가보다 '+fmt(Math.abs(gap))+'만원 '+(gap>=0?'높음':'낮음')+' ('+(gap>=0?'+':'−')+Math.abs(gp).toFixed(1)+'%)</div>':'';
+    var meta=x._meta||compareMeta(x),addr=meta.address||S.region+' (상세주소 없음)';
+    var tags=(meta.tags||[]).map(function(t,k){return '<span class="d-tag '+(k<2&&!isRef?'good':'')+'">'+esc(t)+'</span>';}).join('');
+    return '<div class="dcard'+(x._on?' sel':'')+(isRef?' ref':'')+'" data-i="'+i+'"><div class="chk">✓</div><div class="d-date">'+fd(x.ym,x.d)+' 거래</div>'
       +'<div class="d-main"><span class="d-area">전용 '+x.a+'㎡</span><span class="d-price">'+fmtW(x.p)+'</span></div>'
-      +'<div class="d-sub">'+(x.b||'단지명 없음')+' · '+S.region+' · '+({villa:'다세대·연립',apt:'아파트',op:'오피스텔',shop:'근린상가',etcType:'기타'}[S.type]||'기타')+' · '+(x.f?x.f+'층':'층 미상')+(x.y?' · '+x.y+'년 준공':'')+'</div>'
-      +mtxt
-      +'<div class="d-diff">'+(x._why||dtxt)+'</div></div>';
-  }).join('');
-  Array.prototype.forEach.call(box.querySelectorAll('.dcard'),function(el){
-    el.addEventListener('click',function(){
-      var i=+this.getAttribute('data-i');
-      CAND[i]._on=!CAND[i]._on;
-      this.classList.toggle('sel',CAND[i]._on);
-      pickSum();
-      try{gtag('event','auction_pick',{on:CAND[i]._on?1:0,left:pool().length});}catch(e){}
-    });
-  });
+      +'<div class="d-addr">'+esc(addr)+'</div><div class="d-sub">'+esc(x.b||'건물명 없음')+' · '+({villa:'다세대·연립',apt:'아파트',op:'오피스텔'}[S.type])+' · '+(x.f?x.f+'층':'층 미상')+(x.y?' · '+x.y+'년 준공':'')+'</div>'
+      +mtxt+'<div class="d-diff">'+dtxt+'</div><div class="d-tags">'+tags+'</div></div>';
+  }
+  var html='';
+  html+='<div class="deal-section"><div class="ds-title">추천 비교거래 <span>'+recommended.length+'건</span></div><div class="ds-desc">주소·면적·준공연도 조건이 비교적 가까운 거래입니다. 추천 거래만 기본 계산에 포함됩니다.</div></div>';
+  if(recommended.length){recommended.forEach(function(x){html+=card(x,CAND.indexOf(x),false);});}
+  else html+='<div class="warn-card warn-yellow">추천할 만한 거래가 없습니다. 아래 참고거래를 직접 확인해주세요.</div>';
+  html+='<div class="deal-section"><div class="ds-title">참고거래 <span>'+refs.length+'건</span></div><div class="ds-desc">위치는 가깝지만 면적·준공연도·층·거래시점 차이가 있는 후보입니다. 누르면 비교에 포함할 수 있습니다.</div></div>';
+  refs.forEach(function(x){html+=card(x,CAND.indexOf(x),true);});
+  box.innerHTML=html;
+  Array.prototype.forEach.call(box.querySelectorAll('.dcard'),function(el){el.addEventListener('click',function(){var i=+this.getAttribute('data-i');CAND[i]._on=!CAND[i]._on;this.classList.toggle('sel',CAND[i]._on);pickSum();saveState();});});
   pickSum();
 }
 function pool(){return CAND.filter(function(x){return x._on;}).map(function(x){return x.p;});}
@@ -793,8 +777,7 @@ $('mNext').addEventListener('click',function(){
   if(STEP===3){
     var bid=num('bidPrice');
     if(bid<=0){alert('예상 입찰가를 입력해주세요.');return;}
-    if(S.minp>0&&bid<S.minp){alert('예상 입찰가는 최저가보다 낮을 수 없습니다.');return;}
-    LAST.bidPrice=bid;
+    LAST.bidPrice=bid;saveState();
     openStep(4);return;
   }
   if(STEP===4){
@@ -802,7 +785,7 @@ $('mNext').addEventListener('click',function(){
     LAST._costs={};
     ['taxCost','reserveCost','loanAmt','loanInt','taxCostD','repairCost','evictCost','mgmtCost','etcCost','loanAmtD','loanIntD','assumeDep'].forEach(function(k){if($(k))LAST._costs[k]=$(k).value;});
     var c=calcCosts();
-    LAST.c=c;
+    LAST.c=c;saveState();
     showResult();
   }
 });
@@ -812,7 +795,7 @@ $('mBack').addEventListener('click',function(){
 });
 
 /* ══ 결과 ══ */
-function showResult(restoring){
+function showResult(){
   var v=LAST,c=v.c;
   var total=v.bidPrice+c.tax+c.extra+c.loanI+c.assume;
   var marginW=S.sale-total;
@@ -824,7 +807,7 @@ function showResult(restoring){
   if(marginP<3||total>=S.sale)level='neg';
   else if(marginP<10)level='mid';
   else level='pos';
-  if((hard||S.riskOpen)&&level==='pos')level='mid';
+  if(hard&&level==='pos')level='mid';
   if(((picks.daehang&&c.assume>0)||(picks.trust&&picks.daehang))&&level!=='neg')level='neg';
 
   closeOvl();
@@ -832,7 +815,6 @@ function showResult(restoring){
   $('resultView').style.display='block';
   window.scrollTo({top:0});
 
-  $('rvLabel').textContent=S.riskOpen?'권리비용 제외 가격상 여유':'예상 안전마진';
   var mEl=$('rvMargin');
   mEl.textContent=(marginW>=0?'+':'−')+fmt(Math.abs(marginW))+'만원';
   mEl.className='rh-num '+level;
@@ -844,7 +826,7 @@ function showResult(restoring){
     mid:{cls:'v-mid',t:'재검토',d:'예상 비용이 조금만 늘어도 마진이 줄어듭니다.<br>수리·명도·인수비용을 다시 넣어보세요.'},
     neg:{cls:'v-neg',t:'주의',d:'총투입금이 비교 실거래에 가깝거나 더 높습니다.<br>입찰가를 낮추거나 비교 거래를 다시 선택하세요.'}
   }[level];
-  $('rvVerdict').innerHTML='<div class="verdict-card '+VD.cls+'"><b>'+VD.t+'</b>'+VD.d+(S.riskOpen?'<br><strong>현재 결과는 권리비용을 제외한 가격 비교입니다.</strong>':'')+'</div>';
+  $('rvVerdict').innerHTML='<div class="verdict-card '+VD.cls+'"><b>'+VD.t+'</b>'+VD.d+'</div>';
 
   // 경고 카드들
   var wh='';
@@ -896,18 +878,17 @@ function showResult(restoring){
   var bl='';
   var BLOG='https://blog.naver.com/spitoon61';
   if(level!=='pos'){
-    bl+='<a class="blog-link" href="'+BLOG+'" target="_blank" rel="noopener" data-preserve="1"><div class="bl-cap">안전마진이 작게 나왔다면</div><div class="bl-t">입찰 전에 빠뜨리기 쉬운 비용 확인하기 →</div></a>';
+    bl+='<a class="blog-link" href="'+BLOG+'" target="_blank" rel="noopener" onclick="window.saveAuctionState&&window.saveAuctionState()"><div class="bl-cap">안전마진이 작게 나왔다면</div><div class="bl-t">입찰 전에 빠뜨리기 쉬운 비용 확인하기 →</div></a>';
   }
   if(jRate!==null){
-    bl+='<a class="blog-link" href="'+BLOG+'" target="_blank" rel="noopener" data-preserve="1"><div class="bl-cap">전세를 놓을 계획이라면</div><div class="bl-t">'+S.region+' 실제 전세 거래 확인하기 →</div></a>';
+    bl+='<a class="blog-link" href="'+BLOG+'" target="_blank" rel="noopener" onclick="window.saveAuctionState&&window.saveAuctionState()"><div class="bl-cap">전세를 놓을 계획이라면</div><div class="bl-t">'+S.region+' 실제 전세 거래 확인하기 →</div></a>';
   }
   if(yld!==null){
-    bl+='<a class="blog-link" href="https://arttoy61-png.github.io/rent-check/" target="_blank" rel="noopener" data-preserve="1"><div class="bl-cap">월세 운영을 생각한다면</div><div class="bl-t">최근 '+S.region+' 월세 실거래 확인하기 →</div></a>';
+    bl+='<a class="blog-link" href="https://arttoy61-png.github.io/rent-check/" target="_blank" rel="noopener" onclick="window.saveAuctionState&&window.saveAuctionState()"><div class="bl-cap">월세 운영을 생각한다면</div><div class="bl-t">최근 '+S.region+' 월세 실거래 확인하기 →</div></a>';
   }
   $('blogLinks').innerHTML=bl;
 
-  LAST.result={level:level,total:total,marginW:marginW,marginP:marginP,jRate:jRate,yld:yld};
-  saveState();
+  LAST.result={level:level,total:total,marginW:marginW,marginP:marginP,jRate:jRate,yld:yld};saveState();
   try{gtag('event','auction_calc',{level:level,margin:Math.round(marginP)});}catch(e){}
 }
 function currentRights(){
@@ -925,20 +906,15 @@ $('editCostBtn').addEventListener('click',function(){
   openStep(4);
 });
 
-window.addEventListener('popstate',function(){
-  if($('resultView').style.display==='block'){ $('resultView').style.display='none';$('landing').style.display='block';window.scrollTo(0,0);return;}
-  if($('ovl').classList.contains('on')){ if(STEP===4)openStep(3); else if(STEP===3){openStep(2);renderS2();} else closeOvl(); }
-});
-
 /* ══ 요약 복사 ══ */
 $('copyBtn').addEventListener('click',function(){
   if(!LAST||!LAST.result)return;
   var v=LAST,r=v.result;
-  var tname={villa:'다세대·연립',apt:'아파트',op:'오피스텔',shop:'근린상가',etcType:'기타'}[S.type]||'기타';
+  var tname={villa:'빌라·다세대',apt:'아파트',op:'오피스텔'}[S.type];
   var LV={pos:'여유 있음',mid:'재검토',neg:'주의'}[r.level];
   var lines=[
     '[경매 실거래 체크 — 렌트체크강서]',
-    '물건: '+S.address+' · '+tname+' 전용 '+S.area+'㎡',
+    '물건: '+(S.address||S.region)+' '+tname+' 전용 '+S.area+'㎡',
     '감정가 '+fmt(v.apprPrice)+' / 최저가 '+fmt(v.minPrice)+' / 예상 입찰가 '+fmt(v.bidPrice)+' (만원)',
     '비교 실거래: '+(S.poolN?S.poolN+'건 선택 · 중위 '+fmt(S.sale):'직접입력 '+fmt(S.sale))+'만원',
     '총투입금: 약 '+fmt(r.total)+'만원',
@@ -946,7 +922,7 @@ $('copyBtn').addEventListener('click',function(){
     (LAST.result.jRate!=null?'전세 회수율: '+LAST.result.jRate.toFixed(0)+'% (자동조회 중위 기준)':null),
     '안내: '+LV,
     '※ 단순 계산 참고용 · 권리분석·현장확인 별도 필요',
-    'https://arttoy61-png.github.io/rent-check/auction_check_easy.html'
+    'https://arttoy61-png.github.io/rent-check/auction_check.html'
   ];
   var txt=lines.filter(Boolean).join('\n');
   var done=function(){
@@ -960,23 +936,21 @@ $('copyBtn').addEventListener('click',function(){
 });
 function fb(t){var ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);}
 
-/* ══ 다시 입력 (2단계 클릭) ══ */
-document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[data-preserve]');if(a)saveState();});
-
+/* ══ 결과 내비게이션·저장 복원 ══ */
+$('resultBackBtn').addEventListener('click',function(){$('resultView').style.display='none';openStep(4);});
+$('repickBtn').addEventListener('click',function(){$('resultView').style.display='none';openStep(2);renderS2();});
+$('newCalcBtn').addEventListener('click',function(){if(confirm('저장된 결과를 지우고 새 물건을 계산할까요?'))resetAll();});
 var armed=null;
-$('restartBtn').addEventListener('click',function(){
-  var b=this;
-  if(!armed){
-    b.textContent='한 번 더 누르면 모든 입력이 지워집니다';
-    armed=setTimeout(function(){b.textContent='입력값 처음부터 다시 입력';armed=null;},3000);
-    return;
-  }
-  clearTimeout(armed);armed=null;
-  clearSaved();location.reload();
-});
+$('restartBtn').addEventListener('click',function(){var b=this;if(!armed){b.textContent='한 번 더 누르면 모든 입력이 지워집니다';armed=setTimeout(function(){b.textContent='입력값 처음부터 다시 입력';armed=null;},3000);return;}clearTimeout(armed);armed=null;resetAll();});
+$('resumeBtn').addEventListener('click',function(){var st=readSaved();if(st&&applySaved(st)&&LAST&&LAST.result&&LAST.c){showResult();}});
+$('discardBtn').addEventListener('click',resetAll);
 
-// 블로그를 보고 돌아오거나 페이지가 새로 열려도 마지막 결과를 복원합니다.
-setTimeout(function(){restoreSaved();},0);
+(function initRestore(){
+  var st=readSaved();if(!st)return;
+  var addr=(st.S&&st.S.address)||((st.S&&st.S.region)||'이전 물건');
+  $('resumeSummary').textContent=addr+(st.S&&st.S.area?' · 전용 '+st.S.area+'㎡':'');$('resumeCard').classList.add('on');
+  if(st.LAST&&st.LAST.result&&st.LAST.c){applySaved(st);showResult();}
+})();
 })();
 </script>
 </body>
