@@ -165,7 +165,7 @@ details .inner{padding:0 12px 14px;}
     <label>예상 입찰가 (만원)</label>
     <input type="number" id="bidPrice" inputmode="numeric" placeholder="최저가 이상으로 입력">
     <div id="taxAuto">취득세 자동계산: 입찰가를 입력하면 여기 표시됩니다</div>
-    <label>취득세 등 (만원) <small>— 자동값 수정 가능 · 1주택 기준</small></label>
+    <label>취득세 등 (만원) <small>— 자동값 수정 가능</small></label>
     <input type="number" id="taxCost" inputmode="numeric" placeholder="자동 계산됨">
     <label>예비비 (만원) <small>— 수리·명도·미납관리비 통합 예비</small></label>
     <input type="number" id="reserveCost" inputmode="numeric" placeholder="자동 계산됨">
@@ -229,7 +229,8 @@ details .inner{padding:0 12px 14px;}
       <div id="riskArea"></div>
       <div id="rComment"></div>
 
-      <button class="copybtn" id="copyBtn">📋 블로그용 요약 복사</button>
+      <button class="ghostbtn" id="backBtn" style="margin-top:14px;">← 입력값 수정하기 (입력 유지됨)</button>
+      <button class="copybtn" id="copyBtn" style="margin-top:8px;">📋 블로그용 요약 복사</button>
       <a class="cta blog" href="https://blog.naver.com/spitoon61" target="_blank">화곡·강서 실거래로 검산한 경매 글 보기</a>
       <a class="cta rc" href="https://arttoy61-png.github.io/rent-check/" target="_blank">전세·월세 실거래 시세 확인하기</a>
       <div class="disclaim">본 도구는 입력값 기준 단순 계산이며 투자 권유가 아닙니다.<br>실제 입찰 전에는 권리분석·현장확인·전문가 검토가 반드시 필요합니다.</div>
@@ -377,7 +378,7 @@ function calcTax(){
     label='주택 '+base.toFixed(2)+'% + 교육세 '+edu.toFixed(2)+'%'+(nong?' + 농특세 0.2%':' (85㎡이하 농특세 면제)');
   }
   var tax=Math.round(bid*rate/100);
-  $('taxAuto').innerHTML='취득세 자동계산: <b>약 '+fmt(tax)+'만원</b> ('+label+', 1주택 기준) — 아래 칸에서 수정 가능';
+  $('taxAuto').innerHTML='취득세 자동계산: <b>약 '+fmt(tax)+'만원</b> ('+label+', 무주택·1주택 기준)<br><span style="color:#c4661f;">다주택자는 중과(최대 12%)로 크게 달라집니다 — 본인 세율로 직접 수정하세요</span>';
   if(!$('taxCost').dataset.touched)$('taxCost').value=tax;
 }
 /* ── 예비비 자동 = 입찰가 3% (최소 300) ── */
@@ -557,6 +558,7 @@ function fallbackCopy(txt){
 /* ── 모달 닫기·리셋 ── */
 function closeModal(){$('modalBg').style.display='none';document.body.style.overflow='';}
 $('mClose').addEventListener('click',closeModal);
+$('backBtn').addEventListener('click',closeModal);
 $('modalBg').addEventListener('click',function(e){if(e.target===this)closeModal();});
 $('resetBtn').addEventListener('click',function(){
   if(!confirm('입력한 내용을 모두 지울까요?'))return;
