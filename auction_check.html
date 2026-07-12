@@ -21,7 +21,7 @@ gtag('config','G-MPRR3J99YQ');
 <style>
 :root{
   --navy:#0d1f3c; --blue:#1565c0; --gold:#d4a73a; --orange:#c4661f;
-  --ink:#1c2733; --sub:#6b7684; --line:#dde3ec; --bg:#f4f6fa;
+  --ink:#1c2733; --sub:#6b7684; --line:#c3cddc; --bg:#f4f6fa;
 }
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:'Malgun Gothic','Apple SD Gothic Neo',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;}
@@ -54,7 +54,7 @@ input:focus,select:focus{outline:none;border-color:var(--blue);}
 /* STEP2 비교군 */
 #pickSummary{border:1.5px solid var(--blue);border-radius:10px;padding:11px 12px;font-size:13.5px;color:var(--navy);margin:10px 0;background:#eef4fc;}
 #pickSummary b{color:var(--blue);}
-.deal-list{max-height:330px;overflow-y:auto;border:1px solid var(--line);border-radius:10px;}
+.deal-list{max-height:330px;overflow-y:auto;border:1.5px solid #9aa7bd;border-radius:10px;}
 .deal{display:flex;align-items:center;gap:10px;padding:11px 12px;border-bottom:1px solid var(--line);cursor:pointer;}
 .deal:last-child{border-bottom:none;}
 .deal.off{opacity:.38;}
@@ -71,7 +71,7 @@ input:focus,select:focus{outline:none;border-color:var(--blue);}
 /* STEP3 */
 #taxAuto{font-size:12.5px;color:var(--blue);border:1px dashed var(--blue);border-radius:8px;padding:9px 10px;margin-top:8px;}
 #reserveAuto{font-size:12.5px;color:var(--blue);margin-top:6px;}
-details{margin-top:14px;border:1px solid var(--line);border-radius:10px;padding:0;}
+details{margin-top:14px;border:1.5px solid #9aa7bd;border-radius:10px;padding:0;}
 details summary{padding:12px;font-size:13.5px;font-weight:700;color:var(--blue);cursor:pointer;list-style:none;}
 details summary::before{content:'＋ ';}
 details[open] summary::before{content:'－ ';}
@@ -94,11 +94,11 @@ details .inner{padding:0 12px 14px;}
 .rrow .v.warn{color:var(--orange);}
 .riskbox{border:1.5px solid var(--orange);border-radius:10px;padding:11px 12px;font-size:12.5px;color:var(--ink);margin-top:12px;line-height:1.6;}
 .riskbox b{color:var(--orange);}
-.notebox{border:1px solid var(--line);border-radius:10px;padding:11px 12px;font-size:12.5px;color:var(--ink);margin-top:8px;line-height:1.6;}
+.notebox{border:1.5px solid #9aa7bd;border-radius:10px;padding:11px 12px;font-size:12.5px;color:var(--ink);margin-top:8px;line-height:1.6;}
 .notebox b{color:var(--navy);}
 #rComment{font-size:13px;color:var(--ink);line-height:1.7;margin-top:12px;border-top:2px solid var(--navy);padding-top:12px;}
 /* 모달 안 리스크 체크 */
-.chk-modal{margin-top:14px;border:1.5px solid var(--line);border-radius:10px;padding:12px;}
+.chk-modal{margin-top:14px;border:1.5px solid #9aa7bd;border-radius:10px;padding:12px;}
 .chk-modal .ct{font-size:13px;font-weight:700;color:var(--navy);margin-bottom:8px;}
 .chkline{display:flex;align-items:flex-start;gap:9px;padding:7px 2px;cursor:pointer;}
 .chkline input{width:18px;height:18px;flex:none;margin-top:2px;accent-color:var(--orange);}
@@ -169,7 +169,7 @@ details .inner{padding:0 12px 14px;}
     <input type="number" id="taxCost" inputmode="numeric" placeholder="자동 계산됨">
     <label>예비비 (만원) <small>— 수리·명도·미납관리비 통합 예비</small></label>
     <input type="number" id="reserveCost" inputmode="numeric" placeholder="자동 계산됨">
-    <div id="reserveAuto">입찰가의 3%를 기본 예비비로 잡습니다 — 물건 상태에 따라 직접 조정하세요</div>
+    <div id="reserveAuto">자동 입력값은 기본값일 뿐입니다 — 수리·명도 비용은 물건 상태에 따라 크게 달라지니 직접 조정을 권장합니다</div>
 
     <details id="detailBox">
       <summary>세부 조정 (수리·명도·인수보증금·전월세)</summary>
@@ -560,8 +560,19 @@ function closeModal(){$('modalBg').style.display='none';document.body.style.over
 $('mClose').addEventListener('click',closeModal);
 $('backBtn').addEventListener('click',closeModal);
 $('modalBg').addEventListener('click',function(e){if(e.target===this)closeModal();});
+var resetArmed=null;
 $('resetBtn').addEventListener('click',function(){
-  if(!confirm('입력한 내용을 모두 지울까요?'))return;
+  var btn=this;
+  if(!resetArmed){
+    btn.textContent='정말 지울까요? 한 번 더 누르면 초기화됩니다';
+    btn.style.color='#c4661f';btn.style.borderColor='#c4661f';
+    resetArmed=setTimeout(function(){
+      btn.textContent='처음부터 다시 입력';btn.style.color='';btn.style.borderColor='';resetArmed=null;
+    },3000);
+    return;
+  }
+  clearTimeout(resetArmed);resetArmed=null;
+  var b=$('resetBtn');b.textContent='처음부터 다시 입력';b.style.color='';b.style.borderColor='';
   document.querySelectorAll('input[type=number]').forEach(function(i){i.value='';delete i.dataset.touched;});
   document.querySelectorAll('.chk-modal input').forEach(function(i){i.checked=false;});
   CAND=[];LAST=null;
