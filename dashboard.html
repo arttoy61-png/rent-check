@@ -541,7 +541,7 @@ footer a{
 
 <div class="card">
 <h2>📊 이번 달 강서구 거래</h2>
-<div class="desc">계약일 기준 · 신고 지연으로 최근 거래는 계속 추가됩니다</div>
+<div class="desc">계약일 기준 · 신고 지연으로 최근 거래는 계속 추가됩니다 · 아파트와 빌라는 가격대가 달라 나눠서 표시합니다</div>
 <div class="kpi" id="kpi"><div><div class="n">…</div><div class="l">불러오는 중</div></div></div>
 </div>
 
@@ -628,13 +628,13 @@ async function load(){
   const ym=au.updated;
   const yl=ym.slice(0,4), ml=parseInt(ym.slice(4,6));
   const s=au.sale.filter(d=>d.ym===ym), j=au.jeonse.filter(d=>d.ym===ym), w=au.wolse.filter(d=>d.ym===ym);
-  const sp=s.map(d=>d.p), jp=j.map(d=>d.p);
+  const sa=s.filter(d=>d.t==='a').map(d=>d.p), sv=s.filter(d=>d.t==='v').map(d=>d.p);
   document.getElementById('kpi').innerHTML=
    `<div><div class="n">${(s.length+j.length+w.length).toLocaleString()}<span class="u">건</span></div><div class="l">${ml}월 전체 거래</div></div>
     <div><div class="n">${s.length.toLocaleString()}<span class="u">건</span></div><div class="l">매매</div></div>
     <div><div class="n">${(j.length+w.length).toLocaleString()}<span class="u">건</span></div><div class="l">전월세</div></div>
-    <div><div class="n">${sp.length?won(med(sp)):'-'}</div><div class="l">매매 중위가</div></div>
-    <div><div class="n">${jp.length?won(med(jp)):'-'}</div><div class="l">전세 중위가</div></div>`;
+    <div><div class="n">${sa.length>=3?won(med(sa)):'-'}</div><div class="l">아파트 매매 중위</div></div>
+    <div><div class="n">${sv.length>=3?won(med(sv)):'-'}</div><div class="l">빌라 매매 중위</div></div>`;
 
   // 아파트 12단지 — 대표 면적 기준, 전용 평당가 순
   const rows=[];
