@@ -20,13 +20,11 @@ jobs:
       - name: Install deps
         run: pip install -r requirements.txt
 
-      # ══════ 강서 수집 + 위젯 3종 ══════
       - name: Collect MOLIT data (강서)
         working-directory: automation
         env:
           MOLIT_API_KEY: ${{ secrets.MOLIT_API_KEY }}
         run: python collect_kangseo.py
-
       - name: Build widget_data.json
         working-directory: automation
         run: |
@@ -42,38 +40,14 @@ jobs:
         run: |
           python auction_data.py data/molit_kangseo.csv
           cp auction_data.json ../auction_data.json
-      - name: Publish CSV (Claude 직접 접근용)
+      - name: Publish CSV
         run: cp automation/data/molit_kangseo.csv molit_kangseo.csv
 
-      # ══════ 여기서 1차 커밋 — 뒷 단계가 실패해도 데이터는 보존 ══════
-      - name: Commit data
+      - name: Commit
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add widget_data.json hwagok_apt_data.json auction_data.json molit_kangseo.csv automation/cache 2>/dev/null || true
           git commit -m "auto: data ($(date -u +%F))" || echo "변경 없음"
-          git pull --rebase --autostash || true
-          git push || echo "푸시 생략"
-
-      # ══════ 요일글 + 공고감지 (실패해도 무시) ══════
-      - name: 요일글 생성
-        working-directory: automation
-        run: |
-          cp data/molit_kangseo.csv data/molit_trade_live.csv
-          python blog/daily_content.py today
-      - name: 공고 감지
-        working-directory: automation
-        env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python blog/notice_check.py
-
-      - name: Commit outputs
-        if: always()
-        run: |
-          git config user.name  "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add automation/outputs/blog automation/outputs/notice_alarm automation/data/notice_seen.json 2>/dev/null || true
-          git commit -m "auto: outputs ($(date -u +%F))" || echo "변경 없음"
           git pull --rebase --autostash || true
           git push || echo "푸시 생략"
