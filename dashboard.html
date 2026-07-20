@@ -1195,6 +1195,140 @@ td b{color:var(--navy)}
   }
 }
 
+
+/* =========================================================
+   RENT CHECK FINAL UX PATCH
+   데이터는 먼저, 장식은 줄이고, 모바일은 짧고 빠르게
+   ========================================================= */
+
+/* 골드는 핵심 포인트에만 사용 */
+.section-head::before{background:#c8d4e1}
+.section-kicker{color:var(--blue)}
+.section-badge{border-color:#d9e5f2;color:var(--blue);background:var(--soft-blue)}
+.kpi>div:nth-child(4)::before,
+.kpi>div:nth-child(5)::before{background:#dce5ef}
+.kpi>div:nth-child(4) .n,
+.kpi>div:nth-child(5) .n{color:var(--navy)}
+.tool::before{color:#fff;border-color:transparent;background:linear-gradient(145deg,#163d6c,#0d1f3c);box-shadow:none}
+.tool{border-left-color:#dce4ec}
+.tool:hover{border-color:#aac9e8;background:var(--soft-blue)}
+.cite .section-head::before{background:#c8d4e1}
+.cite-guide{border-left-color:var(--blue);background:linear-gradient(90deg,#f1f6fc,#fbfdff)}
+
+/* 히어로 단순화: 격자 제거, 숫자까지 더 빨리 도달 */
+.hero{
+  background:
+    radial-gradient(circle at 86% 18%,rgba(212,167,58,.18),transparent 16rem),
+    radial-gradient(circle at 12% 110%,rgba(21,101,192,.24),transparent 22rem),
+    linear-gradient(135deg,#07162c 0%,#0d2849 55%,#0b1d38 100%);
+  background-size:auto;
+}
+.hero::before{display:none}
+.hero-inner{padding-top:18px;padding-bottom:26px}
+.topline{margin-bottom:24px}
+.eyebrow{margin-bottom:9px;color:#d9e5f2;letter-spacing:.3px}
+.eyebrow::before{background:#6fa2d7}
+.hero-copy{margin-top:10px}
+.live-panel::before{background:var(--blue)}
+.live-label{color:#d5e3f2}
+
+/* 목차: 한 줄 스크롤 */
+.page-nav{display:flex;grid-template-columns:none;overflow-x:auto;gap:7px}
+.page-nav a{flex:0 0 auto;min-width:auto}
+.page-nav a.active::before{display:none}
+
+/* 무료 도구: 6개, PC와 모바일 모두 2열 */
+.tools{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.tool{min-height:92px;padding:16px 15px;grid-template-columns:42px minmax(0,1fr) 18px;column-gap:10px;border-left:1px solid var(--line)}
+.tool::before{width:34px;height:34px;border-radius:10px}
+.tool .t{margin-bottom:3px;font-size:15.5px}
+.tool .d{font-size:12.5px;line-height:1.5}
+.tool::after{font-size:24px;color:var(--blue)}
+.tool-status{display:inline-flex;align-items:center;margin-left:5px;padding:3px 6px;border-radius:999px;color:#7c5b0a;background:#fff3cf;font-size:10px;font-weight:900;vertical-align:2px}
+.tool-coming{cursor:default;background:#fafbfd;border-style:dashed}
+.tool-coming::after{content:"…";color:#8a96a3}
+.tool-coming:hover{transform:none;border-color:#dce4ec;background:#fafbfd}
+
+@media(max-width:640px){
+  /* 히어로 약 30% 축소 */
+  .hero-inner{padding-top:14px;padding-bottom:19px}
+  .topline{margin-bottom:15px}
+  .logo-mark{width:29px;height:29px}
+  .eyebrow{display:none}
+  h1{font-size:31px;line-height:1.1}
+  .hero-copy{margin-top:7px;font-size:14.5px;line-height:1.55}
+  .hero-grid{gap:12px}
+  .live-panel{padding:12px 14px 12px 16px;border-radius:13px}
+  .live-label{margin-bottom:4px;font-size:12.5px}
+  .updated{font-size:19px}
+  .live-note{margin-top:4px;font-size:12.5px;line-height:1.5}
+
+  /* 메뉴는 한 줄, 출처는 하단만 유지 */
+  .page-nav-wrap{margin-top:-9px}
+  .page-nav{display:flex;overflow-x:auto;padding:7px;gap:6px;border-radius:13px}
+  .page-nav a{flex:0 0 auto;padding:9px 12px;font-size:12.5px;white-space:nowrap}
+
+  /* 섹션 밀도 조정 */
+  main{padding-top:14px}
+  .section{margin-bottom:13px}
+  .section-head{padding:17px 16px 12px}
+  .section-head::before{top:18px;height:37px;width:3px}
+  .section-kicker{font-size:11.5px}
+  .section h2{font-size:20px}
+  .section-desc{font-size:13.5px;line-height:1.55}
+  .section-body{padding:13px 13px 16px}
+
+  /* 아파트 카드: 핵심 정보 3개만 기본 노출 */
+  #apt tbody{gap:10px}
+  #apt tbody tr{grid-template-columns:repeat(2,minmax(0,1fr));border-radius:14px}
+  #apt td:nth-child(1){grid-column:1/-1;padding:14px 14px 11px;font-size:17px}
+  #apt td:nth-child(2),
+  #apt td:nth-child(6){display:none}
+  #apt td:nth-child(3)::before{content:'대표 면적'}
+  #apt td:nth-child(4)::before{content:'매매 중위'}
+  #apt td:nth-child(5){grid-column:1/-1;background:#f7faff!important;border-top:1px solid #e4ebf3!important}
+  #apt td:nth-child(5)::before{content:'전세 중위';color:var(--blue)}
+  #apt td:nth-child(3),#apt td:nth-child(4){padding-top:11px;padding-bottom:11px}
+  #apt td:nth-child(4){border-right:0!important}
+  #apt td:nth-child(4) b{font-size:18px;color:var(--navy)}
+
+  /* 무료 도구 2열 x 3행 */
+  .tools{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+  .tool{display:block;min-height:128px;padding:13px 12px 12px;border-left:1px solid var(--line);border-radius:14px}
+  .tool::before{margin-bottom:11px;width:33px;height:33px}
+  .tool::after{position:absolute;right:11px;top:13px;font-size:22px}
+  .tool .t{margin-bottom:6px;font-size:15px;line-height:1.35}
+  .tool .d{font-size:12.5px;line-height:1.5}
+  .tool-status{display:block;width:max-content;margin:5px 0 0;padding:3px 7px;font-size:10px}
+
+  /* 아파트는 상위 5개만 먼저, 필요할 때 전체 펼치기 */
+  #apt:not(.show-all) tbody tr:nth-child(n+6){display:none}
+  .apt-more{
+    display:block;
+    width:100%;
+    min-height:46px;
+    margin-top:11px;
+    border:1px solid #cfdbe7;
+    border-radius:11px;
+    color:var(--navy);
+    background:#f5f8fc;
+    font:inherit;
+    font-size:14px;
+    font-weight:850;
+    cursor:pointer;
+  }
+}
+
+.apt-more{display:none}
+@media(max-width:640px){.apt-more:not([hidden]){display:block}}
+
+@media(max-width:370px){
+  .tools{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .tool{min-height:136px;padding-left:10px;padding-right:10px}
+  .tool .t{font-size:14px}
+  .tool .d{font-size:12px}
+}
+
 </style>
 </head>
 <body>
@@ -1227,7 +1361,6 @@ td b{color:var(--navy)}
     <a href="#umd-section">동별 거래</a>
     <a href="#redev-section">정비사업</a>
     <a href="#tools-section">무료 도구</a>
-    <a href="#citation">출처 안내</a>
   </nav>
 </div>
 
@@ -1257,6 +1390,7 @@ td b{color:var(--navy)}
     </div>
     <div class="section-body">
       <div class="table-wrap"><table id="apt"><tbody><tr><td class="ld">불러오는 중…</td></tr></tbody></table></div>
+      <button class="apt-more" id="apt-more" type="button" aria-expanded="false" hidden>12개 단지 모두 보기</button>
       <div class="note"><span class="mobile-note"></span>각 단지에서 거래가 가장 많은 면적을 대표로 표시합니다. 매매·전세는 중위값이며, 소형 면적은 평당가가 높게 보일 수 있습니다.</div>
     </div>
   </section>
@@ -1320,6 +1454,7 @@ td b{color:var(--navy)}
         <a class="tool" href="calc.html"><div class="t">재개발 분담금 계산기</div><div class="d">소유주·매수자 분담금 구조 계산</div></a>
         <a class="tool" href="youth_score.html"><div class="t">청년주택 순위 점수</div><div class="d">내 순위와 가점 직접 확인</div></a>
         <a class="tool" href="moving_date_widget.html"><div class="t">이사 날짜 계산기</div><div class="d">계약 종료일과 이사 일정 정리</div></a>
+        <a class="tool tool-coming" href="#" aria-disabled="true" tabindex="-1" onclick="return false"><div class="t">경매 물건 체크 <span class="tool-status">개발 중</span></div><div class="d">주소·비용·비교 실거래를 한 번에 점검</div></a>
       </div>
     </div>
   </section>
@@ -1410,6 +1545,16 @@ async function load(){
         <td>${r.ppy?(r.ppy*10000).toLocaleString()+'만':'-'}</td></tr>`;
   });
   document.getElementById('apt').innerHTML=h+'</tbody>';
+  const aptMore=document.getElementById('apt-more');
+  if(aptMore){
+    if(rows.length>5){
+      aptMore.hidden=false;
+      aptMore.textContent=rows.length+'개 단지 모두 보기';
+      aptMore.dataset.total=String(rows.length);
+    }else{
+      aptMore.hidden=true;
+    }
+  }
 
   const by={};
   s.forEach(d=>{ by[d.u]=by[d.u]||{apt:[],vil:[],j:0,w:0};
@@ -1489,6 +1634,16 @@ function setupPageNav(){
       },80);
     }
   }
+}
+
+const aptMoreBtn=document.getElementById('apt-more');
+if(aptMoreBtn){
+  aptMoreBtn.addEventListener('click',()=>{
+    const table=document.getElementById('apt');
+    const expanded=table.classList.toggle('show-all');
+    aptMoreBtn.setAttribute('aria-expanded',String(expanded));
+    aptMoreBtn.textContent=expanded?'상위 5개만 보기':(aptMoreBtn.dataset.total||'12')+'개 단지 모두 보기';
+  });
 }
 
 setupPageNav();
