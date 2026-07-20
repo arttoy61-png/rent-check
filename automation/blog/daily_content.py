@@ -3006,8 +3006,13 @@ CATEGORY_FN = {
 
 
 def load_data(json_path: str, csv_path: str):
-    with open(json_path, encoding="utf-8") as f:
-        report = json.load(f)
+    # aggregated_rent.json이 없어도 죽지 않게 (Actions 환경 — CSV만으로 요일글 생성)
+    try:
+        with open(json_path, encoding="utf-8") as f:
+            report = json.load(f)
+    except FileNotFoundError:
+        print(f"  · {json_path} 없음 → 기본 구조로 진행 (CSV 기반 생성)")
+        report = {"region": "화곡동", "matrix": {}, "total_monthly": 0}
     csv_rows = []
     excluded = 0
     with open(csv_path, encoding="utf-8-sig") as f:
