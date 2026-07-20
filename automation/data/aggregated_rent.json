@@ -1,0 +1,1708 @@
+{
+  "region": "화곡동",
+  "period": "2025.12 ~ 2026.05",
+  "months": 6,
+  "total_count": 5911,
+  "matrix": {
+    "10평 이하": {
+      "500": {
+        "count": 280,
+        "avg": 57,
+        "median": 55,
+        "min": 10,
+        "max": 120,
+        "samples": [
+          {
+            "rent": 60,
+            "deposit": 500,
+            "area_m2": 18.9,
+            "name": "삼성다빈치",
+            "deal_ym": "202605",
+            "deal_day": "5"
+          },
+          {
+            "rent": 65,
+            "deposit": 500,
+            "area_m2": 20.94,
+            "name": "(901-5)",
+            "deal_ym": "202605",
+            "deal_day": "5"
+          },
+          {
+            "rent": 59,
+            "deposit": 500,
+            "area_m2": 19.74,
+            "name": "마이홈",
+            "deal_ym": "202605",
+            "deal_day": "4"
+          },
+          {
+            "rent": 50,
+            "deposit": 500,
+            "area_m2": 13.79,
+            "name": "한양아이클래스",
+            "deal_ym": "202605",
+            "deal_day": "2"
+          },
+          {
+            "rent": 37,
+            "deposit": 500,
+            "area_m2": 30.06,
+            "name": "강서오피스텔",
+            "deal_ym": "202604",
+            "deal_day": "14"
+          }
+        ]
+      },
+      "1,000": {
+        "count": 353,
+        "avg": 70,
+        "median": 65,
+        "min": 11,
+        "max": 125,
+        "samples": [
+          {
+            "rent": 68,
+            "deposit": 1000,
+            "area_m2": 15.43,
+            "name": "강서구청 파크뷰 에버",
+            "deal_ym": "202605",
+            "deal_day": "11"
+          },
+          {
+            "rent": 96,
+            "deposit": 1000,
+            "area_m2": 28.45,
+            "name": "화곡투웨니퍼스트",
+            "deal_ym": "202605",
+            "deal_day": "8"
+          },
+          {
+            "rent": 60,
+            "deposit": 1000,
+            "area_m2": 23.37,
+            "name": "베스트빌",
+            "deal_ym": "202605",
+            "deal_day": "7"
+          },
+          {
+            "rent": 62,
+            "deposit": 1000,
+            "area_m2": 22.97,
+            "name": "샬롬하우스",
+            "deal_ym": "202605",
+            "deal_day": "8"
+          },
+          {
+            "rent": 100,
+            "deposit": 1000,
+            "area_m2": 24.45,
+            "name": "화곡투웨니퍼스트",
+            "deal_ym": "202605",
+            "deal_day": "8"
+          }
+        ]
+      },
+      "2,000": {
+        "count": 144,
+        "avg": 71,
+        "median": 70,
+        "min": 13,
+        "max": 135,
+        "samples": [
+          {
+            "rent": 105,
+            "deposit": 2000,
+            "area_m2": 29.98,
+            "name": "강서크라운팰리스",
+            "deal_ym": "202605",
+            "deal_day": "12"
+          },
+          {
+            "rent": 60,
+            "deposit": 2000,
+            "area_m2": 18.21,
+            "name": "글로벌MJ9",
+            "deal_ym": "202605",
+            "deal_day": "5"
+          },
+          {
+            "rent": 66,
+            "deposit": 2000,
+            "area_m2": 29.95,
+            "name": "창대빌라(372-12)",
+            "deal_ym": "202605",
+            "deal_day": "11"
+          },
+          {
+            "rent": 75,
+            "deposit": 2000,
+            "area_m2": 19.9,
+            "name": "에코",
+            "deal_ym": "202605",
+            "deal_day": "12"
+          },
+          {
+            "rent": 70,
+            "deposit": 2000,
+            "area_m2": 30.78,
+            "name": "하나타운",
+            "deal_ym": "202605",
+            "deal_day": "8"
+          }
+        ]
+      },
+      "3,000": {
+        "count": 129,
+        "avg": 69,
+        "median": 75,
+        "min": 11,
+        "max": 110,
+        "samples": [
+          {
+            "rent": 45,
+            "deposit": 3000,
+            "area_m2": 20.6,
+            "name": "(900-30)",
+            "deal_ym": "202605",
+            "deal_day": "9"
+          },
+          {
+            "rent": 90,
+            "deposit": 3000,
+            "area_m2": 29.49,
+            "name": "골든빌",
+            "deal_ym": "202605",
+            "deal_day": "7"
+          },
+          {
+            "rent": 90,
+            "deposit": 3000,
+            "area_m2": 29.27,
+            "name": "대동빌",
+            "deal_ym": "202605",
+            "deal_day": "9"
+          },
+          {
+            "rent": 100,
+            "deposit": 3000,
+            "area_m2": 27.84,
+            "name": "에스엠레버빌(346-7)",
+            "deal_ym": "202605",
+            "deal_day": "1"
+          },
+          {
+            "rent": 60,
+            "deposit": 3000,
+            "area_m2": 32.64,
+            "name": "천우아트빌(397-2)",
+            "deal_ym": "202605",
+            "deal_day": "2"
+          }
+        ]
+      },
+      "5,000": {
+        "count": 193,
+        "avg": 52,
+        "median": 50,
+        "min": 4,
+        "max": 150,
+        "samples": [
+          {
+            "rent": 10,
+            "deposit": 7200,
+            "area_m2": 30.16,
+            "name": "(24-99)",
+            "deal_ym": "202605",
+            "deal_day": "2"
+          },
+          {
+            "rent": 85,
+            "deposit": 4000,
+            "area_m2": 29.64,
+            "name": "시그니쳐-S",
+            "deal_ym": "202605",
+            "deal_day": "1"
+          },
+          {
+            "rent": 50,
+            "deposit": 7000,
+            "area_m2": 28.71,
+            "name": "엘리시아",
+            "deal_ym": "202605",
+            "deal_day": "7"
+          },
+          {
+            "rent": 39,
+            "deposit": 5680,
+            "area_m2": 23.68,
+            "name": "우장산역해링턴타워",
+            "deal_ym": "202605",
+            "deal_day": "4"
+          },
+          {
+            "rent": 40,
+            "deposit": 5680,
+            "area_m2": 23.68,
+            "name": "우장산역해링턴타워",
+            "deal_ym": "202605",
+            "deal_day": "1"
+          }
+        ]
+      },
+      "7,000": {
+        "count": 79,
+        "avg": 22,
+        "median": 20,
+        "min": 2,
+        "max": 80,
+        "samples": [
+          {
+            "rent": 19,
+            "deposit": 8000,
+            "area_m2": 20.16,
+            "name": "금강누리빌(998-10)",
+            "deal_ym": "202605",
+            "deal_day": "12"
+          },
+          {
+            "rent": 45,
+            "deposit": 9500,
+            "area_m2": 25.74,
+            "name": "청담라인씨티",
+            "deal_ym": "202605",
+            "deal_day": "7"
+          },
+          {
+            "rent": 37,
+            "deposit": 9650,
+            "area_m2": 29.68,
+            "name": "청담라인씨티",
+            "deal_ym": "202604",
+            "deal_day": "16"
+          },
+          {
+            "rent": 10,
+            "deposit": 8550,
+            "area_m2": 19.57,
+            "name": "강서 동도센트리움",
+            "deal_ym": "202604",
+            "deal_day": "6"
+          },
+          {
+            "rent": 10,
+            "deposit": 9600,
+            "area_m2": 18.97,
+            "name": "강서 동도센트리움",
+            "deal_ym": "202604",
+            "deal_day": "9"
+          }
+        ]
+      }
+    },
+    "10~15평": {
+      "500": {
+        "count": 38,
+        "avg": 59,
+        "median": 55,
+        "min": 8,
+        "max": 120,
+        "samples": [
+          {
+            "rent": 30,
+            "deposit": 500,
+            "area_m2": 37.0,
+            "name": "(359-71)",
+            "deal_ym": "202605",
+            "deal_day": "1"
+          },
+          {
+            "rent": 55,
+            "deposit": 500,
+            "area_m2": 33.72,
+            "name": "동일빌라",
+            "deal_ym": "202605",
+            "deal_day": "4"
+          },
+          {
+            "rent": 105,
+            "deposit": 500,
+            "area_m2": 49.22,
+            "name": "크라운뷰",
+            "deal_ym": "202604",
+            "deal_day": "24"
+          },
+          {
+            "rent": 60,
+            "deposit": 500,
+            "area_m2": 36.12,
+            "name": "(924-2)",
+            "deal_ym": "202604",
+            "deal_day": "20"
+          },
+          {
+            "rent": 8,
+            "deposit": 500,
+            "area_m2": 48.0,
+            "name": "화성빌라(55-40)",
+            "deal_ym": "202604",
+            "deal_day": "30"
+          }
+        ]
+      },
+      "1,000": {
+        "count": 95,
+        "avg": 71,
+        "median": 70,
+        "min": 40,
+        "max": 180,
+        "samples": [
+          {
+            "rent": 75,
+            "deposit": 1000,
+            "area_m2": 33.28,
+            "name": "(362-109)강성빌라3차",
+            "deal_ym": "202605",
+            "deal_day": "5"
+          },
+          {
+            "rent": 65,
+            "deposit": 1000,
+            "area_m2": 35.05,
+            "name": "(918-15)",
+            "deal_ym": "202604",
+            "deal_day": "22"
+          },
+          {
+            "rent": 74,
+            "deposit": 1000,
+            "area_m2": 41.62,
+            "name": "크라운뷰",
+            "deal_ym": "202604",
+            "deal_day": "24"
+          },
+          {
+            "rent": 85,
+            "deposit": 1000,
+            "area_m2": 40.24,
+            "name": "오피스텔",
+            "deal_ym": "202604",
+            "deal_day": "21"
+          },
+          {
+            "rent": 60,
+            "deposit": 1000,
+            "area_m2": 33.37,
+            "name": "(918-15)",
+            "deal_ym": "202604",
+            "deal_day": "14"
+          }
+        ]
+      },
+      "2,000": {
+        "count": 100,
+        "avg": 83,
+        "median": 75,
+        "min": 15,
+        "max": 164,
+        "samples": [
+          {
+            "rent": 60,
+            "deposit": 2000,
+            "area_m2": 37.71,
+            "name": "대신빌라",
+            "deal_ym": "202605",
+            "deal_day": "2"
+          },
+          {
+            "rent": 150,
+            "deposit": 2000,
+            "area_m2": 42.13,
+            "name": "화곡SJ라벨라",
+            "deal_ym": "202604",
+            "deal_day": "24"
+          },
+          {
+            "rent": 70,
+            "deposit": 2000,
+            "area_m2": 45.5,
+            "name": "강서포스텔",
+            "deal_ym": "202604",
+            "deal_day": "26"
+          },
+          {
+            "rent": 100,
+            "deposit": 2000,
+            "area_m2": 44.16,
+            "name": "대성케이제이",
+            "deal_ym": "202604",
+            "deal_day": "4"
+          },
+          {
+            "rent": 35,
+            "deposit": 2000,
+            "area_m2": 33.72,
+            "name": "귀뚜라미홈시스텔",
+            "deal_ym": "202604",
+            "deal_day": "2"
+          }
+        ]
+      },
+      "3,000": {
+        "count": 96,
+        "avg": 91,
+        "median": 90,
+        "min": 15,
+        "max": 165,
+        "samples": [
+          {
+            "rent": 95,
+            "deposit": 3000,
+            "area_m2": 36.68,
+            "name": "우공아파트",
+            "deal_ym": "202605",
+            "deal_day": "1"
+          },
+          {
+            "rent": 60,
+            "deposit": 3000,
+            "area_m2": 43.23,
+            "name": "동도하이츠빌라다동",
+            "deal_ym": "202605",
+            "deal_day": "6"
+          },
+          {
+            "rent": 55,
+            "deposit": 3000,
+            "area_m2": 35.51,
+            "name": "강서오피스텔",
+            "deal_ym": "202604",
+            "deal_day": "13"
+          },
+          {
+            "rent": 90,
+            "deposit": 3000,
+            "area_m2": 40.19,
+            "name": "골든리치빌(850-16)",
+            "deal_ym": "202604",
+            "deal_day": "27"
+          },
+          {
+            "rent": 90,
+            "deposit": 3000,
+            "area_m2": 38.92,
+            "name": "오케이파크빌(932-8)",
+            "deal_ym": "202604",
+            "deal_day": "22"
+          }
+        ]
+      },
+      "5,000": {
+        "count": 69,
+        "avg": 69,
+        "median": 65,
+        "min": 1,
+        "max": 150,
+        "samples": [
+          {
+            "rent": 38,
+            "deposit": 4900,
+            "area_m2": 39.73,
+            "name": "예송에버빌",
+            "deal_ym": "202605",
+            "deal_day": "1"
+          },
+          {
+            "rent": 130,
+            "deposit": 5000,
+            "area_m2": 39.55,
+            "name": "강서크라운팰리스",
+            "deal_ym": "202604",
+            "deal_day": "2"
+          },
+          {
+            "rent": 105,
+            "deposit": 5000,
+            "area_m2": 37.21,
+            "name": "주연하우스",
+            "deal_ym": "202604",
+            "deal_day": "4"
+          },
+          {
+            "rent": 65,
+            "deposit": 5500,
+            "area_m2": 33.64,
+            "name": "102-119",
+            "deal_ym": "202604",
+            "deal_day": "30"
+          },
+          {
+            "rent": 70,
+            "deposit": 5000,
+            "area_m2": 47.36,
+            "name": "수정맨션5차",
+            "deal_ym": "202604",
+            "deal_day": "15"
+          }
+        ]
+      },
+      "7,000": {
+        "count": 42,
+        "avg": 44,
+        "median": 57,
+        "min": 10,
+        "max": 82,
+        "samples": [
+          {
+            "rent": 71,
+            "deposit": 9800,
+            "area_m2": 43.04,
+            "name": "우장산역해링턴타워",
+            "deal_ym": "202605",
+            "deal_day": "8"
+          },
+          {
+            "rent": 15,
+            "deposit": 9500,
+            "area_m2": 36.64,
+            "name": "까치타운가동",
+            "deal_ym": "202604",
+            "deal_day": "29"
+          },
+          {
+            "rent": 24,
+            "deposit": 8500,
+            "area_m2": 36.9,
+            "name": "성지빌라(29-91)",
+            "deal_ym": "202604",
+            "deal_day": "21"
+          },
+          {
+            "rent": 10,
+            "deposit": 9500,
+            "area_m2": 36.84,
+            "name": "화승빌라",
+            "deal_ym": "202604",
+            "deal_day": "10"
+          },
+          {
+            "rent": 69,
+            "deposit": 9977,
+            "area_m2": 43.04,
+            "name": "우장산역해링턴타워",
+            "deal_ym": "202604",
+            "deal_day": "28"
+          }
+        ]
+      }
+    },
+    "15~20평": {
+      "500": {
+        "count": 13,
+        "avg": 65,
+        "median": 70,
+        "min": 30,
+        "max": 120,
+        "samples": [
+          {
+            "rent": 30,
+            "deposit": 300,
+            "area_m2": 53.82,
+            "name": "해성펠리스빌B",
+            "deal_ym": "202604",
+            "deal_day": "28"
+          },
+          {
+            "rent": 35,
+            "deposit": 400,
+            "area_m2": 51.8,
+            "name": "대명스카이",
+            "deal_ym": "202604",
+            "deal_day": "30"
+          },
+          {
+            "rent": 35,
+            "deposit": 35,
+            "area_m2": 54.54,
+            "name": "유니온쉐르빌A",
+            "deal_ym": "202604",
+            "deal_day": "3"
+          },
+          {
+            "rent": 70,
+            "deposit": 50,
+            "area_m2": 64.02,
+            "name": "경인빌라",
+            "deal_ym": "202604",
+            "deal_day": "6"
+          },
+          {
+            "rent": 60,
+            "deposit": 70,
+            "area_m2": 50.12,
+            "name": "홍성쉐르빌(410-180)",
+            "deal_ym": "202602",
+            "deal_day": "27"
+          }
+        ]
+      },
+      "1,000": {
+        "count": 26,
+        "avg": 73,
+        "median": 75,
+        "min": 40,
+        "max": 100,
+        "samples": [
+          {
+            "rent": 60,
+            "deposit": 1000,
+            "area_m2": 51.12,
+            "name": "이수빌라",
+            "deal_ym": "202604",
+            "deal_day": "27"
+          },
+          {
+            "rent": 57,
+            "deposit": 1000,
+            "area_m2": 59.81,
+            "name": "로즈팰리스투(346-38)",
+            "deal_ym": "202604",
+            "deal_day": "26"
+          },
+          {
+            "rent": 75,
+            "deposit": 1000,
+            "area_m2": 65.49,
+            "name": "갤럭시하이빌",
+            "deal_ym": "202604",
+            "deal_day": "6"
+          },
+          {
+            "rent": 100,
+            "deposit": 1000,
+            "area_m2": 59.77,
+            "name": "대성맨션",
+            "deal_ym": "202604",
+            "deal_day": "16"
+          },
+          {
+            "rent": 100,
+            "deposit": 1000,
+            "area_m2": 57.42,
+            "name": "아주아트빌라",
+            "deal_ym": "202604",
+            "deal_day": "4"
+          }
+        ]
+      },
+      "2,000": {
+        "count": 55,
+        "avg": 75,
+        "median": 70,
+        "min": 35,
+        "max": 125,
+        "samples": [
+          {
+            "rent": 75,
+            "deposit": 2000,
+            "area_m2": 52.8,
+            "name": "(402-4)",
+            "deal_ym": "202604",
+            "deal_day": "20"
+          },
+          {
+            "rent": 76,
+            "deposit": 2000,
+            "area_m2": 52.8,
+            "name": "(402-4)",
+            "deal_ym": "202604",
+            "deal_day": "20"
+          },
+          {
+            "rent": 110,
+            "deposit": 2000,
+            "area_m2": 60.88,
+            "name": "후암리치빌",
+            "deal_ym": "202604",
+            "deal_day": "7"
+          },
+          {
+            "rent": 70,
+            "deposit": 2000,
+            "area_m2": 56.82,
+            "name": "경원빌라",
+            "deal_ym": "202604",
+            "deal_day": "7"
+          },
+          {
+            "rent": 110,
+            "deposit": 2000,
+            "area_m2": 54.06,
+            "name": "펠리체하우스",
+            "deal_ym": "202604",
+            "deal_day": "27"
+          }
+        ]
+      },
+      "3,000": {
+        "count": 55,
+        "avg": 82,
+        "median": 80,
+        "min": 37,
+        "max": 200,
+        "samples": [
+          {
+            "rent": 90,
+            "deposit": 3000,
+            "area_m2": 60.03,
+            "name": "미광스톤빌",
+            "deal_ym": "202605",
+            "deal_day": "6"
+          },
+          {
+            "rent": 90,
+            "deposit": 3000,
+            "area_m2": 57.61,
+            "name": "우성빌라(98-40)",
+            "deal_ym": "202604",
+            "deal_day": "13"
+          },
+          {
+            "rent": 100,
+            "deposit": 3000,
+            "area_m2": 61.63,
+            "name": "초롱빌라",
+            "deal_ym": "202604",
+            "deal_day": "18"
+          },
+          {
+            "rent": 90,
+            "deposit": 3000,
+            "area_m2": 63.57,
+            "name": "신오빌라",
+            "deal_ym": "202604",
+            "deal_day": "15"
+          },
+          {
+            "rent": 70,
+            "deposit": 3000,
+            "area_m2": 49.93,
+            "name": "굿모닝빌(1115-17)",
+            "deal_ym": "202604",
+            "deal_day": "10"
+          }
+        ]
+      },
+      "5,000": {
+        "count": 50,
+        "avg": 82,
+        "median": 85,
+        "min": 11,
+        "max": 230,
+        "samples": [
+          {
+            "rent": 51,
+            "deposit": 5000,
+            "area_m2": 56.06,
+            "name": "장미주택(55-24)",
+            "deal_ym": "202605",
+            "deal_day": "11"
+          },
+          {
+            "rent": 60,
+            "deposit": 5000,
+            "area_m2": 64.05,
+            "name": "유림노르웨이숲(919-1)",
+            "deal_ym": "202605",
+            "deal_day": "11"
+          },
+          {
+            "rent": 95,
+            "deposit": 5000,
+            "area_m2": 49.77,
+            "name": "초록",
+            "deal_ym": "202605",
+            "deal_day": "2"
+          },
+          {
+            "rent": 80,
+            "deposit": 4000,
+            "area_m2": 57.58,
+            "name": "그린모닝빌나동",
+            "deal_ym": "202604",
+            "deal_day": "25"
+          },
+          {
+            "rent": 85,
+            "deposit": 4000,
+            "area_m2": 53.99,
+            "name": "성호빌라(102-76)",
+            "deal_ym": "202604",
+            "deal_day": "18"
+          }
+        ]
+      },
+      "7,000": {
+        "count": 13,
+        "avg": 47,
+        "median": 30,
+        "min": 10,
+        "max": 120,
+        "samples": [
+          {
+            "rent": 30,
+            "deposit": 8000,
+            "area_m2": 53.84,
+            "name": "주신아트빌A동",
+            "deal_ym": "202604",
+            "deal_day": "16"
+          },
+          {
+            "rent": 30,
+            "deposit": 8000,
+            "area_m2": 52.17,
+            "name": "동도하이츠빌라(다동)",
+            "deal_ym": "202604",
+            "deal_day": "14"
+          },
+          {
+            "rent": 110,
+            "deposit": 8000,
+            "area_m2": 64.05,
+            "name": "유림노르웨이숲(919-1)",
+            "deal_ym": "202604",
+            "deal_day": "3"
+          },
+          {
+            "rent": 10,
+            "deposit": 9500,
+            "area_m2": 55.68,
+            "name": "청우파크빌",
+            "deal_ym": "202603",
+            "deal_day": "27"
+          },
+          {
+            "rent": 20,
+            "deposit": 8900,
+            "area_m2": 51.15,
+            "name": "소망빌라나동",
+            "deal_ym": "202603",
+            "deal_day": "28"
+          }
+        ]
+      }
+    },
+    "20~25평": {
+      "500": {
+        "count": 6,
+        "avg": 36,
+        "median": 34,
+        "min": 30,
+        "max": 46,
+        "samples": [
+          {
+            "rent": 30,
+            "deposit": 500,
+            "area_m2": 78.57,
+            "name": "로즈팰리스투(346-38)",
+            "deal_ym": "202602",
+            "deal_day": "28"
+          },
+          {
+            "rent": 33,
+            "deposit": 0,
+            "area_m2": 71.5,
+            "name": "한라홈타운",
+            "deal_ym": "202602",
+            "deal_day": "22"
+          },
+          {
+            "rent": 46,
+            "deposit": 500,
+            "area_m2": 69.29,
+            "name": "로즈팰리스투(346-38)",
+            "deal_ym": "202601",
+            "deal_day": "12"
+          },
+          {
+            "rent": 35,
+            "deposit": 500,
+            "area_m2": 67.17,
+            "name": "송림빌라",
+            "deal_ym": "202512",
+            "deal_day": "22"
+          },
+          {
+            "rent": 30,
+            "deposit": 500,
+            "area_m2": 78.57,
+            "name": "로즈팰리스투(346-38)",
+            "deal_ym": "202512",
+            "deal_day": "9"
+          }
+        ]
+      },
+      "1,000": {
+        "count": 3,
+        "avg": 78,
+        "median": 85,
+        "min": 45,
+        "max": 105,
+        "samples": [
+          {
+            "rent": 45,
+            "deposit": 1000,
+            "area_m2": 78.57,
+            "name": "로즈팰리스투(346-38)",
+            "deal_ym": "202602",
+            "deal_day": "7"
+          },
+          {
+            "rent": 105,
+            "deposit": 1000,
+            "area_m2": 76.63,
+            "name": "한빛타운(151-1)",
+            "deal_ym": "202601",
+            "deal_day": "29"
+          },
+          {
+            "rent": 85,
+            "deposit": 1000,
+            "area_m2": 66.36,
+            "name": "고은아트빌",
+            "deal_ym": "202601",
+            "deal_day": "5"
+          }
+        ]
+      },
+      "2,000": {
+        "count": 9,
+        "avg": 73,
+        "median": 76,
+        "min": 45,
+        "max": 100,
+        "samples": [
+          {
+            "rent": 61,
+            "deposit": 2000,
+            "area_m2": 67.96,
+            "name": "대림빌라",
+            "deal_ym": "202604",
+            "deal_day": "7"
+          },
+          {
+            "rent": 50,
+            "deposit": 2000,
+            "area_m2": 70.62,
+            "name": "청송나동",
+            "deal_ym": "202603",
+            "deal_day": "31"
+          },
+          {
+            "rent": 90,
+            "deposit": 2000,
+            "area_m2": 69.15,
+            "name": "남경베스트빌(A동)",
+            "deal_ym": "202603",
+            "deal_day": "22"
+          },
+          {
+            "rent": 85,
+            "deposit": 2000,
+            "area_m2": 81.35,
+            "name": "유앤미",
+            "deal_ym": "202603",
+            "deal_day": "26"
+          },
+          {
+            "rent": 80,
+            "deposit": 2000,
+            "area_m2": 68.09,
+            "name": "태경(381-7)",
+            "deal_ym": "202603",
+            "deal_day": "18"
+          }
+        ]
+      },
+      "3,000": {
+        "count": 8,
+        "avg": 97,
+        "median": 100,
+        "min": 24,
+        "max": 160,
+        "samples": [
+          {
+            "rent": 100,
+            "deposit": 3000,
+            "area_m2": 70.99,
+            "name": "한울자이빌(346-21)",
+            "deal_ym": "202605",
+            "deal_day": "8"
+          },
+          {
+            "rent": 110,
+            "deposit": 3000,
+            "area_m2": 70.85,
+            "name": "그레이스빌라나동",
+            "deal_ym": "202604",
+            "deal_day": "7"
+          },
+          {
+            "rent": 24,
+            "deposit": 2912,
+            "area_m2": 79.13,
+            "name": "오성주택(56-534)",
+            "deal_ym": "202603",
+            "deal_day": "17"
+          },
+          {
+            "rent": 160,
+            "deposit": 3000,
+            "area_m2": 76.23,
+            "name": "유림노르웨이숲(919-1)",
+            "deal_ym": "202603",
+            "deal_day": "26"
+          },
+          {
+            "rent": 90,
+            "deposit": 3000,
+            "area_m2": 68.31,
+            "name": "나산맨션B",
+            "deal_ym": "202601",
+            "deal_day": "31"
+          }
+        ]
+      },
+      "5,000": {
+        "count": 17,
+        "avg": 97,
+        "median": 100,
+        "min": 60,
+        "max": 130,
+        "samples": [
+          {
+            "rent": 75,
+            "deposit": 5500,
+            "area_m2": 71.1,
+            "name": "삼익빌라",
+            "deal_ym": "202604",
+            "deal_day": "17"
+          },
+          {
+            "rent": 100,
+            "deposit": 5000,
+            "area_m2": 80.32,
+            "name": "건형쉐르빌(343-27)",
+            "deal_ym": "202604",
+            "deal_day": "16"
+          },
+          {
+            "rent": 85,
+            "deposit": 5000,
+            "area_m2": 70.5,
+            "name": "우성파크빌",
+            "deal_ym": "202603",
+            "deal_day": "20"
+          },
+          {
+            "rent": 100,
+            "deposit": 5000,
+            "area_m2": 74.55,
+            "name": "엘림빌",
+            "deal_ym": "202603",
+            "deal_day": "21"
+          },
+          {
+            "rent": 77,
+            "deposit": 5000,
+            "area_m2": 70.5,
+            "name": "우성파크빌",
+            "deal_ym": "202603",
+            "deal_day": "20"
+          }
+        ]
+      },
+      "7,000": null
+    },
+    "25평 이상": {
+      "500": null,
+      "1,000": null,
+      "2,000": {
+        "count": 3,
+        "avg": 157,
+        "median": 160,
+        "min": 150,
+        "max": 160,
+        "samples": [
+          {
+            "rent": 160,
+            "deposit": 2000,
+            "area_m2": 111.21,
+            "name": "웰라이빌",
+            "deal_ym": "202601",
+            "deal_day": "16"
+          },
+          {
+            "rent": 150,
+            "deposit": 2000,
+            "area_m2": 84.99,
+            "name": "강서힐스테이트",
+            "deal_ym": "202601",
+            "deal_day": "9"
+          },
+          {
+            "rent": 160,
+            "deposit": 2000,
+            "area_m2": 111.21,
+            "name": "웰라이빌",
+            "deal_ym": "202601",
+            "deal_day": "16"
+          }
+        ]
+      },
+      "3,000": null,
+      "5,000": {
+        "count": 8,
+        "avg": 182,
+        "median": 181,
+        "min": 50,
+        "max": 280,
+        "samples": [
+          {
+            "rent": 270,
+            "deposit": 5000,
+            "area_m2": 84.97,
+            "name": "우장산아이파크,이편한세상",
+            "deal_ym": "202604",
+            "deal_day": "17"
+          },
+          {
+            "rent": 245,
+            "deposit": 5000,
+            "area_m2": 85.0,
+            "name": "우장산롯데캐슬",
+            "deal_ym": "202604",
+            "deal_day": "13"
+          },
+          {
+            "rent": 85,
+            "deposit": 5000,
+            "area_m2": 85.84,
+            "name": "귀뚜라미홈시스텔",
+            "deal_ym": "202603",
+            "deal_day": "25"
+          },
+          {
+            "rent": 180,
+            "deposit": 5000,
+            "area_m2": 84.07,
+            "name": "초록",
+            "deal_ym": "202602",
+            "deal_day": "13"
+          },
+          {
+            "rent": 182,
+            "deposit": 4000,
+            "area_m2": 85.0,
+            "name": "우장산롯데캐슬",
+            "deal_ym": "202601",
+            "deal_day": "8"
+          }
+        ]
+      },
+      "7,000": null
+    }
+  },
+  "jeonse_matrix": {
+    "10평 이하": {
+      "count": 663,
+      "avg": 18066,
+      "median": 18900,
+      "min": 1000,
+      "max": 55000,
+      "samples": [
+        {
+          "deposit": 17100,
+          "area_m2": 23.58,
+          "name": "리치아파트 105동",
+          "deal_ym": "202605",
+          "deal_day": "12"
+        },
+        {
+          "deposit": 7300,
+          "area_m2": 26.43,
+          "name": "(908-4)",
+          "deal_ym": "202605",
+          "deal_day": "10"
+        },
+        {
+          "deposit": 12960,
+          "area_m2": 15.43,
+          "name": "강서구청 파크뷰 에버",
+          "deal_ym": "202605",
+          "deal_day": "12"
+        },
+        {
+          "deposit": 19500,
+          "area_m2": 20.33,
+          "name": "미래안포레",
+          "deal_ym": "202605",
+          "deal_day": "11"
+        },
+        {
+          "deposit": 14000,
+          "area_m2": 17.92,
+          "name": "포유",
+          "deal_ym": "202605",
+          "deal_day": "8"
+        }
+      ]
+    },
+    "10~15평": {
+      "count": 318,
+      "avg": 16290,
+      "median": 15250,
+      "min": 4000,
+      "max": 35700,
+      "samples": [
+        {
+          "deposit": 27500,
+          "area_m2": 36.95,
+          "name": "범우데시앙",
+          "deal_ym": "202605",
+          "deal_day": "8"
+        },
+        {
+          "deposit": 21000,
+          "area_m2": 33.58,
+          "name": "포유",
+          "deal_ym": "202605",
+          "deal_day": "1"
+        },
+        {
+          "deposit": 12600,
+          "area_m2": 39.32,
+          "name": "건형빌라(783-21)",
+          "deal_ym": "202605",
+          "deal_day": "5"
+        },
+        {
+          "deposit": 13100,
+          "area_m2": 36.54,
+          "name": "황금빌라(61-104)",
+          "deal_ym": "202605",
+          "deal_day": "4"
+        },
+        {
+          "deposit": 11239,
+          "area_m2": 35.73,
+          "name": "현대아트빌라",
+          "deal_ym": "202605",
+          "deal_day": "4"
+        }
+      ]
+    },
+    "15~20평": {
+      "count": 276,
+      "avg": 27497,
+      "median": 18070,
+      "min": 2430,
+      "max": 73000,
+      "samples": [
+        {
+          "deposit": 10000,
+          "area_m2": 51.94,
+          "name": "대덕하이츠빌라(330-27)",
+          "deal_ym": "202605",
+          "deal_day": "5"
+        },
+        {
+          "deposit": 28000,
+          "area_m2": 64.805,
+          "name": "우성창대빌",
+          "deal_ym": "202605",
+          "deal_day": "8"
+        },
+        {
+          "deposit": 18390,
+          "area_m2": 64.185,
+          "name": "삼성그린타운B동",
+          "deal_ym": "202605",
+          "deal_day": "9"
+        },
+        {
+          "deposit": 15000,
+          "area_m2": 52.38,
+          "name": "단독그린빌라(851-30)",
+          "deal_ym": "202605",
+          "deal_day": "8"
+        },
+        {
+          "deposit": 18390,
+          "area_m2": 60.38,
+          "name": "중앙하이츠빌",
+          "deal_ym": "202605",
+          "deal_day": "4"
+        }
+      ]
+    },
+    "20~25평": {
+      "count": 81,
+      "avg": 25455,
+      "median": 23300,
+      "min": 10000,
+      "max": 48093,
+      "samples": [
+        {
+          "deposit": 27900,
+          "area_m2": 76.07,
+          "name": "세림아파트",
+          "deal_ym": "202605",
+          "deal_day": "10"
+        },
+        {
+          "deposit": 19500,
+          "area_m2": 69.0,
+          "name": "서일빌리지102동",
+          "deal_ym": "202605",
+          "deal_day": "10"
+        },
+        {
+          "deposit": 17600,
+          "area_m2": 75.35,
+          "name": "삼성홈타운",
+          "deal_ym": "202605",
+          "deal_day": "9"
+        },
+        {
+          "deposit": 18000,
+          "area_m2": 69.64,
+          "name": "새한그린빌리지",
+          "deal_ym": "202604",
+          "deal_day": "25"
+        },
+        {
+          "deposit": 23300,
+          "area_m2": 76.56,
+          "name": "LG5타운",
+          "deal_ym": "202604",
+          "deal_day": "15"
+        }
+      ]
+    },
+    "25평 이상": {
+      "count": 179,
+      "avg": 67782,
+      "median": 73500,
+      "min": 15500,
+      "max": 120000,
+      "samples": [
+        {
+          "deposit": 24100,
+          "area_m2": 84.96,
+          "name": "유풍빌라아트B동",
+          "deal_ym": "202605",
+          "deal_day": "1"
+        },
+        {
+          "deposit": 48000,
+          "area_m2": 84.97,
+          "name": "우장산에스케이뷰",
+          "deal_ym": "202605",
+          "deal_day": "12"
+        },
+        {
+          "deposit": 82000,
+          "area_m2": 84.97,
+          "name": "우장산아이파크,이편한세상",
+          "deal_ym": "202605",
+          "deal_day": "11"
+        },
+        {
+          "deposit": 83000,
+          "area_m2": 84.97,
+          "name": "우장산아이파크,이편한세상",
+          "deal_ym": "202605",
+          "deal_day": "9"
+        },
+        {
+          "deposit": 80000,
+          "area_m2": 84.97,
+          "name": "우장산아이파크,이편한세상",
+          "deal_ym": "202605",
+          "deal_day": "5"
+        }
+      ]
+    }
+  },
+  "jeonse_like_matrix": {
+    "10평 이하": {
+      "count": 471,
+      "avg_deposit": 16340,
+      "median_deposit": 16200,
+      "min_deposit": 10000,
+      "max_deposit": 25800,
+      "avg_rent": 17,
+      "median_rent": 14,
+      "min_rent": 1,
+      "max_rent": 110,
+      "samples": [
+        {
+          "deposit": 13500,
+          "rent": 10,
+          "area_m2": 15.29,
+          "name": "연우넥스트파크뷰",
+          "deal_ym": "202605",
+          "deal_day": "4"
+        },
+        {
+          "deposit": 16500,
+          "rent": 8,
+          "area_m2": 27.85,
+          "name": "골드리움",
+          "deal_ym": "202605",
+          "deal_day": "11"
+        },
+        {
+          "deposit": 16197,
+          "rent": 21,
+          "area_m2": 26.1,
+          "name": "홍성해누리",
+          "deal_ym": "202605",
+          "deal_day": "9"
+        },
+        {
+          "deposit": 15600,
+          "rent": 20,
+          "area_m2": 21.2,
+          "name": "리치하우스(346-18)",
+          "deal_ym": "202605",
+          "deal_day": "7"
+        },
+        {
+          "deposit": 12800,
+          "rent": 13,
+          "area_m2": 18.57,
+          "name": "서경팰리스",
+          "deal_ym": "202605",
+          "deal_day": "7"
+        }
+      ]
+    },
+    "10~15평": {
+      "count": 273,
+      "avg_deposit": 14699,
+      "median_deposit": 13000,
+      "min_deposit": 10000,
+      "max_deposit": 29800,
+      "avg_rent": 19,
+      "median_rent": 20,
+      "min_rent": 2,
+      "max_rent": 72,
+      "samples": [
+        {
+          "deposit": 10000,
+          "rent": 30,
+          "area_m2": 37.74,
+          "name": "동우맨션라동",
+          "deal_ym": "202605",
+          "deal_day": "6"
+        },
+        {
+          "deposit": 17500,
+          "rent": 16,
+          "area_m2": 34.39,
+          "name": "삼성쉐르빌(400-16)",
+          "deal_ym": "202605",
+          "deal_day": "6"
+        },
+        {
+          "deposit": 10900,
+          "rent": 30,
+          "area_m2": 36.41,
+          "name": "이수골든빌리지",
+          "deal_ym": "202605",
+          "deal_day": "8"
+        },
+        {
+          "deposit": 16000,
+          "rent": 20,
+          "area_m2": 33.54,
+          "name": "예지팰리스89차",
+          "deal_ym": "202605",
+          "deal_day": "9"
+        },
+        {
+          "deposit": 15000,
+          "rent": 20,
+          "area_m2": 41.17,
+          "name": "삼성쉐르빌(161-13)",
+          "deal_ym": "202605",
+          "deal_day": "7"
+        }
+      ]
+    },
+    "15~20평": {
+      "count": 246,
+      "avg_deposit": 17353,
+      "median_deposit": 15600,
+      "min_deposit": 10000,
+      "max_deposit": 60000,
+      "avg_rent": 36,
+      "median_rent": 22,
+      "min_rent": 2,
+      "max_rent": 210,
+      "samples": [
+        {
+          "deposit": 20000,
+          "rent": 15,
+          "area_m2": 57.8,
+          "name": "샤론인텔리안(408-29)",
+          "deal_ym": "202605",
+          "deal_day": "11"
+        },
+        {
+          "deposit": 15300,
+          "rent": 15,
+          "area_m2": 62.21,
+          "name": "성진빌라(61-75)",
+          "deal_ym": "202605",
+          "deal_day": "9"
+        },
+        {
+          "deposit": 18000,
+          "rent": 20,
+          "area_m2": 58.51,
+          "name": "서현빌라(337-15)",
+          "deal_ym": "202605",
+          "deal_day": "10"
+        },
+        {
+          "deposit": 18390,
+          "rent": 30,
+          "area_m2": 58.2,
+          "name": "정현빌라(98-39)",
+          "deal_ym": "202605",
+          "deal_day": "1"
+        },
+        {
+          "deposit": 15620,
+          "rent": 25,
+          "area_m2": 63.81,
+          "name": "대주쉐르빌(397-17)",
+          "deal_ym": "202605",
+          "deal_day": "4"
+        }
+      ]
+    },
+    "20~25평": {
+      "count": 47,
+      "avg_deposit": 19024,
+      "median_deposit": 18100,
+      "min_deposit": 10000,
+      "max_deposit": 48000,
+      "avg_rent": 28,
+      "median_rent": 20,
+      "min_rent": 4,
+      "max_rent": 105,
+      "samples": [
+        {
+          "deposit": 17640,
+          "rent": 14,
+          "area_m2": 66.9,
+          "name": "중앙파크맨션",
+          "deal_ym": "202605",
+          "deal_day": "11"
+        },
+        {
+          "deposit": 16500,
+          "rent": 50,
+          "area_m2": 67.75,
+          "name": "다울네버빌B",
+          "deal_ym": "202605",
+          "deal_day": "7"
+        },
+        {
+          "deposit": 18000,
+          "rent": 20,
+          "area_m2": 78.97,
+          "name": "대영빌라트",
+          "deal_ym": "202605",
+          "deal_day": "6"
+        },
+        {
+          "deposit": 27600,
+          "rent": 40,
+          "area_m2": 67.17,
+          "name": "상진지오벨리",
+          "deal_ym": "202605",
+          "deal_day": "5"
+        },
+        {
+          "deposit": 17640,
+          "rent": 14,
+          "area_m2": 66.9,
+          "name": "중앙파크맨션",
+          "deal_ym": "202604",
+          "deal_day": "30"
+        }
+      ]
+    },
+    "25평 이상": {
+      "count": 115,
+      "avg_deposit": 35329,
+      "median_deposit": 35000,
+      "min_deposit": 10000,
+      "max_deposit": 90100,
+      "avg_rent": 136,
+      "median_rent": 130,
+      "min_rent": 4,
+      "max_rent": 345,
+      "samples": [
+        {
+          "deposit": 40000,
+          "rent": 50,
+          "area_m2": 84.88,
+          "name": "우장산청솔(992-10)",
+          "deal_ym": "202605",
+          "deal_day": "6"
+        },
+        {
+          "deposit": 42000,
+          "rent": 150,
+          "area_m2": 117.19,
+          "name": "우장산롯데캐슬",
+          "deal_ym": "202605",
+          "deal_day": "8"
+        },
+        {
+          "deposit": 60000,
+          "rent": 50,
+          "area_m2": 84.97,
+          "name": "우장산아이파크,이편한세상",
+          "deal_ym": "202605",
+          "deal_day": "6"
+        },
+        {
+          "deposit": 15000,
+          "rent": 82,
+          "area_m2": 83.95,
+          "name": "페트라하우스",
+          "deal_ym": "202604",
+          "deal_day": "22"
+        },
+        {
+          "deposit": 40000,
+          "rent": 130,
+          "area_m2": 101.65,
+          "name": "우장산아이파크,이편한세상",
+          "deal_ym": "202604",
+          "deal_day": "29"
+        }
+      ]
+    }
+  },
+  "total_monthly": 1889,
+  "total_jeonse": 1517,
+  "total_jeonse_like": 1152
+}
