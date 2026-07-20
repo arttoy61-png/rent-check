@@ -9,34 +9,35 @@ concurrency: update-data
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 30
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.11"
       - name: Install deps
         run: pip install -r requirements.txt
 
-      # ══════ 기존 위젯 라인 (변경 없음) ══════
-      - name: Collect MOLIT data
+      # ══════ 강서 수집 + 위젯 3종 ══════
+      - name: Collect MOLIT data (강서)
         working-directory: automation
         env:
           MOLIT_API_KEY: ${{ secrets.MOLIT_API_KEY }}
         run: python collect_kangseo.py
+
       - name: Build widget_data.json
         working-directory: automation
         run: |
           python widget_data_builder.py data/molit_kangseo.csv 화곡동
           cp outputs/widget/widget_data.json ../widget_data.json
-      - name: Build hwagok_apt_data.json (대표단지 시세 위젯)
+      - name: Build hwagok_apt_data.json
         working-directory: automation
         run: |
           python apt_widget_builder.py data/molit_kangseo.csv 화곡동
           cp outputs/widget/hwagok_apt_data.json ../hwagok_apt_data.json
-      - name: Build auction_data.json (경매 실거래 체크)
+      - name: Build auction_data.json
         working-directory: automation
         run: |
           python auction_data.py data/molit_kangseo.csv
@@ -44,12 +45,17 @@ jobs:
       - name: Publish CSV (Claude 직접 접근용)
         run: cp automation/data/molit_kangseo.csv molit_kangseo.csv
 
-      # ══════ 신규: 서울 수집 + 요일글 + 공고감지 ══════
-      - name: Collect Seoul 25구 (요일글·경매용)
-        working-directory: automation
-        env:
-          MOLIT_API_KEY: ${{ secrets.MOLIT_API_KEY }}
-        run: python collect_seoul.py
+      # ══════ 여기서 1차 커밋 — 뒷 단계가 실패해도 데이터는 보존 ══════
+      - name: Commit data
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add widget_data.json hwagok_apt_data.json auction_data.json molit_kangseo.csv automation/cache 2>/dev/null || true
+          git commit -m "auto: data ($(date -u +%F))" || echo "변경 없음"
+          git pull --rebase --autostash || true
+          git push || echo "푸시 생략"
+
+      # ══════ 요일글 + 공고감지 (실패해도 무시) ══════
       - name: 요일글 생성
         working-directory: automation
         run: python blog/daily_content.py today || true
@@ -59,14 +65,13 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python blog/notice_check.py || true
-      - name: Publish 서울 CSV (Claude 직접 접근용)
-        run: cp automation/data/molit_trade_live.csv molit_trade_live.csv || true
 
-      - name: Commit if changed
+      - name: Commit outputs
+        if: always()
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add widget_data.json hwagok_apt_data.json auction_data.json molit_kangseo.csv
-          git add molit_trade_live.csv automation/cache automation/data/notice_seen.json automation/outputs/blog 2>/dev/null || true
-          git commit -m "auto: update data ($(date -u +%F))" || echo "변경 없음"
+          git add automation/outputs/blog automation/outputs/notice_alarm automation/data/notice_seen.json 2>/dev/null || true
+          git commit -m "auto: outputs ($(date -u +%F))" || echo "변경 없음"
+          git pull --rebase --autostash || true
           git push || echo "푸시 생략"
