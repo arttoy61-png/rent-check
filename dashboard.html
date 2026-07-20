@@ -1338,7 +1338,16 @@ td b{color:var(--navy)}
 .ins-s{font-size:12px;color:var(--muted);margin-top:3px}
 @media(max-width:640px){
 .ins{grid-template-columns:1fr;gap:8px}
-#apt th:nth-child(2),#apt td:nth-child(2){display:none}
+/* 아파트 표 → 카드형 */
+#apt,#apt tbody{display:block}
+#apt thead{display:none}
+#apt tr{display:block;background:var(--paper);border:1px solid var(--line);border-radius:13px;padding:3px 14px 6px;margin-bottom:9px}
+#apt td{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:7px 0;border:0;border-top:1px solid var(--line-soft);text-align:right}
+#apt td::before{content:attr(data-label);font-size:12px;font-weight:700;color:var(--muted);flex-shrink:0}
+#apt td.nm{display:block;border-top:0;padding:11px 0 7px;font-size:15px;text-align:left}
+#apt td.nm::before{content:none}
+#apt td br{display:none}
+#apt td span{margin-left:6px}
 #umd th:nth-child(4),#umd td:nth-child(4),#umd th:nth-child(5),#umd td:nth-child(5){display:none}
 }
 </style>
@@ -1467,7 +1476,7 @@ td b{color:var(--navy)}
         <a class="tool" href="calc.html"><div class="t">재개발 분담금 계산기</div><div class="d">소유주·매수자 분담금 구조 계산</div></a>
         <a class="tool" href="youth_score.html"><div class="t">청년주택 순위 점수</div><div class="d">내 순위와 가점 직접 확인</div></a>
         <a class="tool" href="moving_date_widget.html"><div class="t">이사 날짜 계산기</div><div class="d">계약 종료일과 이사 일정 정리</div></a>
-        <a class="tool" href="auction_check_easy.html"><div class="t">경매 안전마진 계산기</div><div class="d">이 물건, 얼마에 써야 남을까 — 비용까지 넣고 계산</div></a>
+        <a class="tool tool-coming" href="#" aria-disabled="true" tabindex="-1" onclick="return false"><div class="t">경매 물건 체크 <span class="tool-status">개발 중</span></div><div class="d">주소·비용·비교 실거래를 한 번에 점검</div></a>
       </div>
     </div>
   </section>
@@ -1559,11 +1568,11 @@ async function load(){
   let h='<thead><tr><th>단지</th><th>대표<br>면적</th><th>최근<br>거래</th><th>6개월<br>중위</th><th>3개월<br>추세</th><th>전세<br>가율</th></tr></thead><tbody>';
   rows.forEach(r=>{
     h+=`<tr><td class="nm">${r.nm}<br><span style="font-weight:400;font-size:11px;color:#7a8694">${r.un?r.un.toLocaleString()+'세대':''}</span></td>
-    <td>${r.m2}㎡<br><span style="font-size:11px;color:#7a8694">${Math.round(r.m2/3.3058)}평</span></td>
-    <td>${r.last?`<b>${r.last.amt.toFixed(1)}억</b><br><span style="font-size:11px;color:#7a8694">${r.last.date.slice(2)}</span>`:'-'}</td>
-    <td>${r.mid?r.mid.toFixed(1)+'억':'-'}<br><span style="font-size:11px;color:#7a8694">${r.ns}건</span></td>
-    <td>${trCell(r.tr)}</td>
-    <td>${r.jr?r.jr+'%':'<span style="color:#7a8694">-</span>'}</td></tr>`;
+    <td data-label="대표 면적">${r.m2}㎡<br><span style="font-size:11px;color:#7a8694">${Math.round(r.m2/3.3058)}평</span></td>
+    <td data-label="최근 거래">${r.last?`<b>${r.last.amt.toFixed(1)}억</b><br><span style="font-size:11px;color:#7a8694">${r.last.date.slice(2)}</span>`:'-'}</td>
+    <td data-label="6개월 중위">${r.mid?r.mid.toFixed(1)+'억':'-'}<br><span style="font-size:11px;color:#7a8694">${r.ns}건</span></td>
+    <td data-label="3개월 추세">${trCell(r.tr)}</td>
+    <td data-label="전세가율">${r.jr?r.jr+'%':'<span style="color:#7a8694">-</span>'}</td></tr>`;
   });
   document.getElementById('apt').innerHTML=h+'</tbody>';
   const aptMore=document.getElementById('apt-more');
