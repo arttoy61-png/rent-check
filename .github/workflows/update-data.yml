@@ -58,13 +58,15 @@ jobs:
       # ══════ 요일글 + 공고감지 (실패해도 무시) ══════
       - name: 요일글 생성
         working-directory: automation
-        run: python blog/daily_content.py today || true
+        run: |
+          cp data/molit_kangseo.csv data/molit_trade_live.csv
+          python blog/daily_content.py today
       - name: 공고 감지
         working-directory: automation
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python blog/notice_check.py || true
+        run: python blog/notice_check.py
 
       - name: Commit outputs
         if: always()
