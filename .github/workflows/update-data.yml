@@ -1,13 +1,15 @@
 name: Update widget data
 on:
   schedule:
-    - cron: "0 16 * * *"
+    - cron: "0 16 * * *"   # KST 01:00
   workflow_dispatch:
 permissions:
   contents: write
+concurrency: update-data
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 40
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -17,6 +19,8 @@ jobs:
           python-version: "3.11"
       - name: Install deps
         run: pip install -r requirements.txt
+
+      # ══════ 기존 위젯 라인 (변경 없음) ══════
       - name: Collect MOLIT data
         working-directory: automation
         env:
@@ -39,10 +43,30 @@ jobs:
           cp auction_data.json ../auction_data.json
       - name: Publish CSV (Claude 직접 접근용)
         run: cp automation/data/molit_kangseo.csv molit_kangseo.csv
+
+      # ══════ 신규: 서울 수집 + 요일글 + 공고감지 ══════
+      - name: Collect Seoul 25구 (요일글·경매용)
+        working-directory: automation
+        env:
+          MOLIT_API_KEY: ${{ secrets.MOLIT_API_KEY }}
+        run: python collect_seoul.py
+      - name: 요일글 생성
+        working-directory: automation
+        run: python blog/daily_content.py today || true
+      - name: 공고 감지
+        working-directory: automation
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python blog/notice_check.py || true
+      - name: Publish 서울 CSV (Claude 직접 접근용)
+        run: cp automation/data/molit_trade_live.csv molit_trade_live.csv || true
+
       - name: Commit if changed
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add widget_data.json hwagok_apt_data.json auction_data.json molit_kangseo.csv
-          git commit -m "auto: update widget data ($(date -u +%F))" || echo "변경 없음"
+          git add molit_trade_live.csv automation/cache automation/data/notice_seen.json automation/outputs/blog 2>/dev/null || true
+          git commit -m "auto: update data ($(date -u +%F))" || echo "변경 없음"
           git push || echo "푸시 생략"
