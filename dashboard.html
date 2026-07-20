@@ -1329,6 +1329,18 @@ td b{color:var(--navy)}
   .tool .d{font-size:12px}
 }
 
+
+/* ─ 자동 분석 카드 */
+.ins{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0 2px}
+.ins-card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:13px 15px}
+.ins-k{font-size:12px;font-weight:800;color:#6b5a32;letter-spacing:-.2px}
+.ins-v{font-size:16px;font-weight:900;color:var(--navy);margin-top:5px;letter-spacing:-.3px}
+.ins-s{font-size:12px;color:var(--muted);margin-top:3px}
+@media(max-width:640px){
+.ins{grid-template-columns:1fr;gap:8px}
+#apt th:nth-child(2),#apt td:nth-child(2){display:none}
+#umd th:nth-child(4),#umd td:nth-child(4),#umd th:nth-child(5),#umd td:nth-child(5){display:none}
+}
 </style>
 </head>
 <body>
@@ -1376,6 +1388,7 @@ td b{color:var(--navy)}
     </div>
     <div class="section-body">
       <div class="kpi" id="kpi"><div><div class="n">…</div><div class="l">불러오는 중</div></div></div>
+      <div class="ins" id="ins"></div>
     </div>
   </section>
 
@@ -1384,14 +1397,14 @@ td b{color:var(--navy)}
       <div class="section-title-wrap">
         <span class="section-kicker">화곡동</span>
         <h2>화곡동 아파트 시세</h2>
-        <p class="section-desc">최근 6개월 거래 · 대표 면적 · 전용 평당가 높은 순</p>
+        <p class="section-desc">최근 6개월 거래 · 대표 면적 · 거래 많은 순</p>
       </div>
       <span class="section-badge">12개 단지</span>
     </div>
     <div class="section-body">
       <div class="table-wrap"><table id="apt"><tbody><tr><td class="ld">불러오는 중…</td></tr></tbody></table></div>
       <button class="apt-more" id="apt-more" type="button" aria-expanded="false" hidden>12개 단지 모두 보기</button>
-      <div class="note"><span class="mobile-note"></span>각 단지에서 거래가 가장 많은 면적을 대표로 표시합니다. 매매·전세는 중위값이며, 소형 면적은 평당가가 높게 보일 수 있습니다.</div>
+      <div class="note"><span class="mobile-note"></span>각 단지에서 거래가 가장 많은 면적을 대표로 표시합니다. 추세는 최근 3개월과 이전 3개월 중위값 비교, 전세가율은 같은 면적 전세 중위를 매매 중위로 나눈 값입니다. 표본이 3건보다 적으면 -로 둡니다.</div>
     </div>
   </section>
 
@@ -1399,14 +1412,14 @@ td b{color:var(--navy)}
     <div class="section-head">
       <div class="section-title-wrap">
         <span class="section-kicker">강서구</span>
-        <h2>동별 거래 현황</h2>
-        <p class="section-desc">이번 달 거래가 있었던 동을 매매·전세·월세로 나눠 봅니다.</p>
+        <h2>동별 거래 흐름</h2>
+        <p class="section-desc" id="umd-desc">신고가 마감된 최근 달 기준으로 전월과 비교합니다.</p>
       </div>
       <span class="section-badge">강서구</span>
     </div>
     <div class="section-body">
       <div class="table-wrap"><table id="umd"><tbody><tr><td class="ld">불러오는 중…</td></tr></tbody></table></div>
-      <div class="note">아파트와 빌라는 따로 표시합니다. 거래가 3건보다 적으면 중위값 대신 건수만 보여줍니다. 오피스텔은 이 표에서 제외했습니다.</div>
+      <div class="note">가장 최근 달은 신고가 진행 중이라 그 전 달을 기준으로 합니다. 아파트·빌라 칸은 매매 건수, 월세 비중은 임대차(전세+월세) 중 월세의 비율입니다. 임대차 10건 미만인 동은 비중을 표시하지 않습니다.</div>
     </div>
   </section>
 
@@ -1454,7 +1467,7 @@ td b{color:var(--navy)}
         <a class="tool" href="calc.html"><div class="t">재개발 분담금 계산기</div><div class="d">소유주·매수자 분담금 구조 계산</div></a>
         <a class="tool" href="youth_score.html"><div class="t">청년주택 순위 점수</div><div class="d">내 순위와 가점 직접 확인</div></a>
         <a class="tool" href="moving_date_widget.html"><div class="t">이사 날짜 계산기</div><div class="d">계약 종료일과 이사 일정 정리</div></a>
-        <a class="tool tool-coming" href="#" aria-disabled="true" tabindex="-1" onclick="return false"><div class="t">경매 물건 체크 <span class="tool-status">개발 중</span></div><div class="d">주소·비용·비교 실거래를 한 번에 점검</div></a>
+        <a class="tool" href="auction_check_easy.html"><div class="t">경매 안전마진 계산기</div><div class="d">이 물건, 얼마에 써야 남을까 — 비용까지 넣고 계산</div></a>
       </div>
     </div>
   </section>
@@ -1524,25 +1537,33 @@ async function load(){
     <div><div class="n">${sa.length>=3?won(med(sa)):'-'}</div><div class="l">아파트 매매 중위</div></div>
     <div><div class="n">${sv.length>=3?won(med(sv)):'-'}</div><div class="l">빌라 매매 중위</div></div>`;
 
+  const ymset=[...new Set(apt.complexes.length?[].concat(...Object.values(apt.detail).map(dd=>[].concat(...dd.areas.map(a=>a.sale.map(s=>s.date.slice(0,7).replace('.','')))))):[])].sort();
+  const r3=ymset.slice(-3), p3=ymset.slice(-6,-3);
   const rows=[];
   apt.complexes.forEach(c=>{
     const ar=((apt.detail[c.name]||{}).areas)||[];
     if(!ar.length)return;
     const rep=[...ar].sort((a,b)=>(b.nSale||0)-(a.nSale||0))[0];
+    const sd=(rep.sale||[]);
+    const last=sd.length?sd[0]:null;
+    const rA=sd.filter(x=>r3.includes(x.date.slice(0,7).replace('.',''))).map(x=>x.amt);
+    const pA=sd.filter(x=>p3.includes(x.date.slice(0,7).replace('.',''))).map(x=>x.amt);
+    let tr=null;
+    if(rA.length>=3&&pA.length>=3){const mp=med(pA);tr=(med(rA)-mp)/mp*100;}
     const je=(rep.jeonse||[]).map(x=>x.dep).filter(Boolean);
-    rows.push({nm:c.name,yr:c.year,un:c.units,m2:rep.m2,
-      sale:rep.mid,ppy:rep.ppy,je:je.length?med(je):null,
-      ns:rep.nSale||0,nj:rep.nJe||0});
+    const jr=(je.length>=3&&(rep.nSale||0)>=3&&rep.mid)?Math.round(med(je)/rep.mid*100):null;
+    rows.push({nm:c.name,un:c.units,m2:rep.m2,last,mid:rep.mid,tr,jr,ns:rep.nSale||0});
   });
-  rows.sort((a,b)=>(b.ppy||0)-(a.ppy||0));
-  let h='<thead><tr><th>단지</th><th>준공</th><th>대표<br>면적</th><th>매매<br>중위</th><th>전세<br>중위</th><th>전용<br>평당가</th></tr></thead><tbody>';
+  rows.sort((a,b)=>b.ns-a.ns);
+  const trCell=v=>v===null?'<span style="color:#7a8694">-</span>':(v>0.5?`<span style="color:#c4661f;font-weight:800">▲ ${v.toFixed(1)}%</span>`:(v<-0.5?`<span style="color:#1565c0;font-weight:800">▼ ${Math.abs(v).toFixed(1)}%</span>`:'<span style="color:#7a8694">보합</span>'));
+  let h='<thead><tr><th>단지</th><th>대표<br>면적</th><th>최근<br>거래</th><th>6개월<br>중위</th><th>3개월<br>추세</th><th>전세<br>가율</th></tr></thead><tbody>';
   rows.forEach(r=>{
     h+=`<tr><td class="nm">${r.nm}<br><span style="font-weight:400;font-size:11px;color:#7a8694">${r.un?r.un.toLocaleString()+'세대':''}</span></td>
-        <td>${r.yr||'-'}</td>
-        <td>${r.m2}㎡<br><span style="font-size:11px;color:#7a8694">${Math.round(r.m2/3.3058)}평</span></td>
-        <td><b>${r.sale?r.sale.toFixed(1)+'억':'-'}</b><br><span style="font-size:11px;color:#7a8694">${r.ns}건</span></td>
-        <td>${r.je?r.je.toFixed(1)+'억':'-'}<br><span style="font-size:11px;color:#7a8694">${r.nj}건</span></td>
-        <td>${r.ppy?(r.ppy*10000).toLocaleString()+'만':'-'}</td></tr>`;
+    <td>${r.m2}㎡<br><span style="font-size:11px;color:#7a8694">${Math.round(r.m2/3.3058)}평</span></td>
+    <td>${r.last?`<b>${r.last.amt.toFixed(1)}억</b><br><span style="font-size:11px;color:#7a8694">${r.last.date.slice(2)}</span>`:'-'}</td>
+    <td>${r.mid?r.mid.toFixed(1)+'억':'-'}<br><span style="font-size:11px;color:#7a8694">${r.ns}건</span></td>
+    <td>${trCell(r.tr)}</td>
+    <td>${r.jr?r.jr+'%':'<span style="color:#7a8694">-</span>'}</td></tr>`;
   });
   document.getElementById('apt').innerHTML=h+'</tbody>';
   const aptMore=document.getElementById('apt-more');
@@ -1556,17 +1577,43 @@ async function load(){
     }
   }
 
-  const by={};
-  s.forEach(d=>{ by[d.u]=by[d.u]||{apt:[],vil:[],j:0,w:0};
-    if(d.t==='a')by[d.u].apt.push(d.p); else if(d.t==='v')by[d.u].vil.push(d.p); });
-  j.forEach(d=>{ by[d.u]=by[d.u]||{apt:[],vil:[],j:0,w:0}; by[d.u].j++; });
-  w.forEach(d=>{ by[d.u]=by[d.u]||{apt:[],vil:[],j:0,w:0}; by[d.u].w++; });
-  const cell=a=>a.length>=3?won(med(a)):(a.length?`<span style="color:#7a8694">${a.length}건</span>`:'-');
-  let u='<thead><tr><th>동</th><th>아파트<br>매매 중위</th><th>빌라<br>매매 중위</th><th>전세</th><th>월세</th></tr></thead><tbody>';
-  Object.entries(by).sort((a,b)=>(b[1].apt.length+b[1].vil.length+b[1].j+b[1].w)-(a[1].apt.length+a[1].vil.length+a[1].j+a[1].w)).forEach(([n,v])=>{
-    u+=`<tr><td class="nm">${n}</td><td>${cell(v.apt)}</td><td>${cell(v.vil)}</td><td>${v.j}건</td><td>${v.w}건</td></tr>`;
+  const allYm=[...new Set(au.sale.concat(au.jeonse,au.wolse).map(d=>d.ym))].sort();
+  const M=allYm[allYm.length-2], P=allYm[allYm.length-3];
+  const ML=parseInt(M.slice(4)), PL=parseInt(P.slice(4));
+  document.getElementById('umd-desc').textContent=`신고가 마감된 ${ML}월 기준 · ${PL}월과 비교합니다.`;
+  const fl={};
+  const add=(arr,key,fld)=>arr.forEach(d=>{fl[d.u]=fl[d.u]||{aM:0,vM:0,jM:0,wM:0,tM:0,tP:0};
+    if(d.ym===M){fl[d.u][fld]++;fl[d.u].tM++;} else if(d.ym===P){fl[d.u].tP++;}});
+  au.sale.forEach(d=>{fl[d.u]=fl[d.u]||{aM:0,vM:0,jM:0,wM:0,tM:0,tP:0};
+    if(d.ym===M){fl[d.u].tM++; if(d.t==='a')fl[d.u].aM++; else if(d.t==='v')fl[d.u].vM++;}
+    else if(d.ym===P){fl[d.u].tP++;}});
+  au.jeonse.forEach(d=>{fl[d.u]=fl[d.u]||{aM:0,vM:0,jM:0,wM:0,tM:0,tP:0};
+    if(d.ym===M){fl[d.u].tM++;fl[d.u].jM++;} else if(d.ym===P){fl[d.u].tP++;}});
+  au.wolse.forEach(d=>{fl[d.u]=fl[d.u]||{aM:0,vM:0,jM:0,wM:0,tM:0,tP:0};
+    if(d.ym===M){fl[d.u].tM++;fl[d.u].wM++;} else if(d.ym===P){fl[d.u].tP++;}});
+  const pct=(m,p)=>p?Math.round((m-p)/p*100):null;
+  let u='<thead><tr><th>동</th><th>'+ML+'월<br>거래</th><th>전월<br>대비</th><th>아파트<br>매매</th><th>빌라<br>매매</th><th>전세</th><th>월세<br>비중</th></tr></thead><tbody>';
+  Object.entries(fl).filter(([n,v])=>v.tM>0).sort((a,b)=>b[1].tM-a[1].tM).forEach(([n,v])=>{
+    const g=pct(v.tM,v.tP);
+    const gc=g===null?'-':(g>0?`<span style="color:#c4661f;font-weight:800">▲${g}%</span>`:(g<0?`<span style="color:#1565c0;font-weight:800">▼${Math.abs(g)}%</span>`:'0%'));
+    const rent=v.jM+v.wM;
+    const wr=rent>=10?Math.round(v.wM/rent*100)+'%':'<span style="color:#7a8694">-</span>';
+    u+=`<tr><td class="nm">${n}</td><td><b>${v.tM}</b>건</td><td>${gc}</td><td>${v.aM}건</td><td>${v.vM}건</td><td>${v.jM}건</td><td>${wr}</td></tr>`;
   });
   document.getElementById('umd').innerHTML=u+'</tbody>';
+  // ─ 자동 분석 카드 3장
+  try{
+    const inc=Object.entries(fl).map(([n,v])=>({n,d:v.tM-v.tP,tM:v.tM})).sort((a,b)=>b.d-a.d)[0];
+    const wtop=Object.entries(fl).filter(([n,v])=>v.jM+v.wM>=30).map(([n,v])=>({n,r:v.wM/(v.jM+v.wM)})).sort((a,b)=>b.r-a.r)[0];
+    const cnt={};
+    au.sale.filter(d=>d.t==='a'&&allYm.slice(-3).includes(d.ym)&&d.b).forEach(d=>{const k=d.u+' '+d.b;cnt[k]=(cnt[k]||0)+1;});
+    const btop=Object.entries(cnt).sort((a,b)=>b[1]-a[1])[0];
+    const ins=[];
+    if(inc)ins.push(['거래가 가장 늘어난 동',`${inc.n} ${inc.tM}건`,`${ML}월, 전월보다 ${inc.d>=0?'+':''}${inc.d}건`]);
+    if(wtop)ins.push(['월세 비중이 가장 높은 동',`${wtop.n} ${Math.round(wtop.r*100)}%`,`${ML}월 임대차 기준`]);
+    if(btop)ins.push(['아파트 거래가 가장 활발한 단지',`${btop[0]}`,`최근 3개월 ${btop[1]}건`]);
+    document.getElementById('ins').innerHTML=ins.map(c=>`<div class="ins-card"><div class="ins-k">${c[0]}</div><div class="ins-v">${c[1]}</div><div class="ins-s">${c[2]}</div></div>`).join('');
+  }catch(_){}
 
  }catch(e){
   console.error(e);
