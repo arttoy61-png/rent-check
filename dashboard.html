@@ -503,7 +503,9 @@ footer a{
   tbody tr:hover td{background:#f4f8fc}
   tbody tr:hover td:first-child{background:#f4f8fc}
 }
+.mo-only{display:none}
 @media(max-width:520px){
+  .mo-only{display:inline}
   .wrap{padding-left:12px;padding-right:12px;padding-bottom:56px}
   header{padding:26px 0 24px}
   .brand{font-size:10px}
@@ -517,9 +519,15 @@ footer a{
   .kpi .n{font-size:18px}
   .kpi>div:first-child .n{font-size:27px}
   .tw{margin-right:-4px}
-  table{min-width:640px;font-size:12px}
-  th,td{padding:9px 6px}
-  td.nm{min-width:134px}
+  table{min-width:0;width:100%;font-size:11.5px}
+  th,td{padding:8px 3px}
+  td.nm{min-width:0}
+  /* 모바일: 스크롤 없이 들어가도록 보조 열 숨김 */
+  #apt th:nth-child(2), #apt td:nth-child(2),
+  #apt th:nth-child(6), #apt td:nth-child(6){display:none}
+  #apt td.nm{font-size:11px;line-height:1.35}
+  .redev th:nth-child(2), .redev td:nth-child(2){display:none}
+  #umd th, #umd td{padding:8px 2px}
   .blog{padding:17px 50px 17px 16px}
 }
 @media(prefers-reduced-motion:reduce){
@@ -549,7 +557,7 @@ footer a{
 <h2>🏢 화곡동 아파트 시세</h2>
 <div class="desc">대표 단지 · 최근 6개월 거래 · 전용 평당가 높은 순</div>
 <div class="tw"><table id="apt"><tbody><tr><td class="ld">불러오는 중…</td></tr></tbody></table></div>
-<div class="note">※ 각 단지에서 거래가 가장 많은 면적을 대표로 표시했습니다. 매매·전세 모두 중위값이며, 평당가는 전용면적 기준입니다. 소형 면적일수록 평당가가 높게 잡히는 점에 유의하세요.</div>
+<div class="note"><span class="mo-only">※ 작은 화면에서는 준공연도·평당가 열이 생략됩니다. </span>※ 각 단지에서 거래가 가장 많은 면적을 대표로 표시했습니다. 매매·전세 모두 중위값이며, 평당가는 전용면적 기준입니다. 소형 면적일수록 평당가가 높게 잡히는 점에 유의하세요.</div>
 </div>
 
 <div class="card">
