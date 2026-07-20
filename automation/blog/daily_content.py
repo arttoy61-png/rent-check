@@ -356,7 +356,7 @@ def gen_weekly_summary(report: dict, csv_rows: list, date_str: str) -> dict:
         for (nm, ar), rs in _pairs.items():
             if len(rs) < 2 or not nm: continue
             vals = [(to_int(r.get("deal_amount")) or to_int(r.get("deposit")), r) for r in rs]
-            vals.sort()
+            vals.sort(key=lambda x: x[0])
             gap = vals[-1][0] - vals[0][0]
             if gap >= 1500:
                 k = "매매" if "매매" in str(vals[0][1].get("deal_type","")) else "전세"
