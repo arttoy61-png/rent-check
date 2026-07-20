@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>강서구 실거래 기록 | 렌트체크 강서</title>
+<meta name="description" content="국토교통부 실거래가 공개자료를 매일 자동 수집해 정리하는 강서구 실거래 공개 기록. 화곡동·등촌동·마곡동 등 강서구 12개 동의 매매·전세·월세 실거래를 무료로 확인하세요.">
+<meta property="og:title" content="강서구 실거래 기록 | 렌트체크 강서">
+<meta property="og:description" content="매일 자동 갱신되는 강서구 실거래 공개 기록. 회원가입 없이 확인하세요.">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "강서구 실거래 기록",
+  "description": "서울시 강서구 아파트·연립다세대·오피스텔의 매매·전세·월세 실거래 데이터를 매일 자동 수집해 정리한 공개 기록",
+  "creator": {"@type": "Organization", "name": "렌트체크 강서"},
+  "spatialCoverage": "서울특별시 강서구",
+  "isAccessibleForFree": true,
+  "license": "https://www.data.go.kr",
+  "includedInDataCatalog": {"@type":"DataCatalog","name":"국토교통부 실거래가 공개시스템"}
+}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Malgun Gothic','맑은 고딕',sans-serif;background:#f5f6f8;color:#1c2733;line-height:1.6;-webkit-text-size-adjust:100%}
+.wrap{max-width:1000px;margin:0 auto;padding:0 16px 60px}
+header{background:#0d1f3c;color:#fff;padding:28px 0 24px;margin-bottom:20px}
+header .wrap{padding-bottom:0}
+.brand{font-size:13px;letter-spacing:2px;color:#d4a73a;font-weight:700;margin-bottom:6px}
+h1{font-size:26px;font-weight:800;letter-spacing:-0.5px;margin-bottom:8px}
+.sub{font-size:14px;color:#b8c4d4}
+.updated{display:inline-block;margin-top:12px;background:rgba(212,167,58,.15);border:1px solid #d4a73a;color:#d4a73a;padding:5px 12px;border-radius:20px;font-size:12.5px;font-weight:600}
+.card{background:#fff;border-radius:12px;padding:20px;margin-bottom:16px;box-shadow:0 1px 3px rgba(13,31,60,.07)}
+.card h2{font-size:17px;font-weight:800;color:#0d1f3c;margin-bottom:4px;display:flex;align-items:center;gap:7px}
+.card .desc{font-size:12.5px;color:#6b7684;margin-bottom:14px}
+.kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
+.kpi div{background:#f8f9fb;border:1px solid #e8eaee;border-radius:10px;padding:14px 12px;text-align:center}
+.kpi .n{font-size:22px;font-weight:800;color:#0d1f3c;letter-spacing:-0.5px}
+.kpi .l{font-size:11.5px;color:#6b7684;margin-top:3px}
+.kpi .u{font-size:13px;color:#1565c0;font-weight:700}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{background:#0d1f3c;color:#fff;padding:9px 6px;font-weight:600;font-size:12.5px;white-space:nowrap}
+td{padding:9px 6px;border-bottom:1px solid #eef0f3;text-align:center}
+td.nm{text-align:left;font-weight:600;color:#0d1f3c}
+tr:last-child td{border-bottom:none}
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 -4px}
+.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.tool{display:block;background:#f8f9fb;border:1px solid #e8eaee;border-radius:10px;padding:15px 13px;text-decoration:none;color:#1c2733;transition:.15s}
+.tool:hover,.tool:active{border-color:#1565c0;background:#f0f6fd}
+.tool .t{font-weight:700;font-size:14px;color:#0d1f3c;margin-bottom:3px}
+.tool .d{font-size:11.5px;color:#6b7684;line-height:1.45}
+.redev td.st{font-weight:700}
+.tag{display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700}
+.t-go{background:#e8f3ff;color:#1565c0}
+.t-wait{background:#fff4e6;color:#c4661f}
+.t-plan{background:#f0f0f2;color:#6b7684}
+.cite{background:#fffdf5;border:1px solid #d4a73a}
+.citebox{background:#f8f9fb;border:1px dashed #c9cdd4;border-radius:8px;padding:12px;font-size:12.5px;color:#3d4756;line-height:1.7;margin-top:10px;word-break:keep-all}
+.btn{display:inline-block;margin-top:10px;background:#0d1f3c;color:#fff;border:none;padding:9px 16px;border-radius:7px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit}
+.note{font-size:11.5px;color:#8b95a1;line-height:1.65;margin-top:10px}
+footer{text-align:center;padding:30px 16px;color:#6b7684;font-size:12.5px}
+footer a{color:#1565c0;text-decoration:none;font-weight:600}
+.blog{display:block;background:#0d1f3c;color:#fff;text-align:center;padding:16px;border-radius:12px;text-decoration:none;font-weight:700;font-size:15px;margin-bottom:16px}
+.blog span{display:block;font-size:12px;color:#d4a73a;font-weight:600;margin-top:3px}
+.ld{text-align:center;padding:24px;color:#8b95a1;font-size:13px}
+@media(max-width:520px){h1{font-size:22px}.kpi .n{font-size:19px}table{font-size:12.5px}th,td{padding:8px 4px}}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap">
+<div class="brand">RENT CHECK 강서</div>
+<h1>강서구 실거래 기록</h1>
+<div class="sub">국토교통부 실거래가 공개자료를 매일 수집해 정리합니다</div>
+<div class="updated" id="upd">데이터 확인 중…</div>
+</div>
+</header>
+
+<div class="wrap">
+
+<div class="card">
+<h2>📊 이번 달 강서구 거래</h2>
+<div class="desc">계약일 기준 · 신고 지연으로 최근 거래는 계속 추가됩니다</div>
+<div class="kpi" id="kpi"><div><div class="n">…</div><div class="l">불러오는 중</div></div></div>
+</div>
+
+<div class="card">
+<h2>🏢 화곡동 아파트 시세</h2>
+<div class="desc">대표 단지 · 최근 6개월 거래 · 전용 평당가 높은 순</div>
+<div class="tw"><table id="apt"><tbody><tr><td class="ld">불러오는 중…</td></tr></tbody></table></div>
+<div class="note">※ 각 단지에서 거래가 가장 많은 면적을 대표로 표시했습니다. 매매·전세 모두 중위값이며, 평당가는 전용면적 기준입니다. 소형 면적일수록 평당가가 높게 잡히는 점에 유의하세요.</div>
+</div>
+
+<div class="card">
+<h2>🏘️ 동별 거래 현황</h2>
+<div class="desc">강서구 12개 동 · 이번 달 신고분</div>
+<div class="tw"><table id="umd"><tbody><tr><td class="ld">불러오는 중…</td></tr></tbody></table></div>
+</div>
+
+<div class="card">
+<h2>🏗️ 화곡동 정비사업 현황</h2>
+<div class="desc">정비사업 정보몽땅·서울시 고시 기준 (2026.7 확인)</div>
+<div class="tw"><table class="redev">
+<thead><tr><th>구역</th><th>사업방식</th><th>단계</th><th>규모</th></tr></thead>
+<tbody>
+<tr><td class="nm">화곡동 1033 일대</td><td>역세권 장기전세<br>도시정비형 재개발</td><td class="st"><span class="tag t-go">정비구역 지정</span></td><td>2,146세대<br>지하3~지상18층</td></tr>
+<tr><td class="nm">화곡동 1130-7 일대</td><td>가로주택정비</td><td class="st"><span class="tag t-go">조합설립인가</span></td><td>217세대<br>지상 8층</td></tr>
+<tr><td class="nm">화곡1동 354 일대</td><td>모아타운</td><td class="st"><span class="tag t-wait">조합설립(A2-2·A2-4)</span></td><td>구역별 상이</td></tr>
+<tr><td class="nm">화곡6동 957-1 일대</td><td>모아타운</td><td class="st"><span class="tag t-wait">조합설립(A1)</span></td><td>구역별 상이</td></tr>
+<tr><td class="nm">화곡동 359-124</td><td>가로주택정비</td><td class="st"><span class="tag t-wait">조합설립인가</span></td><td>보성연립</td></tr>
+<tr><td class="nm">화곡동 812-26</td><td>재건축</td><td class="st"><span class="tag t-plan">이전고시·일시중단</span></td><td>젤라연립</td></tr>
+</tbody></table></div>
+<div class="note">※ 단계는 행정 절차 기준이며, 실제 사업 진행 속도와 다를 수 있습니다. 매수 검토 시 토지이음에서 해당 지번이 <b>사업시행구역</b>에 포함되는지 반드시 확인하세요. 관리지역 포함만으로는 분양자격이 확정되지 않습니다.</div>
+</div>
+
+<div class="card">
+<h2>🧮 무료 확인 도구</h2>
+<div class="desc">회원가입 없이 바로 사용하세요</div>
+<div class="tools">
+<a class="tool" href="index.html"><div class="t">내 월세 적정한가?</div><div class="d">전월세 실거래로 내 계약 조건 검증</div></a>
+<a class="tool" href="hwagok_map_widget.html"><div class="t">아파트 시세 지도</div><div class="d">화곡동 12개 단지 실시간 시세</div></a>
+<a class="tool" href="calc.html"><div class="t">재개발 분담금 계산기</div><div class="d">소유주·매수자 분담금 추정</div></a>
+<a class="tool" href="auction_check.html"><div class="t">경매 실거래 체크</div><div class="d">감정가 vs 주변 실거래 비교</div></a>
+<a class="tool" href="youth_score.html"><div class="t">청년주택 순위 점수</div><div class="d">내 순위·가점 자가진단</div></a>
+<a class="tool" href="moving_date_widget.html"><div class="t">이사 날짜 계산기</div><div class="d">계약·이사 일정 정리</div></a>
+</div>
+</div>
+
+<a class="blog" href="https://blog.naver.com/spitoon61" target="_blank">렌트체크 강서 블로그<span>실거래 분석 · 재개발 · 청년주택 정보</span></a>
+
+<div class="card cite">
+<h2>📌 이 자료 인용 안내</h2>
+<div class="desc">언론·연구·블로그에서 자유롭게 인용하실 수 있습니다</div>
+<div style="font-size:13.5px;line-height:1.75">원자료는 국토교통부 실거래가 공개시스템이며, 렌트체크 강서가 매일 자동 수집·정리해 공개합니다. 별도 허락 없이 인용 가능하며, 출처를 함께 표기해 주시면 됩니다.</div>
+<div class="citebox" id="citetext">렌트체크 강서, 「강서구 실거래 기록」(국토교통부 실거래가 공개자료 정리), 확인일 —</div>
+<button class="btn" onclick="cp()">인용 문구 복사</button>
+<div class="note">데이터 특성상 신고 지연(계약 후 최대 30일)이 있어 최근 거래는 일부 누락될 수 있으며, 해제 신고된 거래는 집계에서 제외했습니다.</div>
+</div>
+
+</div>
+
+<footer>
+<b style="color:#0d1f3c">Rent Check 강서</b> · 실거래로 더 정확하게<br>
+데이터 출처: 국토교통부 실거래가 공개시스템<br>
+<a href="https://blog.naver.com/spitoon61" target="_blank">블로그</a> · 매일 자동 갱신
+</footer>
+
+<script>
+const won=n=>{const e=Math.round(n/1e4),t=Math.round(n%1e4);return e>0?t>0?e+"억 "+t.toLocaleString():e+"억":n.toLocaleString()+"만"};
+const med=a=>{if(!a.length)return 0;const s=[...a].sort((x,y)=>x-y),m=Math.floor(s.length/2);return s.length%2?s[m]:Math.round((s[m-1]+s[m])/2)};
+const TYPE={a:"아파트",o:"오피스텔",v:"연립다세대",d:"단독다가구"};
+
+async function load(){
+ try{
+  const [au,apt]=await Promise.all([
+    fetch('auction_data.json',{cache:'no-cache'}).then(r=>r.json()),
+    fetch('hwagok_apt_data.json',{cache:'no-cache'}).then(r=>r.json())
+  ]);
+
+  // 갱신일
+  const g=apt.generated_at?new Date(apt.generated_at):new Date();
+  const ds=g.getFullYear()+'. '+(g.getMonth()+1)+'. '+g.getDate()+'.';
+  document.getElementById('upd').textContent='최근 갱신 '+ds;
+  document.getElementById('citetext').textContent='렌트체크 강서, 「강서구 실거래 기록」(국토교통부 실거래가 공개자료 정리), '+ds+' 확인, https://arttoy61-png.github.io/rent-check/dashboard.html';
+
+  // 이번 달
+  const ym=au.updated;
+  const yl=ym.slice(0,4), ml=parseInt(ym.slice(4,6));
+  const s=au.sale.filter(d=>d.ym===ym), j=au.jeonse.filter(d=>d.ym===ym), w=au.wolse.filter(d=>d.ym===ym);
+  const sp=s.map(d=>d.p), jp=j.map(d=>d.p);
+  document.getElementById('kpi').innerHTML=
+   `<div><div class="n">${(s.length+j.length+w.length).toLocaleString()}<span class="u">건</span></div><div class="l">${ml}월 전체 거래</div></div>
+    <div><div class="n">${s.length.toLocaleString()}<span class="u">건</span></div><div class="l">매매</div></div>
+    <div><div class="n">${(j.length+w.length).toLocaleString()}<span class="u">건</span></div><div class="l">전월세</div></div>
+    <div><div class="n">${sp.length?won(med(sp)):'-'}</div><div class="l">매매 중위가</div></div>
+    <div><div class="n">${jp.length?won(med(jp)):'-'}</div><div class="l">전세 중위가</div></div>`;
+
+  // 아파트 12단지 — 대표 면적 기준, 전용 평당가 순
+  const rows=[];
+  apt.complexes.forEach(c=>{
+    const ar=((apt.detail[c.name]||{}).areas)||[];
+    if(!ar.length)return;
+    const rep=[...ar].sort((a,b)=>(b.nSale||0)-(a.nSale||0))[0];
+    const je=(rep.jeonse||[]).map(x=>x.dep).filter(Boolean);
+    rows.push({nm:c.name,yr:c.year,un:c.units,m2:rep.m2,
+      sale:rep.mid,ppy:rep.ppy,je:je.length?med(je):null,
+      ns:rep.nSale||0,nj:rep.nJe||0});
+  });
+  rows.sort((a,b)=>(b.ppy||0)-(a.ppy||0));
+  let h='<thead><tr><th>단지</th><th>준공</th><th>대표<br>면적</th><th>매매<br>중위</th><th>전세<br>중위</th><th>전용<br>평당가</th></tr></thead><tbody>';
+  rows.forEach(r=>{
+    h+=`<tr><td class="nm">${r.nm}<br><span style="font-weight:400;font-size:11px;color:#8b95a1">${r.un?r.un.toLocaleString()+'세대':''}</span></td>
+        <td>${r.yr||'-'}</td>
+        <td>${r.m2}㎡<br><span style="font-size:11px;color:#8b95a1">${Math.round(r.m2/3.3058)}평</span></td>
+        <td><b>${r.sale?r.sale.toFixed(1)+'억':'-'}</b><br><span style="font-size:11px;color:#8b95a1">${r.ns}건</span></td>
+        <td>${r.je?r.je.toFixed(1)+'억':'-'}<br><span style="font-size:11px;color:#8b95a1">${r.nj}건</span></td>
+        <td>${r.ppy?(r.ppy*10000).toLocaleString()+'만':'-'}</td></tr>`;
+  });
+  document.getElementById('apt').innerHTML=h+'</tbody>';
+
+  // 동별
+  const by={};
+  [...s.map(d=>({...d,k:'s'})),...j.map(d=>({...d,k:'j'})),...w.map(d=>({...d,k:'w'}))].forEach(d=>{
+    by[d.u]=by[d.u]||{s:[],j:0,w:0};
+    if(d.k==='s')by[d.u].s.push(d.p); else if(d.k==='j')by[d.u].j++; else by[d.u].w++;
+  });
+  let u='<thead><tr><th>동</th><th>매매</th><th>매매 중위가</th><th>전세</th><th>월세</th></tr></thead><tbody>';
+  Object.entries(by).sort((a,b)=>(b[1].s.length+b[1].j+b[1].w)-(a[1].s.length+a[1].j+a[1].w)).forEach(([n,v])=>{
+    u+=`<tr><td class="nm">${n}</td><td>${v.s.length}건</td><td>${v.s.length?won(med(v.s)):'-'}</td><td>${v.j}건</td><td>${v.w}건</td></tr>`;
+  });
+  document.getElementById('umd').innerHTML=u+'</tbody>';
+
+ }catch(e){
+  console.error(e);
+  document.getElementById('upd').textContent='데이터를 불러오지 못했습니다';
+ }
+}
+function cp(){
+ const t=document.getElementById('citetext').textContent;
+ navigator.clipboard.writeText(t).then(()=>{
+   const b=document.querySelector('.btn'); const o=b.textContent;
+   b.textContent='복사되었습니다'; setTimeout(()=>b.textContent=o,1500);
+ });
+}
+load();
+</script>
+</body>
+</html>
