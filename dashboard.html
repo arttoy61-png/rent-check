@@ -4,623 +4,1358 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>강서구 실거래 기록 | 렌트체크 강서</title>
-<meta name="description" content="국토교통부 실거래가 공개자료를 매일 자동 수집해 정리하는 강서구 실거래 공개 기록. 화곡동·등촌동·마곡동 등 강서구 12개 동의 매매·전세·월세 실거래를 무료로 확인하세요.">
+<meta name="description" content="국토교통부 실거래가 공개자료를 매일 자동 수집해 정리하는 강서구 실거래 현황. 화곡동 아파트 시세, 강서구 동별 매매·전세·월세 거래, 정비사업 현황을 무료로 확인하세요.">
 <meta property="og:title" content="강서구 실거래 기록 | 렌트체크 강서">
-<meta property="og:description" content="매일 자동 갱신되는 강서구 실거래 공개 기록. 회원가입 없이 확인하세요.">
+<meta property="og:description" content="강서구 실거래 최신 현황을 매일 자동 갱신합니다. 회원가입 없이 확인하세요.">
 <meta property="og:type" content="website">
+<meta name="theme-color" content="#0d1f3c">
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "Dataset",
-  "name": "강서구 실거래 기록",
-  "description": "서울시 강서구 아파트·연립다세대·오피스텔의 매매·전세·월세 실거래 데이터를 매일 자동 수집해 정리한 공개 기록",
-  "creator": {"@type": "Organization", "name": "렌트체크 강서"},
-  "spatialCoverage": "서울특별시 강서구",
-  "isAccessibleForFree": true,
-  "license": "https://www.data.go.kr",
-  "includedInDataCatalog": {"@type":"DataCatalog","name":"국토교통부 실거래가 공개시스템"}
+  "@context":"https://schema.org",
+  "@type":"Dataset",
+  "name":"강서구 실거래 기록",
+  "description":"서울시 강서구 아파트·연립다세대·오피스텔의 매매·전세·월세 실거래 데이터를 매일 자동 수집해 정리한 최신 현황",
+  "creator":{"@type":"Organization","name":"렌트체크 강서"},
+  "spatialCoverage":"서울특별시 강서구",
+  "isAccessibleForFree":true,
+  "license":"https://www.data.go.kr",
+  "includedInDataCatalog":{"@type":"DataCatalog","name":"국토교통부 실거래가 공개시스템"}
 }
 </script>
 <style>
 :root{
   --navy:#0d1f3c;
+  --navy-2:#153a67;
   --gold:#d4a73a;
   --blue:#1565c0;
+  --blue-2:#0f4f98;
   --ink:#1c2733;
-  --muted:#6b7684;
+  --muted:#647180;
   --line:#dfe5ec;
-  --paper:#ffffff;
-  --bg:#eef2f6;
-  --soft-blue:#eef5fd;
-  --soft-gold:#fff9e9;
-  --shadow:0 12px 32px rgba(13,31,60,.08);
-  --shadow-hover:0 16px 38px rgba(13,31,60,.12);
+  --line-soft:#e9edf2;
+  --paper:#fff;
+  --bg:#f3f5f8;
+  --soft-blue:#f1f6fc;
+  --soft-gold:#fff9ea;
+  --green:#2cb66d;
+  --radius:20px;
+  --shadow:0 14px 36px rgba(13,31,60,.08);
 }
-*{margin:0;padding:0;box-sizing:border-box}
+*{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;background:var(--bg)}
 body{
   min-width:320px;
-  font-family:-apple-system,BlinkMacSystemFont,"Pretendard","Apple SD Gothic Neo","Malgun Gothic","맑은 고딕",sans-serif;
-  background:
-    radial-gradient(circle at 10% 0%,rgba(21,101,192,.08),transparent 26rem),
-    linear-gradient(180deg,#f7f9fc 0,#eef2f6 100%);
   color:var(--ink);
-  line-height:1.65;
+  background:var(--bg);
+  font-family:-apple-system,BlinkMacSystemFont,"Pretendard","Apple SD Gothic Neo","Malgun Gothic","맑은 고딕",sans-serif;
+  line-height:1.6;
   letter-spacing:-.018em;
   -webkit-text-size-adjust:100%;
   text-rendering:optimizeLegibility;
 }
-a,button{-webkit-tap-highlight-color:transparent}
-button,a{touch-action:manipulation}
-.wrap{width:min(100%,1080px);margin:0 auto;padding:0 16px 72px}
+a,button{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+a{color:inherit}
+.shell{width:min(100%,1120px);margin:0 auto;padding:0 18px}
 
-header{
+/* HERO */
+.hero{
   position:relative;
   overflow:hidden;
-  margin-bottom:22px;
-  padding:30px 0 28px;
   color:#fff;
   background:
-    radial-gradient(circle at 86% 18%,rgba(212,167,58,.22),transparent 15rem),
-    linear-gradient(135deg,#0d1f3c 0%,#102b50 58%,#0d1f3c 100%);
-  box-shadow:0 14px 34px rgba(13,31,60,.18);
+    radial-gradient(circle at 82% 22%,rgba(212,167,58,.22),transparent 18rem),
+    radial-gradient(circle at 14% 110%,rgba(21,101,192,.24),transparent 22rem),
+    linear-gradient(135deg,#091a33 0%,#0d294b 56%,#0d1f3c 100%);
+  border-bottom:1px solid rgba(255,255,255,.08);
 }
-header::before{
+.hero::after{
   content:"";
   position:absolute;
-  inset:auto -70px -120px auto;
-  width:250px;
-  height:250px;
-  border:1px solid rgba(255,255,255,.08);
-  border-radius:50%;
-  box-shadow:0 0 0 28px rgba(255,255,255,.025),0 0 0 56px rgba(255,255,255,.018);
-}
-header::after{
-  content:"";
-  position:absolute;
-  left:0;
-  right:0;
-  bottom:0;
+  inset:auto 0 0;
   height:3px;
-  background:linear-gradient(90deg,var(--gold),rgba(212,167,58,.15) 44%,var(--blue));
+  background:linear-gradient(90deg,var(--gold),rgba(212,167,58,.2) 44%,var(--blue));
 }
-header .wrap{position:relative;z-index:1;padding-bottom:0}
-.brand{
+.hero-inner{padding:22px 0 34px}
+.topline{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  margin-bottom:34px;
+}
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:1.45px;
+}
+.logo-mark{
+  display:grid;
+  place-items:center;
+  width:28px;
+  height:28px;
+  border:1px solid rgba(212,167,58,.62);
+  border-radius:9px;
+  color:var(--gold);
+  background:rgba(255,255,255,.05);
+  font-size:11px;
+}
+.top-source{color:#9fb0c4;font-size:11.5px;font-weight:700}
+.hero-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.45fr) minmax(250px,.55fr);
+  gap:32px;
+  align-items:end;
+}
+.eyebrow{
   display:inline-flex;
   align-items:center;
   gap:8px;
-  margin-bottom:12px;
-  padding:6px 10px;
-  border:1px solid rgba(212,167,58,.44);
-  border-radius:999px;
-  color:#f3ce69;
-  background:rgba(13,31,60,.34);
-  font-size:11px;
-  font-weight:800;
-  letter-spacing:1.6px;
-  backdrop-filter:blur(8px);
-}
-.brand::before{
-  content:"";
-  width:7px;
-  height:7px;
-  border-radius:50%;
-  background:var(--gold);
-  box-shadow:0 0 0 4px rgba(212,167,58,.13);
-}
-h1{
-  margin-bottom:8px;
-  font-size:clamp(28px,7vw,42px);
-  font-weight:900;
-  line-height:1.18;
-  letter-spacing:-.045em;
-}
-.sub{
-  max-width:670px;
-  color:#c7d2df;
-  font-size:14px;
-  line-height:1.6;
-}
-.updated{
-  display:inline-flex;
-  align-items:center;
-  gap:7px;
-  margin-top:16px;
-  padding:7px 12px;
-  border:1px solid rgba(212,167,58,.54);
-  border-radius:999px;
-  color:#f0cb67;
-  background:rgba(5,20,41,.38);
+  margin-bottom:13px;
+  color:#e9c55d;
   font-size:12px;
-  font-weight:800;
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.06);
+  font-weight:900;
+  letter-spacing:.8px;
 }
-.updated::before{
-  content:"";
-  width:7px;
-  height:7px;
-  border-radius:50%;
-  background:#49d17d;
-  box-shadow:0 0 0 4px rgba(73,209,125,.12);
+.eyebrow::before{content:"";width:22px;height:2px;background:var(--gold)}
+h1{
+  max-width:700px;
+  font-size:clamp(34px,6vw,58px);
+  font-weight:950;
+  line-height:1.08;
+  letter-spacing:-.055em;
 }
-
-.card{
-  position:relative;
-  overflow:hidden;
-  margin-bottom:16px;
-  padding:20px;
-  border:1px solid rgba(13,31,60,.08);
+.hero-copy{
+  max-width:650px;
+  margin-top:15px;
+  color:#c4d0dd;
+  font-size:15px;
+  line-height:1.7;
+}
+.live-panel{
+  padding:18px;
+  border:1px solid rgba(255,255,255,.13);
   border-radius:18px;
-  background:rgba(255,255,255,.94);
-  box-shadow:var(--shadow);
+  background:rgba(7,22,43,.42);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.05);
+  backdrop-filter:blur(10px);
 }
-.card::before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  height:3px;
-  background:linear-gradient(90deg,var(--blue),rgba(21,101,192,.14) 54%,transparent);
-}
-.card h2{
+.live-label{
   display:flex;
   align-items:center;
   gap:8px;
-  margin-bottom:5px;
-  color:var(--navy);
-  font-size:18px;
+  margin-bottom:8px;
+  color:#d5dde6;
+  font-size:12px;
+  font-weight:800;
+}
+.live-dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 5px rgba(44,182,109,.13)}
+.updated{
+  color:#fff;
+  font-size:19px;
   font-weight:900;
   line-height:1.35;
-  letter-spacing:-.035em;
 }
-.card .desc{
-  margin-bottom:16px;
+.live-note{margin-top:7px;color:#9fb0c4;font-size:11.5px;line-height:1.55}
+
+/* NAV */
+.page-nav-wrap{position:relative;z-index:4;margin-top:-18px}
+.page-nav{
+  display:flex;
+  gap:8px;
+  overflow-x:auto;
+  padding:10px;
+  border:1px solid rgba(13,31,60,.08);
+  border-radius:16px;
+  background:rgba(255,255,255,.97);
+  box-shadow:0 12px 28px rgba(13,31,60,.1);
+  scrollbar-width:none;
+}
+.page-nav::-webkit-scrollbar{display:none}
+.page-nav a{
+  flex:0 0 auto;
+  padding:9px 13px;
+  border-radius:10px;
+  color:#52606f;
+  font-size:12px;
+  font-weight:850;
+  text-decoration:none;
+  white-space:nowrap;
+  transition:.18s ease;
+}
+.page-nav a.active{color:#fff;background:var(--navy);border-color:var(--navy);box-shadow:0 6px 14px rgba(13,31,60,.16)}
+.page-nav a:hover,.page-nav a:focus-visible{color:var(--blue);background:var(--soft-blue);outline:none}
+.page-nav a.active:hover{color:#fff;background:var(--navy-2)}
+
+main{padding:26px 0 70px}
+.section{scroll-margin-top:18px}
+.section{
+  margin-bottom:22px;
+  border:1px solid rgba(13,31,60,.09);
+  border-radius:var(--radius);
+  background:var(--paper);
+  box-shadow:var(--shadow);
+}
+.section-head{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:18px;
+  padding:24px 26px 18px;
+  border-bottom:1px solid var(--line-soft);
+}
+.section-title-wrap{min-width:0}
+.section-kicker{
+  display:block;
+  margin-bottom:5px;
+  color:var(--blue);
+  font-size:10px;
+  font-weight:950;
+  letter-spacing:1.3px;
+}
+.section h2{
+  color:var(--navy);
+  font-size:22px;
+  font-weight:950;
+  line-height:1.3;
+  letter-spacing:-.04em;
+}
+.section-desc{
+  margin-top:6px;
   color:var(--muted);
   font-size:12.5px;
   line-height:1.55;
 }
+.section-badge{
+  flex:0 0 auto;
+  padding:7px 10px;
+  border:1px solid #d9e5f2;
+  border-radius:999px;
+  color:var(--blue);
+  background:var(--soft-blue);
+  font-size:10.5px;
+  font-weight:900;
+  white-space:nowrap;
+}
+.section-body{padding:22px 26px 26px}
 
+/* KPI */
+.summary{border-color:rgba(21,101,192,.18)}
+.summary .section-head{border-bottom:0;padding-bottom:8px}
+.summary .section-body{padding-top:12px}
 .kpi{
   display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
+  grid-template-columns:1.3fr repeat(4,minmax(0,1fr));
   gap:10px;
 }
 .kpi>div{
-  position:relative;
   min-width:0;
-  padding:16px 12px;
-  border:1px solid #e4e9ef;
-  border-radius:14px;
-  background:linear-gradient(180deg,#fff 0%,#f8fafc 100%);
-  text-align:center;
-  box-shadow:inset 0 1px 0 #fff;
+  padding:19px 14px;
+  border:1px solid var(--line);
+  border-radius:15px;
+  background:#fff;
+  text-align:left;
 }
 .kpi>div:first-child{
-  grid-column:1/-1;
-  padding:18px 14px;
-  border-color:transparent;
   color:#fff;
+  border-color:transparent;
   background:
-    radial-gradient(circle at 88% 12%,rgba(212,167,58,.25),transparent 7rem),
-    linear-gradient(135deg,var(--navy),#12345f);
-  box-shadow:0 12px 24px rgba(13,31,60,.16);
+    radial-gradient(circle at 92% 12%,rgba(212,167,58,.3),transparent 8rem),
+    linear-gradient(135deg,var(--navy),var(--navy-2));
 }
 .kpi .n{
   overflow:hidden;
   color:var(--navy);
-  font-size:clamp(19px,5vw,26px);
-  font-weight:900;
-  line-height:1.15;
-  letter-spacing:-.045em;
+  font-size:clamp(22px,3vw,30px);
+  font-weight:950;
+  line-height:1.08;
+  letter-spacing:-.05em;
   white-space:nowrap;
   text-overflow:ellipsis;
 }
-.kpi>div:first-child .n{color:#fff;font-size:clamp(25px,7vw,34px)}
-.kpi .l{
-  margin-top:6px;
-  color:var(--muted);
-  font-size:11.5px;
-  font-weight:700;
-}
-.kpi>div:first-child .l{color:#bdcada}
-.kpi .u{
-  margin-left:2px;
-  color:var(--blue);
-  font-size:.55em;
-  font-weight:900;
-  vertical-align:baseline;
-}
-.kpi>div:first-child .u{color:#f0ca64}
+.kpi>div:first-child .n{color:#fff;font-size:clamp(29px,4vw,39px)}
+.kpi .l{margin-top:8px;color:#697583;font-size:11.5px;font-weight:800}
+.kpi>div:first-child .l{color:#bac8d7}
+.kpi .u{margin-left:2px;color:var(--blue);font-size:.5em;font-weight:950}
+.kpi>div:first-child .u{color:#f0cb67}
 
-.tw{
+/* TABLES */
+.table-wrap{
   overflow-x:auto;
-  margin:0;
-  border:1px solid #e2e7ed;
-  border-radius:13px;
+  border:1px solid var(--line);
+  border-radius:14px;
   background:#fff;
   -webkit-overflow-scrolling:touch;
   scrollbar-width:thin;
-  scrollbar-color:#b8c2ce transparent;
+  scrollbar-color:#b9c4d0 transparent;
 }
-.tw::-webkit-scrollbar{height:7px}
-.tw::-webkit-scrollbar-thumb{border-radius:999px;background:#b8c2ce}
-table{
-  width:100%;
-  min-width:650px;
-  border-collapse:separate;
-  border-spacing:0;
-  font-size:13px;
-}
+.table-wrap::-webkit-scrollbar{height:7px}
+.table-wrap::-webkit-scrollbar-thumb{border-radius:999px;background:#b9c4d0}
+table{width:100%;min-width:660px;border-collapse:separate;border-spacing:0;font-size:13px}
 th{
-  position:relative;
-  padding:11px 8px;
-  border-right:1px solid rgba(255,255,255,.08);
+  padding:12px 9px;
+  border-right:1px solid rgba(255,255,255,.1);
   color:#fff;
   background:var(--navy);
-  font-size:12px;
-  font-weight:800;
+  font-size:11.5px;
+  font-weight:900;
   line-height:1.35;
   text-align:center;
   white-space:nowrap;
 }
-th:first-child{
-  position:sticky;
-  left:0;
-  z-index:3;
-  border-top-left-radius:12px;
-  text-align:left;
-}
-th:last-child{border-right:0;border-top-right-radius:12px}
+th:first-child{position:sticky;left:0;z-index:3;text-align:center}
+th:last-child{border-right:0}
 td{
-  padding:11px 8px;
-  border-right:1px solid #eef1f4;
-  border-bottom:1px solid #e8edf2;
-  background:#fff;
+  padding:13px 9px;
+  border-right:1px solid #edf0f4;
+  border-bottom:1px solid #e7ebf0;
   color:#303b48;
-  line-height:1.45;
+  background:#fff;
+  line-height:1.48;
   text-align:center;
 }
-td:first-child{
-  position:sticky;
-  left:0;
-  z-index:2;
-  box-shadow:7px 0 14px -14px rgba(13,31,60,.62);
-}
-tbody tr:nth-child(even) td{background:#fbfcfe}
+td:first-child{position:sticky;left:0;z-index:2;box-shadow:8px 0 16px -16px rgba(13,31,60,.7)}
+tbody tr:nth-child(even) td{background:#fafbfd}
 tbody tr:last-child td{border-bottom:0}
 td:last-child{border-right:0}
-td.nm{
-  min-width:145px;
-  color:var(--navy);
-  font-weight:800;
-  text-align:left;
-}
-.redev td.st{font-weight:800}
+td.nm{min-width:155px;color:var(--navy);font-weight:900;text-align:left}
+td.nm a{color:var(--navy);text-decoration:none;border-bottom:1px solid rgba(21,101,192,.3)}
+td.nm a:hover{color:var(--blue)}
+.redev td.st{font-weight:900}
 .tag{
   display:inline-flex;
   align-items:center;
-  min-height:25px;
-  padding:3px 8px;
+  min-height:26px;
+  padding:4px 9px;
   border-radius:999px;
-  font-size:10.5px;
-  font-weight:900;
-  line-height:1.2;
+  font-size:10px;
+  font-weight:950;
+  line-height:1.15;
   white-space:nowrap;
 }
-.t-go{color:var(--blue);background:#e8f3ff;border:1px solid #cfe4fb}
-.t-wait{color:#a75a12;background:#fff4e6;border:1px solid #f5ddbd}
-.t-plan{color:#66717e;background:#f0f2f5;border:1px solid #dfe3e8}
-
+.t-go{color:#0f5da9;background:#eaf4ff;border:1px solid #cde3fa}
+.t-wait{color:#a65c14;background:#fff5e8;border:1px solid #f1d9b9}
+.t-plan{color:#687482;background:#f1f3f5;border:1px solid #dfe4e9}
 .note{
-  margin-top:12px;
-  padding:10px 12px;
-  border-left:3px solid #b9c5d2;
-  border-radius:0 8px 8px 0;
-  color:#788391;
-  background:#f7f9fb;
+  margin-top:13px;
+  padding:12px 14px;
+  border-radius:10px;
+  color:#667281;
+  background:#f6f8fa;
   font-size:11.5px;
-  line-height:1.65;
+  line-height:1.68;
 }
 .note b{color:var(--navy)}
-.nm a{color:var(--blue);text-decoration:none;border-bottom:1px solid rgba(21,101,192,.35)}
-.nm a:after{content:"›";margin-left:3px;font-weight:900}
-.nm a:hover{border-bottom-color:var(--blue)}
-.more{display:inline-block;margin-top:10px;font-size:13.5px;color:var(--blue);text-decoration:none;font-weight:700}
-.more:hover{text-decoration:underline}
+.mobile-note{display:none}
+.link-row{margin-top:13px}
+.analysis-link{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:13px 15px;
+  border:1px solid #d9e4f0;
+  border-radius:11px;
+  color:var(--navy);
+  background:var(--soft-blue);
+  font-size:12px;
+  font-weight:900;
+  text-decoration:none;
+}
+.analysis-link span{color:var(--blue);font-size:18px}
 
+/* TOOLS */
 .tools{
   counter-reset:tool;
   display:grid;
-  grid-template-columns:1fr;
+  grid-template-columns:repeat(2,minmax(0,1fr));
   gap:10px;
 }
 .tool{
   counter-increment:tool;
   position:relative;
   display:grid;
-  grid-template-columns:38px minmax(0,1fr) 18px;
+  grid-template-columns:40px minmax(0,1fr) 20px;
   grid-template-areas:"num title arrow" "num desc arrow";
   align-items:center;
-  min-height:76px;
-  padding:13px 14px 13px 12px;
-  border:1px solid #e1e7ed;
+  min-height:84px;
+  padding:14px;
+  border:1px solid var(--line);
   border-radius:14px;
   color:var(--ink);
-  background:linear-gradient(135deg,#fff 0%,#f8fafc 100%);
+  background:#fff;
   text-decoration:none;
-  box-shadow:0 6px 16px rgba(13,31,60,.045);
-  transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease,background .18s ease;
+  transition:transform .16s ease,border-color .16s ease,background .16s ease;
 }
 .tool::before{
   content:counter(tool,decimal-leading-zero);
   grid-area:num;
   display:grid;
   place-items:center;
-  width:30px;
-  height:30px;
-  border-radius:9px;
+  width:32px;
+  height:32px;
+  border-radius:10px;
   color:#fff;
   background:var(--navy);
   font-size:10px;
-  font-weight:900;
-  letter-spacing:.4px;
+  font-weight:950;
 }
-.tool::after{
-  content:"›";
-  grid-area:arrow;
-  color:var(--blue);
-  font-size:25px;
-  font-weight:400;
-  line-height:1;
-  text-align:right;
-}
-.tool .t{
-  grid-area:title;
-  margin-bottom:2px;
-  color:var(--navy);
-  font-size:14px;
-  font-weight:900;
-}
-.tool .d{
-  grid-area:desc;
-  color:var(--muted);
-  font-size:11.5px;
-  line-height:1.45;
-}
-.tool:hover,.tool:active{
-  transform:translateY(-2px);
-  border-color:rgba(21,101,192,.45);
-  background:var(--soft-blue);
-  box-shadow:var(--shadow-hover);
-}
-.tool:focus-visible,.blog:focus-visible,.btn:focus-visible{
-  outline:3px solid rgba(21,101,192,.28);
-  outline-offset:3px;
-}
+.tool::after{content:"›";grid-area:arrow;color:var(--blue);font-size:25px;line-height:1;text-align:right}
+.tool .t{grid-area:title;color:var(--navy);font-size:14px;font-weight:950}
+.tool .d{grid-area:desc;margin-top:3px;color:var(--muted);font-size:11.5px;line-height:1.45}
+.tool:hover{transform:translateY(-2px);border-color:#aac9e8;background:var(--soft-blue)}
 
+/* BLOG + CITATION */
 .blog{
-  position:relative;
-  display:block;
-  overflow:hidden;
-  margin-bottom:16px;
-  padding:18px 54px 18px 18px;
-  border:1px solid rgba(212,167,58,.34);
-  border-radius:16px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  margin-bottom:22px;
+  padding:20px 22px;
+  border:1px solid rgba(212,167,58,.38);
+  border-radius:18px;
   color:#fff;
-  background:
-    radial-gradient(circle at 92% 10%,rgba(212,167,58,.28),transparent 8rem),
-    linear-gradient(135deg,var(--navy),#153b69);
-  box-shadow:0 12px 26px rgba(13,31,60,.16);
-  font-size:15px;
-  font-weight:900;
-  text-align:left;
+  background:linear-gradient(135deg,var(--navy),#153b69);
+  box-shadow:0 12px 28px rgba(13,31,60,.14);
   text-decoration:none;
 }
-.blog::after{
-  content:"→";
-  position:absolute;
-  top:50%;
-  right:20px;
-  transform:translateY(-50%);
-  color:var(--gold);
-  font-size:24px;
+.blog strong{display:block;font-size:16px;font-weight:950}
+.blog span{display:block;margin-top:4px;color:#e8c45f;font-size:11.5px;font-weight:750}
+.blog-arrow{color:var(--gold);font-size:26px}
+.cite{border-color:rgba(212,167,58,.42)}
+.cite .section-kicker{color:#a97c16}
+.cite-guide{
+  padding:15px 16px;
+  border:1px solid #eadbae;
+  border-radius:12px;
+  color:#4a5562;
+  background:var(--soft-gold);
+  font-size:12.5px;
+  line-height:1.75;
 }
-.blog span{
-  display:block;
-  margin-top:4px;
-  color:#efc75e;
-  font-size:11.5px;
-  font-weight:700;
-}
-
-.cite{
-  border-color:rgba(212,167,58,.5);
-  background:
-    linear-gradient(180deg,rgba(255,253,245,.98),rgba(255,255,255,.98));
-}
-.cite::before{
-  background:linear-gradient(90deg,var(--gold),rgba(212,167,58,.18) 68%,transparent);
-}
+details{margin-top:12px;border-top:1px solid #eadfbd;padding-top:12px}
+summary{color:var(--navy);font-size:12px;font-weight:900;cursor:pointer}
+.details-copy{padding-top:10px;color:#606b78;font-size:12px;line-height:1.75}
 .citebox{
-  margin-top:12px;
+  margin-top:14px;
   padding:14px;
-  border:1px dashed #c7aa5f;
+  border:1px dashed #c9a956;
   border-radius:11px;
-  color:#3d4756;
-  background:rgba(255,255,255,.8);
+  color:#33404e;
+  background:#fff;
   font-size:12px;
   line-height:1.75;
-  word-break:keep-all;
   overflow-wrap:anywhere;
 }
 .btn{
-  width:100%;
-  margin-top:11px;
-  padding:12px 16px;
+  margin-top:10px;
+  padding:11px 15px;
   border:0;
   border-radius:10px;
   color:#fff;
-  background:linear-gradient(135deg,var(--blue),#0f4f98);
-  box-shadow:0 8px 18px rgba(21,101,192,.2);
-  font-family:inherit;
-  font-size:13px;
-  font-weight:900;
+  background:linear-gradient(135deg,var(--blue),var(--blue-2));
+  font:inherit;
+  font-size:12.5px;
+  font-weight:950;
   cursor:pointer;
 }
 .btn:active{transform:translateY(1px)}
+.ld{padding:36px!important;color:#8792a0;font-size:12px;text-align:center}
 
 footer{
-  padding:32px 16px 40px;
-  color:#75808d;
-  font-size:12px;
-  line-height:1.8;
+  padding:32px 18px 42px;
+  border-top:1px solid var(--line);
+  color:#727e8b;
+  background:#fff;
+  font-size:11.5px;
+  line-height:1.85;
   text-align:center;
 }
-footer b{font-weight:900}
-footer a{
-  color:var(--blue);
-  font-weight:800;
-  text-decoration:none;
+footer b{color:var(--navy);font-weight:950}
+footer a{color:var(--blue);font-weight:900;text-decoration:none}
+
+@media(hover:hover){tbody tr:hover td{background:#f1f6fb}tbody tr:hover td:first-child{background:#f1f6fb}}
+@media(max-width:860px){
+  .hero-grid{grid-template-columns:1fr}.live-panel{max-width:400px}
+  .kpi{grid-template-columns:repeat(2,minmax(0,1fr))}.kpi>div:first-child{grid-column:1/-1}
 }
-.ld{
-  padding:30px!important;
-  color:#8b95a1;
-  font-size:12.5px;
-  text-align:center;
+@media(max-width:640px){
+  .shell{padding-left:12px;padding-right:12px}
+  .hero-inner{padding:18px 0 30px}
+  .topline{margin-bottom:26px}
+  .top-source{display:none}
+  h1{font-size:34px}
+  .hero-copy{font-size:13.5px}
+  .live-panel{padding:15px;border-radius:15px}
+  .page-nav-wrap{margin-top:-14px}.page-nav{padding:7px;border-radius:14px}.page-nav a{padding:8px 10px;font-size:11px}
+  main{padding-top:20px}
+  .section{margin-bottom:14px;border-radius:16px;box-shadow:0 8px 24px rgba(13,31,60,.06)}
+  .section-head{padding:19px 16px 14px;gap:10px}
+  .section h2{font-size:18px}
+  .section-desc{font-size:11.5px}
+  .section-badge{padding:6px 8px;font-size:9.5px}
+  .section-body{padding:15px 14px 18px}
+  .summary .section-head{padding-bottom:5px}
+  .summary .section-body{padding-top:10px}
+  .kpi{gap:8px}
+  .kpi>div{padding:15px 10px;border-radius:13px;text-align:center}
+  .kpi .n{font-size:19px}
+  .kpi>div:first-child .n{font-size:31px}
+  .kpi .l{font-size:10.5px}
+  .table-wrap{border-radius:12px}
+  table{min-width:0;width:100%;font-size:11.5px}
+  th{padding:9px 3px;font-size:10.5px}
+  td{padding:12px 3px;border-bottom-color:rgba(13,31,60,.065);line-height:1.5}
+  td.nm{min-width:0;font-size:11px;line-height:1.5}
+  #apt th:nth-child(2),#apt td:nth-child(2),#apt th:nth-child(6),#apt td:nth-child(6){display:none}
+  #apt td span{display:inline-block;margin-top:2px;line-height:1.35}
+  #umd th,#umd td{padding-left:2px;padding-right:2px;line-height:1.48}
+  .redev th:nth-child(2),.redev td:nth-child(2){display:none}
+  .redev td{padding-top:11px;padding-bottom:11px}
+  .mobile-note{display:inline}
+  .tools{grid-template-columns:1fr}
+  .tool{min-height:78px}
+  .blog{padding:17px 18px;border-radius:15px}
+  .cite-guide{font-size:12px}
+  .btn{width:100%}
+}
+@media(max-width:390px){
+  h1{font-size:31px}
+  .section-badge{display:none}
+  .kpi .n{font-size:18px}
+}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+/* 50~60대 모바일 가독성 보강 */
+@media(max-width:640px){
+  .hero-copy{font-size:15px;line-height:1.72}
+  .live-label{font-size:13px}
+  .updated{font-size:21px}
+  .live-note{font-size:13.5px;line-height:1.65}
+  .page-nav a{font-size:12.5px;line-height:1.35}
+
+  .section h2{font-size:20px;line-height:1.35}
+  .section-desc{font-size:14px;line-height:1.65}
+  .section-badge{font-size:11px}
+
+  .kpi .n{font-size:22px}
+  .kpi>div:first-child .n{font-size:34px}
+  .kpi .l{font-size:13px;line-height:1.45}
+
+  table{font-size:13px}
+  th{font-size:12.5px;line-height:1.4}
+  td{font-size:13px;line-height:1.58}
+  td.nm{font-size:13.5px;line-height:1.55}
+  #apt td span,#umd td span{font-size:12.5px!important;line-height:1.4!important}
+
+  .note{font-size:13.5px;line-height:1.72}
+  .analysis-link{font-size:14px;line-height:1.6}
+  .tag{font-size:11.5px}
+
+  .tool .t{font-size:15.5px}
+  .tool .d{font-size:13.5px;line-height:1.55}
+  .blog strong{font-size:17px}
+  .blog span{font-size:13.5px;line-height:1.5}
+
+  .cite-guide{font-size:14px;line-height:1.72}
+  summary{font-size:14px}
+  .details-copy{font-size:13.5px;line-height:1.75}
+  .citebox{font-size:13.5px;line-height:1.72}
+  .btn{font-size:14.5px;padding:13px 16px}
+  footer{font-size:13px;line-height:1.8}
 }
 
-@media(min-width:640px){
-  .wrap{padding-left:22px;padding-right:22px}
-  header{padding:42px 0 38px}
-  .card{padding:24px}
-  .tools{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .btn{width:auto;min-width:150px}
+
+
+/* 모바일 최종형: 표를 카드로 바꿔 가로 스크롤 제거 */
+@media(max-width:640px){
+  body{background:#f4f6f8}
+  .shell{padding-left:14px;padding-right:14px}
+  .hero-inner{padding:18px 0 26px}
+  .topline{margin-bottom:22px}
+  .logo{font-size:12.5px}
+  .logo-mark{width:31px;height:31px}
+  .eyebrow{margin-bottom:10px;font-size:11.5px}
+  h1{font-size:34px;line-height:1.12}
+  .hero-copy{margin-top:12px;font-size:16px;line-height:1.72;color:#d4dde7}
+  .hero-grid{gap:18px}
+  .live-panel{max-width:none;padding:16px 17px;border-radius:15px}
+  .live-label{font-size:14px}
+  .updated{font-size:22px}
+  .live-note{font-size:14px;line-height:1.65}
+
+  .page-nav-wrap{margin-top:-12px}
+  .page-nav{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:7px;
+    overflow:visible;
+    padding:8px;
+    border-radius:15px;
+  }
+  .page-nav a{
+    min-width:0;
+    padding:11px 5px;
+    border:1px solid #e1e6ec;
+    border-radius:10px;
+    background:#fff;
+    color:#334150;
+    font-size:14px;
+    line-height:1.25;
+    text-align:center;
+  }
+  .page-nav a.active{border-color:var(--navy);background:var(--navy);color:#fff}
+
+  main{padding-top:18px}
+  .section{margin-bottom:16px;border-radius:18px;box-shadow:0 7px 22px rgba(13,31,60,.055)}
+  .section-head{padding:20px 18px 15px}
+  .section-kicker{margin-bottom:5px;font-size:12px;letter-spacing:.2px}
+  .section h2{font-size:22px;line-height:1.32}
+  .section-desc{margin-top:7px;font-size:15px;line-height:1.65}
+  .section-badge{display:none}
+  .section-body{padding:16px 15px 19px}
+
+  .kpi{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+  .kpi>div{padding:17px 10px;border-radius:14px;text-align:center}
+  .kpi>div:first-child{grid-column:1/-1;padding:20px 14px}
+  .kpi .n{font-size:23px}
+  .kpi>div:first-child .n{font-size:37px}
+  .kpi .l{font-size:14px;line-height:1.4}
+
+  .table-wrap{overflow:visible;border:0;border-radius:0;background:transparent}
+  table{display:block;width:100%;min-width:0;font-size:15px}
+  thead{display:none}
+  tbody{display:grid;gap:12px}
+  tr{display:grid;min-width:0}
+  td{
+    position:static!important;
+    min-width:0!important;
+    padding:12px 14px;
+    border:0;
+    border-right:0!important;
+    border-bottom:0!important;
+    background:#fff!important;
+    box-shadow:none!important;
+    font-size:15px;
+    line-height:1.55;
+    text-align:left;
+  }
+  td::before{
+    display:block;
+    margin-bottom:3px;
+    color:#6d7a88;
+    font-size:12.5px;
+    font-weight:800;
+    line-height:1.25;
+  }
+  td b{font-size:16px;color:var(--navy)}
+  td span{font-size:13.5px!important;line-height:1.4!important}
+
+  /* 아파트: 단지명 + 2열 정보 카드 */
+  #apt td:nth-child(2),#apt td:nth-child(6),.redev td:nth-child(2){display:block}
+
+  #apt tbody tr{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    overflow:hidden;
+    border:1px solid #dfe5ec;
+    border-radius:16px;
+    background:#fff;
+    box-shadow:0 5px 16px rgba(13,31,60,.05);
+  }
+  #apt td{border-top:1px solid #edf0f3!important}
+  #apt td:nth-child(1){
+    grid-column:1/-1;
+    padding:16px 15px 13px;
+    border-top:0!important;
+    color:var(--navy);
+    background:linear-gradient(180deg,#f8fbff,#fff)!important;
+    font-size:18px;
+    font-weight:950;
+  }
+  #apt td:nth-child(1)::before{content:'단지';color:var(--blue)}
+  #apt td:nth-child(2)::before{content:'준공'}
+  #apt td:nth-child(3)::before{content:'대표 면적'}
+  #apt td:nth-child(4)::before{content:'매매 중위'}
+  #apt td:nth-child(5)::before{content:'전세 중위'}
+  #apt td:nth-child(6){grid-column:1/-1;background:#fffaf0!important}
+  #apt td:nth-child(6)::before{content:'전용 평당가';color:#9a6d0b}
+  #apt td:nth-child(2),#apt td:nth-child(4){border-right:1px solid #edf0f3!important}
+
+  /* 동별 거래: 동 이름 + 2x2 숫자 */
+  #umd tbody tr{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    overflow:hidden;
+    border:1px solid #dfe5ec;
+    border-radius:16px;
+    background:#fff;
+    box-shadow:0 5px 16px rgba(13,31,60,.05);
+  }
+  #umd td{border-top:1px solid #edf0f3!important}
+  #umd td:nth-child(1){
+    grid-column:1/-1;
+    padding:15px;
+    border-top:0!important;
+    color:var(--navy);
+    background:linear-gradient(180deg,#f8fbff,#fff)!important;
+    font-size:18px;
+    font-weight:950;
+  }
+  #umd td:nth-child(1)::before{content:'동';color:var(--blue)}
+  #umd td:nth-child(2)::before{content:'아파트 매매 중위'}
+  #umd td:nth-child(3)::before{content:'빌라 매매 중위'}
+  #umd td:nth-child(4)::before{content:'전세 거래'}
+  #umd td:nth-child(5)::before{content:'월세 거래'}
+  #umd td:nth-child(2),#umd td:nth-child(4){border-right:1px solid #edf0f3!important}
+
+  /* 정비사업: 한 구역씩 읽는 카드 */
+  .redev tbody tr{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    overflow:hidden;
+    border:1px solid #dfe5ec;
+    border-radius:16px;
+    background:#fff;
+    box-shadow:0 5px 16px rgba(13,31,60,.05);
+  }
+  .redev td{border-top:1px solid #edf0f3!important}
+  .redev td:nth-child(1){
+    grid-column:1/-1;
+    padding:15px;
+    border-top:0!important;
+    color:var(--navy);
+    background:linear-gradient(180deg,#f8fbff,#fff)!important;
+    font-size:17px;
+    font-weight:950;
+  }
+  .redev td:nth-child(1)::before{content:'구역';color:var(--blue)}
+  .redev td:nth-child(2)::before{content:'사업 방식'}
+  .redev td:nth-child(3)::before{content:'현재 단계'}
+  .redev td:nth-child(4){grid-column:1/-1}
+  .redev td:nth-child(4)::before{content:'규모'}
+  .redev td:nth-child(2){border-right:1px solid #edf0f3!important}
+  .tag{font-size:12.5px;white-space:normal;text-align:center}
+
+  .note{margin-top:14px;padding:13px 14px;font-size:14.5px;line-height:1.72}
+  .mobile-note{display:none}
+  .analysis-link{padding:14px 15px;font-size:15px;line-height:1.5}
+  .tools{grid-template-columns:1fr;gap:10px}
+  .tool{min-height:88px;padding:15px;border-radius:14px}
+  .tool .t{font-size:17px}
+  .tool .d{font-size:14.5px;line-height:1.55}
+  .blog{padding:18px;border-radius:16px}
+  .blog strong{font-size:18px}
+  .blog span{font-size:14px}
+  .cite-guide{font-size:15px;line-height:1.72}
+  summary{font-size:15px}
+  .details-copy,.citebox{font-size:14.5px;line-height:1.72}
+  .btn{min-height:48px;font-size:15px}
+  footer{font-size:13.5px}
 }
-@media(min-width:760px){
-  .kpi{grid-template-columns:repeat(5,minmax(0,1fr))}
-  .kpi>div:first-child{grid-column:auto}
-  .kpi>div:first-child .n{font-size:26px}
-  table{min-width:100%;font-size:13.5px}
-  th{font-size:12.5px}
+
+@media(max-width:370px){
+  .page-nav{grid-template-columns:repeat(2,minmax(0,1fr))}
+  h1{font-size:31px}
+  #apt td,#umd td,.redev td{padding-left:11px;padding-right:11px}
 }
-@media(hover:hover){
-  tbody tr:hover td{background:#f4f8fc}
-  tbody tr:hover td:first-child{background:#f4f8fc}
+
+
+/* =========================================================
+   RENT CHECK BRAND V3
+   정보 구조와 데이터 연결은 유지하고 브랜드 인상만 강화
+   ========================================================= */
+
+/* 상단: 렌트체크 전용 데이터 화면 */
+.hero{
+  isolation:isolate;
+  background:
+    linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px),
+    radial-gradient(circle at 86% 18%,rgba(212,167,58,.28),transparent 18rem),
+    radial-gradient(circle at 12% 110%,rgba(21,101,192,.30),transparent 24rem),
+    linear-gradient(135deg,#07162c 0%,#0d2849 55%,#0b1d38 100%);
+  background-size:34px 34px,34px 34px,auto,auto,auto;
 }
-.mo-only{display:none}
-@media(max-width:520px){
-  .mo-only{display:inline}
-  .wrap{padding-left:12px;padding-right:12px;padding-bottom:56px}
-  header{padding:26px 0 24px}
-  .brand{font-size:10px}
-  h1{font-size:28px}
-  .sub{font-size:13px}
-  .card{padding:17px 15px;border-radius:16px}
-  .card h2{font-size:17px}
-  .card .desc{margin-bottom:13px}
-  .kpi{gap:8px}
-  .kpi>div{padding:14px 8px}
-  .kpi .n{font-size:18px}
-  .kpi>div:first-child .n{font-size:27px}
-  .tw{margin-right:-4px}
-  table{min-width:0;width:100%;font-size:11.5px}
-  th,td{padding:8px 3px}
-  td.nm{min-width:0}
-  /* 모바일: 스크롤 없이 들어가도록 보조 열 숨김 */
-  #apt th:nth-child(2), #apt td:nth-child(2),
-  #apt th:nth-child(6), #apt td:nth-child(6){display:none}
-  #apt td.nm{font-size:11px;line-height:1.35}
-  .redev th:nth-child(2), .redev td:nth-child(2){display:none}
-  #umd th, #umd td{padding:8px 2px}
-  .blog{padding:17px 50px 17px 16px}
+.hero::before{
+  content:"";
+  position:absolute;
+  right:-55px;
+  bottom:-50px;
+  z-index:-1;
+  width:340px;
+  height:170px;
+  opacity:.14;
+  background:
+    linear-gradient(to top,rgba(255,255,255,.38),rgba(255,255,255,.38)) 0 76%/38px 24% no-repeat,
+    linear-gradient(to top,rgba(255,255,255,.45),rgba(255,255,255,.45)) 50px 54%/46px 46% no-repeat,
+    linear-gradient(to top,rgba(255,255,255,.33),rgba(255,255,255,.33)) 110px 66%/34px 34% no-repeat,
+    linear-gradient(to top,rgba(255,255,255,.43),rgba(255,255,255,.43)) 157px 34%/56px 66% no-repeat,
+    linear-gradient(to top,rgba(255,255,255,.30),rgba(255,255,255,.30)) 226px 58%/40px 42% no-repeat,
+    linear-gradient(to top,rgba(255,255,255,.38),rgba(255,255,255,.38)) 280px 22%/54px 78% no-repeat;
 }
-@media(prefers-reduced-motion:reduce){
-  *{scroll-behavior:auto!important;transition:none!important}
+.logo{
+  color:#fff;
+  letter-spacing:1.55px;
 }
+.logo-mark{
+  width:34px;
+  height:34px;
+  border:1px solid rgba(236,201,103,.72);
+  border-radius:11px;
+  color:#0d1f3c;
+  background:linear-gradient(145deg,#f2d379,#c99a2d);
+  box-shadow:0 8px 18px rgba(212,167,58,.20);
+  font-size:10px;
+}
+.eyebrow{color:#f0cf71}
+h1{
+  text-shadow:0 5px 24px rgba(0,0,0,.18);
+}
+.hero-copy{
+  max-width:610px;
+  color:#d7e0e9;
+}
+.live-panel{
+  position:relative;
+  overflow:hidden;
+  border:1px solid rgba(236,201,103,.28);
+  background:linear-gradient(145deg,rgba(4,18,37,.72),rgba(13,39,72,.60));
+}
+.live-panel::before{
+  content:"";
+  position:absolute;
+  inset:0 auto 0 0;
+  width:4px;
+  background:linear-gradient(var(--gold),#f0cc67);
+}
+.live-label{color:#f4dda0}
+.updated{letter-spacing:-.035em}
+
+/* 목차: 현재 위치를 브랜드 방식으로 강조 */
+.page-nav{
+  border-color:rgba(13,31,60,.11);
+  box-shadow:0 16px 34px rgba(13,31,60,.12);
+}
+.page-nav a{
+  position:relative;
+  border:1px solid transparent;
+}
+.page-nav a.active{
+  color:#fff;
+  border-color:var(--navy);
+  background:linear-gradient(135deg,#0d1f3c,#173e6d);
+  box-shadow:0 7px 16px rgba(13,31,60,.18);
+}
+.page-nav a.active::before{
+  content:"";
+  position:absolute;
+  top:-1px;
+  left:12px;
+  right:12px;
+  height:3px;
+  border-radius:0 0 4px 4px;
+  background:var(--gold);
+}
+
+/* 섹션: 흰 카드보다 브랜드 문서 느낌 */
+.section{
+  border-color:rgba(13,31,60,.11);
+  box-shadow:0 10px 30px rgba(13,31,60,.065);
+}
+.section-head{
+  position:relative;
+  background:linear-gradient(180deg,#fff,#fbfcfe);
+}
+.section-head::before{
+  content:"";
+  position:absolute;
+  top:24px;
+  left:0;
+  width:4px;
+  height:42px;
+  border-radius:0 4px 4px 0;
+  background:linear-gradient(var(--gold),#b88923);
+}
+.section-kicker{
+  color:#a67812;
+  letter-spacing:.75px;
+}
+.section h2{letter-spacing:-.045em}
+.section-badge{
+  border-color:#e6d39e;
+  color:#88630d;
+  background:#fffaf0;
+}
+
+/* 핵심 숫자: 숫자가 주인공 */
+.kpi>div{
+  position:relative;
+  overflow:hidden;
+  border-color:#dfe5ec;
+  background:linear-gradient(180deg,#fff,#fbfcfe);
+  box-shadow:inset 0 1px 0 #fff;
+}
+.kpi>div::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:3px;
+  background:#dce5ef;
+}
+.kpi>div:first-child::before{background:var(--gold)}
+.kpi>div:nth-child(2)::before,
+.kpi>div:nth-child(3)::before{background:var(--blue)}
+.kpi>div:nth-child(4)::before,
+.kpi>div:nth-child(5)::before{background:var(--gold)}
+.kpi>div:first-child{
+  background:
+    radial-gradient(circle at 92% 10%,rgba(212,167,58,.34),transparent 8rem),
+    linear-gradient(135deg,#091a33,#153c6b);
+  box-shadow:0 14px 28px rgba(13,31,60,.18);
+}
+.kpi>div:nth-child(2) .n,
+.kpi>div:nth-child(3) .n{color:var(--blue)}
+.kpi>div:nth-child(4) .n,
+.kpi>div:nth-child(5) .n{color:#8e650b}
+
+/* PC 표 */
+th{
+  background:linear-gradient(180deg,#10294c,#0d1f3c);
+}
+tbody tr:hover td{background:#f4f8fc}
+td b{color:var(--navy)}
+
+/* 도구: 골드 번호 + 네이비 정보 */
+.tool{
+  border-color:#dce4ec;
+  background:linear-gradient(145deg,#fff,#fafbfd);
+  box-shadow:0 6px 18px rgba(13,31,60,.045);
+}
+.tool::before{
+  color:#0d1f3c;
+  border:1px solid #d9b654;
+  background:linear-gradient(145deg,#f1d47e,#d0a13a);
+  box-shadow:0 5px 12px rgba(212,167,58,.18);
+}
+.tool::after{color:#b78516}
+.tool:hover{
+  border-color:#d3b45d;
+  background:#fffaf0;
+}
+
+/* 블로그 연결 */
+.blog{
+  position:relative;
+  overflow:hidden;
+  border-color:rgba(212,167,58,.56);
+  background:
+    radial-gradient(circle at 90% 0,rgba(212,167,58,.30),transparent 10rem),
+    linear-gradient(135deg,#091a33,#174372);
+}
+.blog::before{
+  content:"RENT CHECK";
+  position:absolute;
+  right:54px;
+  bottom:-8px;
+  color:rgba(255,255,255,.055);
+  font-size:42px;
+  font-weight:950;
+  letter-spacing:-2px;
+}
+
+/* 출처 영역 */
+.cite{
+  border-color:rgba(212,167,58,.48);
+}
+.cite .section-head::before{background:linear-gradient(#d4a73a,#9e7418)}
+.cite-guide{
+  border-left:4px solid var(--gold);
+  background:linear-gradient(90deg,#fff9e9,#fffdf7);
+}
+
+/* 모바일 브랜드 카드 */
+@media(max-width:640px){
+  .hero::before{
+    right:-105px;
+    bottom:-45px;
+    transform:scale(.78);
+  }
+  .hero-inner{padding-bottom:29px}
+  .topline{margin-bottom:24px}
+  .eyebrow::before{width:18px}
+  h1{font-size:35px}
+  .hero-copy{font-size:16px}
+  .live-panel{padding:17px 17px 17px 20px}
+
+  .page-nav a.active::before{
+    left:10px;
+    right:10px;
+  }
+
+  .section-head::before{
+    top:21px;
+    height:43px;
+  }
+  .section-head{padding-left:20px}
+  .section-kicker{color:#936a0d;font-size:12.5px}
+  .section h2{font-size:23px}
+  .section-desc{font-size:15px}
+
+  .kpi>div{padding-top:19px}
+  .kpi>div:first-child{padding-top:22px;padding-bottom:22px}
+  .kpi .n{font-size:24px}
+  .kpi>div:first-child .n{font-size:39px}
+
+  /* 아파트 카드: 단지명은 네이비 제목띠 */
+  #apt tbody tr,
+  #umd tbody tr,
+  .redev tbody tr{
+    border-color:#d8e0e9;
+    box-shadow:0 7px 20px rgba(13,31,60,.075);
+  }
+  #apt td:nth-child(1),
+  #umd td:nth-child(1),
+  .redev td:nth-child(1){
+    color:#fff;
+    background:
+      radial-gradient(circle at 92% 0,rgba(212,167,58,.25),transparent 7rem),
+      linear-gradient(135deg,#0d1f3c,#173f70)!important;
+  }
+  #apt td:nth-child(1)::before,
+  #umd td:nth-child(1)::before,
+  .redev td:nth-child(1)::before{
+    color:#f0cd69;
+  }
+  #apt td:nth-child(1) span{
+    color:#d3dde7!important;
+  }
+
+  /* 가격·숫자 강조 */
+  #apt td:nth-child(4) b{
+    color:#9a6a00;
+    font-size:19px;
+  }
+  #apt td:nth-child(5){
+    color:var(--blue);
+    font-weight:850;
+  }
+  #apt td:nth-child(6){
+    border-top:1px solid #eadba7!important;
+    background:linear-gradient(90deg,#fff9e8,#fffdf7)!important;
+    color:#89610a;
+    font-weight:900;
+  }
+
+  #umd td:nth-child(2),
+  #umd td:nth-child(3){
+    font-weight:900;
+  }
+  #umd td:nth-child(2){color:var(--blue)}
+  #umd td:nth-child(3){color:#8e650b}
+
+  .redev td:nth-child(3){
+    background:#fbfcfe!important;
+  }
+  .tag{
+    min-height:30px;
+    padding:6px 10px;
+    font-size:13px;
+  }
+
+  .tool{
+    min-height:92px;
+    border-left:3px solid #d4a73a;
+    box-shadow:0 6px 18px rgba(13,31,60,.06);
+  }
+  .tool::before{
+    width:36px;
+    height:36px;
+    font-size:11px;
+  }
+  .tool .t{font-size:17.5px}
+  .tool .d{font-size:14.5px}
+
+  .blog::before{font-size:32px;right:48px}
+}
+
+
+/* 정비사업 상단 3개: 네이버 상세 글 링크 표시 */
+.redev td.nm a{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  color:var(--blue);
+  font-weight:950;
+  text-decoration:none;
+  border-bottom:1px solid rgba(21,101,192,.36);
+}
+.redev td.nm a::after{
+  content:"↗";
+  color:var(--blue);
+  font-size:.9em;
+  font-weight:900;
+}
+.redev td.nm a:hover{
+  color:#0d4f96;
+  border-bottom-color:#0d4f96;
+}
+
+@media(max-width:640px){
+  .redev td:nth-child(1) a{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    width:100%;
+    color:#fff!important;
+    border-bottom:0;
+    line-height:1.45;
+  }
+  .redev td:nth-child(1) a::after{
+    content:"네이버 글 보기 ↗";
+    display:inline-flex;
+    align-items:center;
+    min-height:27px;
+    margin-left:auto;
+    padding:4px 8px;
+    border:1px solid rgba(240,205,105,.58);
+    border-radius:999px;
+    color:#f0cd69;
+    background:rgba(4,18,37,.30);
+    font-size:12px;
+    font-weight:900;
+    white-space:nowrap;
+  }
+  .redev td:nth-child(1) a:active{
+    opacity:.82;
+  }
+}
+
+
+/* 무료 도구 카드 가독성 보강 */
+.tools{
+  gap:16px;
+}
+.tool{
+  grid-template-columns:46px minmax(0,1fr) 24px;
+  min-height:104px;
+  padding:19px 18px;
+  column-gap:12px;
+  border-radius:16px;
+}
+.tool::before{
+  width:38px;
+  height:38px;
+  border-radius:11px;
+  font-size:12px;
+}
+.tool::after{
+  font-size:30px;
+}
+.tool .t{
+  margin-bottom:7px;
+  font-size:17px;
+  line-height:1.35;
+}
+.tool .d{
+  margin-top:0;
+  font-size:14px;
+  line-height:1.62;
+}
+
+@media(max-width:640px){
+  .tools{
+    gap:15px;
+  }
+  .tool{
+    min-height:112px;
+    padding:20px 17px;
+    grid-template-columns:48px minmax(0,1fr) 24px;
+    column-gap:13px;
+    border-left-width:4px;
+  }
+  .tool::before{
+    width:40px;
+    height:40px;
+    font-size:12px;
+  }
+  .tool .t{
+    margin-bottom:8px;
+    font-size:19px;
+    line-height:1.38;
+  }
+  .tool .d{
+    font-size:15.5px;
+    line-height:1.65;
+  }
+  .tool::after{
+    font-size:31px;
+  }
+}
+
 </style>
 </head>
 <body>
-<header>
-<div class="wrap">
-<div class="brand">RENT CHECK 강서</div>
-<h1>강서구 실거래 기록</h1>
-<div class="sub">국토교통부 실거래가 공개자료를 매일 수집해 정리합니다</div>
-<div class="updated" id="upd">데이터 확인 중…</div>
-</div>
+<header class="hero">
+  <div class="shell hero-inner">
+    <div class="topline">
+      <div class="logo"><span class="logo-mark">RC</span> RENT CHECK 강서</div>
+      <div class="top-source">국토교통부 실거래가 공개자료 기반</div>
+    </div>
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">GANGSEO REAL TRANSACTION DATA</div>
+        <h1>강서구 실거래 기록</h1>
+        <p class="hero-copy">강서구 매매·전세·월세를 매일 모아 한 화면에 보여드립니다.</p>
+      </div>
+      <div class="live-panel">
+        <div class="live-label"><span class="live-dot"></span>최신 현황 · 매일 자동 갱신</div>
+        <div class="updated" id="upd">데이터 확인 중…</div>
+        <div class="live-note">계약일 기준입니다. 신고가 늦게 들어온 거래는 이후 추가될 수 있습니다.</div>
+        <div id="archive" style="display:none;margin-top:8px;font-size:13px">지난 기록 <span id="archlinks"></span></div>
+      </div>
+    </div>
+  </div>
 </header>
 
-<div class="wrap">
-
-<div class="card">
-<h2>📊 이번 달 강서구 거래</h2>
-<div class="desc">계약일 기준 · 신고 지연으로 최근 거래는 계속 추가됩니다 · 아파트와 빌라는 가격대가 달라 나눠서 표시합니다</div>
-<div class="kpi" id="kpi"><div><div class="n">…</div><div class="l">불러오는 중</div></div></div>
+<div class="shell page-nav-wrap">
+  <nav class="page-nav" aria-label="페이지 바로가기">
+    <a href="#market" class="active">이번 달 거래</a>
+    <a href="#apt-section">아파트 시세</a>
+    <a href="#umd-section">동별 거래</a>
+    <a href="#redev-section">정비사업</a>
+    <a href="#tools-section">무료 도구</a>
+    <a href="#citation">출처 안내</a>
+  </nav>
 </div>
 
-<div class="card">
-<h2>🏢 화곡동 아파트 시세</h2>
-<div class="desc">대표 단지 · 최근 6개월 거래 · 전용 평당가 높은 순</div>
-<div class="tw"><table id="apt"><tbody><tr><td class="ld">불러오는 중…</td></tr></tbody></table></div>
-<div class="note"><span class="mo-only">※ 작은 화면에서는 준공연도·평당가 열이 생략됩니다. </span>※ 각 단지에서 거래가 가장 많은 면적을 대표로 표시했습니다. 매매·전세 모두 중위값이며, 평당가는 전용면적 기준입니다. 소형 면적일수록 평당가가 높게 잡히는 점에 유의하세요.</div>
-</div>
+<main class="shell">
+  <section class="section summary" id="market">
+    <div class="section-head">
+      <div class="section-title-wrap">
+        <span class="section-kicker">이번 달</span>
+        <h2>이번 달 강서구 거래</h2>
+        <p class="section-desc">아파트와 빌라는 가격대가 달라 따로 계산했습니다.</p>
+      </div>
+      <span class="section-badge">계약일 기준</span>
+    </div>
+    <div class="section-body">
+      <div class="kpi" id="kpi"><div><div class="n">…</div><div class="l">불러오는 중</div></div></div>
+    </div>
+  </section>
 
-<div class="card">
-<h2>🏘️ 동별 거래 현황</h2>
-<div class="desc">이번 달 거래가 있었던 동 · 아파트와 빌라는 가격대가 달라 나눠서 표시합니다</div>
-<div class="tw"><table id="umd"><tbody><tr><td class="ld">불러오는 중…</td></tr></tbody></table></div>
-<div class="note">※ 아파트와 빌라를 한 숫자로 합치면 동네 비교가 왜곡되어 나눠 표시합니다. 3건 미만인 경우 중위값 대신 건수만 표기했습니다. 오피스텔은 별도 집계에서 제외했습니다.</div>
-</div>
+  <section class="section" id="apt-section">
+    <div class="section-head">
+      <div class="section-title-wrap">
+        <span class="section-kicker">화곡동</span>
+        <h2>화곡동 아파트 시세</h2>
+        <p class="section-desc">최근 6개월 거래 · 대표 면적 · 전용 평당가 높은 순</p>
+      </div>
+      <span class="section-badge">12개 단지</span>
+    </div>
+    <div class="section-body">
+      <div class="table-wrap"><table id="apt"><tbody><tr><td class="ld">불러오는 중…</td></tr></tbody></table></div>
+      <div class="note"><span class="mobile-note"></span>각 단지에서 거래가 가장 많은 면적을 대표로 표시합니다. 매매·전세는 중위값이며, 소형 면적은 평당가가 높게 보일 수 있습니다.</div>
+    </div>
+  </section>
 
-<div class="card">
-<h2>🏗️ 화곡동 정비사업 현황</h2>
-<div class="desc">정비사업 정보몽땅·서울시 고시 기준 (2026.7 확인)</div>
-<div class="tw"><table class="redev">
-<thead><tr><th>구역</th><th>사업방식</th><th>단계</th><th>규모</th></tr></thead>
-<tbody>
-<tr><td class="nm"><a href="https://blog.naver.com/spitoon61/224321725876" target="_blank" rel="noopener">화곡동 1033 일대</a></td><td>역세권 장기전세<br>도시정비형 재개발</td><td class="st"><span class="tag t-go">정비구역 지정</span></td><td>2,146세대<br>지하3~지상18층</td></tr>
-<tr><td class="nm"><a href="https://blog.naver.com/spitoon61/224349304741" target="_blank" rel="noopener">화곡동 1130-7 일대</a></td><td>가로주택정비</td><td class="st"><span class="tag t-go">조합설립인가</span></td><td>217세대<br>지상 8층</td></tr>
-<tr><td class="nm"><a href="https://blog.naver.com/spitoon61/224296873784" target="_blank" rel="noopener">화곡1동 354 일대</a></td><td>모아타운</td><td class="st"><span class="tag t-wait">조합설립(A2-2·A2-4)</span></td><td>구역별 상이</td></tr>
-<tr><td class="nm">화곡6동 957-1 일대</td><td>모아타운</td><td class="st"><span class="tag t-wait">조합설립(A1)</span></td><td>구역별 상이</td></tr>
-<tr><td class="nm">화곡동 359-124</td><td>가로주택정비</td><td class="st"><span class="tag t-wait">조합설립인가</span></td><td>보성연립</td></tr>
-<tr><td class="nm">화곡동 812-26</td><td>재건축</td><td class="st"><span class="tag t-plan">이전고시·일시중단</span></td><td>젤라연립</td></tr>
-</tbody></table></div>
-<a class="more" href="https://blog.naver.com/spitoon61/224323267506" target="_blank" rel="noopener">📖 화곡 재개발·모아타운, 어디가 가장 빠를까 — 구역별 단계 총정리 보기 ›</a>
-<div class="note"><b>파란 구역명을 누르면</b> 해당 구역의 상세 분석 글로 이동합니다.<br>※ 단계는 행정 절차 기준이며, 실제 사업 진행 속도와 다를 수 있습니다. 매수 검토 시 토지이음에서 해당 지번이 <b>사업시행구역</b>에 포함되는지 반드시 확인하세요. 관리지역 포함만으로는 분양자격이 확정되지 않습니다.</div>
-</div>
+  <section class="section" id="umd-section">
+    <div class="section-head">
+      <div class="section-title-wrap">
+        <span class="section-kicker">강서구</span>
+        <h2>동별 거래 현황</h2>
+        <p class="section-desc">이번 달 거래가 있었던 동을 매매·전세·월세로 나눠 봅니다.</p>
+      </div>
+      <span class="section-badge">강서구</span>
+    </div>
+    <div class="section-body">
+      <div class="table-wrap"><table id="umd"><tbody><tr><td class="ld">불러오는 중…</td></tr></tbody></table></div>
+      <div class="note">아파트와 빌라는 따로 표시합니다. 거래가 3건보다 적으면 중위값 대신 건수만 보여줍니다. 오피스텔은 이 표에서 제외했습니다.</div>
+    </div>
+  </section>
 
-<div class="card">
-<h2>🧮 무료 확인 도구</h2>
-<div class="desc">회원가입 없이 바로 사용하세요</div>
-<div class="tools">
-<a class="tool" href="index.html"><div class="t">내 월세 적정한가?</div><div class="d">전월세 실거래로 내 계약 조건 검증</div></a>
-<a class="tool" href="hwagok_map_widget.html"><div class="t">아파트 시세 지도</div><div class="d">화곡동 12개 단지 실시간 시세</div></a>
-<a class="tool" href="calc.html"><div class="t">재개발 분담금 계산기</div><div class="d">소유주·매수자 분담금 추정</div></a>
-<a class="tool" href="youth_score.html"><div class="t">청년주택 순위 점수</div><div class="d">내 순위·가점 자가진단</div></a>
-<a class="tool" href="moving_date_widget.html"><div class="t">이사 날짜 계산기</div><div class="d">계약·이사 일정 정리</div></a>
-</div>
-</div>
+  <section class="section" id="redev-section">
+    <div class="section-head">
+      <div class="section-title-wrap">
+        <span class="section-kicker">정비사업</span>
+        <h2>화곡동 정비사업 현황</h2>
+        <p class="section-desc">정비사업 정보몽땅·서울시 고시 기준 · 직접 확인 자료</p>
+      </div>
+      <span class="section-badge">수동 확인 자료</span>
+    </div>
+    <div class="section-body">
+      <div class="table-wrap">
+        <table class="redev">
+          <thead><tr><th>구역</th><th>사업방식</th><th>단계</th><th>규모</th></tr></thead>
+          <tbody>
+            <tr><td class="nm"><a href="https://blog.naver.com/spitoon61/224321725876" target="_blank" rel="noopener">화곡동 1033 일대</a></td><td>역세권 장기전세<br>도시정비형 재개발</td><td class="st"><span class="tag t-go">정비구역 지정</span></td><td>2,146세대<br>지하3~지상18층</td></tr>
+            <tr><td class="nm"><a href="https://blog.naver.com/spitoon61/224349304741" target="_blank" rel="noopener">화곡동 1130-7 일대</a></td><td>가로주택정비</td><td class="st"><span class="tag t-go">조합설립인가</span></td><td>217세대<br>지상 8층</td></tr>
+            <tr><td class="nm"><a href="https://blog.naver.com/spitoon61/224296873784" target="_blank" rel="noopener">화곡1동 354 일대</a></td><td>모아타운</td><td class="st"><span class="tag t-wait">조합설립(A2-2·A2-4)</span></td><td>구역별 상이</td></tr>
+            <tr><td class="nm">화곡6동 957-1 일대</td><td>모아타운</td><td class="st"><span class="tag t-wait">조합설립(A1)</span></td><td>구역별 상이</td></tr>
+            <tr><td class="nm">화곡동 359-124</td><td>가로주택정비</td><td class="st"><span class="tag t-wait">조합설립인가</span></td><td>보성연립</td></tr>
+            <tr><td class="nm">화곡동 812-26</td><td>재건축</td><td class="st"><span class="tag t-plan">이전고시·일시중단</span></td><td>젤라연립</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="link-row"><a class="analysis-link" href="https://blog.naver.com/spitoon61/224323267506" target="_blank" rel="noopener">화곡 재개발·모아타운 구역별 단계 자세히 보기 <span>›</span></a></div>
+      <div class="note">표의 단계는 행정 절차 기준입니다. 실제 속도와 다를 수 있습니다. 매수 전에는 해당 지번이 <b>사업시행구역에 포함되는지</b> 따로 확인하세요. 모아타운 관리지역 안에 있다는 이유만으로 분양자격이 생기는 것은 아닙니다.</div>
+    </div>
+  </section>
 
-<a class="blog" href="https://blog.naver.com/spitoon61" target="_blank">렌트체크 강서 블로그<span>실거래 분석 · 재개발 · 청년주택 정보</span></a>
+  <section class="section" id="tools-section">
+    <div class="section-head">
+      <div class="section-title-wrap">
+        <span class="section-kicker">무료 도구</span>
+        <h2>무료 확인 도구</h2>
+        <p class="section-desc">회원가입 없이 바로 사용할 수 있습니다.</p>
+      </div>
+      <span class="section-badge">무료 이용</span>
+    </div>
+    <div class="section-body">
+      <div class="tools">
+        <a class="tool" href="index.html"><div class="t">내 월세 적정한가?</div><div class="d">전월세 실거래로 내 계약 조건 확인</div></a>
+        <a class="tool" href="hwagok_map_widget.html"><div class="t">아파트 시세 지도</div><div class="d">화곡동 12개 단지 최신 시세</div></a>
+        <a class="tool" href="calc.html"><div class="t">재개발 분담금 계산기</div><div class="d">소유주·매수자 분담금 구조 계산</div></a>
+        <a class="tool" href="youth_score.html"><div class="t">청년주택 순위 점수</div><div class="d">내 순위와 가점 직접 확인</div></a>
+        <a class="tool" href="moving_date_widget.html"><div class="t">이사 날짜 계산기</div><div class="d">계약 종료일과 이사 일정 정리</div></a>
+      </div>
+    </div>
+  </section>
 
-<div class="card cite">
-<h2>📌 이 자료 인용 안내</h2>
-<div class="desc">언론·연구·블로그에서 자유롭게 인용하실 수 있습니다</div>
-<div style="font-size:13.5px;line-height:1.75">원자료는 국토교통부 실거래가 공개시스템의 공공데이터이며, 원자료의 이용은 해당 공공데이터 이용조건을 따릅니다.<br><br>
-렌트체크 강서가 제작한 데이터 선별·가공 방식, 표 구성, 해설 문구 및 화면 디자인은 별도의 편집 콘텐츠입니다. 보도·연구·비평 목적의 일부 인용 또는 화면 캡처는 ‘렌트체크 강서’와 원문 링크를 함께 표시하는 조건으로 이용하실 수 있습니다.<br><br>
-다만 정당한 인용 범위를 넘어선 페이지 전체 복제, 출처를 삭제한 재배포, 표·카드 구성 및 화면 디자인의 복제, 상업적 재사용은 사전 협의 없이 허용하지 않습니다.</div>
-<div class="citebox" id="citetext">렌트체크 강서(blog.naver.com/spitoon61), 「강서구 실거래 기록」(국토교통부 실거래가 공개자료 정리), 확인일 —</div>
-<button class="btn" onclick="cp()">인용 문구 복사</button>
-<div class="note">데이터 특성상 신고 지연(계약 후 최대 30일)이 있어 최근 거래는 일부 누락될 수 있으며, 해제 신고된 거래는 집계에서 제외했습니다.</div>
-</div>
+  <a class="blog" href="https://blog.naver.com/spitoon61" target="_blank" rel="noopener">
+    <div><strong>렌트체크 강서 블로그</strong><span>실거래 분석 · 재개발 · 청년주택 정보</span></div>
+    <div class="blog-arrow">→</div>
+  </a>
 
-</div>
+  <section class="section cite" id="citation">
+    <div class="section-head">
+      <div class="section-title-wrap">
+        <span class="section-kicker">출처</span>
+        <h2>출처와 사용 안내</h2>
+        <p class="section-desc">숫자는 출처를 적고 쓸 수 있습니다. 화면과 표 디자인은 그대로 가져갈 수 없습니다.</p>
+      </div>
+      <span class="section-badge">사용 기준</span>
+    </div>
+    <div class="section-body">
+      <div class="cite-guide">원자료는 국토교통부 실거래가 공개자료입니다. 숫자를 사용할 때는 <b>렌트체크 강서</b>와 이 페이지 주소를 함께 적어 주세요.</div>
+      <details>
+        <summary>사용 기준 보기</summary>
+        <div class="details-copy">표 구성, 설명 문구, 카드와 화면 디자인은 렌트체크 강서가 직접 만든 결과물입니다. 페이지 전체 캡처, 표·카드 복제, 디자인을 본뜬 재제작, 출처를 지운 재배포, 상업적 사용은 사전 허락 없이 할 수 없습니다. 기사·연구·비평에 꼭 필요한 일부 화면만 출처와 이 페이지 주소를 표시한 뒤 사용할 수 있습니다.</div>
+      </details>
+      <div class="citebox" id="citetext">렌트체크 강서, 「강서구 실거래 기록」, 국토교통부 실거래가 공개자료 정리, 확인일 —, https://arttoy61-png.github.io/rent-check/dashboard.html</div>
+      <button class="btn" onclick="cp()">출처 문구 복사</button>
+      <div class="note">실거래는 계약 후 신고되기 때문에 최근 숫자는 나중에 늘어날 수 있습니다. 해제 신고된 거래는 집계에서 제외했습니다.</div>
+    </div>
+  </section>
+</main>
 
 <footer>
-<b style="color:#0d1f3c">Rent Check 강서</b> · 실거래로 더 정확하게<br>
-데이터 출처: 국토교통부 실거래가 공개시스템<br>
-© 2026 Rent Check 강서. 화면 구성·디자인·문구·편집 결과물의 권리를 보유합니다.<br>
-<a href="https://blog.naver.com/spitoon61" target="_blank">블로그</a> · 매일 자동 갱신
+  <b>Rent Check 강서</b> · 실거래로 더 정확하게<br>
+  데이터 출처: 국토교통부 실거래가 공개시스템<br>
+  © 2026 Rent Check 강서. 화면 구성·디자인·문구·편집 결과물의 권리를 보유합니다.<br>
+  <a href="https://blog.naver.com/spitoon61" target="_blank" rel="noopener">블로그</a> · 매일 자동 갱신
 </footer>
 
 <script>
@@ -635,17 +1370,14 @@ async function load(){
     fetch('hwagok_apt_data.json',{cache:'no-cache'}).then(r=>r.json())
   ]);
 
-  // 갱신일
-  // generated_at은 UTC인데 시간대 표시가 없어 그대로 파싱하면 하루 밀림 → Z 붙여 UTC로 명시
   let gs=apt.generated_at||'';
   if(gs && !/[Zz]|[+-]\d{2}:?\d{2}$/.test(gs)) gs+='Z';
   const g=gs?new Date(gs):new Date();
   const kst=new Date(g.getTime()+9*3600*1000);
   const ds=kst.getUTCFullYear()+'. '+(kst.getUTCMonth()+1)+'. '+kst.getUTCDate()+'.';
   document.getElementById('upd').textContent='최근 갱신 '+ds;
-  document.getElementById('citetext').textContent='렌트체크 강서(blog.naver.com/spitoon61), 「강서구 실거래 기록」(국토교통부 실거래가 공개자료 정리), '+ds+' 확인, https://arttoy61-png.github.io/rent-check/dashboard.html';
+  document.getElementById('citetext').textContent='렌트체크 강서, 「강서구 실거래 기록」, 국토교통부 실거래가 공개자료 정리(매일 갱신), '+ds+' 확인, https://arttoy61-png.github.io/rent-check/dashboard.html';
 
-  // 이번 달
   const ym=au.updated;
   const yl=ym.slice(0,4), ml=parseInt(ym.slice(4,6));
   const s=au.sale.filter(d=>d.ym===ym), j=au.jeonse.filter(d=>d.ym===ym), w=au.wolse.filter(d=>d.ym===ym);
@@ -657,7 +1389,6 @@ async function load(){
     <div><div class="n">${sa.length>=3?won(med(sa)):'-'}</div><div class="l">아파트 매매 중위</div></div>
     <div><div class="n">${sv.length>=3?won(med(sv)):'-'}</div><div class="l">빌라 매매 중위</div></div>`;
 
-  // 아파트 12단지 — 대표 면적 기준, 전용 평당가 순
   const rows=[];
   apt.complexes.forEach(c=>{
     const ar=((apt.detail[c.name]||{}).areas)||[];
@@ -671,22 +1402,21 @@ async function load(){
   rows.sort((a,b)=>(b.ppy||0)-(a.ppy||0));
   let h='<thead><tr><th>단지</th><th>준공</th><th>대표<br>면적</th><th>매매<br>중위</th><th>전세<br>중위</th><th>전용<br>평당가</th></tr></thead><tbody>';
   rows.forEach(r=>{
-    h+=`<tr><td class="nm">${r.nm}<br><span style="font-weight:400;font-size:11px;color:#8b95a1">${r.un?r.un.toLocaleString()+'세대':''}</span></td>
+    h+=`<tr><td class="nm">${r.nm}<br><span style="font-weight:400;font-size:11px;color:#7a8694">${r.un?r.un.toLocaleString()+'세대':''}</span></td>
         <td>${r.yr||'-'}</td>
-        <td>${r.m2}㎡<br><span style="font-size:11px;color:#8b95a1">${Math.round(r.m2/3.3058)}평</span></td>
-        <td><b>${r.sale?r.sale.toFixed(1)+'억':'-'}</b><br><span style="font-size:11px;color:#8b95a1">${r.ns}건</span></td>
-        <td>${r.je?r.je.toFixed(1)+'억':'-'}<br><span style="font-size:11px;color:#8b95a1">${r.nj}건</span></td>
+        <td>${r.m2}㎡<br><span style="font-size:11px;color:#7a8694">${Math.round(r.m2/3.3058)}평</span></td>
+        <td><b>${r.sale?r.sale.toFixed(1)+'억':'-'}</b><br><span style="font-size:11px;color:#7a8694">${r.ns}건</span></td>
+        <td>${r.je?r.je.toFixed(1)+'억':'-'}<br><span style="font-size:11px;color:#7a8694">${r.nj}건</span></td>
         <td>${r.ppy?(r.ppy*10000).toLocaleString()+'만':'-'}</td></tr>`;
   });
   document.getElementById('apt').innerHTML=h+'</tbody>';
 
-  // 동별
   const by={};
   s.forEach(d=>{ by[d.u]=by[d.u]||{apt:[],vil:[],j:0,w:0};
     if(d.t==='a')by[d.u].apt.push(d.p); else if(d.t==='v')by[d.u].vil.push(d.p); });
   j.forEach(d=>{ by[d.u]=by[d.u]||{apt:[],vil:[],j:0,w:0}; by[d.u].j++; });
   w.forEach(d=>{ by[d.u]=by[d.u]||{apt:[],vil:[],j:0,w:0}; by[d.u].w++; });
-  const cell=a=>a.length>=3?won(med(a)):(a.length?`<span style="color:#8b95a1">${a.length}건</span>`:'-');
+  const cell=a=>a.length>=3?won(med(a)):(a.length?`<span style="color:#7a8694">${a.length}건</span>`:'-');
   let u='<thead><tr><th>동</th><th>아파트<br>매매 중위</th><th>빌라<br>매매 중위</th><th>전세</th><th>월세</th></tr></thead><tbody>';
   Object.entries(by).sort((a,b)=>(b[1].apt.length+b[1].vil.length+b[1].j+b[1].w)-(a[1].apt.length+a[1].vil.length+a[1].j+a[1].w)).forEach(([n,v])=>{
     u+=`<tr><td class="nm">${n}</td><td>${cell(v.apt)}</td><td>${cell(v.vil)}</td><td>${v.j}건</td><td>${v.w}건</td></tr>`;
@@ -705,6 +1435,63 @@ function cp(){
    b.textContent='복사되었습니다'; setTimeout(()=>b.textContent=o,1500);
  });
 }
+
+function setupPageNav(){
+  const links=[...document.querySelectorAll('.page-nav a[href^="#"]')];
+  const items=links.map(link=>{
+    const id=link.getAttribute('href').slice(1);
+    return {link,target:document.getElementById(id)};
+  }).filter(item=>item.target);
+
+  const setActive=id=>{
+    links.forEach(link=>{
+      const on=link.getAttribute('href')==='#'+id;
+      link.classList.toggle('active',on);
+      if(on) link.setAttribute('aria-current','true');
+      else link.removeAttribute('aria-current');
+    });
+  };
+
+  items.forEach(({link,target})=>{
+    link.addEventListener('click',event=>{
+      event.preventDefault();
+      setActive(target.id);
+      target.scrollIntoView({behavior:'smooth',block:'start'});
+      try{history.replaceState(null,'','#'+target.id)}catch(e){}
+    });
+  });
+
+  let ticking=false;
+  const updateActiveOnScroll=()=>{
+    if(ticking)return;
+    ticking=true;
+    requestAnimationFrame(()=>{
+      let current=items[0]?.target.id;
+      const line=window.scrollY+120;
+      items.forEach(({target})=>{
+        if(target.offsetTop<=line)current=target.id;
+      });
+      const atBottom=window.innerHeight+window.scrollY>=document.documentElement.scrollHeight-4;
+      if(atBottom&&items.length)current=items[items.length-1].target.id;
+      if(current)setActive(current);
+      ticking=false;
+    });
+  };
+  window.addEventListener('scroll',updateActiveOnScroll,{passive:true});
+  updateActiveOnScroll();
+
+  if(location.hash){
+    const first=document.getElementById(location.hash.slice(1));
+    if(first){
+      setTimeout(()=>{
+        setActive(first.id);
+        first.scrollIntoView({behavior:'auto',block:'start'});
+      },80);
+    }
+  }
+}
+
+setupPageNav();
 load();
 </script>
 </body>
