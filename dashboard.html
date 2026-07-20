@@ -22,49 +22,509 @@
 }
 </script>
 <style>
+:root{
+  --navy:#0d1f3c;
+  --gold:#d4a73a;
+  --blue:#1565c0;
+  --ink:#1c2733;
+  --muted:#6b7684;
+  --line:#dfe5ec;
+  --paper:#ffffff;
+  --bg:#eef2f6;
+  --soft-blue:#eef5fd;
+  --soft-gold:#fff9e9;
+  --shadow:0 12px 32px rgba(13,31,60,.08);
+  --shadow-hover:0 16px 38px rgba(13,31,60,.12);
+}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Malgun Gothic','맑은 고딕',sans-serif;background:#f5f6f8;color:#1c2733;line-height:1.6;-webkit-text-size-adjust:100%}
-.wrap{max-width:1000px;margin:0 auto;padding:0 16px 60px}
-header{background:#0d1f3c;color:#fff;padding:28px 0 24px;margin-bottom:20px}
-header .wrap{padding-bottom:0}
-.brand{font-size:13px;letter-spacing:2px;color:#d4a73a;font-weight:700;margin-bottom:6px}
-h1{font-size:26px;font-weight:800;letter-spacing:-0.5px;margin-bottom:8px}
-.sub{font-size:14px;color:#b8c4d4}
-.updated{display:inline-block;margin-top:12px;background:rgba(212,167,58,.15);border:1px solid #d4a73a;color:#d4a73a;padding:5px 12px;border-radius:20px;font-size:12.5px;font-weight:600}
-.card{background:#fff;border-radius:12px;padding:20px;margin-bottom:16px;box-shadow:0 1px 3px rgba(13,31,60,.07)}
-.card h2{font-size:17px;font-weight:800;color:#0d1f3c;margin-bottom:4px;display:flex;align-items:center;gap:7px}
-.card .desc{font-size:12.5px;color:#6b7684;margin-bottom:14px}
-.kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
-.kpi div{background:#f8f9fb;border:1px solid #e8eaee;border-radius:10px;padding:14px 12px;text-align:center}
-.kpi .n{font-size:22px;font-weight:800;color:#0d1f3c;letter-spacing:-0.5px}
-.kpi .l{font-size:11.5px;color:#6b7684;margin-top:3px}
-.kpi .u{font-size:13px;color:#1565c0;font-weight:700}
-table{width:100%;border-collapse:collapse;font-size:13.5px}
-th{background:#0d1f3c;color:#fff;padding:9px 6px;font-weight:600;font-size:12.5px;white-space:nowrap}
-td{padding:9px 6px;border-bottom:1px solid #eef0f3;text-align:center}
-td.nm{text-align:left;font-weight:600;color:#0d1f3c}
-tr:last-child td{border-bottom:none}
-.tw{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 -4px}
-.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
-.tool{display:block;background:#f8f9fb;border:1px solid #e8eaee;border-radius:10px;padding:15px 13px;text-decoration:none;color:#1c2733;transition:.15s}
-.tool:hover,.tool:active{border-color:#1565c0;background:#f0f6fd}
-.tool .t{font-weight:700;font-size:14px;color:#0d1f3c;margin-bottom:3px}
-.tool .d{font-size:11.5px;color:#6b7684;line-height:1.45}
-.redev td.st{font-weight:700}
-.tag{display:inline-block;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:700}
-.t-go{background:#e8f3ff;color:#1565c0}
-.t-wait{background:#fff4e6;color:#c4661f}
-.t-plan{background:#f0f0f2;color:#6b7684}
-.cite{background:#fffdf5;border:1px solid #d4a73a}
-.citebox{background:#f8f9fb;border:1px dashed #c9cdd4;border-radius:8px;padding:12px;font-size:12.5px;color:#3d4756;line-height:1.7;margin-top:10px;word-break:keep-all}
-.btn{display:inline-block;margin-top:10px;background:#0d1f3c;color:#fff;border:none;padding:9px 16px;border-radius:7px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit}
-.note{font-size:11.5px;color:#8b95a1;line-height:1.65;margin-top:10px}
-footer{text-align:center;padding:30px 16px;color:#6b7684;font-size:12.5px}
-footer a{color:#1565c0;text-decoration:none;font-weight:600}
-.blog{display:block;background:#0d1f3c;color:#fff;text-align:center;padding:16px;border-radius:12px;text-decoration:none;font-weight:700;font-size:15px;margin-bottom:16px}
-.blog span{display:block;font-size:12px;color:#d4a73a;font-weight:600;margin-top:3px}
-.ld{text-align:center;padding:24px;color:#8b95a1;font-size:13px}
-@media(max-width:520px){h1{font-size:22px}.kpi .n{font-size:19px}table{font-size:12.5px}th,td{padding:8px 4px}}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{
+  min-width:320px;
+  font-family:-apple-system,BlinkMacSystemFont,"Pretendard","Apple SD Gothic Neo","Malgun Gothic","맑은 고딕",sans-serif;
+  background:
+    radial-gradient(circle at 10% 0%,rgba(21,101,192,.08),transparent 26rem),
+    linear-gradient(180deg,#f7f9fc 0,#eef2f6 100%);
+  color:var(--ink);
+  line-height:1.65;
+  letter-spacing:-.018em;
+  -webkit-text-size-adjust:100%;
+  text-rendering:optimizeLegibility;
+}
+a,button{-webkit-tap-highlight-color:transparent}
+button,a{touch-action:manipulation}
+.wrap{width:min(100%,1080px);margin:0 auto;padding:0 16px 72px}
+
+header{
+  position:relative;
+  overflow:hidden;
+  margin-bottom:22px;
+  padding:30px 0 28px;
+  color:#fff;
+  background:
+    radial-gradient(circle at 86% 18%,rgba(212,167,58,.22),transparent 15rem),
+    linear-gradient(135deg,#0d1f3c 0%,#102b50 58%,#0d1f3c 100%);
+  box-shadow:0 14px 34px rgba(13,31,60,.18);
+}
+header::before{
+  content:"";
+  position:absolute;
+  inset:auto -70px -120px auto;
+  width:250px;
+  height:250px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:50%;
+  box-shadow:0 0 0 28px rgba(255,255,255,.025),0 0 0 56px rgba(255,255,255,.018);
+}
+header::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:3px;
+  background:linear-gradient(90deg,var(--gold),rgba(212,167,58,.15) 44%,var(--blue));
+}
+header .wrap{position:relative;z-index:1;padding-bottom:0}
+.brand{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin-bottom:12px;
+  padding:6px 10px;
+  border:1px solid rgba(212,167,58,.44);
+  border-radius:999px;
+  color:#f3ce69;
+  background:rgba(13,31,60,.34);
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:1.6px;
+  backdrop-filter:blur(8px);
+}
+.brand::before{
+  content:"";
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--gold);
+  box-shadow:0 0 0 4px rgba(212,167,58,.13);
+}
+h1{
+  margin-bottom:8px;
+  font-size:clamp(28px,7vw,42px);
+  font-weight:900;
+  line-height:1.18;
+  letter-spacing:-.045em;
+}
+.sub{
+  max-width:670px;
+  color:#c7d2df;
+  font-size:14px;
+  line-height:1.6;
+}
+.updated{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  margin-top:16px;
+  padding:7px 12px;
+  border:1px solid rgba(212,167,58,.54);
+  border-radius:999px;
+  color:#f0cb67;
+  background:rgba(5,20,41,.38);
+  font-size:12px;
+  font-weight:800;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.06);
+}
+.updated::before{
+  content:"";
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:#49d17d;
+  box-shadow:0 0 0 4px rgba(73,209,125,.12);
+}
+
+.card{
+  position:relative;
+  overflow:hidden;
+  margin-bottom:16px;
+  padding:20px;
+  border:1px solid rgba(13,31,60,.08);
+  border-radius:18px;
+  background:rgba(255,255,255,.94);
+  box-shadow:var(--shadow);
+}
+.card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:3px;
+  background:linear-gradient(90deg,var(--blue),rgba(21,101,192,.14) 54%,transparent);
+}
+.card h2{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-bottom:5px;
+  color:var(--navy);
+  font-size:18px;
+  font-weight:900;
+  line-height:1.35;
+  letter-spacing:-.035em;
+}
+.card .desc{
+  margin-bottom:16px;
+  color:var(--muted);
+  font-size:12.5px;
+  line-height:1.55;
+}
+
+.kpi{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px;
+}
+.kpi>div{
+  position:relative;
+  min-width:0;
+  padding:16px 12px;
+  border:1px solid #e4e9ef;
+  border-radius:14px;
+  background:linear-gradient(180deg,#fff 0%,#f8fafc 100%);
+  text-align:center;
+  box-shadow:inset 0 1px 0 #fff;
+}
+.kpi>div:first-child{
+  grid-column:1/-1;
+  padding:18px 14px;
+  border-color:transparent;
+  color:#fff;
+  background:
+    radial-gradient(circle at 88% 12%,rgba(212,167,58,.25),transparent 7rem),
+    linear-gradient(135deg,var(--navy),#12345f);
+  box-shadow:0 12px 24px rgba(13,31,60,.16);
+}
+.kpi .n{
+  overflow:hidden;
+  color:var(--navy);
+  font-size:clamp(19px,5vw,26px);
+  font-weight:900;
+  line-height:1.15;
+  letter-spacing:-.045em;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+}
+.kpi>div:first-child .n{color:#fff;font-size:clamp(25px,7vw,34px)}
+.kpi .l{
+  margin-top:6px;
+  color:var(--muted);
+  font-size:11.5px;
+  font-weight:700;
+}
+.kpi>div:first-child .l{color:#bdcada}
+.kpi .u{
+  margin-left:2px;
+  color:var(--blue);
+  font-size:.55em;
+  font-weight:900;
+  vertical-align:baseline;
+}
+.kpi>div:first-child .u{color:#f0ca64}
+
+.tw{
+  overflow-x:auto;
+  margin:0;
+  border:1px solid #e2e7ed;
+  border-radius:13px;
+  background:#fff;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:thin;
+  scrollbar-color:#b8c2ce transparent;
+}
+.tw::-webkit-scrollbar{height:7px}
+.tw::-webkit-scrollbar-thumb{border-radius:999px;background:#b8c2ce}
+table{
+  width:100%;
+  min-width:650px;
+  border-collapse:separate;
+  border-spacing:0;
+  font-size:13px;
+}
+th{
+  position:relative;
+  padding:11px 8px;
+  border-right:1px solid rgba(255,255,255,.08);
+  color:#fff;
+  background:var(--navy);
+  font-size:12px;
+  font-weight:800;
+  line-height:1.35;
+  text-align:center;
+  white-space:nowrap;
+}
+th:first-child{
+  position:sticky;
+  left:0;
+  z-index:3;
+  border-top-left-radius:12px;
+  text-align:left;
+}
+th:last-child{border-right:0;border-top-right-radius:12px}
+td{
+  padding:11px 8px;
+  border-right:1px solid #eef1f4;
+  border-bottom:1px solid #e8edf2;
+  background:#fff;
+  color:#303b48;
+  line-height:1.45;
+  text-align:center;
+}
+td:first-child{
+  position:sticky;
+  left:0;
+  z-index:2;
+  box-shadow:7px 0 14px -14px rgba(13,31,60,.62);
+}
+tbody tr:nth-child(even) td{background:#fbfcfe}
+tbody tr:last-child td{border-bottom:0}
+td:last-child{border-right:0}
+td.nm{
+  min-width:145px;
+  color:var(--navy);
+  font-weight:800;
+  text-align:left;
+}
+.redev td.st{font-weight:800}
+.tag{
+  display:inline-flex;
+  align-items:center;
+  min-height:25px;
+  padding:3px 8px;
+  border-radius:999px;
+  font-size:10.5px;
+  font-weight:900;
+  line-height:1.2;
+  white-space:nowrap;
+}
+.t-go{color:var(--blue);background:#e8f3ff;border:1px solid #cfe4fb}
+.t-wait{color:#a75a12;background:#fff4e6;border:1px solid #f5ddbd}
+.t-plan{color:#66717e;background:#f0f2f5;border:1px solid #dfe3e8}
+
+.note{
+  margin-top:12px;
+  padding:10px 12px;
+  border-left:3px solid #b9c5d2;
+  border-radius:0 8px 8px 0;
+  color:#788391;
+  background:#f7f9fb;
+  font-size:11.5px;
+  line-height:1.65;
+}
+.note b{color:var(--navy)}
+
+.tools{
+  counter-reset:tool;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:10px;
+}
+.tool{
+  counter-increment:tool;
+  position:relative;
+  display:grid;
+  grid-template-columns:38px minmax(0,1fr) 18px;
+  grid-template-areas:"num title arrow" "num desc arrow";
+  align-items:center;
+  min-height:76px;
+  padding:13px 14px 13px 12px;
+  border:1px solid #e1e7ed;
+  border-radius:14px;
+  color:var(--ink);
+  background:linear-gradient(135deg,#fff 0%,#f8fafc 100%);
+  text-decoration:none;
+  box-shadow:0 6px 16px rgba(13,31,60,.045);
+  transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease,background .18s ease;
+}
+.tool::before{
+  content:counter(tool,decimal-leading-zero);
+  grid-area:num;
+  display:grid;
+  place-items:center;
+  width:30px;
+  height:30px;
+  border-radius:9px;
+  color:#fff;
+  background:var(--navy);
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.4px;
+}
+.tool::after{
+  content:"›";
+  grid-area:arrow;
+  color:var(--blue);
+  font-size:25px;
+  font-weight:400;
+  line-height:1;
+  text-align:right;
+}
+.tool .t{
+  grid-area:title;
+  margin-bottom:2px;
+  color:var(--navy);
+  font-size:14px;
+  font-weight:900;
+}
+.tool .d{
+  grid-area:desc;
+  color:var(--muted);
+  font-size:11.5px;
+  line-height:1.45;
+}
+.tool:hover,.tool:active{
+  transform:translateY(-2px);
+  border-color:rgba(21,101,192,.45);
+  background:var(--soft-blue);
+  box-shadow:var(--shadow-hover);
+}
+.tool:focus-visible,.blog:focus-visible,.btn:focus-visible{
+  outline:3px solid rgba(21,101,192,.28);
+  outline-offset:3px;
+}
+
+.blog{
+  position:relative;
+  display:block;
+  overflow:hidden;
+  margin-bottom:16px;
+  padding:18px 54px 18px 18px;
+  border:1px solid rgba(212,167,58,.34);
+  border-radius:16px;
+  color:#fff;
+  background:
+    radial-gradient(circle at 92% 10%,rgba(212,167,58,.28),transparent 8rem),
+    linear-gradient(135deg,var(--navy),#153b69);
+  box-shadow:0 12px 26px rgba(13,31,60,.16);
+  font-size:15px;
+  font-weight:900;
+  text-align:left;
+  text-decoration:none;
+}
+.blog::after{
+  content:"→";
+  position:absolute;
+  top:50%;
+  right:20px;
+  transform:translateY(-50%);
+  color:var(--gold);
+  font-size:24px;
+}
+.blog span{
+  display:block;
+  margin-top:4px;
+  color:#efc75e;
+  font-size:11.5px;
+  font-weight:700;
+}
+
+.cite{
+  border-color:rgba(212,167,58,.5);
+  background:
+    linear-gradient(180deg,rgba(255,253,245,.98),rgba(255,255,255,.98));
+}
+.cite::before{
+  background:linear-gradient(90deg,var(--gold),rgba(212,167,58,.18) 68%,transparent);
+}
+.citebox{
+  margin-top:12px;
+  padding:14px;
+  border:1px dashed #c7aa5f;
+  border-radius:11px;
+  color:#3d4756;
+  background:rgba(255,255,255,.8);
+  font-size:12px;
+  line-height:1.75;
+  word-break:keep-all;
+  overflow-wrap:anywhere;
+}
+.btn{
+  width:100%;
+  margin-top:11px;
+  padding:12px 16px;
+  border:0;
+  border-radius:10px;
+  color:#fff;
+  background:linear-gradient(135deg,var(--blue),#0f4f98);
+  box-shadow:0 8px 18px rgba(21,101,192,.2);
+  font-family:inherit;
+  font-size:13px;
+  font-weight:900;
+  cursor:pointer;
+}
+.btn:active{transform:translateY(1px)}
+
+footer{
+  padding:32px 16px 40px;
+  color:#75808d;
+  font-size:12px;
+  line-height:1.8;
+  text-align:center;
+}
+footer b{font-weight:900}
+footer a{
+  color:var(--blue);
+  font-weight:800;
+  text-decoration:none;
+}
+.ld{
+  padding:30px!important;
+  color:#8b95a1;
+  font-size:12.5px;
+  text-align:center;
+}
+
+@media(min-width:640px){
+  .wrap{padding-left:22px;padding-right:22px}
+  header{padding:42px 0 38px}
+  .card{padding:24px}
+  .tools{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .btn{width:auto;min-width:150px}
+}
+@media(min-width:760px){
+  .kpi{grid-template-columns:repeat(5,minmax(0,1fr))}
+  .kpi>div:first-child{grid-column:auto}
+  .kpi>div:first-child .n{font-size:26px}
+  table{min-width:100%;font-size:13.5px}
+  th{font-size:12.5px}
+}
+@media(hover:hover){
+  tbody tr:hover td{background:#f4f8fc}
+  tbody tr:hover td:first-child{background:#f4f8fc}
+}
+@media(max-width:520px){
+  .wrap{padding-left:12px;padding-right:12px;padding-bottom:56px}
+  header{padding:26px 0 24px}
+  .brand{font-size:10px}
+  h1{font-size:28px}
+  .sub{font-size:13px}
+  .card{padding:17px 15px;border-radius:16px}
+  .card h2{font-size:17px}
+  .card .desc{margin-bottom:13px}
+  .kpi{gap:8px}
+  .kpi>div{padding:14px 8px}
+  .kpi .n{font-size:18px}
+  .kpi>div:first-child .n{font-size:27px}
+  .tw{margin-right:-4px}
+  table{min-width:640px;font-size:12px}
+  th,td{padding:9px 6px}
+  td.nm{min-width:134px}
+  .blog{padding:17px 50px 17px 16px}
+}
+@media(prefers-reduced-motion:reduce){
+  *{scroll-behavior:auto!important;transition:none!important}
+}
 </style>
 </head>
 <body>
@@ -94,8 +554,9 @@ footer a{color:#1565c0;text-decoration:none;font-weight:600}
 
 <div class="card">
 <h2>🏘️ 동별 거래 현황</h2>
-<div class="desc">강서구 12개 동 · 이번 달 신고분</div>
+<div class="desc">이번 달 거래가 있었던 동 · 아파트와 빌라는 가격대가 달라 나눠서 표시합니다</div>
 <div class="tw"><table id="umd"><tbody><tr><td class="ld">불러오는 중…</td></tr></tbody></table></div>
+<div class="note">※ 아파트와 빌라를 한 숫자로 합치면 동네 비교가 왜곡되어 나눠 표시합니다. 3건 미만인 경우 중위값 대신 건수만 표기했습니다. 오피스텔은 별도 집계에서 제외했습니다.</div>
 </div>
 
 <div class="card">
@@ -121,7 +582,6 @@ footer a{color:#1565c0;text-decoration:none;font-weight:600}
 <a class="tool" href="index.html"><div class="t">내 월세 적정한가?</div><div class="d">전월세 실거래로 내 계약 조건 검증</div></a>
 <a class="tool" href="hwagok_map_widget.html"><div class="t">아파트 시세 지도</div><div class="d">화곡동 12개 단지 실시간 시세</div></a>
 <a class="tool" href="calc.html"><div class="t">재개발 분담금 계산기</div><div class="d">소유주·매수자 분담금 추정</div></a>
-<a class="tool" href="auction_check.html"><div class="t">경매 실거래 체크</div><div class="d">감정가 vs 주변 실거래 비교</div></a>
 <a class="tool" href="youth_score.html"><div class="t">청년주택 순위 점수</div><div class="d">내 순위·가점 자가진단</div></a>
 <a class="tool" href="moving_date_widget.html"><div class="t">이사 날짜 계산기</div><div class="d">계약·이사 일정 정리</div></a>
 </div>
@@ -133,7 +593,7 @@ footer a{color:#1565c0;text-decoration:none;font-weight:600}
 <h2>📌 이 자료 인용 안내</h2>
 <div class="desc">언론·연구·블로그에서 자유롭게 인용하실 수 있습니다</div>
 <div style="font-size:13.5px;line-height:1.75">원자료는 국토교통부 실거래가 공개시스템이며, 렌트체크 강서가 매일 자동 수집·정리해 공개합니다. 별도 허락 없이 인용 가능하며, 출처를 함께 표기해 주시면 됩니다.</div>
-<div class="citebox" id="citetext">렌트체크 강서, 「강서구 실거래 기록」(국토교통부 실거래가 공개자료 정리), 확인일 —</div>
+<div class="citebox" id="citetext">렌트체크 강서(blog.naver.com/spitoon61), 「강서구 실거래 기록」(국토교통부 실거래가 공개자료 정리), 확인일 —</div>
 <button class="btn" onclick="cp()">인용 문구 복사</button>
 <div class="note">데이터 특성상 신고 지연(계약 후 최대 30일)이 있어 최근 거래는 일부 누락될 수 있으며, 해제 신고된 거래는 집계에서 제외했습니다.</div>
 </div>
@@ -162,7 +622,7 @@ async function load(){
   const g=apt.generated_at?new Date(apt.generated_at):new Date();
   const ds=g.getFullYear()+'. '+(g.getMonth()+1)+'. '+g.getDate()+'.';
   document.getElementById('upd').textContent='최근 갱신 '+ds;
-  document.getElementById('citetext').textContent='렌트체크 강서, 「강서구 실거래 기록」(국토교통부 실거래가 공개자료 정리), '+ds+' 확인, https://arttoy61-png.github.io/rent-check/dashboard.html';
+  document.getElementById('citetext').textContent='렌트체크 강서(blog.naver.com/spitoon61), 「강서구 실거래 기록」(국토교통부 실거래가 공개자료 정리), '+ds+' 확인, https://arttoy61-png.github.io/rent-check/dashboard.html';
 
   // 이번 달
   const ym=au.updated;
@@ -201,13 +661,14 @@ async function load(){
 
   // 동별
   const by={};
-  [...s.map(d=>({...d,k:'s'})),...j.map(d=>({...d,k:'j'})),...w.map(d=>({...d,k:'w'}))].forEach(d=>{
-    by[d.u]=by[d.u]||{s:[],j:0,w:0};
-    if(d.k==='s')by[d.u].s.push(d.p); else if(d.k==='j')by[d.u].j++; else by[d.u].w++;
-  });
-  let u='<thead><tr><th>동</th><th>매매</th><th>매매 중위가</th><th>전세</th><th>월세</th></tr></thead><tbody>';
-  Object.entries(by).sort((a,b)=>(b[1].s.length+b[1].j+b[1].w)-(a[1].s.length+a[1].j+a[1].w)).forEach(([n,v])=>{
-    u+=`<tr><td class="nm">${n}</td><td>${v.s.length}건</td><td>${v.s.length?won(med(v.s)):'-'}</td><td>${v.j}건</td><td>${v.w}건</td></tr>`;
+  s.forEach(d=>{ by[d.u]=by[d.u]||{apt:[],vil:[],j:0,w:0};
+    if(d.t==='a')by[d.u].apt.push(d.p); else if(d.t==='v')by[d.u].vil.push(d.p); });
+  j.forEach(d=>{ by[d.u]=by[d.u]||{apt:[],vil:[],j:0,w:0}; by[d.u].j++; });
+  w.forEach(d=>{ by[d.u]=by[d.u]||{apt:[],vil:[],j:0,w:0}; by[d.u].w++; });
+  const cell=a=>a.length>=3?won(med(a)):(a.length?`<span style="color:#8b95a1">${a.length}건</span>`:'-');
+  let u='<thead><tr><th>동</th><th>아파트<br>매매 중위</th><th>빌라<br>매매 중위</th><th>전세</th><th>월세</th></tr></thead><tbody>';
+  Object.entries(by).sort((a,b)=>(b[1].apt.length+b[1].vil.length+b[1].j+b[1].w)-(a[1].apt.length+a[1].vil.length+a[1].j+a[1].w)).forEach(([n,v])=>{
+    u+=`<tr><td class="nm">${n}</td><td>${cell(v.apt)}</td><td>${cell(v.vil)}</td><td>${v.j}건</td><td>${v.w}건</td></tr>`;
   });
   document.getElementById('umd').innerHTML=u+'</tbody>';
 
