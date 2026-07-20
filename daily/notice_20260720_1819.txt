@@ -1,5 +1,5 @@
-🚨 새 공고 104건 — 2026.07.20 08:05
-확인 104건 / 기존 기억 0건
+🚨 새 공고 103건 — 2026.07.20 18:19
+확인 103건 / 기존 기억 0건
 다음 행동: 링크에서 공고문 PDF 내려받기 → 글감/초안/티스토리 대표이미지 제작
 
 🔥 [SH / SH 공고] [청년형] 특화형 매입임대주택(금천구) 입주자 모집 공고(운영기관 : 한지붕 협동조합) ★★★
@@ -14,9 +14,21 @@
     링크: https://www.i-sh.co.kr/main/lay2/program/S1T294C297/www/brd/m_247/list.do?multi_itm_seq=2
     소스: https://www.i-sh.co.kr/main/lay2/program/S1T294C297/www/brd/m_247/list.do?multi_itm_seq=2
 
+🔥 [SH / SH 공고] 2026년 1차 청년 매입임대주택 입주자 모집공고(2026. 6. 26.) 서류심사대상자 발표 및 제출서류 안내 ★★
+    지역 서울 / 게시 2026.6.26 / 마감 2026-07-20
+    강조: 청년, 매입임대
+    링크: https://www.i-sh.co.kr/main/lay2/program/S1T294C297/www/brd/m_247/list.do?multi_itm_seq=2
+    소스: https://www.i-sh.co.kr/main/lay2/program/S1T294C297/www/brd/m_247/list.do?multi_itm_seq=2
+
 🔥 [SH / SH 공고] [당첨자발표] 2026년 상반기 신혼·신생아 매입임대주택Ⅰ 입주대기자 모집공고(2026. 3. 18.) 최종 입주대기자 발표 및 동호선정 안내 ★★
     지역 서울 / 게시 2026.3.18 / 마감 2026-07-15
     강조: 매입임대, 신혼
+    링크: https://www.i-sh.co.kr/main/lay2/program/S1T294C297/www/brd/m_247/list.do?multi_itm_seq=2
+    소스: https://www.i-sh.co.kr/main/lay2/program/S1T294C297/www/brd/m_247/list.do?multi_itm_seq=2
+
+🔥 [SH / SH 공고] 2026년 1차 기숙사형 청년주택 입주자모집공고(2026.06.26.) 서류심사대상자 발표 및 제출서류 안내 ★★
+    지역 서울 / 게시 2026.06.26 / 마감 2026-07-20
+    강조: 청년, 기숙사
     링크: https://www.i-sh.co.kr/main/lay2/program/S1T294C297/www/brd/m_247/list.do?multi_itm_seq=2
     소스: https://www.i-sh.co.kr/main/lay2/program/S1T294C297/www/brd/m_247/list.do?multi_itm_seq=2
 
@@ -36,12 +48,6 @@
     지역 서울 / 게시 - / 마감 -
     강조: 청년, 기숙사
     링크: https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=306218
-    소스: https://housing.seoul.go.kr/
-
-🔥 [서울주거포털 / 서울시 공고] 도시2026년 1차 청년 매입임대주택 입주자 모집공고(2026. 6. 26.) ★★
-    지역 서울 / 게시 - / 마감 -
-    강조: 청년, 매입임대
-    링크: https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=306214
     소스: https://housing.seoul.go.kr/
 
 🔥 [서울주거포털 / 서울시 공고] 공지「청년 임차보증금 이자지원사업」변경 공고(2026.6.5.부터) ★★
@@ -80,30 +86,6 @@
     링크: https://apply.lh.or.kr
     소스: LH_단지조회
 
-🔥 [서울주거포털 / 서울시 공고] lh[강원지역본부] 26년 2차 신혼신생아2(전세형) 매입임대주택 예비자 모집공고 ★★
-    지역 서울 / 게시 - / 마감 -
-    강조: 매입임대, 신혼
-    링크: https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020414&ccrCnntSysDsCd=03&uppAisTpCd=13&aisTpCd=26&mi=1026
-    소스: https://housing.seoul.go.kr/
-
-🔥 [서울주거포털 / 서울시 공고] lh[강원지역본부] 26년 2차 기숙사형 청년주택 예비자 모집공고 ★★
-    지역 서울 / 게시 - / 마감 -
-    강조: 청년, 기숙사
-    링크: https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020415&ccrCnntSysDsCd=03&uppAisTpCd=13&aisTpCd=26&mi=1026
-    소스: https://housing.seoul.go.kr/
-
-🔥 [SH / SH 공고] NEW 2026년 1차 청년 매입임대주택 입주자 모집공고(2026. 6. 26.) 서류심사대상자 발표 및 제출서류 안내 ★★
-    지역 서울 / 게시 - / 마감 -
-    강조: 청년, 매입임대
-    링크: https://www.i-sh.co.kr/main/lay2/program/S1T294C297/www/brd/m_247/list.do?multi_itm_seq=2
-    소스: https://www.i-sh.co.kr/main/lay2/program/S1T294C297/www/brd/m_247/list.do?multi_itm_seq=2
-
-🔥 [SH / SH 공고] NEW 2026년 1차 기숙사형 청년주택 입주자모집공고(2026.06.26.) 서류심사대상자 발표 및 제출서류 안내 ★★
-    지역 서울 / 게시 - / 마감 -
-    강조: 청년, 기숙사
-    링크: https://www.i-sh.co.kr/main/lay2/program/S1T294C297/www/brd/m_247/list.do?multi_itm_seq=2
-    소스: https://www.i-sh.co.kr/main/lay2/program/S1T294C297/www/brd/m_247/list.do?multi_itm_seq=2
-
 🔥 [서울주거포털 / 서울시 공고] 2026년 서울시 청년수당 참여자 모집 공고(신청: 5.27.~5.29. 16:00) ★★
     지역 서울 / 게시 - / 마감 -
     강조: 청년, 청년수당
@@ -113,6 +95,12 @@
 🔥 [SH / SH 공고] 2026년 만리동 예술인 협동조합주택(막쿱) 잔여세대 입주자 모집공고(2026. 6. 25.) 서류심사대상자 발표 ★
     지역 서울 / 게시 2026.6.25 / 마감 2026-07-16
     강조: 협동조합
+    링크: https://www.i-sh.co.kr/main/lay2/program/S1T294C297/www/brd/m_247/list.do?multi_itm_seq=2
+    소스: https://www.i-sh.co.kr/main/lay2/program/S1T294C297/www/brd/m_247/list.do?multi_itm_seq=2
+
+🔥 [SH / SH 공고] 강북구 청년주택 청솔둥지(수요자맞춤형) 추가 입주자 모집 공고 ★
+    지역 서울 / 게시 2026-07-20 / 마감 -
+    강조: 청년
     링크: https://www.i-sh.co.kr/main/lay2/program/S1T294C297/www/brd/m_247/list.do?multi_itm_seq=2
     소스: https://www.i-sh.co.kr/main/lay2/program/S1T294C297/www/brd/m_247/list.do?multi_itm_seq=2
 
@@ -126,6 +114,12 @@
     지역 서울 / 게시 - / 마감 -
     강조: 청년
     링크: https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=306908
+    소스: https://housing.seoul.go.kr/
+
+🔥 [서울주거포털 / 서울시 공고] 수요강북구 청년주택 청솔둥지(수요자맞춤형) 추가 입주자 모집 공고 ★
+    지역 서울 / 게시 - / 마감 -
+    강조: 청년
+    링크: https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=307014
     소스: https://housing.seoul.go.kr/
 
 🔥 [LH / 행복주택] 수서역세권 A3BL 행복주택 ★
@@ -230,13 +224,13 @@
     링크: https://apply.lh.or.kr
     소스: LH_단지조회
 
-🔥 [서울주거포털 / 서울시 공고] 서울특별시 <2026년 청년인생설계학교 2기 스케치코스> 참여자 추가 모집 .....2654490 ★
+🔥 [서울주거포털 / 서울시 공고] 서울특별시 <2026년 서울시 청년마음건강 지원사업 3차> 모집 .....2656121 ★
     지역 서울 / 게시 - / 마감 -
     강조: 청년
     링크: https://youth.seoul.go.kr/infoData/sprtInfo/list.do?key=2309130006#none
     소스: https://youth.seoul.go.kr/infoData/sprtInfo/list.do?key=2309130006
 
-🔥 [서울주거포털 / 서울시 공고] 서울특별시 <2026년 서울시 청년마음건강 지원사업 3차> 모집 .....2656121 ★
+🔥 [서울주거포털 / 서울시 공고] 서울청년센터 강동 <방탈출 프로젝트> 참여자 모집 .....2656362 ★
     지역 서울 / 게시 - / 마감 -
     강조: 청년
     링크: https://youth.seoul.go.kr/infoData/sprtInfo/list.do?key=2309130006#none
@@ -512,6 +506,12 @@
     링크: https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=306908
     소스: https://housing.seoul.go.kr/
 
+🔥 [서울주거포털 / 서울시 공고] sh강북구 청년주택 청솔둥지(수요자맞춤형) 추가 입주자 모집 공고 ★
+    지역 서울 / 게시 - / 마감 -
+    강조: 청년
+    링크: https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=307014
+    소스: https://housing.seoul.go.kr/
+
 🔥 [서울주거포털 / 서울시 공고] [서류심사 결과] 2026년 미래 청년 일자리 사업 참여자 모집 서류심사 결과 ★
     지역 서울 / 게시 - / 마감 -
     강조: 청년
@@ -559,12 +559,6 @@
     강조: 청년
     링크: https://youth.seoul.go.kr/bbs/list.do?key=2303300002&sc_bbsCtgrySn=2304110001#none
     소스: https://youth.seoul.go.kr/bbs/list.do?key=2303300002&sc_bbsCtgrySn=2304110001
-
-🔥 [SH / SH 공고] NEW 강북구 청년주택 청솔둥지(수요자맞춤형) 추가 입주자 모집 공고 ★
-    지역 서울 / 게시 - / 마감 -
-    강조: 청년
-    링크: https://www.i-sh.co.kr/main/lay2/program/S1T294C297/www/brd/m_247/list.do?multi_itm_seq=2
-    소스: https://www.i-sh.co.kr/main/lay2/program/S1T294C297/www/brd/m_247/list.do?multi_itm_seq=2
 
 🔥 [서울주거포털 / 서울시 공고] 2026년 서울시 청년 마음건강 지원사업 3차 참여자 모집 공고 ★
     지역 서울 / 게시 - / 마감 -
