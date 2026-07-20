@@ -11,6 +11,8 @@
 - 자동 캐싱 (data/cache/) — 같은 월 데이터는 재호출 안 함
 - 한글 컬럼 정규화
 - 재시도 + 에러 처리
+- [2026.07 추가] 전월세 갱신 계약 필드 수집 (contract_type / use_rr_right / pre_deposit 등)
+- [2026.07 추가2] 매매 거래유형(dealing_gbn: 중개거래/직거래) · 해제여부(cdeal_type) 수집
 """
 import os
 import time
@@ -29,11 +31,13 @@ ENDPOINTS = {
     "연립다세대_매매": "https://apis.data.go.kr/1613000/RTMSDataSvcRHTrade/getRTMSDataSvcRHTrade",
     "연립다세대_전월세": "https://apis.data.go.kr/1613000/RTMSDataSvcRHRent/getRTMSDataSvcRHRent",
     "단독다가구_매매": "https://apis.data.go.kr/1613000/RTMSDataSvcSHTrade/getRTMSDataSvcSHTrade",
-    "단독다가구_전월세": "https://apis.data.go.kr/1613000/RTMSDataSvcSHRent/getRTMSDataSvcSHRent",
 }
 
 CACHE_DIR = Path("data/cache")
 CACHE_DIR.mkdir(parents=True, exist_ok=True)
+
+# 캐시 스키마 버전 — 컬럼 구조가 바뀌면 올린다(옛 캐시 자동 무시)
+CACHE_VERSION = "v3"
 
 
 def _safe_text(item, tag: str) -> str:
@@ -64,8 +68,22 @@ def fetch_one_month(
     if deal_type not in ENDPOINTS:
         raise ValueError(f"지원하지 않는 거래유형: {deal_type}")
 
-    cache_file = CACHE_DIR / f"{deal_type}_{lawd_cd}_{deal_ym}.csv"
-    if use_cache and cache_file.exists():
+    # ── 신고지연 대응: 현재월 포함 최근 2개월은 캐시 무시하고 항상 API 재수집 ──
+    #    (국토부 실거래는 계약 후 최대 30일 신고 유예라 최근 달이 계속 채워짐)
+    _now = datetime.today()
+    _recent_yms = set()
+    _y, _m = _now.year, _now.month
+    for _ in range(2):
+        _recent_yms.add(f"{_y:04d}{_m:02d}")
+        _m -= 1
+        if _m == 0:
+            _m = 12
+            _y -= 1
+    _is_recent = deal_ym in _recent_yms
+
+    # 캐시 파일명에 버전 포함 → 옛 스키마 캐시는 자동으로 안 읽힘
+    cache_file = CACHE_DIR / f"{CACHE_VERSION}_{deal_type}_{lawd_cd}_{deal_ym}.csv"
+    if use_cache and not _is_recent and cache_file.exists():
         return pd.read_csv(cache_file, dtype=str)
 
     url = ENDPOINTS[deal_type]
@@ -135,19 +153,35 @@ def fetch_one_month(
         }
 
         if is_rent:
+            row["deal_amount"] = None
             row["deposit"] = _parse_amount(_safe_text(item, "deposit"))
             row["monthly_rent"] = _parse_amount(_safe_text(item, "monthlyRent"))
-            row["deal_amount"] = None
+            # ── 갱신 계약 정보 (2021.06 이후 계약분부터 제공) ──
+            row["contract_type"] = _safe_text(item, "contractType")       # 신규 / 갱신
+            row["contract_term"] = _safe_text(item, "contractTerm")       # 예: 26.08~28.08
+            row["pre_deposit"] = _parse_amount(_safe_text(item, "preDeposit"))
+            row["pre_monthly_rent"] = _parse_amount(_safe_text(item, "preMonthlyRent"))
+            row["use_rr_right"] = _safe_text(item, "useRRRight")          # 사용 / (공란)
+            row["dealing_gbn"] = ""
+            row["cdeal_type"] = ""
         else:
             row["deal_amount"] = _parse_amount(_safe_text(item, "dealAmount"))
             row["deposit"] = None
             row["monthly_rent"] = None
+            row["contract_type"] = ""
+            row["contract_term"] = ""
+            row["pre_deposit"] = None
+            row["pre_monthly_rent"] = None
+            row["use_rr_right"] = ""
+            row["dealing_gbn"] = _safe_text(item, "dealingGbn")            # 중개거래 / 직거래 (2021.6~)
+            row["cdeal_type"] = _safe_text(item, "cdealType")              # O = 해제된 거래
 
         rows.append(row)
 
     df = pd.DataFrame(rows)
 
-    if use_cache and len(df) > 0:
+    # 데이터가 있으면 항상 캐시 갱신(최근 달도 최신값으로 덮어씀 → 집계기가 최신 데이터 읽음)
+    if len(df) > 0:
         df.to_csv(cache_file, index=False, encoding="utf-8-sig")
 
     return df
@@ -218,7 +252,10 @@ def normalize_to_legacy(df: pd.DataFrame, region_map: dict) -> pd.DataFrame:
     legacy_cols = [
         "region_name", "deal_ym", "deal_type", "building_name",
         "umd_name", "jibun", "area_m2", "deal_amount",
-        "deposit", "monthly_rent", "floor", "deal_day", "build_year"
+        "deposit", "monthly_rent", "floor", "deal_day", "build_year",
+        # ── 갱신 계약 필드 (전월세만 값이 들어감) ──
+        "contract_type", "contract_term", "pre_deposit", "pre_monthly_rent", "use_rr_right",
+        "dealing_gbn", "cdeal_type",
     ]
     return df[[c for c in legacy_cols if c in df.columns]]
 
