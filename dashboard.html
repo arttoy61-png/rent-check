@@ -323,6 +323,11 @@ td.nm{
   line-height:1.65;
 }
 .note b{color:var(--navy)}
+.nm a{color:var(--blue);text-decoration:none;border-bottom:1px solid rgba(21,101,192,.35)}
+.nm a:after{content:"›";margin-left:3px;font-weight:900}
+.nm a:hover{border-bottom-color:var(--blue)}
+.more{display:inline-block;margin-top:10px;font-size:13.5px;color:var(--blue);text-decoration:none;font-weight:700}
+.more:hover{text-decoration:underline}
 
 .tools{
   counter-reset:tool;
@@ -522,35 +527,17 @@ footer a{
   table{min-width:0;width:100%;font-size:11.5px}
   th,td{padding:8px 3px}
   td.nm{min-width:0}
-  /* 모바일: 아파트·동별 표는 행 간격을 넓히고 구분선은 부드럽게 */
-  #apt td,
-  #umd td{
-    padding-top:12px;
-    padding-bottom:12px;
-    border-bottom-color:rgba(13,31,60,.065);
-  }
-  #apt td{line-height:1.52}
-  #apt td.nm{font-size:11px;line-height:1.5}
-  #apt td span{
-    display:inline-block;
-    margin-top:2px;
-    line-height:1.35;
-  }
   /* 모바일: 스크롤 없이 들어가도록 보조 열 숨김 */
   #apt th:nth-child(2), #apt td:nth-child(2),
   #apt th:nth-child(6), #apt td:nth-child(6){display:none}
+  #apt td.nm{font-size:11px;line-height:1.35}
   .redev th:nth-child(2), .redev td:nth-child(2){display:none}
-  #umd th{padding:8px 2px}
-  #umd td{padding-left:2px;padding-right:2px;line-height:1.48}
+  #umd th, #umd td{padding:8px 2px}
   .blog{padding:17px 50px 17px 16px}
 }
 @media(prefers-reduced-motion:reduce){
   *{scroll-behavior:auto!important;transition:none!important}
 }
-
-/* 테이블 맨 왼쪽 헤더 탭도 가운데 정렬 */
-th:first-child{ text-align:center; }
-
 </style>
 </head>
 <body>
@@ -591,14 +578,15 @@ th:first-child{ text-align:center; }
 <div class="tw"><table class="redev">
 <thead><tr><th>구역</th><th>사업방식</th><th>단계</th><th>규모</th></tr></thead>
 <tbody>
-<tr><td class="nm">화곡동 1033 일대</td><td>역세권 장기전세<br>도시정비형 재개발</td><td class="st"><span class="tag t-go">정비구역 지정</span></td><td>2,146세대<br>지하3~지상18층</td></tr>
-<tr><td class="nm">화곡동 1130-7 일대</td><td>가로주택정비</td><td class="st"><span class="tag t-go">조합설립인가</span></td><td>217세대<br>지상 8층</td></tr>
-<tr><td class="nm">화곡1동 354 일대</td><td>모아타운</td><td class="st"><span class="tag t-wait">조합설립(A2-2·A2-4)</span></td><td>구역별 상이</td></tr>
+<tr><td class="nm"><a href="https://blog.naver.com/spitoon61/224321725876" target="_blank" rel="noopener">화곡동 1033 일대</a></td><td>역세권 장기전세<br>도시정비형 재개발</td><td class="st"><span class="tag t-go">정비구역 지정</span></td><td>2,146세대<br>지하3~지상18층</td></tr>
+<tr><td class="nm"><a href="https://blog.naver.com/spitoon61/224349304741" target="_blank" rel="noopener">화곡동 1130-7 일대</a></td><td>가로주택정비</td><td class="st"><span class="tag t-go">조합설립인가</span></td><td>217세대<br>지상 8층</td></tr>
+<tr><td class="nm"><a href="https://blog.naver.com/spitoon61/224296873784" target="_blank" rel="noopener">화곡1동 354 일대</a></td><td>모아타운</td><td class="st"><span class="tag t-wait">조합설립(A2-2·A2-4)</span></td><td>구역별 상이</td></tr>
 <tr><td class="nm">화곡6동 957-1 일대</td><td>모아타운</td><td class="st"><span class="tag t-wait">조합설립(A1)</span></td><td>구역별 상이</td></tr>
 <tr><td class="nm">화곡동 359-124</td><td>가로주택정비</td><td class="st"><span class="tag t-wait">조합설립인가</span></td><td>보성연립</td></tr>
 <tr><td class="nm">화곡동 812-26</td><td>재건축</td><td class="st"><span class="tag t-plan">이전고시·일시중단</span></td><td>젤라연립</td></tr>
 </tbody></table></div>
-<div class="note">※ 단계는 행정 절차 기준이며, 실제 사업 진행 속도와 다를 수 있습니다. 매수 검토 시 토지이음에서 해당 지번이 <b>사업시행구역</b>에 포함되는지 반드시 확인하세요. 관리지역 포함만으로는 분양자격이 확정되지 않습니다.</div>
+<a class="more" href="https://blog.naver.com/spitoon61/224323267506" target="_blank" rel="noopener">📖 화곡 재개발·모아타운, 어디가 가장 빠를까 — 구역별 단계 총정리 보기 ›</a>
+<div class="note"><b>파란 구역명을 누르면</b> 해당 구역의 상세 분석 글로 이동합니다.<br>※ 단계는 행정 절차 기준이며, 실제 사업 진행 속도와 다를 수 있습니다. 매수 검토 시 토지이음에서 해당 지번이 <b>사업시행구역</b>에 포함되는지 반드시 확인하세요. 관리지역 포함만으로는 분양자격이 확정되지 않습니다.</div>
 </div>
 
 <div class="card">
