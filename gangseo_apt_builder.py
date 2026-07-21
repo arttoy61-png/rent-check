@@ -115,6 +115,20 @@ def main():
         }
         if e.get("un"): item["un"] = e["un"]
         if e.get("lat"): item["lat"], item["lng"] = e["lat"], e["lng"]
+        # 최신거래순 정렬용 — 전 면적·전 유형 통틀어 가장 최근 1건
+        rc, ppy, mxn = None, None, -1
+        for ao in areas_out:
+            if ao.get("ppy") is not None and ao["nS"] > mxn:
+                mxn, ppy = ao["nS"], ao["ppy"]
+            for key, tag in (("sale", "sale"), ("jeonse", "je"), ("wolse", "wo")):
+                for r in ao.get(key, []):
+                    amt = r.get("amt") if tag == "sale" else r.get("dep")
+                    if amt is None: continue
+                    cand = {"d": r["date"], "t": tag, "m2": round(r["m2"]), "fl": r.get("fl"), "a": amt}
+                    if tag == "wo": cand["r"] = r.get("rent")
+                    if rc is None or cand["d"] > rc["d"]: rc = cand
+        if rc: item["rc"] = rc
+        if ppy is not None: item["ppy"] = round(ppy, 3)
         complexes.append(item)
         detail[_id] = {"nm": nm, "dong": dong, "yr": v["yr"], "areas": areas_out}
         sd = summary_dong[dong]

@@ -25,10 +25,15 @@ padding:18px 16px 16px;color:#fff;margin-bottom:10px}
 .hd h1{font-size:19px;font-weight:900;letter-spacing:-.4px}
 .hd h1 b{color:var(--gold)}
 .hd .sub{font-size:12.5px;color:#c9d6e6;margin-top:4px}
-.crumb{display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin-top:11px;font-size:12.5px}
-.crumb a{color:#ffe9b8;text-decoration:none;font-weight:700;cursor:pointer}
+.crumbbar{position:sticky;top:0;z-index:60;background:var(--navy);
+margin:0 -12px 10px;padding:9px 12px;box-shadow:0 2px 10px rgba(13,31,60,.28)}
+.crumb{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:14px}
+.crumb a{display:inline-flex;align-items:center;gap:4px;background:rgba(255,255,255,.16);
+border:1.5px solid rgba(255,233,184,.55);color:#ffe9b8;font-weight:800;padding:7px 13px;
+border-radius:999px;text-decoration:none;cursor:pointer;min-height:36px;box-sizing:border-box}
+.crumb a:hover{background:rgba(255,255,255,.3)}
 .crumb .sep{color:#8fa5c2}
-.crumb .cur{color:#fff;font-weight:800}
+.crumb .cur{color:#fff;font-weight:800;padding:0 3px}
 /* 검색 */
 .search{position:relative;margin:10px 0 12px}
 .search input{width:100%;min-height:46px;border:1.5px solid var(--line);border-radius:12px;
@@ -45,6 +50,26 @@ padding:11px 13px;border-top:1px solid #eef1f5;cursor:pointer;font-size:14px}
 .badge-few{display:inline-block;font-size:10.5px;font-weight:800;color:#9a6d0b;
 background:#fff6dd;border:1px solid #eadba7;border-radius:99px;padding:1.5px 7px;margin-left:5px;vertical-align:1px}
 /* 카드 공통 */
+
+.sortrow{display:flex;gap:6px;overflow-x:auto;padding:2px 0 9px;-webkit-overflow-scrolling:touch}
+.sortrow::-webkit-scrollbar{display:none}
+.sortbtn{flex-shrink:0;border:1.5px solid var(--line);background:#fff;color:var(--muted);
+font-size:12.5px;font-weight:800;padding:8px 13px;border-radius:999px;cursor:pointer;white-space:nowrap;min-height:38px}
+.sortbtn.on{background:var(--navy);border-color:var(--navy);color:#fff}
+.sortbtn.newbtn.on{background:#0f7a4a;border-color:#0f7a4a}
+.rank{flex-shrink:0;width:27px;height:27px;border-radius:50%;background:var(--navy);color:#f0c75e;
+font-size:13.5px;font-weight:900;display:flex;align-items:center;justify-content:center;margin-right:9px}
+.rank.top{background:linear-gradient(135deg,#b8860b,#d4a73a);color:var(--navy)}
+.led{display:inline-block;width:7px;height:7px;border-radius:50%;background:#0f7a4a;
+flex-shrink:0;animation:ledbl 1.5s infinite}
+@keyframes ledbl{0%,100%{opacity:1}50%{opacity:.25}}
+.rcline{display:flex;align-items:center;gap:6px;margin-top:7px;font-size:12.5px;flex-wrap:wrap}
+.rdate{color:#0f7a4a;font-weight:900}
+.ttag{font-weight:800;font-size:11.5px;padding:1.5px 7px;border-radius:5px;color:#fff}
+.ttag.sale{background:var(--orange)}.ttag.je{background:var(--blue)}.ttag.wo{background:#b8860b}
+.rspec{color:var(--ink);font-weight:700}
+.rcamt{font-size:17px;font-weight:900}
+.rcamt.sale{color:var(--orange)}.rcamt.je{color:var(--blue)}.rcamt.wo{color:#b8860b}
 .card{background:var(--paper);border:1.5px solid var(--line);border-radius:var(--radius);
 padding:13px 15px;margin-bottom:9px;cursor:pointer;transition:border-color .12s}
 .card:active{border-color:var(--blue);background:#fbfdff}
@@ -113,8 +138,9 @@ padding:15px 16px;font-size:14px;line-height:1.8}
   <div class="hd">
     <h1>강서구 아파트 <b>실거래</b></h1>
     <div class="sub">동을 고르고, 단지를 고르면 매매·전세·월세가 한 화면에 · 매일 갱신</div>
-    <div class="crumb" id="crumb"></div>
   </div>
+
+  <div class="crumbbar"><div class="crumb" id="crumb"></div></div>
 
   <div class="search">
     <input id="q" type="search" placeholder="단지명 검색 (예: 강서힐스테이트)" autocomplete="off">
@@ -136,7 +162,7 @@ padding:15px 16px;font-size:14px;line-height:1.8}
 </div>
 
 <script>
-let S=null, DET=null, state={view:'dong', dong:null, id:null, showAll:false};
+let S=null, DET=null, state={view:'dong', dong:null, id:null, showAll:false, sort:'recent'};
 const $=s=>document.querySelector(s);
 const norm=s=>String(s||'').replace(/[,\s·()]/g,'').toLowerCase();
 const eok=v=>v==null?'-':(v>=1?v.toFixed(v>=10?1:2).replace(/\.?0+$/,''):v.toFixed(2))+'억';
@@ -147,14 +173,14 @@ fetch('gangseo_apt_summary.json',{cache:'no-cache'})
  .catch(()=>{$('#view').textContent='데이터를 불러오지 못했습니다. 잠시 후 새로고침해 주세요.';});
 
 function setCrumb(){
-  const c=$('#crumb'); let h='<a onclick="goDong()">강서구</a>';
+  const c=$('#crumb'); let h='<a onclick="goDong()">‹ 강서구</a>';
   if(state.dong){h+='<span class="sep">›</span>';
-    h+= state.view==='list' ? '<span class="cur">'+state.dong+'</span>' : '<a onclick="goList(\''+state.dong+'\')">'+state.dong+'</a>';}
+    h+= state.view==='list' ? '<span class="cur">'+state.dong+'</span>' : '<a onclick="goList(\''+state.dong+'\')">‹ '+state.dong+'</a>';}
   if(state.view==='detail'&&DET_CUR){h+='<span class="sep">›</span><span class="cur">'+DET_CUR.nm+'</span>';}
   c.innerHTML=h;
 }
-function goDong(){state={view:'dong',dong:null,id:null,showAll:false};render();window.scrollTo(0,0);}
-function goList(d){state={view:'list',dong:d,id:null,showAll:false};render();window.scrollTo(0,0);ga('dong_click',{dong:d});}
+function goDong(){state={view:'dong',dong:null,id:null,showAll:false,sort:'recent'};render();window.scrollTo(0,0);}
+function goList(d){state={view:'list',dong:d,id:null,showAll:false,sort:state.sort||'recent'};render();window.scrollTo(0,0);ga('dong_click',{dong:d});}
 function goDetail(id){state.view='detail';state.id=id;render();window.scrollTo(0,0);}
 
 function render(){
@@ -182,27 +208,49 @@ function renderDong(){
 function renderList(){
   DET_CUR=null;setCrumb();
   const all=S.complexes.filter(c=>c.dong===state.dong&&!c.few);
-  const list=state.showAll?all:all.slice(0,15);
+  const k=state.sort||'recent';
+  const val=(c)=>({price:c.mid,pyeong:c.ppy,year:c.yr,deals:c.tot}[k]);
+  const sorted=[...all].sort((a,b)=>k==='recent'
+    ? ((b.rc&&b.rc.d)||'0').localeCompare((a.rc&&a.rc.d)||'0')
+    : ((val(b)==null?-1:val(b))-(val(a)==null?-1:val(a))));
+  const list=state.showAll?sorted:sorted.slice(0,15);
   const d=S.dongs.find(x=>x.dong===state.dong)||{};
-  let h='<div class="sumline"><b>'+state.dong+'</b> · 단지 <b>'+(d.n||all.length)+'</b>개 · 6개월 매매 <b>'+(d.sale6||'-')+'</b>건 · 매매 중위 <b>'+eok(d.mid)+'</b> · 거래 많은 순</div>';
-  list.forEach(c=>{h+=aptCard(c);});
-  if(!state.showAll&&all.length>15)
-    h+='<button class="more" onclick="state.showAll=true;render()">'+state.dong+' '+all.length+'개 단지 모두 보기</button>';
+  const B=[['recent','\uD83D\uDFE2 최신거래순'],['price','매매가순'],['pyeong','평당가순'],['year','신축순'],['deals','거래량순']];
+  let h='<div class="sortrow">'+B.map(b=>'<button class="sortbtn'+(b[0]==='recent'?' newbtn':'')+(k===b[0]?' on':'')
+    +'" onclick="setSort(\''+b[0]+'\')">'+b[1]+'</button>').join('')+'</div>';
+  h+='<div class="sumline"><b>'+state.dong+'</b> · 단지 <b>'+(d.n||all.length)+'</b>개 · 6개월 매매 <b>'+(d.sale6||'-')+'</b>건 · 매매 중위 <b>'+eok(d.mid)+'</b></div>';
+  list.forEach((c,i)=>{h+=aptCard(c,k,i+1);});
+  if(!state.showAll&&sorted.length>15)
+    h+='<button class="more" onclick="state.showAll=true;render()">'+state.dong+' '+sorted.length+'개 단지 모두 보기</button>';
+  h+='<button class="back" onclick="goDong()">‹ 다른 동 고르기</button>';
   $('#view').className='';$('#view').innerHTML=h;
 }
-function aptCard(c){
+function setSort(k){state.sort=k;state.showAll=false;render();ga('sort_use',{sort:k,dong:state.dong});}
+function aptCard(c,k,rk){
+  const TY={sale:['매매','sale'],je:['전세','je'],wo:['월세','wo']};
+  const badge=rk?'<div class="rank'+(rk<=3?' top':'')+'">'+rk+'</div>':'';
+  const head='<div class="top" style="display:flex;align-items:flex-start">'+badge
+   +'<div style="flex:1"><div class="nm">'+c.nm+'</div>'
+   +'<div class="meta">'+c.dong+' · '+(c.yr?c.yr+'년':'준공 미상')+(c.un?' · '+c.un.toLocaleString()+'세대':'')+'</div></div>';
+  if(k==='recent'&&c.rc){
+    const r=c.rc,tn=TY[r.t][0],tc=TY[r.t][1];
+    const amt=r.t==='wo'?eok(r.a)+' / '+r.r+'만':eok(r.a);
+    return '<div class="card ac" onclick="goDetail(\''+c.id+'\')">'+head
+     +'<div style="text-align:right"><div class="rcamt '+tc+'">'+amt+'</div>'
+     +'<div style="font-size:11.5px;color:#98a4b1;font-weight:700">'+tn+' 실거래</div></div></div>'
+     +'<div class="rcline"><span class="led"></span><span class="rdate">'+r.d.slice(5)+'</span>'
+     +'<span class="ttag '+tc+'">'+tn+'</span>'
+     +'<span class="rspec">'+r.m2+'㎡('+Math.round(r.m2/3.3058)+'평)'+(r.fl?' · '+r.fl+'층':'')+'</span></div></div>';
+  }
   const last=c.last?'<b>'+eok(c.last.amt)+'</b><span class="d">'+c.last.date.slice(2)+'</span>':'<b style="color:#98a4b1;font-size:13px">매매 없음</b>';
   const mid=c.mid!=null?eok(c.mid):'<span style="color:#98a4b1">표본부족</span>';
-  const je=c.je!=null?eok(c.je):'-';
-  const ratio=c.ratio!=null?c.ratio+'%':'-';
-  return '<div class="card ac" onclick="goDetail(\''+c.id+'\')">'
-   +'<div class="top"><div><div class="nm">'+c.nm+'</div>'
-   +'<div class="meta">'+c.dong+' · '+(c.yr?c.yr+'년':'준공 미상')+(c.un?' · '+c.un.toLocaleString()+'세대':'')+'</div></div>'
+  const ppy=c.ppy!=null?Math.round(c.ppy*10000).toLocaleString()+'만':'-';
+  return '<div class="card ac" onclick="goDetail(\''+c.id+'\')">'+head
    +'<div class="last">'+last+'</div></div>'
    +'<div class="grid">'
    +'<div class="g"><div class="k">대표 '+c.m2+'㎡('+Math.round(c.py)+'평)</div><div class="v">'+mid+'</div></div>'
-   +'<div class="g"><div class="k">전세 중위</div><div class="v">'+je+'</div></div>'
-   +'<div class="g"><div class="k">전세가율</div><div class="v gold">'+ratio+'</div></div>'
+   +'<div class="g"><div class="k">전용 평당</div><div class="v">'+ppy+'</div></div>'
+   +'<div class="g"><div class="k">전세가율</div><div class="v gold">'+(c.ratio!=null?c.ratio+'%':'-')+'</div></div>'
    +'<div class="g"><div class="k">6개월 거래</div><div class="v">'+c.tot+'건</div></div>'
    +'</div></div>';
 }
