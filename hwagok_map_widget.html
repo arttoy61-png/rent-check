@@ -70,8 +70,13 @@ background:#fff6dd;border:1px solid #eadba7;border-radius:99px;padding:1.5px 7px
 .sortrow::-webkit-scrollbar{display:none}
 .sortbtn{flex-shrink:0;border:1.5px solid var(--line);background:#fff;color:var(--muted);
 font-size:12.5px;font-weight:800;padding:8px 13px;border-radius:999px;cursor:pointer;white-space:nowrap;min-height:38px}
-.sortbtn.on{background:var(--navy);border-color:var(--navy);color:#fff}
-.sortbtn.newbtn.on{background:#0f7a4a;border-color:#0f7a4a}
+.sortbtn.on{color:#fff}
+.sortbtn.s-recent.on{background:#2ea06e;border-color:#2ea06e}
+.sortbtn.s-price.on{background:#e08232;border-color:#e08232}
+.sortbtn.s-pyeong.on{background:#7a5cd2;border-color:#7a5cd2}
+.sortbtn.s-year.on{background:#46b9cd;border-color:#46b9cd}
+.sortbtn.s-deals.on{background:#d4a73a;border-color:#d4a73a;color:#0d1f3c}
+.sortlab{flex-shrink:0;align-self:center;font-size:12.5px;font-weight:700;color:var(--muted);margin-right:3px}
 .rank{flex-shrink:0;width:27px;height:27px;border-radius:50%;background:var(--navy);color:#f0c75e;
 font-size:13.5px;font-weight:900;display:flex;align-items:center;justify-content:center;margin-right:9px}
 .rank.gold{background:linear-gradient(135deg,var(--gold-deep),var(--gold-bright));color:var(--navy)}
@@ -246,8 +251,7 @@ function renderList(){
   const d=S.dongs.find(x=>x.dong===state.dong)||{};
   const B=[['recent','최신거래순'],['price','매매가순'],['pyeong','평당가순'],['year','신축순'],['deals','거래량순']];
   let h='<div class="rtline"><span class="led"></span><b>실시간 반영</b><span class="rtsub">국토부 신고분 매일 갱신</span></div>';
-  h+='<div class="sortrow">'+B.map(b=>'<button class="sortbtn'+(b[0]==='recent'?' newbtn':'')+(k===b[0]?' on':'')
-    +'" onclick="setSort(\''+b[0]+'\')">'+b[1]+'</button>').join('')+'</div>';
+  h+='<div class="sortrow"><span class="sortlab">정렬</span>'+B.map(b=>'<button class="sortbtn s-'+b[0]+(k===b[0]?' on':'')+'" onclick="setSort(\''+b[0]+'\')">'+(b[0]==='recent'?'🟢 ':'')+b[1]+'</button>').join('')+'</div>';
   h+='<div class="sumline"><b>'+state.dong+'</b> · 단지 <b>'+(d.n||all.length)+'</b>개 · 6개월 매매 <b>'+(d.sale6||'-')+'</b>건 · 매매 중위 <b>'+eok(d.mid)+'</b></div>';
   list.forEach((c,i)=>{h+=aptCard(c,k,i+1);});
   if(!state.showAll&&sorted.length>15)
