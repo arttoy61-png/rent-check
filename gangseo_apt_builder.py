@@ -6,12 +6,17 @@ molit_kangseo.csv → gangseo_apt_summary.json(첫 화면) + gangseo_apt_detail.
 - 표본 가드: 중위·전세가율은 3건 이상일 때만
 - 화곡 12단지는 hwagok_apt_data.json에서 세대수·좌표 승계
 """
-import csv, json, hashlib, re, statistics as st
+import csv, json, hashlib, re, sys, statistics as st
 from pathlib import Path
 from collections import defaultdict
 
-ROOT = Path(__file__).resolve().parents[2]
-CSV = ROOT / "data" / "molit_kangseo.csv"
+# 사용법: python gangseo_apt_builder.py [CSV경로] [출력폴더]
+# 인자 없으면 <repo루트>/data/molit_kangseo.csv → <repo루트>에 출력
+_here = Path(__file__).resolve()
+_p = _here.parents
+_default_root = _p[2] if len(_p) > 2 else _p[len(_p) - 1]
+ROOT = Path(sys.argv[2]).resolve() if len(sys.argv) > 2 else _default_root
+CSV = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else _default_root / "data" / "molit_kangseo.csv"
 HWAGOK = ROOT / "hwagok_apt_data.json"
 OUT_SUM = ROOT / "gangseo_apt_summary.json"
 OUT_DET = ROOT / "gangseo_apt_detail.json"
