@@ -96,6 +96,7 @@ def main():
         _id = hashlib.md5(f"{dong}|{nk}".encode()).hexdigest()[:8]
         areas_out = []
         tot = 0
+        tS = tJ = tW = 0
         for band in sorted(v["areas"], key=lambda b: (-len(v["areas"][b]["sale"]), -(len(v["areas"][b]["je"])+len(v["areas"][b]["wo"])))):
             a = v["areas"][band]
             for arr in (a["sale"], a["je"], a["wo"]):
@@ -109,6 +110,7 @@ def main():
                 "sale": a["sale"], "jeonse": a["je"], "wolse": a["wo"],
             })
             tot += len(a["sale"])+len(a["je"])+len(a["wo"])
+            tS += len(a["sale"]); tJ += len(a["je"]); tW += len(a["wo"])
         rep = areas_out[0]
         last = rep["sale"][0] if rep["sale"] else None
         je_dep = drop_lease([x["dep"] for x in rep["jeonse"] if x["dep"]])
@@ -120,7 +122,8 @@ def main():
             "m2": rep["m2"], "py": rep["py"],
             "last": ({"date": last["date"], "amt": last["amt"]} if last else None),
             "mid": rep["mid"], "je": je_mid, "ratio": ratio,
-            "nS": rep["nS"], "tot": tot, "few": tot < 3,
+            "nS": rep["nS"], "nJ": rep["nJ"], "nW": rep["nW"],
+            "tS": tS, "tJ": tJ, "tW": tW, "tot": tot, "few": tot < 3,
         }
         if e.get("un"): item["un"] = e["un"]
         if e.get("lat"): item["lat"], item["lng"] = e["lat"], e["lng"]

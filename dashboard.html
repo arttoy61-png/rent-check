@@ -1664,7 +1664,7 @@ async function load(){
   const rows=[];
   (apt.complexes||[]).filter(c=>!c.few).forEach(c=>{
     rows.push({nm:c.nm,dong:c.dong,yr:c.yr,un:c.un,m2:c.m2,sale:c.mid,je:c.je,
-      ratio:c.ratio!=null?c.ratio:null,ns:c.nS||0,nj:0,activity:c.tot||0,
+      ratio:c.ratio!=null?c.ratio:null,ns:c.nS||0,nj:c.nJ||0,nw:c.nW||0,tS:c.tS||0,tJ:c.tJ||0,tW:c.tW||0,activity:c.tot||0,
       latestPrice:c.last?c.last.amt:null});
   });
   rows.sort((a,b)=>b.activity-a.activity||b.ns-a.ns||(b.sale||0)-(a.sale||0));
@@ -1675,9 +1675,9 @@ async function load(){
     h+='<tr><td class="nm">'+esc(r.nm)+'<br><span style="font-weight:400;font-size:11px;color:#7a8694">'+(r.dong||'')+(r.un?' · '+Number(r.un).toLocaleString()+'세대':'')+(r.yr?' · '+r.yr+'년':'')+'</span></td>'+ 
         '<td>'+r.m2+'㎡<span class="subline">'+Math.round(r.m2/3.3058)+'평</span></td>'+ 
         '<td><b>'+(r.sale?r.sale.toFixed(1)+'억':'-')+'</b>'+latest+'<span class="subline">매매 '+r.ns+'건</span></td>'+ 
-        '<td>'+(r.je?r.je.toFixed(1)+'억':'-')+'</td>'+ 
+        '<td>'+(r.je?r.je.toFixed(1)+'억':'-')+'<span class="subline">전세 '+r.nj+'건</span></td>'+ 
         '<td>'+(r.ratio!==null?'<b>'+r.ratio+'%</b><span class="ratio-bar"><i style="width:'+Math.min(r.ratio,100)+'%"></i></span>':'-')+'</td>'+ 
-        '<td><b>'+r.activity+'건</b><span class="subline">매매 '+r.ns+'</span></td></tr>';
+        '<td><b>'+r.activity+'건</b><span class="subline">매매 '+r.tS+' · 전세 '+r.tJ+' · 월세 '+r.tW+'</span></td></tr>';
   });
   document.getElementById('apt').innerHTML=h+'</tbody>';
   const aptMore=document.getElementById('apt-more');
@@ -1712,7 +1712,7 @@ async function load(){
   if(busiest)pulse.push('<div class="pulse-card"><div class="pulse-label">거래가 가장 많은 동</div><div class="pulse-value">'+esc(busiest.name)+' '+busiest.total+'건</div><div class="pulse-desc">매매 '+busiest.sale+'건 · 전월세 '+(busiest.jeonse+busiest.wolse)+'건</div></div>');
   if(increased)pulse.push('<div class="pulse-card '+(increased.delta>0?'is-up':'')+'"><div class="pulse-label">전월 대비 변화</div><div class="pulse-value">'+esc(increased.name)+' '+(increased.delta>=0?'+':'')+increased.delta+'건</div><div class="pulse-desc">'+pml+'월 '+increased.prev+'건 → '+ml+'월 '+increased.total+'건</div></div>');
   if(rentHeavy)pulse.push('<div class="pulse-card is-rent"><div class="pulse-label">월세 비중이 높은 동</div><div class="pulse-value">'+esc(rentHeavy.name)+' '+rentHeavy.wolseShare+'%</div><div class="pulse-desc">임대차 '+(rentHeavy.jeonse+rentHeavy.wolse)+'건 중 월세 '+rentHeavy.wolse+'건</div></div>');
-  if(activeApt)pulse.push('<div class="pulse-card"><div class="pulse-label">거래가 활발한 아파트</div><div class="pulse-value">'+esc(activeApt.nm)+' '+activeApt.activity+'건</div><div class="pulse-desc">대표 '+activeApt.m2+'㎡ · 매매 '+activeApt.ns+'건 · 전세 '+activeApt.nj+'건</div></div>');
+  if(activeApt)pulse.push('<div class="pulse-card"><div class="pulse-label">거래가 활발한 아파트</div><div class="pulse-value">'+esc(activeApt.nm)+' '+activeApt.activity+'건</div><div class="pulse-desc">대표 '+activeApt.m2+'㎡ · 매매 '+activeApt.tS+'건 · 전세 '+activeApt.tJ+'건 · 월세 '+activeApt.tW+'건</div></div>');
   document.getElementById('pulse').innerHTML=pulse.join('')||'<div class="pulse-loading">비교할 데이터가 아직 충분하지 않습니다.</div>';
 
  }catch(e){
