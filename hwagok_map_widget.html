@@ -25,7 +25,7 @@ background:var(--bg);color:var(--ink);line-height:1.55;-webkit-text-size-adjust:
 padding:18px 16px 16px;color:#fff;margin-bottom:10px}
 .hd h1{font-size:19px;font-weight:900;letter-spacing:-.4px}
 .hd h1 b{color:var(--gold)}
-.hd .sub{font-size:12.5px;color:#c9d6e6;margin-top:4px}
+.hd .sub{font-size:12.5px;color:#e2d9c4;margin-top:4px}
 .crumbbar{position:sticky;top:0;z-index:60;background:var(--navy);
 margin:0 -12px 10px;padding:9px 12px;box-shadow:0 2px 10px rgba(13,31,60,.28)}
 .crumb{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:14px}
@@ -33,7 +33,7 @@ margin:0 -12px 10px;padding:9px 12px;box-shadow:0 2px 10px rgba(13,31,60,.28)}
 border:1.5px solid rgba(255,233,184,.55);color:#ffe9b8;font-weight:800;padding:7px 13px;
 border-radius:999px;text-decoration:none;cursor:pointer;min-height:36px;box-sizing:border-box}
 .crumb a:hover{background:rgba(255,255,255,.3)}
-.crumb .sep{color:#8fa5c2}
+.crumb .sep{color:#b09f7a}
 .crumb .cur{color:#fff;font-weight:800;padding:0 3px}
 /* 검색 */
 .search{position:relative;margin:10px 0 12px}
@@ -43,7 +43,7 @@ padding:10px 40px 10px 14px;font-size:15px;background:var(--paper);color:var(--i
 .search .ic{position:absolute;right:13px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:16px}
 .sres{background:var(--paper);border:1.5px solid var(--line);border-radius:12px;margin-top:6px;overflow:hidden}
 .sres .it{display:flex;justify-content:space-between;align-items:center;gap:8px;
-padding:11px 13px;border-top:1px solid #eef1f5;cursor:pointer;font-size:14px}
+padding:11px 13px;border-top:1px solid #efe9dc;cursor:pointer;font-size:14px}
 .sres .it:first-child{border-top:0}
 .sres .it:active{background:var(--soft)}
 .sres .nm{font-weight:800;color:var(--navy)}
@@ -90,7 +90,7 @@ padding:13px 15px;margin-bottom:9px;cursor:pointer;box-shadow:0 1px 5px rgba(13,
 transition:border-color .12s,box-shadow .12s}
 .card:hover{border-color:var(--blue);box-shadow:0 3px 12px rgba(21,101,192,.14)}
 .hint{margin-top:7px;font-size:12px;font-weight:800;color:var(--blue)}
-.card:active{border-color:var(--blue);background:#fbfdff}
+.card:active{border-color:var(--blue);background:#fffdf7}
 .rowline{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
 /* 동 카드 */
 .dc .nm{font-size:16.5px;font-weight:900;color:var(--navy)}
@@ -98,8 +98,8 @@ transition:border-color .12s,box-shadow .12s}
 .dc .st{display:flex;gap:14px;margin-top:7px;font-size:13px;color:var(--muted)}
 .dc .st b{color:var(--ink);font-weight:800}
 /* 요약줄 */
-.sumline{background:var(--soft);border:1.5px solid #dce8f6;border-radius:12px;
-padding:10px 14px;font-size:13px;color:#2b4664;margin-bottom:10px}
+.sumline{background:var(--soft);border:1.5px solid var(--gold);border-radius:12px;
+padding:10px 14px;font-size:13px;color:#5c4d2e;margin-bottom:10px}
 .sumline b{color:var(--navy)}
 /* 단지 카드 */
 .ac .top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
@@ -109,7 +109,7 @@ padding:10px 14px;font-size:13px;color:#2b4664;margin-bottom:10px}
 .ac .last b{font-size:16px;font-weight:900;color:var(--navy)}
 .ac .last .d{display:block;font-size:11px;color:var(--muted)}
 .ac .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:10px;
-border-top:1px solid #eef1f5;padding-top:9px}
+border-top:1px solid #efe9dc;padding-top:9px}
 .ac .g .k{font-size:10.5px;color:var(--muted);font-weight:700}
 .ac .g .v{font-size:13.5px;font-weight:800;color:var(--ink);margin-top:1px}
 .ac .g .v.gold{color:#9a6d0b}
@@ -128,12 +128,12 @@ background:var(--paper);font-size:13.5px;font-weight:800;color:var(--ink);cursor
 .tabs{display:flex;gap:6px;margin:10px 0 8px}
 .tabs button{flex:1;min-height:42px;border-radius:10px;border:1.5px solid var(--line);
 background:var(--paper);font-size:13.5px;font-weight:800;color:var(--muted);cursor:pointer}
-.tabs button.on{border-color:var(--blue);color:var(--blue);background:#f4f9ff}
+.tabs button.on{border-color:var(--gold-deep);color:var(--gold-deep);background:#fdf8ec}
 .kv{display:flex;gap:12px;margin:6px 0 10px;font-size:13px;color:var(--muted)}
 .kv b{color:var(--navy);font-weight:900}
 table.deals{width:100%;border-collapse:collapse;font-size:13.5px}
 table.deals th{background:var(--navy);color:#fff;padding:8px 6px;font-size:12px;font-weight:800}
-table.deals td{padding:8px 6px;border-bottom:1px solid #eef1f5;text-align:center}
+table.deals td{padding:8px 6px;border-bottom:1px solid #efe9dc;text-align:center}
 table.deals td.dt{color:var(--muted);font-size:12.5px}
 table.deals td b{font-weight:900;color:var(--navy)}
 .note{font-size:12px;color:var(--muted);line-height:1.7;margin-top:10px}

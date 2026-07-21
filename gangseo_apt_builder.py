@@ -32,6 +32,15 @@ def norm(name):
 def cid(dong, name):
     return hashlib.md5(f"{dong}|{norm(name)}".encode()).hexdigest()[:8]
 
+def drop_lease(deps):
+    """같은 보증금이 10건 이상이면서 전체의 40% 넘으면 공공임대로 보고 제외."""
+    if len(deps) < 5: return deps
+    from collections import Counter
+    c = Counter(deps)
+    bad = {v for v, n in c.items() if n >= 10 and n / len(deps) >= 0.4}
+    kept = [d for d in deps if d not in bad]
+    return kept if len(kept) >= 3 else deps
+
 def med(a):
     return round(st.median(a), 2) if a else None
 
@@ -102,7 +111,7 @@ def main():
             tot += len(a["sale"])+len(a["je"])+len(a["wo"])
         rep = areas_out[0]
         last = rep["sale"][0] if rep["sale"] else None
-        je_dep = [x["dep"] for x in rep["jeonse"] if x["dep"]]
+        je_dep = drop_lease([x["dep"] for x in rep["jeonse"] if x["dep"]])
         je_mid = med(je_dep) if len(je_dep) >= 3 else None
         ratio = round(je_mid/rep["mid"]*100) if (je_mid and rep["mid"] and rep["nS"] >= 3) else None
         e = enrich.get((dong, nk), {})
@@ -145,7 +154,9 @@ def main():
 
     ym_all = sorted({r["deal_ym"] for r in rows})
     meta = {"updated": max(ym_all), "range": [min(ym_all), max(ym_all)], "n_complex": len(complexes)}
-    OUT_SUM.write_text(json.dumps({"meta": meta, "dongs": dongs, "complexes": complexes},
+    from datetime import datetime, timezone
+    generated_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    OUT_SUM.write_text(json.dumps({"meta": meta, "generated_at": generated_at, "dongs": dongs, "complexes": complexes},
                                   ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     OUT_DET.write_text(json.dumps(detail, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     print(f"단지 {len(complexes)} (노출 {sum(1 for c in complexes if not c['few'])} / 검색전용 {sum(1 for c in complexes if c['few'])})")
