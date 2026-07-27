@@ -1,7 +1,7 @@
 {
   "region": "화곡동",
-  "generated_at": "2026-07-27T01:43:37.699341",
-  "total_deals": 4804,
+  "generated_at": "2026-07-28T02:27:46.781248",
+  "total_deals": 4805,
   "deals": [
     {
       "building_name": "화곡SJ라벨라",
@@ -1262,6 +1262,18 @@
       "floor": "2",
       "build_year": "2026",
       "is_jeonse": false
+    },
+    {
+      "building_name": "소노빌리지",
+      "type": "빌라",
+      "area_m2": 29.94,
+      "pyung": 9.1,
+      "deposit": 19890,
+      "monthly_rent": 0,
+      "deal_period": "2026.07.20",
+      "floor": "4",
+      "build_year": "2020",
+      "is_jeonse": true
     },
     {
       "building_name": "일봉빌라",
@@ -71755,6 +71767,18 @@
         "floor": "2",
         "build_year": "2026",
         "is_jeonse": false
+      },
+      {
+        "building_name": "소노빌리지",
+        "type": "빌라",
+        "area_m2": 29.94,
+        "pyung": 9.1,
+        "deposit": 19890,
+        "monthly_rent": 0,
+        "deal_period": "2026.07.20",
+        "floor": "4",
+        "build_year": "2020",
+        "is_jeonse": true
       },
       {
         "building_name": "더그라시아",
