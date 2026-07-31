@@ -1,4 +1,5 @@
 ﻿deal_type,deal_ym,lawd_cd,umd_name,jibun,building_name,area_m2,floor,build_year,deal_year,deal_month,deal_day,deal_amount,deposit,monthly_rent,contract_type,contract_term,pre_deposit,pre_monthly_rent,use_rr_right,dealing_gbn,cdeal_type
+오피스텔_매매,202607,11500,화곡동,24-53,대흥오피스텔,32.31,4,1997,2026,7,29,7500,,,,,,,,직거래,
 오피스텔_매매,202607,11500,등촌동,631,등촌동두산위브센티움,28.45,3,2004,2026,7,25,16000,,,,,,,,중개거래,
 오피스텔_매매,202607,11500,마곡동,793-2,갤럭시인텔리젼스,19.48,3,2015,2026,7,28,13000,,,,,,,,중개거래,
 오피스텔_매매,202607,11500,마곡동,760-2,마곡나루역캐슬파크,23.39,8,2016,2026,7,28,22800,,,,,,,,중개거래,
