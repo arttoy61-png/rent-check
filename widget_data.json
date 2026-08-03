@@ -1,7 +1,7 @@
 {
   "region": "화곡동",
-  "generated_at": "2026-08-03T01:43:02.934136",
-  "total_deals": 4124,
+  "generated_at": "2026-08-04T02:32:29.976587",
+  "total_deals": 4125,
   "deals": [
     {
       "building_name": "화곡SJ라벨라",
@@ -5413,6 +5413,18 @@
       "deal_period": "2026.07.01",
       "floor": "2",
       "build_year": "2011",
+      "is_jeonse": false
+    },
+    {
+      "building_name": "우장산아이파크,이편한세상",
+      "type": "아파트",
+      "area_m2": 84.97,
+      "pyung": 25.7,
+      "deposit": 45000,
+      "monthly_rent": 100,
+      "deal_period": "2026.07.28",
+      "floor": "13",
+      "build_year": "2008",
       "is_jeonse": false
     },
     {
@@ -95880,6 +95892,18 @@
         "deal_period": "2026.07.04",
         "floor": "4",
         "build_year": "2000",
+        "is_jeonse": false
+      },
+      {
+        "building_name": "우장산아이파크,이편한세상",
+        "type": "아파트",
+        "area_m2": 84.97,
+        "pyung": 25.7,
+        "deposit": 45000,
+        "monthly_rent": 100,
+        "deal_period": "2026.07.28",
+        "floor": "13",
+        "build_year": "2008",
         "is_jeonse": false
       },
       {
