@@ -1,13 +1,19 @@
+<!--
+  청년 매입임대·안심주택 가점 계산기
+  © Rent Check 강서 (렌트체크강서) · 실거래로 더 정확하게
+  https://arttoy61-png.github.io/rent-check-home
+  무단 복제·재배포를 금합니다.
+-->
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>청년 매입임대 가점 계산기 | 렌트체크강서</title>
-<meta name="description" content="LH·SH 청년 매입임대 가점, 순위 선택하고 항목만 체크하면 내 점수가 바로 나옵니다. 2026 공고 배점 기준.">
+<title>청년 매입임대·안심주택 가점 계산기 | 렌트체크강서</title>
+<meta name="description" content="LH·SH 청년 매입임대와 서울시 청년안심주택 가점, 순위 선택하고 항목만 체크하면 내 점수가 바로 나옵니다. 2026 공고 배점 기준.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="청년 매입임대 가점 계산기 — 내 점수 몇 점?">
-<meta property="og:description" content="순위 선택 + 항목 체크 = 30초 자가진단. LH·SH 2026 공고 배점 기준.">
+<meta property="og:title" content="청년 매입임대·안심주택 가점 계산기 — 내 점수 몇 점?">
+<meta property="og:description" content="순위 선택 + 항목 체크 = 30초 자가진단. LH·SH 매입임대 · 청년안심주택 2026 공고 배점 기준.">
 <meta property="og:image" content="https://arttoy61-png.github.io/rent-check/youth_score_og.png">
 <meta property="og:image:width" content="1080">
 <meta property="og:image:height" content="1080">
@@ -77,6 +83,13 @@
   .hint{font-size:12.5px;color:var(--sub);text-align:center;padding:22px 10px;}
 
   /* 하단 고정 점수바 */
+  .brandbar{position:sticky;top:0;z-index:50;background:#0d1f3c;color:#fff;padding:9px 16px;display:flex;align-items:center;justify-content:center;gap:8px;font-size:13.5px;letter-spacing:-.2px;border-bottom:2px solid #d4a73a;box-shadow:0 2px 10px rgba(13,31,60,.25);}
+  .brandbar b{font-weight:800;color:#fff;font-size:14.5px;}
+  .brandbar .slg{color:#d4a73a;font-weight:700;}
+  .brandbar .dot{color:#7f8ea8;}
+  .rescred{margin-top:14px;padding:11px 12px;border:1px solid #e3e8ef;border-radius:10px;background:#f7f9fc;text-align:center;font-size:12.5px;color:#6b7684;line-height:1.7;}
+  .rescred b{color:#0d1f3c;font-size:13.5px;}
+  .rescred .g{color:#c4661f;font-weight:700;}
   .sticky{position:fixed;left:50%;transform:translateX(-50%);bottom:0;width:100%;max-width:520px;background:#0d1f3c;color:#fff;padding:12px 16px;display:none;align-items:center;justify-content:space-between;box-shadow:0 -4px 20px rgba(0,0,0,.2);z-index:50;border-radius:14px 14px 0 0;}
   .sticky.on{display:flex;}
   .sticky .sc{font-size:13px;color:#b9c4d6;}
@@ -116,18 +129,25 @@
 </style>
 </head>
 <body>
+<div class="brandbar"><b>Rent Check 강서</b><span class="dot">·</span><span class="slg">실거래로 더 정확하게</span></div>
 <div class="wrap">
   <header>
-    <h1>청년 매입임대,<br>내 점수로 가능할까?</h1>
+    <h1>청년 매입임대·안심주택,<br>내 점수로 가능할까?</h1>
     <div class="sub">순위와 가점 항목만 체크하면<br>예상 점수 + 경쟁력 판정을 바로 확인합니다</div>
-    <div class="badge">LH · SH 2026 공고 배점 기준</div>
+    <div class="badge">LH·SH 매입임대 · 청년안심주택 2026 공고 배점 기준</div>
     <div class="trust">공고문 기준 · 개인정보 저장 없음 · 30초 계산</div>
   </header>
 
   <div class="body">
     <div class="rank-warn">
-      ⚠️ 청년 매입임대는 <b>순위가 먼저</b>, 그다음이 가점입니다.<br>
+      ⚠️ 청년 매입임대와 청년안심주택 모두 <b>순위가 먼저</b>, 그다음이 가점입니다.<br>
       같은 순위 안에서 점수가 높은 사람이 유리합니다. (2순위 8점보다 1순위 0점이 먼저)
+    </div>
+
+    <div class="rank-warn" style="border-color:#1565c0;">
+      ℹ️ <b>청년안심주택도 이 계산기로 확인할 수 있습니다.</b><br>
+      2026년 2차 청년안심주택(공공임대)의 가점 항목과 배점이 매입임대와 동일합니다.
+      (수급자 3점 · 부모 무주택 2점 · 장애인 본인 2점 / 부모 1점 · 소득 50% 이하 3점 · 청약통장 최대 3점)
     </div>
 
     <!-- STEP 1 -->
@@ -189,7 +209,7 @@
 
     <div class="foot">
       <b>렌트체크강서</b> · 실거래로 더 정확하게<br>
-      2026년 LH·SH 청년 매입임대 공고 배점 기준
+      2026년 LH·SH 청년 매입임대 · 청년안심주택 공고 배점 기준
     </div>
   </div>
 </div>
@@ -205,6 +225,7 @@
   <div class="modal">
     <div class="m-top" id="mTop">
       <button class="m-close" id="mClose" aria-label="닫기">×</button>
+      <div style="font-size:12px;color:#d4a73a;font-weight:800;letter-spacing:.4px;margin-bottom:6px;">RENT CHECK 강서 · 가점 계산기</div>
       <div class="ml">내 예상 가점</div>
       <div class="msc" id="mScoreBox"><span id="mScore">0점</span></div>
       <div class="mjudge" id="mJudge">—</div>
@@ -229,6 +250,11 @@
         연도·주택·회차·신청자 풀마다 달라지므로 참고용입니다.<br>
         <b>· 청약</b>은 순위(가입)확인서의 납입인정회차 기준.<br>
         <b>· 배점</b>은 이번 LH·SH 공고 기준이며, 정확한 건 해당 공고문을 확인하세요.
+      </div>
+      <div class="rescred">
+        <b>Rent Check 강서</b> · <span class="g">실거래로 더 정확하게</span><br>
+        청년 매입임대 · 청년안심주택 가점 계산기<br>
+        arttoy61-png.github.io/rent-check-home
       </div>
       <button class="m-reset" id="resetBtn">처음부터 다시 계산하기</button>
     </div>
