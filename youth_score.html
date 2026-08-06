@@ -18,6 +18,14 @@
 <meta property="og:image:width" content="1080">
 <meta property="og:image:height" content="1080">
 <meta name="twitter:card" content="summary_large_image">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MPRR3J99YQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-MPRR3J99YQ');
+</script>
 <style>
   :root{
     --navy:#0d1f3c; --blue:#1565c0; --orange:#c4661f;
@@ -240,9 +248,9 @@
         ⚠️ 실제 당첨은 <b>신청순위 → 가점 → 동점자 처리 → 주택별 경쟁률</b> 순서로 결정됩니다.
         점수가 높아도 순위가 낮으면 상위 순위에 밀립니다.
       </div>
-      <a class="m-cta" id="ctaMain" href="https://blog.naver.com/PostList.naver?blogId=spitoon61&amp;from=postList&amp;categoryNo=85&amp;parentCategoryNo=85" target="_blank" rel="noopener">LH·SH·안심주택 글 모두 보기 ↗</a>
+      <a class="m-cta" id="ctaMain" onclick="try{gtag('event','youth_cta',{target:'category85'})}catch(e){}" href="https://blog.naver.com/PostList.naver?blogId=spitoon61&amp;from=postList&amp;categoryNo=85&amp;parentCategoryNo=85" target="_blank" rel="noopener">LH·SH·안심주택 글 모두 보기 ↗</a>
       <div class="m-links">
-        <a href="https://blog.naver.com/spitoon61/224368736878" target="_blank" rel="noopener">청년안심주택 2차 접수 8월 11일~13일 ↗</a>
+        <a href="https://blog.naver.com/spitoon61/224368736878" target="_blank" rel="noopener" onclick="try{gtag('event','youth_cta',{target:'notice'})}catch(e){}">청년안심주택 2차 접수 8월 11일~13일 ↗</a>
       </div>
       <div style="font-size:11px;color:#9aa5b5;text-align:center;margin:-4px 0 12px;">↗ 새 창에서 열립니다 · 계산기는 그대로 유지돼요</div>
       <div class="m-note">
@@ -369,6 +377,7 @@
   // 결과 보기
   document.getElementById('showBtn').addEventListener('click',function(){
     var r=compute();
+    try{gtag('event','youth_calc',{rank:(document.querySelector('input[name=rank]:checked')||{}).value||'unknown'});}catch(e){}
     // 장애 본인+부모 둘 다: LH/SH 분기 표시
     if(r.disBoth){
       document.getElementById('mScore').innerHTML='<span style="font-size:26px">LH '+r.totalLH+'점 · SH '+r.totalSH+'점</span>';
