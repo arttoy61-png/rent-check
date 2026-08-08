@@ -1,4 +1,5 @@
 ﻿deal_type,deal_ym,lawd_cd,umd_name,jibun,building_name,area_m2,floor,build_year,deal_year,deal_month,deal_day,deal_amount,deposit,monthly_rent,contract_type,contract_term,pre_deposit,pre_monthly_rent,use_rr_right,dealing_gbn,cdeal_type
+아파트_매매,202606,11500,염창동,290,벽산늘푸른,59.97,12,1998,2026,6,20,84000,,,,,,,,중개거래,
 아파트_매매,202606,11500,방화동,852,마곡중앙하이츠아파트,51.03,2,1994,2026,6,29,59300,,,,,,,,중개거래,
 아파트_매매,202606,11500,방화동,907,마곡우촌아파트,28.04,12,2022,2026,6,5,42000,,,,,,,,직거래,
 아파트_매매,202606,11500,등촌동,715,등촌동아이파크,84.9958,12,2004,2026,6,22,124000,,,,,,,,중개거래,
