@@ -13,6 +13,10 @@
 - 재시도 + 에러 처리
 - [2026.07 추가] 전월세 갱신 계약 필드 수집 (contract_type / use_rr_right / pre_deposit 등)
 - [2026.07 추가2] 매매 거래유형(dealing_gbn: 중개거래/직거래) · 해제여부(cdeal_type) 수집
+- [2026.08 안정화] GitHub Actions 30분 타임아웃 대응
+    · timeout 30초 → 8초 / 재시도 3회 → 2회 / 백오프 단축
+    · 연속 실패 감지 시 조기 중단(circuit breaker) — 수집분은 보존
+    · 전체 시간 예산(budget) 초과 시 중단하고 수집분 반환
 """
 import os
 import time
@@ -62,7 +66,8 @@ def fetch_one_month(
     deal_ym: str,
     deal_type: str = "오피스텔_매매",
     use_cache: bool = True,
-    max_retries: int = 3,
+    max_retries: int = 2,
+    timeout: int = 8,
 ) -> pd.DataFrame:
     """한 달치 실거래 데이터 수집."""
     if deal_type not in ENDPOINTS:
@@ -98,12 +103,12 @@ def fetch_one_month(
     last_err = None
     for attempt in range(max_retries):
         try:
-            r = requests.get(url, params=params, timeout=30)
+            r = requests.get(url, params=params, timeout=timeout)
             r.raise_for_status()
             break
         except Exception as e:
             last_err = e
-            time.sleep(2 * (attempt + 1))
+            time.sleep(1)
     else:
         raise RuntimeError(f"API 호출 실패 ({last_err}) — {deal_type} {lawd_cd} {deal_ym}")
 
@@ -194,8 +199,16 @@ def fetch_multi(
     deal_types: Optional[list] = None,
     use_cache: bool = True,
     verbose: bool = True,
+    budget_sec: int = 1200,        # 전체 수집 시간 예산 (기본 20분)
+    max_consecutive_fail: int = 12,  # 연속 실패 이 횟수 넘으면 중단
 ) -> pd.DataFrame:
-    """여러 지역 × 여러 월 × 여러 거래유형 일괄 수집."""
+    """여러 지역 × 여러 월 × 여러 거래유형 일괄 수집.
+
+    Actions 30분 한도 안에서 끝나도록 안전장치를 둔다.
+    - budget_sec 초과하면 남은 항목을 건너뛰고 수집분을 반환
+    - 연속 실패가 max_consecutive_fail을 넘으면 API 장애로 보고 중단
+    실패해도 수집된 것은 반드시 반환한다(빈 DF 대신 부분 데이터).
+    """
     if deal_types is None:
         deal_types = ["오피스텔_매매", "오피스텔_전월세"]
 
@@ -212,15 +225,31 @@ def fetch_multi(
     all_dfs = []
     total = len(lawd_cd_list) * len(months) * len(deal_types)
     cnt = 0
+    ok_cnt = 0
+    fail_cnt = 0
+    consecutive_fail = 0
+    aborted = False
+    started = time.time()
 
     for lawd in lawd_cd_list:
         for ym in months:
             for dt in deal_types:
+                if aborted:
+                    break
+
+                elapsed = time.time() - started
+                if elapsed > budget_sec:
+                    print(f"\n⏱  시간 예산 {budget_sec}초 초과 ({elapsed:.0f}초) — 남은 항목 건너뜀")
+                    aborted = True
+                    break
+
                 cnt += 1
                 if verbose:
                     print(f"[{cnt}/{total}] {dt} | LAWD={lawd} | {ym}")
                 try:
                     df = fetch_one_month(api_key, lawd, ym, dt, use_cache=use_cache)
+                    ok_cnt += 1
+                    consecutive_fail = 0
                     if len(df) > 0:
                         all_dfs.append(df)
                         if verbose:
@@ -229,8 +258,25 @@ def fetch_multi(
                         if verbose:
                             print(f"  (데이터 없음)")
                 except Exception as e:
-                    print(f"  ✗ 실패: {e}")
+                    fail_cnt += 1
+                    consecutive_fail += 1
+                    print(f"  ✗ 실패({consecutive_fail}연속): {e}")
+                    if consecutive_fail >= max_consecutive_fail:
+                        print(f"\n🚨 연속 {consecutive_fail}회 실패 — API 장애로 판단, 수집 중단")
+                        print("   (수집된 분량은 그대로 저장합니다)")
+                        aborted = True
+                        break
                 time.sleep(0.3)
+            if aborted:
+                break
+        if aborted:
+            break
+
+    elapsed = time.time() - started
+    print(f"\n=== 수집 요약 ===")
+    print(f"  시도 {cnt}/{total} · 성공 {ok_cnt} · 실패 {fail_cnt} · 소요 {elapsed:.0f}초")
+    if aborted:
+        print("  ⚠ 중단됨 — 부분 데이터입니다")
 
     if not all_dfs:
         return pd.DataFrame()
