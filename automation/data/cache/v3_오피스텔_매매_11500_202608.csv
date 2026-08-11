@@ -1,3 +1,5 @@
 ﻿deal_type,deal_ym,lawd_cd,umd_name,jibun,building_name,area_m2,floor,build_year,deal_year,deal_month,deal_day,deal_amount,deposit,monthly_rent,contract_type,contract_term,pre_deposit,pre_monthly_rent,use_rr_right,dealing_gbn,cdeal_type
+오피스텔_매매,202608,11500,가양동,194-2,마곡지웰에스테이트,17.44,5,2014,2026,8,10,8500,,,,,,,,중개거래,
+오피스텔_매매,202608,11500,마곡동,773-3,힐스테이트에코동익,22.92,7,2017,2026,8,6,19500,,,,,,,,중개거래,
 오피스텔_매매,202608,11500,마곡동,760,마곡나루역보타닉푸르지오시티,22.2,3,2017,2026,8,6,18800,,,,,,,,중개거래,
 오피스텔_매매,202608,11500,화곡동,924-2,(924-2),35.58,6,1996,2026,8,4,10800,,,,,,,,중개거래,
