@@ -37,6 +37,12 @@ body{
 /* ── 랜딩(1단계) ── */
 .hero-title{font-size:30px;font-weight:700;color:var(--navy);line-height:1.3;margin-top:18px;}
 .hero-desc{font-size:15px;color:var(--subtext);margin-top:10px;}
+.scope-pill{display:inline-block;margin-top:12px;padding:7px 13px;border-radius:20px;border:1px solid var(--line);background:var(--surface);font-size:12.5px;font-weight:500;color:var(--subtext);}
+.scope-pill b{color:var(--navy);font-weight:700;}
+.addr-aide{font-size:12.5px;font-weight:600;margin-top:6px;min-height:16px;}
+.addr-aide.ok{color:var(--primary);}
+.addr-aide.no{color:var(--warning);}
+.dcard .d-dist{display:inline-block;margin-top:4px;padding:3px 9px;border-radius:12px;background:var(--bg);font-size:12px;font-weight:700;color:var(--navy);}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px 20px;margin-top:22px;}
 label{display:block;font-size:14px;font-weight:600;color:var(--text);margin:18px 0 8px;}
 label:first-child{margin-top:0;}
@@ -238,6 +244,8 @@ input.hasunit{padding-right:52px;}
 }
 .r-actions{margin-top:8px;}
 </style>
+<!-- 카카오 지도 SDK — 주소를 좌표로 바꿔 실거래까지 직선거리를 계산합니다 -->
+<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=222563608848ddea15db9b5ddf83e859&libraries=services&autoload=false"></script>
 </head>
 <body>
 
@@ -245,9 +253,13 @@ input.hasunit{padding-right:52px;}
 <div class="wrap" id="landing">
   <div class="brandline"><b>RENT CHECK</b> · 경매분석</div>
   <div class="hero-title">보고 있는 경매 물건을<br>입력하세요</div>
-  <div class="hero-desc" id="heroDesc">경매 공고에 적힌 내용을 그대로 옮기면 됩니다.<br>강서구 유사 실거래를 불러와 안전마진을 계산합니다.</div>
+  <div class="scope-pill">실거래 자동조회 <b>강서구 9개 동</b> · 양천·영등포·구로 확장 예정</div>
+  <div class="hero-desc" id="heroDesc">경매 공고에 적힌 내용을 그대로 옮기면 됩니다.<br>강서구 유사 실거래를 불러와 안전마진을 계산합니다.<br>그 밖의 지역은 확인한 실거래를 직접 넣어 검산할 수 있습니다.</div>
 
   <div class="card">
+    <label>물건 소재지 <span class="opt">— 경매 공고의 지번 주소 (선택)</span></label>
+    <div class="field"><input type="text" id="addr" placeholder="예: 강서구 화곡동 1073-11" style="width:100%;height:56px;padding:0 16px;border:1px solid var(--line);border-radius:14px;font-size:17px;font-weight:600;font-family:inherit;"></div>
+    <div class="addr-aide" id="addrAide">넣으면 실거래까지의 직선거리를 함께 보여드립니다</div>
     <label>지역</label>
     <select id="region"><option value="화곡동">화곡동</option><option value="etc">기타 지역 (직접입력)</option></select>
     <label>건물 유형</label>
@@ -478,6 +490,48 @@ input.hasunit{padding-right:52px;}
 var $=function(id){return document.getElementById(id);};
 var DB=null, CAND=[], LAST=null, Q={repair:'mid',evict:'unknown',assume:'no',loan:'no'}, STEP=0, JAUTO=0, WAUTO={dp:0,m:0};
 var S={region:'화곡동',type:'villa',area:0,sale:0,poolN:0,poolMin:0,poolMax:0};
+var GEO=null, MYXY=null;   // GEO=지번별 좌표표, MYXY=내 물건 좌표
+
+/* ══ 카카오 지오코딩 ══
+   JavaScript 키는 도메인 제한으로 보호된다. SDK 로드 실패해도 도구는 동 단위로 정상 동작. */
+var KAKAO_READY=false;
+(function initKakao(){
+  try{
+    if(window.kakao&&window.kakao.maps){
+      kakao.maps.load(function(){KAKAO_READY=true;});
+    }
+  }catch(e){}
+})();
+function geocode(addr){
+  return new Promise(function(res){
+    if(!KAKAO_READY||!addr){res(null);return;}
+    try{
+      var g=new kakao.maps.services.Geocoder();
+      g.addressSearch(addr,function(r,st){
+        if(st===kakao.maps.services.Status.OK&&r&&r.length){
+          res([parseFloat(r[0].y),parseFloat(r[0].x)]);
+        }else res(null);
+      });
+    }catch(e){res(null);}
+  });
+}
+/* 두 좌표 사이 직선거리(m) — 하버사인 */
+function distM(a,b){
+  if(!a||!b)return null;
+  var R=6371000,rad=Math.PI/180;
+  var dLat=(b[0]-a[0])*rad, dLng=(b[1]-a[1])*rad;
+  var s1=Math.sin(dLat/2), s2=Math.sin(dLng/2);
+  var h=s1*s1+Math.cos(a[0]*rad)*Math.cos(b[0]*rad)*s2*s2;
+  return Math.round(2*R*Math.asin(Math.sqrt(h)));
+}
+function fmtDist(m){
+  if(m===null||m===undefined)return '';
+  return (m<1000)?(m+'m'):((m/1000).toFixed(1)+'km');
+}
+function xyOf(rec){
+  if(!GEO||!rec.j)return null;
+  return GEO[rec.u+' '+rec.j]||null;
+}
 
 function median(a){if(!a.length)return 0;var s=a.slice().sort(function(x,y){return x-y;});var m=Math.floor(s.length/2);return s.length%2?s[m]:(s[m-1]+s[m])/2;}
 function fmt(n){n=Math.round(n);if(n>=10000){var e=Math.floor(n/10000),r=n%10000;return r?e+'억 '+r.toLocaleString():e+'억';}return n.toLocaleString();}
@@ -511,6 +565,21 @@ document.querySelectorAll('#rightChips .chip').forEach(function(ch){
       c.classList.toggle('on',!!RIGHTS[c.getAttribute('data-k')]);
     });
   });
+});
+var addrTimer=null;
+$('addr').addEventListener('input',function(){
+  var v=this.value.trim();
+  clearTimeout(addrTimer);
+  if(!v){MYXY=null;$('addrAide').textContent='넣으면 실거래까지의 직선거리를 함께 보여드립니다';$('addrAide').className='addr-aide';return;}
+  $('addrAide').textContent='주소 확인 중...';$('addrAide').className='addr-aide';
+  addrTimer=setTimeout(function(){
+    var q=/(서울|경기|인천)/.test(v)?v:('서울 '+v);
+    geocode(q).then(function(xy){
+      MYXY=xy;
+      if(xy){$('addrAide').textContent='위치 확인됨 — 실거래까지 거리를 계산합니다';$('addrAide').className='addr-aide ok';}
+      else{$('addrAide').textContent='주소를 찾지 못했습니다 — 지번을 정확히 넣거나 비워두셔도 됩니다';$('addrAide').className='addr-aide no';}
+    });
+  },600);
 });
 $('region').addEventListener('change',function(){
   $('heroDesc').innerHTML=(this.value==='etc')
@@ -551,7 +620,7 @@ function openStep(n){
   $('pgTime').textContent=st.time;
   $('pgFill').style.width=(n/4*100)+'%';
   $('mTitle').textContent=st.title;
-  if(n===2&&S.minp>0){$('mDesc').innerHTML='최저가 <b>'+fmt(S.minp)+'만원</b>인데, 이 동네 실제 거래는 얼마일까요?<br>조건이 다른 거래는 빼세요 — 2~5건 선택 권장.';}
+  if(n===2&&S.minp>0){$('mDesc').innerHTML='최저가 <b>'+fmt(S.minp)+'만원</b>인데, 이 동네 실제 거래는 얼마일까요?<br>'+(MYXY?'가까운 순으로 정렬했습니다. ':'')+'조건이 다른 거래는 빼세요 — 2~5건 선택 권장.';}
   else if(n===2){$('mDesc').textContent='같은 동·유형, 면적 ±15%의 최근 거래입니다. 조건이 다른 거래는 빼세요 — 2~5건 선택 권장.';}
   else $('mDesc').textContent=st.desc;
   $('mNext').textContent=st.btn;
@@ -576,6 +645,7 @@ $('findBtn').addEventListener('click',function(){
   S.region=$('region').value;S.type=$('btype').value;S.area=num('area');
   S.appr=num('apprPrice');S.minp=num('minPrice');S.fails=parseInt($('fails').value)||0;
   S.rights=Object.keys(RIGHTS).filter(function(k){return k!=='none';});
+  S.addr=($('addr').value||'').trim();
   // 입력 검증
   if(S.area<=0){alert('전용면적을 입력해주세요.');return;}
   if(S.appr<=0||S.minp<=0){alert('감정가와 최저가를 입력해주세요 — 경매 공고에 적혀 있습니다.');return;}
@@ -628,10 +698,20 @@ function proceedLookup(){
         var aScore=1-Math.min(1,Math.abs(x.a-S.area)/(S.area*0.15));
         var idx=CAND.indexOf(x);
         var rScore=1-idx/Math.max(1,CAND.length-1);
-        x._sc=aScore*0.6+rScore*0.4;return x;
+        x._d=MYXY?distM(MYXY,xyOf(x)):null;          // 내 물건까지 직선거리(m)
+        if(x._d!==null&&x._d!==undefined){
+          var dScore=1-Math.min(1,x._d/1500);        // 1.5km 넘으면 0점
+          x._sc=dScore*0.40+aScore*0.35+rScore*0.25;
+        }else{
+          x._sc=aScore*0.6+rScore*0.4;               // 좌표 없으면 기존 방식
+        }
+        return x;
       });
       elig.sort(function(a,b){return b._sc-a._sc;}).slice(0,3).forEach(function(x){x._on=true;});
+      if(MYXY){CAND.forEach(function(x){if(x._d===undefined)x._d=distM(MYXY,xyOf(x));});
+               CAND.sort(function(a,b){return (a._d===null?9e9:a._d)-(b._d===null?9e9:b._d);});}
     }
+    GEO=db.geo||null;
     var js=db.jeonse.filter(mt).map(function(x){return x.p;});JAUTO=Math.round(median(js));
     var ws=db.wolse.filter(mt);WAUTO={dp:Math.round(median(ws.map(function(x){return x.dp;}))),m:Math.round(median(ws.map(function(x){return x.m;})))};
     try{gtag('event','auction_lookup',{region:S.region,type:S.type,found:CAND.length});}catch(e){}
@@ -720,7 +800,7 @@ function renderS2(failed){
   $('etcBox').style.display='none';
   $('pickFixed').style.display='flex';
   var recN=CAND.filter(function(x){return x._on;}).length;
-  $('pickWarn').innerHTML=recN?'<div class="warn-card" style="background:var(--primary-soft);color:var(--navy);">면적이 가깝고 최근인 거래 <b>'+recN+'건을 미리 선택</b>했습니다 (가격이 크게 벗어난 거래는 제외).<br>우리 물건과 조건이 다르면 카드를 눌러 빼거나 더하세요.</div>':'';
+  $('pickWarn').innerHTML=recN?'<div class="warn-card" style="background:var(--primary-soft);color:var(--navy);">'+(MYXY?'거리가 가깝고 면적·시점이 비슷한':'면적이 비슷하고 최근인')+' 거래 <b>'+recN+'건을 미리 선택</b>했습니다 (가격이 크게 벗어난 거래는 제외).<br>우리 물건과 조건이 다르면 카드를 눌러 빼거나 더하세요.</div>':'';
   box.innerHTML=CAND.map(function(x,i){
     var diff=(x.a-S.area);
     var dtxt=Math.abs(diff)<0.05?'내 물건과 같은 면적':('내 물건보다 '+Math.abs(diff).toFixed(1)+'㎡ '+(diff>0?'큼':'작음'));
@@ -735,7 +815,9 @@ function renderS2(failed){
       +'<div class="d-main"><span class="d-area">전용 '+x.a+'㎡</span><span class="d-price">'+fmtW(x.p)+'</span></div>'
       +'<div class="d-sub">'+(x.b||'단지명 없음')+' · '+S.region+' · '+({villa:'빌라',apt:'아파트',op:'오피스텔'}[S.type])+' · '+(x.f?x.f+'층':'층 미상')+(x.y?' · '+x.y+'년 준공':'')+'</div>'
       +mtxt
-      +'<div class="d-diff">'+dtxt+'</div></div>';
+      +'<div class="d-diff">'+dtxt+'</div>'
+      +((x._d!==null&&x._d!==undefined)?'<div class="d-dist">직선 '+fmtDist(x._d)+'</div>':'')
+      +'</div>';
   }).join('');
   Array.prototype.forEach.call(box.querySelectorAll('.dcard'),function(el){
     el.addEventListener('click',function(){
@@ -1031,7 +1113,7 @@ $('copyBtn').addEventListener('click',function(){
   var LV={pos:'여유 있음',mid:'재검토',neg:'주의'}[r.level];
   var lines=[
     '[경매 실거래 체크 — 렌트체크강서]',
-    '물건: '+(S.region==='etc'?(S.regionEtc||'직접입력 지역'):S.region)+' '+tname+' 전용 '+S.area+'㎡',
+    '물건: '+(S.addr?S.addr:(S.region==='etc'?(S.regionEtc||'직접입력 지역'):S.region))+' '+tname+' 전용 '+S.area+'㎡',
     '감정가 '+fmt(v.apprPrice)+' / 최저가 '+fmt(v.minPrice)+' / 예상 입찰가 '+fmt(v.bidPrice)+' (만원)',
     '비교 실거래: '+(S.poolN?S.poolN+'건 선택 · 중위 '+fmt(S.sale):'직접입력 '+fmt(S.sale))+'만원',
     (v.c&&v.c.assume>0?'인수 보증금: '+fmt(v.c.assume)+'만원 (취득세 과세표준 포함)':null),
