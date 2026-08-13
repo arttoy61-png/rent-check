@@ -245,7 +245,7 @@ input.hasunit{padding-right:52px;}
 .r-actions{margin-top:8px;}
 </style>
 <!-- 카카오 지도 SDK — 주소를 좌표로 바꿔 실거래까지 직선거리를 계산합니다 -->
-<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=222563608848ddea15db9b5ddf83e859&libraries=services&autoload=false"></script>
+<script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=KAKAO_JS_KEY_HERE&libraries=services&autoload=false"></script>
 </head>
 <body>
 
@@ -620,7 +620,7 @@ function openStep(n){
   $('pgTime').textContent=st.time;
   $('pgFill').style.width=(n/4*100)+'%';
   $('mTitle').textContent=st.title;
-  if(n===2&&S.minp>0){$('mDesc').innerHTML='최저가 <b>'+fmt(S.minp)+'만원</b>인데, 이 동네 실제 거래는 얼마일까요?<br>'+(MYXY?'가까운 순으로 정렬했습니다. ':'')+'조건이 다른 거래는 빼세요 — 2~5건 선택 권장.';}
+  if(n===2&&S.minp>0){$('mDesc').innerHTML='최저가 <b>'+fmt(S.minp)+'만원</b>인데, 이 동네 실제 거래는 얼마일까요?<br>'+((MYXY&&GEO&&CAND.some(function(x){return x._d!=null;}))?'가까운 순으로 정렬했습니다. ':'')+'조건이 다른 거래는 빼세요 — 2~5건 선택 권장.';}
   else if(n===2){$('mDesc').textContent='같은 동·유형, 면적 ±15%의 최근 거래입니다. 조건이 다른 거래는 빼세요 — 2~5건 선택 권장.';}
   else $('mDesc').textContent=st.desc;
   $('mNext').textContent=st.btn;
@@ -683,6 +683,7 @@ function proceedLookup(){
   var noauto=NOAUTO[S.type]||S.region==='etc';
   if(noauto){CAND=[];openStep(2);renderS2();return;}
   loadDB().then(function(db){
+    GEO=db.geo||null;                        // 거리 계산 전에 먼저 잡아둔다
     var tc={villa:'v',apt:'a',op:'o',dosaeng:'v'}[S.type];
     var lo=S.area*0.85,hi=S.area*1.15;
     var mt=function(x){return x.u===S.region&&x.t===tc&&x.a>=lo&&x.a<=hi;};
@@ -691,6 +692,7 @@ function proceedLookup(){
     }).slice(0,12).map(function(x){x._on=false;return x;});
     // 자동 추천 3건: 극단값 제외 후 면적차·최근성 스코어
     if(CAND.length){
+      if(MYXY&&GEO)CAND.forEach(function(x){x._d=distM(MYXY,xyOf(x));});
       var allP=CAND.map(function(x){return x.p;});
       var med=median(allP);
       var elig=CAND.filter(function(x){return med>0&&Math.abs(x.p-med)/med<=0.4;});
@@ -708,10 +710,10 @@ function proceedLookup(){
         return x;
       });
       elig.sort(function(a,b){return b._sc-a._sc;}).slice(0,3).forEach(function(x){x._on=true;});
-      if(MYXY){CAND.forEach(function(x){if(x._d===undefined)x._d=distM(MYXY,xyOf(x));});
-               CAND.sort(function(a,b){return (a._d===null?9e9:a._d)-(b._d===null?9e9:b._d);});}
+      if(MYXY&&CAND.some(function(x){return x._d!==null&&x._d!==undefined;})){
+        CAND.sort(function(a,b){return (a._d==null?9e9:a._d)-(b._d==null?9e9:b._d);});
+      }
     }
-    GEO=db.geo||null;
     var js=db.jeonse.filter(mt).map(function(x){return x.p;});JAUTO=Math.round(median(js));
     var ws=db.wolse.filter(mt);WAUTO={dp:Math.round(median(ws.map(function(x){return x.dp;}))),m:Math.round(median(ws.map(function(x){return x.m;})))};
     try{gtag('event','auction_lookup',{region:S.region,type:S.type,found:CAND.length});}catch(e){}
@@ -800,7 +802,8 @@ function renderS2(failed){
   $('etcBox').style.display='none';
   $('pickFixed').style.display='flex';
   var recN=CAND.filter(function(x){return x._on;}).length;
-  $('pickWarn').innerHTML=recN?'<div class="warn-card" style="background:var(--primary-soft);color:var(--navy);">'+(MYXY?'거리가 가깝고 면적·시점이 비슷한':'면적이 비슷하고 최근인')+' 거래 <b>'+recN+'건을 미리 선택</b>했습니다 (가격이 크게 벗어난 거래는 제외).<br>우리 물건과 조건이 다르면 카드를 눌러 빼거나 더하세요.</div>':'';
+  var hasDist=CAND.some(function(x){return x._d!==null&&x._d!==undefined;});
+  $('pickWarn').innerHTML=recN?'<div class="warn-card" style="background:var(--primary-soft);color:var(--navy);">'+(hasDist?'거리가 가깝고 면적·시점이 비슷한':'면적이 비슷하고 최근인')+' 거래 <b>'+recN+'건을 미리 선택</b>했습니다 (가격이 크게 벗어난 거래는 제외).<br>우리 물건과 조건이 다르면 카드를 눌러 빼거나 더하세요.</div>':'';
   box.innerHTML=CAND.map(function(x,i){
     var diff=(x.a-S.area);
     var dtxt=Math.abs(diff)<0.05?'내 물건과 같은 면적':('내 물건보다 '+Math.abs(diff).toFixed(1)+'㎡ '+(diff>0?'큼':'작음'));
