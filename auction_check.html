@@ -684,22 +684,16 @@ function bindStep(n){
       if(q==='assume'){
         $('assumeCustom').style.display=(Q.assume==='yes')?'block':'none';
         $('assumeWarn').innerHTML=(Q.assume==='unknown')
-          ?'<div class="warn-card warn-red" style="margin-top:8px;">인수 보증금을 확인하지 않으면 <b>결과가 실제와 크게 다를 수 있습니다.</b> 매각물건명세서를 꼭 확인하세요 — 결과는 권리비용 제외 기준으로만 표시됩니다.</div>':'';
+          ?'<div class="warn-card warn-red" style="margin-top:8px;">인수 보증금을 확인하지 않으면 <b>결과가 실제와 크게 다를 수 있습니다.</b> 매각물건명세서를 꼭 확인하세요 — 결과는 권리비용 제외 기준으로만 표시됩니다.<br>인수 보증금은 <b>취득세 과세표준에도 포함</b>되므로 세금까지 함께 늘어납니다.</div>':'';
       }
       if(q==='loan')$('loanBox').style.display=(Q.loan==='yes')?'block':'none';
     }
     ['repairIn','evictIn','assumeIn','loanAmt','loanInt','taxCost'].forEach(function(id){
       var el=$(id);if(el)el.addEventListener('input',function(){this.dataset.touched='1';updateLive();});
     });
-    // 취득세 자동
-    var bid=LAST?LAST.bidPrice:0;
-    if(bid>0&&!$('taxCost').dataset.touched){
-      var r=autoTaxCalc(bid);
-      $('taxCost').value=r.tax;
-      $('taxNote').innerHTML='기본 조건('+r.label+', 무주택·1주택)으로 계산한 <b>참고값</b>입니다 — 다주택·조건에 따라 달라지면 직접 수정하세요.';
-    }
     if(LAST&&LAST._Q){Q=LAST._Q;syncQ();}
     if(LAST&&LAST._costs)restoreCosts();
+    refreshAutoTax();      // 인수 보증금 복원 뒤에 과세표준 계산
     updateLive();
     function syncQ(){
       document.querySelectorAll('.qchips').forEach(function(g){
@@ -781,10 +775,12 @@ function s3live(){
   $('liveDisc').innerHTML=lines.join('<br>');
 }
 
-/* ══ 4단계 간편/세부 ══ */
-function autoTaxCalc(bid){
-  var won=bid*10000,rate,label;
-  if(S.type==='op'){rate=4.6;label='오피스텔(비주택) 4.6%';}
+/* ══ 4단계 취득세 ══ */
+/* 경매 취득세 과세표준 = 낙찰대금 + 인수하는 임차보증금·유치권 해소비용·공용부분 체납관리비 등 */
+var NONHOUSE={op:1,sangga:1,etc:1};
+function autoTaxCalc(taxBase){
+  var won=taxBase*10000,rate,label;
+  if(NONHOUSE[S.type]){rate=4.6;label='비주택 4.6%(취득 4.0+교육 0.4+농특 0.2)';}
   else{
     var base;
     if(won<=600000000)base=1;
@@ -792,13 +788,39 @@ function autoTaxCalc(bid){
     else base=3;
     var edu=base*0.1,nong=(S.area>85)?0.2:0;
     rate=base+edu+nong;
-    label='주택 '+base.toFixed(2)+'%+교육세'+(nong?'+농특세':'');
+    label='주택 '+base.toFixed(2)+'%+교육세'+(nong?'+농특세 0.2%':'');
   }
-  return {tax:Math.round(bid*rate/100),label:label};
+  return {tax:Math.round(taxBase*rate/100),label:label,rate:rate};
+}
+function refreshAutoTax(){
+  var el=$('taxCost');if(!el)return;
+  if(el.dataset.touched==='1')return;              // 사용자가 직접 고친 값은 건드리지 않음
+  var bid=LAST?LAST.bidPrice:0;if(bid<=0)return;
+  var assume=(Q.assume==='yes')?num('assumeIn'):0;
+  var tb=bid+assume;
+  var r=autoTaxCalc(tb);
+  el.value=r.tax;
+  var note;
+  if(assume>0){
+    note='과세표준 <b>'+fmt(tb)+'만원</b> = 낙찰가 '+fmt(bid)+' + 인수 보증금 '+fmt(assume)
+        +'<br>'+r.label+'을 적용한 <b>참고값</b>입니다.'
+        +'<br>경매는 낙찰대금 외에 <b>인수하는 임차보증금·유치권 해소비용·공용부분 체납관리비</b>도 과세표준에 포함하는 것이 원칙입니다.';
+  }else if(Q.assume==='unknown'){
+    note='현재 과세표준은 낙찰가 <b>'+fmt(bid)+'만원</b>만 반영한 값입니다.'
+        +'<br><b style="color:var(--danger)">인수 보증금이 있으면 그 금액도 과세표준에 포함</b>되어 세금이 크게 늘어납니다. 매각물건명세서를 확인하세요.';
+  }else{
+    note='과세표준 <b>'+fmt(tb)+'만원</b>에 '+r.label+'을 적용한 <b>참고값</b>입니다 (무주택·1주택 기준).';
+  }
+  $('taxNote').innerHTML=note+'<br><span style="color:var(--subtext)">2026.8. 세법 기준 · 다주택·중과 대상은 세율이 달라지니 직접 수정하세요.</span>';
 }
 function restoreCosts(){
   var c=LAST._costs;
-  Object.keys(c).forEach(function(k){if($(k)&&c[k]!==''){$(k).value=c[k];$(k).dataset.touched='1';}});
+  Object.keys(c).forEach(function(k){
+    if($(k)&&c[k]!==''){
+      $(k).value=c[k];
+      if(!(k==='taxCost'&&!LAST._taxTouched))$(k).dataset.touched='1';
+    }
+  });
 }
 
 /* ══ 실시간 요약 ══ */
@@ -814,6 +836,7 @@ function calcCosts(){
 }
 function updateLive(){
   if(STEP<3)return;
+  if(STEP===4)refreshAutoTax();          // 과세표준 갱신 후 비용 집계
   var bid=(STEP===3&&$('bidPrice'))?num('bidPrice'):(LAST?LAST.bidPrice:0);
   var c=(STEP===4)?calcCosts():{tax:0,extra:0,loanI:0,loanA:0,assume:0};
   var total=bid+c.tax+c.extra+c.loanI+c.assume;
@@ -858,6 +881,7 @@ $('mNext').addEventListener('click',function(){
   if(STEP===4){
     LAST._Q=JSON.parse(JSON.stringify(Q));
     LAST._costs={};
+    LAST._taxTouched=($('taxCost').dataset.touched==='1');
     ['taxCost','repairIn','evictIn','assumeIn','loanAmt','loanInt'].forEach(function(k){if($(k))LAST._costs[k]=$(k).value;});
     if(Q.assume==='yes'&&num('assumeIn')<=0){alert('인수 보증금 금액을 입력해주세요 — 매각물건명세서에 나옵니다.');return;}
     var c=calcCosts();
@@ -926,7 +950,11 @@ function showResult(){
   if(S.poolN>0&&S.poolN<3)wh+='<div class="warn-card warn-yellow" style="margin-top:12px;">비교 거래가 '+S.poolN+'건뿐입니다. 인근 범위나 면적 범위를 넓혀 다시 확인하세요.</div>';
   var m2=S.sale-(total+1000);
   wh+='<div class="warn-card warn-orange" style="margin-top:12px;">수리비가 1,000만원 늘면 안전마진이 '+(m2>=0?'+':'−')+fmt(Math.abs(m2))+'만원으로 '+(m2<marginW?'줄어듭니다':'변합니다')+'.</div>';
-  if(hard||c.assume>0)wh+='<div class="warn-card warn-red" style="margin-top:12px;">인수할 보증금이 있을 경우 현재 결과가 달라질 수 있습니다. 매각물건명세서를 확인하세요.</div>';
+  if(c.assumeUnknown||(hard&&c.assume<=0)){
+    wh+='<div class="warn-card warn-red" style="margin-top:12px;">인수할 보증금이 있으면 총투입금뿐 아니라 <b>취득세 과세표준</b>까지 함께 커집니다. 매각물건명세서를 확인해 금액을 넣어보세요.</div>';
+  }else if(c.assume>0){
+    wh+='<div class="warn-card warn-red" style="margin-top:12px;">인수 보증금 '+fmt(c.assume)+'만원을 과세표준에 포함해 취득·등기비용을 계산했습니다. 실제 세액은 주택 수·조건에 따라 달라지니 관할 지자체 세무과에 확인하세요.</div>';
+  }
   $('rvWarns').innerHTML=wh;
 
   // 그래프
@@ -948,7 +976,7 @@ function showResult(){
   $('cGap').textContent=(marginW>=0?'실거래가 '+fmt(marginW)+'만원 높음 (여유)':'총투입이 '+fmt(-marginW)+'만원 높음');
   $('cGap').style.color=(marginW>=0)?'var(--positive)':'var(--danger)';
   $('cBid').textContent=fmtW(v.bidPrice);
-  $('cTax').textContent=fmtW(c.tax);
+  $('cTax').textContent=fmtW(c.tax)+(c.assume>0?' (과세표준 '+fmt(v.bidPrice+c.assume)+')':'');
   if(c.loanI>0){$('cLoanRow').style.display='flex';$('cLoan').textContent=fmtW(c.loanI);}else{$('cLoanRow').style.display='none';}
   $('cEtcK').textContent='수리·명도 비용';
   $('cEtc').textContent=fmtW(c.extra);
@@ -999,13 +1027,14 @@ $('editCostBtn').addEventListener('click',function(){
 $('copyBtn').addEventListener('click',function(){
   if(!LAST||!LAST.result)return;
   var v=LAST,r=v.result;
-  var tname={villa:'빌라·다세대',apt:'아파트',op:'오피스텔'}[S.type];
+  var tname={villa:'빌라·다세대',apt:'아파트',op:'오피스텔',dosaeng:'도시형생활주택',sangga:'근린상가',etc:'기타'}[S.type];
   var LV={pos:'여유 있음',mid:'재검토',neg:'주의'}[r.level];
   var lines=[
     '[경매 실거래 체크 — 렌트체크강서]',
     '물건: '+(S.region==='etc'?(S.regionEtc||'직접입력 지역'):S.region)+' '+tname+' 전용 '+S.area+'㎡',
     '감정가 '+fmt(v.apprPrice)+' / 최저가 '+fmt(v.minPrice)+' / 예상 입찰가 '+fmt(v.bidPrice)+' (만원)',
     '비교 실거래: '+(S.poolN?S.poolN+'건 선택 · 중위 '+fmt(S.sale):'직접입력 '+fmt(S.sale))+'만원',
+    (v.c&&v.c.assume>0?'인수 보증금: '+fmt(v.c.assume)+'만원 (취득세 과세표준 포함)':null),
     '총투입금: 약 '+fmt(r.total)+'만원',
     (r.riskMode?'가격상 여유(권리비용 제외): ':'안전마진: ')+(r.marginW>=0?'+':'−')+fmt(Math.abs(r.marginW))+'만원 ('+(r.marginP>=0?'+':'')+r.marginP.toFixed(1)+'%)',
     (r.riskMode?'※ 권리 미확인 물건 — 매각물건명세서 확인 필수':null),
