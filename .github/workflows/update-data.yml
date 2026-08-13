@@ -27,13 +27,16 @@ jobs:
       - name: Install deps
         run: pip install -r requirements.txt
 
-      # ── 국토부 API 응답 캐시 (같은 월 데이터는 재호출 안 함) ──
+      # ── 국토부 API 응답 캐시 + 지오코딩 캐시 ──
       # 캐시 경로가 automation/data/cache 라 기존 git add 로는 저장이 안 됐음.
       # Actions 캐시로 붙여서 매 실행마다 전량 재호출하는 걸 막는다.
+      # geocode_cache.json도 같이 태운다 — 안 그러면 매일 지번 1,000여 건을 다시 부른다.
       - name: Restore MOLIT cache
         uses: actions/cache@v4
         with:
-          path: automation/data/cache
+          path: |
+            automation/data/cache
+            automation/data/geocode_cache.json
           key: molit-cache-${{ github.run_id }}
           restore-keys: |
             molit-cache-
@@ -89,11 +92,17 @@ jobs:
           cp outputs/widget/hwagok_apt_data.json ../hwagok_apt_data.json
       - name: Build 강서 아파트 탐색기 (위젯·대시보드)
         run: python gangseo_apt_builder.py automation/data/molit_kangseo.csv .
+
+      # ── 경매 도구 데이터 (지번 → 좌표 지오코딩 포함) ──
+      # KAKAO_REST_KEY가 없거나 호출이 실패해도 좌표만 비고 나머지는 정상 생성된다.
       - name: Build auction_data.json
         working-directory: automation
+        env:
+          KAKAO_REST_KEY: ${{ secrets.KAKAO_REST_KEY }}
         run: |
           python auction_data.py data/molit_kangseo.csv
           cp auction_data.json ../auction_data.json
+
       - name: Publish CSV
         run: cp automation/data/molit_kangseo.csv molit_kangseo.csv
 
