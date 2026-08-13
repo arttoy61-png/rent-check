@@ -369,7 +369,7 @@ input.hasunit{padding-right:52px;}
     <div class="crow"><span class="ck" id="cEtcK">수리·명도·기타</span><span class="cv" id="cEtc">-</span></div>
     <div class="crow" id="cAssumeRow" style="display:none;"><span class="ck">인수 보증금</span><span class="cv" id="cAssume">-</span></div>
     <div class="crow" id="cCashRow" style="display:none;"><span class="ck">내 현금 (대출 제외)</span><span class="cv" id="cCash">-</span></div>
-    <button class="btn-text" id="editCostBtn">상세 비용 수정하기</button>
+    <button class="btn-text" id="editCostBtn">추가 비용 수정하기</button>
   </div>
 
   <details class="rights" id="rentCard" style="display:none;"><summary>낙찰받고 전세·월세를 놓는다면 <span style="font-size:12px;color:var(--subtext);font-weight:400;">같은 동네 중위 기준</span></summary><div class="r-inner">
@@ -389,7 +389,7 @@ input.hasunit{padding-right:52px;}
   </div>
 
   <div class="r-actions">
-    <button class="btn-outline" id="editCostBtn2">비용 다시 입력하기</button>
+    <button class="btn-outline" id="editCostBtn2">추가 비용 수정하기</button>
     <button class="btn-outline" id="restartBtn">처음으로 돌아가기</button>
   </div>
 
@@ -1032,10 +1032,14 @@ function showResult(){
     premEl.innerHTML='실거래 중위보다 <b>'+fmt(-marginW)+'만원(+'+Math.abs(marginP).toFixed(1)+'%)의 프리미엄</b>을 지불하는 입찰입니다.<br>입지·재개발·희소성 등 그만한 이유가 있는지 확인하세요.';
   }else{premEl.style.display='none';}
 
+  // 가격이 나빠서 neg인지, 권리 때문에 neg인지 구분해 문구를 고른다
+  var priceBad=(marginP<3||total>=S.sale);
   var VD={
     pos:{cls:'v-pos',t:'여유 있음',d:'실거래와 총투입금 사이에 여유가 있습니다.<br>권리분석과 현장 비용을 확인하세요.'},
-    mid:{cls:'v-mid',t:'재검토',d:'예상 비용이 조금만 늘어도 마진이 줄어듭니다.<br>수리·명도·인수비용을 다시 넣어보세요.'},
-    neg:{cls:'v-neg',t:'주의',d:'총투입금이 비교 실거래에 가깝거나 더 높습니다.<br>입찰가를 낮추거나 비교 거래를 다시 선택하세요.'}
+    mid:{cls:'v-mid',t:'재검토',d:'예상 비용이 조금만 늘어도 여유가 줄어듭니다.<br>수리·명도·인수비용을 다시 넣어보세요.'},
+    neg:priceBad
+      ?{cls:'v-neg',t:'주의',d:'총투입금이 비교 실거래에 가깝거나 더 높습니다.<br>입찰가를 낮추거나 비교 거래를 다시 선택하세요.'}
+      :{cls:'v-neg',t:'가격보다 권리가 문제입니다',d:'숫자상으로는 '+fmt(marginW)+'만원 여유가 보이지만, 대항력 있는 임차인과 인수 보증금이 함께 걸린 물건입니다.<br>배당 결과에 따라 실제 인수액이 달라지므로 이 여유는 그대로 남지 않을 수 있습니다.'}
   }[level];
   var riskHead='';
   if(riskMode){
@@ -1051,7 +1055,7 @@ function showResult(){
   var wh='';
   if(S.poolN>0&&S.poolN<3)wh+='<div class="warn-card warn-yellow" style="margin-top:12px;">비교 거래가 '+S.poolN+'건뿐입니다. 인근 범위나 면적 범위를 넓혀 다시 확인하세요.</div>';
   var m2=S.sale-(total+1000);
-  wh+='<div class="warn-card warn-orange" style="margin-top:12px;">수리비가 1,000만원 늘면 안전마진이 '+(m2>=0?'+':'−')+fmt(Math.abs(m2))+'만원으로 '+(m2<marginW?'줄어듭니다':'변합니다')+'.</div>';
+  wh+='<div class="warn-card warn-orange" style="margin-top:12px;">수리비가 1,000만원 늘면 '+(riskMode?'가격상 여유':'안전마진')+'가 '+(m2>=0?'+':'−')+fmt(Math.abs(m2))+'만원으로 '+(m2<marginW?'줄어듭니다':'변합니다')+'.</div>';
   if(c.assumeUnknown||(hard&&c.assume<=0)){
     wh+='<div class="warn-card warn-red" style="margin-top:12px;">인수할 보증금이 있으면 총투입금뿐 아니라 <b>취득세 과세표준</b>까지 함께 커집니다. 매각물건명세서를 확인해 금액을 넣어보세요.</div>';
   }else if(c.assume>0){
@@ -1071,11 +1075,12 @@ function showResult(){
     $('gMarginF').style.width=(marginW/maxV*100)+'%';
     $('gMarginF').style.display='block';
   }else{$('gMarginF').style.display='none';}
-  $('gCap').textContent=(marginW>=0)?('안전마진 구간 +'+fmt(marginW)+'만원'):('총투입금이 실거래보다 '+fmt(-marginW)+'만원 높습니다');
+  var mName=riskMode?'가격상 여유':'안전마진';
+  $('gCap').textContent=(marginW>=0)?(mName+' 구간 +'+fmt(marginW)+'만원'):('총투입금이 실거래보다 '+fmt(-marginW)+'만원 높습니다');
 
   // 비용 상세
   $('cTotal').textContent=fmtW(total);
-  $('cGap').textContent=(marginW>=0?'실거래가 '+fmt(marginW)+'만원 높음 (여유)':'총투입이 '+fmt(-marginW)+'만원 높음');
+  $('cGap').textContent=(marginW>=0?'실거래가 '+fmt(marginW)+'만원 높음':'총투입이 '+fmt(-marginW)+'만원 높음');
   $('cGap').style.color=(marginW>=0)?'var(--positive)':'var(--danger)';
   $('cBid').textContent=fmtW(v.bidPrice);
   $('cTax').textContent=fmtW(c.tax)+(c.assume>0?' (과세표준 '+fmt(v.bidPrice+c.assume)+')':'');
