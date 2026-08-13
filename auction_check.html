@@ -142,6 +142,7 @@ input.hasunit{padding-right:52px;}
 .dcard .d-price{font-size:20px;font-weight:700;color:var(--navy);}
 .dcard .d-sub{font-size:12.5px;color:var(--subtext);margin-top:4px;}
 .dcard .d-dist{display:inline-block;padding:2px 9px;border-radius:11px;background:var(--bg);font-size:11.5px;font-weight:700;color:var(--navy);}
+.dcard .d-dg{display:inline-block;padding:2px 9px;border-radius:11px;background:#FFF1E0;font-size:11.5px;font-weight:700;color:#8a4a00;}
 .pick-fixed{
   position:sticky;bottom:0;background:var(--surface);border-top:1px solid var(--line);
   margin:14px -32px -20px;padding:12px 32px;display:flex;justify-content:space-between;align-items:center;
@@ -719,7 +720,8 @@ function proceedLookup(){
       if(MYXY&&GEO)CAND.forEach(function(x){x._d=distM(MYXY,xyOf(x));});
       var allP=CAND.map(function(x){return x.p;});
       var med=median(allP);
-      var elig=CAND.filter(function(x){return med>0&&Math.abs(x.p-med)/med<=0.4;});
+      // 직거래는 중개사 없이 맺어진 거래라 시세와 동떨어질 수 있어 자동 선택에서 뺀다
+      var elig=CAND.filter(function(x){return med>0&&Math.abs(x.p-med)/med<=0.4&&!x.dg;});
       elig.map(function(x){
         var aScore=1-Math.min(1,Math.abs(x.a-S.area)/(S.area*0.15));
         var idx=CAND.indexOf(x);
@@ -827,14 +829,14 @@ function renderS2(failed){
   $('pickFixed').style.display='flex';
   var recN=CAND.filter(function(x){return x._on;}).length;
   var hasDist=CAND.some(function(x){return x._d!==null&&x._d!==undefined;});
-  $('pickWarn').innerHTML=recN?'<div class="warn-card" style="background:var(--primary-soft);color:var(--navy);">'+(hasDist?'거리가 가깝고 면적·시점이 비슷한':'면적이 비슷하고 최근인')+' 거래 <b>'+recN+'건을 미리 선택</b>했습니다 (가격이 크게 벗어난 거래는 제외).<br>우리 물건과 조건이 다르면 카드를 눌러 빼거나 더하세요.</div>':'';
+  $('pickWarn').innerHTML=recN?'<div class="warn-card" style="background:var(--primary-soft);color:var(--navy);">'+(hasDist?'거리가 가깝고 면적·시점이 비슷한':'면적이 비슷하고 최근인')+' 거래 <b>'+recN+'건을 미리 선택</b>했습니다 (가격이 크게 벗어난 거래·직거래는 제외).<br>우리 물건과 조건이 다르면 카드를 눌러 빼거나 더하세요.</div>':'';
   box.innerHTML=CAND.map(function(x,i){
     var diff=(x.a-S.area);
     var atxt=Math.abs(diff)<0.05?'':(' <span class="d-gap">('+(diff>0?'+':'−')+Math.abs(diff).toFixed(1)+'㎡)</span>');
     var dist=(x._d!==null&&x._d!==undefined)?'<span class="d-dist">직선 '+fmtDist(x._d)+'</span>':'';
     return '<div class="dcard'+(x._on?' sel':'')+'" data-i="'+i+'">'
       +'<div class="chk">✓</div>'
-      +'<div class="d-top"><span class="d-date">'+fd(x.ym,x.d)+'</span>'+dist+'</div>'
+      +'<div class="d-top"><span class="d-date">'+fd(x.ym,x.d)+'</span>'+dist+(x.dg?'<span class="d-dg">직거래</span>':'')+'</div>'
       +'<div class="d-main"><span class="d-area">전용 '+x.a+'㎡'+atxt+'</span><span class="d-price">'+fmtW(x.p)+'</span></div>'
       +'<div class="d-sub">'+(x.b||'단지명 없음')+' · '+(x.f?x.f+'층':'층 미상')+(x.y?' · '+x.y+'년 준공':'')+'</div>'
       +'</div>';
@@ -857,8 +859,11 @@ function pickSum(){
   if(!ps.length){$('pfMid').textContent='거래 카드를 눌러 선택하세요';}
   else{$('pfMid').textContent='중위가격 '+fmtW(Math.round(median(ps)));}
   var few=$('pickFew');
-  if(few)few.innerHTML=(ps.length>0&&ps.length<3)
-    ?'<div class="warn-card warn-yellow">비교 거래가 '+ps.length+'건뿐입니다.<br>표본이 적으면 참고용으로만 보세요.</div>':'';
+  var h='';
+  if(ps.length>0&&ps.length<3)h+='<div class="warn-card warn-yellow">비교 거래가 '+ps.length+'건뿐입니다.<br>표본이 적으면 참고용으로만 보세요.</div>';
+  var dgOn=CAND.filter(function(x){return x._on&&x.dg;});
+  if(dgOn.length)h+='<div class="warn-card warn-orange"><b>직거래</b>가 '+dgOn.length+'건 선택돼 있습니다. 중개사 없이 맺어진 거래라 가족 간 거래처럼 시세와 다른 금액일 수 있습니다. 시세 비교에 넣을지 다시 보세요.</div>';
+  if(few)few.innerHTML=h;
 }
 
 /* ══ 3단계 실시간 할인율 ══ */
