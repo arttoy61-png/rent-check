@@ -115,11 +115,13 @@ def main():
             for arr in (a["sale"], a["je"], a["wo"]):
                 arr.sort(key=lambda x: x["date"], reverse=True)
             sa = [x["amt"] for x in a["sale"]]
-            ppy_values = [x["amt"] / (x["m2"] / 3.3058) for x in a["sale"] if x.get("m2")]
+            sale_areas = [x["m2"] for x in a["sale"] if x.get("m2")]
+            sale_mid = med(sa) if len(sa) >= 3 else None
+            area_mid = med(sale_areas) if len(sale_areas) >= 3 else None
             areas_out.append({
                 "m2": band, "py": round(band/3.3058, 1),
-                "mid": med(sa) if len(sa) >= 3 else None,
-                "ppy": med(ppy_values) if len(ppy_values) >= 3 else None,
+                "mid": sale_mid,
+                "ppy": round(sale_mid/(area_mid/3.3058), 2) if (sale_mid is not None and area_mid) else None,
                 "nS": len(a["sale"]), "nJ": len(a["je"]), "nW": len(a["wo"]),
                 "sale": a["sale"], "jeonse": a["je"], "wolse": a["wo"],
             })
