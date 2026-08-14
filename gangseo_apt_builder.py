@@ -37,6 +37,14 @@ def norm(name):
 def cid(dong, name):
     return hashlib.md5(f"{dong}|{norm(name)}".encode()).hexdigest()[:8]
 
+def display_area_m2(m2):
+    """아파트 화면용 면적 그룹. 원본 area_m2 값은 건드리지 않는다."""
+    if 59.0 <= m2 < 60.0:
+        return 59
+    if 84.0 <= m2 < 85.0:
+        return 84
+    return int(round(m2))
+
 def drop_lease(deps):
     """같은 보증금이 10건 이상이면서 전체의 40% 넘으면 공공임대로 보고 제외."""
     if len(deps) < 5: return deps
@@ -70,7 +78,7 @@ def main():
         nm, dong = r["building_name"].strip(), r["umd_name"].strip()
         k = (dong, norm(nm))
         C[k]["names"][nm] += 1
-        m2 = float(r["area_m2"]); band = int(round(m2))
+        m2 = float(r["area_m2"]); band = display_area_m2(m2)
         d = f"{r['deal_ym'][:4]}.{r['deal_ym'][4:6]}.{int(r['deal_day']):02d}"
         fl = int(r["floor"]) if r["floor"] else None
         if r["build_year"]: C[k]["yr"] = int(float(r["build_year"]))
@@ -107,10 +115,11 @@ def main():
             for arr in (a["sale"], a["je"], a["wo"]):
                 arr.sort(key=lambda x: x["date"], reverse=True)
             sa = [x["amt"] for x in a["sale"]]
+            ppy_values = [x["amt"] / (x["m2"] / 3.3058) for x in a["sale"] if x.get("m2")]
             areas_out.append({
                 "m2": band, "py": round(band/3.3058, 1),
                 "mid": med(sa) if len(sa) >= 3 else None,
-                "ppy": round(med(sa)/(band/3.3058), 2) if len(sa) >= 3 else None,
+                "ppy": med(ppy_values) if len(ppy_values) >= 3 else None,
                 "nS": len(a["sale"]), "nJ": len(a["je"]), "nW": len(a["wo"]),
                 "sale": a["sale"], "jeonse": a["je"], "wolse": a["wo"],
             })
@@ -141,7 +150,7 @@ def main():
                 for r in ao.get(key, []):
                     amt = r.get("amt") if tag == "sale" else r.get("dep")
                     if amt is None: continue
-                    cand = {"d": r["date"], "t": tag, "m2": round(r["m2"]), "fl": r.get("fl"), "a": amt}
+                    cand = {"d": r["date"], "t": tag, "m2": display_area_m2(r["m2"]), "fl": r.get("fl"), "a": amt}
                     if tag == "wo": cand["r"] = r.get("rent")
                     if rc is None or cand["d"] > rc["d"]: rc = cand
         if rc: item["rc"] = rc
