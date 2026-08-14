@@ -21,5 +21,5 @@ DEAL_TYPES = [
 # 최근 몇 개월
 MONTHS_BACK = int(os.environ.get("MONTHS_BACK", "6"))
 
-# Actions는 매 실행 새 러너 → 캐시 끄고 항상 최신 수집
-USE_CACHE = False
+# 과거 월은 Actions 캐시를 사용하고, 최근 2개월은 수집기에서 항상 API 재호출
+USE_CACHE = os.environ.get("USE_CACHE", "1") not in ("0", "false", "False")
