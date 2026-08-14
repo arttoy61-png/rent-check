@@ -80,6 +80,7 @@ jobs:
         env:
           MOLIT_API_KEY: ${{ secrets.MOLIT_API_KEY }}
           MONTHS_BACK: ${{ steps.mb.outputs.months }}
+          USE_CACHE: "1"
         run: python collect_kangseo.py
 
       - name: Check CSV exists
