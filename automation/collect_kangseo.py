@@ -6,11 +6,10 @@
   - 매일 화곡동 수집(collect_live_data.py)은 config.py의 6개월 그대로 유지
   - 이 파일(강서구 전체)만 24개월 수집
 
-★ 2026.8.12 변경: GitHub Actions 30분 타임아웃 대응
-  - 환경변수 MONTHS_BACK 으로 수집 개월 조절 (기본 24)
-    · 평일 자동실행: MONTHS_BACK=4  (최근 4개월만 → 호출 6분의 1)
-    · 주 1회 전체:   MONTHS_BACK=24 (과거분 재검증)
+★ 2026.8.15 변경: 캐시 활성화 후 기본 수집 범위를 24개월로 통일
+  - 환경변수 MONTHS_BACK 수동 지정은 유지 (기본 24)
   - 부분 수집이어도 기존 CSV와 병합해 저장 (과거 데이터 유실 방지)
+  - 병합 실패 또는 병합 후 행수 감소 시 기존 CSV를 유지하고 실패 처리
 """
 import os
 import sys
@@ -18,17 +17,17 @@ from pathlib import Path
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).parent))
-# config의 MONTHS_BACK은 무시. 강서구 전체 분석용은 24개월.
+# config의 MONTHS_BACK은 무시. 강서구 전체 분석용은 기본 24개월.
 from config import MOLIT_API_KEY, DEAL_TYPES, USE_CACHE
 from collectors.molit_api import fetch_multi, normalize_to_legacy
 
 KANGSEO_LAWD = "11500"
 REGION_MAP = {KANGSEO_LAWD: "강서구"}
-MONTHS_BACK = int(os.environ.get("MONTHS_BACK", "24"))  # 환경변수로 조절
+MONTHS_BACK = int(os.environ.get("MONTHS_BACK", "24"))  # 수동 지정 가능, 기본 24개월
 
 def main():
     print("=" * 50)
-    print("  강서구 전체 실거래 수집 (24개월)")
+    print(f"  강서구 전체 실거래 수집 (최근 {MONTHS_BACK}개월)")
     print("=" * 50)
     print(f"거래유형: {DEAL_TYPES}")
     print(f"기간: 최근 {MONTHS_BACK}개월 (장기 분석용)")
@@ -68,10 +67,16 @@ def main():
                    "building_name", "area_m2", "floor"]
             key = [c for c in key if c in merged.columns]
             merged = merged.drop_duplicates(subset=key, keep="last")
+            if len(merged) < before:
+                raise RuntimeError(
+                    f"병합 후 행수 감소: 기존 {before:,}건 → 병합 {len(merged):,}건"
+                )
             print(f"\n기존 {before:,}건 + 신규 {len(normalized):,}건 → 병합 {len(merged):,}건")
             normalized = merged
         except Exception as e:
-            print(f"\n병합 실패({e}) — 신규 수집분으로 덮어씁니다")
+            print(f"\n🚨 병합 안전장치 작동: {e}")
+            print(f"  기존 CSV 유지: {out_path}")
+            sys.exit(1)
 
     normalized.to_csv(out_path, index=False, encoding="utf-8-sig")
     print(f"\n저장 완료: {out_path} ({len(normalized):,}건)")
