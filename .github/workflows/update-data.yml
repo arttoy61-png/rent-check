@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
     inputs:
       months_back:
-        description: "수집 개월 수 (비워두면 평일 4 / 일요일 24 자동)"
+        description: "수집 개월 수 (비워두면 24개월)"
         required: false
         default: ""
 permissions:
@@ -42,17 +42,14 @@ jobs:
             molit-cache-
 
       # ── 수집 범위 결정 ──
-      # 평일은 최근 4개월만(호출 6분의 1), 일요일은 24개월 전체 재검증.
-      # 수동 실행 시 months_back 입력으로 덮어쓸 수 있다.
+      # 기본은 24개월. 수동 실행 시 months_back 입력으로만 덮어쓸 수 있다.
       - name: Decide months_back
         id: mb
         run: |
           if [ -n "${{ github.event.inputs.months_back }}" ]; then
             MB="${{ github.event.inputs.months_back }}"
-          elif [ "$(date +%u)" = "7" ]; then
-            MB=24
           else
-            MB=4
+            MB=24
           fi
           echo "months=$MB" >> $GITHUB_OUTPUT
           echo "수집 개월: $MB"
