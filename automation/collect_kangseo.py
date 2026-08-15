@@ -9,7 +9,7 @@
 ★ 2026.8.15 변경: 캐시 활성화 후 기본 수집 범위를 24개월로 통일
   - 환경변수 MONTHS_BACK 수동 지정은 유지 (기본 24)
   - 부분 수집이어도 기존 CSV와 병합해 저장 (과거 데이터 유실 방지)
-  - 병합 실패 또는 병합 후 행수 감소 시 기존 CSV를 유지하고 실패 처리
+  - 병합 실패, 병합 후 행수 감소, 과거 최소월 유실 시 기존 CSV를 유지하고 실패 처리
 """
 import os
 import sys
@@ -71,6 +71,13 @@ def main():
                 raise RuntimeError(
                     f"병합 후 행수 감소: 기존 {before:,}건 → 병합 {len(merged):,}건"
                 )
+            if "deal_ym" in old.columns and "deal_ym" in merged.columns:
+                old_min = old["deal_ym"].dropna().astype(str).min()
+                merged_min = merged["deal_ym"].dropna().astype(str).min()
+                if old_min and merged_min and merged_min > old_min:
+                    raise RuntimeError(
+                        f"과거분 유실: 최소 {old_min} → {merged_min}"
+                    )
             print(f"\n기존 {before:,}건 + 신규 {len(normalized):,}건 → 병합 {len(merged):,}건")
             normalized = merged
         except Exception as e:
