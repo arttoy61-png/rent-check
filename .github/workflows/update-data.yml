@@ -25,7 +25,7 @@ env:
 jobs:
   update:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 70
     steps:
       - name: Checkout
         uses: actions/checkout@v5
@@ -36,7 +36,7 @@ jobs:
       - name: Install deps
         run: pip install -r requirements.txt
 
-      - name: Restore MOLIT cache
+      - name: Restore MOLIT and geocode cache
         uses: actions/cache@v4
         with:
           path: |
@@ -45,6 +45,7 @@ jobs:
           key: molit-cache-${{ github.run_id }}
           restore-keys: |
             molit-cache-
+            geo-rebuild-
 
       - name: Decide months_back
         id: mb
@@ -105,6 +106,9 @@ jobs:
         working-directory: automation
         env:
           KAKAO_REST_KEY: ${{ secrets.KAKAO_REST_KEY }}
+          GEO_WORKERS: "8"
+          GEO_TIMEOUT: "8"
+          GEO_RETRIES: "3"
         run: |
           python auction_data.py data/molit_kangseo.csv
           cp auction_data.json ../auction_data.json
@@ -115,23 +119,56 @@ jobs:
       - name: Validate geo outputs
         run: |
           python - <<'PY'
-          import json
+          import json, math
           from pathlib import Path
 
           auction = json.loads(Path("auction_data.json").read_text(encoding="utf-8"))
-          assert auction.get("geo"), "auction_data geo is empty"
+          geo = auction.get("geo") or {}
+          assert geo, "auction_data geo is empty"
+
           rentals = list(auction.get("jeonse", [])) + list(auction.get("wolse", []))
-          with_j = sum(1 for r in rentals if r.get("j"))
-          assert with_j > 0, "rental records have no jibun"
+          with_j = [r for r in rentals if r.get("u") and r.get("j")]
+          with_geo = [r for r in with_j if f"{r['u']} {r['j']}" in geo]
+          assert len(with_j) > 1000, f"rental records with jibun too low: {len(with_j)}"
+          assert len(with_geo) > 1000, f"rental coordinate coverage too low: {len(with_geo)}"
+          coverage = len(with_geo) / len(with_j)
+          assert coverage >= 0.50, f"rental coordinate coverage ratio too low: {coverage:.1%}"
+
+          # 화곡역 주변 월세가 실제로 거리 비교에 들어오는지 최소 샘플 검증
+          lat0, lng0 = 37.5414336177, 126.8404964502
+          def dist(lat1,lng1,lat2,lng2):
+              R=6371000
+              p1,p2=math.radians(lat1),math.radians(lat2)
+              dp=math.radians(lat2-lat1); dl=math.radians(lng2-lng1)
+              x=math.sin(dp/2)**2+math.cos(p1)*math.cos(p2)*math.sin(dl/2)**2
+              return 2*R*math.asin(math.sqrt(x))
+
+          nearby = []
+          for r in auction.get('wolse', []):
+              try:
+                  area=float(r.get('a') or 0)
+              except Exception:
+                  continue
+              if abs(area-30) > 8:
+                  continue
+              xy=geo.get(f"{r.get('u','')} {r.get('j','')}")
+              if not xy:
+                  continue
+              if dist(lat0,lng0,float(xy[0]),float(xy[1])) <= 800:
+                  nearby.append(r)
+          assert nearby, "Hwagok Station nearby monthly-rent sample is zero"
 
           apt = json.loads(Path("gangseo_apt_summary.json").read_text(encoding="utf-8"))
           complexes = apt.get("complexes", [])
-          with_geo = sum(1 for c in complexes if c.get("lat") and c.get("lng"))
+          with_apt_geo = sum(1 for c in complexes if c.get("lat") and c.get("lng"))
           assert complexes, "apartment complexes empty"
-          assert with_geo > 0, "apartment coordinates empty"
-          print(f"geo keys: {len(auction['geo'])}")
-          print(f"rental rows with jibun: {with_j}/{len(rentals)}")
-          print(f"apartment coordinates: {with_geo}/{len(complexes)}")
+          assert with_apt_geo > 600, f"apartment coordinates too low: {with_apt_geo}"
+
+          print(f"geo keys: {len(geo)}")
+          print(f"rental rows with jibun: {len(with_j)}/{len(rentals)}")
+          print(f"rental rows with coordinates: {len(with_geo)}/{len(with_j)} ({coverage:.1%})")
+          print(f"Hwagok monthly sample within 800m: {len(nearby)}")
+          print(f"apartment coordinates: {with_apt_geo}/{len(complexes)}")
           PY
 
       - name: Publish CSV
