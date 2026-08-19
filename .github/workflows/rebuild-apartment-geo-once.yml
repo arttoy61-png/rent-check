@@ -1,0 +1,91 @@
+name: Rebuild apartment geo once
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/rebuild-apartment-geo-once.yml"
+permissions:
+  contents: write
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Restore geocode cache
+        uses: actions/cache@v4
+        with:
+          path: automation/data/geocode_cache.json
+          key: apt-geo-${{ github.run_id }}
+          restore-keys: |
+            molit-cache-
+            apt-geo-
+      - name: Geocode apartment jibuns only
+        env:
+          KAKAO_REST_KEY: ${{ secrets.KAKAO_REST_KEY }}
+        run: |
+          python - <<'PY'
+          import csv,json,os,time,urllib.parse,urllib.request
+          from pathlib import Path
+          key=os.environ.get('KAKAO_REST_KEY','').strip()
+          assert key, 'KAKAO_REST_KEY missing'
+          rows=list(csv.DictReader(open('molit_kangseo.csv',encoding='utf-8-sig')))
+          keys=set()
+          for r in rows:
+              if str(r.get('cdeal_type') or '').strip()=='O': continue
+              if '아파트' not in (r.get('deal_type') or ''): continue
+              d=(r.get('umd_name') or '').strip(); j=(r.get('jibun') or '').strip()
+              if d and j: keys.add(f'{d} {j}')
+          cache_path=Path('automation/data/geocode_cache.json'); cache_path.parent.mkdir(parents=True,exist_ok=True)
+          try: cache=json.loads(cache_path.read_text(encoding='utf-8'))
+          except: cache={}
+          todo=sorted(k for k in keys if not (isinstance(cache.get(k),list) and len(cache[k])==2))
+          print('apartment keys',len(keys),'todo',len(todo),'cached',len(cache))
+          def geo(k):
+              q='서울 강서구 '+k
+              u='https://dapi.kakao.com/v2/local/search/address.json?'+urllib.parse.urlencode({'query':q,'size':1})
+              req=urllib.request.Request(u,headers={'Authorization':'KakaoAK '+key})
+              with urllib.request.urlopen(req,timeout=10) as resp:
+                  data=json.loads(resp.read().decode('utf-8'))
+              docs=data.get('documents') or []
+              if not docs:return None
+              return [round(float(docs[0]['y']),6),round(float(docs[0]['x']),6)]
+          for i,k in enumerate(todo,1):
+              try: cache[k]=geo(k)
+              except Exception as e:
+                  print('fail',k,e); cache[k]=None
+              if i%50==0:
+                  cache_path.write_text(json.dumps(cache,ensure_ascii=False),encoding='utf-8')
+                  print(i,'/',len(todo))
+              time.sleep(.04)
+          cache_path.write_text(json.dumps(cache,ensure_ascii=False),encoding='utf-8')
+          ok=sum(1 for k in keys if isinstance(cache.get(k),list) and len(cache[k])==2)
+          print('apartment coordinate keys',ok,'/',len(keys))
+          assert ok>600, f'apartment geocode coverage too low: {ok}'
+          PY
+      - name: Build apartment data
+        run: python gangseo_apt_builder.py molit_kangseo.csv .
+      - name: Validate coverage
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          s=json.loads(Path('gangseo_apt_summary.json').read_text(encoding='utf-8'))
+          c=s.get('complexes',[]); g=[x for x in c if x.get('lat') and x.get('lng')]
+          sample={x['nm']:(x.get('dong'),x.get('lat'),x.get('lng')) for x in c if x.get('nm') in ['강서힐스테이트','화곡푸르지오','등촌동아이파크','마곡엠밸리9단지','방화5']}
+          print('complex geo',len(g),'/',len(c));print(sample)
+          assert len(c)>=680
+          assert len(g)>600
+          assert len(sample)==5 and all(v[1] and v[2] for v in sample.values())
+          PY
+      - name: Commit apartment geo data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add gangseo_apt_summary.json gangseo_apt_detail.json
+          git commit -m "data: fill Gangseo apartment Kakao coordinates" || echo "no changes"
+          git pull --rebase --autostash || true
+          git push
