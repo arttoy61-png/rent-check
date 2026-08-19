@@ -8,11 +8,6 @@ on:
         description: "수집 개월 수 (비워두면 24개월)"
         required: false
         default: ""
-  push:
-    branches: [main]
-    paths:
-      - "automation/collect_kangseo.py"
-      - "automation/collectors/molit_api.py"
 permissions:
   contents: write
 concurrency: update-data
