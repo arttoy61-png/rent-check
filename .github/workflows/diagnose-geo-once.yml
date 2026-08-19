@@ -1,0 +1,51 @@
+name: Diagnose geo volume once
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/diagnose-geo-once.yml"
+permissions:
+  contents: write
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Count geocoding workload
+        run: |
+          python - <<'PY'
+          import csv,json
+          from pathlib import Path
+          rows=list(csv.DictReader(open('molit_kangseo.csv',encoding='utf-8-sig')))
+          latest=max(r['deal_ym'] for r in rows if r.get('deal_ym'))
+          y,m=int(latest[:4]),int(latest[4:])
+          idx=y*12+m
+          def mi(ym):
+              try:return int(ym[:4])*12+int(ym[4:])
+              except:return -999999
+          def key(r):
+              u=(r.get('umd_name') or '').strip();j=(r.get('jibun') or '').strip()
+              return f'{u} {j}' if u and j else None
+          all_keys={key(r) for r in rows if key(r)}
+          rentals=[r for r in rows if '전월세' in (r.get('deal_type') or '') and key(r)]
+          sales=[r for r in rows if '매매' in (r.get('deal_type') or '') and key(r)]
+          apt=[r for r in rows if '아파트' in (r.get('deal_type') or '') and key(r)]
+          out={
+            'rows':len(rows),'latest':latest,'all_unique':len(all_keys),
+            'rental_unique_24':len({key(r) for r in rentals}),
+            'rental_unique_12':len({key(r) for r in rentals if mi(r.get('deal_ym',''))>=idx-11}),
+            'rental_unique_6':len({key(r) for r in rentals if mi(r.get('deal_ym',''))>=idx-5}),
+            'sale_unique':len({key(r) for r in sales}),
+            'apartment_unique':len({key(r) for r in apt}),
+          }
+          Path('geo-diagnostic.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print(out)
+          PY
+      - name: Commit diagnostic
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add geo-diagnostic.json
+          git commit -m "test: measure geo workload"
+          git pull --rebase --autostash || true
+          git push
