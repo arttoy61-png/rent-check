@@ -17,6 +17,9 @@
     · timeout 30초 → 8초 / 재시도 3회 → 2회 / 백오프 단축
     · 연속 실패 감지 시 조기 중단(circuit breaker) — 수집분은 보존
     · 전체 시간 예산(budget) 초과 시 중단하고 수집분 반환
+- [2026.08.19 수정] 월 1,000건 초과 데이터 페이지네이션 수집
+    · 최근 2개월은 캐시 무시
+    · 수집 성공/실패 메타데이터를 DataFrame.attrs에 기록
 """
 import os
 import time
@@ -40,8 +43,8 @@ ENDPOINTS = {
 CACHE_DIR = Path("data/cache")
 CACHE_DIR.mkdir(parents=True, exist_ok=True)
 
-# 캐시 스키마 버전 — 컬럼 구조가 바뀌면 올린다(옛 캐시 자동 무시)
-CACHE_VERSION = "v3"
+# v4: v3 캐시는 1,000건 초과 월이 잘렸을 수 있어 전부 무효화
+CACHE_VERSION = "v4"
 
 
 def _safe_text(item, tag: str) -> str:
@@ -60,6 +63,48 @@ def _parse_amount(s: str) -> Optional[int]:
         return None
 
 
+def _request_page(
+    url: str,
+    params: dict,
+    deal_type: str,
+    lawd_cd: str,
+    deal_ym: str,
+    max_retries: int,
+    timeout: int,
+):
+    """국토부 API 한 페이지 호출 + XML/에러코드 검증."""
+    last_err = None
+    for _ in range(max_retries):
+        try:
+            r = requests.get(url, params=params, timeout=timeout)
+            r.raise_for_status()
+
+            try:
+                root = ET.fromstring(r.content)
+            except ET.ParseError as e:
+                raise RuntimeError(f"XML 파싱 실패: {e}\n응답: {r.text[:500]}")
+
+            result_code_el = root.find(".//resultCode")
+            if (
+                result_code_el is not None
+                and result_code_el.text
+                and result_code_el.text not in ("00", "000")
+            ):
+                result_msg_el = root.find(".//resultMsg")
+                msg = result_msg_el.text if result_msg_el is not None else "알 수 없는 에러"
+                raise RuntimeError(f"API 에러 [{result_code_el.text}] {msg}")
+
+            return root
+        except Exception as e:
+            last_err = e
+            time.sleep(1)
+
+    raise RuntimeError(
+        f"API 호출 실패 ({last_err}) — {deal_type} {lawd_cd} {deal_ym} "
+        f"page={params.get('pageNo')}"
+    )
+
+
 def fetch_one_month(
     api_key: str,
     lawd_cd: str,
@@ -69,12 +114,11 @@ def fetch_one_month(
     max_retries: int = 2,
     timeout: int = 8,
 ) -> pd.DataFrame:
-    """한 달치 실거래 데이터 수집."""
+    """한 달치 실거래 데이터 전체 페이지 수집."""
     if deal_type not in ENDPOINTS:
         raise ValueError(f"지원하지 않는 거래유형: {deal_type}")
 
-    # ── 신고지연 대응: 현재월 포함 최근 2개월은 캐시 무시하고 항상 API 재수집 ──
-    #    (국토부 실거래는 계약 후 최대 30일 신고 유예라 최근 달이 계속 채워짐)
+    # 신고지연 대응: 현재월 포함 최근 2개월은 캐시 무시하고 항상 API 재수집
     _now = datetime.today()
     _recent_yms = set()
     _y, _m = _now.year, _now.month
@@ -86,106 +130,112 @@ def fetch_one_month(
             _y -= 1
     _is_recent = deal_ym in _recent_yms
 
-    # 캐시 파일명에 버전 포함 → 옛 스키마 캐시는 자동으로 안 읽힘
     cache_file = CACHE_DIR / f"{CACHE_VERSION}_{deal_type}_{lawd_cd}_{deal_ym}.csv"
     if use_cache and not _is_recent and cache_file.exists():
         return pd.read_csv(cache_file, dtype=str)
 
     url = ENDPOINTS[deal_type]
-    params = {
-        "serviceKey": api_key,
-        "LAWD_CD": lawd_cd,
-        "DEAL_YMD": deal_ym,
-        "pageNo": 1,
-        "numOfRows": 1000,
-    }
-
-    last_err = None
-    for attempt in range(max_retries):
-        try:
-            r = requests.get(url, params=params, timeout=timeout)
-            r.raise_for_status()
-            break
-        except Exception as e:
-            last_err = e
-            time.sleep(1)
-    else:
-        raise RuntimeError(f"API 호출 실패 ({last_err}) — {deal_type} {lawd_cd} {deal_ym}")
-
-    try:
-        root = ET.fromstring(r.content)
-    except ET.ParseError as e:
-        raise RuntimeError(f"XML 파싱 실패: {e}\n응답: {r.text[:500]}")
-
-    result_code_el = root.find(".//resultCode")
-    if result_code_el is not None and result_code_el.text and result_code_el.text not in ("00", "000"):
-        result_msg_el = root.find(".//resultMsg")
-        msg = result_msg_el.text if result_msg_el is not None else "알 수 없는 에러"
-        raise RuntimeError(f"API 에러 [{result_code_el.text}] {msg}")
-
+    page_size = 1000
+    page_no = 1
     rows = []
+    total_count = None
     is_rent = "전월세" in deal_type
 
-    for item in root.findall(".//item"):
-        name = (
-            _safe_text(item, "offiNm")
-            or _safe_text(item, "aptNm")
-            or _safe_text(item, "mhouseNm")
-            or _safe_text(item, "houseType")
-        )
-        umd = _safe_text(item, "umdNm")
-        jibun = _safe_text(item, "jibun")
-        area = _safe_text(item, "excluUseAr")
-        floor = _safe_text(item, "floor")
-        year = _safe_text(item, "dealYear")
-        month = _safe_text(item, "dealMonth")
-        day = _safe_text(item, "dealDay")
-        build_year = _safe_text(item, "buildYear")
-
-        row = {
-            "deal_type": deal_type,
-            "deal_ym": deal_ym,
-            "lawd_cd": lawd_cd,
-            "umd_name": umd,
-            "jibun": jibun,
-            "building_name": name,
-            "area_m2": area,
-            "floor": floor,
-            "build_year": build_year,
-            "deal_year": year,
-            "deal_month": month,
-            "deal_day": day,
+    while True:
+        params = {
+            "serviceKey": api_key,
+            "LAWD_CD": lawd_cd,
+            "DEAL_YMD": deal_ym,
+            "pageNo": page_no,
+            "numOfRows": page_size,
         }
+        root = _request_page(
+            url, params, deal_type, lawd_cd, deal_ym, max_retries, timeout
+        )
 
-        if is_rent:
-            row["deal_amount"] = None
-            row["deposit"] = _parse_amount(_safe_text(item, "deposit"))
-            row["monthly_rent"] = _parse_amount(_safe_text(item, "monthlyRent"))
-            # ── 갱신 계약 정보 (2021.06 이후 계약분부터 제공) ──
-            row["contract_type"] = _safe_text(item, "contractType")       # 신규 / 갱신
-            row["contract_term"] = _safe_text(item, "contractTerm")       # 예: 26.08~28.08
-            row["pre_deposit"] = _parse_amount(_safe_text(item, "preDeposit"))
-            row["pre_monthly_rent"] = _parse_amount(_safe_text(item, "preMonthlyRent"))
-            row["use_rr_right"] = _safe_text(item, "useRRRight")          # 사용 / (공란)
-            row["dealing_gbn"] = ""
-            row["cdeal_type"] = ""
-        else:
-            row["deal_amount"] = _parse_amount(_safe_text(item, "dealAmount"))
-            row["deposit"] = None
-            row["monthly_rent"] = None
-            row["contract_type"] = ""
-            row["contract_term"] = ""
-            row["pre_deposit"] = None
-            row["pre_monthly_rent"] = None
-            row["use_rr_right"] = ""
-            row["dealing_gbn"] = _safe_text(item, "dealingGbn")            # 중개거래 / 직거래 (2021.6~)
-            row["cdeal_type"] = _safe_text(item, "cdealType")              # O = 해제된 거래
+        if total_count is None:
+            total_el = root.find(".//totalCount")
+            if total_el is not None and total_el.text:
+                try:
+                    total_count = int(total_el.text.strip())
+                except ValueError:
+                    total_count = None
 
-        rows.append(row)
+        items = root.findall(".//item")
+        if not items:
+            break
+
+        for item in items:
+            name = (
+                _safe_text(item, "offiNm")
+                or _safe_text(item, "aptNm")
+                or _safe_text(item, "mhouseNm")
+                or _safe_text(item, "houseType")
+            )
+            umd = _safe_text(item, "umdNm")
+            jibun = _safe_text(item, "jibun")
+            area = _safe_text(item, "excluUseAr")
+            floor = _safe_text(item, "floor")
+            year = _safe_text(item, "dealYear")
+            month = _safe_text(item, "dealMonth")
+            day = _safe_text(item, "dealDay")
+            build_year = _safe_text(item, "buildYear")
+
+            row = {
+                "deal_type": deal_type,
+                "deal_ym": deal_ym,
+                "lawd_cd": lawd_cd,
+                "umd_name": umd,
+                "jibun": jibun,
+                "building_name": name,
+                "area_m2": area,
+                "floor": floor,
+                "build_year": build_year,
+                "deal_year": year,
+                "deal_month": month,
+                "deal_day": day,
+            }
+
+            if is_rent:
+                row["deal_amount"] = None
+                row["deposit"] = _parse_amount(_safe_text(item, "deposit"))
+                row["monthly_rent"] = _parse_amount(_safe_text(item, "monthlyRent"))
+                row["contract_type"] = _safe_text(item, "contractType")
+                row["contract_term"] = _safe_text(item, "contractTerm")
+                row["pre_deposit"] = _parse_amount(_safe_text(item, "preDeposit"))
+                row["pre_monthly_rent"] = _parse_amount(
+                    _safe_text(item, "preMonthlyRent")
+                )
+                row["use_rr_right"] = _safe_text(item, "useRRRight")
+                row["dealing_gbn"] = ""
+                row["cdeal_type"] = ""
+            else:
+                row["deal_amount"] = _parse_amount(_safe_text(item, "dealAmount"))
+                row["deposit"] = None
+                row["monthly_rent"] = None
+                row["contract_type"] = ""
+                row["contract_term"] = ""
+                row["pre_deposit"] = None
+                row["pre_monthly_rent"] = None
+                row["use_rr_right"] = ""
+                row["dealing_gbn"] = _safe_text(item, "dealingGbn")
+                row["cdeal_type"] = _safe_text(item, "cdealType")
+
+            rows.append(row)
+
+        # totalCount가 있으면 그 수를 모두 받을 때 종료.
+        # totalCount가 없으면 마지막 페이지가 page_size보다 작을 때 종료.
+        if total_count is not None and len(rows) >= total_count:
+            break
+        if len(items) < page_size:
+            break
+
+        page_no += 1
+        time.sleep(0.1)
 
     df = pd.DataFrame(rows)
 
-    # 데이터가 있으면 항상 캐시 갱신(최근 달도 최신값으로 덮어씀 → 집계기가 최신 데이터 읽음)
+    # 최근 달도 캐시는 최신 스냅샷으로 덮어두되, 읽을 때는 최근 2개월 캐시를 무시한다.
     if len(df) > 0:
         df.to_csv(cache_file, index=False, encoding="utf-8-sig")
 
@@ -199,15 +249,13 @@ def fetch_multi(
     deal_types: Optional[list] = None,
     use_cache: bool = True,
     verbose: bool = True,
-    budget_sec: int = 1200,        # 전체 수집 시간 예산 (기본 20분)
-    max_consecutive_fail: int = 12,  # 연속 실패 이 횟수 넘으면 중단
+    budget_sec: int = 1200,
+    max_consecutive_fail: int = 12,
 ) -> pd.DataFrame:
     """여러 지역 × 여러 월 × 여러 거래유형 일괄 수집.
 
     Actions 30분 한도 안에서 끝나도록 안전장치를 둔다.
-    - budget_sec 초과하면 남은 항목을 건너뛰고 수집분을 반환
-    - 연속 실패가 max_consecutive_fail을 넘으면 API 장애로 보고 중단
-    실패해도 수집된 것은 반드시 반환한다(빈 DF 대신 부분 데이터).
+    성공/실패 항목은 반환 DataFrame.attrs에 기록한다.
     """
     if deal_types is None:
         deal_types = ["오피스텔_매매", "오피스텔_전월세"]
@@ -230,6 +278,8 @@ def fetch_multi(
     consecutive_fail = 0
     aborted = False
     started = time.time()
+    successful_keys = []
+    failed_keys = []
 
     for lawd in lawd_cd_list:
         for ym in months:
@@ -239,7 +289,10 @@ def fetch_multi(
 
                 elapsed = time.time() - started
                 if elapsed > budget_sec:
-                    print(f"\n⏱  시간 예산 {budget_sec}초 초과 ({elapsed:.0f}초) — 남은 항목 건너뜀")
+                    print(
+                        f"\n⏱  시간 예산 {budget_sec}초 초과 "
+                        f"({elapsed:.0f}초) — 남은 항목 건너뜀"
+                    )
                     aborted = True
                     break
 
@@ -247,22 +300,28 @@ def fetch_multi(
                 if verbose:
                     print(f"[{cnt}/{total}] {dt} | LAWD={lawd} | {ym}")
                 try:
-                    df = fetch_one_month(api_key, lawd, ym, dt, use_cache=use_cache)
+                    one = fetch_one_month(
+                        api_key, lawd, ym, dt, use_cache=use_cache
+                    )
                     ok_cnt += 1
+                    successful_keys.append((lawd, ym, dt))
                     consecutive_fail = 0
-                    if len(df) > 0:
-                        all_dfs.append(df)
+                    if len(one) > 0:
+                        all_dfs.append(one)
                         if verbose:
-                            print(f"  ✓ {len(df)}건")
-                    else:
-                        if verbose:
-                            print(f"  (데이터 없음)")
+                            print(f"  ✓ {len(one)}건")
+                    elif verbose:
+                        print("  (데이터 없음)")
                 except Exception as e:
                     fail_cnt += 1
+                    failed_keys.append((lawd, ym, dt))
                     consecutive_fail += 1
                     print(f"  ✗ 실패({consecutive_fail}연속): {e}")
                     if consecutive_fail >= max_consecutive_fail:
-                        print(f"\n🚨 연속 {consecutive_fail}회 실패 — API 장애로 판단, 수집 중단")
+                        print(
+                            f"\n🚨 연속 {consecutive_fail}회 실패 — "
+                            "API 장애로 판단, 수집 중단"
+                        )
                         print("   (수집된 분량은 그대로 저장합니다)")
                         aborted = True
                         break
@@ -273,15 +332,27 @@ def fetch_multi(
             break
 
     elapsed = time.time() - started
-    print(f"\n=== 수집 요약 ===")
-    print(f"  시도 {cnt}/{total} · 성공 {ok_cnt} · 실패 {fail_cnt} · 소요 {elapsed:.0f}초")
+    complete = (not aborted) and fail_cnt == 0 and cnt == total
+
+    print("\n=== 수집 요약 ===")
+    print(
+        f"  시도 {cnt}/{total} · 성공 {ok_cnt} · 실패 {fail_cnt} "
+        f"· 소요 {elapsed:.0f}초"
+    )
     if aborted:
         print("  ⚠ 중단됨 — 부분 데이터입니다")
 
-    if not all_dfs:
-        return pd.DataFrame()
-
-    return pd.concat(all_dfs, ignore_index=True)
+    result = (
+        pd.concat(all_dfs, ignore_index=True)
+        if all_dfs
+        else pd.DataFrame()
+    )
+    result.attrs["complete"] = complete
+    result.attrs["successful_keys"] = successful_keys
+    result.attrs["failed_keys"] = failed_keys
+    result.attrs["requested_months"] = months
+    result.attrs["requested_total"] = total
+    return result
 
 
 def normalize_to_legacy(df: pd.DataFrame, region_map: dict) -> pd.DataFrame:
@@ -299,9 +370,8 @@ def normalize_to_legacy(df: pd.DataFrame, region_map: dict) -> pd.DataFrame:
         "region_name", "deal_ym", "deal_type", "building_name",
         "umd_name", "jibun", "area_m2", "deal_amount",
         "deposit", "monthly_rent", "floor", "deal_day", "build_year",
-        # ── 갱신 계약 필드 (전월세만 값이 들어감) ──
-        "contract_type", "contract_term", "pre_deposit", "pre_monthly_rent", "use_rr_right",
-        "dealing_gbn", "cdeal_type",
+        "contract_type", "contract_term", "pre_deposit", "pre_monthly_rent",
+        "use_rr_right", "dealing_gbn", "cdeal_type",
     ]
     return df[[c for c in legacy_cols if c in df.columns]]
 
@@ -311,8 +381,10 @@ def load_sample_molit(path="data/molit_trade_sample.csv") -> pd.DataFrame:
     return pd.read_csv(path)
 
 
-def load_live_or_sample(live_path="data/molit_trade_live.csv",
-                         sample_path="data/molit_trade_sample.csv") -> pd.DataFrame:
+def load_live_or_sample(
+    live_path="data/molit_trade_live.csv",
+    sample_path="data/molit_trade_sample.csv",
+) -> pd.DataFrame:
     """실데이터 있으면 실데이터, 없으면 샘플 자동 로드"""
     if Path(live_path).exists():
         return pd.read_csv(live_path)
@@ -333,11 +405,16 @@ if __name__ == "__main__":
 
     regions = pd.read_csv("regions.csv")
     lawd_list = regions["lawd_cd"].astype(str).str.zfill(5).tolist()
-    region_map = dict(zip(regions["lawd_cd"].astype(str).str.zfill(5), regions["region_name"]))
+    region_map = dict(
+        zip(
+            regions["lawd_cd"].astype(str).str.zfill(5),
+            regions["region_name"],
+        )
+    )
 
-    print(f"=== 국토부 실거래 자동수집 시작 ===")
+    print("=== 국토부 실거래 자동수집 시작 ===")
     print(f"지역: {len(lawd_list)}개 · {list(region_map.values())}")
-    print(f"최근 6개월 · 오피스텔 매매+전월세\n")
+    print("최근 6개월 · 오피스텔 매매+전월세\n")
 
     df = fetch_multi(
         api_key=MOLIT_API_KEY,
@@ -355,8 +432,8 @@ if __name__ == "__main__":
     out_path = Path("data/molit_trade_live.csv")
     norm.to_csv(out_path, index=False, encoding="utf-8-sig")
 
-    print(f"\n=== 완료 ===")
+    print("\n=== 완료 ===")
     print(f"총 {len(norm):,}건 수집")
     print(f"저장: {out_path}")
-    print(f"\n지역별 건수:")
+    print("\n지역별 건수:")
     print(norm.groupby("region_name").size().to_string())
