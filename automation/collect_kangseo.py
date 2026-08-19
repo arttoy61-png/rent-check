@@ -107,8 +107,11 @@ def main():
                 fresh_months = set(
                     fresh["deal_ym"].dropna().astype(str).unique()
                 )
-                if requested_months and not (requested_months & fresh_months):
-                    raise RuntimeError("요청한 월 데이터가 최신 수집 결과에 없습니다")
+                if requested_months and not requested_months.issubset(fresh_months):
+                    missing = sorted(requested_months - fresh_months)
+                    raise RuntimeError(
+                        f"요청한 월 데이터 일부가 최신 수집 결과에 없습니다: {missing}"
+                    )
 
                 normalized = fresh
                 print(
