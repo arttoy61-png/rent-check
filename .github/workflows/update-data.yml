@@ -17,7 +17,9 @@ on:
       - ".github/workflows/update-data.yml"
 permissions:
   contents: write
-concurrency: update-data
+concurrency:
+  group: update-data
+  cancel-in-progress: true
 env:
   TZ: Asia/Seoul
 jobs:
