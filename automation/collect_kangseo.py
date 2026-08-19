@@ -9,21 +9,42 @@
 ★ 2026.8.15 변경: 캐시 활성화 후 기본 수집 범위를 24개월로 통일
   - 환경변수 MONTHS_BACK 수동 지정은 유지 (기본 24)
   - 부분 수집이어도 기존 CSV와 병합해 저장 (과거 데이터 유실 방지)
-  - 병합 실패, 병합 후 행수 감소, 과거 최소월 유실 시 기존 CSV를 유지하고 실패 처리
+
+★ 2026.8.19 변경: 신규 신고 누락 방지
+  - 전체 수집 성공 시 24개월 API 스냅샷으로 통째 교체
+  - 부분 수집 시 현재월·전월 중 6개 거래유형이 모두 성공한 월만 통째 교체
+  - 날짜/건물/면적/층만으로 중복 제거하지 않음
+    (서로 다른 실제 거래를 같은 거래로 오인해 삭제하던 문제 수정)
 """
 import os
 import sys
+from datetime import datetime
 from pathlib import Path
+
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).parent))
-# config의 MONTHS_BACK은 무시. 강서구 전체 분석용은 기본 24개월.
+
 from config import MOLIT_API_KEY, DEAL_TYPES, USE_CACHE
 from collectors.molit_api import fetch_multi, normalize_to_legacy
 
 KANGSEO_LAWD = "11500"
 REGION_MAP = {KANGSEO_LAWD: "강서구"}
-MONTHS_BACK = int(os.environ.get("MONTHS_BACK", "24"))  # 수동 지정 가능, 기본 24개월
+MONTHS_BACK = int(os.environ.get("MONTHS_BACK", "24"))
+
+
+def _recent_months(count=2):
+    now = datetime.today()
+    y, m = now.year, now.month
+    result = []
+    for _ in range(count):
+        result.append(f"{y:04d}{m:02d}")
+        m -= 1
+        if m == 0:
+            m = 12
+            y -= 1
+    return result
+
 
 def main():
     print("=" * 50)
@@ -42,6 +63,13 @@ def main():
         verbose=True,
     )
 
+    # fetch_multi가 남긴 수집 상태를 정규화 전에 보존
+    collection_complete = bool(df.attrs.get("complete", False))
+    successful_keys = {
+        tuple(x) for x in df.attrs.get("successful_keys", [])
+    }
+    requested_months = set(df.attrs.get("requested_months", []))
+
     out_path = Path("data/molit_kangseo.csv")
     out_path.parent.mkdir(exist_ok=True)
 
@@ -49,37 +77,86 @@ def main():
         print("\n수집된 데이터 없음 — 기존 CSV를 그대로 둡니다")
         if out_path.exists():
             print(f"  기존 파일 유지: {out_path}")
-            sys.exit(0)      # 기존 파일이 있으면 실패 처리하지 않음
+            sys.exit(0)
         sys.exit(1)
 
     print(f"\n강서구 전체 수집: {len(df):,}건")
 
-    # 필터 없이 전체 정규화 (동별 umd_name 유지)
     normalized = normalize_to_legacy(df, REGION_MAP)
 
-    # ── 기존 CSV와 병합 (부분 수집이어도 과거분 유실 방지) ──
     if out_path.exists():
         try:
             old = pd.read_csv(out_path, dtype=str)
             before = len(old)
-            merged = pd.concat([old, normalized.astype(str)], ignore_index=True)
-            key = ["deal_type", "deal_ym", "deal_day", "umd_name", "jibun",
-                   "building_name", "area_m2", "floor"]
-            key = [c for c in key if c in merged.columns]
-            merged = merged.drop_duplicates(subset=key, keep="last")
-            if len(merged) < before:
-                raise RuntimeError(
-                    f"병합 후 행수 감소: 기존 {before:,}건 → 병합 {len(merged):,}건"
-                )
-            if "deal_ym" in old.columns and "deal_ym" in merged.columns:
-                old_min = old["deal_ym"].dropna().astype(str).min()
-                merged_min = merged["deal_ym"].dropna().astype(str).min()
-                if old_min and merged_min and merged_min > old_min:
+
+            old["deal_ym"] = old["deal_ym"].astype(str)
+            normalized["deal_ym"] = normalized["deal_ym"].astype(str)
+
+            if collection_complete:
+                # 전체 호출 성공 시 API 결과가 최신 스냅샷이므로 그대로 교체.
+                # 과거처럼 날짜/건물/면적/층 기준 중복제거를 하지 않는다.
+                fresh = normalized
+
+                # 비정상적으로 데이터가 크게 줄어드는 경우만 안전장치.
+                if before > 0 and len(fresh) < before * 0.75:
                     raise RuntimeError(
-                        f"과거분 유실: 최소 {old_min} → {merged_min}"
+                        f"전체 수집 성공이지만 행수가 비정상 감소: "
+                        f"기존 {before:,}건 → 최신 {len(fresh):,}건"
                     )
-            print(f"\n기존 {before:,}건 + 신규 {len(normalized):,}건 → 병합 {len(merged):,}건")
-            normalized = merged
+
+                fresh_months = set(
+                    fresh["deal_ym"].dropna().astype(str).unique()
+                )
+                if requested_months and not (requested_months & fresh_months):
+                    raise RuntimeError("요청한 월 데이터가 최신 수집 결과에 없습니다")
+
+                normalized = fresh
+                print(
+                    f"\n전체 수집 성공 — 기존 {before:,}건을 "
+                    f"최신 API 스냅샷 {len(normalized):,}건으로 교체"
+                )
+
+            else:
+                # 부분 수집일 때는 최근 2개월 중 6개 거래유형이 모두 성공한 월만 교체.
+                # 나머지 월은 기존 CSV를 그대로 보존한다.
+                replace_months = []
+                for ym in _recent_months(2):
+                    if all(
+                        (KANGSEO_LAWD, ym, dt) in successful_keys
+                        for dt in DEAL_TYPES
+                    ):
+                        old_n = int((old["deal_ym"] == ym).sum())
+                        fresh_n = int((normalized["deal_ym"] == ym).sum())
+
+                        # 기존에는 거래가 있었는데 최신 결과가 0이면 안전상 교체하지 않는다.
+                        if old_n > 0 and fresh_n == 0:
+                            print(
+                                f"⚠ {ym} 최신 결과 0건 — 기존 {old_n:,}건 유지"
+                            )
+                            continue
+                        replace_months.append(ym)
+
+                if replace_months:
+                    old_keep = old[~old["deal_ym"].isin(replace_months)]
+                    fresh_recent = normalized[
+                        normalized["deal_ym"].isin(replace_months)
+                    ]
+                    normalized = pd.concat(
+                        [old_keep, fresh_recent],
+                        ignore_index=True,
+                        sort=False,
+                    )
+                    print(
+                        f"\n부분 수집 — 최근월 {replace_months}만 최신값으로 교체: "
+                        f"기존 {before:,}건 → {len(normalized):,}건"
+                    )
+                else:
+                    print(
+                        "\n부분 수집이며 안전하게 교체 가능한 최근월이 없습니다 "
+                        "— 기존 CSV 유지"
+                    )
+                    normalized = old
+
         except Exception as e:
             print(f"\n🚨 병합 안전장치 작동: {e}")
             print(f"  기존 CSV 유지: {out_path}")
@@ -96,11 +173,12 @@ def main():
     for dt, cnt in normalized["deal_type"].value_counts().items():
         print(f"  {dt}: {cnt:,}건")
 
-    print("\n=== 월별 분포 (최근 24개월) ===")
+    print(f"\n=== 월별 분포 (최근 {MONTHS_BACK}개월) ===")
     if "deal_ym" in normalized.columns:
         ym_counts = normalized["deal_ym"].value_counts().sort_index()
         for ym, cnt in ym_counts.items():
             print(f"  {ym}: {cnt:,}건")
+
 
 if __name__ == "__main__":
     main()
