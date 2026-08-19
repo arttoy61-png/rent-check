@@ -1,0 +1,144 @@
+{
+  "updated": "202608",
+  "geo_keys": 6658,
+  "rentals": {
+    "total": 72195,
+    "with_jibun": 72195,
+    "with_coordinates": 72195,
+    "coordinate_coverage": 1.0
+  },
+  "wolse": {
+    "total": 44328
+  },
+  "target_test": {
+    "address": "서울 강서구 화곡로 지하 168",
+    "area_m2": 30.0,
+    "area_tolerance_m2": 8.0,
+    "within_500m": 968,
+    "within_800m": 1991,
+    "samples_500m": [
+      {
+        "distance_m": 48,
+        "dong": "화곡동",
+        "jibun": "1075-10",
+        "type": "o",
+        "area_m2": 25.2,
+        "deposit_manwon": 1000,
+        "rent_manwon": 50,
+        "ym": "202604",
+        "day": "27",
+        "building": "경림오피스텔"
+      },
+      {
+        "distance_m": 48,
+        "dong": "화곡동",
+        "jibun": "1075-10",
+        "type": "o",
+        "area_m2": 23.4,
+        "deposit_manwon": 1000,
+        "rent_manwon": 47,
+        "ym": "202602",
+        "day": "25",
+        "building": "경림오피스텔"
+      },
+      {
+        "distance_m": 48,
+        "dong": "화곡동",
+        "jibun": "1075-10",
+        "type": "o",
+        "area_m2": 23.4,
+        "deposit_manwon": 1000,
+        "rent_manwon": 47,
+        "ym": "202607",
+        "day": "27",
+        "building": "경림오피스텔"
+      },
+      {
+        "distance_m": 48,
+        "dong": "화곡동",
+        "jibun": "1075-10",
+        "type": "o",
+        "area_m2": 22.05,
+        "deposit_manwon": 500,
+        "rent_manwon": 47,
+        "ym": "202502",
+        "day": "21",
+        "building": "경림오피스텔"
+      },
+      {
+        "distance_m": 48,
+        "dong": "화곡동",
+        "jibun": "1075-5",
+        "type": "o",
+        "area_m2": 28.42,
+        "deposit_manwon": 1000,
+        "rent_manwon": 55,
+        "ym": "202508",
+        "day": "13",
+        "building": "(1075-5)"
+      }
+    ],
+    "samples_800m": [
+      {
+        "distance_m": 48,
+        "dong": "화곡동",
+        "jibun": "1075-10",
+        "type": "o",
+        "area_m2": 25.2,
+        "deposit_manwon": 1000,
+        "rent_manwon": 50,
+        "ym": "202604",
+        "day": "27",
+        "building": "경림오피스텔"
+      },
+      {
+        "distance_m": 48,
+        "dong": "화곡동",
+        "jibun": "1075-10",
+        "type": "o",
+        "area_m2": 23.4,
+        "deposit_manwon": 1000,
+        "rent_manwon": 47,
+        "ym": "202602",
+        "day": "25",
+        "building": "경림오피스텔"
+      },
+      {
+        "distance_m": 48,
+        "dong": "화곡동",
+        "jibun": "1075-10",
+        "type": "o",
+        "area_m2": 23.4,
+        "deposit_manwon": 1000,
+        "rent_manwon": 47,
+        "ym": "202607",
+        "day": "27",
+        "building": "경림오피스텔"
+      },
+      {
+        "distance_m": 48,
+        "dong": "화곡동",
+        "jibun": "1075-10",
+        "type": "o",
+        "area_m2": 22.05,
+        "deposit_manwon": 500,
+        "rent_manwon": 47,
+        "ym": "202502",
+        "day": "21",
+        "building": "경림오피스텔"
+      },
+      {
+        "distance_m": 48,
+        "dong": "화곡동",
+        "jibun": "1075-5",
+        "type": "o",
+        "area_m2": 28.42,
+        "deposit_manwon": 1000,
+        "rent_manwon": 55,
+        "ym": "202508",
+        "day": "13",
+        "building": "(1075-5)"
+      }
+    ]
+  }
+}
