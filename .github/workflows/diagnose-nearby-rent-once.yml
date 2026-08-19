@@ -1,0 +1,52 @@
+name: Diagnose nearby rent data once
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/diagnose-nearby-rent-once.yml"
+permissions:
+  contents: write
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inspect checked-in auction_data.json
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('auction_data.json')
+          d=json.loads(p.read_text(encoding='utf-8'))
+          geo=d.get('geo') or {}
+          def stats(rows):
+              rows=list(rows or [])
+              with_j=[r for r in rows if r.get('u') and r.get('j')]
+              with_geo=[r for r in with_j if f"{r['u']} {r['j']}" in geo]
+              hw=[r for r in rows if r.get('u')=='화곡동']
+              hw_j=[r for r in hw if r.get('j')]
+              hw_geo=[r for r in hw_j if f"{r.get('u')} {r.get('j')}" in geo]
+              return {
+                'total':len(rows),'with_j':len(with_j),'with_geo':len(with_geo),
+                'hwagok_total':len(hw),'hwagok_with_j':len(hw_j),'hwagok_with_geo':len(hw_geo)
+              }
+          wolse=d.get('wolse') or []
+          jeonse=d.get('jeonse') or []
+          out={
+            'updated':d.get('updated'),
+            'geo_keys':len(geo),
+            'wolse':stats(wolse),
+            'jeonse':stats(jeonse),
+            'sample_wolse':wolse[:3]
+          }
+          Path('nearby-rent-diagnostic.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          print(json.dumps(out,ensure_ascii=False,indent=2))
+          PY
+      - name: Commit report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add nearby-rent-diagnostic.json
+          git commit -m "test: diagnose nearby rent data" || exit 0
+          git pull --rebase --autostash || true
+          git push
