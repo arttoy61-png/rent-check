@@ -13,6 +13,7 @@ on:
       - main
     paths:
       - "automation/auction_data.py"
+      - "automation/nearby_rent_status.py"
       - "gangseo_apt_builder.py"
       - ".github/workflows/update-data.yml"
 permissions:
@@ -113,6 +114,9 @@ jobs:
           python auction_data.py data/molit_kangseo.csv
           cp auction_data.json ../auction_data.json
 
+      - name: Write nearby-rent QA report
+        run: python automation/nearby_rent_status.py auction_data.json nearby_rent_status.json
+
       - name: Build 강서 아파트 탐색기
         run: python gangseo_apt_builder.py automation/data/molit_kangseo.csv .
 
@@ -134,7 +138,6 @@ jobs:
           coverage = len(with_geo) / len(with_j)
           assert coverage >= 0.50, f"rental coordinate coverage ratio too low: {coverage:.1%}"
 
-          # 화곡역 주변 월세가 실제로 거리 비교에 들어오는지 최소 샘플 검증
           lat0, lng0 = 37.5414336177, 126.8404964502
           def dist(lat1,lng1,lat2,lng2):
               R=6371000
@@ -178,7 +181,7 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add widget_data.json hwagok_apt_data.json gangseo_apt_summary.json gangseo_apt_detail.json auction_data.json molit_kangseo.csv 2>/dev/null || true
+          git add widget_data.json hwagok_apt_data.json gangseo_apt_summary.json gangseo_apt_detail.json auction_data.json nearby_rent_status.json molit_kangseo.csv 2>/dev/null || true
           git commit -m "auto: data ($(date +%F))" || echo "변경 없음"
           git pull --rebase --autostash || true
           git push || echo "푸시 생략"
