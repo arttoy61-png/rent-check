@@ -1,0 +1,111 @@
+{
+  "updated": "202608",
+  "geo_keys": 6658,
+  "rentals": 72195,
+  "rental_with_jibun": 72195,
+  "rental_with_coordinates": 72195,
+  "rental_geo_ratio": 1.0,
+  "hwagok_station_30m2_monthly_500m": 968,
+  "hwagok_station_30m2_monthly_800m": 1991,
+  "hwagok_500_samples": [
+    {
+      "distance_m": 48,
+      "dong": "화곡동",
+      "jibun": "1075-10",
+      "type": "o",
+      "area": 23.4,
+      "deposit": 1000,
+      "rent": 47,
+      "ym": "202607",
+      "day": "27",
+      "building": "경림오피스텔"
+    },
+    {
+      "distance_m": 48,
+      "dong": "화곡동",
+      "jibun": "1075-10",
+      "type": "o",
+      "area": 25.2,
+      "deposit": 1000,
+      "rent": 50,
+      "ym": "202604",
+      "day": "27",
+      "building": "경림오피스텔"
+    },
+    {
+      "distance_m": 48,
+      "dong": "화곡동",
+      "jibun": "1075-10",
+      "type": "o",
+      "area": 23.4,
+      "deposit": 1000,
+      "rent": 47,
+      "ym": "202602",
+      "day": "25",
+      "building": "경림오피스텔"
+    },
+    {
+      "distance_m": 48,
+      "dong": "화곡동",
+      "jibun": "1075-10",
+      "type": "o",
+      "area": 22.05,
+      "deposit": 500,
+      "rent": 47,
+      "ym": "202502",
+      "day": "21",
+      "building": "경림오피스텔"
+    },
+    {
+      "distance_m": 48,
+      "dong": "화곡동",
+      "jibun": "1075-5",
+      "type": "o",
+      "area": 26.6,
+      "deposit": 1000,
+      "rent": 55,
+      "ym": "202607",
+      "day": "22",
+      "building": "(1075-5)"
+    }
+  ],
+  "apartment_complexes": 685,
+  "apartment_with_coordinates": 685,
+  "apartment_samples": [
+    {
+      "query": "강서힐스테이트",
+      "found": true,
+      "name": "강서힐스테이트",
+      "lat": 37.546634,
+      "lng": 126.840035
+    },
+    {
+      "query": "화곡푸르지오",
+      "found": true,
+      "name": "화곡푸르지오",
+      "lat": 37.544622,
+      "lng": 126.831443
+    },
+    {
+      "query": "등촌동아이파크",
+      "found": true,
+      "name": "등촌동아이파크",
+      "lat": 37.543901,
+      "lng": 126.859982
+    },
+    {
+      "query": "마곡엠밸리9단지",
+      "found": true,
+      "name": "마곡엠밸리9단지",
+      "lat": 37.562267,
+      "lng": 126.819206
+    },
+    {
+      "query": "방화5",
+      "found": true,
+      "name": "방화5",
+      "lat": 37.577189,
+      "lng": 126.810253
+    }
+  ]
+}
