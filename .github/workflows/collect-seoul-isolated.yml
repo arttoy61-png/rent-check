@@ -1,5 +1,6 @@
 name: Collect Seoul data isolated
 
+# manual trigger: 2026-08-24
 on:
   workflow_dispatch:
     inputs:
