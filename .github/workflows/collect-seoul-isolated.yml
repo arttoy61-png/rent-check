@@ -1,0 +1,91 @@
+name: Collect Seoul data isolated
+
+on:
+  workflow_dispatch:
+    inputs:
+      months_back:
+        description: "수집 개월 수"
+        required: false
+        default: "3"
+  push:
+    branches:
+      - main
+    paths:
+      - "automation/collect_seoul_isolated.py"
+      - ".github/workflows/collect-seoul-isolated.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: collect-seoul-isolated
+  cancel-in-progress: true
+
+env:
+  TZ: Asia/Seoul
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: pip install -r requirements.txt
+
+      - name: Restore MOLIT cache
+        uses: actions/cache@v4
+        with:
+          path: automation/data/cache
+          key: seoul-molit-cache-${{ github.run_id }}
+          restore-keys: |
+            seoul-molit-cache-
+            molit-cache-
+
+      - name: Collect Seoul 25 districts
+        working-directory: automation
+        env:
+          MOLIT_API_KEY: ${{ secrets.MOLIT_API_KEY }}
+          SEOUL_MONTHS_BACK: ${{ github.event.inputs.months_back || '3' }}
+          USE_CACHE: "1"
+        run: python collect_seoul_isolated.py
+
+      - name: Validate isolated outputs
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          status_path = Path('seoul_data/collection_status.json')
+          summary_path = Path('seoul_data/seoul_summary.json')
+          assert status_path.exists(), 'collection_status.json missing'
+          assert summary_path.exists(), 'seoul_summary.json missing'
+
+          status = json.loads(status_path.read_text(encoding='utf-8'))
+          summary = json.loads(summary_path.read_text(encoding='utf-8'))
+          files = list(Path('seoul_data/raw').glob('*.csv'))
+
+          print('district files:', len(files))
+          print('updated:', status.get('updated'))
+          print('failed:', status.get('failed'))
+          print('summary rows:', len(summary.get('rows', [])))
+
+          assert len(files) >= 20, f'too few district files: {len(files)}'
+          assert len(summary.get('rows', [])) > 0, 'summary is empty'
+          PY
+
+      - name: Commit Seoul data only
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add seoul_data/
+          git commit -m "data: Seoul isolated snapshot ($(date +%F))" || echo "변경 없음"
+          git pull --rebase --autostash || true
+          git push
