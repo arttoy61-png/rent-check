@@ -1,0 +1,160 @@
+{
+  "generated_at_kst": "2026-08-24T22:03:55.107900+09:00",
+  "months_back": 3,
+  "updated": 25,
+  "failed": 0,
+  "kept_previous": 0,
+  "district_files": 25,
+  "districts": [
+    {
+      "gu": "종로구",
+      "lawd_cd": "11110",
+      "status": "updated",
+      "rows": 1449
+    },
+    {
+      "gu": "중구",
+      "lawd_cd": "11140",
+      "status": "updated",
+      "rows": 1781
+    },
+    {
+      "gu": "용산구",
+      "lawd_cd": "11170",
+      "status": "updated",
+      "rows": 2888
+    },
+    {
+      "gu": "성동구",
+      "lawd_cd": "11200",
+      "status": "updated",
+      "rows": 3030
+    },
+    {
+      "gu": "광진구",
+      "lawd_cd": "11215",
+      "status": "updated",
+      "rows": 3278
+    },
+    {
+      "gu": "동대문구",
+      "lawd_cd": "11230",
+      "status": "updated",
+      "rows": 4135
+    },
+    {
+      "gu": "중랑구",
+      "lawd_cd": "11260",
+      "status": "updated",
+      "rows": 4302
+    },
+    {
+      "gu": "성북구",
+      "lawd_cd": "11290",
+      "status": "updated",
+      "rows": 3384
+    },
+    {
+      "gu": "강북구",
+      "lawd_cd": "11305",
+      "status": "updated",
+      "rows": 2017
+    },
+    {
+      "gu": "도봉구",
+      "lawd_cd": "11320",
+      "status": "updated",
+      "rows": 2556
+    },
+    {
+      "gu": "노원구",
+      "lawd_cd": "11350",
+      "status": "updated",
+      "rows": 5091
+    },
+    {
+      "gu": "은평구",
+      "lawd_cd": "11380",
+      "status": "updated",
+      "rows": 4883
+    },
+    {
+      "gu": "서대문구",
+      "lawd_cd": "11410",
+      "status": "updated",
+      "rows": 2933
+    },
+    {
+      "gu": "마포구",
+      "lawd_cd": "11440",
+      "status": "updated",
+      "rows": 5185
+    },
+    {
+      "gu": "양천구",
+      "lawd_cd": "11470",
+      "status": "updated",
+      "rows": 4129
+    },
+    {
+      "gu": "강서구",
+      "lawd_cd": "11500",
+      "status": "updated",
+      "rows": 8893
+    },
+    {
+      "gu": "구로구",
+      "lawd_cd": "11530",
+      "status": "updated",
+      "rows": 5136
+    },
+    {
+      "gu": "금천구",
+      "lawd_cd": "11545",
+      "status": "updated",
+      "rows": 3084
+    },
+    {
+      "gu": "영등포구",
+      "lawd_cd": "11560",
+      "status": "updated",
+      "rows": 5708
+    },
+    {
+      "gu": "동작구",
+      "lawd_cd": "11590",
+      "status": "updated",
+      "rows": 3391
+    },
+    {
+      "gu": "관악구",
+      "lawd_cd": "11620",
+      "status": "updated",
+      "rows": 3791
+    },
+    {
+      "gu": "서초구",
+      "lawd_cd": "11650",
+      "status": "updated",
+      "rows": 5222
+    },
+    {
+      "gu": "강남구",
+      "lawd_cd": "11680",
+      "status": "updated",
+      "rows": 6557
+    },
+    {
+      "gu": "송파구",
+      "lawd_cd": "11710",
+      "status": "updated",
+      "rows": 9440
+    },
+    {
+      "gu": "강동구",
+      "lawd_cd": "11740",
+      "status": "updated",
+      "rows": 5629
+    }
+  ]
+}

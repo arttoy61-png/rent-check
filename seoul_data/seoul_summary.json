@@ -1,0 +1,4050 @@
+{
+  "scope": "Seoul 25 districts",
+  "months_back": 3,
+  "generated_at_kst": "2026-08-24T22:03:55.107900+09:00",
+  "district_files": 25,
+  "deal_types": [
+    "오피스텔_전월세",
+    "연립다세대_전월세",
+    "아파트_전월세",
+    "오피스텔_매매",
+    "연립다세대_매매",
+    "아파트_매매"
+  ],
+  "rows": [
+    {
+      "gu": "강남구",
+      "lawd_cd": "11680",
+      "deal_ym": "202606",
+      "deal_type": "아파트_매매",
+      "count": 223,
+      "median_deal_amount_manwon": 270000
+    },
+    {
+      "gu": "강남구",
+      "lawd_cd": "11680",
+      "deal_ym": "202606",
+      "deal_type": "아파트_전월세",
+      "count": 1963,
+      "jeonse_count": 698,
+      "wolse_count": 1265,
+      "median_deposit_manwon": 31500
+    },
+    {
+      "gu": "강남구",
+      "lawd_cd": "11680",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_매매",
+      "count": 87,
+      "median_deal_amount_manwon": 50000
+    },
+    {
+      "gu": "강남구",
+      "lawd_cd": "11680",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_전월세",
+      "count": 617,
+      "jeonse_count": 210,
+      "wolse_count": 407,
+      "median_deposit_manwon": 13100
+    },
+    {
+      "gu": "강남구",
+      "lawd_cd": "11680",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_매매",
+      "count": 69,
+      "median_deal_amount_manwon": 27000
+    },
+    {
+      "gu": "강남구",
+      "lawd_cd": "11680",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_전월세",
+      "count": 340,
+      "jeonse_count": 68,
+      "wolse_count": 272,
+      "median_deposit_manwon": 5000
+    },
+    {
+      "gu": "강동구",
+      "lawd_cd": "11740",
+      "deal_ym": "202606",
+      "deal_type": "아파트_매매",
+      "count": 264,
+      "median_deal_amount_manwon": 140000
+    },
+    {
+      "gu": "강동구",
+      "lawd_cd": "11740",
+      "deal_ym": "202606",
+      "deal_type": "아파트_전월세",
+      "count": 1097,
+      "jeonse_count": 541,
+      "wolse_count": 556,
+      "median_deposit_manwon": 40000
+    },
+    {
+      "gu": "강동구",
+      "lawd_cd": "11740",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_매매",
+      "count": 195,
+      "median_deal_amount_manwon": 40000
+    },
+    {
+      "gu": "강동구",
+      "lawd_cd": "11740",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_전월세",
+      "count": 726,
+      "jeonse_count": 275,
+      "wolse_count": 451,
+      "median_deposit_manwon": 18255
+    },
+    {
+      "gu": "강동구",
+      "lawd_cd": "11740",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_매매",
+      "count": 20,
+      "median_deal_amount_manwon": 16700
+    },
+    {
+      "gu": "강동구",
+      "lawd_cd": "11740",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_전월세",
+      "count": 275,
+      "jeonse_count": 51,
+      "wolse_count": 224,
+      "median_deposit_manwon": 3000
+    },
+    {
+      "gu": "강북구",
+      "lawd_cd": "11305",
+      "deal_ym": "202606",
+      "deal_type": "아파트_매매",
+      "count": 108,
+      "median_deal_amount_manwon": 74600
+    },
+    {
+      "gu": "강북구",
+      "lawd_cd": "11305",
+      "deal_ym": "202606",
+      "deal_type": "아파트_전월세",
+      "count": 274,
+      "jeonse_count": 103,
+      "wolse_count": 171,
+      "median_deposit_manwon": 11750
+    },
+    {
+      "gu": "강북구",
+      "lawd_cd": "11305",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_매매",
+      "count": 171,
+      "median_deal_amount_manwon": 26819
+    },
+    {
+      "gu": "강북구",
+      "lawd_cd": "11305",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_전월세",
+      "count": 300,
+      "jeonse_count": 72,
+      "wolse_count": 228,
+      "median_deposit_manwon": 5000
+    },
+    {
+      "gu": "강북구",
+      "lawd_cd": "11305",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_매매",
+      "count": 9,
+      "median_deal_amount_manwon": 12700
+    },
+    {
+      "gu": "강북구",
+      "lawd_cd": "11305",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_전월세",
+      "count": 76,
+      "jeonse_count": 9,
+      "wolse_count": 67,
+      "median_deposit_manwon": 1000
+    },
+    {
+      "gu": "강서구",
+      "lawd_cd": "11500",
+      "deal_ym": "202606",
+      "deal_type": "아파트_매매",
+      "count": 378,
+      "median_deal_amount_manwon": 93000
+    },
+    {
+      "gu": "강서구",
+      "lawd_cd": "11500",
+      "deal_ym": "202606",
+      "deal_type": "아파트_전월세",
+      "count": 982,
+      "jeonse_count": 517,
+      "wolse_count": 465,
+      "median_deposit_manwon": 31750
+    },
+    {
+      "gu": "강서구",
+      "lawd_cd": "11500",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_매매",
+      "count": 265,
+      "median_deal_amount_manwon": 24700
+    },
+    {
+      "gu": "강서구",
+      "lawd_cd": "11500",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_전월세",
+      "count": 808,
+      "jeonse_count": 273,
+      "wolse_count": 535,
+      "median_deposit_manwon": 13000
+    },
+    {
+      "gu": "강서구",
+      "lawd_cd": "11500",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_매매",
+      "count": 71,
+      "median_deal_amount_manwon": 15000
+    },
+    {
+      "gu": "강서구",
+      "lawd_cd": "11500",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_전월세",
+      "count": 1136,
+      "jeonse_count": 214,
+      "wolse_count": 922,
+      "median_deposit_manwon": 4100
+    },
+    {
+      "gu": "관악구",
+      "lawd_cd": "11620",
+      "deal_ym": "202606",
+      "deal_type": "아파트_매매",
+      "count": 166,
+      "median_deal_amount_manwon": 88250
+    },
+    {
+      "gu": "관악구",
+      "lawd_cd": "11620",
+      "deal_ym": "202606",
+      "deal_type": "아파트_전월세",
+      "count": 511,
+      "jeonse_count": 199,
+      "wolse_count": 312,
+      "median_deposit_manwon": 22100
+    },
+    {
+      "gu": "관악구",
+      "lawd_cd": "11620",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_매매",
+      "count": 166,
+      "median_deal_amount_manwon": 30250
+    },
+    {
+      "gu": "관악구",
+      "lawd_cd": "11620",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_전월세",
+      "count": 472,
+      "jeonse_count": 130,
+      "wolse_count": 342,
+      "median_deposit_manwon": 12000
+    },
+    {
+      "gu": "관악구",
+      "lawd_cd": "11620",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_매매",
+      "count": 19,
+      "median_deal_amount_manwon": 15000
+    },
+    {
+      "gu": "관악구",
+      "lawd_cd": "11620",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_전월세",
+      "count": 311,
+      "jeonse_count": 40,
+      "wolse_count": 271,
+      "median_deposit_manwon": 3000
+    },
+    {
+      "gu": "광진구",
+      "lawd_cd": "11215",
+      "deal_ym": "202606",
+      "deal_type": "아파트_매매",
+      "count": 76,
+      "median_deal_amount_manwon": 137000
+    },
+    {
+      "gu": "광진구",
+      "lawd_cd": "11215",
+      "deal_ym": "202606",
+      "deal_type": "아파트_전월세",
+      "count": 307,
+      "jeonse_count": 154,
+      "wolse_count": 153,
+      "median_deposit_manwon": 60000
+    },
+    {
+      "gu": "광진구",
+      "lawd_cd": "11215",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_매매",
+      "count": 214,
+      "median_deal_amount_manwon": 56000
+    },
+    {
+      "gu": "광진구",
+      "lawd_cd": "11215",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_전월세",
+      "count": 707,
+      "jeonse_count": 305,
+      "wolse_count": 402,
+      "median_deposit_manwon": 17800
+    },
+    {
+      "gu": "광진구",
+      "lawd_cd": "11215",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_매매",
+      "count": 18,
+      "median_deal_amount_manwon": 26335
+    },
+    {
+      "gu": "광진구",
+      "lawd_cd": "11215",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_전월세",
+      "count": 189,
+      "jeonse_count": 21,
+      "wolse_count": 168,
+      "median_deposit_manwon": 2000
+    },
+    {
+      "gu": "구로구",
+      "lawd_cd": "11530",
+      "deal_ym": "202606",
+      "deal_type": "아파트_매매",
+      "count": 301,
+      "median_deal_amount_manwon": 73300
+    },
+    {
+      "gu": "구로구",
+      "lawd_cd": "11530",
+      "deal_ym": "202606",
+      "deal_type": "아파트_전월세",
+      "count": 925,
+      "jeonse_count": 282,
+      "wolse_count": 643,
+      "median_deposit_manwon": 25000
+    },
+    {
+      "gu": "구로구",
+      "lawd_cd": "11530",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_매매",
+      "count": 118,
+      "median_deal_amount_manwon": 28500
+    },
+    {
+      "gu": "구로구",
+      "lawd_cd": "11530",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_전월세",
+      "count": 306,
+      "jeonse_count": 101,
+      "wolse_count": 205,
+      "median_deposit_manwon": 9584
+    },
+    {
+      "gu": "구로구",
+      "lawd_cd": "11530",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_매매",
+      "count": 170,
+      "median_deal_amount_manwon": 13381
+    },
+    {
+      "gu": "구로구",
+      "lawd_cd": "11530",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_전월세",
+      "count": 393,
+      "jeonse_count": 75,
+      "wolse_count": 318,
+      "median_deposit_manwon": 3000
+    },
+    {
+      "gu": "금천구",
+      "lawd_cd": "11545",
+      "deal_ym": "202606",
+      "deal_type": "아파트_매매",
+      "count": 104,
+      "median_deal_amount_manwon": 60150
+    },
+    {
+      "gu": "금천구",
+      "lawd_cd": "11545",
+      "deal_ym": "202606",
+      "deal_type": "아파트_전월세",
+      "count": 197,
+      "jeonse_count": 92,
+      "wolse_count": 105,
+      "median_deposit_manwon": 20000
+    },
+    {
+      "gu": "금천구",
+      "lawd_cd": "11545",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_매매",
+      "count": 95,
+      "median_deal_amount_manwon": 29500
+    },
+    {
+      "gu": "금천구",
+      "lawd_cd": "11545",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_전월세",
+      "count": 276,
+      "jeonse_count": 116,
+      "wolse_count": 160,
+      "median_deposit_manwon": 15950
+    },
+    {
+      "gu": "금천구",
+      "lawd_cd": "11545",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_매매",
+      "count": 18,
+      "median_deal_amount_manwon": 17600
+    },
+    {
+      "gu": "금천구",
+      "lawd_cd": "11545",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_전월세",
+      "count": 582,
+      "jeonse_count": 149,
+      "wolse_count": 433,
+      "median_deposit_manwon": 9584
+    },
+    {
+      "gu": "노원구",
+      "lawd_cd": "11350",
+      "deal_ym": "202606",
+      "deal_type": "아파트_매매",
+      "count": 686,
+      "median_deal_amount_manwon": 63850
+    },
+    {
+      "gu": "노원구",
+      "lawd_cd": "11350",
+      "deal_ym": "202606",
+      "deal_type": "아파트_전월세",
+      "count": 1223,
+      "jeonse_count": 651,
+      "wolse_count": 572,
+      "median_deposit_manwon": 20000
+    },
+    {
+      "gu": "노원구",
+      "lawd_cd": "11350",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_매매",
+      "count": 103,
+      "median_deal_amount_manwon": 35100
+    },
+    {
+      "gu": "노원구",
+      "lawd_cd": "11350",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_전월세",
+      "count": 157,
+      "jeonse_count": 49,
+      "wolse_count": 108,
+      "median_deposit_manwon": 6700
+    },
+    {
+      "gu": "노원구",
+      "lawd_cd": "11350",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_매매",
+      "count": 6,
+      "median_deal_amount_manwon": 15450
+    },
+    {
+      "gu": "노원구",
+      "lawd_cd": "11350",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_전월세",
+      "count": 34,
+      "jeonse_count": 6,
+      "wolse_count": 28,
+      "median_deposit_manwon": 1000
+    },
+    {
+      "gu": "도봉구",
+      "lawd_cd": "11320",
+      "deal_ym": "202606",
+      "deal_type": "아파트_매매",
+      "count": 285,
+      "median_deal_amount_manwon": 55000
+    },
+    {
+      "gu": "도봉구",
+      "lawd_cd": "11320",
+      "deal_ym": "202606",
+      "deal_type": "아파트_전월세",
+      "count": 370,
+      "jeonse_count": 194,
+      "wolse_count": 176,
+      "median_deposit_manwon": 19975
+    },
+    {
+      "gu": "도봉구",
+      "lawd_cd": "11320",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_매매",
+      "count": 93,
+      "median_deal_amount_manwon": 23000
+    },
+    {
+      "gu": "도봉구",
+      "lawd_cd": "11320",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_전월세",
+      "count": 186,
+      "jeonse_count": 85,
+      "wolse_count": 101,
+      "median_deposit_manwon": 10000
+    },
+    {
+      "gu": "도봉구",
+      "lawd_cd": "11320",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_매매",
+      "count": 29,
+      "median_deal_amount_manwon": 26200
+    },
+    {
+      "gu": "도봉구",
+      "lawd_cd": "11320",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_전월세",
+      "count": 115,
+      "jeonse_count": 32,
+      "wolse_count": 83,
+      "median_deposit_manwon": 2000
+    },
+    {
+      "gu": "동대문구",
+      "lawd_cd": "11230",
+      "deal_ym": "202606",
+      "deal_type": "아파트_매매",
+      "count": 246,
+      "median_deal_amount_manwon": 105000
+    },
+    {
+      "gu": "동대문구",
+      "lawd_cd": "11230",
+      "deal_ym": "202606",
+      "deal_type": "아파트_전월세",
+      "count": 687,
+      "jeonse_count": 250,
+      "wolse_count": 437,
+      "median_deposit_manwon": 17775
+    },
+    {
+      "gu": "동대문구",
+      "lawd_cd": "11230",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_매매",
+      "count": 71,
+      "median_deal_amount_manwon": 43000
+    },
+    {
+      "gu": "동대문구",
+      "lawd_cd": "11230",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_전월세",
+      "count": 286,
+      "jeonse_count": 129,
+      "wolse_count": 157,
+      "median_deposit_manwon": 15000
+    },
+    {
+      "gu": "동대문구",
+      "lawd_cd": "11230",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_매매",
+      "count": 42,
+      "median_deal_amount_manwon": 17300
+    },
+    {
+      "gu": "동대문구",
+      "lawd_cd": "11230",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_전월세",
+      "count": 516,
+      "jeonse_count": 93,
+      "wolse_count": 423,
+      "median_deposit_manwon": 2000
+    },
+    {
+      "gu": "동작구",
+      "lawd_cd": "11590",
+      "deal_ym": "202606",
+      "deal_type": "아파트_매매",
+      "count": 154,
+      "median_deal_amount_manwon": 145250
+    },
+    {
+      "gu": "동작구",
+      "lawd_cd": "11590",
+      "deal_ym": "202606",
+      "deal_type": "아파트_전월세",
+      "count": 611,
+      "jeonse_count": 347,
+      "wolse_count": 264,
+      "median_deposit_manwon": 54600
+    },
+    {
+      "gu": "동작구",
+      "lawd_cd": "11590",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_매매",
+      "count": 162,
+      "median_deal_amount_manwon": 48250
+    },
+    {
+      "gu": "동작구",
+      "lawd_cd": "11590",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_전월세",
+      "count": 473,
+      "jeonse_count": 168,
+      "wolse_count": 305,
+      "median_deposit_manwon": 13800
+    },
+    {
+      "gu": "동작구",
+      "lawd_cd": "11590",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_매매",
+      "count": 5,
+      "median_deal_amount_manwon": 52000
+    },
+    {
+      "gu": "동작구",
+      "lawd_cd": "11590",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_전월세",
+      "count": 82,
+      "jeonse_count": 18,
+      "wolse_count": 64,
+      "median_deposit_manwon": 5000
+    },
+    {
+      "gu": "마포구",
+      "lawd_cd": "11440",
+      "deal_ym": "202606",
+      "deal_type": "아파트_매매",
+      "count": 155,
+      "median_deal_amount_manwon": 148000
+    },
+    {
+      "gu": "마포구",
+      "lawd_cd": "11440",
+      "deal_ym": "202606",
+      "deal_type": "아파트_전월세",
+      "count": 825,
+      "jeonse_count": 351,
+      "wolse_count": 474,
+      "median_deposit_manwon": 35000
+    },
+    {
+      "gu": "마포구",
+      "lawd_cd": "11440",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_매매",
+      "count": 126,
+      "median_deal_amount_manwon": 46475
+    },
+    {
+      "gu": "마포구",
+      "lawd_cd": "11440",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_전월세",
+      "count": 686,
+      "jeonse_count": 279,
+      "wolse_count": 407,
+      "median_deposit_manwon": 13000
+    },
+    {
+      "gu": "마포구",
+      "lawd_cd": "11440",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_매매",
+      "count": 57,
+      "median_deal_amount_manwon": 22800
+    },
+    {
+      "gu": "마포구",
+      "lawd_cd": "11440",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_전월세",
+      "count": 439,
+      "jeonse_count": 73,
+      "wolse_count": 366,
+      "median_deposit_manwon": 2000
+    },
+    {
+      "gu": "서대문구",
+      "lawd_cd": "11410",
+      "deal_ym": "202606",
+      "deal_type": "아파트_매매",
+      "count": 220,
+      "median_deal_amount_manwon": 109900
+    },
+    {
+      "gu": "서대문구",
+      "lawd_cd": "11410",
+      "deal_ym": "202606",
+      "deal_type": "아파트_전월세",
+      "count": 471,
+      "jeonse_count": 224,
+      "wolse_count": 247,
+      "median_deposit_manwon": 39900
+    },
+    {
+      "gu": "서대문구",
+      "lawd_cd": "11410",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_매매",
+      "count": 72,
+      "median_deal_amount_manwon": 31750
+    },
+    {
+      "gu": "서대문구",
+      "lawd_cd": "11410",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_전월세",
+      "count": 327,
+      "jeonse_count": 90,
+      "wolse_count": 237,
+      "median_deposit_manwon": 6000
+    },
+    {
+      "gu": "서대문구",
+      "lawd_cd": "11410",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_매매",
+      "count": 12,
+      "median_deal_amount_manwon": 21475
+    },
+    {
+      "gu": "서대문구",
+      "lawd_cd": "11410",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_전월세",
+      "count": 147,
+      "jeonse_count": 23,
+      "wolse_count": 124,
+      "median_deposit_manwon": 1000
+    },
+    {
+      "gu": "서초구",
+      "lawd_cd": "11650",
+      "deal_ym": "202606",
+      "deal_type": "아파트_매매",
+      "count": 187,
+      "median_deal_amount_manwon": 249500
+    },
+    {
+      "gu": "서초구",
+      "lawd_cd": "11650",
+      "deal_ym": "202606",
+      "deal_type": "아파트_전월세",
+      "count": 1169,
+      "jeonse_count": 604,
+      "wolse_count": 565,
+      "median_deposit_manwon": 60000
+    },
+    {
+      "gu": "서초구",
+      "lawd_cd": "11650",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_매매",
+      "count": 98,
+      "median_deal_amount_manwon": 70900
+    },
+    {
+      "gu": "서초구",
+      "lawd_cd": "11650",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_전월세",
+      "count": 598,
+      "jeonse_count": 248,
+      "wolse_count": 350,
+      "median_deposit_manwon": 20000
+    },
+    {
+      "gu": "서초구",
+      "lawd_cd": "11650",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_매매",
+      "count": 174,
+      "median_deal_amount_manwon": 104823
+    },
+    {
+      "gu": "서초구",
+      "lawd_cd": "11650",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_전월세",
+      "count": 199,
+      "jeonse_count": 41,
+      "wolse_count": 158,
+      "median_deposit_manwon": 3200
+    },
+    {
+      "gu": "성동구",
+      "lawd_cd": "11200",
+      "deal_ym": "202606",
+      "deal_type": "아파트_매매",
+      "count": 131,
+      "median_deal_amount_manwon": 177000
+    },
+    {
+      "gu": "성동구",
+      "lawd_cd": "11200",
+      "deal_ym": "202606",
+      "deal_type": "아파트_전월세",
+      "count": 788,
+      "jeonse_count": 359,
+      "wolse_count": 429,
+      "median_deposit_manwon": 50000
+    },
+    {
+      "gu": "성동구",
+      "lawd_cd": "11200",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_매매",
+      "count": 51,
+      "median_deal_amount_manwon": 35000
+    },
+    {
+      "gu": "성동구",
+      "lawd_cd": "11200",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_전월세",
+      "count": 183,
+      "jeonse_count": 87,
+      "wolse_count": 96,
+      "median_deposit_manwon": 16500
+    },
+    {
+      "gu": "성동구",
+      "lawd_cd": "11200",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_매매",
+      "count": 17,
+      "median_deal_amount_manwon": 14800
+    },
+    {
+      "gu": "성동구",
+      "lawd_cd": "11200",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_전월세",
+      "count": 184,
+      "jeonse_count": 30,
+      "wolse_count": 154,
+      "median_deposit_manwon": 4450
+    },
+    {
+      "gu": "성북구",
+      "lawd_cd": "11290",
+      "deal_ym": "202606",
+      "deal_type": "아파트_매매",
+      "count": 321,
+      "median_deal_amount_manwon": 98000
+    },
+    {
+      "gu": "성북구",
+      "lawd_cd": "11290",
+      "deal_ym": "202606",
+      "deal_type": "아파트_전월세",
+      "count": 649,
+      "jeonse_count": 318,
+      "wolse_count": 331,
+      "median_deposit_manwon": 37800
+    },
+    {
+      "gu": "성북구",
+      "lawd_cd": "11290",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_매매",
+      "count": 159,
+      "median_deal_amount_manwon": 42900
+    },
+    {
+      "gu": "성북구",
+      "lawd_cd": "11290",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_전월세",
+      "count": 349,
+      "jeonse_count": 148,
+      "wolse_count": 201,
+      "median_deposit_manwon": 10000
+    },
+    {
+      "gu": "성북구",
+      "lawd_cd": "11290",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_매매",
+      "count": 3,
+      "median_deal_amount_manwon": 17400
+    },
+    {
+      "gu": "성북구",
+      "lawd_cd": "11290",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_전월세",
+      "count": 52,
+      "jeonse_count": 13,
+      "wolse_count": 39,
+      "median_deposit_manwon": 5000
+    },
+    {
+      "gu": "송파구",
+      "lawd_cd": "11710",
+      "deal_ym": "202606",
+      "deal_type": "아파트_매매",
+      "count": 280,
+      "median_deal_amount_manwon": 181000
+    },
+    {
+      "gu": "송파구",
+      "lawd_cd": "11710",
+      "deal_ym": "202606",
+      "deal_type": "아파트_전월세",
+      "count": 1375,
+      "jeonse_count": 677,
+      "wolse_count": 698,
+      "median_deposit_manwon": 53000
+    },
+    {
+      "gu": "송파구",
+      "lawd_cd": "11710",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_매매",
+      "count": 316,
+      "median_deal_amount_manwon": 46400
+    },
+    {
+      "gu": "송파구",
+      "lawd_cd": "11710",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_전월세",
+      "count": 1507,
+      "jeonse_count": 435,
+      "wolse_count": 1072,
+      "median_deposit_manwon": 14000
+    },
+    {
+      "gu": "송파구",
+      "lawd_cd": "11710",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_매매",
+      "count": 81,
+      "median_deal_amount_manwon": 22500
+    },
+    {
+      "gu": "송파구",
+      "lawd_cd": "11710",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_전월세",
+      "count": 623,
+      "jeonse_count": 112,
+      "wolse_count": 511,
+      "median_deposit_manwon": 10000
+    },
+    {
+      "gu": "양천구",
+      "lawd_cd": "11470",
+      "deal_ym": "202606",
+      "deal_type": "아파트_매매",
+      "count": 216,
+      "median_deal_amount_manwon": 105350
+    },
+    {
+      "gu": "양천구",
+      "lawd_cd": "11470",
+      "deal_ym": "202606",
+      "deal_type": "아파트_전월세",
+      "count": 824,
+      "jeonse_count": 442,
+      "wolse_count": 382,
+      "median_deposit_manwon": 42000
+    },
+    {
+      "gu": "양천구",
+      "lawd_cd": "11470",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_매매",
+      "count": 163,
+      "median_deal_amount_manwon": 31000
+    },
+    {
+      "gu": "양천구",
+      "lawd_cd": "11470",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_전월세",
+      "count": 485,
+      "jeonse_count": 217,
+      "wolse_count": 268,
+      "median_deposit_manwon": 14000
+    },
+    {
+      "gu": "양천구",
+      "lawd_cd": "11470",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_매매",
+      "count": 19,
+      "median_deal_amount_manwon": 29900
+    },
+    {
+      "gu": "양천구",
+      "lawd_cd": "11470",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_전월세",
+      "count": 102,
+      "jeonse_count": 39,
+      "wolse_count": 63,
+      "median_deposit_manwon": 15330
+    },
+    {
+      "gu": "영등포구",
+      "lawd_cd": "11560",
+      "deal_ym": "202606",
+      "deal_type": "아파트_매매",
+      "count": 262,
+      "median_deal_amount_manwon": 134250
+    },
+    {
+      "gu": "영등포구",
+      "lawd_cd": "11560",
+      "deal_ym": "202606",
+      "deal_type": "아파트_전월세",
+      "count": 743,
+      "jeonse_count": 362,
+      "wolse_count": 381,
+      "median_deposit_manwon": 40000
+    },
+    {
+      "gu": "영등포구",
+      "lawd_cd": "11560",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_매매",
+      "count": 67,
+      "median_deal_amount_manwon": 35500
+    },
+    {
+      "gu": "영등포구",
+      "lawd_cd": "11560",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_전월세",
+      "count": 351,
+      "jeonse_count": 128,
+      "wolse_count": 223,
+      "median_deposit_manwon": 19750
+    },
+    {
+      "gu": "영등포구",
+      "lawd_cd": "11560",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_매매",
+      "count": 119,
+      "median_deal_amount_manwon": 32500
+    },
+    {
+      "gu": "영등포구",
+      "lawd_cd": "11560",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_전월세",
+      "count": 973,
+      "jeonse_count": 283,
+      "wolse_count": 690,
+      "median_deposit_manwon": 13000
+    },
+    {
+      "gu": "용산구",
+      "lawd_cd": "11170",
+      "deal_ym": "202606",
+      "deal_type": "아파트_매매",
+      "count": 66,
+      "median_deal_amount_manwon": 188500
+    },
+    {
+      "gu": "용산구",
+      "lawd_cd": "11170",
+      "deal_ym": "202606",
+      "deal_type": "아파트_전월세",
+      "count": 623,
+      "jeonse_count": 193,
+      "wolse_count": 430,
+      "median_deposit_manwon": 17344
+    },
+    {
+      "gu": "용산구",
+      "lawd_cd": "11170",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_매매",
+      "count": 63,
+      "median_deal_amount_manwon": 80500
+    },
+    {
+      "gu": "용산구",
+      "lawd_cd": "11170",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_전월세",
+      "count": 443,
+      "jeonse_count": 312,
+      "wolse_count": 131,
+      "median_deposit_manwon": 23000
+    },
+    {
+      "gu": "용산구",
+      "lawd_cd": "11170",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_매매",
+      "count": 33,
+      "median_deal_amount_manwon": 39500
+    },
+    {
+      "gu": "용산구",
+      "lawd_cd": "11170",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_전월세",
+      "count": 152,
+      "jeonse_count": 63,
+      "wolse_count": 89,
+      "median_deposit_manwon": 17250
+    },
+    {
+      "gu": "은평구",
+      "lawd_cd": "11380",
+      "deal_ym": "202606",
+      "deal_type": "아파트_매매",
+      "count": 262,
+      "median_deal_amount_manwon": 86250
+    },
+    {
+      "gu": "은평구",
+      "lawd_cd": "11380",
+      "deal_ym": "202606",
+      "deal_type": "아파트_전월세",
+      "count": 708,
+      "jeonse_count": 390,
+      "wolse_count": 318,
+      "median_deposit_manwon": 35035
+    },
+    {
+      "gu": "은평구",
+      "lawd_cd": "11380",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_매매",
+      "count": 196,
+      "median_deal_amount_manwon": 29600
+    },
+    {
+      "gu": "은평구",
+      "lawd_cd": "11380",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_전월세",
+      "count": 583,
+      "jeonse_count": 245,
+      "wolse_count": 338,
+      "median_deposit_manwon": 13500
+    },
+    {
+      "gu": "은평구",
+      "lawd_cd": "11380",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_매매",
+      "count": 24,
+      "median_deal_amount_manwon": 13000
+    },
+    {
+      "gu": "은평구",
+      "lawd_cd": "11380",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_전월세",
+      "count": 241,
+      "jeonse_count": 50,
+      "wolse_count": 191,
+      "median_deposit_manwon": 3000
+    },
+    {
+      "gu": "종로구",
+      "lawd_cd": "11110",
+      "deal_ym": "202606",
+      "deal_type": "아파트_매매",
+      "count": 34,
+      "median_deal_amount_manwon": 110990
+    },
+    {
+      "gu": "종로구",
+      "lawd_cd": "11110",
+      "deal_ym": "202606",
+      "deal_type": "아파트_전월세",
+      "count": 173,
+      "jeonse_count": 67,
+      "wolse_count": 106,
+      "median_deposit_manwon": 25000
+    },
+    {
+      "gu": "종로구",
+      "lawd_cd": "11110",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_매매",
+      "count": 57,
+      "median_deal_amount_manwon": 49900
+    },
+    {
+      "gu": "종로구",
+      "lawd_cd": "11110",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_전월세",
+      "count": 182,
+      "jeonse_count": 62,
+      "wolse_count": 120,
+      "median_deposit_manwon": 6645
+    },
+    {
+      "gu": "종로구",
+      "lawd_cd": "11110",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_매매",
+      "count": 33,
+      "median_deal_amount_manwon": 19800
+    },
+    {
+      "gu": "종로구",
+      "lawd_cd": "11110",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_전월세",
+      "count": 194,
+      "jeonse_count": 39,
+      "wolse_count": 155,
+      "median_deposit_manwon": 1000
+    },
+    {
+      "gu": "중구",
+      "lawd_cd": "11140",
+      "deal_ym": "202606",
+      "deal_type": "아파트_매매",
+      "count": 61,
+      "median_deal_amount_manwon": 145000
+    },
+    {
+      "gu": "중구",
+      "lawd_cd": "11140",
+      "deal_ym": "202606",
+      "deal_type": "아파트_전월세",
+      "count": 272,
+      "jeonse_count": 97,
+      "wolse_count": 175,
+      "median_deposit_manwon": 17618
+    },
+    {
+      "gu": "중구",
+      "lawd_cd": "11140",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_매매",
+      "count": 30,
+      "median_deal_amount_manwon": 46400
+    },
+    {
+      "gu": "중구",
+      "lawd_cd": "11140",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_전월세",
+      "count": 178,
+      "jeonse_count": 67,
+      "wolse_count": 111,
+      "median_deposit_manwon": 15000
+    },
+    {
+      "gu": "중구",
+      "lawd_cd": "11140",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_매매",
+      "count": 45,
+      "median_deal_amount_manwon": 31500
+    },
+    {
+      "gu": "중구",
+      "lawd_cd": "11140",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_전월세",
+      "count": 217,
+      "jeonse_count": 76,
+      "wolse_count": 141,
+      "median_deposit_manwon": 13500
+    },
+    {
+      "gu": "중랑구",
+      "lawd_cd": "11260",
+      "deal_ym": "202606",
+      "deal_type": "아파트_매매",
+      "count": 216,
+      "median_deal_amount_manwon": 67000
+    },
+    {
+      "gu": "중랑구",
+      "lawd_cd": "11260",
+      "deal_ym": "202606",
+      "deal_type": "아파트_전월세",
+      "count": 792,
+      "jeonse_count": 177,
+      "wolse_count": 615,
+      "median_deposit_manwon": 13100
+    },
+    {
+      "gu": "중랑구",
+      "lawd_cd": "11260",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_매매",
+      "count": 184,
+      "median_deal_amount_manwon": 35000
+    },
+    {
+      "gu": "중랑구",
+      "lawd_cd": "11260",
+      "deal_ym": "202606",
+      "deal_type": "연립다세대_전월세",
+      "count": 426,
+      "jeonse_count": 167,
+      "wolse_count": 259,
+      "median_deposit_manwon": 17435
+    },
+    {
+      "gu": "중랑구",
+      "lawd_cd": "11260",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_매매",
+      "count": 15,
+      "median_deal_amount_manwon": 37000
+    },
+    {
+      "gu": "중랑구",
+      "lawd_cd": "11260",
+      "deal_ym": "202606",
+      "deal_type": "오피스텔_전월세",
+      "count": 125,
+      "jeonse_count": 46,
+      "wolse_count": 79,
+      "median_deposit_manwon": 15500
+    },
+    {
+      "gu": "강남구",
+      "lawd_cd": "11680",
+      "deal_ym": "202607",
+      "deal_type": "아파트_매매",
+      "count": 154,
+      "median_deal_amount_manwon": 275000
+    },
+    {
+      "gu": "강남구",
+      "lawd_cd": "11680",
+      "deal_ym": "202607",
+      "deal_type": "아파트_전월세",
+      "count": 1197,
+      "jeonse_count": 572,
+      "wolse_count": 625,
+      "median_deposit_manwon": 60000
+    },
+    {
+      "gu": "강남구",
+      "lawd_cd": "11680",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_매매",
+      "count": 78,
+      "median_deal_amount_manwon": 57000
+    },
+    {
+      "gu": "강남구",
+      "lawd_cd": "11680",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_전월세",
+      "count": 557,
+      "jeonse_count": 209,
+      "wolse_count": 348,
+      "median_deposit_manwon": 16500
+    },
+    {
+      "gu": "강남구",
+      "lawd_cd": "11680",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_매매",
+      "count": 100,
+      "median_deal_amount_manwon": 29000
+    },
+    {
+      "gu": "강남구",
+      "lawd_cd": "11680",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_전월세",
+      "count": 319,
+      "jeonse_count": 62,
+      "wolse_count": 257,
+      "median_deposit_manwon": 5000
+    },
+    {
+      "gu": "강동구",
+      "lawd_cd": "11740",
+      "deal_ym": "202607",
+      "deal_type": "아파트_매매",
+      "count": 244,
+      "median_deal_amount_manwon": 140000
+    },
+    {
+      "gu": "강동구",
+      "lawd_cd": "11740",
+      "deal_ym": "202607",
+      "deal_type": "아파트_전월세",
+      "count": 985,
+      "jeonse_count": 477,
+      "wolse_count": 508,
+      "median_deposit_manwon": 40131
+    },
+    {
+      "gu": "강동구",
+      "lawd_cd": "11740",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_매매",
+      "count": 125,
+      "median_deal_amount_manwon": 40500
+    },
+    {
+      "gu": "강동구",
+      "lawd_cd": "11740",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_전월세",
+      "count": 577,
+      "jeonse_count": 191,
+      "wolse_count": 386,
+      "median_deposit_manwon": 17500
+    },
+    {
+      "gu": "강동구",
+      "lawd_cd": "11740",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_매매",
+      "count": 29,
+      "median_deal_amount_manwon": 19700
+    },
+    {
+      "gu": "강동구",
+      "lawd_cd": "11740",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_전월세",
+      "count": 232,
+      "jeonse_count": 33,
+      "wolse_count": 199,
+      "median_deposit_manwon": 3000
+    },
+    {
+      "gu": "강북구",
+      "lawd_cd": "11305",
+      "deal_ym": "202607",
+      "deal_type": "아파트_매매",
+      "count": 129,
+      "median_deal_amount_manwon": 70000
+    },
+    {
+      "gu": "강북구",
+      "lawd_cd": "11305",
+      "deal_ym": "202607",
+      "deal_type": "아파트_전월세",
+      "count": 205,
+      "jeonse_count": 101,
+      "wolse_count": 104,
+      "median_deposit_manwon": 25000
+    },
+    {
+      "gu": "강북구",
+      "lawd_cd": "11305",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_매매",
+      "count": 133,
+      "median_deal_amount_manwon": 26000
+    },
+    {
+      "gu": "강북구",
+      "lawd_cd": "11305",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_전월세",
+      "count": 239,
+      "jeonse_count": 71,
+      "wolse_count": 168,
+      "median_deposit_manwon": 7000
+    },
+    {
+      "gu": "강북구",
+      "lawd_cd": "11305",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_매매",
+      "count": 8,
+      "median_deal_amount_manwon": 12600
+    },
+    {
+      "gu": "강북구",
+      "lawd_cd": "11305",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_전월세",
+      "count": 69,
+      "jeonse_count": 7,
+      "wolse_count": 62,
+      "median_deposit_manwon": 1000
+    },
+    {
+      "gu": "강서구",
+      "lawd_cd": "11500",
+      "deal_ym": "202607",
+      "deal_type": "아파트_매매",
+      "count": 377,
+      "median_deal_amount_manwon": 92500
+    },
+    {
+      "gu": "강서구",
+      "lawd_cd": "11500",
+      "deal_ym": "202607",
+      "deal_type": "아파트_전월세",
+      "count": 1214,
+      "jeonse_count": 724,
+      "wolse_count": 490,
+      "median_deposit_manwon": 26038
+    },
+    {
+      "gu": "강서구",
+      "lawd_cd": "11500",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_매매",
+      "count": 265,
+      "median_deal_amount_manwon": 24049
+    },
+    {
+      "gu": "강서구",
+      "lawd_cd": "11500",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_전월세",
+      "count": 690,
+      "jeonse_count": 209,
+      "wolse_count": 481,
+      "median_deposit_manwon": 12000
+    },
+    {
+      "gu": "강서구",
+      "lawd_cd": "11500",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_매매",
+      "count": 58,
+      "median_deal_amount_manwon": 13600
+    },
+    {
+      "gu": "강서구",
+      "lawd_cd": "11500",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_전월세",
+      "count": 1010,
+      "jeonse_count": 160,
+      "wolse_count": 850,
+      "median_deposit_manwon": 3000
+    },
+    {
+      "gu": "관악구",
+      "lawd_cd": "11620",
+      "deal_ym": "202607",
+      "deal_type": "아파트_매매",
+      "count": 199,
+      "median_deal_amount_manwon": 92000
+    },
+    {
+      "gu": "관악구",
+      "lawd_cd": "11620",
+      "deal_ym": "202607",
+      "deal_type": "아파트_전월세",
+      "count": 466,
+      "jeonse_count": 196,
+      "wolse_count": 270,
+      "median_deposit_manwon": 25000
+    },
+    {
+      "gu": "관악구",
+      "lawd_cd": "11620",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_매매",
+      "count": 136,
+      "median_deal_amount_manwon": 30000
+    },
+    {
+      "gu": "관악구",
+      "lawd_cd": "11620",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_전월세",
+      "count": 376,
+      "jeonse_count": 98,
+      "wolse_count": 278,
+      "median_deposit_manwon": 11950
+    },
+    {
+      "gu": "관악구",
+      "lawd_cd": "11620",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_매매",
+      "count": 19,
+      "median_deal_amount_manwon": 14000
+    },
+    {
+      "gu": "관악구",
+      "lawd_cd": "11620",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_전월세",
+      "count": 320,
+      "jeonse_count": 29,
+      "wolse_count": 291,
+      "median_deposit_manwon": 3000
+    },
+    {
+      "gu": "광진구",
+      "lawd_cd": "11215",
+      "deal_ym": "202607",
+      "deal_type": "아파트_매매",
+      "count": 77,
+      "median_deal_amount_manwon": 148000
+    },
+    {
+      "gu": "광진구",
+      "lawd_cd": "11215",
+      "deal_ym": "202607",
+      "deal_type": "아파트_전월세",
+      "count": 269,
+      "jeonse_count": 135,
+      "wolse_count": 134,
+      "median_deposit_manwon": 51000
+    },
+    {
+      "gu": "광진구",
+      "lawd_cd": "11215",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_매매",
+      "count": 219,
+      "median_deal_amount_manwon": 49500
+    },
+    {
+      "gu": "광진구",
+      "lawd_cd": "11215",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_전월세",
+      "count": 556,
+      "jeonse_count": 233,
+      "wolse_count": 323,
+      "median_deposit_manwon": 18000
+    },
+    {
+      "gu": "광진구",
+      "lawd_cd": "11215",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_매매",
+      "count": 19,
+      "median_deal_amount_manwon": 20000
+    },
+    {
+      "gu": "광진구",
+      "lawd_cd": "11215",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_전월세",
+      "count": 154,
+      "jeonse_count": 29,
+      "wolse_count": 125,
+      "median_deposit_manwon": 2000
+    },
+    {
+      "gu": "구로구",
+      "lawd_cd": "11530",
+      "deal_ym": "202607",
+      "deal_type": "아파트_매매",
+      "count": 354,
+      "median_deal_amount_manwon": 73250
+    },
+    {
+      "gu": "구로구",
+      "lawd_cd": "11530",
+      "deal_ym": "202607",
+      "deal_type": "아파트_전월세",
+      "count": 1094,
+      "jeonse_count": 284,
+      "wolse_count": 810,
+      "median_deposit_manwon": 22700
+    },
+    {
+      "gu": "구로구",
+      "lawd_cd": "11530",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_매매",
+      "count": 88,
+      "median_deal_amount_manwon": 25000
+    },
+    {
+      "gu": "구로구",
+      "lawd_cd": "11530",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_전월세",
+      "count": 227,
+      "jeonse_count": 87,
+      "wolse_count": 140,
+      "median_deposit_manwon": 9500
+    },
+    {
+      "gu": "구로구",
+      "lawd_cd": "11530",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_매매",
+      "count": 41,
+      "median_deal_amount_manwon": 24800
+    },
+    {
+      "gu": "구로구",
+      "lawd_cd": "11530",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_전월세",
+      "count": 338,
+      "jeonse_count": 55,
+      "wolse_count": 283,
+      "median_deposit_manwon": 3000
+    },
+    {
+      "gu": "금천구",
+      "lawd_cd": "11545",
+      "deal_ym": "202607",
+      "deal_type": "아파트_매매",
+      "count": 122,
+      "median_deal_amount_manwon": 66500
+    },
+    {
+      "gu": "금천구",
+      "lawd_cd": "11545",
+      "deal_ym": "202607",
+      "deal_type": "아파트_전월세",
+      "count": 206,
+      "jeonse_count": 85,
+      "wolse_count": 121,
+      "median_deposit_manwon": 21250
+    },
+    {
+      "gu": "금천구",
+      "lawd_cd": "11545",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_매매",
+      "count": 102,
+      "median_deal_amount_manwon": 29150
+    },
+    {
+      "gu": "금천구",
+      "lawd_cd": "11545",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_전월세",
+      "count": 221,
+      "jeonse_count": 78,
+      "wolse_count": 143,
+      "median_deposit_manwon": 15500
+    },
+    {
+      "gu": "금천구",
+      "lawd_cd": "11545",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_매매",
+      "count": 19,
+      "median_deal_amount_manwon": 16000
+    },
+    {
+      "gu": "금천구",
+      "lawd_cd": "11545",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_전월세",
+      "count": 565,
+      "jeonse_count": 140,
+      "wolse_count": 425,
+      "median_deposit_manwon": 8000
+    },
+    {
+      "gu": "노원구",
+      "lawd_cd": "11350",
+      "deal_ym": "202607",
+      "deal_type": "아파트_매매",
+      "count": 689,
+      "median_deal_amount_manwon": 66000
+    },
+    {
+      "gu": "노원구",
+      "lawd_cd": "11350",
+      "deal_ym": "202607",
+      "deal_type": "아파트_전월세",
+      "count": 1250,
+      "jeonse_count": 672,
+      "wolse_count": 578,
+      "median_deposit_manwon": 21458
+    },
+    {
+      "gu": "노원구",
+      "lawd_cd": "11350",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_매매",
+      "count": 42,
+      "median_deal_amount_manwon": 30250
+    },
+    {
+      "gu": "노원구",
+      "lawd_cd": "11350",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_전월세",
+      "count": 120,
+      "jeonse_count": 42,
+      "wolse_count": 78,
+      "median_deposit_manwon": 7259
+    },
+    {
+      "gu": "노원구",
+      "lawd_cd": "11350",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_매매",
+      "count": 9,
+      "median_deal_amount_manwon": 16000
+    },
+    {
+      "gu": "노원구",
+      "lawd_cd": "11350",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_전월세",
+      "count": 36,
+      "jeonse_count": 6,
+      "wolse_count": 30,
+      "median_deposit_manwon": 1000
+    },
+    {
+      "gu": "도봉구",
+      "lawd_cd": "11320",
+      "deal_ym": "202607",
+      "deal_type": "아파트_매매",
+      "count": 269,
+      "median_deal_amount_manwon": 55000
+    },
+    {
+      "gu": "도봉구",
+      "lawd_cd": "11320",
+      "deal_ym": "202607",
+      "deal_type": "아파트_전월세",
+      "count": 379,
+      "jeonse_count": 216,
+      "wolse_count": 163,
+      "median_deposit_manwon": 24000
+    },
+    {
+      "gu": "도봉구",
+      "lawd_cd": "11320",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_매매",
+      "count": 119,
+      "median_deal_amount_manwon": 25000
+    },
+    {
+      "gu": "도봉구",
+      "lawd_cd": "11320",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_전월세",
+      "count": 187,
+      "jeonse_count": 69,
+      "wolse_count": 118,
+      "median_deposit_manwon": 10410
+    },
+    {
+      "gu": "도봉구",
+      "lawd_cd": "11320",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_매매",
+      "count": 21,
+      "median_deal_amount_manwon": 19000
+    },
+    {
+      "gu": "도봉구",
+      "lawd_cd": "11320",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_전월세",
+      "count": 111,
+      "jeonse_count": 35,
+      "wolse_count": 76,
+      "median_deposit_manwon": 4000
+    },
+    {
+      "gu": "동대문구",
+      "lawd_cd": "11230",
+      "deal_ym": "202607",
+      "deal_type": "아파트_매매",
+      "count": 220,
+      "median_deal_amount_manwon": 107000
+    },
+    {
+      "gu": "동대문구",
+      "lawd_cd": "11230",
+      "deal_ym": "202607",
+      "deal_type": "아파트_전월세",
+      "count": 717,
+      "jeonse_count": 321,
+      "wolse_count": 396,
+      "median_deposit_manwon": 26500
+    },
+    {
+      "gu": "동대문구",
+      "lawd_cd": "11230",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_매매",
+      "count": 63,
+      "median_deal_amount_manwon": 37500
+    },
+    {
+      "gu": "동대문구",
+      "lawd_cd": "11230",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_전월세",
+      "count": 209,
+      "jeonse_count": 81,
+      "wolse_count": 128,
+      "median_deposit_manwon": 9450
+    },
+    {
+      "gu": "동대문구",
+      "lawd_cd": "11230",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_매매",
+      "count": 31,
+      "median_deal_amount_manwon": 17100
+    },
+    {
+      "gu": "동대문구",
+      "lawd_cd": "11230",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_전월세",
+      "count": 464,
+      "jeonse_count": 102,
+      "wolse_count": 362,
+      "median_deposit_manwon": 3000
+    },
+    {
+      "gu": "동작구",
+      "lawd_cd": "11590",
+      "deal_ym": "202607",
+      "deal_type": "아파트_매매",
+      "count": 228,
+      "median_deal_amount_manwon": 127250
+    },
+    {
+      "gu": "동작구",
+      "lawd_cd": "11590",
+      "deal_ym": "202607",
+      "deal_type": "아파트_전월세",
+      "count": 534,
+      "jeonse_count": 288,
+      "wolse_count": 246,
+      "median_deposit_manwon": 53000
+    },
+    {
+      "gu": "동작구",
+      "lawd_cd": "11590",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_매매",
+      "count": 140,
+      "median_deal_amount_manwon": 55000
+    },
+    {
+      "gu": "동작구",
+      "lawd_cd": "11590",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_전월세",
+      "count": 419,
+      "jeonse_count": 155,
+      "wolse_count": 264,
+      "median_deposit_manwon": 17600
+    },
+    {
+      "gu": "동작구",
+      "lawd_cd": "11590",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_매매",
+      "count": 4,
+      "median_deal_amount_manwon": 37000
+    },
+    {
+      "gu": "동작구",
+      "lawd_cd": "11590",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_전월세",
+      "count": 62,
+      "jeonse_count": 17,
+      "wolse_count": 45,
+      "median_deposit_manwon": 4000
+    },
+    {
+      "gu": "마포구",
+      "lawd_cd": "11440",
+      "deal_ym": "202607",
+      "deal_type": "아파트_매매",
+      "count": 137,
+      "median_deal_amount_manwon": 142000
+    },
+    {
+      "gu": "마포구",
+      "lawd_cd": "11440",
+      "deal_ym": "202607",
+      "deal_type": "아파트_전월세",
+      "count": 766,
+      "jeonse_count": 376,
+      "wolse_count": 390,
+      "median_deposit_manwon": 42492
+    },
+    {
+      "gu": "마포구",
+      "lawd_cd": "11440",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_매매",
+      "count": 98,
+      "median_deal_amount_manwon": 44600
+    },
+    {
+      "gu": "마포구",
+      "lawd_cd": "11440",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_전월세",
+      "count": 567,
+      "jeonse_count": 222,
+      "wolse_count": 345,
+      "median_deposit_manwon": 14000
+    },
+    {
+      "gu": "마포구",
+      "lawd_cd": "11440",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_매매",
+      "count": 58,
+      "median_deal_amount_manwon": 21900
+    },
+    {
+      "gu": "마포구",
+      "lawd_cd": "11440",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_전월세",
+      "count": 428,
+      "jeonse_count": 57,
+      "wolse_count": 371,
+      "median_deposit_manwon": 2000
+    },
+    {
+      "gu": "서대문구",
+      "lawd_cd": "11410",
+      "deal_ym": "202607",
+      "deal_type": "아파트_매매",
+      "count": 234,
+      "median_deal_amount_manwon": 110000
+    },
+    {
+      "gu": "서대문구",
+      "lawd_cd": "11410",
+      "deal_ym": "202607",
+      "deal_type": "아파트_전월세",
+      "count": 481,
+      "jeonse_count": 243,
+      "wolse_count": 238,
+      "median_deposit_manwon": 40000
+    },
+    {
+      "gu": "서대문구",
+      "lawd_cd": "11410",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_매매",
+      "count": 73,
+      "median_deal_amount_manwon": 35000
+    },
+    {
+      "gu": "서대문구",
+      "lawd_cd": "11410",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_전월세",
+      "count": 255,
+      "jeonse_count": 77,
+      "wolse_count": 178,
+      "median_deposit_manwon": 9000
+    },
+    {
+      "gu": "서대문구",
+      "lawd_cd": "11410",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_매매",
+      "count": 41,
+      "median_deal_amount_manwon": 7885
+    },
+    {
+      "gu": "서대문구",
+      "lawd_cd": "11410",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_전월세",
+      "count": 160,
+      "jeonse_count": 19,
+      "wolse_count": 141,
+      "median_deposit_manwon": 1000
+    },
+    {
+      "gu": "서초구",
+      "lawd_cd": "11650",
+      "deal_ym": "202607",
+      "deal_type": "아파트_매매",
+      "count": 119,
+      "median_deal_amount_manwon": 200000
+    },
+    {
+      "gu": "서초구",
+      "lawd_cd": "11650",
+      "deal_ym": "202607",
+      "deal_type": "아파트_전월세",
+      "count": 1011,
+      "jeonse_count": 552,
+      "wolse_count": 459,
+      "median_deposit_manwon": 60000
+    },
+    {
+      "gu": "서초구",
+      "lawd_cd": "11650",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_매매",
+      "count": 89,
+      "median_deal_amount_manwon": 59000
+    },
+    {
+      "gu": "서초구",
+      "lawd_cd": "11650",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_전월세",
+      "count": 524,
+      "jeonse_count": 241,
+      "wolse_count": 283,
+      "median_deposit_manwon": 20580
+    },
+    {
+      "gu": "서초구",
+      "lawd_cd": "11650",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_매매",
+      "count": 37,
+      "median_deal_amount_manwon": 28000
+    },
+    {
+      "gu": "서초구",
+      "lawd_cd": "11650",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_전월세",
+      "count": 192,
+      "jeonse_count": 46,
+      "wolse_count": 146,
+      "median_deposit_manwon": 5000
+    },
+    {
+      "gu": "성동구",
+      "lawd_cd": "11200",
+      "deal_ym": "202607",
+      "deal_type": "아파트_매매",
+      "count": 94,
+      "median_deal_amount_manwon": 174750
+    },
+    {
+      "gu": "성동구",
+      "lawd_cd": "11200",
+      "deal_ym": "202607",
+      "deal_type": "아파트_전월세",
+      "count": 576,
+      "jeonse_count": 337,
+      "wolse_count": 239,
+      "median_deposit_manwon": 60000
+    },
+    {
+      "gu": "성동구",
+      "lawd_cd": "11200",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_매매",
+      "count": 31,
+      "median_deal_amount_manwon": 43500
+    },
+    {
+      "gu": "성동구",
+      "lawd_cd": "11200",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_전월세",
+      "count": 186,
+      "jeonse_count": 87,
+      "wolse_count": 99,
+      "median_deposit_manwon": 13800
+    },
+    {
+      "gu": "성동구",
+      "lawd_cd": "11200",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_매매",
+      "count": 16,
+      "median_deal_amount_manwon": 19500
+    },
+    {
+      "gu": "성동구",
+      "lawd_cd": "11200",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_전월세",
+      "count": 157,
+      "jeonse_count": 34,
+      "wolse_count": 123,
+      "median_deposit_manwon": 5000
+    },
+    {
+      "gu": "성북구",
+      "lawd_cd": "11290",
+      "deal_ym": "202607",
+      "deal_type": "아파트_매매",
+      "count": 313,
+      "median_deal_amount_manwon": 100000
+    },
+    {
+      "gu": "성북구",
+      "lawd_cd": "11290",
+      "deal_ym": "202607",
+      "deal_type": "아파트_전월세",
+      "count": 529,
+      "jeonse_count": 307,
+      "wolse_count": 222,
+      "median_deposit_manwon": 44000
+    },
+    {
+      "gu": "성북구",
+      "lawd_cd": "11290",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_매매",
+      "count": 140,
+      "median_deal_amount_manwon": 39000
+    },
+    {
+      "gu": "성북구",
+      "lawd_cd": "11290",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_전월세",
+      "count": 345,
+      "jeonse_count": 118,
+      "wolse_count": 227,
+      "median_deposit_manwon": 8000
+    },
+    {
+      "gu": "성북구",
+      "lawd_cd": "11290",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_매매",
+      "count": 2,
+      "median_deal_amount_manwon": 27000
+    },
+    {
+      "gu": "성북구",
+      "lawd_cd": "11290",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_전월세",
+      "count": 43,
+      "jeonse_count": 6,
+      "wolse_count": 37,
+      "median_deposit_manwon": 3000
+    },
+    {
+      "gu": "송파구",
+      "lawd_cd": "11710",
+      "deal_ym": "202607",
+      "deal_type": "아파트_매매",
+      "count": 297,
+      "median_deal_amount_manwon": 205500
+    },
+    {
+      "gu": "송파구",
+      "lawd_cd": "11710",
+      "deal_ym": "202607",
+      "deal_type": "아파트_전월세",
+      "count": 1349,
+      "jeonse_count": 735,
+      "wolse_count": 614,
+      "median_deposit_manwon": 59000
+    },
+    {
+      "gu": "송파구",
+      "lawd_cd": "11710",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_매매",
+      "count": 268,
+      "median_deal_amount_manwon": 40000
+    },
+    {
+      "gu": "송파구",
+      "lawd_cd": "11710",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_전월세",
+      "count": 1215,
+      "jeonse_count": 362,
+      "wolse_count": 853,
+      "median_deposit_manwon": 13500
+    },
+    {
+      "gu": "송파구",
+      "lawd_cd": "11710",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_매매",
+      "count": 75,
+      "median_deal_amount_manwon": 25000
+    },
+    {
+      "gu": "송파구",
+      "lawd_cd": "11710",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_전월세",
+      "count": 527,
+      "jeonse_count": 86,
+      "wolse_count": 441,
+      "median_deposit_manwon": 10000
+    },
+    {
+      "gu": "양천구",
+      "lawd_cd": "11470",
+      "deal_ym": "202607",
+      "deal_type": "아파트_매매",
+      "count": 227,
+      "median_deal_amount_manwon": 119000
+    },
+    {
+      "gu": "양천구",
+      "lawd_cd": "11470",
+      "deal_ym": "202607",
+      "deal_type": "아파트_전월세",
+      "count": 816,
+      "jeonse_count": 507,
+      "wolse_count": 309,
+      "median_deposit_manwon": 47000
+    },
+    {
+      "gu": "양천구",
+      "lawd_cd": "11470",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_매매",
+      "count": 125,
+      "median_deal_amount_manwon": 33000
+    },
+    {
+      "gu": "양천구",
+      "lawd_cd": "11470",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_전월세",
+      "count": 420,
+      "jeonse_count": 202,
+      "wolse_count": 218,
+      "median_deposit_manwon": 13475
+    },
+    {
+      "gu": "양천구",
+      "lawd_cd": "11470",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_매매",
+      "count": 21,
+      "median_deal_amount_manwon": 25200
+    },
+    {
+      "gu": "양천구",
+      "lawd_cd": "11470",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_전월세",
+      "count": 114,
+      "jeonse_count": 43,
+      "wolse_count": 71,
+      "median_deposit_manwon": 14000
+    },
+    {
+      "gu": "영등포구",
+      "lawd_cd": "11560",
+      "deal_ym": "202607",
+      "deal_type": "아파트_매매",
+      "count": 250,
+      "median_deal_amount_manwon": 130750
+    },
+    {
+      "gu": "영등포구",
+      "lawd_cd": "11560",
+      "deal_ym": "202607",
+      "deal_type": "아파트_전월세",
+      "count": 752,
+      "jeonse_count": 355,
+      "wolse_count": 397,
+      "median_deposit_manwon": 37000
+    },
+    {
+      "gu": "영등포구",
+      "lawd_cd": "11560",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_매매",
+      "count": 79,
+      "median_deal_amount_manwon": 37700
+    },
+    {
+      "gu": "영등포구",
+      "lawd_cd": "11560",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_전월세",
+      "count": 302,
+      "jeonse_count": 88,
+      "wolse_count": 214,
+      "median_deposit_manwon": 14850
+    },
+    {
+      "gu": "영등포구",
+      "lawd_cd": "11560",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_매매",
+      "count": 109,
+      "median_deal_amount_manwon": 38500
+    },
+    {
+      "gu": "영등포구",
+      "lawd_cd": "11560",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_전월세",
+      "count": 848,
+      "jeonse_count": 223,
+      "wolse_count": 625,
+      "median_deposit_manwon": 10900
+    },
+    {
+      "gu": "용산구",
+      "lawd_cd": "11170",
+      "deal_ym": "202607",
+      "deal_type": "아파트_매매",
+      "count": 65,
+      "median_deal_amount_manwon": 205000
+    },
+    {
+      "gu": "용산구",
+      "lawd_cd": "11170",
+      "deal_ym": "202607",
+      "deal_type": "아파트_전월세",
+      "count": 395,
+      "jeonse_count": 180,
+      "wolse_count": 215,
+      "median_deposit_manwon": 50000
+    },
+    {
+      "gu": "용산구",
+      "lawd_cd": "11170",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_매매",
+      "count": 48,
+      "median_deal_amount_manwon": 78150
+    },
+    {
+      "gu": "용산구",
+      "lawd_cd": "11170",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_전월세",
+      "count": 398,
+      "jeonse_count": 264,
+      "wolse_count": 134,
+      "median_deposit_manwon": 23096
+    },
+    {
+      "gu": "용산구",
+      "lawd_cd": "11170",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_매매",
+      "count": 26,
+      "median_deal_amount_manwon": 52000
+    },
+    {
+      "gu": "용산구",
+      "lawd_cd": "11170",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_전월세",
+      "count": 163,
+      "jeonse_count": 66,
+      "wolse_count": 97,
+      "median_deposit_manwon": 18400
+    },
+    {
+      "gu": "은평구",
+      "lawd_cd": "11380",
+      "deal_ym": "202607",
+      "deal_type": "아파트_매매",
+      "count": 278,
+      "median_deal_amount_manwon": 88500
+    },
+    {
+      "gu": "은평구",
+      "lawd_cd": "11380",
+      "deal_ym": "202607",
+      "deal_type": "아파트_전월세",
+      "count": 731,
+      "jeonse_count": 420,
+      "wolse_count": 311,
+      "median_deposit_manwon": 34000
+    },
+    {
+      "gu": "은평구",
+      "lawd_cd": "11380",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_매매",
+      "count": 276,
+      "median_deal_amount_manwon": 30000
+    },
+    {
+      "gu": "은평구",
+      "lawd_cd": "11380",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_전월세",
+      "count": 471,
+      "jeonse_count": 200,
+      "wolse_count": 271,
+      "median_deposit_manwon": 13500
+    },
+    {
+      "gu": "은평구",
+      "lawd_cd": "11380",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_매매",
+      "count": 26,
+      "median_deal_amount_manwon": 17800
+    },
+    {
+      "gu": "은평구",
+      "lawd_cd": "11380",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_전월세",
+      "count": 217,
+      "jeonse_count": 43,
+      "wolse_count": 174,
+      "median_deposit_manwon": 3000
+    },
+    {
+      "gu": "종로구",
+      "lawd_cd": "11110",
+      "deal_ym": "202607",
+      "deal_type": "아파트_매매",
+      "count": 37,
+      "median_deal_amount_manwon": 95500
+    },
+    {
+      "gu": "종로구",
+      "lawd_cd": "11110",
+      "deal_ym": "202607",
+      "deal_type": "아파트_전월세",
+      "count": 155,
+      "jeonse_count": 58,
+      "wolse_count": 97,
+      "median_deposit_manwon": 20500
+    },
+    {
+      "gu": "종로구",
+      "lawd_cd": "11110",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_매매",
+      "count": 57,
+      "median_deal_amount_manwon": 52000
+    },
+    {
+      "gu": "종로구",
+      "lawd_cd": "11110",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_전월세",
+      "count": 143,
+      "jeonse_count": 49,
+      "wolse_count": 94,
+      "median_deposit_manwon": 9800
+    },
+    {
+      "gu": "종로구",
+      "lawd_cd": "11110",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_매매",
+      "count": 20,
+      "median_deal_amount_manwon": 30400
+    },
+    {
+      "gu": "종로구",
+      "lawd_cd": "11110",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_전월세",
+      "count": 173,
+      "jeonse_count": 36,
+      "wolse_count": 137,
+      "median_deposit_manwon": 1000
+    },
+    {
+      "gu": "중구",
+      "lawd_cd": "11140",
+      "deal_ym": "202607",
+      "deal_type": "아파트_매매",
+      "count": 77,
+      "median_deal_amount_manwon": 118500
+    },
+    {
+      "gu": "중구",
+      "lawd_cd": "11140",
+      "deal_ym": "202607",
+      "deal_type": "아파트_전월세",
+      "count": 254,
+      "jeonse_count": 112,
+      "wolse_count": 142,
+      "median_deposit_manwon": 35000
+    },
+    {
+      "gu": "중구",
+      "lawd_cd": "11140",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_매매",
+      "count": 32,
+      "median_deal_amount_manwon": 47500
+    },
+    {
+      "gu": "중구",
+      "lawd_cd": "11140",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_전월세",
+      "count": 134,
+      "jeonse_count": 54,
+      "wolse_count": 80,
+      "median_deposit_manwon": 16900
+    },
+    {
+      "gu": "중구",
+      "lawd_cd": "11140",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_매매",
+      "count": 20,
+      "median_deal_amount_manwon": 34000
+    },
+    {
+      "gu": "중구",
+      "lawd_cd": "11140",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_전월세",
+      "count": 194,
+      "jeonse_count": 73,
+      "wolse_count": 121,
+      "median_deposit_manwon": 19200
+    },
+    {
+      "gu": "중랑구",
+      "lawd_cd": "11260",
+      "deal_ym": "202607",
+      "deal_type": "아파트_매매",
+      "count": 502,
+      "median_deal_amount_manwon": 44750
+    },
+    {
+      "gu": "중랑구",
+      "lawd_cd": "11260",
+      "deal_ym": "202607",
+      "deal_type": "아파트_전월세",
+      "count": 588,
+      "jeonse_count": 189,
+      "wolse_count": 399,
+      "median_deposit_manwon": 13900
+    },
+    {
+      "gu": "중랑구",
+      "lawd_cd": "11260",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_매매",
+      "count": 177,
+      "median_deal_amount_manwon": 34280
+    },
+    {
+      "gu": "중랑구",
+      "lawd_cd": "11260",
+      "deal_ym": "202607",
+      "deal_type": "연립다세대_전월세",
+      "count": 352,
+      "jeonse_count": 128,
+      "wolse_count": 224,
+      "median_deposit_manwon": 16000
+    },
+    {
+      "gu": "중랑구",
+      "lawd_cd": "11260",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_매매",
+      "count": 10,
+      "median_deal_amount_manwon": 28000
+    },
+    {
+      "gu": "중랑구",
+      "lawd_cd": "11260",
+      "deal_ym": "202607",
+      "deal_type": "오피스텔_전월세",
+      "count": 127,
+      "jeonse_count": 42,
+      "wolse_count": 85,
+      "median_deposit_manwon": 13650
+    },
+    {
+      "gu": "강남구",
+      "lawd_cd": "11680",
+      "deal_ym": "202608",
+      "deal_type": "아파트_매매",
+      "count": 27,
+      "median_deal_amount_manwon": 218000
+    },
+    {
+      "gu": "강남구",
+      "lawd_cd": "11680",
+      "deal_ym": "202608",
+      "deal_type": "아파트_전월세",
+      "count": 461,
+      "jeonse_count": 253,
+      "wolse_count": 208,
+      "median_deposit_manwon": 67000
+    },
+    {
+      "gu": "강남구",
+      "lawd_cd": "11680",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_매매",
+      "count": 21,
+      "median_deal_amount_manwon": 48200
+    },
+    {
+      "gu": "강남구",
+      "lawd_cd": "11680",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_전월세",
+      "count": 203,
+      "jeonse_count": 85,
+      "wolse_count": 118,
+      "median_deposit_manwon": 20000
+    },
+    {
+      "gu": "강남구",
+      "lawd_cd": "11680",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_매매",
+      "count": 19,
+      "median_deal_amount_manwon": 24300
+    },
+    {
+      "gu": "강남구",
+      "lawd_cd": "11680",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_전월세",
+      "count": 122,
+      "jeonse_count": 27,
+      "wolse_count": 95,
+      "median_deposit_manwon": 12000
+    },
+    {
+      "gu": "강동구",
+      "lawd_cd": "11740",
+      "deal_ym": "202608",
+      "deal_type": "아파트_매매",
+      "count": 38,
+      "median_deal_amount_manwon": 114250
+    },
+    {
+      "gu": "강동구",
+      "lawd_cd": "11740",
+      "deal_ym": "202608",
+      "deal_type": "아파트_전월세",
+      "count": 371,
+      "jeonse_count": 184,
+      "wolse_count": 187,
+      "median_deposit_manwon": 40000
+    },
+    {
+      "gu": "강동구",
+      "lawd_cd": "11740",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_매매",
+      "count": 18,
+      "median_deal_amount_manwon": 37500
+    },
+    {
+      "gu": "강동구",
+      "lawd_cd": "11740",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_전월세",
+      "count": 315,
+      "jeonse_count": 96,
+      "wolse_count": 219,
+      "median_deposit_manwon": 16600
+    },
+    {
+      "gu": "강동구",
+      "lawd_cd": "11740",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_매매",
+      "count": 9,
+      "median_deal_amount_manwon": 19500
+    },
+    {
+      "gu": "강동구",
+      "lawd_cd": "11740",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_전월세",
+      "count": 109,
+      "jeonse_count": 24,
+      "wolse_count": 85,
+      "median_deposit_manwon": 9200
+    },
+    {
+      "gu": "강북구",
+      "lawd_cd": "11305",
+      "deal_ym": "202608",
+      "deal_type": "아파트_매매",
+      "count": 25,
+      "median_deal_amount_manwon": 68000
+    },
+    {
+      "gu": "강북구",
+      "lawd_cd": "11305",
+      "deal_ym": "202608",
+      "deal_type": "아파트_전월세",
+      "count": 87,
+      "jeonse_count": 45,
+      "wolse_count": 42,
+      "median_deposit_manwon": 30000
+    },
+    {
+      "gu": "강북구",
+      "lawd_cd": "11305",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_매매",
+      "count": 36,
+      "median_deal_amount_manwon": 24250
+    },
+    {
+      "gu": "강북구",
+      "lawd_cd": "11305",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_전월세",
+      "count": 118,
+      "jeonse_count": 43,
+      "wolse_count": 75,
+      "median_deposit_manwon": 7950
+    },
+    {
+      "gu": "강북구",
+      "lawd_cd": "11305",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_매매",
+      "count": 3,
+      "median_deal_amount_manwon": 12500
+    },
+    {
+      "gu": "강북구",
+      "lawd_cd": "11305",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_전월세",
+      "count": 27,
+      "jeonse_count": 3,
+      "wolse_count": 24,
+      "median_deposit_manwon": 1000
+    },
+    {
+      "gu": "강서구",
+      "lawd_cd": "11500",
+      "deal_ym": "202608",
+      "deal_type": "아파트_매매",
+      "count": 90,
+      "median_deal_amount_manwon": 85500
+    },
+    {
+      "gu": "강서구",
+      "lawd_cd": "11500",
+      "deal_ym": "202608",
+      "deal_type": "아파트_전월세",
+      "count": 800,
+      "jeonse_count": 508,
+      "wolse_count": 292,
+      "median_deposit_manwon": 22636
+    },
+    {
+      "gu": "강서구",
+      "lawd_cd": "11500",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_매매",
+      "count": 56,
+      "median_deal_amount_manwon": 23650
+    },
+    {
+      "gu": "강서구",
+      "lawd_cd": "11500",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_전월세",
+      "count": 255,
+      "jeonse_count": 95,
+      "wolse_count": 160,
+      "median_deposit_manwon": 14800
+    },
+    {
+      "gu": "강서구",
+      "lawd_cd": "11500",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_매매",
+      "count": 26,
+      "median_deal_amount_manwon": 15250
+    },
+    {
+      "gu": "강서구",
+      "lawd_cd": "11500",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_전월세",
+      "count": 412,
+      "jeonse_count": 82,
+      "wolse_count": 330,
+      "median_deposit_manwon": 10800
+    },
+    {
+      "gu": "관악구",
+      "lawd_cd": "11620",
+      "deal_ym": "202608",
+      "deal_type": "아파트_매매",
+      "count": 44,
+      "median_deal_amount_manwon": 75500
+    },
+    {
+      "gu": "관악구",
+      "lawd_cd": "11620",
+      "deal_ym": "202608",
+      "deal_type": "아파트_전월세",
+      "count": 165,
+      "jeonse_count": 77,
+      "wolse_count": 88,
+      "median_deposit_manwon": 35000
+    },
+    {
+      "gu": "관악구",
+      "lawd_cd": "11620",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_매매",
+      "count": 75,
+      "median_deal_amount_manwon": 27500
+    },
+    {
+      "gu": "관악구",
+      "lawd_cd": "11620",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_전월세",
+      "count": 193,
+      "jeonse_count": 51,
+      "wolse_count": 142,
+      "median_deposit_manwon": 12000
+    },
+    {
+      "gu": "관악구",
+      "lawd_cd": "11620",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_매매",
+      "count": 28,
+      "median_deal_amount_manwon": 11350
+    },
+    {
+      "gu": "관악구",
+      "lawd_cd": "11620",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_전월세",
+      "count": 125,
+      "jeonse_count": 10,
+      "wolse_count": 115,
+      "median_deposit_manwon": 3000
+    },
+    {
+      "gu": "광진구",
+      "lawd_cd": "11215",
+      "deal_ym": "202608",
+      "deal_type": "아파트_매매",
+      "count": 10,
+      "median_deal_amount_manwon": 169500
+    },
+    {
+      "gu": "광진구",
+      "lawd_cd": "11215",
+      "deal_ym": "202608",
+      "deal_type": "아파트_전월세",
+      "count": 112,
+      "jeonse_count": 50,
+      "wolse_count": 62,
+      "median_deposit_manwon": 48000
+    },
+    {
+      "gu": "광진구",
+      "lawd_cd": "11215",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_매매",
+      "count": 26,
+      "median_deal_amount_manwon": 52000
+    },
+    {
+      "gu": "광진구",
+      "lawd_cd": "11215",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_전월세",
+      "count": 235,
+      "jeonse_count": 101,
+      "wolse_count": 134,
+      "median_deposit_manwon": 20000
+    },
+    {
+      "gu": "광진구",
+      "lawd_cd": "11215",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_매매",
+      "count": 11,
+      "median_deal_amount_manwon": 17900
+    },
+    {
+      "gu": "광진구",
+      "lawd_cd": "11215",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_전월세",
+      "count": 79,
+      "jeonse_count": 13,
+      "wolse_count": 66,
+      "median_deposit_manwon": 1000
+    },
+    {
+      "gu": "구로구",
+      "lawd_cd": "11530",
+      "deal_ym": "202608",
+      "deal_type": "아파트_매매",
+      "count": 77,
+      "median_deal_amount_manwon": 68500
+    },
+    {
+      "gu": "구로구",
+      "lawd_cd": "11530",
+      "deal_ym": "202608",
+      "deal_type": "아파트_전월세",
+      "count": 428,
+      "jeonse_count": 117,
+      "wolse_count": 311,
+      "median_deposit_manwon": 22700
+    },
+    {
+      "gu": "구로구",
+      "lawd_cd": "11530",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_매매",
+      "count": 29,
+      "median_deal_amount_manwon": 25000
+    },
+    {
+      "gu": "구로구",
+      "lawd_cd": "11530",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_전월세",
+      "count": 118,
+      "jeonse_count": 39,
+      "wolse_count": 79,
+      "median_deposit_manwon": 11775
+    },
+    {
+      "gu": "구로구",
+      "lawd_cd": "11530",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_매매",
+      "count": 14,
+      "median_deal_amount_manwon": 13900
+    },
+    {
+      "gu": "구로구",
+      "lawd_cd": "11530",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_전월세",
+      "count": 115,
+      "jeonse_count": 23,
+      "wolse_count": 92,
+      "median_deposit_manwon": 5000
+    },
+    {
+      "gu": "금천구",
+      "lawd_cd": "11545",
+      "deal_ym": "202608",
+      "deal_type": "아파트_매매",
+      "count": 41,
+      "median_deal_amount_manwon": 54900
+    },
+    {
+      "gu": "금천구",
+      "lawd_cd": "11545",
+      "deal_ym": "202608",
+      "deal_type": "아파트_전월세",
+      "count": 178,
+      "jeonse_count": 38,
+      "wolse_count": 140,
+      "median_deposit_manwon": 7000
+    },
+    {
+      "gu": "금천구",
+      "lawd_cd": "11545",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_매매",
+      "count": 20,
+      "median_deal_amount_manwon": 30000
+    },
+    {
+      "gu": "금천구",
+      "lawd_cd": "11545",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_전월세",
+      "count": 123,
+      "jeonse_count": 50,
+      "wolse_count": 73,
+      "median_deposit_manwon": 14500
+    },
+    {
+      "gu": "금천구",
+      "lawd_cd": "11545",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_매매",
+      "count": 5,
+      "median_deal_amount_manwon": 13000
+    },
+    {
+      "gu": "금천구",
+      "lawd_cd": "11545",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_전월세",
+      "count": 210,
+      "jeonse_count": 63,
+      "wolse_count": 147,
+      "median_deposit_manwon": 11250
+    },
+    {
+      "gu": "노원구",
+      "lawd_cd": "11350",
+      "deal_ym": "202608",
+      "deal_type": "아파트_매매",
+      "count": 126,
+      "median_deal_amount_manwon": 63100
+    },
+    {
+      "gu": "노원구",
+      "lawd_cd": "11350",
+      "deal_ym": "202608",
+      "deal_type": "아파트_전월세",
+      "count": 537,
+      "jeonse_count": 286,
+      "wolse_count": 251,
+      "median_deposit_manwon": 20000
+    },
+    {
+      "gu": "노원구",
+      "lawd_cd": "11350",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_매매",
+      "count": 9,
+      "median_deal_amount_manwon": 24500
+    },
+    {
+      "gu": "노원구",
+      "lawd_cd": "11350",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_전월세",
+      "count": 56,
+      "jeonse_count": 12,
+      "wolse_count": 44,
+      "median_deposit_manwon": 6000
+    },
+    {
+      "gu": "노원구",
+      "lawd_cd": "11350",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_전월세",
+      "count": 8,
+      "jeonse_count": 3,
+      "wolse_count": 5,
+      "median_deposit_manwon": 750
+    },
+    {
+      "gu": "도봉구",
+      "lawd_cd": "11320",
+      "deal_ym": "202608",
+      "deal_type": "아파트_매매",
+      "count": 88,
+      "median_deal_amount_manwon": 54700
+    },
+    {
+      "gu": "도봉구",
+      "lawd_cd": "11320",
+      "deal_ym": "202608",
+      "deal_type": "아파트_전월세",
+      "count": 126,
+      "jeonse_count": 70,
+      "wolse_count": 56,
+      "median_deposit_manwon": 23500
+    },
+    {
+      "gu": "도봉구",
+      "lawd_cd": "11320",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_매매",
+      "count": 22,
+      "median_deal_amount_manwon": 24150
+    },
+    {
+      "gu": "도봉구",
+      "lawd_cd": "11320",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_전월세",
+      "count": 104,
+      "jeonse_count": 31,
+      "wolse_count": 73,
+      "median_deposit_manwon": 10000
+    },
+    {
+      "gu": "도봉구",
+      "lawd_cd": "11320",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_매매",
+      "count": 6,
+      "median_deal_amount_manwon": 18150
+    },
+    {
+      "gu": "도봉구",
+      "lawd_cd": "11320",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_전월세",
+      "count": 46,
+      "jeonse_count": 22,
+      "wolse_count": 24,
+      "median_deposit_manwon": 12500
+    },
+    {
+      "gu": "동대문구",
+      "lawd_cd": "11230",
+      "deal_ym": "202608",
+      "deal_type": "아파트_매매",
+      "count": 53,
+      "median_deal_amount_manwon": 107500
+    },
+    {
+      "gu": "동대문구",
+      "lawd_cd": "11230",
+      "deal_ym": "202608",
+      "deal_type": "아파트_전월세",
+      "count": 239,
+      "jeonse_count": 106,
+      "wolse_count": 133,
+      "median_deposit_manwon": 40000
+    },
+    {
+      "gu": "동대문구",
+      "lawd_cd": "11230",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_매매",
+      "count": 14,
+      "median_deal_amount_manwon": 33500
+    },
+    {
+      "gu": "동대문구",
+      "lawd_cd": "11230",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_전월세",
+      "count": 93,
+      "jeonse_count": 47,
+      "wolse_count": 46,
+      "median_deposit_manwon": 19400
+    },
+    {
+      "gu": "동대문구",
+      "lawd_cd": "11230",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_매매",
+      "count": 15,
+      "median_deal_amount_manwon": 19000
+    },
+    {
+      "gu": "동대문구",
+      "lawd_cd": "11230",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_전월세",
+      "count": 169,
+      "jeonse_count": 43,
+      "wolse_count": 126,
+      "median_deposit_manwon": 5000
+    },
+    {
+      "gu": "동작구",
+      "lawd_cd": "11590",
+      "deal_ym": "202608",
+      "deal_type": "아파트_매매",
+      "count": 28,
+      "median_deal_amount_manwon": 143850
+    },
+    {
+      "gu": "동작구",
+      "lawd_cd": "11590",
+      "deal_ym": "202608",
+      "deal_type": "아파트_전월세",
+      "count": 251,
+      "jeonse_count": 131,
+      "wolse_count": 120,
+      "median_deposit_manwon": 52000
+    },
+    {
+      "gu": "동작구",
+      "lawd_cd": "11590",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_매매",
+      "count": 24,
+      "median_deal_amount_manwon": 40375
+    },
+    {
+      "gu": "동작구",
+      "lawd_cd": "11590",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_전월세",
+      "count": 187,
+      "jeonse_count": 85,
+      "wolse_count": 102,
+      "median_deposit_manwon": 15000
+    },
+    {
+      "gu": "동작구",
+      "lawd_cd": "11590",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_매매",
+      "count": 3,
+      "median_deal_amount_manwon": 26700
+    },
+    {
+      "gu": "동작구",
+      "lawd_cd": "11590",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_전월세",
+      "count": 24,
+      "jeonse_count": 10,
+      "wolse_count": 14,
+      "median_deposit_manwon": 5000
+    },
+    {
+      "gu": "마포구",
+      "lawd_cd": "11440",
+      "deal_ym": "202608",
+      "deal_type": "아파트_매매",
+      "count": 20,
+      "median_deal_amount_manwon": 113750
+    },
+    {
+      "gu": "마포구",
+      "lawd_cd": "11440",
+      "deal_ym": "202608",
+      "deal_type": "아파트_전월세",
+      "count": 345,
+      "jeonse_count": 166,
+      "wolse_count": 179,
+      "median_deposit_manwon": 35000
+    },
+    {
+      "gu": "마포구",
+      "lawd_cd": "11440",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_매매",
+      "count": 24,
+      "median_deal_amount_manwon": 41500
+    },
+    {
+      "gu": "마포구",
+      "lawd_cd": "11440",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_전월세",
+      "count": 275,
+      "jeonse_count": 129,
+      "wolse_count": 146,
+      "median_deposit_manwon": 17000
+    },
+    {
+      "gu": "마포구",
+      "lawd_cd": "11440",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_매매",
+      "count": 23,
+      "median_deal_amount_manwon": 19000
+    },
+    {
+      "gu": "마포구",
+      "lawd_cd": "11440",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_전월세",
+      "count": 156,
+      "jeonse_count": 34,
+      "wolse_count": 122,
+      "median_deposit_manwon": 3000
+    },
+    {
+      "gu": "서대문구",
+      "lawd_cd": "11410",
+      "deal_ym": "202608",
+      "deal_type": "아파트_매매",
+      "count": 47,
+      "median_deal_amount_manwon": 96500
+    },
+    {
+      "gu": "서대문구",
+      "lawd_cd": "11410",
+      "deal_ym": "202608",
+      "deal_type": "아파트_전월세",
+      "count": 219,
+      "jeonse_count": 126,
+      "wolse_count": 93,
+      "median_deposit_manwon": 45700
+    },
+    {
+      "gu": "서대문구",
+      "lawd_cd": "11410",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_매매",
+      "count": 21,
+      "median_deal_amount_manwon": 34000
+    },
+    {
+      "gu": "서대문구",
+      "lawd_cd": "11410",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_전월세",
+      "count": 94,
+      "jeonse_count": 27,
+      "wolse_count": 67,
+      "median_deposit_manwon": 11500
+    },
+    {
+      "gu": "서대문구",
+      "lawd_cd": "11410",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_매매",
+      "count": 6,
+      "median_deal_amount_manwon": 18900
+    },
+    {
+      "gu": "서대문구",
+      "lawd_cd": "11410",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_전월세",
+      "count": 53,
+      "jeonse_count": 11,
+      "wolse_count": 42,
+      "median_deposit_manwon": 1000
+    },
+    {
+      "gu": "서초구",
+      "lawd_cd": "11650",
+      "deal_ym": "202608",
+      "deal_type": "아파트_매매",
+      "count": 23,
+      "median_deal_amount_manwon": 210000
+    },
+    {
+      "gu": "서초구",
+      "lawd_cd": "11650",
+      "deal_ym": "202608",
+      "deal_type": "아파트_전월세",
+      "count": 484,
+      "jeonse_count": 337,
+      "wolse_count": 147,
+      "median_deposit_manwon": 47628
+    },
+    {
+      "gu": "서초구",
+      "lawd_cd": "11650",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_매매",
+      "count": 17,
+      "median_deal_amount_manwon": 54500
+    },
+    {
+      "gu": "서초구",
+      "lawd_cd": "11650",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_전월세",
+      "count": 209,
+      "jeonse_count": 100,
+      "wolse_count": 109,
+      "median_deposit_manwon": 25000
+    },
+    {
+      "gu": "서초구",
+      "lawd_cd": "11650",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_매매",
+      "count": 10,
+      "median_deal_amount_manwon": 28500
+    },
+    {
+      "gu": "서초구",
+      "lawd_cd": "11650",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_전월세",
+      "count": 82,
+      "jeonse_count": 25,
+      "wolse_count": 57,
+      "median_deposit_manwon": 9000
+    },
+    {
+      "gu": "성동구",
+      "lawd_cd": "11200",
+      "deal_ym": "202608",
+      "deal_type": "아파트_매매",
+      "count": 17,
+      "median_deal_amount_manwon": 165000
+    },
+    {
+      "gu": "성동구",
+      "lawd_cd": "11200",
+      "deal_ym": "202608",
+      "deal_type": "아파트_전월세",
+      "count": 351,
+      "jeonse_count": 139,
+      "wolse_count": 212,
+      "median_deposit_manwon": 30000
+    },
+    {
+      "gu": "성동구",
+      "lawd_cd": "11200",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_전월세",
+      "count": 75,
+      "jeonse_count": 42,
+      "wolse_count": 33,
+      "median_deposit_manwon": 20000
+    },
+    {
+      "gu": "성동구",
+      "lawd_cd": "11200",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_매매",
+      "count": 5,
+      "median_deal_amount_manwon": 16000
+    },
+    {
+      "gu": "성동구",
+      "lawd_cd": "11200",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_전월세",
+      "count": 168,
+      "jeonse_count": 13,
+      "wolse_count": 155,
+      "median_deposit_manwon": 6158
+    },
+    {
+      "gu": "성북구",
+      "lawd_cd": "11290",
+      "deal_ym": "202608",
+      "deal_type": "아파트_매매",
+      "count": 62,
+      "median_deal_amount_manwon": 96000
+    },
+    {
+      "gu": "성북구",
+      "lawd_cd": "11290",
+      "deal_ym": "202608",
+      "deal_type": "아파트_전월세",
+      "count": 219,
+      "jeonse_count": 132,
+      "wolse_count": 87,
+      "median_deposit_manwon": 45000
+    },
+    {
+      "gu": "성북구",
+      "lawd_cd": "11290",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_매매",
+      "count": 39,
+      "median_deal_amount_manwon": 34000
+    },
+    {
+      "gu": "성북구",
+      "lawd_cd": "11290",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_전월세",
+      "count": 138,
+      "jeonse_count": 70,
+      "wolse_count": 68,
+      "median_deposit_manwon": 13000
+    },
+    {
+      "gu": "성북구",
+      "lawd_cd": "11290",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_매매",
+      "count": 1,
+      "median_deal_amount_manwon": 31300
+    },
+    {
+      "gu": "성북구",
+      "lawd_cd": "11290",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_전월세",
+      "count": 20,
+      "jeonse_count": 4,
+      "wolse_count": 16,
+      "median_deposit_manwon": 3500
+    },
+    {
+      "gu": "송파구",
+      "lawd_cd": "11710",
+      "deal_ym": "202608",
+      "deal_type": "아파트_매매",
+      "count": 28,
+      "median_deal_amount_manwon": 245000
+    },
+    {
+      "gu": "송파구",
+      "lawd_cd": "11710",
+      "deal_ym": "202608",
+      "deal_type": "아파트_전월세",
+      "count": 602,
+      "jeonse_count": 280,
+      "wolse_count": 322,
+      "median_deposit_manwon": 51041
+    },
+    {
+      "gu": "송파구",
+      "lawd_cd": "11710",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_매매",
+      "count": 93,
+      "median_deal_amount_manwon": 39750
+    },
+    {
+      "gu": "송파구",
+      "lawd_cd": "11710",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_전월세",
+      "count": 578,
+      "jeonse_count": 169,
+      "wolse_count": 409,
+      "median_deposit_manwon": 15157
+    },
+    {
+      "gu": "송파구",
+      "lawd_cd": "11710",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_매매",
+      "count": 24,
+      "median_deal_amount_manwon": 23250
+    },
+    {
+      "gu": "송파구",
+      "lawd_cd": "11710",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_전월세",
+      "count": 202,
+      "jeonse_count": 23,
+      "wolse_count": 179,
+      "median_deposit_manwon": 11500
+    },
+    {
+      "gu": "양천구",
+      "lawd_cd": "11470",
+      "deal_ym": "202608",
+      "deal_type": "아파트_매매",
+      "count": 47,
+      "median_deal_amount_manwon": 88000
+    },
+    {
+      "gu": "양천구",
+      "lawd_cd": "11470",
+      "deal_ym": "202608",
+      "deal_type": "아파트_전월세",
+      "count": 278,
+      "jeonse_count": 171,
+      "wolse_count": 107,
+      "median_deposit_manwon": 42000
+    },
+    {
+      "gu": "양천구",
+      "lawd_cd": "11470",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_매매",
+      "count": 35,
+      "median_deal_amount_manwon": 30000
+    },
+    {
+      "gu": "양천구",
+      "lawd_cd": "11470",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_전월세",
+      "count": 192,
+      "jeonse_count": 85,
+      "wolse_count": 107,
+      "median_deposit_manwon": 12750
+    },
+    {
+      "gu": "양천구",
+      "lawd_cd": "11470",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_매매",
+      "count": 4,
+      "median_deal_amount_manwon": 82500
+    },
+    {
+      "gu": "양천구",
+      "lawd_cd": "11470",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_전월세",
+      "count": 41,
+      "jeonse_count": 18,
+      "wolse_count": 23,
+      "median_deposit_manwon": 17000
+    },
+    {
+      "gu": "영등포구",
+      "lawd_cd": "11560",
+      "deal_ym": "202608",
+      "deal_type": "아파트_매매",
+      "count": 37,
+      "median_deal_amount_manwon": 117000
+    },
+    {
+      "gu": "영등포구",
+      "lawd_cd": "11560",
+      "deal_ym": "202608",
+      "deal_type": "아파트_전월세",
+      "count": 304,
+      "jeonse_count": 178,
+      "wolse_count": 126,
+      "median_deposit_manwon": 43000
+    },
+    {
+      "gu": "영등포구",
+      "lawd_cd": "11560",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_매매",
+      "count": 17,
+      "median_deal_amount_manwon": 37000
+    },
+    {
+      "gu": "영등포구",
+      "lawd_cd": "11560",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_전월세",
+      "count": 171,
+      "jeonse_count": 71,
+      "wolse_count": 100,
+      "median_deposit_manwon": 18000
+    },
+    {
+      "gu": "영등포구",
+      "lawd_cd": "11560",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_매매",
+      "count": 18,
+      "median_deal_amount_manwon": 28500
+    },
+    {
+      "gu": "영등포구",
+      "lawd_cd": "11560",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_전월세",
+      "count": 306,
+      "jeonse_count": 90,
+      "wolse_count": 216,
+      "median_deposit_manwon": 16665
+    },
+    {
+      "gu": "용산구",
+      "lawd_cd": "11170",
+      "deal_ym": "202608",
+      "deal_type": "아파트_매매",
+      "count": 7,
+      "median_deal_amount_manwon": 187000
+    },
+    {
+      "gu": "용산구",
+      "lawd_cd": "11170",
+      "deal_ym": "202608",
+      "deal_type": "아파트_전월세",
+      "count": 158,
+      "jeonse_count": 69,
+      "wolse_count": 89,
+      "median_deposit_manwon": 40800
+    },
+    {
+      "gu": "용산구",
+      "lawd_cd": "11170",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_매매",
+      "count": 3,
+      "median_deal_amount_manwon": 69500
+    },
+    {
+      "gu": "용산구",
+      "lawd_cd": "11170",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_전월세",
+      "count": 164,
+      "jeonse_count": 122,
+      "wolse_count": 42,
+      "median_deposit_manwon": 22950
+    },
+    {
+      "gu": "용산구",
+      "lawd_cd": "11170",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_매매",
+      "count": 3,
+      "median_deal_amount_manwon": 82000
+    },
+    {
+      "gu": "용산구",
+      "lawd_cd": "11170",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_전월세",
+      "count": 78,
+      "jeonse_count": 32,
+      "wolse_count": 46,
+      "median_deposit_manwon": 20000
+    },
+    {
+      "gu": "은평구",
+      "lawd_cd": "11380",
+      "deal_ym": "202608",
+      "deal_type": "아파트_매매",
+      "count": 94,
+      "median_deal_amount_manwon": 84900
+    },
+    {
+      "gu": "은평구",
+      "lawd_cd": "11380",
+      "deal_ym": "202608",
+      "deal_type": "아파트_전월세",
+      "count": 364,
+      "jeonse_count": 183,
+      "wolse_count": 181,
+      "median_deposit_manwon": 21748
+    },
+    {
+      "gu": "은평구",
+      "lawd_cd": "11380",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_매매",
+      "count": 81,
+      "median_deal_amount_manwon": 31800
+    },
+    {
+      "gu": "은평구",
+      "lawd_cd": "11380",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_전월세",
+      "count": 241,
+      "jeonse_count": 108,
+      "wolse_count": 133,
+      "median_deposit_manwon": 14100
+    },
+    {
+      "gu": "은평구",
+      "lawd_cd": "11380",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_매매",
+      "count": 8,
+      "median_deal_amount_manwon": 12350
+    },
+    {
+      "gu": "은평구",
+      "lawd_cd": "11380",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_전월세",
+      "count": 82,
+      "jeonse_count": 10,
+      "wolse_count": 72,
+      "median_deposit_manwon": 2000
+    },
+    {
+      "gu": "종로구",
+      "lawd_cd": "11110",
+      "deal_ym": "202608",
+      "deal_type": "아파트_매매",
+      "count": 4,
+      "median_deal_amount_manwon": 117500
+    },
+    {
+      "gu": "종로구",
+      "lawd_cd": "11110",
+      "deal_ym": "202608",
+      "deal_type": "아파트_전월세",
+      "count": 44,
+      "jeonse_count": 18,
+      "wolse_count": 26,
+      "median_deposit_manwon": 39950
+    },
+    {
+      "gu": "종로구",
+      "lawd_cd": "11110",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_매매",
+      "count": 5,
+      "median_deal_amount_manwon": 52500
+    },
+    {
+      "gu": "종로구",
+      "lawd_cd": "11110",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_전월세",
+      "count": 63,
+      "jeonse_count": 21,
+      "wolse_count": 42,
+      "median_deposit_manwon": 13900
+    },
+    {
+      "gu": "종로구",
+      "lawd_cd": "11110",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_매매",
+      "count": 14,
+      "median_deal_amount_manwon": 27600
+    },
+    {
+      "gu": "종로구",
+      "lawd_cd": "11110",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_전월세",
+      "count": 61,
+      "jeonse_count": 19,
+      "wolse_count": 42,
+      "median_deposit_manwon": 2000
+    },
+    {
+      "gu": "중구",
+      "lawd_cd": "11140",
+      "deal_ym": "202608",
+      "deal_type": "아파트_매매",
+      "count": 13,
+      "median_deal_amount_manwon": 175000
+    },
+    {
+      "gu": "중구",
+      "lawd_cd": "11140",
+      "deal_ym": "202608",
+      "deal_type": "아파트_전월세",
+      "count": 103,
+      "jeonse_count": 50,
+      "wolse_count": 53,
+      "median_deposit_manwon": 34000
+    },
+    {
+      "gu": "중구",
+      "lawd_cd": "11140",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_매매",
+      "count": 5,
+      "median_deal_amount_manwon": 96000
+    },
+    {
+      "gu": "중구",
+      "lawd_cd": "11140",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_전월세",
+      "count": 52,
+      "jeonse_count": 31,
+      "wolse_count": 21,
+      "median_deposit_manwon": 22200
+    },
+    {
+      "gu": "중구",
+      "lawd_cd": "11140",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_매매",
+      "count": 8,
+      "median_deal_amount_manwon": 39500
+    },
+    {
+      "gu": "중구",
+      "lawd_cd": "11140",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_전월세",
+      "count": 86,
+      "jeonse_count": 39,
+      "wolse_count": 47,
+      "median_deposit_manwon": 17550
+    },
+    {
+      "gu": "중랑구",
+      "lawd_cd": "11260",
+      "deal_ym": "202608",
+      "deal_type": "아파트_매매",
+      "count": 70,
+      "median_deal_amount_manwon": 71000
+    },
+    {
+      "gu": "중랑구",
+      "lawd_cd": "11260",
+      "deal_ym": "202608",
+      "deal_type": "아파트_전월세",
+      "count": 454,
+      "jeonse_count": 193,
+      "wolse_count": 261,
+      "median_deposit_manwon": 15121
+    },
+    {
+      "gu": "중랑구",
+      "lawd_cd": "11260",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_매매",
+      "count": 53,
+      "median_deal_amount_manwon": 28750
+    },
+    {
+      "gu": "중랑구",
+      "lawd_cd": "11260",
+      "deal_ym": "202608",
+      "deal_type": "연립다세대_전월세",
+      "count": 166,
+      "jeonse_count": 79,
+      "wolse_count": 87,
+      "median_deposit_manwon": 18917
+    },
+    {
+      "gu": "중랑구",
+      "lawd_cd": "11260",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_매매",
+      "count": 8,
+      "median_deal_amount_manwon": 54250
+    },
+    {
+      "gu": "중랑구",
+      "lawd_cd": "11260",
+      "deal_ym": "202608",
+      "deal_type": "오피스텔_전월세",
+      "count": 37,
+      "jeonse_count": 17,
+      "wolse_count": 20,
+      "median_deposit_manwon": 16254
+    }
+  ]
+}
