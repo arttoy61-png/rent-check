@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-29T00:09:39",
+  "generated_at": "2026-08-29T00:20:53",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
@@ -12,32 +12,30 @@
       ]
     },
     "SH": {
-      "count": 0,
-      "errors": [
-        "https://youth.seoul.go.kr/api/sh/list.do?key=2309250014 :: The read operation timed out"
-      ]
+      "count": 9,
+      "errors": []
     },
     "SEOUL": {
-      "count": 10,
+      "count": 11,
       "errors": [],
-      "excluded_noise": 15
+      "excluded_noise": 14
     },
     "TOTAL": {
-      "count": 11,
+      "count": 21,
       "duplicates_removed": 4,
       "excluded_non_housing": 2,
-      "excluded_outside_seoul": 1,
-      "published_count": 13
+      "excluded_outside_seoul": 0,
+      "published_count": 15
     }
   },
   "summary": {
-    "total": 13,
+    "total": 15,
     "gangseo": 0,
-    "new": 0,
+    "new": 2,
     "updated": 0,
-    "open_or_check": 11,
+    "open_or_check": 13,
     "by_housing_type": {
-      "국민임대": 1,
+      "국민임대": 3,
       "공공임대": 1,
       "행복주택": 2,
       "장기전세": 3,
@@ -51,12 +49,37 @@
       "신생아": 1
     },
     "by_agency": {
+      "LH": 3,
       "SH": 11,
-      "LH": 1,
       "SEOUL": 1
     }
   },
   "items": [
+    {
+      "id": "LH:panId:2015122300020615",
+      "agency": "LH",
+      "agency_group": "LH",
+      "title": "고령디오팰리스 국민임대주택 입주자격완화 예비입주자 모집",
+      "housing_types": [
+        "국민임대"
+      ],
+      "audiences": [],
+      "region": "서울",
+      "published_at": "",
+      "deadline": "2026-10-05",
+      "open_state": "접수중",
+      "event": "신규",
+      "change": "신규",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [],
+      "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020615&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
+      "source": "서울주거포털",
+      "content_signature": "70a3e115bfdb17c1a7a76c050c25db8d3eb84cabffce5131d21c5c42b84ccfd3",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "2026-08-28",
+      "schedule_source": "official_detail_html"
+    },
     {
       "id": "SHYOUTH:a33e18d6d2d8ccdc889a",
       "agency": "SH",
@@ -72,7 +95,7 @@
       "deadline": "2026-09-03",
       "open_state": "접수예정",
       "event": "신규",
-      "change": "수집오류-이전값유지",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [],
@@ -163,6 +186,31 @@
       "schedule_source": "official_detail_html"
     },
     {
+      "id": "LH:panId:2015122300020635",
+      "agency": "LH",
+      "agency_group": "LH",
+      "title": "경주시, 영천시, 포항시 부도매입(국민임대)주택 입주자격완화 모집공고",
+      "housing_types": [
+        "국민임대"
+      ],
+      "audiences": [],
+      "region": "서울",
+      "published_at": "",
+      "deadline": "2026-09-22",
+      "open_state": "접수예정",
+      "event": "신규",
+      "change": "신규",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [],
+      "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020635&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
+      "source": "서울주거포털",
+      "content_signature": "6f56ed57d72a96223e5bdb1170b2701932f18566a94c002615894882d0cd5b21",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "2026-09-15",
+      "schedule_source": "official_detail_html"
+    },
+    {
       "id": "SH:seq:308887",
       "agency": "SH",
       "agency_group": "SH",
@@ -203,7 +251,7 @@
       "deadline": "",
       "open_state": "확인필요",
       "event": "신규",
-      "change": "수집오류-이전값유지",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -232,7 +280,7 @@
       "deadline": "",
       "open_state": "확인필요",
       "event": "신규",
-      "change": "수집오류-이전값유지",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -263,7 +311,7 @@
       "deadline": "",
       "open_state": "확인필요",
       "event": "신규",
-      "change": "수집오류-이전값유지",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -378,7 +426,7 @@
       "deadline": "2026-08-28",
       "open_state": "마감",
       "event": "신규",
-      "change": "수집오류-이전값유지",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
