@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-29T00:53:42",
+  "generated_at": "2026-08-29T00:58:19",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
@@ -12,7 +12,7 @@
       ]
     },
     "SH": {
-      "count": 18,
+      "count": 16,
       "errors": []
     },
     "SEOUL": {
@@ -21,36 +21,36 @@
       "excluded_noise": 14
     },
     "TOTAL": {
-      "count": 28,
+      "count": 26,
       "duplicates_removed": 6,
       "excluded_non_housing": 4,
       "excluded_outside_seoul": 2,
-      "published_count": 18
+      "published_count": 16
     }
   },
   "summary": {
-    "total": 18,
+    "total": 16,
     "gangseo": 0,
-    "new": 5,
-    "updated": 2,
-    "open_or_check": 11,
+    "new": 0,
+    "updated": 0,
+    "open_or_check": 10,
     "by_housing_type": {
       "장기전세": 6,
       "국민임대": 2,
       "공공임대": 1,
       "행복주택": 2,
-      "기타임대": 5,
+      "기타임대": 3,
       "매입임대": 3,
       "주거비지원": 1,
       "안심주택": 1
     },
     "by_audience": {
-      "청년": 4,
-      "신혼부부": 3,
+      "청년": 3,
+      "신혼부부": 2,
       "신생아": 2
     },
     "by_agency": {
-      "SH": 16,
+      "SH": 14,
       "LH": 1,
       "SEOUL": 1
     }
@@ -70,7 +70,7 @@
       "deadline": "2026-09-16",
       "open_state": "접수예정",
       "event": "신규",
-      "change": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [],
@@ -241,35 +241,6 @@
       "schedule_source": "source_list"
     },
     {
-      "id": "SHYOUTH:81461309e83fb3a0ac53",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "양천구 신혼부부(수요자맞춤형) 추가 입주자 모집 공고",
-      "housing_types": [
-        "기타임대"
-      ],
-      "audiences": [
-        "신혼부부"
-      ],
-      "region": "서울",
-      "published_at": "2026-08-14",
-      "deadline": "",
-      "open_state": "확인필요",
-      "event": "신규",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [
-        "신혼"
-      ],
-      "url": "https://youth.seoul.go.kr/api/sh/list.do?key=2309250014#none",
-      "source": "청년몽땅 SH 공고목록",
-      "content_signature": "7eb231a774582c631ee71aa4972b40f9c4839d0c62501495f15756be9d7ea364",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "",
-      "schedule_source": "source_list"
-    },
-    {
       "id": "SHYOUTH:08b8c6dbfc70bb9863a0",
       "agency": "SH",
       "agency_group": "SH",
@@ -373,7 +344,7 @@
       "deadline": "2026-08-28",
       "open_state": "마감",
       "event": "신규",
-      "change": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [],
@@ -398,7 +369,7 @@
       "deadline": "2026-08-28",
       "open_state": "마감",
       "event": "신규",
-      "change": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [],
@@ -427,7 +398,7 @@
       "deadline": "2026-08-28",
       "open_state": "마감",
       "event": "결과",
-      "change": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -455,8 +426,8 @@
       "published_at": "2026-08-28",
       "deadline": "2026-08-28",
       "open_state": "마감",
-      "event": "수정",
-      "change": "수정",
+      "event": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -466,8 +437,8 @@
       "source": "SH 공식 주택임대 게시판",
       "content_signature": "951e6c4eb9a66299edce563e8331cf4a952ffb557807ee420052be22ed87f265",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "",
-      "schedule_source": "source_list"
+      "application_start": "2026-09-09",
+      "schedule_source": "verified_regression"
     },
     {
       "id": "SH:seq:309403",
@@ -482,8 +453,8 @@
       "published_at": "2026-08-28",
       "deadline": "2026-08-28",
       "open_state": "마감",
-      "event": "수정",
-      "change": "수정",
+      "event": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -512,7 +483,7 @@
       "deadline": "2025-12-30",
       "open_state": "마감",
       "event": "결과",
-      "change": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -525,36 +496,6 @@
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "",
       "schedule_source": "source_list"
-    },
-    {
-      "id": "SHYOUTH:70b54e919fb724d2858a",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "양천구 청년협동조합(수요자맞춤형) 추가 입주자 모집 공고",
-      "housing_types": [
-        "기타임대"
-      ],
-      "audiences": [
-        "청년"
-      ],
-      "region": "서울",
-      "published_at": "2026-08-14",
-      "deadline": "2026-08-28",
-      "open_state": "마감",
-      "event": "신규",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [
-        "청년",
-        "협동조합"
-      ],
-      "url": "https://youth.seoul.go.kr/api/sh/list.do?key=2309250014#none",
-      "source": "청년몽땅 SH 공고목록",
-      "content_signature": "f9c8fb4dac72fdc3bb98f29b189fb4b766a423aeffc0789bb9ef6c53ad68418b",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "2026-08-18",
-      "schedule_source": "verified_regression"
     }
   ]
 }
