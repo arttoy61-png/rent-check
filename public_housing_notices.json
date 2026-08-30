@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-08-30T14:27:06",
+  "generated_at": "2026-08-31T01:41:34",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
     "LH": {
       "count": 1,
       "errors": [
-        "OpenAPI 06/1:<urlopen error timed out>; 13/1:<urlopen error timed out>; 39/1:<urlopen error timed out>",
+        "OpenAPI 06/1:HTTP Error 403: Forbidden; 13/1:HTTP Error 403: Forbidden; 39/1:HTTP Error 403: Forbidden",
         "OpenAPI 0건 — HTML 백업 사용"
       ]
     },
@@ -16,15 +16,15 @@
       "errors": []
     },
     "SEOUL": {
-      "count": 11,
+      "count": 10,
       "errors": [],
-      "excluded_noise": 15
+      "excluded_noise": 16
     },
     "TOTAL": {
-      "count": 26,
+      "count": 25,
       "duplicates_removed": 6,
       "excluded_non_housing": 4,
-      "excluded_outside_seoul": 2,
+      "excluded_outside_seoul": 1,
       "published_count": 16
     }
   },
@@ -35,12 +35,12 @@
     "updated": 0,
     "open_or_check": 12,
     "by_housing_type": {
-      "장기전세": 6,
-      "행복주택": 2,
-      "매입임대": 3,
       "국민임대": 2,
       "공공임대": 1,
+      "행복주택": 2,
       "기타임대": 3,
+      "장기전세": 6,
+      "매입임대": 3,
       "주거비지원": 1,
       "안심주택": 1
     },
@@ -56,6 +56,84 @@
     }
   },
   "items": [
+    {
+      "id": "SHYOUTH:a33e18d6d2d8ccdc889a",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "2026년 국민임대주택 입주자 모집공고(2026.08.20.공고)",
+      "housing_types": [
+        "국민임대",
+        "공공임대"
+      ],
+      "audiences": [],
+      "region": "서울",
+      "published_at": "2026-08-20",
+      "deadline": "2026-09-03",
+      "open_state": "마감임박",
+      "event": "신규",
+      "change": "동일",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [],
+      "url": "https://youth.seoul.go.kr/api/sh/list.do?key=2309250014#none",
+      "source": "청년몽땅 SH 공고목록",
+      "content_signature": "a253519750cf436dde066c8396b4877fe5a59f67cfc6d0617b168ee7a2c9759f",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "2026-08-31",
+      "schedule_source": "verified_regression"
+    },
+    {
+      "id": "LHHTML:966f4cd81334aa91d30a",
+      "agency": "LH",
+      "agency_group": "LH",
+      "title": "서울번동3 행복주택 예비입주자 모집",
+      "housing_types": [
+        "행복주택"
+      ],
+      "audiences": [],
+      "region": "서울특별시",
+      "published_at": "2026-08-19",
+      "deadline": "2026-09-02",
+      "open_state": "마감임박",
+      "event": "수정",
+      "change": "동일",
+      "status_text": "정정공고중",
+      "is_gangseo": false,
+      "keywords": [
+        "행복주택"
+      ],
+      "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1026",
+      "source": "LH청약플러스 실제 공고표",
+      "content_signature": "c76a05009761ddcdd7b2f29fa9e0c22303a0eb4622ed75af7ab66d1923b28f16",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "2026-08-31",
+      "schedule_source": "verified_regression"
+    },
+    {
+      "id": "SH:seq:309073",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "성동구 마장 행복마을 사회적경제조직 종사자(수요자맞춤형) 추가 입주자 모집 공고",
+      "housing_types": [
+        "기타임대"
+      ],
+      "audiences": [],
+      "region": "서울",
+      "published_at": "",
+      "deadline": "2026-09-04",
+      "open_state": "접수중",
+      "event": "신규",
+      "change": "동일",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=309073",
+      "source": "서울주거포털",
+      "content_signature": "91bf09c63aa43a575a21c77170c18059fd3351a280e0a5daa8c5d32e055d3209",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "2026-08-31",
+      "schedule_source": "official_detail_html"
+    },
     {
       "id": "SH:seq:309338",
       "agency": "SH",
@@ -136,59 +214,6 @@
       "schedule_source": "verified_regression"
     },
     {
-      "id": "SHYOUTH:a33e18d6d2d8ccdc889a",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "2026년 국민임대주택 입주자 모집공고(2026.08.20.공고)",
-      "housing_types": [
-        "국민임대",
-        "공공임대"
-      ],
-      "audiences": [],
-      "region": "서울",
-      "published_at": "2026-08-20",
-      "deadline": "2026-09-03",
-      "open_state": "접수예정",
-      "event": "신규",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [],
-      "url": "https://youth.seoul.go.kr/api/sh/list.do?key=2309250014#none",
-      "source": "청년몽땅 SH 공고목록",
-      "content_signature": "a253519750cf436dde066c8396b4877fe5a59f67cfc6d0617b168ee7a2c9759f",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "2026-08-31",
-      "schedule_source": "verified_regression"
-    },
-    {
-      "id": "LHHTML:966f4cd81334aa91d30a",
-      "agency": "LH",
-      "agency_group": "LH",
-      "title": "서울번동3 행복주택 예비입주자 모집",
-      "housing_types": [
-        "행복주택"
-      ],
-      "audiences": [],
-      "region": "서울특별시",
-      "published_at": "2026-08-19",
-      "deadline": "2026-09-02",
-      "open_state": "접수예정",
-      "event": "수정",
-      "change": "동일",
-      "status_text": "정정공고중",
-      "is_gangseo": false,
-      "keywords": [
-        "행복주택"
-      ],
-      "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1026",
-      "source": "LH청약플러스 실제 공고표",
-      "content_signature": "c76a05009761ddcdd7b2f29fa9e0c22303a0eb4622ed75af7ab66d1923b28f16",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "2026-08-31",
-      "schedule_source": "verified_regression"
-    },
-    {
       "id": "SH:seq:308944",
       "agency": "SH",
       "agency_group": "SH",
@@ -213,31 +238,6 @@
       "content_signature": "a936e2b0b6bd7495e7bb37e5891c31cdd6b21d4d64f8d1483bce8bb34de08f84",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "2026-09-07",
-      "schedule_source": "official_detail_html"
-    },
-    {
-      "id": "SH:seq:309073",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "성동구 마장 행복마을 사회적경제조직 종사자(수요자맞춤형) 추가 입주자 모집 공고",
-      "housing_types": [
-        "기타임대"
-      ],
-      "audiences": [],
-      "region": "서울",
-      "published_at": "",
-      "deadline": "2026-09-04",
-      "open_state": "접수예정",
-      "event": "신규",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=309073",
-      "source": "서울주거포털",
-      "content_signature": "91bf09c63aa43a575a21c77170c18059fd3351a280e0a5daa8c5d32e055d3209",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "2026-08-31",
       "schedule_source": "official_detail_html"
     },
     {
