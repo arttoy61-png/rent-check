@@ -12,6 +12,7 @@ on:
     branches:
       - main
     paths:
+      - "automation/collect_kangseo.py"
       - "automation/auction_data.py"
       - "automation/nearby_rent_status.py"
       - "gangseo_apt_builder.py"
@@ -181,10 +182,18 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          # 다른 자동화가 같은 시간에 main을 갱신했으면 먼저 최신 main 위로 이동한다.
+          # 충돌을 숨긴 채 detached HEAD에서 push를 시도하지 않는다.
+          git pull --rebase --autostash
+
           git add widget_data.json hwagok_apt_data.json gangseo_apt_summary.json gangseo_apt_detail.json auction_data.json nearby_rent_status.json molit_kangseo.csv 2>/dev/null || true
-          git commit -m "auto: data ($(date +%F))" || echo "변경 없음"
-          git pull --rebase --autostash || true
-          git push || echo "푸시 생략"
+          if git diff --cached --quiet; then
+            echo "변경 없음"
+            exit 0
+          fi
+          git commit -m "auto: data ($(date +%F))"
+          git push
 
       - name: Report collect failure
         if: steps.collect.outcome != 'success'
