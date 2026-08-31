@@ -15,6 +15,10 @@
   - 부분 수집 시 현재월·전월 중 6개 거래유형이 모두 성공한 월만 통째 교체
   - 날짜/건물/면적/층만으로 중복 제거하지 않음
     (서로 다른 실제 거래를 같은 거래로 오인해 삭제하던 문제 수정)
+
+★ 2026.9.1 변경: 월초 현재월 0건 허용
+  - 새 달 첫날처럼 현재월 신고가 아직 0건이어도 수집 실패로 보지 않음
+  - 과거 요청월이 통째로 빠진 경우에는 기존 안전장치를 그대로 유지
 """
 import os
 import sys
@@ -107,10 +111,21 @@ def main():
                 fresh_months = set(
                     fresh["deal_ym"].dropna().astype(str).unique()
                 )
-                if requested_months and not requested_months.issubset(fresh_months):
-                    missing = sorted(requested_months - fresh_months)
+
+                # 월초에는 현재월 API 호출 자체는 성공해도 아직 신고가 0건일 수 있다.
+                # 현재월 0건은 정상으로 허용하되, 과거 요청월 누락은 계속 실패 처리한다.
+                current_ym = datetime.today().strftime("%Y%m")
+                required_months = {
+                    ym for ym in requested_months if ym < current_ym
+                }
+                missing = sorted(required_months - fresh_months)
+                if missing:
                     raise RuntimeError(
-                        f"요청한 월 데이터 일부가 최신 수집 결과에 없습니다: {missing}"
+                        f"과거 요청월 데이터 일부가 최신 수집 결과에 없습니다: {missing}"
+                    )
+                if current_ym in requested_months and current_ym not in fresh_months:
+                    print(
+                        f"\nℹ {current_ym} 현재월 신고 0건 — 월초 정상 상태로 허용"
                     )
 
                 normalized = fresh
