@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-01T23:10:24",
+  "generated_at": "2026-09-02T03:31:08",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
@@ -16,15 +16,15 @@
       "errors": []
     },
     "SEOUL": {
-      "count": 12,
+      "count": 10,
       "errors": [],
-      "excluded_noise": 14
+      "excluded_noise": 15
     },
     "TOTAL": {
-      "count": 28,
+      "count": 26,
       "duplicates_removed": 4,
       "excluded_non_housing": 5,
-      "excluded_outside_seoul": 3,
+      "excluded_outside_seoul": 1,
       "published_count": 17
     }
   },
@@ -56,6 +56,31 @@
     }
   },
   "items": [
+    {
+      "id": "SH:seq:309523",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "2026년 1~2인가구를 위한 도시형생활주택(건설형원룸) 잔여세대 입주자 모집공고(26. 8. 5.) 서류심사대상자 발표 및 서류제출 안내",
+      "housing_types": [
+        "기타임대"
+      ],
+      "audiences": [],
+      "region": "서울",
+      "published_at": "2026-09-01",
+      "deadline": "2026-09-04",
+      "open_state": "마감임박",
+      "event": "결과",
+      "change": "동일",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=309523",
+      "source": "SH 공식 주택임대 게시판",
+      "content_signature": "6d97043830c0f729197993121810749974a00c8621a4b5e28a0e2ecdbc87cabb",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "2026-09-02",
+      "schedule_source": "official_detail_html"
+    },
     {
       "id": "SH:seq:309462",
       "agency": "SH",
@@ -253,31 +278,6 @@
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "2026-08-19",
       "schedule_source": "verified_regression"
-    },
-    {
-      "id": "SH:seq:309523",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "2026년 1~2인가구를 위한 도시형생활주택(건설형원룸) 잔여세대 입주자 모집공고(26. 8. 5.) 서류심사대상자 발표 및 서류제출 안내",
-      "housing_types": [
-        "기타임대"
-      ],
-      "audiences": [],
-      "region": "서울",
-      "published_at": "2026-09-01",
-      "deadline": "2026-09-04",
-      "open_state": "접수예정",
-      "event": "결과",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=309523",
-      "source": "SH 공식 주택임대 게시판",
-      "content_signature": "6d97043830c0f729197993121810749974a00c8621a4b5e28a0e2ecdbc87cabb",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "2026-09-02",
-      "schedule_source": "official_detail_html"
     },
     {
       "id": "SH:seq:309467",
