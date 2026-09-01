@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-01T17:42:02",
+  "generated_at": "2026-09-01T23:10:24",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
     "LH": {
       "count": 1,
       "errors": [
-        "OpenAPI 06/1:<urlopen error timed out>; 13/1:<urlopen error timed out>; 39/1:<urlopen error timed out>",
+        "OpenAPI 06/1:HTTP Error 403: Forbidden; 13/1:HTTP Error 403: Forbidden; 39/1:HTTP Error 403: Forbidden",
         "OpenAPI 0건 — HTML 백업 사용"
       ]
     },
@@ -32,7 +32,7 @@
     "total": 17,
     "gangseo": 0,
     "new": 0,
-    "updated": 1,
+    "updated": 0,
     "open_or_check": 16,
     "by_housing_type": {
       "기타임대": 5,
@@ -95,7 +95,7 @@
       "deadline": "2026-09-02",
       "open_state": "마감임박",
       "event": "수정",
-      "change": "수정",
+      "change": "동일",
       "status_text": "접수중",
       "is_gangseo": false,
       "keywords": [
