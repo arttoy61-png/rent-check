@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-03T06:03:54",
+  "generated_at": "2026-09-03T13:24:33",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
@@ -18,7 +18,7 @@
     "SEOUL": {
       "count": 12,
       "errors": [],
-      "excluded_noise": 15
+      "excluded_noise": 16
     },
     "TOTAL": {
       "count": 43,
@@ -32,7 +32,7 @@
     "total": 32,
     "gangseo": 0,
     "new": 0,
-    "updated": 0,
+    "updated": 1,
     "open_or_check": 26,
     "by_housing_type": {
       "매입임대": 7,
@@ -771,35 +771,6 @@
       "schedule_source": "source_list"
     },
     {
-      "id": "SH:seq:309497",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "[당첨자발표] 2026년 다자녀 매입임대주택 입주자모집공고(2026. 5. 29.) 당첨자 및 예비자 발표",
-      "housing_types": [
-        "매입임대"
-      ],
-      "audiences": [
-        "다자녀"
-      ],
-      "region": "서울",
-      "published_at": "2026-09-03",
-      "deadline": "2026-05-29",
-      "open_state": "마감",
-      "event": "결과",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [
-        "매입임대"
-      ],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=309497",
-      "source": "SH 공식 주택임대 게시판",
-      "content_signature": "249e995d1d74b778e38276b96d753e4af53c14755fa12630152b60288b18c5cd",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "",
-      "schedule_source": "source_list"
-    },
-    {
       "id": "SH:seq:309699",
       "agency": "SH",
       "agency_group": "SH",
@@ -820,6 +791,35 @@
       "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=309699",
       "source": "SH 공식 주택임대 게시판",
       "content_signature": "ae2d8a1d05bd1b5055311f44a65d0de3d869c9910fccbd195ef2764938d5b506",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "",
+      "schedule_source": "source_list"
+    },
+    {
+      "id": "SH:seq:309497",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "[당첨자발표] 2026년 다자녀 매입임대주택 입주자모집공고(2026. 5. 29.) 당첨자 및 예비자 발표",
+      "housing_types": [
+        "매입임대"
+      ],
+      "audiences": [
+        "다자녀"
+      ],
+      "region": "서울",
+      "published_at": "2026-09-02",
+      "deadline": "2026-05-29",
+      "open_state": "마감",
+      "event": "수정",
+      "change": "수정",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [
+        "매입임대"
+      ],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=309497",
+      "source": "SH 공식 주택임대 게시판",
+      "content_signature": "aa2e1c16b2df75b91eb7f1830d8e16d34e3e38e68bd774f09f6497763f6feb73",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "",
       "schedule_source": "source_list"
