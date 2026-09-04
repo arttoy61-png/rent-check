@@ -1,42 +1,41 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-04T06:03:03",
+  "generated_at": "2026-09-04T13:37:00",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
     "LH": {
-      "count": 45,
+      "count": 0,
       "errors": [
-        "OpenAPI 06/1:HTTP Error 403: Forbidden; 13/1:HTTP Error 403: Forbidden; 39/1:HTTP Error 403: Forbidden",
-        "실제 공고 0건 — 단지조회 최종 백업 사용"
+        "OpenAPI 06/1:<urlopen error timed out>; 13/1:<urlopen error timed out>; 39/1:<urlopen error timed out>"
       ]
     },
     "SH": {
-      "count": 17,
+      "count": 18,
       "errors": []
     },
     "SEOUL": {
       "count": 11,
       "errors": [],
-      "excluded_noise": 16
+      "excluded_noise": 18
     },
     "TOTAL": {
-      "count": 42,
-      "duplicates_removed": 35,
-      "excluded_non_housing": 3,
+      "count": 29,
+      "duplicates_removed": 4,
+      "excluded_non_housing": 5,
       "excluded_outside_seoul": 2,
-      "published_count": 33
+      "published_count": 32
     }
   },
   "summary": {
-    "total": 33,
+    "total": 32,
     "gangseo": 0,
     "new": 0,
     "updated": 0,
     "open_or_check": 24,
     "by_housing_type": {
-      "매입임대": 7,
-      "장기전세": 9,
+      "매입임대": 6,
+      "장기전세": 8,
       "기타임대": 5,
       "행복주택": 13,
       "고령자복지주택": 2,
@@ -50,12 +49,12 @@
     "by_audience": {
       "청년": 3,
       "고령자": 2,
-      "신혼부부": 5,
+      "신혼부부": 4,
       "다자녀": 1,
-      "신생아": 3
+      "신생아": 2
     },
     "by_agency": {
-      "SH": 18,
+      "SH": 17,
       "LH": 14,
       "SEOUL": 1
     }
@@ -315,7 +314,7 @@
       "deadline": "",
       "open_state": "확인필요",
       "event": "신규",
-      "change": "동일",
+      "change": "수집오류-이전값유지",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -342,7 +341,7 @@
       "deadline": "",
       "open_state": "확인필요",
       "event": "신규",
-      "change": "동일",
+      "change": "수집오류-이전값유지",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -369,7 +368,7 @@
       "deadline": "",
       "open_state": "확인필요",
       "event": "신규",
-      "change": "동일",
+      "change": "수집오류-이전값유지",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -396,7 +395,7 @@
       "deadline": "",
       "open_state": "확인필요",
       "event": "신규",
-      "change": "동일",
+      "change": "수집오류-이전값유지",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -423,7 +422,7 @@
       "deadline": "",
       "open_state": "확인필요",
       "event": "신규",
-      "change": "동일",
+      "change": "수집오류-이전값유지",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [],
@@ -448,7 +447,7 @@
       "deadline": "",
       "open_state": "확인필요",
       "event": "신규",
-      "change": "동일",
+      "change": "수집오류-이전값유지",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -478,7 +477,7 @@
       "deadline": "",
       "open_state": "확인필요",
       "event": "신규",
-      "change": "동일",
+      "change": "수집오류-이전값유지",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -509,7 +508,7 @@
       "deadline": "",
       "open_state": "확인필요",
       "event": "신규",
-      "change": "동일",
+      "change": "수집오류-이전값유지",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -539,7 +538,7 @@
       "deadline": "",
       "open_state": "확인필요",
       "event": "신규",
-      "change": "동일",
+      "change": "수집오류-이전값유지",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -567,7 +566,7 @@
       "deadline": "",
       "open_state": "확인필요",
       "event": "신규",
-      "change": "동일",
+      "change": "수집오류-이전값유지",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -594,7 +593,7 @@
       "deadline": "",
       "open_state": "확인필요",
       "event": "신규",
-      "change": "동일",
+      "change": "수집오류-이전값유지",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -624,7 +623,7 @@
       "deadline": "",
       "open_state": "확인필요",
       "event": "신규",
-      "change": "동일",
+      "change": "수집오류-이전값유지",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -652,7 +651,7 @@
       "deadline": "",
       "open_state": "확인필요",
       "event": "신규",
-      "change": "동일",
+      "change": "수집오류-이전값유지",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [],
@@ -677,7 +676,7 @@
       "deadline": "",
       "open_state": "확인필요",
       "event": "신규",
-      "change": "동일",
+      "change": "수집오류-이전값유지",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -855,39 +854,6 @@
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "",
       "schedule_source": "source_list"
-    },
-    {
-      "id": "SH:seq:309506",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "[당첨자발표] (예비2차) 2025년 2-1차 미리내집(신혼신생아매입임대주택2) 당첨자 발표",
-      "housing_types": [
-        "매입임대",
-        "장기전세"
-      ],
-      "audiences": [
-        "신혼부부",
-        "신생아"
-      ],
-      "region": "서울",
-      "published_at": "2026-09-02",
-      "deadline": "2026-09-02",
-      "open_state": "마감",
-      "event": "결과",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [
-        "매입임대",
-        "신혼",
-        "미리내집"
-      ],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=309506",
-      "source": "SH 공식 주택임대 게시판",
-      "content_signature": "3d532da4c9168532ce65d8363cf68e85a86f711db83e0d0db5269660cae8e8a2",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "2026-09-02",
-      "schedule_source": "official_detail_html"
     },
     {
       "id": "SHYOUTH:a33e18d6d2d8ccdc889a",
