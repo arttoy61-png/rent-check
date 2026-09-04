@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-05T01:22:18",
+  "generated_at": "2026-09-05T05:47:10",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
@@ -31,8 +31,8 @@
   "summary": {
     "total": 31,
     "gangseo": 0,
-    "new": 3,
-    "updated": 1,
+    "new": 0,
+    "updated": 0,
     "open_or_check": 22,
     "by_housing_type": {
       "기타임대": 3,
@@ -103,7 +103,7 @@
       "deadline": "2026-09-09",
       "open_state": "접수예정",
       "event": "신규",
-      "change": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -261,7 +261,7 @@
       "deadline": "",
       "open_state": "확인필요",
       "event": "신규",
-      "change": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -681,8 +681,8 @@
       "published_at": "2026-09-04",
       "deadline": "2026-09-04",
       "open_state": "마감",
-      "event": "수정",
-      "change": "수정",
+      "event": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -856,7 +856,7 @@
       "deadline": "2026-09-02",
       "open_state": "마감",
       "event": "신규",
-      "change": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
