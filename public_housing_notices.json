@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-05T14:07:02",
+  "generated_at": "2026-09-05T19:36:07",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
@@ -33,7 +33,7 @@
   "summary": {
     "total": 26,
     "gangseo": 1,
-    "new": 6,
+    "new": 0,
     "updated": 0,
     "open_or_check": 7,
     "by_housing_type": {
@@ -75,7 +75,7 @@
       "deadline": "2026-09-17",
       "open_state": "접수중",
       "event": "신규",
-      "change": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -208,7 +208,7 @@
       "deadline": "",
       "open_state": "확인필요",
       "event": "신규",
-      "change": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [],
@@ -273,8 +273,8 @@
       "source": "서울주거포털 LH공사 연계",
       "content_signature": "4b891a308dd8c8747bc17c199a158e7c63144cc456f5570fdb8b739c3d1e4797",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "",
-      "schedule_source": "source_list"
+      "application_start": "2026-04-23",
+      "schedule_source": "official_detail_html"
     },
     {
       "id": "SH:seq:309801",
@@ -376,7 +376,7 @@
       "deadline": "2026-09-04",
       "open_state": "마감",
       "event": "신규",
-      "change": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -414,7 +414,7 @@
       "content_signature": "bf74a88c013e37989f940dc7d02fc40a5be7400d2c9290913da66fccb73e2411",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "2026-08-31",
-      "schedule_source": "verified_regression"
+      "schedule_source": "official_detail_html"
     },
     {
       "id": "SHYOUTH:a33e18d6d2d8ccdc889a",
@@ -431,7 +431,7 @@
       "deadline": "2026-09-03",
       "open_state": "마감",
       "event": "신규",
-      "change": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [],
@@ -467,7 +467,7 @@
       "content_signature": "50ae352aa8d42c5ddd4215c702d77953b6a778177c1d2765c2d69efc1aae581d",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "2026-08-31",
-      "schedule_source": "verified_regression"
+      "schedule_source": "official_detail_html"
     },
     {
       "id": "SHYOUTH:7ef14dbb51874ab34af0",
@@ -487,7 +487,7 @@
       "deadline": "2026-09-02",
       "open_state": "마감",
       "event": "신규",
-      "change": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -520,7 +520,7 @@
       "deadline": "2026-09-02",
       "open_state": "마감",
       "event": "신규",
-      "change": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -559,8 +559,8 @@
       "source": "서울주거포털 LH공사 연계",
       "content_signature": "646a5033a7971ddb18d0c5087a4590a326add7038a9322e2380f3c70c253318b",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "",
-      "schedule_source": "source_list"
+      "application_start": "2026-07-15",
+      "schedule_source": "official_detail_html"
     },
     {
       "id": "LH:panId:2015122300019941",
@@ -586,8 +586,8 @@
       "source": "서울주거포털 LH공사 연계",
       "content_signature": "c79291c6431d8ef5ed3db625de08912d9503f59843a98b5d3470bf6a2ea0341e",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "",
-      "schedule_source": "source_list"
+      "application_start": "2026-05-15",
+      "schedule_source": "official_detail_html"
     },
     {
       "id": "LH:panId:2015122300019968",
@@ -613,8 +613,8 @@
       "source": "서울주거포털 LH공사 연계",
       "content_signature": "71dffaee21177d93b6a97dd8c50d761b95aaa2164bfaf92349b46fb983381cf4",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "",
-      "schedule_source": "source_list"
+      "application_start": "2026-05-15",
+      "schedule_source": "official_detail_html"
     },
     {
       "id": "LH:panId:2015122300019890",
@@ -640,8 +640,8 @@
       "source": "서울주거포털 LH공사 연계",
       "content_signature": "6a776bb58a4db4fc230f278af09798be97d578e3cf418634dc5fbe384e68f13a",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "",
-      "schedule_source": "source_list"
+      "application_start": "2026-05-07",
+      "schedule_source": "official_detail_html"
     },
     {
       "id": "LH:panId:2015122300018941",
@@ -665,8 +665,8 @@
       "source": "서울주거포털 LH공사 연계",
       "content_signature": "a13631c08352671fc9304a36fec3c9f94fcedb1d19e0e19929d9496f17e24e54",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "",
-      "schedule_source": "source_list"
+      "application_start": "2025-09-16",
+      "schedule_source": "official_detail_html"
     },
     {
       "id": "LH:panId:2015122300019045",
@@ -690,8 +690,8 @@
       "source": "서울주거포털 LH공사 연계",
       "content_signature": "c17efcc77289899284dbff1146889ea50b43fb42e95e44b8b03edc86d75a7ace",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "",
-      "schedule_source": "source_list"
+      "application_start": "2025-11-24",
+      "schedule_source": "official_detail_html"
     },
     {
       "id": "LH:panId:2015122300018684",
@@ -715,8 +715,8 @@
       "source": "서울주거포털 LH공사 연계",
       "content_signature": "0c4172b33cd308f4382c98e5af60517ff1efef8210b186a6b01c553e4f9e8499",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "",
-      "schedule_source": "source_list"
+      "application_start": "2025-09-16",
+      "schedule_source": "official_detail_html"
     },
     {
       "id": "SH:seq:308971",
