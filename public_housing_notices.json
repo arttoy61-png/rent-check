@@ -1,71 +1,93 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-05T13:36:12",
+  "generated_at": "2026-09-05T14:07:02",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
     "LH": {
-      "count": 0,
-      "errors": [
-        "서울주거포털 LH 연계 실패: https://housing.seoul.go.kr/site/main/lh/publicLease/list?cnpCdNm=seoul&cp=1:<urlopen error timed out>; https://housing.seoul.go.kr/site/main/lh/publicSale/list?cnpCdNm=seoul&cp=1:<urlopen error timed out>",
-        "LH OpenAPI 실패",
-        "LH청약플러스 공고표 실패",
-        "LH 공식 공고 소스에서 공고를 확인하지 못함"
-      ]
+      "count": 10,
+      "errors": [],
+      "status": "정상",
+      "fresh_count": 10,
+      "carried_count": 0,
+      "failure_streak": 0,
+      "warnings": []
     },
     "SH": {
-      "count": 9,
-      "errors": [
-        "https://youth.seoul.go.kr/api/sh/list.do?key=2309250014 :: <urlopen error timed out>"
-      ]
+      "count": 19,
+      "errors": []
     },
     "SEOUL": {
-      "count": 0,
-      "errors": [
-        "https://housing.seoul.go.kr/site/main/sh/publicLease/list :: <urlopen error timed out>",
-        "https://housing.seoul.go.kr/ :: <urlopen error timed out>",
-        "https://youth.seoul.go.kr/bbs/list.do?key=2303300002&sc_bbsCtgrySn=2304110001 :: <urlopen error timed out>",
-        "https://youth.seoul.go.kr/infoData/sprtInfo/list.do?key=2309130006 :: <urlopen error timed out>"
-      ],
-      "excluded_noise": 0
+      "count": 12,
+      "errors": [],
+      "excluded_noise": 18
     },
     "TOTAL": {
-      "count": 9,
-      "duplicates_removed": 0,
-      "excluded_non_housing": 6,
-      "excluded_outside_seoul": 0,
-      "published_count": 21
+      "count": 41,
+      "duplicates_removed": 4,
+      "excluded_non_housing": 8,
+      "excluded_outside_seoul": 3,
+      "published_count": 26
     }
   },
   "summary": {
-    "total": 21,
+    "total": 26,
     "gangseo": 1,
-    "new": 0,
+    "new": 6,
     "updated": 0,
-    "open_or_check": 6,
+    "open_or_check": 7,
     "by_housing_type": {
-      "장기전세": 4,
+      "기타임대": 3,
+      "장기전세": 7,
       "행복주택": 7,
-      "매입임대": 2,
+      "매입임대": 5,
       "주거비지원": 1,
-      "공공임대": 1,
+      "공공임대": 2,
       "안심주택": 2,
-      "기타임대": 1,
-      "국민임대": 2,
+      "국민임대": 3,
       "영구임대": 1
     },
     "by_audience": {
       "청년": 4,
-      "신혼부부": 1,
-      "신생아": 1
+      "신혼부부": 3,
+      "신생아": 3
     },
     "by_agency": {
-      "SH": 9,
-      "SEOUL": 2,
+      "SH": 15,
+      "SEOUL": 1,
       "LH": 10
     }
   },
   "items": [
+    {
+      "id": "SHYOUTH:f55e60eb7f854e40f169",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "금천구 1인가구 청년 맞춤형주택(수요자맞춤형) 추가 입주자 모집 공고",
+      "housing_types": [
+        "기타임대"
+      ],
+      "audiences": [
+        "청년"
+      ],
+      "region": "서울",
+      "published_at": "2026-08-19",
+      "deadline": "2026-09-17",
+      "open_state": "접수중",
+      "event": "신규",
+      "change": "신규",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [
+        "청년"
+      ],
+      "url": "https://youth.seoul.go.kr/api/sh/list.do?key=2309250014#none",
+      "source": "청년몽땅 SH 공고목록",
+      "content_signature": "6e118c616b8c69eb540182ea2b6c437cee11498b375ed7e540f5465c54d13ae0",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "2026-08-19",
+      "schedule_source": "verified_regression"
+    },
     {
       "id": "SH:seq:308944",
       "agency": "SH",
@@ -80,7 +102,7 @@
       "deadline": "2026-09-09",
       "open_state": "접수예정",
       "event": "신규",
-      "change": "수집오류-이전값유지",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -107,7 +129,7 @@
       "deadline": "2026-09-15",
       "open_state": "접수예정",
       "event": "신규",
-      "change": "수집오류-이전값유지",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [],
@@ -132,7 +154,7 @@
       "deadline": "2026-09-11",
       "open_state": "접수예정",
       "event": "신규",
-      "change": "수집오류-이전값유지",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -159,7 +181,7 @@
       "deadline": "2026-09-30",
       "open_state": "접수예정",
       "event": "신규",
-      "change": "수집오류-이전값유지",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -173,28 +195,26 @@
       "schedule_source": "verified_regression"
     },
     {
-      "id": "SEOUL:df8e1b04c6d817dcfc6e",
-      "agency": "청년몽땅",
-      "agency_group": "SEOUL",
-      "title": "서울청년센터 서초<9월 서초청년스쿨: 청약 특강> 참여자 모집 .....2743212",
-      "housing_types": [],
-      "audiences": [
-        "청년"
+      "id": "SHYOUTH:807ba55b1308f4dedf26",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "2026-3차 충신동 연극인 두레주택 잔여세대 입주자 모집공고(26. 8. 21.)",
+      "housing_types": [
+        "기타임대"
       ],
+      "audiences": [],
       "region": "서울",
-      "published_at": "",
+      "published_at": "2026-08-21",
       "deadline": "",
       "open_state": "확인필요",
       "event": "신규",
-      "change": "수집오류-이전값유지",
+      "change": "신규",
       "status_text": "",
       "is_gangseo": false,
-      "keywords": [
-        "청년"
-      ],
-      "url": "https://youth.seoul.go.kr/infoData/sprtInfo/list.do?key=2309130006#none",
-      "source": "청년몽땅",
-      "content_signature": "f775dac97cd7bbfab4f7095a4ab74c7b512d3bada2db95fbb62c908931771cd5",
+      "keywords": [],
+      "url": "https://youth.seoul.go.kr/api/sh/list.do?key=2309250014#none",
+      "source": "청년몽땅 SH 공고목록",
+      "content_signature": "82661afd5becfa8fe700ef3e35a03fb2164482228555a1ceb72a4718e661f2d4",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "",
       "schedule_source": "source_list"
@@ -215,7 +235,7 @@
       "deadline": "",
       "open_state": "확인필요",
       "event": "결과",
-      "change": "수집오류-이전값유지",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -243,7 +263,7 @@
       "deadline": "2026-04-24",
       "open_state": "마감",
       "event": "신규",
-      "change": "수집오류-이전값유지",
+      "change": "동일",
       "status_text": "접수마감",
       "is_gangseo": true,
       "keywords": [
@@ -342,6 +362,34 @@
       "schedule_source": "source_list"
     },
     {
+      "id": "SHYOUTH:834e79674e01df2485b3",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "2026년 일반주택형 미리내집(공공한옥) 잔여세대 입주자 모집공고(2026. 8. 24.)",
+      "housing_types": [
+        "매입임대",
+        "장기전세"
+      ],
+      "audiences": [],
+      "region": "서울",
+      "published_at": "2026-08-24",
+      "deadline": "2026-09-04",
+      "open_state": "마감",
+      "event": "신규",
+      "change": "신규",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [
+        "미리내집"
+      ],
+      "url": "https://youth.seoul.go.kr/api/sh/list.do?key=2309250014#none",
+      "source": "청년몽땅 SH 공고목록",
+      "content_signature": "e7054af25e353875719277d89c09f3ec4220fd2d1ac1a3c910c0a4e19afdae99",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "2026-09-03",
+      "schedule_source": "verified_regression"
+    },
+    {
       "id": "LH:panId:2015122300020605",
       "agency": "LH",
       "agency_group": "LH",
@@ -355,7 +403,7 @@
       "deadline": "2026-09-02",
       "open_state": "마감",
       "event": "수정",
-      "change": "수집오류-이전값유지",
+      "change": "동일",
       "status_text": "접수마감",
       "is_gangseo": false,
       "keywords": [
@@ -364,6 +412,32 @@
       "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020605&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026",
       "source": "서울주거포털 LH공사 연계",
       "content_signature": "bf74a88c013e37989f940dc7d02fc40a5be7400d2c9290913da66fccb73e2411",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "2026-08-31",
+      "schedule_source": "verified_regression"
+    },
+    {
+      "id": "SHYOUTH:a33e18d6d2d8ccdc889a",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "2026년 국민임대주택 입주자 모집공고(2026.08.20.공고)",
+      "housing_types": [
+        "국민임대",
+        "공공임대"
+      ],
+      "audiences": [],
+      "region": "서울",
+      "published_at": "2026-08-20",
+      "deadline": "2026-09-03",
+      "open_state": "마감",
+      "event": "신규",
+      "change": "신규",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [],
+      "url": "https://youth.seoul.go.kr/api/sh/list.do?key=2309250014#none",
+      "source": "청년몽땅 SH 공고목록",
+      "content_signature": "a253519750cf436dde066c8396b4877fe5a59f67cfc6d0617b168ee7a2c9759f",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "2026-08-31",
       "schedule_source": "verified_regression"
@@ -382,7 +456,7 @@
       "deadline": "2026-09-02",
       "open_state": "마감",
       "event": "신규",
-      "change": "수집오류-이전값유지",
+      "change": "동일",
       "status_text": "접수마감",
       "is_gangseo": false,
       "keywords": [
@@ -391,6 +465,72 @@
       "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020577&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026",
       "source": "서울주거포털 LH공사 연계",
       "content_signature": "50ae352aa8d42c5ddd4215c702d77953b6a778177c1d2765c2d69efc1aae581d",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "2026-08-31",
+      "schedule_source": "verified_regression"
+    },
+    {
+      "id": "SHYOUTH:7ef14dbb51874ab34af0",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "2026년 1차 일반주택형 미리내집(신혼신생아매입임대주택Ⅱ) 입주자 모집공고(2026.08.14.) 주택정보 추가",
+      "housing_types": [
+        "매입임대",
+        "장기전세"
+      ],
+      "audiences": [
+        "신혼부부",
+        "신생아"
+      ],
+      "region": "서울",
+      "published_at": "2026-08-14",
+      "deadline": "2026-09-02",
+      "open_state": "마감",
+      "event": "신규",
+      "change": "신규",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [
+        "매입임대",
+        "신혼",
+        "미리내집"
+      ],
+      "url": "https://youth.seoul.go.kr/api/sh/list.do?key=2309250014#none",
+      "source": "청년몽땅 SH 공고목록",
+      "content_signature": "8f6c3f8e0d071c2a93389ed5948e20b7704381ce27e34febdd3de4fa93c7122c",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "2026-08-31",
+      "schedule_source": "verified_regression"
+    },
+    {
+      "id": "SHYOUTH:08b8c6dbfc70bb9863a0",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "2026년 1차 일반주택형 미리내집(신혼신생아매입임대주택Ⅱ) 입주자 모집공고(2026.08.14.)",
+      "housing_types": [
+        "매입임대",
+        "장기전세"
+      ],
+      "audiences": [
+        "신혼부부",
+        "신생아"
+      ],
+      "region": "서울",
+      "published_at": "2026-08-14",
+      "deadline": "2026-09-02",
+      "open_state": "마감",
+      "event": "신규",
+      "change": "신규",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [
+        "매입임대",
+        "신혼",
+        "미리내집"
+      ],
+      "url": "https://youth.seoul.go.kr/api/sh/list.do?key=2309250014#none",
+      "source": "청년몽땅 SH 공고목록",
+      "content_signature": "0817fcd3246e063e516bd20cf63695975ad1c5f3f5d8c3acdb888f4da0b35581",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "2026-08-31",
       "schedule_source": "verified_regression"
@@ -409,7 +549,7 @@
       "deadline": "2026-07-28",
       "open_state": "마감",
       "event": "신규",
-      "change": "수집오류-이전값유지",
+      "change": "동일",
       "status_text": "접수마감",
       "is_gangseo": false,
       "keywords": [
@@ -436,7 +576,7 @@
       "deadline": "2026-05-28",
       "open_state": "마감",
       "event": "신규",
-      "change": "수집오류-이전값유지",
+      "change": "동일",
       "status_text": "접수마감",
       "is_gangseo": false,
       "keywords": [
@@ -463,7 +603,7 @@
       "deadline": "2026-05-28",
       "open_state": "마감",
       "event": "신규",
-      "change": "수집오류-이전값유지",
+      "change": "동일",
       "status_text": "접수마감",
       "is_gangseo": false,
       "keywords": [
@@ -490,7 +630,7 @@
       "deadline": "2026-05-21",
       "open_state": "마감",
       "event": "신규",
-      "change": "수집오류-이전값유지",
+      "change": "동일",
       "status_text": "접수마감",
       "is_gangseo": false,
       "keywords": [
@@ -517,7 +657,7 @@
       "deadline": "2025-09-16",
       "open_state": "마감",
       "event": "수정",
-      "change": "수집오류-이전값유지",
+      "change": "동일",
       "status_text": "접수마감",
       "is_gangseo": false,
       "keywords": [],
@@ -542,7 +682,7 @@
       "deadline": "2025-11-28",
       "open_state": "마감",
       "event": "신규",
-      "change": "수집오류-이전값유지",
+      "change": "동일",
       "status_text": "접수마감",
       "is_gangseo": false,
       "keywords": [],
@@ -567,7 +707,7 @@
       "deadline": "2025-09-16",
       "open_state": "마감",
       "event": "신규",
-      "change": "수집오류-이전값유지",
+      "change": "동일",
       "status_text": "접수마감",
       "is_gangseo": false,
       "keywords": [],
@@ -592,7 +732,7 @@
       "deadline": "2026-09-04",
       "open_state": "마감",
       "event": "신규",
-      "change": "수집오류-이전값유지",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -623,7 +763,7 @@
       "deadline": "2026-09-02",
       "open_state": "마감",
       "event": "신규",
-      "change": "수집오류-이전값유지",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
