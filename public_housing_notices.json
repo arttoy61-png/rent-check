@@ -1,15 +1,12 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-05T05:47:10",
+  "generated_at": "2026-09-05T10:43:09",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
     "LH": {
-      "count": 45,
-      "errors": [
-        "OpenAPI 06/1:HTTP Error 403: Forbidden; 13/1:HTTP Error 403: Forbidden; 39/1:HTTP Error 403: Forbidden",
-        "실제 공고 0건 — 단지조회 최종 백업 사용"
-      ]
+      "count": 10,
+      "errors": []
     },
     "SH": {
       "count": 19,
@@ -21,42 +18,39 @@
       "excluded_noise": 15
     },
     "TOTAL": {
-      "count": 46,
-      "duplicates_removed": 35,
+      "count": 42,
+      "duplicates_removed": 4,
       "excluded_non_housing": 8,
       "excluded_outside_seoul": 3,
-      "published_count": 31
+      "published_count": 27
     }
   },
   "summary": {
-    "total": 31,
-    "gangseo": 0,
-    "new": 0,
+    "total": 27,
+    "gangseo": 1,
+    "new": 10,
     "updated": 0,
-    "open_or_check": 22,
+    "open_or_check": 8,
     "by_housing_type": {
       "기타임대": 3,
-      "장기전세": 9,
-      "행복주택": 13,
+      "장기전세": 7,
+      "행복주택": 7,
       "매입임대": 5,
-      "고령자복지주택": 2,
-      "영구임대": 1,
-      "신혼희망타운": 2,
       "주거비지원": 1,
+      "공공임대": 2,
       "안심주택": 2,
-      "국민임대": 1,
-      "공공임대": 1
+      "국민임대": 3,
+      "영구임대": 1
     },
     "by_audience": {
       "청년": 5,
-      "고령자": 2,
-      "신혼부부": 5,
+      "신혼부부": 3,
       "신생아": 3
     },
     "by_agency": {
       "SH": 15,
-      "LH": 14,
-      "SEOUL": 2
+      "SEOUL": 2,
+      "LH": 10
     }
   },
   "items": [
@@ -221,33 +215,6 @@
       "schedule_source": "source_list"
     },
     {
-      "id": "LHUNIT:서울휘경 행복주택",
-      "agency": "LH",
-      "agency_group": "LH",
-      "title": "서울휘경 행복주택",
-      "housing_types": [
-        "행복주택"
-      ],
-      "audiences": [],
-      "region": "서울",
-      "published_at": "",
-      "deadline": "",
-      "open_state": "확인필요",
-      "event": "신규",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [
-        "행복주택"
-      ],
-      "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1026",
-      "source": "LH 단지조회 백업",
-      "content_signature": "84a46caf09c7934786dd28564b61a7f301591f9f37a97f8adfdfa9d1d557e1ab",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "",
-      "schedule_source": "source_list"
-    },
-    {
       "id": "SEOUL:df8e1b04c6d817dcfc6e",
       "agency": "청년몽땅",
       "agency_group": "SEOUL",
@@ -270,368 +237,6 @@
       "url": "https://youth.seoul.go.kr/infoData/sprtInfo/list.do?key=2309130006#none",
       "source": "청년몽땅",
       "content_signature": "f775dac97cd7bbfab4f7095a4ab74c7b512d3bada2db95fbb62c908931771cd5",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "",
-      "schedule_source": "source_list"
-    },
-    {
-      "id": "LHUNIT:서울잠실 행복주택",
-      "agency": "LH",
-      "agency_group": "LH",
-      "title": "서울잠실 행복주택",
-      "housing_types": [
-        "행복주택"
-      ],
-      "audiences": [],
-      "region": "서울",
-      "published_at": "",
-      "deadline": "",
-      "open_state": "확인필요",
-      "event": "신규",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [
-        "행복주택"
-      ],
-      "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1026",
-      "source": "LH 단지조회 백업",
-      "content_signature": "29b3f278476b00766ab669f2695fdcd13f0636afaf7daa934b23e25c4313789f",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "",
-      "schedule_source": "source_list"
-    },
-    {
-      "id": "LHUNIT:서울양원 S2BL 행복주택",
-      "agency": "LH",
-      "agency_group": "LH",
-      "title": "서울양원 S2BL 행복주택",
-      "housing_types": [
-        "행복주택"
-      ],
-      "audiences": [],
-      "region": "서울",
-      "published_at": "",
-      "deadline": "",
-      "open_state": "확인필요",
-      "event": "신규",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [
-        "행복주택"
-      ],
-      "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1026",
-      "source": "LH 단지조회 백업",
-      "content_signature": "a639a38515e499f8b5c8ff09852d73578b2441b2540edae16aea48b597a7345e",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "",
-      "schedule_source": "source_list"
-    },
-    {
-      "id": "LHUNIT:서울양원 S1BL 임대주택",
-      "agency": "LH",
-      "agency_group": "LH",
-      "title": "서울양원 S1BL 임대주택",
-      "housing_types": [
-        "행복주택"
-      ],
-      "audiences": [],
-      "region": "서울",
-      "published_at": "",
-      "deadline": "",
-      "open_state": "확인필요",
-      "event": "신규",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [
-        "행복주택"
-      ],
-      "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1026",
-      "source": "LH 단지조회 백업",
-      "content_signature": "1705699f0af77139ae385e2d2d324051dcf42741014dbecc7e537ab66740d842",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "",
-      "schedule_source": "source_list"
-    },
-    {
-      "id": "LHUNIT:서울서초3블록",
-      "agency": "LH",
-      "agency_group": "LH",
-      "title": "서울서초3블록",
-      "housing_types": [
-        "장기전세"
-      ],
-      "audiences": [],
-      "region": "서울",
-      "published_at": "",
-      "deadline": "",
-      "open_state": "확인필요",
-      "event": "신규",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [],
-      "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1026",
-      "source": "LH 단지조회 백업",
-      "content_signature": "e1f875a3bb56decaf174525dd5a8c1bf890d3e66a021f812248c6fe4ea94a874",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "",
-      "schedule_source": "source_list"
-    },
-    {
-      "id": "LHUNIT:서울삼전 1단지",
-      "agency": "LH",
-      "agency_group": "LH",
-      "title": "서울삼전 1단지",
-      "housing_types": [
-        "행복주택"
-      ],
-      "audiences": [],
-      "region": "서울",
-      "published_at": "",
-      "deadline": "",
-      "open_state": "확인필요",
-      "event": "신규",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [
-        "행복주택"
-      ],
-      "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1026",
-      "source": "LH 단지조회 백업",
-      "content_signature": "9cb98ba899fbc58952f72dd713bcbe619ee731d91ebe587f1301d21ef6378cb0",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "",
-      "schedule_source": "source_list"
-    },
-    {
-      "id": "LHUNIT:서울번동3 고령자복지주택(행복주택)",
-      "agency": "LH",
-      "agency_group": "LH",
-      "title": "서울번동3 고령자복지주택(행복주택)",
-      "housing_types": [
-        "행복주택",
-        "고령자복지주택"
-      ],
-      "audiences": [
-        "고령자"
-      ],
-      "region": "서울",
-      "published_at": "",
-      "deadline": "",
-      "open_state": "확인필요",
-      "event": "신규",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [
-        "행복주택"
-      ],
-      "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1026",
-      "source": "LH 단지조회 백업",
-      "content_signature": "c59a8ca4f4f66d3fa736e6fc7f5bb34c579dee72ba88b01f6c48dd33382be2ac",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "",
-      "schedule_source": "source_list"
-    },
-    {
-      "id": "LHUNIT:서울독산13(광명하안13) 고령자복지주택(행복주택·영구임대)",
-      "agency": "LH",
-      "agency_group": "LH",
-      "title": "서울독산13(광명하안13) 고령자복지주택(행복주택·영구임대)",
-      "housing_types": [
-        "행복주택",
-        "영구임대",
-        "고령자복지주택"
-      ],
-      "audiences": [
-        "고령자"
-      ],
-      "region": "서울",
-      "published_at": "",
-      "deadline": "",
-      "open_state": "확인필요",
-      "event": "신규",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [
-        "행복주택"
-      ],
-      "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1026",
-      "source": "LH 단지조회 백업",
-      "content_signature": "2e5b0e067a99ef76d41507a4c94b004ba06ca5278dd341c6ebab62366e2782d9",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "",
-      "schedule_source": "source_list"
-    },
-    {
-      "id": "LHUNIT:서울대방 신혼희망타운 행복주택",
-      "agency": "LH",
-      "agency_group": "LH",
-      "title": "서울대방 신혼희망타운 행복주택",
-      "housing_types": [
-        "행복주택",
-        "신혼희망타운"
-      ],
-      "audiences": [
-        "신혼부부"
-      ],
-      "region": "서울",
-      "published_at": "",
-      "deadline": "",
-      "open_state": "확인필요",
-      "event": "신규",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [
-        "신혼",
-        "행복주택"
-      ],
-      "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1026",
-      "source": "LH 단지조회 백업",
-      "content_signature": "3c8d1693bb1878c8d822ce0ce62ff95ec8b995653dd1ce448824cb6c280c35b9",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "",
-      "schedule_source": "source_list"
-    },
-    {
-      "id": "LHUNIT:서울금천 행복주택",
-      "agency": "LH",
-      "agency_group": "LH",
-      "title": "서울금천 행복주택",
-      "housing_types": [
-        "행복주택"
-      ],
-      "audiences": [],
-      "region": "서울",
-      "published_at": "",
-      "deadline": "",
-      "open_state": "확인필요",
-      "event": "신규",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [
-        "행복주택"
-      ],
-      "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1026",
-      "source": "LH 단지조회 백업",
-      "content_signature": "e7b0f579f5069e348d9c3db7d8abed12ab53395a0fbb906bd43f56b5577d7461",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "",
-      "schedule_source": "source_list"
-    },
-    {
-      "id": "LHUNIT:서울공릉 행복주택",
-      "agency": "LH",
-      "agency_group": "LH",
-      "title": "서울공릉 행복주택",
-      "housing_types": [
-        "행복주택"
-      ],
-      "audiences": [],
-      "region": "서울",
-      "published_at": "",
-      "deadline": "",
-      "open_state": "확인필요",
-      "event": "신규",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [
-        "행복주택"
-      ],
-      "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1026",
-      "source": "LH 단지조회 백업",
-      "content_signature": "4e9269cbb306a733b8fd883b81ebc0bbb24ed1892e74ed6f9a2a217366a52c1c",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "",
-      "schedule_source": "source_list"
-    },
-    {
-      "id": "LHUNIT:서울공릉 신혼희망타운 행복주택",
-      "agency": "LH",
-      "agency_group": "LH",
-      "title": "서울공릉 신혼희망타운 행복주택",
-      "housing_types": [
-        "행복주택",
-        "신혼희망타운"
-      ],
-      "audiences": [
-        "신혼부부"
-      ],
-      "region": "서울",
-      "published_at": "",
-      "deadline": "",
-      "open_state": "확인필요",
-      "event": "신규",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [
-        "신혼",
-        "행복주택"
-      ],
-      "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1026",
-      "source": "LH 단지조회 백업",
-      "content_signature": "2f98927523117f6fa30cb7523dcf0a020fc8b22aa6343ac3c014417a4808e380",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "",
-      "schedule_source": "source_list"
-    },
-    {
-      "id": "LHUNIT:서울강남 5블록",
-      "agency": "LH",
-      "agency_group": "LH",
-      "title": "서울강남 5블록",
-      "housing_types": [
-        "장기전세"
-      ],
-      "audiences": [],
-      "region": "서울",
-      "published_at": "",
-      "deadline": "",
-      "open_state": "확인필요",
-      "event": "신규",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [],
-      "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1026",
-      "source": "LH 단지조회 백업",
-      "content_signature": "37991eb266bd46ef7dbc7cbfbba3ea6db3f8249fcd657176043aef6252e37d3b",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "",
-      "schedule_source": "source_list"
-    },
-    {
-      "id": "LHUNIT:서울가좌 행복주택",
-      "agency": "LH",
-      "agency_group": "LH",
-      "title": "서울가좌 행복주택",
-      "housing_types": [
-        "행복주택"
-      ],
-      "audiences": [],
-      "region": "서울",
-      "published_at": "",
-      "deadline": "",
-      "open_state": "확인필요",
-      "event": "신규",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [
-        "행복주택"
-      ],
-      "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancList.do?mi=1026",
-      "source": "LH 단지조회 백업",
-      "content_signature": "8f725e1c48b7b9675397653a4e7ca7065b874abfde3c5a7baee24a2e2d1e8628",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "",
       "schedule_source": "source_list"
@@ -662,6 +267,33 @@
       "url": "https://housing.seoul.go.kr/site/main/board/notice/12675",
       "source": "서울주거포털",
       "content_signature": "af45e2d22ec637be3bbc808603166f707234cb39c686f419c254b3add02b78d2",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "",
+      "schedule_source": "source_list"
+    },
+    {
+      "id": "LH:panId:2015122300019657",
+      "agency": "LH",
+      "agency_group": "LH",
+      "title": "서울등촌6단지 50년 공공임대 예비입주자 모집",
+      "housing_types": [
+        "공공임대"
+      ],
+      "audiences": [],
+      "region": "서울특별시",
+      "published_at": "2026-04-10",
+      "deadline": "2026-04-24",
+      "open_state": "마감",
+      "event": "신규",
+      "change": "신규",
+      "status_text": "접수마감",
+      "is_gangseo": true,
+      "keywords": [
+        "등촌"
+      ],
+      "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300019657&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=08&mi=1026",
+      "source": "서울주거포털 LH공사 연계",
+      "content_signature": "4b891a308dd8c8747bc17c199a158e7c63144cc456f5570fdb8b739c3d1e4797",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "",
       "schedule_source": "source_list"
@@ -780,6 +412,33 @@
       "schedule_source": "verified_regression"
     },
     {
+      "id": "LH:panId:2015122300020605",
+      "agency": "LH",
+      "agency_group": "LH",
+      "title": "[정정공고]서울번동3 행복주택 예비입주자 모집",
+      "housing_types": [
+        "행복주택"
+      ],
+      "audiences": [],
+      "region": "서울특별시",
+      "published_at": "2026-08-21",
+      "deadline": "2026-09-02",
+      "open_state": "마감",
+      "event": "수정",
+      "change": "신규",
+      "status_text": "접수마감",
+      "is_gangseo": false,
+      "keywords": [
+        "행복주택"
+      ],
+      "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020605&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026",
+      "source": "서울주거포털 LH공사 연계",
+      "content_signature": "bf74a88c013e37989f940dc7d02fc40a5be7400d2c9290913da66fccb73e2411",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "2026-08-31",
+      "schedule_source": "verified_regression"
+    },
+    {
       "id": "SHYOUTH:a33e18d6d2d8ccdc889a",
       "agency": "SH",
       "agency_group": "SH",
@@ -801,6 +460,33 @@
       "url": "https://youth.seoul.go.kr/api/sh/list.do?key=2309250014#none",
       "source": "청년몽땅 SH 공고목록",
       "content_signature": "a253519750cf436dde066c8396b4877fe5a59f67cfc6d0617b168ee7a2c9759f",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "2026-08-31",
+      "schedule_source": "verified_regression"
+    },
+    {
+      "id": "LH:panId:2015122300020577",
+      "agency": "LH",
+      "agency_group": "LH",
+      "title": "서울번동3 행복주택 예비입주자 모집",
+      "housing_types": [
+        "행복주택"
+      ],
+      "audiences": [],
+      "region": "서울특별시",
+      "published_at": "2026-08-19",
+      "deadline": "2026-09-02",
+      "open_state": "마감",
+      "event": "신규",
+      "change": "신규",
+      "status_text": "접수마감",
+      "is_gangseo": false,
+      "keywords": [
+        "행복주택"
+      ],
+      "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020577&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026",
+      "source": "서울주거포털 LH공사 연계",
+      "content_signature": "50ae352aa8d42c5ddd4215c702d77953b6a778177c1d2765c2d69efc1aae581d",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "2026-08-31",
       "schedule_source": "verified_regression"
@@ -870,6 +556,189 @@
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "2026-08-31",
       "schedule_source": "verified_regression"
+    },
+    {
+      "id": "LH:panId:2015122300020326",
+      "agency": "LH",
+      "agency_group": "LH",
+      "title": "서울관악봉천 H-1ㆍ2ㆍ3BL 행복주택 예비입주자 모집공고(2026.07.15)",
+      "housing_types": [
+        "행복주택"
+      ],
+      "audiences": [],
+      "region": "서울특별시",
+      "published_at": "2026-07-15",
+      "deadline": "2026-07-28",
+      "open_state": "마감",
+      "event": "신규",
+      "change": "신규",
+      "status_text": "접수마감",
+      "is_gangseo": false,
+      "keywords": [
+        "행복주택"
+      ],
+      "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020326&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026",
+      "source": "서울주거포털 LH공사 연계",
+      "content_signature": "646a5033a7971ddb18d0c5087a4590a326add7038a9322e2380f3c70c253318b",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "",
+      "schedule_source": "source_list"
+    },
+    {
+      "id": "LH:panId:2015122300019941",
+      "agency": "LH",
+      "agency_group": "LH",
+      "title": "서울오류 행복주택 예비입주자 모집공고(2026.05.15)",
+      "housing_types": [
+        "행복주택"
+      ],
+      "audiences": [],
+      "region": "서울특별시",
+      "published_at": "2026-05-15",
+      "deadline": "2026-05-28",
+      "open_state": "마감",
+      "event": "신규",
+      "change": "신규",
+      "status_text": "접수마감",
+      "is_gangseo": false,
+      "keywords": [
+        "행복주택"
+      ],
+      "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300019941&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026",
+      "source": "서울주거포털 LH공사 연계",
+      "content_signature": "c79291c6431d8ef5ed3db625de08912d9503f59843a98b5d3470bf6a2ea0341e",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "",
+      "schedule_source": "source_list"
+    },
+    {
+      "id": "LH:panId:2015122300019968",
+      "agency": "LH",
+      "agency_group": "LH",
+      "title": "서울금천 행복주택(산업단지형) 예비입주자 모집공고(2026.05.15)",
+      "housing_types": [
+        "행복주택"
+      ],
+      "audiences": [],
+      "region": "서울특별시",
+      "published_at": "2026-05-15",
+      "deadline": "2026-05-28",
+      "open_state": "마감",
+      "event": "신규",
+      "change": "신규",
+      "status_text": "접수마감",
+      "is_gangseo": false,
+      "keywords": [
+        "행복주택"
+      ],
+      "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300019968&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026",
+      "source": "서울주거포털 LH공사 연계",
+      "content_signature": "71dffaee21177d93b6a97dd8c50d761b95aaa2164bfaf92349b46fb983381cf4",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "",
+      "schedule_source": "source_list"
+    },
+    {
+      "id": "LH:panId:2015122300019890",
+      "agency": "LH",
+      "agency_group": "LH",
+      "title": "서울가좌 행복주택 예비입주자 모집공고(2026.05.07)",
+      "housing_types": [
+        "행복주택"
+      ],
+      "audiences": [],
+      "region": "서울특별시",
+      "published_at": "2026-05-07",
+      "deadline": "2026-05-21",
+      "open_state": "마감",
+      "event": "신규",
+      "change": "신규",
+      "status_text": "접수마감",
+      "is_gangseo": false,
+      "keywords": [
+        "행복주택"
+      ],
+      "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300019890&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026",
+      "source": "서울주거포털 LH공사 연계",
+      "content_signature": "6a776bb58a4db4fc230f278af09798be97d578e3cf418634dc5fbe384e68f13a",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "",
+      "schedule_source": "source_list"
+    },
+    {
+      "id": "LH:panId:2015122300018941",
+      "agency": "LH",
+      "agency_group": "LH",
+      "title": "[정정공고]도봉주공1단지 국민임대주택 예비입주자 모집 공고(정정공고)",
+      "housing_types": [
+        "국민임대"
+      ],
+      "audiences": [],
+      "region": "서울특별시",
+      "published_at": "2025-12-31",
+      "deadline": "2025-09-16",
+      "open_state": "마감",
+      "event": "수정",
+      "change": "신규",
+      "status_text": "접수마감",
+      "is_gangseo": false,
+      "keywords": [],
+      "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300018941&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
+      "source": "서울주거포털 LH공사 연계",
+      "content_signature": "a13631c08352671fc9304a36fec3c9f94fcedb1d19e0e19929d9496f17e24e54",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "",
+      "schedule_source": "source_list"
+    },
+    {
+      "id": "LH:panId:2015122300019045",
+      "agency": "LH",
+      "agency_group": "LH",
+      "title": "2025년 서울특별시 영구임대주택 예비입주자 모집",
+      "housing_types": [
+        "영구임대"
+      ],
+      "audiences": [],
+      "region": "서울특별시",
+      "published_at": "2025-11-13",
+      "deadline": "2025-11-28",
+      "open_state": "마감",
+      "event": "신규",
+      "change": "신규",
+      "status_text": "접수마감",
+      "is_gangseo": false,
+      "keywords": [],
+      "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300019045&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=09&mi=1026",
+      "source": "서울주거포털 LH공사 연계",
+      "content_signature": "c17efcc77289899284dbff1146889ea50b43fb42e95e44b8b03edc86d75a7ace",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "",
+      "schedule_source": "source_list"
+    },
+    {
+      "id": "LH:panId:2015122300018684",
+      "agency": "LH",
+      "agency_group": "LH",
+      "title": "도봉주공1단지 국민임대주택 예비입주자 모집 공고",
+      "housing_types": [
+        "국민임대"
+      ],
+      "audiences": [],
+      "region": "서울특별시",
+      "published_at": "2025-09-05",
+      "deadline": "2025-09-16",
+      "open_state": "마감",
+      "event": "신규",
+      "change": "신규",
+      "status_text": "접수마감",
+      "is_gangseo": false,
+      "keywords": [],
+      "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300018684&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
+      "source": "서울주거포털 LH공사 연계",
+      "content_signature": "0c4172b33cd308f4382c98e5af60517ff1efef8210b186a6b01c553e4f9e8499",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "",
+      "schedule_source": "source_list"
     },
     {
       "id": "SH:seq:308971",
