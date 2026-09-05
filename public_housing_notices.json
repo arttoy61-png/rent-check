@@ -1,14 +1,14 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-05T19:36:07",
+  "generated_at": "2026-09-06T00:14:23",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
     "LH": {
-      "count": 10,
+      "count": 9,
       "errors": [],
       "status": "정상",
-      "fresh_count": 10,
+      "fresh_count": 9,
       "carried_count": 0,
       "failure_streak": 0,
       "warnings": []
@@ -18,20 +18,20 @@
       "errors": []
     },
     "SEOUL": {
-      "count": 12,
+      "count": 11,
       "errors": [],
-      "excluded_noise": 18
+      "excluded_noise": 19
     },
     "TOTAL": {
-      "count": 41,
+      "count": 39,
       "duplicates_removed": 4,
       "excluded_non_housing": 8,
-      "excluded_outside_seoul": 3,
-      "published_count": 26
+      "excluded_outside_seoul": 2,
+      "published_count": 25
     }
   },
   "summary": {
-    "total": 26,
+    "total": 25,
     "gangseo": 1,
     "new": 0,
     "updated": 0,
@@ -44,7 +44,7 @@
       "주거비지원": 1,
       "공공임대": 2,
       "안심주택": 2,
-      "국민임대": 3,
+      "국민임대": 2,
       "영구임대": 1
     },
     "by_audience": {
@@ -55,7 +55,7 @@
     "by_agency": {
       "SH": 15,
       "SEOUL": 1,
-      "LH": 10
+      "LH": 9
     }
   },
   "items": [
@@ -691,31 +691,6 @@
       "content_signature": "c17efcc77289899284dbff1146889ea50b43fb42e95e44b8b03edc86d75a7ace",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "2025-11-24",
-      "schedule_source": "official_detail_html"
-    },
-    {
-      "id": "LH:panId:2015122300018684",
-      "agency": "LH",
-      "agency_group": "LH",
-      "title": "도봉주공1단지 국민임대주택 예비입주자 모집 공고",
-      "housing_types": [
-        "국민임대"
-      ],
-      "audiences": [],
-      "region": "서울특별시",
-      "published_at": "2025-09-05",
-      "deadline": "2025-09-16",
-      "open_state": "마감",
-      "event": "신규",
-      "change": "동일",
-      "status_text": "접수마감",
-      "is_gangseo": false,
-      "keywords": [],
-      "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300018684&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=07&mi=1026",
-      "source": "서울주거포털 LH공사 연계",
-      "content_signature": "0c4172b33cd308f4382c98e5af60517ff1efef8210b186a6b01c553e4f9e8499",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "2025-09-16",
       "schedule_source": "official_detail_html"
     },
     {
