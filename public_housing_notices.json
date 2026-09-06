@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-06T00:14:23",
+  "generated_at": "2026-09-07T00:29:13",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
@@ -37,8 +37,8 @@
     "updated": 0,
     "open_or_check": 7,
     "by_housing_type": {
-      "기타임대": 3,
       "장기전세": 7,
+      "기타임대": 3,
       "행복주택": 7,
       "매입임대": 5,
       "주거비지원": 1,
@@ -59,6 +59,33 @@
     }
   },
   "items": [
+    {
+      "id": "SH:seq:308944",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "제8차 장기전세주택2(미리내집) 입주자 모집 공고(2026. 8. 21.)",
+      "housing_types": [
+        "장기전세"
+      ],
+      "audiences": [],
+      "region": "서울",
+      "published_at": "",
+      "deadline": "2026-09-09",
+      "open_state": "마감임박",
+      "event": "신규",
+      "change": "동일",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [
+        "미리내집"
+      ],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=308944",
+      "source": "서울주거포털",
+      "content_signature": "a936e2b0b6bd7495e7bb37e5891c31cdd6b21d4d64f8d1483bce8bb34de08f84",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "2026-09-07",
+      "schedule_source": "official_detail_html"
+    },
     {
       "id": "SHYOUTH:f55e60eb7f854e40f169",
       "agency": "SH",
@@ -87,33 +114,6 @@
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "2026-08-19",
       "schedule_source": "verified_regression"
-    },
-    {
-      "id": "SH:seq:308944",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "제8차 장기전세주택2(미리내집) 입주자 모집 공고(2026. 8. 21.)",
-      "housing_types": [
-        "장기전세"
-      ],
-      "audiences": [],
-      "region": "서울",
-      "published_at": "",
-      "deadline": "2026-09-09",
-      "open_state": "접수예정",
-      "event": "신규",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [
-        "미리내집"
-      ],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=308944",
-      "source": "서울주거포털",
-      "content_signature": "a936e2b0b6bd7495e7bb37e5891c31cdd6b21d4d64f8d1483bce8bb34de08f84",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "2026-09-07",
-      "schedule_source": "official_detail_html"
     },
     {
       "id": "SH:seq:309467",
