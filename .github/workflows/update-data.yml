@@ -1,8 +1,8 @@
 name: Update widget data
 on:
   schedule:
-    - cron: "0 16 * * *"   # KST 01:00
-    - cron: "15 1 * * *"   # KST 10:15 - 당일/현재월 지연 신고 보강
+    - cron: "45 23 * * *"  # KST 08:45 - 오전 수집
+    - cron: "15 6 * * *"   # KST 15:15 - 오후 지연 신고 보강
   workflow_dispatch:
     inputs:
       months_back:
