@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-07T21:31:51",
+  "generated_at": "2026-09-08T04:11:41",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
@@ -18,24 +18,24 @@
       "errors": []
     },
     "SEOUL": {
-      "count": 11,
+      "count": 10,
       "errors": [],
-      "excluded_noise": 18
+      "excluded_noise": 19
     },
     "TOTAL": {
-      "count": 38,
+      "count": 37,
       "duplicates_removed": 4,
-      "excluded_non_housing": 6,
-      "excluded_outside_seoul": 2,
+      "excluded_non_housing": 7,
+      "excluded_outside_seoul": 0,
       "published_count": 26
     }
   },
   "summary": {
     "total": 26,
     "gangseo": 1,
-    "new": 1,
-    "updated": 0,
-    "open_or_check": 9,
+    "new": 0,
+    "updated": 3,
+    "open_or_check": 8,
     "by_housing_type": {
       "장기전세": 8,
       "기타임대": 3,
@@ -87,6 +87,31 @@
       "schedule_source": "official_detail_html"
     },
     {
+      "id": "SH:seq:309883",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "[토지임대부 사회주택] 옥류서원 입주자 모집 공고문",
+      "housing_types": [
+        "기타임대"
+      ],
+      "audiences": [],
+      "region": "서울",
+      "published_at": "2026-09-07",
+      "deadline": "2026-09-13",
+      "open_state": "접수중",
+      "event": "수정",
+      "change": "수정",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=309883",
+      "source": "SH 공식 주택임대 게시판",
+      "content_signature": "2d95ca89d079f412d61dbbade4d654ceeb8d05089fc6b230e903e6a31f9dc570",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "2026-09-07",
+      "schedule_source": "official_detail_html"
+    },
+    {
       "id": "SHYOUTH:f55e60eb7f854e40f169",
       "agency": "SH",
       "agency_group": "SH",
@@ -114,31 +139,6 @@
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "2026-08-19",
       "schedule_source": "verified_regression"
-    },
-    {
-      "id": "SH:seq:309883",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "NEW [토지임대부 사회주택] 옥류서원 입주자 모집 공고문",
-      "housing_types": [
-        "기타임대"
-      ],
-      "audiences": [],
-      "region": "서울",
-      "published_at": "",
-      "deadline": "2026-09-13",
-      "open_state": "접수중",
-      "event": "신규",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=309883",
-      "source": "SH 공식 주택임대 게시판",
-      "content_signature": "447156e379297656f6a06f9c780bfc32506db5d12b6b6163a278342f6f24a553",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "2026-09-07",
-      "schedule_source": "official_detail_html"
     },
     {
       "id": "SH:seq:309467",
@@ -245,37 +245,6 @@
       "schedule_source": "source_list"
     },
     {
-      "id": "SH:seq:309807",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "NEW [청년형] 특화형 매입임대주택 입주자 모집 공고(운영기관 : 한지붕 협동조합)",
-      "housing_types": [
-        "매입임대"
-      ],
-      "audiences": [
-        "청년"
-      ],
-      "region": "서울",
-      "published_at": "",
-      "deadline": "",
-      "open_state": "확인필요",
-      "event": "신규",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [
-        "청년",
-        "매입임대",
-        "협동조합"
-      ],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=309807",
-      "source": "SH 공식 주택임대 게시판",
-      "content_signature": "6b538629518a56f9eb21931a7e18d52040dea88d576549f13fe89d7981d5f24c",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "",
-      "schedule_source": "source_list"
-    },
-    {
       "id": "SEOUL:0b5c0e62bab059b820d8",
       "agency": "서울주거포털",
       "agency_group": "SEOUL",
@@ -331,6 +300,37 @@
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "2026-04-23",
       "schedule_source": "official_detail_html"
+    },
+    {
+      "id": "SH:seq:309807",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "[청년형] 특화형 매입임대주택 입주자 모집 공고(운영기관 : 한지붕 협동조합)",
+      "housing_types": [
+        "매입임대"
+      ],
+      "audiences": [
+        "청년"
+      ],
+      "region": "서울",
+      "published_at": "2026-09-07",
+      "deadline": "2026-09-07",
+      "open_state": "마감",
+      "event": "수정",
+      "change": "수정",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [
+        "청년",
+        "매입임대",
+        "협동조합"
+      ],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=309807",
+      "source": "SH 공식 주택임대 게시판",
+      "content_signature": "31f830810e29b2f82d199088739f99d408b8c3bb643eb7130602ad7f2e5ba150",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "",
+      "schedule_source": "source_list"
     },
     {
       "id": "SH:seq:309801",
@@ -469,6 +469,39 @@
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "2026-08-31",
       "schedule_source": "official_detail_html"
+    },
+    {
+      "id": "SH:seq:309820",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "[서류심사대상자 발표] 2026년 1차 일반주택형 미리내집(신혼신생아매입임대주택Ⅱ)(2026.08.14.) 서류심사대상자 발표",
+      "housing_types": [
+        "매입임대",
+        "장기전세"
+      ],
+      "audiences": [
+        "신혼부부",
+        "신생아"
+      ],
+      "region": "서울",
+      "published_at": "2026-08-14",
+      "deadline": "2026-09-02",
+      "open_state": "마감",
+      "event": "수정",
+      "change": "수정",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [
+        "매입임대",
+        "신혼",
+        "미리내집"
+      ],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=309820",
+      "source": "SH 공식 주택임대 게시판",
+      "content_signature": "f0002a2abefc2df76c33b82d84a26f1354a2507dfe4ba97a224880a0c551f0d0",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "2026-08-31",
+      "schedule_source": "verified_regression"
     },
     {
       "id": "SHYOUTH:7ef14dbb51874ab34af0",
@@ -750,39 +783,6 @@
       "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=308446",
       "source": "서울주거포털",
       "content_signature": "8170fcd4d298b11b6b53f4a5bdf36cc3788d9ee9e621508be97126801a0005f5",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "2026-08-31",
-      "schedule_source": "verified_regression"
-    },
-    {
-      "id": "SH:seq:309820",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "NEW [서류심사대상자 발표] 2026년 1차 일반주택형 미리내집(신혼신생아매입임대주택Ⅱ)(2026.08.14.) 서류심사대상자 발표",
-      "housing_types": [
-        "매입임대",
-        "장기전세"
-      ],
-      "audiences": [
-        "신혼부부",
-        "신생아"
-      ],
-      "region": "서울",
-      "published_at": "",
-      "deadline": "2026-09-02",
-      "open_state": "마감",
-      "event": "결과",
-      "change": "신규",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [
-        "매입임대",
-        "신혼",
-        "미리내집"
-      ],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=309820",
-      "source": "SH 공식 주택임대 게시판",
-      "content_signature": "b37f5a5f06cd90b50eb09c7db49fd267fb91fc4b1f0787843210c5002f646007",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "2026-08-31",
       "schedule_source": "verified_regression"
