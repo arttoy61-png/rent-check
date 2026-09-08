@@ -57,6 +57,6 @@ jobs:
       - name: Check actual collection and request at most one new main run
         env:
           GH_TOKEN: ${{ github.token }}
-          MONITOR_DRY_RUN: ${{ github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.dry_run) }}
+          MONITOR_DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
           MONITOR_ALLOW_RETRY: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
         run: python automation/morning_data_check.py
