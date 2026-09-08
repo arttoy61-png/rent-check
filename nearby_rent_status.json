@@ -1,21 +1,21 @@
 {
   "updated": "202609",
-  "geo_keys": 6695,
+  "geo_keys": 6698,
   "rentals": {
-    "total": 71425,
-    "with_jibun": 71425,
-    "with_coordinates": 71425,
+    "total": 71538,
+    "with_jibun": 71538,
+    "with_coordinates": 71538,
     "coordinate_coverage": 1.0
   },
   "wolse": {
-    "total": 44063
+    "total": 44130
   },
   "target_test": {
     "address": "서울 강서구 화곡로 지하 168",
     "area_m2": 30.0,
     "area_tolerance_m2": 8.0,
     "within_500m": 952,
-    "within_800m": 1979,
+    "within_800m": 1980,
     "samples_500m": [
       {
         "distance_m": 48,
