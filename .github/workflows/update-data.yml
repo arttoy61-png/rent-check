@@ -1,10 +1,15 @@
 name: Update widget data
+run-name: ${{ github.event_name == 'workflow_dispatch' && inputs.recovery_day != '' && format('Morning recovery {0}', inputs.recovery_day) || 'Update widget data' }}
 on:
   schedule:
-    - cron: "45 23 * * *"  # KST 08:45 - 오전 수집
+    - cron: "15 20 * * *"  # KST 05:15 - 08:00 아침점검 전 수집
     - cron: "15 6 * * *"   # KST 15:15 - 오후 지연 신고 보강
   workflow_dispatch:
     inputs:
+      recovery_day:
+        description: "아침 보조점검 재수집 식별일 (일반 실행은 빈칸)"
+        required: false
+        default: ""
       months_back:
         description: "수집 개월 수 (비워두면 24개월)"
         required: false
@@ -22,7 +27,7 @@ permissions:
   contents: write
 concurrency:
   group: update-data
-  cancel-in-progress: true
+  cancel-in-progress: false
 env:
   TZ: Asia/Seoul
 jobs:

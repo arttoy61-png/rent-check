@@ -1,0 +1,62 @@
+name: Morning data check
+on:
+  schedule:
+    - cron: "15 22 * * *" # KST 07:15 - failed/missed collection only, one retry
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "확인만 실행 (재수집 및 상태 파일 변경 없음)"
+        type: boolean
+        default: true
+  workflow_run:
+    workflows: ["Update widget data"]
+    types: [completed]
+    branches: [main]
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/morning-data-check.yml"
+      - "automation/morning_data_check.py"
+      - "tests/test_morning_data_check.py"
+  pull_request:
+    paths:
+      - ".github/workflows/morning-data-check.yml"
+      - ".github/workflows/update-data.yml"
+      - "automation/morning_data_check.py"
+      - "tests/test_morning_data_check.py"
+permissions:
+  contents: read
+concurrency:
+  group: morning-data-check-${{ github.event_name == 'pull_request' && github.ref || 'main' }}
+  cancel-in-progress: false
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - run: python -m unittest discover -s tests -p 'test_morning_data_check.py' -v
+  check:
+    needs: test
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      actions: write
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - name: Check actual collection and request at most one new main run
+        env:
+          GH_TOKEN: ${{ github.token }}
+          MONITOR_DRY_RUN: ${{ github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.dry_run) }}
+          MONITOR_ALLOW_RETRY: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
+        run: python automation/morning_data_check.py
