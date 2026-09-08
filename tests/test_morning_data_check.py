@@ -5,6 +5,7 @@ import json
 from datetime import datetime
 from pathlib import Path
 import unittest
+from unittest.mock import patch
 
 spec = importlib.util.spec_from_file_location("monitor", Path(__file__).resolve().parents[1] / "automation/morning_data_check.py")
 m = importlib.util.module_from_spec(spec)
@@ -50,6 +51,10 @@ class Fake:
         return [c for c in self.calls if c[1] == "POST"]
 
 class Tests(unittest.TestCase):
+    def setUp(self):
+        sleep = patch.object(m.time, "sleep")
+        sleep.start()
+        self.addCleanup(sleep.stop)
     def test_real_summary(self):
         self.assertEqual(m.collection_health(BAD)["state"], "failed")
         self.assertEqual(m.collection_health(GOOD)["state"], "healthy")
@@ -116,6 +121,10 @@ class Tests(unittest.TestCase):
         f = Fake()
         self.assertEqual(m.Monitor(f).check(NOW, dry_run=False, allow_retry=False)["state"], "needs_retry")
         self.assertFalse(f.posts())
+    def test_gh_log_reader(self):
+        with patch.object(m.subprocess, "run", return_value=m.subprocess.CompletedProcess([], 0, GOOD, "")) as call:
+            self.assertEqual(m.api("repos/arttoy61-png/rent-check/actions/jobs/100/logs", raw=True), GOOD)
+            self.assertEqual(call.call_args.args[0], ["gh", "run", "view", "--repo", m.REPO, "--job", "100", "--log"])
     def test_only_main_is_target(self):
         self.assertEqual(m.decide([run(head_branch="test", status="in_progress")], DAY, {}, {}), "retry_needed")
 

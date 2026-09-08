@@ -11,6 +11,7 @@ import json
 import os
 import re
 import subprocess
+import time
 from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -25,6 +26,12 @@ SUMMARY = re.compile(r"시도\s+(\d+)/(\d+)\s*·\s*성공\s+(\d+)\s*·\s*실패\
 def api(path: str, method: str = "GET", payload: dict | None = None, *, raw: bool = False):
     """Use runner's gh client; never put tokens in URLs or publish raw logs."""
     cmd = ["gh", "api", "--method", method, "-H", "Accept: application/vnd.github+json", path]
+    if raw:
+        job = re.fullmatch(r"repos/arttoy61-png/rent-check/actions/jobs/(\d+)/logs", path)
+        if not job or method != "GET":
+            raise ValueError("Unsupported raw log request")
+        # gh run view handles the signed-log redirect/archive download.
+        cmd = ["gh", "run", "view", "--repo", REPO, "--job", job.group(1), "--log"]
     if payload is not None:
         cmd += ["--input", "-"]
     result = subprocess.run(cmd, input=json.dumps(payload) if payload is not None else None,
@@ -107,13 +114,19 @@ class Monitor:
         last = candidates[0]
         if last.get("conclusion") != "success":
             return {"state": "failed", "reason": "Workflow did not complete successfully", "run_id": last["id"]}
-        try:
-            jobs = self.request(f"{self.base}/actions/runs/{last['id']}/jobs?per_page=100")["jobs"]
-            job = next(j for j in jobs if any(s.get("name") == "Collect MOLIT data (강서)" for s in j.get("steps", [])))
-            log = self.request(f"{self.base}/actions/jobs/{job['id']}/logs", raw=True)
-            return {**collection_health(log), "run_id": last["id"]}
-        except (RuntimeError, FileNotFoundError, StopIteration, KeyError):
-            return {"state": "unverified", "reason": "Could not verify collection log", "run_id": last["id"]}
+        for attempt in range(3):
+            try:
+                jobs = self.request(f"{self.base}/actions/runs/{last['id']}/jobs?per_page=100")["jobs"]
+                job = next(j for j in jobs if any(s.get("name") == "Collect MOLIT data (강서)" for s in j.get("steps", [])))
+                log = self.request(f"{self.base}/actions/jobs/{job['id']}/logs", raw=True)
+                result = collection_health(log)
+                if result["state"] != "unverified":
+                    return {**result, "run_id": last["id"]}
+            except (RuntimeError, FileNotFoundError, StopIteration, KeyError, subprocess.TimeoutExpired):
+                pass
+            if attempt < 2:
+                time.sleep(5)
+        return {"state": "unverified", "reason": "Could not verify collection log", "run_id": last["id"]}
 
     def check(self, now: datetime, *, dry_run: bool = True, allow_retry: bool = True) -> dict:
         day = now.astimezone(KST).date().isoformat()
