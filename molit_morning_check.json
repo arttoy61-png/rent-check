@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-09-08T09:13:59.687639+09:00",
+  "day": "2026-09-08",
+  "state": "unverified",
+  "collection": {
+    "state": "unverified",
+    "reason": "Could not verify collection log",
+    "run_id": 34172543444
+  },
+  "retry": {},
+  "dry_run": false,
+  "allow_retry": false
+}
