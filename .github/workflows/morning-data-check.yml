@@ -59,4 +59,12 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           MONITOR_DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run }}
           MONITOR_ALLOW_RETRY: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
-        run: python automation/morning_data_check.py
+        run: |
+          # GitHub Contents API can briefly reject a PUT when main moved just before
+          # this workflow_run starts. The monitor keeps a durable retry claim, so a
+          # second invocation cannot request a duplicate collection run.
+          python automation/morning_data_check.py || {
+            echo "Morning status write failed once; retrying after latest main settles..."
+            sleep 8
+            python automation/morning_data_check.py
+          }
