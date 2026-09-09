@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-09T15:35:20",
+  "generated_at": "2026-09-09T20:22:56",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
@@ -20,27 +20,27 @@
     "SEOUL": {
       "count": 10,
       "errors": [],
-      "excluded_noise": 18
+      "excluded_noise": 17
     },
     "TOTAL": {
       "count": 37,
       "duplicates_removed": 5,
-      "excluded_non_housing": 5,
+      "excluded_non_housing": 6,
       "excluded_outside_seoul": 0,
-      "published_count": 27
+      "published_count": 26
     }
   },
   "summary": {
-    "total": 27,
+    "total": 26,
     "gangseo": 1,
-    "new": 0,
+    "new": 1,
     "updated": 0,
-    "open_or_check": 9,
+    "open_or_check": 10,
     "by_housing_type": {
-      "장기전세": 10,
+      "장기전세": 9,
       "행복주택": 6,
       "기타임대": 3,
-      "매입임대": 6,
+      "매입임대": 5,
       "안심주택": 1,
       "주거비지원": 1,
       "공공임대": 2,
@@ -50,11 +50,11 @@
     },
     "by_audience": {
       "청년": 2,
-      "신혼부부": 4,
-      "신생아": 4
+      "신혼부부": 3,
+      "신생아": 3
     },
     "by_agency": {
-      "SH": 18,
+      "SH": 17,
       "SEOUL": 1,
       "LH": 8
     }
@@ -85,6 +85,33 @@
       "content_signature": "a936e2b0b6bd7495e7bb37e5891c31cdd6b21d4d64f8d1483bce8bb34de08f84",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "2026-09-07",
+      "schedule_source": "official_detail_html"
+    },
+    {
+      "id": "SH:seq:310081",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "NEW 제8차 장기전세주택2(미리내집) 입주자 모집공고(2026. 8. 21.) 최종 청약접수 결과 안내",
+      "housing_types": [
+        "장기전세"
+      ],
+      "audiences": [],
+      "region": "서울",
+      "published_at": "",
+      "deadline": "2026-09-09",
+      "open_state": "마감임박",
+      "event": "신규",
+      "change": "신규",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [
+        "미리내집"
+      ],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310081",
+      "source": "SH 공식 주택임대 게시판",
+      "content_signature": "dbd3f0d9ae165553808fdb32fdf8e8adffcabb7290443c302ccba29b458d4196",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "2026-08-21",
       "schedule_source": "official_detail_html"
     },
     {
@@ -354,64 +381,6 @@
       "content_signature": "cd700e3150a5d941448d0999f7d0b8b2d1eb6ec1ec9785338b370484b07d4665",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "2026-09-03",
-      "schedule_source": "verified_regression"
-    },
-    {
-      "id": "SH:seq:310001",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "제8차 장기전세주택2, 제51차 장기전세주택 영등포자이 디그니티 모두 확장형임을 알려드립니다.",
-      "housing_types": [
-        "장기전세"
-      ],
-      "audiences": [],
-      "region": "서울",
-      "published_at": "2026-09-08",
-      "deadline": "2026-09-08",
-      "open_state": "마감",
-      "event": "신규",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310001",
-      "source": "SH 공식 주택임대 게시판",
-      "content_signature": "5a6210b18db5b8f4fcd990ea630c7370f34029d5b49e7109e8f01ad23cc201da",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "",
-      "schedule_source": "source_list"
-    },
-    {
-      "id": "SH:seq:309820",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "[서류심사대상자 발표] 2026년 1차 일반주택형 미리내집(신혼신생아매입임대주택Ⅱ)(2026.08.14.) 서류심사대상자 발표",
-      "housing_types": [
-        "매입임대",
-        "장기전세"
-      ],
-      "audiences": [
-        "신혼부부",
-        "신생아"
-      ],
-      "region": "서울",
-      "published_at": "2026-09-08",
-      "deadline": "2026-09-02",
-      "open_state": "마감",
-      "event": "결과",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [
-        "매입임대",
-        "신혼",
-        "미리내집"
-      ],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=309820",
-      "source": "SH 공식 주택임대 게시판",
-      "content_signature": "0886e439b54d0509ddb87146ade5666ecb65325d4c89a98169cec3c1522daf36",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "2026-08-31",
       "schedule_source": "verified_regression"
     },
     {
