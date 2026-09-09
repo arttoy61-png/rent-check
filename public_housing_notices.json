@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-09T13:42:05",
+  "generated_at": "2026-09-09T15:35:20",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
@@ -20,25 +20,25 @@
     "SEOUL": {
       "count": 10,
       "errors": [],
-      "excluded_noise": 17
+      "excluded_noise": 18
     },
     "TOTAL": {
       "count": 37,
-      "duplicates_removed": 4,
+      "duplicates_removed": 5,
       "excluded_non_housing": 5,
       "excluded_outside_seoul": 0,
-      "published_count": 28
+      "published_count": 27
     }
   },
   "summary": {
-    "total": 28,
+    "total": 27,
     "gangseo": 1,
-    "new": 2,
-    "updated": 1,
+    "new": 0,
+    "updated": 0,
     "open_or_check": 9,
     "by_housing_type": {
       "장기전세": 10,
-      "행복주택": 7,
+      "행복주택": 6,
       "기타임대": 3,
       "매입임대": 6,
       "안심주택": 1,
@@ -56,7 +56,7 @@
     "by_agency": {
       "SH": 18,
       "SEOUL": 1,
-      "LH": 9
+      "LH": 8
     }
   },
   "items": [
@@ -234,7 +234,7 @@
       "deadline": "",
       "open_state": "확인필요",
       "event": "신규",
-      "change": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -261,7 +261,7 @@
       "deadline": "",
       "open_state": "확인필요",
       "event": "신규",
-      "change": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [],
@@ -342,8 +342,8 @@
       "published_at": "2026-09-09",
       "deadline": "2026-09-04",
       "open_state": "마감",
-      "event": "수정",
-      "change": "수정",
+      "event": "결과",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -521,33 +521,6 @@
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "2026-08-31",
       "schedule_source": "verified_regression"
-    },
-    {
-      "id": "LH:panId:2015122300020577",
-      "agency": "LH",
-      "agency_group": "LH",
-      "title": "서울번동3 행복주택 예비입주자 모집",
-      "housing_types": [
-        "행복주택"
-      ],
-      "audiences": [],
-      "region": "서울특별시",
-      "published_at": "2026-08-19",
-      "deadline": "2026-09-02",
-      "open_state": "마감",
-      "event": "신규",
-      "change": "동일",
-      "status_text": "접수마감",
-      "is_gangseo": false,
-      "keywords": [
-        "행복주택"
-      ],
-      "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020577&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026",
-      "source": "서울주거포털 LH공사 연계",
-      "content_signature": "50ae352aa8d42c5ddd4215c702d77953b6a778177c1d2765c2d69efc1aae581d",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "2026-08-31",
-      "schedule_source": "official_detail_html"
     },
     {
       "id": "SHYOUTH:7ef14dbb51874ab34af0",
