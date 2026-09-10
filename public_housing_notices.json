@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-10T20:19:12",
+  "generated_at": "2026-09-11T01:24:56",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
@@ -18,15 +18,15 @@
       "errors": []
     },
     "SEOUL": {
-      "count": 12,
+      "count": 11,
       "errors": [],
-      "excluded_noise": 16
+      "excluded_noise": 18
     },
     "TOTAL": {
-      "count": 37,
+      "count": 36,
       "duplicates_removed": 5,
       "excluded_non_housing": 5,
-      "excluded_outside_seoul": 3,
+      "excluded_outside_seoul": 2,
       "published_count": 25
     }
   },
@@ -34,8 +34,8 @@
     "total": 25,
     "gangseo": 1,
     "new": 1,
-    "updated": 0,
-    "open_or_check": 9,
+    "updated": 2,
+    "open_or_check": 8,
     "by_housing_type": {
       "행복주택": 6,
       "기타임대": 3,
@@ -141,10 +141,10 @@
       "schedule_source": "official_detail_html"
     },
     {
-      "id": "SH:seq:310046",
+      "id": "SH:seq:310107",
       "agency": "SH",
       "agency_group": "SH",
-      "title": "2026년 2차 장기미임대 매입임대주택 입주자모집공고(2026. 8. 28.)",
+      "title": "(수정) 2026년 2차 장기미임대 매입임대주택 입주자모집공고(2026. 8. 28.)",
       "housing_types": [
         "매입임대"
       ],
@@ -153,19 +153,44 @@
       "published_at": "",
       "deadline": "2026-09-30",
       "open_state": "접수예정",
-      "event": "신규",
-      "change": "동일",
+      "event": "수정",
+      "change": "신규",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
         "매입임대"
       ],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310046",
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310107",
       "source": "서울주거포털",
-      "content_signature": "a268848accfaba0a5fbda2d3d4eaa1b94056e2169fc8c2a6f9dc3b4b91439c62",
+      "content_signature": "f6561cac8822ac97dbf51666b89585b23dac9249d0a36a265c565dd218da6756",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "2026-09-28",
       "schedule_source": "verified_regression"
+    },
+    {
+      "id": "SH:seq:310122",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "장기전세주택2 재계약 안내 (정정 안내문)",
+      "housing_types": [
+        "장기전세"
+      ],
+      "audiences": [],
+      "region": "서울",
+      "published_at": "2026-09-10",
+      "deadline": "",
+      "open_state": "확인필요",
+      "event": "수정",
+      "change": "수정",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310122",
+      "source": "SH 공식 주택임대 게시판",
+      "content_signature": "983631d661a26bc1314d689bf310024edcae9319377e8cbc1a6608e373768381",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "",
+      "schedule_source": "source_list"
     },
     {
       "id": "SHYOUTH:fa01df725a9d3ceaf32c",
@@ -215,62 +240,6 @@
       "url": "https://youth.seoul.go.kr/api/sh/list.do?key=2309250014#none",
       "source": "청년몽땅 SH 공고목록",
       "content_signature": "82661afd5becfa8fe700ef3e35a03fb2164482228555a1ceb72a4718e661f2d4",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "",
-      "schedule_source": "source_list"
-    },
-    {
-      "id": "SH:seq:310122",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "NEW 장기전세주택2 재계약 안내 (정정 안내문)",
-      "housing_types": [
-        "장기전세"
-      ],
-      "audiences": [],
-      "region": "서울",
-      "published_at": "",
-      "deadline": "",
-      "open_state": "확인필요",
-      "event": "수정",
-      "change": "신규",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310122",
-      "source": "SH 공식 주택임대 게시판",
-      "content_signature": "9227cd874defc6cfffdbd4f84198bcf2ca3972548054735d768d715f352e1b5f",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "",
-      "schedule_source": "source_list"
-    },
-    {
-      "id": "SH:seq:309802",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "NEW [청년형] 특화형 매입임대주택(금천구) 입주자 모집 공고(운영기관 : 한지붕 협동조합)",
-      "housing_types": [
-        "매입임대"
-      ],
-      "audiences": [
-        "청년"
-      ],
-      "region": "서울",
-      "published_at": "",
-      "deadline": "",
-      "open_state": "확인필요",
-      "event": "신규",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [
-        "청년",
-        "매입임대",
-        "협동조합"
-      ],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=309802",
-      "source": "SH 공식 주택임대 게시판",
-      "content_signature": "97b6ab25b040c4e9ad17a14666eaf6101518bdaa2a0edf5d3643ffd66a5fa564",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "",
       "schedule_source": "source_list"
@@ -331,6 +300,37 @@
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "2026-04-23",
       "schedule_source": "official_detail_html"
+    },
+    {
+      "id": "SH:seq:309802",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "[청년형] 특화형 매입임대주택(금천구) 입주자 모집 공고(운영기관 : 한지붕 협동조합)",
+      "housing_types": [
+        "매입임대"
+      ],
+      "audiences": [
+        "청년"
+      ],
+      "region": "서울",
+      "published_at": "2026-09-10",
+      "deadline": "2026-09-10",
+      "open_state": "마감",
+      "event": "수정",
+      "change": "수정",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [
+        "청년",
+        "매입임대",
+        "협동조합"
+      ],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=309802",
+      "source": "SH 공식 주택임대 게시판",
+      "content_signature": "b8ad6d7b5381fbfbb977f458aabe42594a0ce99e0d4ff747163819c8ecb709f7",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "",
+      "schedule_source": "source_list"
     },
     {
       "id": "SH:seq:310081",
