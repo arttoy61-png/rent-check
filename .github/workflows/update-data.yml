@@ -84,7 +84,51 @@ jobs:
           MOLIT_API_KEY: ${{ secrets.MOLIT_API_KEY }}
           MONTHS_BACK: ${{ steps.mb.outputs.months }}
           USE_CACHE: "1"
-        run: python collect_kangseo.py
+        run: |
+          set +e
+
+          verify_collection() {
+            python - "$1" <<'PY'
+          import re
+          import sys
+          from pathlib import Path
+
+          text = Path(sys.argv[1]).read_text(encoding="utf-8", errors="replace")
+          matches = list(re.finditer(r"시도\s+(\d+)/(\d+)\s*·\s*성공\s+(\d+)\s*·\s*실패\s+(\d+)", text))
+          if not matches:
+              print("수집 요약을 찾지 못했습니다.")
+              raise SystemExit(1)
+          attempted, expected, succeeded, failed = map(int, matches[-1].groups())
+          print(f"검증: 시도 {attempted}/{expected}, 성공 {succeeded}, 실패 {failed}")
+          raise SystemExit(0 if expected > 0 and attempted == expected == succeeded and failed == 0 else 1)
+          PY
+          }
+
+          rc=1
+          for attempt in 1 2 3; do
+            log="/tmp/molit-collect-${attempt}.log"
+            echo "===== 국토부 API 수집 ${attempt}/3 ====="
+            python collect_kangseo.py 2>&1 | tee "$log"
+            python_rc=${PIPESTATUS[0]}
+
+            if [ "$python_rc" -eq 0 ] && verify_collection "$log"; then
+              echo "국토부 API 전체 수집 성공 (${attempt}/3)"
+              exit 0
+            fi
+
+            echo "::warning::국토부 API 수집 ${attempt}/3 불완전 — 기존 CSV는 보존하고 재시도합니다."
+            rc=1
+            if [ "$attempt" -eq 1 ]; then
+              echo "60초 후 다시 시도합니다."
+              sleep 60
+            elif [ "$attempt" -eq 2 ]; then
+              echo "180초 후 마지막으로 다시 시도합니다."
+              sleep 180
+            fi
+          done
+
+          echo "::error::국토부 API 수집이 3회 모두 실패했습니다. 기존 CSV로 서비스는 유지하지만 최신 데이터 갱신은 실패 상태입니다."
+          exit "$rc"
 
       - name: Check CSV exists
         working-directory: automation
@@ -204,5 +248,5 @@ jobs:
       - name: Report collect failure
         if: steps.collect.outcome != 'success'
         run: |
-          echo "::error::MOLIT 수집 단계가 실패했습니다. 국토부 API 상태를 확인하세요."
+          echo "::error::MOLIT 수집 단계가 3회 재시도 후에도 실패했습니다. 국토부 API 상태를 확인하세요."
           exit 1
