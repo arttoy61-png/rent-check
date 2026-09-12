@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-09-12T19:50:09.898604+09:00",
+  "checked_at": "2026-09-12T20:06:13.394080+09:00",
   "day": "2026-09-12",
-  "state": "retry_exhausted",
+  "state": "recovered",
   "collection": {
-    "state": "failed",
-    "attempted": 12,
+    "state": "healthy",
+    "attempted": 144,
     "expected": 144,
-    "succeeded": 0,
-    "failed": 12,
-    "run_id": 34689121219
+    "succeeded": 144,
+    "failed": 0,
+    "run_id": 34690079475
   },
   "retry": {
     "day": "2026-09-12",
