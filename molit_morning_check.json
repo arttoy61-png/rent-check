@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-09-12T07:39:38.060380+09:00",
+  "checked_at": "2026-09-12T09:19:02.541177+09:00",
   "day": "2026-09-12",
-  "state": "needs_retry",
+  "state": "retry_reserved",
   "collection": {
     "state": "failed",
     "attempted": 12,
@@ -12,11 +12,11 @@
     "run_id": 34654633768
   },
   "retry": {
-    "day": "2026-09-10",
-    "requested_at": "2026-09-10T09:16:35.825399+09:00",
-    "checker_run_id": "34420530134",
-    "status": "requested"
+    "day": "2026-09-12",
+    "requested_at": "2026-09-12T09:19:02.541177+09:00",
+    "checker_run_id": "34661202050",
+    "status": "claimed"
   },
   "dry_run": false,
-  "allow_retry": false
+  "allow_retry": true
 }
