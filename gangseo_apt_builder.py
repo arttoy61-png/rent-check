@@ -2,12 +2,19 @@
 """강서구 아파트 실거래 탐색기 데이터 빌더
 molit_kangseo.csv → gangseo_apt_summary.json + gangseo_apt_detail.json
 - 아파트만
-- 최근 거래/중위/전세가율 계산
+- 최근 6개월 거래/중위/전세가율 계산
 - 카카오 지오코딩 캐시를 재사용해 강서구 전체 단지 좌표 부여
 """
-import csv, json, hashlib, re, sys, statistics as st
-from pathlib import Path
+import calendar
+import csv
+import hashlib
+import json
+import re
+import statistics as st
+import sys
 from collections import defaultdict
+from datetime import date, datetime, timezone
+from pathlib import Path
 
 _here = Path(__file__).resolve()
 _p = _here.parents
@@ -69,6 +76,24 @@ def load_geo():
         return {}
 
 
+def row_date(r):
+    ym = str(r.get("deal_ym") or "")
+    if len(ym) < 6:
+        return None
+    try:
+        return date(int(ym[:4]), int(ym[4:6]), int(r.get("deal_day") or 0))
+    except Exception:
+        return None
+
+
+def shift_months(d, months):
+    total = d.year * 12 + (d.month - 1) + months
+    year, month0 = divmod(total, 12)
+    month = month0 + 1
+    day = min(d.day, calendar.monthrange(year, month)[1])
+    return date(year, month, day)
+
+
 def main():
     rows = []
     with open(CSV, encoding="utf-8-sig") as f:
@@ -87,7 +112,16 @@ def main():
                 float(r["area_m2"])
             except Exception:
                 continue
+            if row_date(r) is None:
+                continue
             rows.append(r)
+
+    if not rows:
+        raise RuntimeError("아파트 실거래 원천 데이터가 없습니다")
+
+    source_dates = [row_date(r) for r in rows]
+    latest_date = max(source_dates)
+    period_start = shift_months(latest_date, -6)
 
     C = defaultdict(lambda: {
         "yr": None,
@@ -106,7 +140,8 @@ def main():
 
         m2 = float(r["area_m2"])
         band = display_area_m2(m2)
-        d = f"{r['deal_ym'][:4]}.{r['deal_ym'][4:6]}.{int(r['deal_day']):02d}"
+        rd = row_date(r)
+        d = f"{rd.year:04d}.{rd.month:02d}.{rd.day:02d}"
         try:
             fl = int(float(r["floor"])) if r.get("floor") else None
         except Exception:
@@ -117,7 +152,12 @@ def main():
             except Exception:
                 pass
 
+        # 단지/지번/준공연도는 전체 수집기간으로 유지하되,
+        # 시세·거래량·상세 거래는 최신 계약일을 기준으로 한 최근 6개월만 사용한다.
         a = C[k]["areas"][band]
+        if rd < period_start or rd > latest_date:
+            continue
+
         if "매매" in r["deal_type"]:
             if r.get("deal_amount"):
                 try:
@@ -162,14 +202,14 @@ def main():
 
     for (dong, nk), v in C.items():
         nm = max(v["names"], key=v["names"].get)
-        _id = hashlib.md5(f"{dong}|{nk}".encode()).hexdigest()[:8]
+        _id = cid(dong, nk)
         areas_out = []
         tot = 0
         tS = tJ = tW = 0
 
         for band in sorted(
             v["areas"],
-            key=lambda b: (-len(v["areas"][b]["sale"]), -(len(v["areas"][b]["je"]) + len(v["areas"][b]["wo"])))
+            key=lambda b: (-len(v["areas"][b]["sale"]), -(len(v["areas"][b]["je"]) + len(v["areas"][b]["wo"])), b)
         ):
             a = v["areas"][band]
             for arr in (a["sale"], a["je"], a["wo"]):
@@ -255,7 +295,7 @@ def main():
         sd = summary_dong[dong]
         if tot >= 3:
             sd["n"] += 1
-        sd["sale6"] += sum(len(v["areas"][b]["sale"]) for b in v["areas"])
+        sd["sale6"] += tS
         sd["amts"] += [x["amt"] for b in v["areas"] for x in v["areas"][b]["sale"]]
 
     complexes.sort(key=lambda c: -c["tot"])
@@ -268,8 +308,14 @@ def main():
     dongs.sort(key=lambda d: -d["sale6"])
 
     ym_all = sorted({r["deal_ym"] for r in rows})
-    meta = {"updated": max(ym_all), "range": [min(ym_all), max(ym_all)], "n_complex": len(complexes)}
-    from datetime import datetime, timezone
+    meta = {
+        "updated": max(ym_all),
+        "range": [min(ym_all), max(ym_all)],
+        "period": [period_start.isoformat(), latest_date.isoformat()],
+        "period_label": "최근 6개월",
+        "period_basis": "계약일 기준",
+        "n_complex": len(complexes),
+    }
     generated_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
     OUT_SUM.write_text(
         json.dumps({"meta": meta, "generated_at": generated_at, "dongs": dongs, "complexes": complexes},
@@ -279,6 +325,7 @@ def main():
     OUT_DET.write_text(json.dumps(detail, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 
     geo_count = sum(1 for c in complexes if c.get("lat") and c.get("lng"))
+    print(f"조회기간 {period_start.isoformat()} ~ {latest_date.isoformat()} (최근 6개월, 계약일 기준)")
     print(f"단지 {len(complexes)} (노출 {sum(1 for c in complexes if not c['few'])} / 검색전용 {sum(1 for c in complexes if c['few'])})")
     print(f"좌표 {geo_count}/{len(complexes)} 단지")
     print(f"summary {OUT_SUM.stat().st_size/1024:.0f}KB / detail {OUT_DET.stat().st_size/1024:.0f}KB")
