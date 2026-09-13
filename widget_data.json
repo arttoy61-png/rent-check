@@ -1,8 +1,20 @@
 {
   "region": "화곡동",
-  "generated_at": "2026-09-13T09:15:59.394935",
-  "total_deals": 21719,
+  "generated_at": "2026-09-13T10:41:23.699723",
+  "total_deals": 21720,
   "deals": [
+    {
+      "building_name": "강서2차 크라운팰리스",
+      "type": "오피스텔",
+      "area_m2": 28.17,
+      "pyung": 8.5,
+      "deposit": 25000,
+      "monthly_rent": 0,
+      "deal_period": "2026.09.04",
+      "floor": "4",
+      "build_year": "2020",
+      "is_jeonse": true
+    },
     {
       "building_name": "아덴하임",
       "type": "오피스텔",
@@ -260634,6 +260646,18 @@
   ],
   "by_pyung_range": {
     "10평 이하": [
+      {
+        "building_name": "강서2차 크라운팰리스",
+        "type": "오피스텔",
+        "area_m2": 28.17,
+        "pyung": 8.5,
+        "deposit": 25000,
+        "monthly_rent": 0,
+        "deal_period": "2026.09.04",
+        "floor": "4",
+        "build_year": "2020",
+        "is_jeonse": true
+      },
       {
         "building_name": "아덴하임",
         "type": "오피스텔",
