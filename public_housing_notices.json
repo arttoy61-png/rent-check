@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-13T08:28:34",
+  "generated_at": "2026-09-13T09:46:24",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
@@ -33,7 +33,7 @@
   "summary": {
     "total": 25,
     "gangseo": 1,
-    "new": 1,
+    "new": 0,
     "updated": 0,
     "open_or_check": 7,
     "by_housing_type": {
@@ -102,7 +102,7 @@
       "deadline": "2026-10-02",
       "open_state": "접수예정",
       "event": "신규",
-      "change": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [],
@@ -124,7 +124,7 @@
       "audiences": [],
       "region": "서울",
       "published_at": "2026-08-31",
-      "deadline": "2026-09-15",
+      "deadline": "2026-09-17",
       "open_state": "접수예정",
       "event": "신규",
       "change": "동일",
@@ -135,8 +135,27 @@
       "source": "서울주거포털",
       "content_signature": "e0c6bfc2275cd42a9b1b0c77e206555a9d44c7244d2e213f189e31a98a3f0e9d",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "schedule_type": "ranked",
+      "application_windows": [
+        {
+          "label": "1순위",
+          "start": "2026-09-14",
+          "end": "2026-09-15"
+        },
+        {
+          "label": "2순위",
+          "start": "2026-09-16",
+          "end": "2026-09-16"
+        },
+        {
+          "label": "3·4순위",
+          "start": "2026-09-17",
+          "end": "2026-09-17"
+        }
+      ],
+      "schedule_note": "후순위 접수 여부는 선순위 신청 결과에 따라 달라질 수 있으므로 해당일 SH 공지를 다시 확인합니다.",
       "application_start": "2026-09-14",
-      "schedule_source": "official_detail_html"
+      "schedule_source": "verified_regression"
     },
     {
       "id": "SH:seq:310107",
