@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-14T08:11:27",
+  "generated_at": "2026-09-14T13:56:08",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
@@ -14,30 +14,30 @@
       "warnings": []
     },
     "SH": {
-      "count": 15,
+      "count": 14,
       "errors": []
     },
     "SEOUL": {
-      "count": 9,
+      "count": 10,
       "errors": [],
-      "excluded_noise": 19
+      "excluded_noise": 18
     },
     "TOTAL": {
       "count": 33,
       "duplicates_removed": 5,
-      "excluded_non_housing": 3,
+      "excluded_non_housing": 4,
       "excluded_outside_seoul": 0,
-      "published_count": 25
+      "published_count": 24
     }
   },
   "summary": {
-    "total": 25,
+    "total": 24,
     "gangseo": 1,
     "new": 0,
     "updated": 0,
     "open_or_check": 7,
     "by_housing_type": {
-      "장기전세": 7,
+      "장기전세": 6,
       "기타임대": 3,
       "매입임대": 4,
       "주거비지원": 1,
@@ -53,7 +53,7 @@
       "신생아": 1
     },
     "by_agency": {
-      "SH": 16,
+      "SH": 15,
       "SEOUL": 1,
       "LH": 8
     }
@@ -405,33 +405,6 @@
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "",
       "schedule_source": "source_list"
-    },
-    {
-      "id": "SH:seq:310081",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "제8차 장기전세주택2(미리내집) 입주자 모집공고(2026. 8. 21.) 최종 청약접수 결과 안내",
-      "housing_types": [
-        "장기전세"
-      ],
-      "audiences": [],
-      "region": "서울",
-      "published_at": "2026-09-09",
-      "deadline": "2026-09-09",
-      "open_state": "마감",
-      "event": "신규",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [
-        "미리내집"
-      ],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310081",
-      "source": "SH 공식 주택임대 게시판",
-      "content_signature": "2750390c568a08790a0f774025d3dd02642ccdf24794d84e8d417c3b50ddf6c8",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "2026-08-21",
-      "schedule_source": "official_detail_html"
     },
     {
       "id": "SH:seq:309337",
