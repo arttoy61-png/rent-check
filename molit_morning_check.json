@@ -2,7 +2,7 @@
   "schema_version": 1,
   "checked_at": "2026-09-15T09:38:58.663800+09:00",
   "day": "2026-09-15",
-  "state": "retry_reserved",
+  "state": "retry_requested",
   "collection": {
     "state": "failed",
     "reason": "Workflow did not complete successfully",
@@ -12,7 +12,7 @@
     "day": "2026-09-15",
     "requested_at": "2026-09-15T09:38:58.663800+09:00",
     "checker_run_id": "34914027560",
-    "status": "claimed"
+    "status": "requested"
   },
   "dry_run": false,
   "allow_retry": true
