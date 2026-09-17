@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-17T08:42:59",
+  "generated_at": "2026-09-17T13:54:27",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
@@ -20,7 +20,7 @@
     "SEOUL": {
       "count": 11,
       "errors": [],
-      "excluded_noise": 17
+      "excluded_noise": 16
     },
     "TOTAL": {
       "count": 36,
@@ -33,14 +33,14 @@
   "summary": {
     "total": 26,
     "gangseo": 1,
-    "new": 0,
+    "new": 1,
     "updated": 0,
-    "open_or_check": 9,
+    "open_or_check": 10,
     "by_housing_type": {
       "기타임대": 4,
-      "장기전세": 5,
+      "장기전세": 6,
       "행복주택": 8,
-      "매입임대": 5,
+      "매입임대": 4,
       "주거비지원": 1,
       "공공임대": 2,
       "국민임대": 3,
@@ -126,6 +126,31 @@
       "schedule_note": "후순위 접수 여부는 선순위 신청 결과에 따라 달라질 수 있으므로 해당일 SH 공지를 다시 확인합니다.",
       "application_start": "2026-09-14",
       "schedule_source": "verified_regression"
+    },
+    {
+      "id": "SH:seq:310413",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "NEW 제51차 장기전세주택(2026.08.31.공고) 1·2순위 청약접수 결과 및 3·4순위 청약접수 가능 단지 안내",
+      "housing_types": [
+        "장기전세"
+      ],
+      "audiences": [],
+      "region": "서울",
+      "published_at": "2026-08-31",
+      "deadline": "2026-09-17",
+      "open_state": "마감임박",
+      "event": "신규",
+      "change": "신규",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310413",
+      "source": "SH 공식 주택임대 게시판",
+      "content_signature": "9879faa0f9fdfcbe71c5f76aaed647c31169b21e3f2ebfc5573b0f6140559bc4",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "2026-08-31",
+      "schedule_source": "official_detail_html"
     },
     {
       "id": "SH:seq:310343",
@@ -442,33 +467,6 @@
       "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310319",
       "source": "SH 공식 주택임대 게시판",
       "content_signature": "ec1cc20ea62a6cca16f5308de39bc3b848b8050c0126ff35396b90dd49c72153",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "",
-      "schedule_source": "source_list"
-    },
-    {
-      "id": "SH:seq:310334",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "소규모 매입임대주택 신규 입주세대 공동생활수칙 안내",
-      "housing_types": [
-        "매입임대"
-      ],
-      "audiences": [],
-      "region": "서울",
-      "published_at": "2026-09-15",
-      "deadline": "2026-09-15",
-      "open_state": "마감",
-      "event": "신규",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [
-        "매입임대"
-      ],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310334",
-      "source": "SH 공식 주택임대 게시판",
-      "content_signature": "826a3f4da6d5bc57cabed7382925c853f56a0952ee079c384660f22353d02948",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "",
       "schedule_source": "source_list"
