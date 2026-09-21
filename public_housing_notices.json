@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-21T21:48:31",
+  "generated_at": "2026-09-22T05:01:14",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
@@ -18,14 +18,14 @@
       "errors": []
     },
     "SEOUL": {
-      "count": 12,
+      "count": 11,
       "errors": [],
-      "excluded_noise": 18
+      "excluded_noise": 19
     },
     "TOTAL": {
-      "count": 39,
+      "count": 38,
       "duplicates_removed": 4,
-      "excluded_non_housing": 5,
+      "excluded_non_housing": 4,
       "excluded_outside_seoul": 2,
       "published_count": 28
     }
@@ -33,18 +33,18 @@
   "summary": {
     "total": 28,
     "gangseo": 1,
-    "new": 3,
-    "updated": 1,
-    "open_or_check": 12,
+    "new": 0,
+    "updated": 4,
+    "open_or_check": 9,
     "by_housing_type": {
       "장기전세": 6,
       "기타임대": 4,
       "매입임대": 4,
-      "기숙사": 1,
-      "안심주택": 2,
       "행복주택": 7,
+      "기숙사": 1,
       "주거비지원": 1,
       "공공임대": 1,
+      "안심주택": 2,
       "국민임대": 3,
       "영구임대": 1
     },
@@ -165,6 +165,33 @@
       "schedule_source": "verified_regression"
     },
     {
+      "id": "SH:seq:310563",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "2026년 2차 행복주택 서류심사 대상자 발표 및 서류 제출 안내",
+      "housing_types": [
+        "행복주택"
+      ],
+      "audiences": [],
+      "region": "서울",
+      "published_at": "2026-09-21",
+      "deadline": "",
+      "open_state": "확인필요",
+      "event": "수정",
+      "change": "수정",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [
+        "행복주택"
+      ],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310563",
+      "source": "SH 공식 주택임대 게시판",
+      "content_signature": "282bb8740fec8a3c7c3b788a24df055abc217fe4c94249b15c2619bf469925cc",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "",
+      "schedule_source": "source_list"
+    },
+    {
       "id": "SH:seq:310258",
       "agency": "SH",
       "agency_group": "SH",
@@ -177,8 +204,8 @@
       "published_at": "2026-09-17",
       "deadline": "",
       "open_state": "확인필요",
-      "event": "수정",
-      "change": "수정",
+      "event": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -244,113 +271,6 @@
       "schedule_source": "source_list"
     },
     {
-      "id": "SH:seq:310575",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "NEW [토지임대부 사회주택] 쌍문생활 302호 입주자 모집 공고문",
-      "housing_types": [
-        "기타임대"
-      ],
-      "audiences": [],
-      "region": "서울",
-      "published_at": "",
-      "deadline": "",
-      "open_state": "확인필요",
-      "event": "신규",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310575",
-      "source": "SH 공식 주택임대 게시판",
-      "content_signature": "69409f56da601ed4282a8c1a712b9ebad0e222fadb12d315a11cf0ce450e1030",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "",
-      "schedule_source": "source_list"
-    },
-    {
-      "id": "SH:seq:310578",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "NEW [라봄 성동] 2025년 3차 청년안심주택 예비3차 주택공개 및 사전점검 안내",
-      "housing_types": [
-        "안심주택"
-      ],
-      "audiences": [
-        "청년"
-      ],
-      "region": "서울",
-      "published_at": "",
-      "deadline": "",
-      "open_state": "확인필요",
-      "event": "신규",
-      "change": "신규",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [
-        "청년",
-        "안심주택"
-      ],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310578",
-      "source": "SH 공식 주택임대 게시판",
-      "content_signature": "19bff87b20bb369ff772917d4d4873fea089ce1776e6c8c58abb73a6d9ca0096",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "",
-      "schedule_source": "source_list"
-    },
-    {
-      "id": "SH:seq:310563",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "NEW 2026년 2차 행복주택 서류심사 대상자 발표 및 서류 제출 안내",
-      "housing_types": [
-        "행복주택"
-      ],
-      "audiences": [],
-      "region": "서울",
-      "published_at": "",
-      "deadline": "",
-      "open_state": "확인필요",
-      "event": "결과",
-      "change": "신규",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [
-        "행복주택"
-      ],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310563",
-      "source": "SH 공식 주택임대 게시판",
-      "content_signature": "ef7b51c2e78da9c5e5df213f0e8bfd3d2190b41883310f46617409e73396a612",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "",
-      "schedule_source": "source_list"
-    },
-    {
-      "id": "SH:seq:310561",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "NEW 2026-9차 재개발임대주택 철거민 특별공급",
-      "housing_types": [
-        "기타임대"
-      ],
-      "audiences": [],
-      "region": "서울",
-      "published_at": "",
-      "deadline": "",
-      "open_state": "확인필요",
-      "event": "신규",
-      "change": "신규",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310561",
-      "source": "SH 공식 주택임대 게시판",
-      "content_signature": "8c39445a7da2a93bacd0957d3e222b381503062bbaf18de85df8b56b52360268",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "",
-      "schedule_source": "source_list"
-    },
-    {
       "id": "SEOUL:0b5c0e62bab059b820d8",
       "agency": "서울주거포털",
       "agency_group": "SEOUL",
@@ -406,6 +326,86 @@
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "2026-04-23",
       "schedule_source": "official_detail_html"
+    },
+    {
+      "id": "SH:seq:310575",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "[토지임대부 사회주택] 쌍문생활 302호 입주자 모집 공고문",
+      "housing_types": [
+        "기타임대"
+      ],
+      "audiences": [],
+      "region": "서울",
+      "published_at": "2026-09-21",
+      "deadline": "2026-09-21",
+      "open_state": "마감",
+      "event": "수정",
+      "change": "수정",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310575",
+      "source": "SH 공식 주택임대 게시판",
+      "content_signature": "755050ae19fe28128701cd6caa106bf74503dae466cb08046e30094b18001dda",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "",
+      "schedule_source": "source_list"
+    },
+    {
+      "id": "SH:seq:310578",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "[라봄 성동] 2025년 3차 청년안심주택 예비3차 주택공개 및 사전점검 안내",
+      "housing_types": [
+        "안심주택"
+      ],
+      "audiences": [
+        "청년"
+      ],
+      "region": "서울",
+      "published_at": "2026-09-21",
+      "deadline": "2026-09-21",
+      "open_state": "마감",
+      "event": "수정",
+      "change": "수정",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [
+        "청년",
+        "안심주택"
+      ],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310578",
+      "source": "SH 공식 주택임대 게시판",
+      "content_signature": "bf0cfcea5b47e9527e335b66190ef07fb5c2011b85ed4c2509dd79141245b656",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "",
+      "schedule_source": "source_list"
+    },
+    {
+      "id": "SH:seq:310561",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "2026-9차 재개발임대주택 철거민 특별공급",
+      "housing_types": [
+        "기타임대"
+      ],
+      "audiences": [],
+      "region": "서울",
+      "published_at": "2026-09-21",
+      "deadline": "2026-09-21",
+      "open_state": "마감",
+      "event": "수정",
+      "change": "수정",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310561",
+      "source": "SH 공식 주택임대 게시판",
+      "content_signature": "35bcdd7a69bdfb50c7a8d22bc7e351f7aaa53d904f5ed25e9a1f1e143b81a498",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "",
+      "schedule_source": "source_list"
     },
     {
       "id": "SH:seq:310491",
