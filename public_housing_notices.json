@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-22T13:55:48",
+  "generated_at": "2026-09-22T20:38:37",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
@@ -14,39 +14,39 @@
       "warnings": []
     },
     "SH": {
-      "count": 18,
+      "count": 17,
       "errors": []
     },
     "SEOUL": {
       "count": 11,
       "errors": [],
-      "excluded_noise": 18
+      "excluded_noise": 17
     },
     "TOTAL": {
-      "count": 38,
+      "count": 37,
       "duplicates_removed": 4,
       "excluded_non_housing": 4,
       "excluded_outside_seoul": 2,
-      "published_count": 28
+      "published_count": 27
     }
   },
   "summary": {
-    "total": 28,
+    "total": 27,
     "gangseo": 1,
-    "new": 2,
-    "updated": 1,
-    "open_or_check": 9,
+    "new": 1,
+    "updated": 0,
+    "open_or_check": 10,
     "by_housing_type": {
       "기타임대": 5,
       "매입임대": 4,
-      "기숙사": 1,
+      "기숙사": 2,
       "장기전세": 4,
       "전세임대": 1,
       "주거비지원": 1,
       "공공임대": 1,
       "행복주택": 7,
       "안심주택": 2,
-      "국민임대": 3,
+      "국민임대": 1,
       "영구임대": 1
     },
     "by_audience": {
@@ -55,7 +55,7 @@
       "신생아": 1
     },
     "by_agency": {
-      "SH": 19,
+      "SH": 18,
       "SEOUL": 1,
       "LH": 8
     }
@@ -75,7 +75,7 @@
       "deadline": "2026-09-30",
       "open_state": "접수중",
       "event": "신규",
-      "change": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [],
@@ -245,6 +245,33 @@
       "schedule_source": "source_list"
     },
     {
+      "id": "SH:seq:310580",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "NEW 2026-1차 희망하우징(공공기숙사) 잔여세대 입주자 모집공고(2026. 5. 11.) 예비2차 공급대상자 발표",
+      "housing_types": [
+        "기숙사"
+      ],
+      "audiences": [],
+      "region": "서울",
+      "published_at": "2026-05-11",
+      "deadline": "",
+      "open_state": "확인필요",
+      "event": "신규",
+      "change": "신규",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [
+        "기숙사"
+      ],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310580",
+      "source": "SH 공식 주택임대 게시판",
+      "content_signature": "b82a5fb3ff446eb02e57d06814577a452d277a6ba8cf9768bc1395e047caebed",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "",
+      "schedule_source": "source_list"
+    },
+    {
       "id": "SH:seq:310640",
       "agency": "SH",
       "agency_group": "SH",
@@ -258,7 +285,7 @@
       "deadline": "",
       "open_state": "확인필요",
       "event": "신규",
-      "change": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -341,8 +368,8 @@
       "published_at": "2026-09-22",
       "deadline": "2026-09-21",
       "open_state": "마감",
-      "event": "수정",
-      "change": "수정",
+      "event": "결과",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -461,56 +488,6 @@
       "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310491",
       "source": "SH 공식 주택임대 게시판",
       "content_signature": "44625649b430aea035cf547020f19475586f8dc505b222f2c89f021d78d1d3a6",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "",
-      "schedule_source": "source_list"
-    },
-    {
-      "id": "SH:seq:310332",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "2024년 제1차 국민임대주택(2024.09.26.공고) 예비9차 당첨자 및 동호배정 결과",
-      "housing_types": [
-        "국민임대"
-      ],
-      "audiences": [],
-      "region": "서울",
-      "published_at": "2026-09-18",
-      "deadline": "2024-09-26",
-      "open_state": "마감",
-      "event": "결과",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310332",
-      "source": "SH 공식 주택임대 게시판",
-      "content_signature": "1a1ab23f336a14ee25bb4cfd6e965a1617ef4bfa978a5a1e4faccbb1b7d3c711",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "",
-      "schedule_source": "source_list"
-    },
-    {
-      "id": "SH:seq:310329",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "2021년 제1차 국민임대주택(2021.09.24.공고) 예비23차 당첨자 및 동호배정 결과",
-      "housing_types": [
-        "국민임대"
-      ],
-      "audiences": [],
-      "region": "서울",
-      "published_at": "2026-09-18",
-      "deadline": "2021-09-24",
-      "open_state": "마감",
-      "event": "결과",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310329",
-      "source": "SH 공식 주택임대 게시판",
-      "content_signature": "3ddad5c7e2e2191527c47c0935d0191fd3ad7bfeee98564d2169413a95922674",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "",
       "schedule_source": "source_list"
