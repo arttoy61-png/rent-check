@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-23T13:45:53",
+  "generated_at": "2026-09-23T20:36:03",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
@@ -20,7 +20,7 @@
     "SEOUL": {
       "count": 11,
       "errors": [],
-      "excluded_noise": 16
+      "excluded_noise": 15
     },
     "TOTAL": {
       "count": 36,
@@ -33,9 +33,9 @@
   "summary": {
     "total": 25,
     "gangseo": 1,
-    "new": 0,
-    "updated": 1,
-    "open_or_check": 7,
+    "new": 1,
+    "updated": 0,
+    "open_or_check": 8,
     "by_housing_type": {
       "기타임대": 5,
       "매입임대": 4,
@@ -164,6 +164,31 @@
       "schedule_source": "verified_regression"
     },
     {
+      "id": "SH:seq:310673",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "NEW 2026년 신정도시마을 잔여세대 입주자모집공고(26. 9. 23.)",
+      "housing_types": [
+        "기타임대"
+      ],
+      "audiences": [],
+      "region": "서울",
+      "published_at": "",
+      "deadline": "2026-10-06",
+      "open_state": "접수예정",
+      "event": "신규",
+      "change": "신규",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310673",
+      "source": "SH 공식 주택임대 게시판",
+      "content_signature": "c5d77424d5bfaaa53dd6b6ab431320006743f292859f0fe060b2d4c14c12f833",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "2026-10-02",
+      "schedule_source": "official_detail_html"
+    },
+    {
       "id": "SH:seq:310258",
       "agency": "SH",
       "agency_group": "SH",
@@ -282,8 +307,8 @@
       "published_at": "2026-09-23",
       "deadline": "2026-05-11",
       "open_state": "마감",
-      "event": "수정",
-      "change": "수정",
+      "event": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -346,31 +371,6 @@
       "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310563",
       "source": "SH 공식 주택임대 게시판",
       "content_signature": "fc530b39e6530bd04751da8e0934f23a7fade44077ac9541130782d9c9f79b92",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "",
-      "schedule_source": "source_list"
-    },
-    {
-      "id": "SH:seq:310575",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "[토지임대부 사회주택] 쌍문생활 302호 입주자 모집 공고문",
-      "housing_types": [
-        "기타임대"
-      ],
-      "audiences": [],
-      "region": "서울",
-      "published_at": "2026-09-21",
-      "deadline": "2026-09-21",
-      "open_state": "마감",
-      "event": "신규",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310575",
-      "source": "SH 공식 주택임대 게시판",
-      "content_signature": "755050ae19fe28128701cd6caa106bf74503dae466cb08046e30094b18001dda",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "",
       "schedule_source": "source_list"
