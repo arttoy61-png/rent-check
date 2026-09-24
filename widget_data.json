@@ -1,7 +1,7 @@
 {
   "region": "화곡동",
-  "generated_at": "2026-09-24T20:42:21.943885",
-  "total_deals": 22021,
+  "generated_at": "2026-09-25T08:13:35.078813",
+  "total_deals": 22022,
   "deals": [
     {
       "building_name": "청담라인씨티",
@@ -5077,6 +5077,18 @@
       "deal_period": "2026.08.11",
       "floor": "16",
       "build_year": "2012",
+      "is_jeonse": false
+    },
+    {
+      "building_name": "자하클래식",
+      "type": "오피스텔",
+      "area_m2": 15.88,
+      "pyung": 4.8,
+      "deposit": 3000,
+      "monthly_rent": 55,
+      "deal_period": "2026.08.26",
+      "floor": "10",
+      "build_year": "2018",
       "is_jeonse": false
     },
     {
@@ -266728,6 +266740,18 @@
         "deal_period": "2026.08.11",
         "floor": "16",
         "build_year": "2012",
+        "is_jeonse": false
+      },
+      {
+        "building_name": "자하클래식",
+        "type": "오피스텔",
+        "area_m2": 15.88,
+        "pyung": 4.8,
+        "deposit": 3000,
+        "monthly_rent": 55,
+        "deal_period": "2026.08.26",
+        "floor": "10",
+        "build_year": "2018",
         "is_jeonse": false
       },
       {
