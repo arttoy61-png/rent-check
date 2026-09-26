@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-09-26T09:38:29.651698+09:00",
+  "checked_at": "2026-09-26T20:21:56.828722+09:00",
   "day": "2026-09-26",
   "state": "healthy",
   "collection": {
@@ -9,7 +9,7 @@
     "expected": 144,
     "succeeded": 144,
     "failed": 0,
-    "run_id": 36200449644
+    "run_id": 36238491657
   },
   "retry": {
     "day": "2026-09-21",
@@ -18,5 +18,5 @@
     "status": "requested"
   },
   "dry_run": false,
-  "allow_retry": true
+  "allow_retry": false
 }
