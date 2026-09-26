@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-09-26T08:19:45.423606+09:00",
+  "checked_at": "2026-09-26T09:38:29.651698+09:00",
   "day": "2026-09-26",
   "state": "healthy",
   "collection": {
@@ -18,5 +18,5 @@
     "status": "requested"
   },
   "dry_run": false,
-  "allow_retry": false
+  "allow_retry": true
 }
