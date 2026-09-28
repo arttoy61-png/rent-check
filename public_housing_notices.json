@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-28T22:53:50",
+  "generated_at": "2026-09-29T06:16:13",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
@@ -14,35 +14,35 @@
       "warnings": []
     },
     "SH": {
-      "count": 15,
+      "count": 16,
       "errors": []
     },
     "SEOUL": {
-      "count": 11,
+      "count": 9,
       "errors": [],
-      "excluded_noise": 17
+      "excluded_noise": 19
     },
     "TOTAL": {
-      "count": 34,
-      "duplicates_removed": 4,
+      "count": 33,
+      "duplicates_removed": 5,
       "excluded_non_housing": 4,
-      "excluded_outside_seoul": 3,
-      "published_count": 24
+      "excluded_outside_seoul": 0,
+      "published_count": 25
     }
   },
   "summary": {
-    "total": 24,
+    "total": 25,
     "gangseo": 3,
-    "new": 4,
-    "updated": 0,
-    "open_or_check": 12,
+    "new": 1,
+    "updated": 7,
+    "open_or_check": 7,
     "by_housing_type": {
+      "기타임대": 8,
       "매입임대": 4,
-      "기타임대": 7,
       "기숙사": 1,
       "장기전세": 4,
-      "안심주택": 1,
       "공공임대": 1,
+      "안심주택": 1,
       "행복주택": 6,
       "국민임대": 1,
       "영구임대": 1
@@ -54,10 +54,35 @@
     },
     "by_agency": {
       "SH": 16,
-      "LH": 8
+      "LH": 9
     }
   },
   "items": [
+    {
+      "id": "SH:seq:310041",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "2026년 재개발임대주택 일반모집 공고(2026. 9. 9.)",
+      "housing_types": [
+        "기타임대"
+      ],
+      "audiences": [],
+      "region": "서울",
+      "published_at": "2026-09-09",
+      "deadline": "2026-10-02",
+      "open_state": "마감임박",
+      "event": "수정",
+      "change": "수정",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310041",
+      "source": "서울주거포털",
+      "content_signature": "4030428ea4e07a2b98b68dc5c4ceba15dcb5d288bf8c9b68efc9a24c4dceea99",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "2026-09-29",
+      "schedule_source": "official_detail_html"
+    },
     {
       "id": "SH:seq:310107",
       "agency": "SH",
@@ -138,88 +163,29 @@
       "schedule_source": "official_detail_html"
     },
     {
-      "id": "SH:seq:310041",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "재개2026년 재개발임대주택 일반모집 공고(2026. 9. 9.)",
+      "id": "LH:panId:2015122300020765",
+      "agency": "LH",
+      "agency_group": "LH",
+      "title": "마산삼계2공임50년 예비입주자 모집공고문",
       "housing_types": [
         "기타임대"
       ],
       "audiences": [],
       "region": "서울",
-      "published_at": "2026-09-09",
-      "deadline": "2026-10-02",
+      "published_at": "",
+      "deadline": "2026-10-13",
       "open_state": "접수예정",
       "event": "신규",
-      "change": "동일",
+      "change": "신규",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310041",
+      "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020765&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=08&mi=1026",
       "source": "서울주거포털",
-      "content_signature": "565cb2bb29852192e056ac46c261f5e6926a60b1ed083ce6fe97e682580bdfbf",
+      "content_signature": "b2c8743f0a90b1a5c308cad803adf681be0311d330973a7fc990c5aed0634b2c",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "2026-09-29",
+      "application_start": "2026-10-12",
       "schedule_source": "official_detail_html"
-    },
-    {
-      "id": "SH:seq:310779",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "NEW 2026년 화곡동 청년 협동조합주택(그랑) 잔여세대 입주자 모집공고(2026. 6. 24.) 면접평가 대상자 발표",
-      "housing_types": [
-        "기타임대"
-      ],
-      "audiences": [
-        "청년"
-      ],
-      "region": "서울",
-      "published_at": "2026-06-24",
-      "deadline": "",
-      "open_state": "확인필요",
-      "event": "신규",
-      "change": "신규",
-      "status_text": "",
-      "is_gangseo": true,
-      "keywords": [
-        "화곡",
-        "청년",
-        "협동조합"
-      ],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310779",
-      "source": "SH 공식 주택임대 게시판",
-      "content_signature": "73b001e3d65a5128dc2929a7c8dc696e939537342008dc4a5165b85909886c96",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "",
-      "schedule_source": "source_list"
-    },
-    {
-      "id": "SH:seq:310782",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "NEW 2026년 가양동 육아 협동조합주택(이음채) 잔여세대 입주자 모집공고(2026. 6. 23.) 면접평가 대상자 발표",
-      "housing_types": [
-        "기타임대"
-      ],
-      "audiences": [],
-      "region": "서울",
-      "published_at": "2026-06-23",
-      "deadline": "",
-      "open_state": "확인필요",
-      "event": "신규",
-      "change": "신규",
-      "status_text": "",
-      "is_gangseo": true,
-      "keywords": [
-        "가양",
-        "협동조합"
-      ],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310782",
-      "source": "SH 공식 주택임대 게시판",
-      "content_signature": "273165677f81946df103ec2362bf918971f414c1556e37c4e0d82eec6e10c784",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "",
-      "schedule_source": "source_list"
     },
     {
       "id": "SH:seq:310258",
@@ -276,108 +242,60 @@
       "schedule_source": "source_list"
     },
     {
-      "id": "SH:seq:310784",
+      "id": "SH:seq:310779",
       "agency": "SH",
       "agency_group": "SH",
-      "title": "NEW 2026년 만리동 예술인 협동조합주택(막쿱) 잔여세대 입주자 모집공고(2026. 6. 25.) 교육이수 및 면접평가 대상자 발표",
+      "title": "2026년 화곡동 청년 협동조합주택(그랑) 잔여세대 입주자 모집공고(2026. 6. 24.) 면접평가 대상자 발표",
       "housing_types": [
         "기타임대"
-      ],
-      "audiences": [],
-      "region": "서울",
-      "published_at": "2026-06-25",
-      "deadline": "",
-      "open_state": "확인필요",
-      "event": "신규",
-      "change": "신규",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [
-        "협동조합"
-      ],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310784",
-      "source": "SH 공식 주택임대 게시판",
-      "content_signature": "a80e00cfa185db2e6db4a5bb05210b34ecfc4fb50393eda0b0594323fa68f830",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "",
-      "schedule_source": "source_list"
-    },
-    {
-      "id": "SH:seq:310761",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "NEW 청년안심주택 도무스서초 입주안내문",
-      "housing_types": [
-        "안심주택"
       ],
       "audiences": [
         "청년"
       ],
       "region": "서울",
-      "published_at": "",
-      "deadline": "",
-      "open_state": "확인필요",
-      "event": "신규",
-      "change": "동일",
+      "published_at": "2026-09-28",
+      "deadline": "2026-06-24",
+      "open_state": "마감",
+      "event": "수정",
+      "change": "수정",
       "status_text": "",
-      "is_gangseo": false,
+      "is_gangseo": true,
       "keywords": [
+        "화곡",
         "청년",
-        "안심주택"
+        "협동조합"
       ],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310761",
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310779",
       "source": "SH 공식 주택임대 게시판",
-      "content_signature": "8f642cb425badc8b7332b089f19934d401987dee856d75a4d384add9a5ff770b",
+      "content_signature": "deb772a4c40e1e39711006c18a9332f255160c6f4bec34f79c109d031f94e179",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "",
       "schedule_source": "source_list"
     },
     {
-      "id": "SH:seq:310672",
+      "id": "SH:seq:310782",
       "agency": "SH",
       "agency_group": "SH",
-      "title": "NEW [토지지원 사회주택]유니버설디자인하우스_망우 입주자 모집 공고",
+      "title": "2026년 가양동 육아 협동조합주택(이음채) 잔여세대 입주자 모집공고(2026. 6. 23.) 면접평가 대상자 발표",
       "housing_types": [
         "기타임대"
       ],
       "audiences": [],
       "region": "서울",
-      "published_at": "",
-      "deadline": "",
-      "open_state": "확인필요",
-      "event": "신규",
-      "change": "동일",
+      "published_at": "2026-09-28",
+      "deadline": "2026-06-23",
+      "open_state": "마감",
+      "event": "수정",
+      "change": "수정",
       "status_text": "",
-      "is_gangseo": false,
-      "keywords": [],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310672",
-      "source": "SH 공식 주택임대 게시판",
-      "content_signature": "762f5008a16e8a3f0522d4537ba108bfd4efb78606aab027e1de6656bdf23e41",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "",
-      "schedule_source": "source_list"
-    },
-    {
-      "id": "SH:seq:310790",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "NEW 2026-2차 사당동 원룸 잔여세대 입주자모집공고(26. 6. 26.) 당첨자 발표 및 계약안내",
-      "housing_types": [
-        "기타임대"
+      "is_gangseo": true,
+      "keywords": [
+        "가양",
+        "협동조합"
       ],
-      "audiences": [],
-      "region": "서울",
-      "published_at": "",
-      "deadline": "",
-      "open_state": "확인필요",
-      "event": "결과",
-      "change": "신규",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310790",
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310782",
       "source": "SH 공식 주택임대 게시판",
-      "content_signature": "9eb55a936fd28ea952fa24618602c9392167d3aa1bc57c2c958e36318bfc5642",
+      "content_signature": "baf8b986179e05a9b7b5a8bb860fdd10ba5091840ff20cd9583bba6303f033ac",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "",
       "schedule_source": "source_list"
@@ -408,6 +326,113 @@
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "2026-04-23",
       "schedule_source": "official_detail_html"
+    },
+    {
+      "id": "SH:seq:310761",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "청년안심주택 도무스서초 입주안내문",
+      "housing_types": [
+        "안심주택"
+      ],
+      "audiences": [
+        "청년"
+      ],
+      "region": "서울",
+      "published_at": "2026-09-28",
+      "deadline": "2026-09-28",
+      "open_state": "마감",
+      "event": "수정",
+      "change": "수정",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [
+        "청년",
+        "안심주택"
+      ],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310761",
+      "source": "SH 공식 주택임대 게시판",
+      "content_signature": "eb3544cefd614cedab2fec90bafc805bb7fb14b5a0cb3d5df9347cd23d944894",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "",
+      "schedule_source": "source_list"
+    },
+    {
+      "id": "SH:seq:310672",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "[토지지원 사회주택]유니버설디자인하우스_망우 입주자 모집 공고",
+      "housing_types": [
+        "기타임대"
+      ],
+      "audiences": [],
+      "region": "서울",
+      "published_at": "2026-09-28",
+      "deadline": "2026-09-28",
+      "open_state": "마감",
+      "event": "수정",
+      "change": "수정",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310672",
+      "source": "SH 공식 주택임대 게시판",
+      "content_signature": "7a68715406b2cdef2f25ebf3e3857a099d2b72e88eeb8a8c99b4a08e4bbb4229",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "",
+      "schedule_source": "source_list"
+    },
+    {
+      "id": "SH:seq:310784",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "2026년 만리동 예술인 협동조합주택(막쿱) 잔여세대 입주자 모집공고(2026. 6. 25.) 교육이수 및 면접평가 대상자 발표",
+      "housing_types": [
+        "기타임대"
+      ],
+      "audiences": [],
+      "region": "서울",
+      "published_at": "2026-09-28",
+      "deadline": "2026-06-25",
+      "open_state": "마감",
+      "event": "수정",
+      "change": "수정",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [
+        "협동조합"
+      ],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310784",
+      "source": "SH 공식 주택임대 게시판",
+      "content_signature": "a48bafeb18edaa538a393149a1b4a46756137b1debe2e91ff48225f5e17a8335",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "",
+      "schedule_source": "source_list"
+    },
+    {
+      "id": "SH:seq:310790",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "2026-2차 사당동 원룸 잔여세대 입주자모집공고(26. 6. 26.) 당첨자 발표 및 계약안내",
+      "housing_types": [
+        "기타임대"
+      ],
+      "audiences": [],
+      "region": "서울",
+      "published_at": "2026-09-28",
+      "deadline": "2026-09-28",
+      "open_state": "마감",
+      "event": "수정",
+      "change": "수정",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310790",
+      "source": "SH 공식 주택임대 게시판",
+      "content_signature": "37d7b83cdf3285b23236e45406c99f09135cbb94a1295617deb26456e37239d3",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "",
+      "schedule_source": "source_list"
     },
     {
       "id": "SH:seq:309467",
