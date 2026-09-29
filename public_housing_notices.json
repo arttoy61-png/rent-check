@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-29T10:03:19",
+  "generated_at": "2026-09-29T18:50:19",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
@@ -14,7 +14,7 @@
       "warnings": []
     },
     "SH": {
-      "count": 16,
+      "count": 17,
       "errors": []
     },
     "SEOUL": {
@@ -23,22 +23,22 @@
       "excluded_noise": 18
     },
     "TOTAL": {
-      "count": 34,
+      "count": 35,
       "duplicates_removed": 5,
       "excluded_non_housing": 4,
       "excluded_outside_seoul": 0,
-      "published_count": 25
+      "published_count": 26
     }
   },
   "summary": {
-    "total": 25,
+    "total": 26,
     "gangseo": 3,
-    "new": 0,
-    "updated": 1,
-    "open_or_check": 7,
+    "new": 2,
+    "updated": 0,
+    "open_or_check": 9,
     "by_housing_type": {
       "기타임대": 8,
-      "매입임대": 4,
+      "매입임대": 5,
       "기숙사": 1,
       "장기전세": 4,
       "공공임대": 1,
@@ -48,12 +48,12 @@
       "영구임대": 1
     },
     "by_audience": {
-      "청년": 2,
+      "청년": 3,
       "신혼부부": 1,
       "신생아": 1
     },
     "by_agency": {
-      "SH": 16,
+      "SH": 17,
       "LH": 9
     }
   },
@@ -175,8 +175,8 @@
       "published_at": "",
       "deadline": "2026-10-06",
       "open_state": "접수예정",
-      "event": "수정",
-      "change": "수정",
+      "event": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [],
@@ -237,6 +237,61 @@
       "url": "https://youth.seoul.go.kr/api/sh/list.do?key=2309250014#none",
       "source": "청년몽땅 SH 공고목록",
       "content_signature": "8d4e7c9af27b75af52683fcf7703c66cd682f0b1e30ef9c9932fdd1245b078f4",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "",
+      "schedule_source": "source_list"
+    },
+    {
+      "id": "SH:seq:310788",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "NEW 2025년 재개발임대주택 예비5차 당첨자 발표(2025.10.24.공고)",
+      "housing_types": [
+        "기타임대"
+      ],
+      "audiences": [],
+      "region": "서울",
+      "published_at": "2025-10-24",
+      "deadline": "",
+      "open_state": "확인필요",
+      "event": "결과",
+      "change": "신규",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310788",
+      "source": "SH 공식 주택임대 게시판",
+      "content_signature": "6f51e4d5d69003ccc69241131facccf7d843921ce51441c582eb036b2649006c",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "",
+      "schedule_source": "source_list"
+    },
+    {
+      "id": "SH:seq:310789",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "NEW [당첨자발표] 청년 매입임대주택 예비자 공급 계약대상자 발표(2025년 2차 예비3차) 및 계약안내",
+      "housing_types": [
+        "매입임대"
+      ],
+      "audiences": [
+        "청년"
+      ],
+      "region": "서울",
+      "published_at": "",
+      "deadline": "",
+      "open_state": "확인필요",
+      "event": "결과",
+      "change": "신규",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [
+        "청년",
+        "매입임대"
+      ],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310789",
+      "source": "SH 공식 주택임대 게시판",
+      "content_signature": "7df9e9abb3f3af95a460fc2f57b509247253c18490be91f72e2532748b0a0612",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "",
       "schedule_source": "source_list"
@@ -353,31 +408,6 @@
       "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310761",
       "source": "SH 공식 주택임대 게시판",
       "content_signature": "eb3544cefd614cedab2fec90bafc805bb7fb14b5a0cb3d5df9347cd23d944894",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "",
-      "schedule_source": "source_list"
-    },
-    {
-      "id": "SH:seq:310672",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "[토지지원 사회주택]유니버설디자인하우스_망우 입주자 모집 공고",
-      "housing_types": [
-        "기타임대"
-      ],
-      "audiences": [],
-      "region": "서울",
-      "published_at": "2026-09-28",
-      "deadline": "2026-09-28",
-      "open_state": "마감",
-      "event": "신규",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310672",
-      "source": "SH 공식 주택임대 게시판",
-      "content_signature": "7a68715406b2cdef2f25ebf3e3857a099d2b72e88eeb8a8c99b4a08e4bbb4229",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "",
       "schedule_source": "source_list"
