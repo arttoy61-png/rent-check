@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-09-30T03:06:26",
+  "generated_at": "2026-09-30T07:16:15",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
@@ -34,7 +34,7 @@
     "total": 25,
     "gangseo": 3,
     "new": 0,
-    "updated": 2,
+    "updated": 0,
     "open_or_check": 6,
     "by_housing_type": {
       "기타임대": 7,
@@ -317,8 +317,8 @@
       "published_at": "2026-09-29",
       "deadline": "2025-10-24",
       "open_state": "마감",
-      "event": "수정",
-      "change": "수정",
+      "event": "결과",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -345,8 +345,8 @@
       "published_at": "2026-09-29",
       "deadline": "2025-10-24",
       "open_state": "마감",
-      "event": "수정",
-      "change": "수정",
+      "event": "결과",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [],
