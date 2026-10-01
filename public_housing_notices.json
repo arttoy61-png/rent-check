@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-01T09:34:34",
+  "generated_at": "2026-10-01T11:45:56",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
@@ -20,7 +20,7 @@
     "SEOUL": {
       "count": 9,
       "errors": [],
-      "excluded_noise": 18
+      "excluded_noise": 19
     },
     "TOTAL": {
       "count": 31,
@@ -34,14 +34,14 @@
     "total": 25,
     "gangseo": 1,
     "new": 0,
-    "updated": 0,
-    "open_or_check": 7,
+    "updated": 3,
+    "open_or_check": 8,
     "by_housing_type": {
       "기타임대": 4,
+      "장기전세": 4,
       "매입임대": 6,
       "기숙사": 2,
       "공공임대": 1,
-      "장기전세": 4,
       "안심주택": 1,
       "행복주택": 6,
       "국민임대": 1,
@@ -80,7 +80,32 @@
       "source": "서울주거포털",
       "content_signature": "4030428ea4e07a2b98b68dc5c4ceba15dcb5d288bf8c9b68efc9a24c4dceea99",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "2026-09-29",
+      "application_start": "2026-09-30",
+      "schedule_source": "official_detail_html"
+    },
+    {
+      "id": "SH:seq:310874",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "제49차 장기전세주택(2025.12.15.공고) 예비 3차 입주대상자 발표",
+      "housing_types": [
+        "장기전세"
+      ],
+      "audiences": [],
+      "region": "서울",
+      "published_at": "2026-09-30",
+      "deadline": "2027-01-11",
+      "open_state": "접수예정",
+      "event": "수정",
+      "change": "수정",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310874",
+      "source": "SH 공식 주택임대 게시판",
+      "content_signature": "454dc6e65653ea6c92c44f3dafac90395f1d0a1afb1d2cb21d9d852a12d85bb6",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "2026-11-09",
       "schedule_source": "official_detail_html"
     },
     {
@@ -99,8 +124,8 @@
       "published_at": "2026-09-30",
       "deadline": "2026-10-15",
       "open_state": "접수예정",
-      "event": "신규",
-      "change": "동일",
+      "event": "수정",
+      "change": "수정",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -109,7 +134,7 @@
       ],
       "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310653",
       "source": "SH 공식 주택임대 게시판",
-      "content_signature": "d0be3ef3715711074738e7f414f9eb458369b6d546a6e5e6075752c2a7a7620e",
+      "content_signature": "f483fcf6cf393613f8bc1479ed85de5d4b1752fb4ccaabd8f1016cb163110e7b",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "2026-10-13",
       "schedule_source": "verified_regression"
@@ -130,8 +155,8 @@
       "published_at": "2026-09-30",
       "deadline": "2026-10-15",
       "open_state": "접수예정",
-      "event": "신규",
-      "change": "동일",
+      "event": "수정",
+      "change": "수정",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -140,7 +165,7 @@
       ],
       "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310650",
       "source": "SH 공식 주택임대 게시판",
-      "content_signature": "9c237e6d976fb54ecf56c4aa920d4fd89f5a68a22147f017b3395cbaff7c037c",
+      "content_signature": "4a539e6f47889d98e1239eb62625f9e1ba7b1247c0ca1c175081afd519dc2507",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "2026-10-13",
       "schedule_source": "verified_regression"
@@ -159,7 +184,7 @@
       ],
       "region": "서울",
       "published_at": "",
-      "deadline": "2026-10-19",
+      "deadline": "2026-10-21",
       "open_state": "접수예정",
       "event": "신규",
       "change": "동일",
@@ -173,7 +198,7 @@
       "source": "서울주거포털",
       "content_signature": "985fdbc11693c753e29fd74997291e7e5bc7e7831dec8b2a1c021f5c155fc3e4",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "2026-10-16",
+      "application_start": "2026-10-19",
       "schedule_source": "official_detail_html"
     },
     {
@@ -311,31 +336,6 @@
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "",
       "schedule_source": "source_list"
-    },
-    {
-      "id": "SH:seq:310874",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "제49차 장기전세주택(2025.12.15.공고) 예비 3차 입주대상자 발표",
-      "housing_types": [
-        "장기전세"
-      ],
-      "audiences": [],
-      "region": "서울",
-      "published_at": "2026-09-30",
-      "deadline": "2026-09-30",
-      "open_state": "마감",
-      "event": "신규",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310874",
-      "source": "SH 공식 주택임대 게시판",
-      "content_signature": "bcbb3f21d2bf9fcd8f6b225b92f4a4f54751a097a466a1ce6d9cd5970b194e30",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "2026-09-30",
-      "schedule_source": "official_detail_html"
     },
     {
       "id": "SH:seq:310757",
@@ -626,7 +626,7 @@
       "source": "서울주거포털 LH공사 연계",
       "content_signature": "646a5033a7971ddb18d0c5087a4590a326add7038a9322e2380f3c70c253318b",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "2026-07-15",
+      "application_start": "2026-07-27",
       "schedule_source": "official_detail_html"
     },
     {
@@ -653,7 +653,7 @@
       "source": "서울주거포털 LH공사 연계",
       "content_signature": "c79291c6431d8ef5ed3db625de08912d9503f59843a98b5d3470bf6a2ea0341e",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "2026-05-15",
+      "application_start": "2026-05-27",
       "schedule_source": "official_detail_html"
     },
     {
@@ -680,7 +680,7 @@
       "source": "서울주거포털 LH공사 연계",
       "content_signature": "71dffaee21177d93b6a97dd8c50d761b95aaa2164bfaf92349b46fb983381cf4",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "2026-05-15",
+      "application_start": "2026-05-27",
       "schedule_source": "official_detail_html"
     },
     {
@@ -707,7 +707,7 @@
       "source": "서울주거포털 LH공사 연계",
       "content_signature": "6a776bb58a4db4fc230f278af09798be97d578e3cf418634dc5fbe384e68f13a",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "2026-05-07",
+      "application_start": "2026-05-19",
       "schedule_source": "official_detail_html"
     },
     {
