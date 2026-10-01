@@ -97,7 +97,7 @@
       ],
       "region": "서울",
       "published_at": "2026-09-30",
-      "deadline": "2026-10-20",
+      "deadline": "2026-10-15",
       "open_state": "접수예정",
       "event": "신규",
       "change": "동일",
@@ -111,8 +111,8 @@
       "source": "SH 공식 주택임대 게시판",
       "content_signature": "d0be3ef3715711074738e7f414f9eb458369b6d546a6e5e6075752c2a7a7620e",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "2026-10-19",
-      "schedule_source": "official_detail_html"
+      "application_start": "2026-10-13",
+      "schedule_source": "verified_regression"
     },
     {
       "id": "SH:seq:310650",
@@ -128,7 +128,7 @@
       ],
       "region": "서울",
       "published_at": "2026-09-30",
-      "deadline": "2026-10-20",
+      "deadline": "2026-10-15",
       "open_state": "접수예정",
       "event": "신규",
       "change": "동일",
@@ -142,8 +142,8 @@
       "source": "SH 공식 주택임대 게시판",
       "content_signature": "9c237e6d976fb54ecf56c4aa920d4fd89f5a68a22147f017b3395cbaff7c037c",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "application_start": "2026-10-19",
-      "schedule_source": "official_detail_html"
+      "application_start": "2026-10-13",
+      "schedule_source": "verified_regression"
     },
     {
       "id": "LH:panId:2015122300020814",
