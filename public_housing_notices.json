@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-06T15:20:31",
+  "generated_at": "2026-10-07T00:57:54",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
@@ -23,27 +23,27 @@
       ],
       "fresh_count": 8,
       "carried_count": 7,
-      "failure_streak": 18
+      "failure_streak": 19
     },
     "SH": {
-      "count": 18,
+      "count": 17,
       "errors": []
     },
     "SEOUL": {
       "count": 7,
       "errors": [],
-      "excluded_noise": 19
+      "excluded_noise": 20
     },
     "TOTAL": {
-      "count": 31,
+      "count": 30,
       "duplicates_removed": 5,
       "excluded_non_housing": 2,
       "excluded_outside_seoul": 0,
-      "published_count": 33
+      "published_count": 32
     }
   },
   "summary": {
-    "total": 33,
+    "total": 32,
     "gangseo": 3,
     "new": 0,
     "updated": 0,
@@ -53,7 +53,7 @@
       "공공임대": 4,
       "든든전세": 1,
       "기타임대": 4,
-      "장기전세": 4,
+      "장기전세": 3,
       "안심주택": 2,
       "기숙사": 2,
       "통합공공임대": 2,
@@ -68,7 +68,7 @@
     },
     "by_agency": {
       "LH": 14,
-      "SH": 19
+      "SH": 18
     }
   },
   "items": [
@@ -1264,39 +1264,6 @@
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "published_source": "official_list_registration",
       "notice_kind": "result",
-      "application_start": "",
-      "schedule_type": "not_applicable",
-      "deadline_precision": "unknown",
-      "schedule_source": "not_applicable",
-      "schedule_note": "신규 신청공고가 아닌 결과·입주 안내입니다.",
-      "application_windows": [],
-      "schedule_evidence": {},
-      "sh_schedule_version": 1
-    },
-    {
-      "id": "SH:seq:310903",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "[이문아이파크자이] 제7차 장기전세2, 재개발 임대주택 입주 안내문 게시",
-      "housing_types": [
-        "장기전세"
-      ],
-      "audiences": [],
-      "region": "서울",
-      "published_at": "2026-09-30",
-      "deadline": "",
-      "open_state": "신청대상아님",
-      "event": "신규",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310903",
-      "source": "SH 공식 주택임대 게시판",
-      "content_signature": "a820429df0ff4dbc48718f1eb5c52729515a4b97195e61fca82f6c70ec774568",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "published_source": "official_list_registration",
-      "notice_kind": "move_in",
       "application_start": "",
       "schedule_type": "not_applicable",
       "deadline_precision": "unknown",
