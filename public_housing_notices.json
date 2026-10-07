@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-07T07:41:38",
+  "generated_at": "2026-10-07T14:59:47",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
@@ -23,7 +23,7 @@
       ],
       "fresh_count": 8,
       "carried_count": 7,
-      "failure_streak": 20
+      "failure_streak": 21
     },
     "SH": {
       "count": 17,
@@ -32,7 +32,7 @@
     "SEOUL": {
       "count": 7,
       "errors": [],
-      "excluded_noise": 20
+      "excluded_noise": 17
     },
     "TOTAL": {
       "count": 30,
@@ -45,21 +45,21 @@
   "summary": {
     "total": 32,
     "gangseo": 3,
-    "new": 0,
+    "new": 1,
     "updated": 0,
     "open_or_check": 11,
     "by_housing_type": {
       "매입임대": 11,
       "공공임대": 4,
       "든든전세": 1,
-      "기타임대": 4,
+      "기타임대": 5,
       "장기전세": 3,
-      "안심주택": 2,
       "기숙사": 2,
       "통합공공임대": 2,
       "행복주택": 6,
       "국민임대": 1,
-      "영구임대": 1
+      "영구임대": 1,
+      "안심주택": 1
     },
     "by_audience": {
       "신혼부부": 5,
@@ -180,6 +180,39 @@
       "sh_schedule_version": 1
     },
     {
+      "id": "SH:seq:310976",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "NEW [토지임대부 사회주택] 옥류서원 입주자 모집 공고문",
+      "housing_types": [
+        "기타임대"
+      ],
+      "audiences": [],
+      "region": "서울",
+      "published_at": "2026-10-07",
+      "deadline": "",
+      "open_state": "확인필요",
+      "event": "신규",
+      "change": "신규",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310976",
+      "source": "SH 공식 주택임대 게시판",
+      "content_signature": "0dee15efcdb3dc347a63ae5ae1d77a92ee8cd1905a01270dbc3271f597c70910",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "published_source": "official_list_registration",
+      "notice_kind": "recruitment",
+      "application_start": "",
+      "schedule_type": "unknown",
+      "deadline_precision": "unknown",
+      "schedule_source": "unknown",
+      "schedule_note": "신청기간은 공식 공고문 확인이 필요합니다.",
+      "application_windows": [],
+      "schedule_evidence": {},
+      "sh_schedule_version": 1
+    },
+    {
       "id": "SH:seq:311005",
       "agency": "SH",
       "agency_group": "SH",
@@ -279,41 +312,6 @@
       "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310874",
       "source": "SH 공식 주택임대 게시판",
       "content_signature": "a7f7b178806c3e2199211d893140a34ac0b34e6c128ac27efe5b968cd504bf7c",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "published_source": "official_list_registration",
-      "notice_kind": "recruitment",
-      "application_start": "",
-      "schedule_type": "unknown",
-      "deadline_precision": "unknown",
-      "schedule_source": "unknown",
-      "schedule_note": "신청기간은 공식 공고문 확인이 필요합니다.",
-      "application_windows": [],
-      "schedule_evidence": {},
-      "sh_schedule_version": 1
-    },
-    {
-      "id": "SH:seq:310757",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "장기안심주택 2027년 1월 재계약 대상자 입주자격 심사결과",
-      "housing_types": [
-        "안심주택"
-      ],
-      "audiences": [],
-      "region": "서울",
-      "published_at": "2026-09-30",
-      "deadline": "",
-      "open_state": "확인필요",
-      "event": "신규",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [
-        "안심주택"
-      ],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310757",
-      "source": "SH 공식 주택임대 게시판",
-      "content_signature": "a59db6484d4722814332ddd5fd5847c1705e0db4ff9bb3dd1e80a203da3002c1",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "published_source": "official_list_registration",
       "notice_kind": "recruitment",
