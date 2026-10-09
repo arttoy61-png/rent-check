@@ -1,0 +1,107 @@
+name: Build isolated Sites23 review
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/build-sites23-review.yml']
+permissions:
+  contents: write
+concurrency:
+  group: isolated-sites23-review
+  cancel-in-progress: false
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+      - name: Build verified newest review files only
+        env:
+          KAKAO_JAVASCRIPT_KEY: ${{ secrets.KAKAO_JAVASCRIPT_KEY }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import hashlib, io, json, os, re, shutil, stat, tempfile, urllib.request, zipfile
+          from pathlib import Path
+          url='https://d2ol7oe51mr4n9.cloudfront.net/user_3IDBI0waiBn60lYtWWKmKzM268s/4cf00205-fad8-4868-8e17-5c9849ff05c2.zip'
+          expected='47cf28a8e30ba6fdf7e9aa9371cfc9a2f67dc6cf1fdcc17ae240615f33172f5b'
+          raw=urllib.request.urlopen(url,timeout=60).read()
+          if hashlib.sha256(raw).hexdigest()!=expected: raise RuntimeError('Source archive checksum mismatch')
+          out=Path('review-sites23')
+          if out.exists(): raise RuntimeError('Review path already exists; reconcile before replacing it')
+          out.mkdir()
+          preserved=0;data_count=0
+          with zipfile.ZipFile(io.BytesIO(raw)) as z:
+              for info in z.infolist():
+                  name=info.filename;p=Path(name)
+                  if name.startswith('/') or '..' in p.parts or stat.S_ISLNK(info.external_attr>>16): raise RuntimeError('Unsafe archive entry')
+                  if info.is_dir() or not name.startswith('app/') or p.name.startswith('qa-'): continue
+                  rel=Path(*p.parts[1:]);target=out/rel
+                  target.parent.mkdir(parents=True,exist_ok=True)
+                  target.write_bytes(z.read(info));preserved+=1
+                  data_count+=int(str(rel).startswith('data/'))
+          app=out/'app.js';s=app.read_text(encoding='utf-8')
+          anchor='windowScroll:0,expanded:false,detailOpen:false'
+          if s.count(anchor)!=1: raise RuntimeError('Mobile default anchor changed')
+          app.write_text(s.replace(anchor,"windowScroll:0,expanded:window.matchMedia('(max-width:700px)').matches,detailOpen:false"),encoding='utf-8')
+          p=out/'index.html';s=p.read_text(encoding='utf-8')
+          s=s.replace('<title>Rent Check 개선 코드 검수 · 미완료</title>','<title>Rent Check | Sites23 지도 우선 공개 검토</title>')
+          s=s.replace('운영 사이트를 바꾸지 않은 비공개 시제품입니다.','운영 홈과 분리된 공개 검토용 시제품입니다.')
+          s=s.replace('<link rel="stylesheet" href="style.css">','<link rel="stylesheet" href="style.css"><link rel="stylesheet" href="map-first.css">')
+          s=s.replace('</body>','<script src="map-resize.js" defer></script></body>')
+          p.write_text(s,encoding='utf-8')
+          key=os.environ.get('KAKAO_JAVASCRIPT_KEY','').strip()
+          if key and not re.fullmatch(r'[a-fA-F0-9]{32}',key): raise RuntimeError('Kakao JavaScript key format invalid; value not shown')
+          # ONLY the browser JavaScript key. Never put admin or REST credentials here.
+          # The owner enters it through GitHub Actions Secrets, not chat or logs.
+          # A browser SDK necessarily receives this public-client key; domain restrictions apply.
+          config={'kakaoJavaScriptKey':key,'autoConnect':True,'timeoutMs':20000}
+          (out/'config.public.js').write_text('window.RENTCHECK_MAP_CONFIG=Object.freeze('+json.dumps(config)+');\n',encoding='utf-8')
+          p=out/'kakao-session.js';s=p.read_text(encoding='utf-8')
+          s=s.replace('자동 지도 설정이 비어 있습니다. 받은 카카오 자동연결 ZIP의 app/config.public.js 파일을 이 앱의 app/config.public.js 위치에 직접 복사한 뒤 새로고침하세요.','운영자의 카카오 지도 설정 대기 중입니다. 방문자는 키를 입력할 필요가 없습니다.')
+          p.write_text(s,encoding='utf-8')
+          (out/'map-first.css').write_text('''/* Newest Sites23 preserved; mobile map-first layout override. */
+          @media(max-width:700px){
+          #mapPage .workspace{position:relative}
+          #mapPage .workspace.mapexpanded:not(.has-detail) .mapsection{display:flex;flex:1 1 auto;height:auto;min-height:0}
+          #mapPage .workspace.mapexpanded:not(.has-detail) .listpane{flex:0 0 64px;min-height:64px;padding-bottom:env(safe-area-inset-bottom);border-radius:16px 16px 0 0;box-shadow:0 -4px 18px #102b490c}
+          #mapPage .workspace.mapexpanded:not(.has-detail) .listtop{height:56px;min-height:56px;padding:8px 16px}
+          #mapPage #mobileToggle{min-height:42px;min-width:84px}
+          #mapPage .workspace.has-detail .mapsection,#mapPage .workspace.has-detail:not(.sheet-collapsed):not(.detail-map-visible) .mapsection{display:flex;flex:0 0 clamp(180px,31dvh,290px);height:clamp(180px,31dvh,290px);min-height:0}
+          #mapPage .workspace.has-detail .detailpane{position:relative;inset:auto;flex:1 1 auto;height:auto;min-height:0;max-height:none;border-radius:16px 16px 0 0;overflow:hidden;z-index:5}
+          #mapPage .workspace.has-detail .detailtop{flex:0 0 auto;position:relative;min-height:52px}
+          #mapPage .workspace.has-detail #detailBody{min-height:0;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+          #mapPage .workspace.has-detail.sheet-collapsed .mapsection,#mapPage .workspace.has-detail.detail-map-visible .mapsection{flex:1 1 auto;height:auto;display:flex}
+          #mapPage .workspace.has-detail.sheet-collapsed .detailpane,#mapPage .workspace.has-detail.detail-map-visible .detailpane{position:relative;inset:auto;flex:0 0 142px;height:142px}
+          #mapPage .kakao-connect{padding:4px 12px;margin:0;flex:0 0 auto;font-size:11px}
+          #mapPage .kakao-connect summary{font-size:11px;line-height:1.5}
+          }
+          ''',encoding='utf-8')
+          (out/'map-resize.js').write_text("(()=>{const node=document.querySelector('.mapcanvas');if(!node||!window.ResizeObserver)return;let f=0;new ResizeObserver(()=>{cancelAnimationFrame(f);f=requestAnimationFrame(()=>window.RentKakaoMap?.resize?.())}).observe(node)})();\n",encoding='utf-8')
+          for f in out.rglob('*.json'):json.loads(f.read_text(encoding='utf-8'))
+          report={'source':'Sites23 latest integrated ZIP','source_sha256':expected,'source_data_files_preserved':data_count,'kakao_owner_configured':bool(key),'existing_home_files_changed':False,'preview_only':True}
+          (out/'review-status.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
+          print('Latest Sites23 copied; data files preserved:',data_count)
+          print('Browser map configuration present:',bool(key))
+          PY
+          node --check review-sites23/app.js
+          node --check review-sites23/kakao-session.js
+          node --check review-sites23/map-resize.js
+      - name: Save review-only build branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          BRANCH="review/sites23-built-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          git switch -c "$BRANCH"
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add -- review-sites23
+          git commit -m 'Build latest Sites23 isolated map-first review' >/tmp/sites23-commit.log
+          git push origin "HEAD:refs/heads/$BRANCH"
+          echo "Review branch: $BRANCH" >> "$GITHUB_STEP_SUMMARY"
+          echo "Review branch: $BRANCH"
+          echo 'Existing home, source data, collectors and their workflow files were not changed.' >> "$GITHUB_STEP_SUMMARY"
