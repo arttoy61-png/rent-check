@@ -1,0 +1,16 @@
+/* Newest Sites23 preserved; mobile map-first layout override. */
+@media(max-width:700px){
+#mapPage .workspace{position:relative}
+#mapPage .workspace.mapexpanded:not(.has-detail) .mapsection{display:flex;flex:1 1 auto;height:auto;min-height:0}
+#mapPage .workspace.mapexpanded:not(.has-detail) .listpane{flex:0 0 64px;min-height:64px;padding-bottom:env(safe-area-inset-bottom);border-radius:16px 16px 0 0;box-shadow:0 -4px 18px #102b490c}
+#mapPage .workspace.mapexpanded:not(.has-detail) .listtop{height:56px;min-height:56px;padding:8px 16px}
+#mapPage #mobileToggle{min-height:42px;min-width:84px}
+#mapPage .workspace.has-detail .mapsection,#mapPage .workspace.has-detail:not(.sheet-collapsed):not(.detail-map-visible) .mapsection{display:flex;flex:0 0 clamp(180px,31dvh,290px);height:clamp(180px,31dvh,290px);min-height:0}
+#mapPage .workspace.has-detail .detailpane{position:relative;inset:auto;flex:1 1 auto;height:auto;min-height:0;max-height:none;border-radius:16px 16px 0 0;overflow:hidden;z-index:5}
+#mapPage .workspace.has-detail .detailtop{flex:0 0 auto;position:relative;min-height:52px}
+#mapPage .workspace.has-detail #detailBody{min-height:0;overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+#mapPage .workspace.has-detail.sheet-collapsed .mapsection,#mapPage .workspace.has-detail.detail-map-visible .mapsection{flex:1 1 auto;height:auto;display:flex}
+#mapPage .workspace.has-detail.sheet-collapsed .detailpane,#mapPage .workspace.has-detail.detail-map-visible .detailpane{position:relative;inset:auto;flex:0 0 142px;height:142px}
+#mapPage .kakao-connect{padding:4px 12px;margin:0;flex:0 0 auto;font-size:11px}
+#mapPage .kakao-connect summary{font-size:11px;line-height:1.5}
+}

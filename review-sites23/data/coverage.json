@@ -1,0 +1,25 @@
+{
+  "live_complexes": 684,
+  "live_generated_at": "2026-10-09T00:23:19+00:00",
+  "live_period": [
+    "2026-04-08",
+    "2026-10-08"
+  ],
+  "fallback_complexes": 688,
+  "fallback_generated_at": "2026-09-22T22:57:30+00:00",
+  "identity_join_pass": 684,
+  "identity_join_fail": 0,
+  "coordinates_present": 684,
+  "coordinate_validation": "Public summary carries cached address-geocoding points. Builder joins dong+jibun cache; source cache absent from public tree. All IDs recomputed and name/dong joined to public detail. Not independently surveyed or polygon validated.",
+  "boundary_count": 0,
+  "lh": {
+    "sites": 25,
+    "building_qualified_addresses": 27,
+    "units": 56,
+    "mapped_sites": 4,
+    "unmapped_sites": 21,
+    "mapped_units": 6
+  },
+  "magok_identity_note": "LH calls site 방화동 and older directory says 방화동184-17; current exact road address directory maps 방화대로40길37 to 마곡동1397 마곡노블리안. Use road-address proof; never name-only join.",
+  "identity_validation_limit": "684 successful joins prove consistency of summary and detail IDs, names and dong only. They do not prove physical-building identity, uniqueness, absence of merged/split buildings, exact coordinate placement or polygon accuracy."
+}

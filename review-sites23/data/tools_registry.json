@@ -1,0 +1,153 @@
+[
+  {
+    "id": "redevelopment",
+    "title": "재개발 분담금 계산기",
+    "description": "권리가액과 조합원 분양가로 예상 분담금을 확인합니다.",
+    "url": "calc/",
+    "status": "available",
+    "badge": "이용 가능",
+    "icon": "▥",
+    "category": "redev"
+  },
+  {
+    "id": "youth-score",
+    "title": "청년임대 계산기",
+    "description": "청년 매입임대·안심주택 순위와 가점을 30초에 확인합니다.",
+    "url": "tools/youth-score/",
+    "status": "available",
+    "badge": "이용 가능",
+    "icon": "✓",
+    "category": "youth"
+  },
+  {
+    "id": "longterm-jeonse-51",
+    "home_visibility": "notice-only",
+    "title": "제51차 장기전세 내 순위 찾기",
+    "description": "접수 예정기간이 종료된 2026.08.31 제51차 공고의 일반공급 신청내역 참고용입니다.",
+    "url": "tools/longterm-jeonse-51/",
+    "status": "available",
+    "badge": "지난 공고 참고",
+    "icon": "51",
+    "category": "public"
+  },
+  {
+    "id": "auction",
+    "title": "경매 물건 체크",
+    "description": "낙찰 전 확인할 권리·비용 항목을 점검합니다.",
+    "url": null,
+    "status": "in-development",
+    "badge": "개발 중",
+    "icon": "◱",
+    "category": "invest"
+  },
+  {
+    "id": "rent-check",
+    "title": "월세·전세 적정 확인",
+    "description": "화곡동 실거래 기준으로 내 계약 조건의 적정성을 확인합니다.",
+    "url": "tools/rent-check/",
+    "status": "available",
+    "badge": "이용 가능",
+    "icon": "₩",
+    "category": "rent"
+  },
+  {
+    "id": "neighborhood-price",
+    "title": "강서구 집값",
+    "description": "아파트·빌라·오피스텔 매매·전세·월세 시세를 최근 실거래로 확인합니다.",
+    "url": "tools/neighborhood-price/",
+    "status": "available",
+    "badge": "이용 가능",
+    "icon": "⌂",
+    "category": "rent"
+  },
+  {
+    "id": "apt-widget",
+    "title": "강서구 아파트 실거래",
+    "description": "동·단지·평형을 골라 매매·전세·월세 실거래와 최근 흐름을 확인합니다.",
+    "url": "/tools/apartment/",
+    "status": "available",
+    "badge": "이용 가능",
+    "icon": "◫",
+    "category": "rent"
+  },
+  {
+    "id": "jeonse-ratio",
+    "title": "전세가율 계산기",
+    "description": "매매가 대비 전세보증금 비중과 전세가율을 확인합니다.",
+    "url": "tools/jeonse-ratio/",
+    "status": "available",
+    "badge": "이용 가능",
+    "icon": "％",
+    "category": "safety"
+  },
+  {
+    "id": "tenant-message",
+    "title": "전월세 문자 만들기",
+    "description": "세입자·집주인 입장에서 계약 갱신·수리·퇴거·보증금·월세 미납 문자를 만들어 바로 복사합니다.",
+    "url": "tools/tenant-message/",
+    "status": "available",
+    "badge": "이용 가능",
+    "icon": "✎",
+    "category": "safety"
+  },
+  {
+    "id": "acquisition-tax",
+    "title": "취득세 계산기",
+    "description": "주택·오피스텔·상가·토지의 취득세와 부가세목을 조건별로 계산합니다.",
+    "url": "tools/acquisition-tax/",
+    "status": "preparing",
+    "badge": "준비 중",
+    "icon": "◔",
+    "category": "tax"
+  },
+  {
+    "id": "brokerage-fee",
+    "title": "중개보수 계산기",
+    "description": "아파트·주택·오피스텔·상가의 거래 유형별 중개보수 상한을 확인합니다.",
+    "url": "tools/brokerage-fee/",
+    "status": "available",
+    "badge": "이용 가능",
+    "icon": "◨",
+    "category": "tax"
+  },
+  {
+    "id": "rent-vs-monthly",
+    "title": "전세 vs 월세 비교",
+    "description": "보증금 차액의 자금비용과 월세를 월 기준으로 비교합니다.",
+    "url": "tools/rent-vs-monthly/",
+    "status": "available",
+    "badge": "이용 가능",
+    "icon": "⇄",
+    "category": "rent"
+  },
+  {
+    "id": "rent-conversion",
+    "title": "전월세 전환 계산기",
+    "description": "보증금 증감에 따른 월세 조정액과 법정 전환율 상한을 확인합니다.",
+    "url": "tools/rent-conversion/",
+    "status": "available",
+    "badge": "이용 가능",
+    "icon": "↔",
+    "category": "rent"
+  },
+  {
+    "id": "rent-yield",
+    "title": "임대 수익률 계산기",
+    "description": "주택·오피스텔·상가의 보증금·월세·대출 조건으로 실투자금과 예상 수익률을 확인합니다.",
+    "url": "tools/rent-yield/",
+    "status": "available",
+    "badge": "이용 가능",
+    "icon": "↗",
+    "category": "invest"
+  },
+  {
+    "id": "registration-cost",
+    "title": "등기비용 합산기",
+    "description": "취득세·국민주택채권·법무사비 등 확인한 등기 준비비용을 한 번에 합산합니다.",
+    "url": "tools/registration-cost/",
+    "status": "hidden",
+    "badge": "홈 목록 제외",
+    "icon": "＋",
+    "category": "tax"
+  }
+]

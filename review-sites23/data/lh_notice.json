@@ -1,0 +1,29 @@
+{
+  "id": "LH:panId:2015122300020843",
+  "agency": "LH",
+  "agency_group": "LH",
+  "title": "[서울지역본부] 26년 2차 비분양전환형 든든전세주택 입주자 모집공고",
+  "housing_types": [
+    "매입임대",
+    "공공임대",
+    "든든전세"
+  ],
+  "audiences": [],
+  "region": "서울특별시",
+  "published_at": "2026-10-01",
+  "deadline": "2026-10-16",
+  "open_state": "접수예정",
+  "event": "신규",
+  "change": "동일",
+  "status_text": "공고중",
+  "is_gangseo": false,
+  "keywords": [
+    "든든전세"
+  ],
+  "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300020843&ccrCnntSysDsCd=03&uppAisTpCd=13&aisTpCd=26&mi=1026",
+  "source": "LH청약플러스 실제 공고표",
+  "content_signature": "98641572128560d5d558c26c8ecb727ba65da3885a45d037a10c7069cebb2754",
+  "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+  "application_start": "2026-10-14",
+  "schedule_source": "official_detail_html"
+}

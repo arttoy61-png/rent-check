@@ -1,0 +1,85 @@
+{
+  "retrieved_at": "2026-10-09T00:43:00Z",
+  "repos": {
+    "rentcheck": {
+      "repository": "arttoy61-png/rent-check",
+      "commit": "5423fe49e2b0941593ddf79985bdd8b1d19ec90c"
+    },
+    "home": {
+      "repository": "arttoy61-png/rentcheck-home-v2",
+      "commit": "5ff021212235b31cf8e38b305335e1bb49c06580"
+    }
+  },
+  "files": [
+    {
+      "path": "gangseo_apt_summary.json",
+      "repo": "rentcheck",
+      "git_blob": "f663833d4e305dcc92b4be9a73cdf123386ad7f4",
+      "source_bytes": 210061,
+      "source_url": "https://github.com/arttoy61-png/rent-check/blob/5423fe49e2b0941593ddf79985bdd8b1d19ec90c/gangseo_apt_summary.json",
+      "local_path": "/workspace/scratch/6651e1690b6d/renewal-real-data/gangseo_apt_summary.json",
+      "sha256": "5ce11e8ecb63e0444c8190014d42edffa5d85be327660fb0482338f70d67fbfa",
+      "git_blob_verified": true
+    },
+    {
+      "path": "gangseo_apt_detail.json",
+      "repo": "rentcheck",
+      "git_blob": "a77716569537a7f959b864e2851c8fbe99b00f1c",
+      "source_bytes": 660147,
+      "source_url": "https://github.com/arttoy61-png/rent-check/blob/5423fe49e2b0941593ddf79985bdd8b1d19ec90c/gangseo_apt_detail.json",
+      "local_path": "/workspace/scratch/6651e1690b6d/renewal-real-data/gangseo_apt_detail.json",
+      "sha256": "d5685795f1350ab2d480ae540c4b86d35febf4292193af5fcdfc0e2aebc59e03",
+      "git_blob_verified": true
+    },
+    {
+      "path": "analysis/ujangsan-hillstate/index.html",
+      "repo": "home",
+      "git_blob": "7c6a69ffc275a7fa96fb734f98adc7bd12f80a07",
+      "source_bytes": 49872,
+      "source_url": "https://github.com/arttoy61-png/rentcheck-home-v2/blob/5ff021212235b31cf8e38b305335e1bb49c06580/analysis/ujangsan-hillstate/index.html",
+      "local_path": "/workspace/scratch/6651e1690b6d/renewal-real-data/home/analysis/ujangsan-hillstate/index.html",
+      "sha256": "38ada42877f534120133bfb1a28c52f83545f14b65162db0df22118d6d595046",
+      "git_blob_verified": true
+    },
+    {
+      "path": "blog/long-term-repair-reserve-refund/index.html",
+      "repo": "home",
+      "git_blob": "3fa75d75c3558027cc02faa07235131756cc33b7",
+      "source_bytes": 20371,
+      "source_url": "https://github.com/arttoy61-png/rentcheck-home-v2/blob/5ff021212235b31cf8e38b305335e1bb49c06580/blog/long-term-repair-reserve-refund/index.html",
+      "local_path": "/workspace/scratch/6651e1690b6d/renewal-real-data/home/blog/long-term-repair-reserve-refund/index.html",
+      "sha256": "a673419a7ff00ea2d988d59f3b757d18c97a0dd02335ce4bfe5165e3c85ae0eb",
+      "git_blob_verified": true
+    },
+    {
+      "path": "blog/article.css",
+      "repo": "home",
+      "git_blob": "9c0e93d54eef85a53a1bef1f793247433110706b",
+      "source_bytes": 7305,
+      "source_url": "https://github.com/arttoy61-png/rentcheck-home-v2/blob/5ff021212235b31cf8e38b305335e1bb49c06580/blog/article.css",
+      "local_path": "/workspace/scratch/6651e1690b6d/renewal-real-data/home/blog/article.css",
+      "sha256": "8724ec284d08ce4226e880acecea4eb1a82a80824c259b19c6da6eab45c45e6b",
+      "git_blob_verified": true
+    },
+    {
+      "path": "tools/README.md",
+      "repo": "home",
+      "git_blob": "ce69886e6bf7bede6ff9de3df88659ef3f832f26",
+      "source_bytes": 1571,
+      "source_url": "https://github.com/arttoy61-png/rentcheck-home-v2/blob/5ff021212235b31cf8e38b305335e1bb49c06580/tools/README.md",
+      "local_path": "/workspace/scratch/6651e1690b6d/renewal-real-data/home/tools/README.md",
+      "sha256": "d23f3ba0d1702b3b38a205e307daf8db8a5500bdd37eed91915e9c30eeada9fa",
+      "git_blob_verified": true
+    },
+    {
+      "path": "data/tools.json",
+      "repo": "home",
+      "git_blob": "2581ad37b6633ffc08b4db2af531f1d37000be14",
+      "source_bytes": 4966,
+      "source_url": "https://github.com/arttoy61-png/rentcheck-home-v2/blob/5ff021212235b31cf8e38b305335e1bb49c06580/data/tools.json",
+      "local_path": "/workspace/scratch/6651e1690b6d/renewal-real-data/tools_registry.json",
+      "sha256": "77669dfd73a9d4b8a51d9e192cf80daf54dcede857cc6160e2d2488d0ac3200d",
+      "git_blob_verified": true
+    }
+  ]
+}
