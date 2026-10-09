@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-09T03:55:54",
+  "generated_at": "2026-10-09T10:15:35",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
     "LH": {
       "count": 8,
       "errors": [
-        "LH OpenAPI: 06/1:<urlopen error timed out>; 13/1:<urlopen error timed out>; 39/1:<urlopen error timed out>"
+        "LH OpenAPI: 06/1:HTTP Error 403: Forbidden; 13/1:HTTP Error 403: Forbidden; 39/1:HTTP Error 403: Forbidden"
       ],
       "official_count": 8,
       "api_count": 0,
@@ -19,11 +19,11 @@
       "warnings": [],
       "status": "부분수집",
       "diagnostic_errors": [
-        "LH OpenAPI: 06/1:<urlopen error timed out>; 13/1:<urlopen error timed out>; 39/1:<urlopen error timed out>"
+        "LH OpenAPI: 06/1:HTTP Error 403: Forbidden; 13/1:HTTP Error 403: Forbidden; 39/1:HTTP Error 403: Forbidden"
       ],
       "fresh_count": 8,
       "carried_count": 7,
-      "failure_streak": 26
+      "failure_streak": 27
     },
     "SH": {
       "count": 18,
@@ -45,8 +45,8 @@
   "summary": {
     "total": 32,
     "gangseo": 3,
-    "new": 2,
-    "updated": 7,
+    "new": 0,
+    "updated": 0,
     "open_or_check": 12,
     "by_housing_type": {
       "기타임대": 5,
@@ -88,8 +88,8 @@
       "published_at": "2026-10-08",
       "deadline": "2026-10-22",
       "open_state": "접수중",
-      "event": "수정",
-      "change": "수정",
+      "event": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -111,7 +111,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311087",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.10.08.(목) ~2026.10.22.(목) 15시까지",
-        "verified_at": "2026-10-09T03:55:37"
+        "verified_at": "2026-10-09T10:15:21"
       },
       "sh_schedule_version": 1
     },
@@ -161,7 +161,7 @@
       "deadline": "2026-10-15",
       "open_state": "접수예정",
       "event": "신규",
-      "change": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -198,8 +198,8 @@
       "published_at": "",
       "deadline": "2026-10-15",
       "open_state": "접수예정",
-      "event": "수정",
-      "change": "수정",
+      "event": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -271,8 +271,8 @@
       "published_at": "2026-10-08",
       "deadline": "",
       "open_state": "확인필요",
-      "event": "수정",
-      "change": "수정",
+      "event": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -306,8 +306,8 @@
       "published_at": "2026-10-08",
       "deadline": "",
       "open_state": "확인필요",
-      "event": "수정",
-      "change": "수정",
+      "event": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [],
@@ -339,8 +339,8 @@
       "published_at": "2026-10-08",
       "deadline": "",
       "open_state": "확인필요",
-      "event": "수정",
-      "change": "수정",
+      "event": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [],
@@ -445,7 +445,7 @@
       "deadline": "",
       "open_state": "확인필요",
       "event": "신규",
-      "change": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [],
@@ -595,8 +595,8 @@
       "published_at": "2026-09-23",
       "deadline": "",
       "open_state": "마감",
-      "event": "수정",
-      "change": "수정",
+      "event": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [],
@@ -1061,7 +1061,7 @@
       "deadline": "",
       "open_state": "신청대상아님",
       "event": "결과",
-      "change": "수정",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [],
