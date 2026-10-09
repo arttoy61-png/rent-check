@@ -1,0 +1,70 @@
+name: Configure isolated Sites23 Kakao map
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/configure-sites23-kakao.yml']
+permissions:
+  contents: write
+concurrency:
+  group: isolated-sites23-kakao-config
+  cancel-in-progress: false
+jobs:
+  configure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+      - name: Prepare browser-only map configuration without logging its value
+        env:
+          KAKAO_JAVASCRIPT_KEY: ${{ secrets.KAKAO_JAVASCRIPT_KEY }}
+        run: |
+          python3 - <<'PY'
+          import json, os, re
+          from pathlib import Path
+          key=os.environ.get('KAKAO_JAVASCRIPT_KEY','').strip()
+          if not key:
+              print('Waiting for owner to register KAKAO_JAVASCRIPT_KEY in repository Actions Secrets. No files changed.')
+              raise SystemExit(0)
+          if not re.fullmatch(r'[a-fA-F0-9]{32}',key):
+              raise RuntimeError('Only a valid Kakao JavaScript browser key is supported. Value not displayed.')
+          root=Path('review-sites23')
+          status=json.loads((root/'review-status.json').read_text(encoding='utf-8'))
+          if status.get('source_sha256')!='47cf28a8e30ba6fdf7e9aa9371cfc9a2f67dc6cf1fdcc17ae240615f33172f5b':
+              raise RuntimeError('Review source version changed; reconcile before configuring')
+          # This is a PUBLIC browser SDK identifier, not an administrator/REST credential.
+          # Owner entry uses Actions Secrets; usage necessarily exposes it in browser SDK requests.
+          # Restrict the key in Kakao Developers to the approved website origin.
+          config={'kakaoJavaScriptKey':key,'autoConnect':True,'timeoutMs':20000}
+          (root/'config.public.js').write_text('window.RENTCHECK_MAP_CONFIG=Object.freeze('+json.dumps(config)+');\n',encoding='utf-8')
+          status['kakao_owner_configured']=True
+          status['actual_map_tiles_verified']=False
+          (root/'review-status.json').write_text(json.dumps(status,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+          p=root/'index.html';s=p.read_text(encoding='utf-8')
+          stamp=os.environ['GITHUB_RUN_ID']+'-'+os.environ['GITHUB_RUN_ATTEMPT']
+          s,n=re.subn(r'src="config\.public\.js(?:\?[^\"]*)?"','src="config.public.js?v='+stamp+'"',s)
+          if n!=1:raise RuntimeError('Configuration script reference missing or duplicated')
+          p.write_text(s,encoding='utf-8')
+          print('Owner configuration prepared. Key value not displayed. Domain authorization and live tile tests still required.')
+          PY
+      - name: Save only review configuration for controlled publish
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- review-sites23/config.public.js review-sites23/review-status.json review-sites23/index.html; then
+            echo 'No changes. Owner setting may still be pending.' >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          BRANCH="review/sites23-kakao-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          git switch -c "$BRANCH"
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add -- review-sites23/config.public.js review-sites23/review-status.json review-sites23/index.html
+          git commit -m 'Configure owner-approved browser key for isolated Sites23 preview' >/tmp/sites23-config-commit.log
+          git push origin "HEAD:refs/heads/$BRANCH"
+          echo "Configuration branch ready: $BRANCH" >> "$GITHUB_STEP_SUMMARY"
+          echo "Configuration branch ready: $BRANCH"
+          echo 'Merge this isolated configuration branch, then verify tiles on the approved origin. The existing home is unchanged.' >> "$GITHUB_STEP_SUMMARY"
