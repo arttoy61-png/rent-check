@@ -1,0 +1,340 @@
+{
+  "source": "https://cleanup.seoul.go.kr/cleanup/bsnssttus/lscrMainIndx.do",
+  "source_label": "정비사업 정보몽땅 공개 사업장검색 + 공식 엑셀",
+  "source_scope": "운영 및 일시중단 사업장, 모든 공개 사업유형 포함. 서울의 모든 법적 정비구역 전체라는 뜻은 아니며 정보몽땅 공개 사업장 등록 목록 전체.",
+  "collected_at": "2026-10-09T05:26:57.899722+00:00",
+  "source_total": 1175,
+  "collected_total": 1175,
+  "unique_ids": 1175,
+  "district_total": 25,
+  "districts": [
+    {
+      "district": "강남구",
+      "source_total": 50,
+      "collected_total": 50,
+      "detail_verified_total": 48,
+      "dated_event_total": 1753,
+      "coordinates_verified_total": 0,
+      "geometry_verified_total": 14
+    },
+    {
+      "district": "강동구",
+      "source_total": 58,
+      "collected_total": 58,
+      "detail_verified_total": 40,
+      "dated_event_total": 1385,
+      "coordinates_verified_total": 0,
+      "geometry_verified_total": 7
+    },
+    {
+      "district": "강북구",
+      "source_total": 45,
+      "collected_total": 45,
+      "detail_verified_total": 0,
+      "dated_event_total": 0,
+      "coordinates_verified_total": 0,
+      "geometry_verified_total": 5
+    },
+    {
+      "district": "강서구",
+      "source_total": 44,
+      "collected_total": 44,
+      "detail_verified_total": 0,
+      "dated_event_total": 0,
+      "coordinates_verified_total": 0,
+      "geometry_verified_total": 5
+    },
+    {
+      "district": "관악구",
+      "source_total": 36,
+      "collected_total": 36,
+      "detail_verified_total": 31,
+      "dated_event_total": 677,
+      "coordinates_verified_total": 0,
+      "geometry_verified_total": 4
+    },
+    {
+      "district": "광진구",
+      "source_total": 27,
+      "collected_total": 27,
+      "detail_verified_total": 27,
+      "dated_event_total": 307,
+      "coordinates_verified_total": 0,
+      "geometry_verified_total": 3
+    },
+    {
+      "district": "구로구",
+      "source_total": 41,
+      "collected_total": 41,
+      "detail_verified_total": 40,
+      "dated_event_total": 615,
+      "coordinates_verified_total": 0,
+      "geometry_verified_total": 4
+    },
+    {
+      "district": "금천구",
+      "source_total": 24,
+      "collected_total": 24,
+      "detail_verified_total": 5,
+      "dated_event_total": 2,
+      "coordinates_verified_total": 0,
+      "geometry_verified_total": 2
+    },
+    {
+      "district": "노원구",
+      "source_total": 29,
+      "collected_total": 29,
+      "detail_verified_total": 0,
+      "dated_event_total": 0,
+      "coordinates_verified_total": 0,
+      "geometry_verified_total": 2
+    },
+    {
+      "district": "도봉구",
+      "source_total": 21,
+      "collected_total": 21,
+      "detail_verified_total": 0,
+      "dated_event_total": 0,
+      "coordinates_verified_total": 0,
+      "geometry_verified_total": 4
+    },
+    {
+      "district": "동대문구",
+      "source_total": 46,
+      "collected_total": 46,
+      "detail_verified_total": 0,
+      "dated_event_total": 0,
+      "coordinates_verified_total": 0,
+      "geometry_verified_total": 10
+    },
+    {
+      "district": "동작구",
+      "source_total": 62,
+      "collected_total": 62,
+      "detail_verified_total": 0,
+      "dated_event_total": 0,
+      "coordinates_verified_total": 0,
+      "geometry_verified_total": 7
+    },
+    {
+      "district": "마포구",
+      "source_total": 49,
+      "collected_total": 49,
+      "detail_verified_total": 0,
+      "dated_event_total": 0,
+      "coordinates_verified_total": 0,
+      "geometry_verified_total": 4
+    },
+    {
+      "district": "서대문구",
+      "source_total": 49,
+      "collected_total": 49,
+      "detail_verified_total": 0,
+      "dated_event_total": 0,
+      "coordinates_verified_total": 0,
+      "geometry_verified_total": 8
+    },
+    {
+      "district": "서초구",
+      "source_total": 70,
+      "collected_total": 70,
+      "detail_verified_total": 0,
+      "dated_event_total": 0,
+      "coordinates_verified_total": 0,
+      "geometry_verified_total": 10
+    },
+    {
+      "district": "성동구",
+      "source_total": 26,
+      "collected_total": 26,
+      "detail_verified_total": 0,
+      "dated_event_total": 0,
+      "coordinates_verified_total": 0,
+      "geometry_verified_total": 5
+    },
+    {
+      "district": "성북구",
+      "source_total": 79,
+      "collected_total": 79,
+      "detail_verified_total": 0,
+      "dated_event_total": 0,
+      "coordinates_verified_total": 0,
+      "geometry_verified_total": 11
+    },
+    {
+      "district": "송파구",
+      "source_total": 56,
+      "collected_total": 56,
+      "detail_verified_total": 0,
+      "dated_event_total": 0,
+      "coordinates_verified_total": 0,
+      "geometry_verified_total": 15
+    },
+    {
+      "district": "양천구",
+      "source_total": 47,
+      "collected_total": 47,
+      "detail_verified_total": 0,
+      "dated_event_total": 0,
+      "coordinates_verified_total": 0,
+      "geometry_verified_total": 7
+    },
+    {
+      "district": "영등포구",
+      "source_total": 122,
+      "collected_total": 122,
+      "detail_verified_total": 0,
+      "dated_event_total": 0,
+      "coordinates_verified_total": 0,
+      "geometry_verified_total": 7
+    },
+    {
+      "district": "용산구",
+      "source_total": 50,
+      "collected_total": 50,
+      "detail_verified_total": 0,
+      "dated_event_total": 0,
+      "coordinates_verified_total": 0,
+      "geometry_verified_total": 4
+    },
+    {
+      "district": "은평구",
+      "source_total": 52,
+      "collected_total": 52,
+      "detail_verified_total": 0,
+      "dated_event_total": 0,
+      "coordinates_verified_total": 0,
+      "geometry_verified_total": 9
+    },
+    {
+      "district": "종로구",
+      "source_total": 13,
+      "collected_total": 13,
+      "detail_verified_total": 0,
+      "dated_event_total": 0,
+      "coordinates_verified_total": 0,
+      "geometry_verified_total": 3
+    },
+    {
+      "district": "중구",
+      "source_total": 11,
+      "collected_total": 11,
+      "detail_verified_total": 0,
+      "dated_event_total": 0,
+      "coordinates_verified_total": 0,
+      "geometry_verified_total": 3
+    },
+    {
+      "district": "중랑구",
+      "source_total": 68,
+      "collected_total": 68,
+      "detail_verified_total": 0,
+      "dated_event_total": 0,
+      "coordinates_verified_total": 0,
+      "geometry_verified_total": 7
+    }
+  ],
+  "project_type_counts": {
+    "재건축": 386,
+    "소규모재건축": 39,
+    "재개발(주택정비형)": 318,
+    "가로주택정비": 204,
+    "재개발(도시정비형)": 148,
+    "지역주택": 63,
+    "소규모재개발": 4,
+    "리모델링": 13
+  },
+  "coordinates_verified_total": 0,
+  "map_reference_total": 376,
+  "dated_project_total": 148,
+  "dated_event_total": 4739,
+  "detail_verified_total": 191,
+  "record_updated_at_available": false,
+  "page_sources": [
+    {
+      "page": 1,
+      "url": "https://cleanup.seoul.go.kr/cleanup/bsnssttus/lscrMainIndx.do?cpage=1&pageSize=100",
+      "collected_at": "2026-10-09T05:16:05.651005+00:00"
+    },
+    {
+      "page": 2,
+      "url": "https://cleanup.seoul.go.kr/cleanup/bsnssttus/lscrMainIndx.do?cpage=2&pageSize=100",
+      "collected_at": "2026-10-09T05:16:15.431133+00:00"
+    },
+    {
+      "page": 3,
+      "url": "https://cleanup.seoul.go.kr/cleanup/bsnssttus/lscrMainIndx.do?cpage=3&pageSize=100",
+      "collected_at": "2026-10-09T05:16:23.070384+00:00"
+    },
+    {
+      "page": 4,
+      "url": "https://cleanup.seoul.go.kr/cleanup/bsnssttus/lscrMainIndx.do?cpage=4&pageSize=100",
+      "collected_at": "2026-10-09T05:16:32.812019+00:00"
+    },
+    {
+      "page": 5,
+      "url": "https://cleanup.seoul.go.kr/cleanup/bsnssttus/lscrMainIndx.do?cpage=5&pageSize=100",
+      "collected_at": "2026-10-09T05:16:43.328618+00:00"
+    },
+    {
+      "page": 6,
+      "url": "https://cleanup.seoul.go.kr/cleanup/bsnssttus/lscrMainIndx.do?cpage=6&pageSize=100",
+      "collected_at": "2026-10-09T05:16:53.245421+00:00"
+    },
+    {
+      "page": 7,
+      "url": "https://cleanup.seoul.go.kr/cleanup/bsnssttus/lscrMainIndx.do?cpage=7&pageSize=100",
+      "collected_at": "2026-10-09T05:17:03.340044+00:00"
+    },
+    {
+      "page": 8,
+      "url": "https://cleanup.seoul.go.kr/cleanup/bsnssttus/lscrMainIndx.do?cpage=8&pageSize=100",
+      "collected_at": "2026-10-09T05:17:12.294083+00:00"
+    },
+    {
+      "page": 9,
+      "url": "https://cleanup.seoul.go.kr/cleanup/bsnssttus/lscrMainIndx.do?cpage=9&pageSize=100",
+      "collected_at": "2026-10-09T05:17:21.962151+00:00"
+    },
+    {
+      "page": 10,
+      "url": "https://cleanup.seoul.go.kr/cleanup/bsnssttus/lscrMainIndx.do?cpage=10&pageSize=100",
+      "collected_at": "2026-10-09T05:17:31.969165+00:00"
+    },
+    {
+      "page": 11,
+      "url": "https://cleanup.seoul.go.kr/cleanup/bsnssttus/lscrMainIndx.do?cpage=11&pageSize=100",
+      "collected_at": "2026-10-09T05:17:41.715801+00:00"
+    },
+    {
+      "page": 12,
+      "url": "https://cleanup.seoul.go.kr/cleanup/bsnssttus/lscrMainIndx.do?cpage=12&pageSize=100",
+      "collected_at": "2026-10-09T05:17:54.377002+00:00"
+    }
+  ],
+  "unavailable_fields": [
+    "공식 원문 수정일",
+    "공식 목록 좌표",
+    "사업장 경계 GeoJSON"
+  ],
+  "access_restricted_scope": [
+    "정보공개 원문 중 조합원/토지등소유자 권한이 필요한 메뉴는 접근하지 않음"
+  ],
+  "validation_errors": [],
+  "geometry_verified_total": 160,
+  "geometry_source": "서울도시공간포털 공개 UPIS_C_UQ181 지도서비스. 고시ID와 사업명 대조 통과한 경계만 사용.",
+  "geometry_review": {
+    "official_map_link_rows": 376,
+    "unique_linked_record_codes": 358,
+    "returned_record_codes": 240,
+    "returned_features": 471,
+    "verified_project_geometries": 160,
+    "current_geometry_not_returned_project_rows": 132,
+    "name_or_scope_unverified_project_rows": 84
+  },
+  "snapshot_frozen_at": "2026-10-09T05:27:07.956305+00:00",
+  "history_collection_complete": false,
+  "date_notice": "events.date는 공식 추진경과 사건일입니다. 원문수정일은 제공되지 않아 updated 및 record_updated_at은 null입니다.",
+  "identifier_notice": "id는 공식 cafeUrl 식별자로 구분한 등록행입니다. 같은 물리적 사업장에 구 카페 등 여러 등록행이 있을 수 있으므로 1175개 서로 다른 정비구역으로 표현하지 않습니다.",
+  "geometry_mismatch_notice": "원본 공식 연결 중 사업장명과 다른 구역명·포괄구역·세부구역번호 불일치가 확인되어 미검증 경계는 지도에서 제외했습니다."
+}

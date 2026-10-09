@@ -1,0 +1,2862 @@
+{
+  "cleanup-gaepo3": {
+    "path": "geometries/cleanup-gaepo3.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201211160062",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201211160062",
+    "collected_at": "2026-10-09T05:24:40.390111+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "개포주공3단지 주택재건축정비사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-gaepo5": {
+    "path": "geometries/cleanup-gaepo5.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201710270374",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201710270374",
+    "collected_at": "2026-10-09T05:24:40.390521+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "개포주공5단지 주택재건축정비사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-wooseong6": {
+    "path": "geometries/cleanup-wooseong6.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ202203280001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ202203280001",
+    "collected_at": "2026-10-09T05:24:40.390861+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "개포우성6차아파트 재건축사업"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-kvNK2YB3": {
+    "path": "geometries/cleanup-kvNK2YB3.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201303260090",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201303260090",
+    "collected_at": "2026-10-09T05:24:40.391136+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "개포주공1단지 주택재건축 정비구역"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-ssang2": {
+    "path": "geometries/cleanup-ssang2.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201710270373",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201710270373",
+    "collected_at": "2026-10-09T05:24:40.391406+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "강남구 대치쌍용2차아파트 주택재건"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-the-eunma": {
+    "path": "geometries/cleanup-the-eunma.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11680AGZ202212050001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11680AGZ202212050001",
+    "collected_at": "2026-10-09T05:24:40.391688+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "은마아파트 재건축정비구역"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-A768OvYc": {
+    "path": "geometries/cleanup-A768OvYc.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201410270198",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201410270198",
+    "collected_at": "2026-10-09T05:24:40.391932+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "대치동 구마을 제1지구 주택재건축 정"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-urban9": {
+    "path": "geometries/cleanup-urban9.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201410280199",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201410280199",
+    "collected_at": "2026-10-09T05:24:40.392229+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "대치동 구마을 제3지구 주택재건축 정"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-gaepowoosung4": {
+    "path": "geometries/cleanup-gaepowoosung4.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11680AGZ200202200001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11680AGZ200202200001",
+    "collected_at": "2026-10-09T05:24:40.392506+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "개포우성4차아파트 재건축사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-dogoksamho": {
+    "path": "geometries/cleanup-dogoksamho.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201710250367",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201710250367",
+    "collected_at": "2026-10-09T05:24:40.392676+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "도곡삼호아파트 주택재건축정비사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-samik869": {
+    "path": "geometries/cleanup-samik869.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201211150060",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201211150060",
+    "collected_at": "2026-10-09T05:24:40.392897+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "도곡삼익아파트 주택재건축 정비사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-dogokwoosung": {
+    "path": "geometries/cleanup-dogokwoosung.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11680AGZ202306050001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11680AGZ202306050001",
+    "collected_at": "2026-10-09T05:24:40.393545+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "도곡우성아파트 재건축정비사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-wooseong7": {
+    "path": "geometries/cleanup-wooseong7.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11680AGZ202112290001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11680AGZ202112290001",
+    "collected_at": "2026-10-09T05:24:40.393792+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "개포우성7차아파트 재건축사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-cheongdam": {
+    "path": "geometries/cleanup-cheongdam.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ202301100001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ202301100001",
+    "collected_at": "2026-10-09T05:24:40.394156+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "청담삼익아파트 재건축사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-in814VyA": {
+    "path": "geometries/cleanup-in814VyA.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201303220088",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201303220088",
+    "collected_at": "2026-10-09T05:24:40.394894+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "고덕주공2단지아파트 주택재건축정비"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-jM4s43od": {
+    "path": "geometries/cleanup-jM4s43od.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201704140344",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201704140344",
+    "collected_at": "2026-10-09T05:24:40.395312+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "고덕시영아파트 주택재건축정비구역"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-rPjHkSQA": {
+    "path": "geometries/cleanup-rPjHkSQA.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ200412274439",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ200412274439",
+    "collected_at": "2026-10-09T05:24:40.395672+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "길동진흥아파트주택재건축사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-goduk4apt": {
+    "path": "geometries/cleanup-goduk4apt.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201109059973",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201109059973",
+    "collected_at": "2026-10-09T05:24:40.396989+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "고덕주공4단지아파트 주택재건축 정"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-jQ9IH7J2": {
+    "path": "geometries/cleanup-jQ9IH7J2.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201001269850",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201001269850",
+    "collected_at": "2026-10-09T05:24:40.397315+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "고덕주공7단지주택재건축사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-u1OG3XV9": {
+    "path": "geometries/cleanup-u1OG3XV9.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201701030325",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201701030325",
+    "collected_at": "2026-10-09T05:24:40.397672+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "성내미주아파트 주택재건축정비사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-chunho1": {
+    "path": "geometries/cleanup-chunho1.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201909050094",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201909050094",
+    "collected_at": "2026-10-09T05:24:40.398103+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "천호1구역"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-llllll": {
+    "path": "geometries/cleanup-llllll.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ202206020001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ202206020001",
+    "collected_at": "2026-10-09T05:24:40.398548+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "미아동 3-111번지 일대 주택재건축정비사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-mia101": {
+    "path": "geometries/cleanup-mia101.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201010267902",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201010267902",
+    "collected_at": "2026-10-09T05:24:40.399405+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "미아제10-1주택재개발정비구역"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-rchEsG60": {
+    "path": "geometries/cleanup-rchEsG60.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ202010200004",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ202010200004",
+    "collected_at": "2026-10-09T05:24:40.399818+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "미아4재정비촉진구역"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-bun44346": {
+    "path": "geometries/cleanup-bun44346.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11305AGZ202407290001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11305AGZ202407290001",
+    "collected_at": "2026-10-09T05:24:40.400614+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "번동3-2구역 가로주택정비사업"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-bun45461": {
+    "path": "geometries/cleanup-bun45461.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11305AGZ202405290001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11305AGZ202405290001",
+    "collected_at": "2026-10-09T05:24:40.401063+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "번동454-61번지일대 가로주택정비사업"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-banghwa5recons": {
+    "path": "geometries/cleanup-banghwa5recons.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11500AGZ202109010002",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11500AGZ202109010002",
+    "collected_at": "2026-10-09T05:24:40.401592+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "방화5재정비촉진구역"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-b938y0z8": {
+    "path": "geometries/cleanup-b938y0z8.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201711160394",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201711160394",
+    "collected_at": "2026-10-09T05:24:40.402066+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "등촌1 주택재건축정비사업"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-F9613aZn": {
+    "path": "geometries/cleanup-F9613aZn.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11500AGZ202301200003",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11500AGZ202301200003",
+    "collected_at": "2026-10-09T05:24:40.402565+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "긴등마을 재정비촉진구역"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-banghwa3": {
+    "path": "geometries/cleanup-banghwa3.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ202310130001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ202310130001",
+    "collected_at": "2026-10-09T05:24:40.403061+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "방화3재정비촉진구역"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-banghwa6": {
+    "path": "geometries/cleanup-banghwa6.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201806200498",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201806200498",
+    "collected_at": "2026-10-09T05:24:40.404288+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "방화6구역"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-x78I9xGE": {
+    "path": "geometries/cleanup-x78I9xGE.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ200912297814",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ200912297814",
+    "collected_at": "2026-10-09T05:24:40.404930+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "봉천13구역주택재개발사업"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-sinlim3": {
+    "path": "geometries/cleanup-sinlim3.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201903180086",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201903180086",
+    "collected_at": "2026-10-09T05:24:40.405387+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "신림3재정비촉진구역"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-silim2": {
+    "path": "geometries/cleanup-silim2.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ200901087672",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ200901087672",
+    "collected_at": "2026-10-09T05:24:40.406304+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "신림재정비촉진지구2구역주택재개발"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-srseven": {
+    "path": "geometries/cleanup-srseven.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11620AGZ202407040001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11620AGZ202407040001",
+    "collected_at": "2026-10-09T05:24:40.406642+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "신림7 주택정비형 재개발사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-jayang1": {
+    "path": "geometries/cleanup-jayang1.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11215AGZ202307180001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11215AGZ202307180001",
+    "collected_at": "2026-10-09T05:24:40.407281+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "자양1 주택재건축정비구역"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-jayang7": {
+    "path": "geometries/cleanup-jayang7.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201810300016",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201810300016",
+    "collected_at": "2026-10-09T05:24:40.407603+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "자양7 주택재건축 정비사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-shinhyang": {
+    "path": "geometries/cleanup-shinhyang.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11215AGZ202205030001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11215AGZ202205030001",
+    "collected_at": "2026-10-09T05:24:40.408003+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "신향빌라 재건축사업"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-sanupin": {
+    "path": "geometries/cleanup-sanupin.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201705170350",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201705170350",
+    "collected_at": "2026-10-09T05:24:40.408238+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "구로구 고척동 산업인아파트 주택재"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-kochuck4": {
+    "path": "geometries/cleanup-kochuck4.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201406248369",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201406248369",
+    "collected_at": "2026-10-09T05:24:40.408720+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "고척제4 주택재개발정비사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-bogwang": {
+    "path": "geometries/cleanup-bogwang.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201606140291",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201606140291",
+    "collected_at": "2026-10-09T05:24:40.408953+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "보광아파트 주택재건축정비사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-q0l9uko6": {
+    "path": "geometries/cleanup-q0l9uko6.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201412020219",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201412020219",
+    "collected_at": "2026-10-09T05:24:40.409601+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "대흥.성원.동진빌라 주택재건축 정비"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-mggapt": {
+    "path": "geometries/cleanup-mggapt.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201703300340",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201703300340",
+    "collected_at": "2026-10-09T05:24:40.409831+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "무지개아파트 일대 주택재건축 정비"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-hyundail220": {
+    "path": "geometries/cleanup-hyundail220.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ202001280002",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ202001280002",
+    "collected_at": "2026-10-09T05:24:40.410496+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "시흥동 현대아파트 재건축정비사업"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-sanggye6": {
+    "path": "geometries/cleanup-sanggye6.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ200209234042",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ200209234042",
+    "collected_at": "2026-10-09T05:24:40.413179+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "상계6구역주택재개발사업"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-R60TOrwV": {
+    "path": "geometries/cleanup-R60TOrwV.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201211148211",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201211148211",
+    "collected_at": "2026-10-09T05:24:40.414470+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "월계4주택재개발사업구역"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-dobong62580": {
+    "path": "geometries/cleanup-dobong62580.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11320AGZ202410040001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11320AGZ202410040001",
+    "collected_at": "2026-10-09T05:24:40.414768+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "도봉동 625-80번지 일대 가로주택정비사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-W0zS4n6n": {
+    "path": "geometries/cleanup-W0zS4n6n.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ200812307663",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ200812307663",
+    "collected_at": "2026-10-09T05:24:40.415220+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "쌍문1구역주택재개발사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-Tkdans": {
+    "path": "geometries/cleanup-Tkdans.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11320AGZ202305230001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11320AGZ202305230001",
+    "collected_at": "2026-10-09T05:24:40.415832+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "쌍문3구역 주택정비형 재개발사업"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-eotls21": {
+    "path": "geometries/cleanup-eotls21.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11320AGZ202504280001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11320AGZ202504280001",
+    "collected_at": "2026-10-09T05:24:40.416028+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "창동대신빌라소규모재건축사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-seoulhousing": {
+    "path": "geometries/cleanup-seoulhousing.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201409298394",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201409298394",
+    "collected_at": "2026-10-09T05:24:40.416390+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "답십리제17구역 주택재개발사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-dapsimni14": {
+    "path": "geometries/cleanup-dapsimni14.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201101277915",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201101277915",
+    "collected_at": "2026-10-09T05:24:40.416928+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "답십리제14구역 주택재개발정비사업"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-s3sxO3bw": {
+    "path": "geometries/cleanup-s3sxO3bw.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201108048006",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201108048006",
+    "collected_at": "2026-10-09T05:24:40.417360+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "용두제1주택재개발정비구역"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-jangan-hyundaiapt1": {
+    "path": "geometries/cleanup-jangan-hyundaiapt1.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201711030378",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201711030378",
+    "collected_at": "2026-10-09T05:24:40.417752+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "장안동 현대아파트 주택재건축 정비"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-jnong11": {
+    "path": "geometries/cleanup-jnong11.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201808060051",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201808060051",
+    "collected_at": "2026-10-09T05:24:40.418140+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "전농 제11 주택재개발정비사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-Wd7A6HX5": {
+    "path": "geometries/cleanup-Wd7A6HX5.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ200907167746",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ200907167746",
+    "collected_at": "2026-10-09T05:24:40.418508+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "청량리재정비촉진지구전농12구역주택"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-Jm4L110Z": {
+    "path": "geometries/cleanup-Jm4L110Z.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201808060157",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201808060157",
+    "collected_at": "2026-10-09T05:24:40.419199+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "제기제4 재개발 구역"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-dH49599v": {
+    "path": "geometries/cleanup-dH49599v.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ200811267597",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ200811267597",
+    "collected_at": "2026-10-09T05:24:40.420002+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "청량리6구역주택재개발사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-Lt58S9vM": {
+    "path": "geometries/cleanup-Lt58S9vM.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201108098012",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201108098012",
+    "collected_at": "2026-10-09T05:24:40.420580+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "회기제1주택재개발구역"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-gnlrud5": {
+    "path": "geometries/cleanup-gnlrud5.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11230AGZ202304040001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11230AGZ202304040001",
+    "collected_at": "2026-10-09T05:24:40.421064+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "휘경 제5 주택정비형재개발사업"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-noryangjin4": {
+    "path": "geometries/cleanup-noryangjin4.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ202408070002",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ202408070002",
+    "collected_at": "2026-10-09T05:24:40.422338+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "노량진4재정비촉진구역"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-noryangjin5": {
+    "path": "geometries/cleanup-noryangjin5.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ202305240002",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ202305240002",
+    "collected_at": "2026-10-09T05:24:40.423984+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "노량진5재정비촉진구역"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-noryang2": {
+    "path": "geometries/cleanup-noryang2.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ202504030002",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ202504030002",
+    "collected_at": "2026-10-09T05:24:40.424327+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "노량진2재정비촉진구역"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-noryangin1": {
+    "path": "geometries/cleanup-noryangin1.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ202301300002",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ202301300002",
+    "collected_at": "2026-10-09T05:24:40.425706+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "노량진1재정비촉진구역"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-sadang3": {
+    "path": "geometries/cleanup-sadang3.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11590AGZ202303290001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11590AGZ202303290001",
+    "collected_at": "2026-10-09T05:24:40.426642+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "사당3 재건축정비사업"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-N1Kpva7A": {
+    "path": "geometries/cleanup-N1Kpva7A.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201105179950",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201105179950",
+    "collected_at": "2026-10-09T05:24:40.427799+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "사당1 주택재건축정비구역"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-oOJD6Ubw": {
+    "path": "geometries/cleanup-oOJD6Ubw.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201306258259",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201306258259",
+    "collected_at": "2026-10-09T05:24:40.428629+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "흑석8 주택재개발사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-CjN70HC9": {
+    "path": "geometries/cleanup-CjN70HC9.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201207160028",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201207160028",
+    "collected_at": "2026-10-09T05:24:40.429142+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "망원1 주택재건축정비사업"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-seongsansy": {
+    "path": "geometries/cleanup-seongsansy.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11440AGZ202312190001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11440AGZ202312190001",
+    "collected_at": "2026-10-09T05:24:40.429533+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "성산시영아파트 주택재건축정비사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-WMrak31u": {
+    "path": "geometries/cleanup-WMrak31u.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201112058077",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201112058077",
+    "collected_at": "2026-10-09T05:24:40.430672+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "아현3주택재개발사업구역"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-Lcu8f9Vh": {
+    "path": "geometries/cleanup-Lcu8f9Vh.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201708238635",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201708238635",
+    "collected_at": "2026-10-09T05:24:40.431377+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "염리3 주택재개발사업구역"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-bukgajua6": {
+    "path": "geometries/cleanup-bukgajua6.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201406180174",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201406180174",
+    "collected_at": "2026-10-09T05:24:40.432034+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "북가좌제6주택재건축정비사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-buk7880": {
+    "path": "geometries/cleanup-buk7880.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ200812127658",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ200812127658",
+    "collected_at": "2026-10-09T05:24:40.432801+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "북아현재정비촉진지구1-3구역주택재"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-zLe95R3j": {
+    "path": "geometries/cleanup-zLe95R3j.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201308298290",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201308298290",
+    "collected_at": "2026-10-09T05:24:40.433782+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "북아현1-2구역주택재개발사업"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-hongeun1": {
+    "path": "geometries/cleanup-hongeun1.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11410AGZ202310300002",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11410AGZ202310300002",
+    "collected_at": "2026-10-09T05:24:40.435580+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "홍은1 도시정비형 재개발사업"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-c91hJVJ6": {
+    "path": "geometries/cleanup-c91hJVJ6.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11410AGZ202303150001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11410AGZ202303150001",
+    "collected_at": "2026-10-09T05:24:40.435980+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "홍은제1 주택재건축 정비사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-i4XX3BfD": {
+    "path": "geometries/cleanup-i4XX3BfD.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ200901027666",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ200901027666",
+    "collected_at": "2026-10-09T05:24:40.436646+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "홍은12구역주택재개발사업"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-h18apt": {
+    "path": "geometries/cleanup-h18apt.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11410AGZ202109300001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11410AGZ202109300001",
+    "collected_at": "2026-10-09T05:24:40.437088+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "홍제3 주택재건축 정비구역"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-LkC1S7nf": {
+    "path": "geometries/cleanup-LkC1S7nf.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201412229160",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201412229160",
+    "collected_at": "2026-10-09T05:24:40.437425+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "홍제2재정비촉진구역"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-shinbanpo3": {
+    "path": "geometries/cleanup-shinbanpo3.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201903080921",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201903080921",
+    "collected_at": "2026-10-09T05:24:40.438037+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "신반포3차· 경남아파트 주택재건축"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-banpohyundai": {
+    "path": "geometries/cleanup-banpohyundai.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201711300458",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201711300458",
+    "collected_at": "2026-10-09T05:24:40.438274+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "반포현대아파트 주택재건축정비사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-banpomido1": {
+    "path": "geometries/cleanup-banpomido1.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11650AGZ202406250001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11650AGZ202406250001",
+    "collected_at": "2026-10-09T05:24:40.438599+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "반포미도1차아파트 재건축정비사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-banpojk": {
+    "path": "geometries/cleanup-banpojk.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201711300456",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201711300456",
+    "collected_at": "2026-10-09T05:24:40.439108+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "반포주공1단지(1,2,4주구) 주택재건축"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-cleanup43-9": {
+    "path": "geometries/cleanup-cleanup43-9.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ202303060001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ202303060001",
+    "collected_at": "2026-10-09T05:24:40.440123+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "방배15 주택재건축 정비사업"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-bangbaesinsamho": {
+    "path": "geometries/cleanup-bangbaesinsamho.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ202408210001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ202408210001",
+    "collected_at": "2026-10-09T05:24:40.440501+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "방배신삼호아파트 주택재건축 정비사업"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-bangbae3": {
+    "path": "geometries/cleanup-bangbae3.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201812060940",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201812060940",
+    "collected_at": "2026-10-09T05:24:40.440977+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "방배3 주택재건축 정비구역"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-edqat05F": {
+    "path": "geometries/cleanup-edqat05F.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11650AGZ202408270002",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11650AGZ202408270002",
+    "collected_at": "2026-10-09T05:24:40.441236+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "서초진흥아파트 재건축정비사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-shinbanpo13": {
+    "path": "geometries/cleanup-shinbanpo13.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201711300455",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201711300455",
+    "collected_at": "2026-10-09T05:24:40.441409+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "신반포13차아파트 주택재건축정비사"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-W8N045i7": {
+    "path": "geometries/cleanup-W8N045i7.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201812110947",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201812110947",
+    "collected_at": "2026-10-09T05:24:40.441597+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "신반포5차아파트 주택재건축 정비사"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-kumho13": {
+    "path": "geometries/cleanup-kumho13.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201612058598",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201612058598",
+    "collected_at": "2026-10-09T05:24:40.441912+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "금호제13주택재개발정비구역"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-bxP5EfNQ": {
+    "path": "geometries/cleanup-bxP5EfNQ.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ200812017639",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ200812017639",
+    "collected_at": "2026-10-09T05:24:40.442278+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "금호16구역주택재개발사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-kbret02": {
+    "path": "geometries/cleanup-kbret02.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201612050316",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201612050316",
+    "collected_at": "2026-10-09T05:24:40.442819+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "장미아파트 주택재건축정비사업"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-hDI0jH9w": {
+    "path": "geometries/cleanup-hDI0jH9w.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201704198609",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201704198609",
+    "collected_at": "2026-10-09T05:24:40.443463+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "성동구 옥수 제13주택재개발구역 정비"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-janganpyeong": {
+    "path": "geometries/cleanup-janganpyeong.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201809170026",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201809170026",
+    "collected_at": "2026-10-09T05:24:40.443660+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "장안평 중고차매매센터 도시환경정비"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-donam5": {
+    "path": "geometries/cleanup-donam5.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ200901207681",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ200901207681",
+    "collected_at": "2026-10-09T05:24:40.444075+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "돈암5구역주택재개발사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-FyZug0mX": {
+    "path": "geometries/cleanup-FyZug0mX.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201603258556",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201603258556",
+    "collected_at": "2026-10-09T05:24:40.444698+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "돈암정릉주택재개발정비구역"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-bomun2": {
+    "path": "geometries/cleanup-bomun2.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201512168543",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201512168543",
+    "collected_at": "2026-10-09T05:24:40.445089+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "보문2주택재개발정비구역"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-K9P2ZhIS": {
+    "path": "geometries/cleanup-K9P2ZhIS.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201809130116",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201809130116",
+    "collected_at": "2026-10-09T05:24:40.445697+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "보문5구역주택재개발정비구역"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-K83R314G": {
+    "path": "geometries/cleanup-K83R314G.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ200811257594",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ200811257594",
+    "collected_at": "2026-10-09T05:24:40.446496+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "보문4구역주택재개발사업"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-bomun3": {
+    "path": "geometries/cleanup-bomun3.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201205078140",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201205078140",
+    "collected_at": "2026-10-09T05:24:40.447203+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "보문제3주택재개발정비사업"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-seokgwan1-2": {
+    "path": "geometries/cleanup-seokgwan1-2.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11290AGZ202406260001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11290AGZ202406260001",
+    "collected_at": "2026-10-09T05:24:40.447497+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "석관1의2구역 가로주택정비사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-nDinXQkG": {
+    "path": "geometries/cleanup-nDinXQkG.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ200811257593",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ200811257593",
+    "collected_at": "2026-10-09T05:24:40.448298+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "석관3구역주택재개발사업"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-mv8c1LWO": {
+    "path": "geometries/cleanup-mv8c1LWO.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201512168520",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201512168520",
+    "collected_at": "2026-10-09T05:24:40.448761+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "정릉제10구역주택재개발정비사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-VKEmLr86": {
+    "path": "geometries/cleanup-VKEmLr86.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201209058189",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201209058189",
+    "collected_at": "2026-10-09T05:24:40.450553+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "정릉골 주택재개발사업"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-dfvX7I3G": {
+    "path": "geometries/cleanup-dfvX7I3G.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ200810297534",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ200810297534",
+    "collected_at": "2026-10-09T05:24:40.451226+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "종암6구역주택재개발사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-woosung01": {
+    "path": "geometries/cleanup-woosung01.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11710AGZ202312200001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11710AGZ202312200001",
+    "collected_at": "2026-10-09T05:24:40.451664+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "가락우성1차아파트 재건축정비구역"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-samhwan": {
+    "path": "geometries/cleanup-samhwan.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201807120619",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201807120619",
+    "collected_at": "2026-10-09T05:24:40.451852+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "삼환가락아파트 주택재건축 정비사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-garakgd": {
+    "path": "geometries/cleanup-garakgd.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201807120617",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201807120617",
+    "collected_at": "2026-10-09T05:24:40.452076+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "가락극동아파트 주택재건축 정비사업"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-hCmUm22k": {
+    "path": "geometries/cleanup-hCmUm22k.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201901280920",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201901280920",
+    "collected_at": "2026-10-09T05:24:40.452622+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "가락시영아파트 주택재건축 정비구역"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-geoyeo2": {
+    "path": "geometries/cleanup-geoyeo2.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ200902168727",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ200902168727",
+    "collected_at": "2026-10-09T05:24:40.452968+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "거여2재정비촉진구역 2지구"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-geoyeosae": {
+    "path": "geometries/cleanup-geoyeosae.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ202304250003",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ202304250003",
+    "collected_at": "2026-10-09T05:24:40.453716+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "거여새마을 재정비촉진구역(주택재개발사업)"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-macheon-1": {
+    "path": "geometries/cleanup-macheon-1.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ197312013062",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ197312013062",
+    "collected_at": "2026-10-09T05:24:40.454113+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "마천1구역주택재개발사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-machun5": {
+    "path": "geometries/cleanup-machun5.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11710AGZ202408070001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11710AGZ202408070001",
+    "collected_at": "2026-10-09T05:24:40.455014+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "마천5 재정비촉진구역"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-daelim": {
+    "path": "geometries/cleanup-daelim.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11710AGZ202108270001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11710AGZ202108270001",
+    "collected_at": "2026-10-09T05:24:40.455213+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "대림가락아파트 재건축정비구역"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-hanyang3": {
+    "path": "geometries/cleanup-hanyang3.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201909110252",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201909110252",
+    "collected_at": "2026-10-09T05:24:40.455497+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "한양3차아파트 재건축 정비구역"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-J5qnq21Z": {
+    "path": "geometries/cleanup-J5qnq21Z.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ200512219700",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ200512219700",
+    "collected_at": "2026-10-09T05:24:40.455656+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "반도아파트주택재건축사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-jjapt16": {
+    "path": "geometries/cleanup-jjapt16.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11710AGZ202107260001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11710AGZ202107260001",
+    "collected_at": "2026-10-09T05:24:40.455809+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "잠실진주아파트재건축사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-ogeumhyundai": {
+    "path": "geometries/cleanup-ogeumhyundai.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11710AGZ202404160001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11710AGZ202404160001",
+    "collected_at": "2026-10-09T05:24:40.455978+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "오금현대아파트 재건축정비구역"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-woochang": {
+    "path": "geometries/cleanup-woochang.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11710AGZ202508070001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11710AGZ202508070001",
+    "collected_at": "2026-10-09T05:24:40.456199+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "가락우창아파트 재건축정비사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-Q1qk5nF6": {
+    "path": "geometries/cleanup-Q1qk5nF6.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201607250294",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201607250294",
+    "collected_at": "2026-10-09T05:24:40.456511+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "잠실우성아파트 주택재건축 정비사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-mokdong6danji": {
+    "path": "geometries/cleanup-mokdong6danji.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ202408260001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ202408260001",
+    "collected_at": "2026-10-09T05:24:40.456888+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "목동6단지 아파트 재건축사업"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-shinwol1": {
+    "path": "geometries/cleanup-shinwol1.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ200911247804",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ200911247804",
+    "collected_at": "2026-10-09T05:24:40.457388+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "신월1구역주택재개발사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-XT7rO2w9": {
+    "path": "geometries/cleanup-XT7rO2w9.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201612160320",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201612160320",
+    "collected_at": "2026-10-09T05:24:40.457686+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "신월4 주택재건축 정비구역"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-sinwol7-2": {
+    "path": "geometries/cleanup-sinwol7-2.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11470AGZ202403070002",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11470AGZ202403070002",
+    "collected_at": "2026-10-09T05:24:40.458093+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "신월7동 2구역 주택정비형 공공재개발구역"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-mokdong13": {
+    "path": "geometries/cleanup-mokdong13.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11470AGZ202501220002",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11470AGZ202501220002",
+    "collected_at": "2026-10-09T05:24:40.458304+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "목동 13단지 아파트 재건축 정비사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-rgw5lT43": {
+    "path": "geometries/cleanup-rgw5lT43.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201106137966",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201106137966",
+    "collected_at": "2026-10-09T05:24:40.458541+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "신정제4주택재개발구역"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-Shinjeong1152": {
+    "path": "geometries/cleanup-Shinjeong1152.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11470AGZ202309070001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11470AGZ202309070001",
+    "collected_at": "2026-10-09T05:24:40.458836+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "신정동 1152번지일대 주택정비형 재개발사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-youwon1": {
+    "path": "geometries/cleanup-youwon1.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201410170194",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201410170194",
+    "collected_at": "2026-10-09T05:24:40.459111+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "유원제일1차아파트 주택재건축정비사"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-Zmvb0Xkt": {
+    "path": "geometries/cleanup-Zmvb0Xkt.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201411068408",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201411068408",
+    "collected_at": "2026-10-09T05:24:40.459939+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "도림제16주택재개발정비구역"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-samsungapart": {
+    "path": "geometries/cleanup-samsungapart.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201511300261",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201511300261",
+    "collected_at": "2026-10-09T05:24:40.460638+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "삼성아파트 주택재건축 정비구역"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-YPshindongaapt": {
+    "path": "geometries/cleanup-YPshindongaapt.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201107139967",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201107139967",
+    "collected_at": "2026-10-09T05:24:40.460793+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "신동아아파트 주택재건축 정비구역"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-yangpyung14": {
+    "path": "geometries/cleanup-yangpyung14.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201311259092",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201311259092",
+    "collected_at": "2026-10-09T05:24:40.461022+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "양평제14 도시환경정비구역"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-gongjak": {
+    "path": "geometries/cleanup-gongjak.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11560AGZ202210050001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11560AGZ202210050001",
+    "collected_at": "2026-10-09T05:24:40.461196+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "여의도 공작아파트 재건축정비사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-ysbapt": {
+    "path": "geometries/cleanup-ysbapt.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11560AGZ202411080002",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11560AGZ202411080002",
+    "collected_at": "2026-10-09T05:24:40.461415+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "여의도 시범아파트 재건축사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-dongja4": {
+    "path": "geometries/cleanup-dongja4.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201311229089",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201311229089",
+    "collected_at": "2026-10-09T05:24:40.461761+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "동자동 제4구역 도시환경정비사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-iw14v164": {
+    "path": "geometries/cleanup-iw14v164.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ202107080003",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ202107080003",
+    "collected_at": "2026-10-09T05:24:40.463331+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "한남2 재정비촉진구역"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-han158": {
+    "path": "geometries/cleanup-han158.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201201169008",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201201169008",
+    "collected_at": "2026-10-09T05:24:40.464683+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "한강로 도시환경정비사업"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-sinyongsan2": {
+    "path": "geometries/cleanup-sinyongsan2.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201808100124",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201808100124",
+    "collected_at": "2026-10-09T05:24:40.466000+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "신용산역 북측2 재개발정비구역"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-nokbun2": {
+    "path": "geometries/cleanup-nokbun2.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201904020031",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201904020031",
+    "collected_at": "2026-10-09T05:24:40.467286+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "녹번제1구역 제2지구"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-nokbun1": {
+    "path": "geometries/cleanup-nokbun1.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201901080074",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201901080074",
+    "collected_at": "2026-10-09T05:24:40.467948+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "녹번제1구역 제1지구"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-O95iGDl8": {
+    "path": "geometries/cleanup-O95iGDl8.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ200808057491",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ200808057491",
+    "collected_at": "2026-10-09T05:24:40.468592+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "불광3구역주택재개발사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-bulgwang1": {
+    "path": "geometries/cleanup-bulgwang1.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11380AGZ202405280001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11380AGZ202405280001",
+    "collected_at": "2026-10-09T05:24:40.468860+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "불광1 주택재건축 정비구역"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-dokbawee": {
+    "path": "geometries/cleanup-dokbawee.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11380AGZ202308080001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11380AGZ202308080001",
+    "collected_at": "2026-10-09T05:24:40.469436+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "독바위역세권 도시정비형재개발정비구역"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-bulgwang": {
+    "path": "geometries/cleanup-bulgwang.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ202411130001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ202411130001",
+    "collected_at": "2026-10-09T05:24:40.469967+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "불광8 주택정비형 재개발사업"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-ppphc1948": {
+    "path": "geometries/cleanup-ppphc1948.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201608178588",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201608178588",
+    "collected_at": "2026-10-09T05:24:40.471049+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "응암제3주택재개발정비사업"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-e3092760": {
+    "path": "geometries/cleanup-e3092760.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ200911029842",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ200911029842",
+    "collected_at": "2026-10-09T05:24:40.471456+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "응암3구역주택재건축사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-eungam9": {
+    "path": "geometries/cleanup-eungam9.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201201208094",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201201208094",
+    "collected_at": "2026-10-09T05:24:40.471743+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "응암제9주택재개발사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-Mm8IZX24": {
+    "path": "geometries/cleanup-Mm8IZX24.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ202212210002",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ202212210002",
+    "collected_at": "2026-10-09T05:24:40.472715+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "돈의문1재정비촉진구역"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-sy1apt": {
+    "path": "geometries/cleanup-sy1apt.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201710198656",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201710198656",
+    "collected_at": "2026-10-09T05:24:40.473429+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "신영제1주택재개발정비구역"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-changsin": {
+    "path": "geometries/cleanup-changsin.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11110AGZ202409300002",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11110AGZ202409300002",
+    "collected_at": "2026-10-09T05:24:40.474554+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "창신동 23일대 주택정비형 재개발구역"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-mrdapt2": {
+    "path": "geometries/cleanup-mrdapt2.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201109288040",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201109288040",
+    "collected_at": "2026-10-09T05:24:40.476044+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "만리제2주택재개발사업"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-sindang8": {
+    "path": "geometries/cleanup-sindang8.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11140AGZ202302130001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11140AGZ202302130001",
+    "collected_at": "2026-10-09T05:24:40.478794+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "신당 제8구역 주택재개발정비사업"
+    ],
+    "feature_count": 4,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-joongnim398": {
+    "path": "geometries/cleanup-joongnim398.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11140AGZ202302230001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11140AGZ202302230001",
+    "collected_at": "2026-10-09T05:24:40.479765+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "중림동 398번지일대 주택정비형 재개발사업"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-paX41R06": {
+    "path": "geometries/cleanup-paX41R06.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11260AGZ202501160001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11260AGZ202501160001",
+    "collected_at": "2026-10-09T05:24:40.480189+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "망우1구역 공공재건축정비구역"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-sangbong13": {
+    "path": "geometries/cleanup-sangbong13.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11260AGZ202502070001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11260AGZ202502070001",
+    "collected_at": "2026-10-09T05:24:40.480571+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "상봉13구역 주택정비형 재개발사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-Wo7MD7NG": {
+    "path": "geometries/cleanup-Wo7MD7NG.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201909270092",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201909270092",
+    "collected_at": "2026-10-09T05:24:40.481536+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "면목1 주택재건축 정비구역"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-myeonmok9": {
+    "path": "geometries/cleanup-myeonmok9.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11260AGZ202601140001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11260AGZ202601140001",
+    "collected_at": "2026-10-09T05:24:40.481956+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "면목9구역 주택정비형 공공재개발사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-mook1dong": {
+    "path": "geometries/cleanup-mook1dong.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201707180356",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ201707180356",
+    "collected_at": "2026-10-09T05:24:40.484056+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "묵1주택재건축정비구역"
+    ],
+    "feature_count": 2,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-sangbong10": {
+    "path": "geometries/cleanup-sangbong10.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11260AGZ202305100001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11260AGZ202305100001",
+    "collected_at": "2026-10-09T05:24:40.484537+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "상봉10재정비촉진구역"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "cleanup-junhwa5": {
+    "path": "geometries/cleanup-junhwa5.geojson",
+    "crs": "EPSG:4326",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ202312120001",
+    "source_label": "서울도시공간포털 공식 정비구역 경계",
+    "source_record_code": "11000AGZ202312120001",
+    "collected_at": "2026-10-09T05:24:40.484989+00:00",
+    "verified": true,
+    "verification": "정보몽땅 공식 지도연결 고시ID 일치 + 구역명/사업명 대조",
+    "names": [
+      "중화5구역 주택정비형 공공재개발사업"
+    ],
+    "feature_count": 1,
+    "note": "공식 서비스가 반환한 현재 정비구역 경계입니다. 개별 필지·동별 건물 윤곽은 아닙니다."
+  },
+  "moa-urban-8812": {
+    "path": "geometries/moa-urban-8812.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8812",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "bbc9e3e4cccf6370258867999f3877dc964644943a7de309457a07996d276512"
+  },
+  "moa-urban-8791": {
+    "path": "geometries/moa-urban-8791.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8791",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "464261569c675834ad7ca4b0763f0457cdb344b06e780425bd374125a1e2dbd6"
+  },
+  "moa-urban-8828": {
+    "path": "geometries/moa-urban-8828.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8828",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "ffbfdb372dfc87314aa40afd42c4d8e10bd468dd3bc76b595bdb90ad67fcaa77"
+  },
+  "moa-urban-8858": {
+    "path": "geometries/moa-urban-8858.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8858",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "51730740516a590edee61782522f30026117557e1e1d6f76686e384cadaccbc9"
+  },
+  "moa-urban-8811": {
+    "path": "geometries/moa-urban-8811.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8811",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "871295c6e5019de62f5b915ce9cf024acc843a6debb3e2e6f6a9fbb959068217"
+  },
+  "moa-urban-8876": {
+    "path": "geometries/moa-urban-8876.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8876",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "2a7a68b0a5295bdf82c46706c167fe2955a7f533c96b85cb67a34b04f9f8c4d3"
+  },
+  "moa-urban-8849": {
+    "path": "geometries/moa-urban-8849.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8849",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "a1198ddcb7f4359090ffa68bd7cb5f585e943f2929373328f11a538569bcd72f"
+  },
+  "moa-urban-8881": {
+    "path": "geometries/moa-urban-8881.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8881",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "d0f7c207eca601d68e664283f7c8987c8964695b9f5f7a9081d875d381c55488"
+  },
+  "moa-urban-4873558": {
+    "path": "geometries/moa-urban-4873558.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=4873558",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "f93b74562797a0fe9cbb7bfbf5be59316dc1c491b1392a5e2ff7300598ce2543"
+  },
+  "moa-urban-8778": {
+    "path": "geometries/moa-urban-8778.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8778",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "b9052723b8b94205583d7963623bd5c2117b32300709e1bd73f5033f1c30a23a"
+  },
+  "moa-urban-4901774": {
+    "path": "geometries/moa-urban-4901774.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=4901774",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "47d7d745d820944f6188ac5b8c50a2869adad0d26e92d34ee7956bb936104fc7"
+  },
+  "moa-urban-8810": {
+    "path": "geometries/moa-urban-8810.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8810",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "c4fafd63b42372e54fa445f7efb4d92ec4dd48e36dc51c295addf03e017cad86"
+  },
+  "moa-urban-4901096": {
+    "path": "geometries/moa-urban-4901096.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=4901096",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "56e05b71b4eaa438722fec350cb373419e57fa7107dfc343a239c7867694343b"
+  },
+  "moa-urban-4758608": {
+    "path": "geometries/moa-urban-4758608.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=4758608",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "5fb9db6c9cc56f862456cce2c88237a0bde067d5b63d4cb6e33def93d7c773fe"
+  },
+  "moa-urban-8800": {
+    "path": "geometries/moa-urban-8800.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8800",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "32b79fcd4d863303c8805a0634cb6bd4c227be0bf39807b01ace172ba443f3f2"
+  },
+  "moa-urban-8803": {
+    "path": "geometries/moa-urban-8803.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8803",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "b3f5444c103a08426c3839e87bf5ba18d17f8c2be904cdb0b24143a7d249ade7"
+  },
+  "moa-urban-8801": {
+    "path": "geometries/moa-urban-8801.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8801",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "2f945cddef355db4ed20e21808686ca7db1c6de6a0db8522997637d34e9429e0"
+  },
+  "moa-urban-4900091": {
+    "path": "geometries/moa-urban-4900091.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=4900091",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "de32d160320c671670916785605fae531344e2a494b1672a711ff9c0658decc9"
+  },
+  "moa-urban-4901028": {
+    "path": "geometries/moa-urban-4901028.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=4901028",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "d41073456b6a1487005b49c7a197164f47a90a0d6f0cb4c495f27d65528bdda1"
+  },
+  "moa-urban-4900482": {
+    "path": "geometries/moa-urban-4900482.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=4900482",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "c9d62371bc3f0ab2258bce1bbb0c42743db9d7b42e414eb7604578b86979ee05"
+  },
+  "moa-urban-8822": {
+    "path": "geometries/moa-urban-8822.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8822",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "f4661696a5003fe3c3e7c557c60f4c9e88f4595601ef1e73c1238c6739f44f7c"
+  },
+  "moa-urban-8782": {
+    "path": "geometries/moa-urban-8782.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8782",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "a773f66e4957767241e6c0c0ed87a1767427dfcd90f91311c8b9552090f12408"
+  },
+  "moa-urban-8824": {
+    "path": "geometries/moa-urban-8824.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8824",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "24231e09c37a995c2875778d8be179bf1a8ca02ee4b629ce76c1aacd96d4fdae"
+  },
+  "moa-urban-8878": {
+    "path": "geometries/moa-urban-8878.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8878",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "12f67ed8f5ff8f973383bb1e8588659979a5bbbcb3ac0d1ac63084eaa49edbbb"
+  },
+  "moa-urban-8875": {
+    "path": "geometries/moa-urban-8875.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8875",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "9d5715cc201f616a2ac61005aaa91aa5bf6c2df654a3f458e6a5b1525d71860b"
+  },
+  "moa-urban-8877": {
+    "path": "geometries/moa-urban-8877.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8877",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "613a19b45858bde5e3f6d9fc9d6f7b6c9704f9510c4fa19a29d77f881c304b3e"
+  },
+  "moa-urban-8873": {
+    "path": "geometries/moa-urban-8873.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8873",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "bbab70dd7e80aefe1b0fcca56ad67e4985a7263ff9b6c80b6f4db06061263c89"
+  },
+  "moa-urban-8874": {
+    "path": "geometries/moa-urban-8874.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8874",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "ae457d36ce7ac7cb7b1ff28a0f9f4cea72962dd63ec38c5b98959f8541fc7ea4"
+  },
+  "moa-urban-8871": {
+    "path": "geometries/moa-urban-8871.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8871",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "0b4ead1416ff51c538ba5f8b7230c6c8c3b66deb404dd471b6f2d0dd835658b2"
+  },
+  "moa-urban-8870": {
+    "path": "geometries/moa-urban-8870.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8870",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "83dfb2812f0b66677cf93c59c90c0cf3b6ca6543e365ffaab4299a6100846a39"
+  },
+  "moa-urban-8869": {
+    "path": "geometries/moa-urban-8869.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8869",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "db24b7014b6640480cfa8d60642b6edc0bff4f0469d8ee7afedc72bdcd6208b2"
+  },
+  "moa-urban-8868": {
+    "path": "geometries/moa-urban-8868.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8868",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "a6d3fc9ef83d23830b0c03ca5e25e2b21b86110b9cbc980d41ecfa63fa876faf"
+  },
+  "moa-urban-8857": {
+    "path": "geometries/moa-urban-8857.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8857",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "01f3455265a510467197c8a71736029b9ca4067196bfe02d1641dc061a2826ba"
+  },
+  "moa-urban-8854": {
+    "path": "geometries/moa-urban-8854.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8854",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "a1f963814a4738f0362b2cefe58985c6a2148039bc0f9c88f0208ed28c4c2288"
+  },
+  "moa-urban-8799": {
+    "path": "geometries/moa-urban-8799.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8799",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "f03aef7fedee346003de63d275af46c29a3b23704633d1b6b1c266f08fbaffb5"
+  },
+  "moa-urban-8798": {
+    "path": "geometries/moa-urban-8798.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8798",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "4ed2125a3c72dff9ddb3101ff7e03f6b489ac9df0d713766c96b48efbde47b1a"
+  },
+  "moa-urban-8797": {
+    "path": "geometries/moa-urban-8797.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8797",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "d927516b3b91d924bc6a20998097ecc6f656112a9b0eb7c79c16f9375988ec81"
+  },
+  "moa-urban-8796": {
+    "path": "geometries/moa-urban-8796.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8796",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "24a07ec71dac6517fa0c51acc88ee49285a42e6660fe5b6c301f5b16549fcd6c"
+  },
+  "moa-urban-8795": {
+    "path": "geometries/moa-urban-8795.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8795",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "e967d63878f6dd8b57136ef605e03a086ff7df0979e29ab7a1975a25ffe85e26"
+  },
+  "moa-urban-8794": {
+    "path": "geometries/moa-urban-8794.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8794",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "b6ef630d8554f171442017f79bd2eaed36f7ee04b2f51f754fb03427976c32b7"
+  },
+  "moa-urban-8856": {
+    "path": "geometries/moa-urban-8856.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8856",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "427e685c01e6573c01db3de2df4d51ae7a73805b39dd339c99cab8cd330c8b3e"
+  },
+  "moa-urban-8855": {
+    "path": "geometries/moa-urban-8855.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8855",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "a96567e6f75ecfe101db03c978e3d78c64502d8dd47a3866c59b3737a0337bd2"
+  },
+  "moa-urban-8863": {
+    "path": "geometries/moa-urban-8863.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8863",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "e1603c0c354f69ed166877dd991b9abc09cb9717ee9e698c5089e4478880d49d"
+  },
+  "moa-urban-8834": {
+    "path": "geometries/moa-urban-8834.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8834",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "8d3f68f41a171ea8cd0216d52842583d835bf998e9a4117b6828a6c79d26a09e"
+  },
+  "moa-urban-8832": {
+    "path": "geometries/moa-urban-8832.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8832",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "2e23be6190716cc1cbc1568450aaa728b5179d0633046ad2d74d511193b35d2a"
+  },
+  "moa-urban-8775": {
+    "path": "geometries/moa-urban-8775.geojson",
+    "crs": "EPSG:4326",
+    "verified": true,
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8775",
+    "source_label": "서울시 모아타운 공식 경계",
+    "native_crs": "EPSG:5174",
+    "coordinate_system_transformation": true,
+    "source_sha256": "66fb3294fa9c0337e845c7ec4749e5ce659845164b861b1780adcfb32485461f"
+  }
+}

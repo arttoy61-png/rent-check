@@ -1,0 +1,1 @@
+(()=>{const node=document.querySelector('.mapcanvas');if(!node||!window.ResizeObserver)return;let f=0;new ResizeObserver(()=>{cancelAnimationFrame(f);f=requestAnimationFrame(()=>window.RentKakaoMap?.resize?.())}).observe(node)})();

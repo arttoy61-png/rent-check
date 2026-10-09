@@ -1,0 +1,97 @@
+[
+  {
+    "path": "analysis/ujangsan-hillstate/index.html",
+    "title": "우장산힐스테이트 실거래 분석 | Rent Check",
+    "table_count": 2,
+    "links": [
+      "../../tools/apartment/",
+      "../../tools/apartment/",
+      "../../"
+    ],
+    "body_preserved": true,
+    "date_note": "Analysis snapshot: 2026-10-08 22:24 KST; period 2026-04-07 to 2026-10-07. Preserve independently from live transaction summary.",
+    "raster_images_in_body": 0,
+    "preservation_hashes": {
+      "title_outer_html": {
+        "utf8_sha256": "611f93715bd5e20624604952cbf730c5a5e3c11460c6f28f6c8ab30973406fd5",
+        "char_start": 131,
+        "char_end": 174,
+        "utf8_bytes": 69
+      },
+      "body_outer_html": {
+        "utf8_sha256": "32f57f8b44b0deffbfc2e4f334ed7bcfa0170588887271eb7ff08ba8af8d992f",
+        "char_start": 6357,
+        "char_end": 47058,
+        "utf8_bytes": 43075
+      },
+      "literal_table_html": [
+        {
+          "utf8_sha256": "a8f5914a5260fba5edac9c6290ae483245e8f4ea80685660b85181ebf5e821fb",
+          "char_start": 8371,
+          "char_end": 8845,
+          "utf8_bytes": 537
+        },
+        {
+          "utf8_sha256": "8cc9c75dcfced58fbf0c9a6d9fa5c002743aba081132c486131c6242a856334b",
+          "char_start": 45138,
+          "char_end": 45246,
+          "utf8_bytes": 118
+        }
+      ],
+      "scope_note": "Hashes are exact original-source outer HTML slices, UTF-8, including whitespace. Body includes runtime scripts and prerendered content; literal tables may include JS template markup. Keep original source hash as canonical."
+    }
+  },
+  {
+    "path": "blog/long-term-repair-reserve-refund/index.html",
+    "title": "장기수선충당금 반환, 이사할 때 집주인에게 어떻게 받나요? | Rent Check",
+    "table_count": 2,
+    "links": [
+      "/",
+      "/blog/",
+      "https://www.law.go.kr/LSW/lsSideInfoP.do?docCls=jo&amp;joBrNo=00&amp;joNo=0030&amp;lsiSeq=284009&amp;urlMode=lsScJoRltInfoR",
+      "https://www.law.go.kr/LSW/lsSideInfoP.do?docCls=jo&amp;joBrNo=00&amp;joNo=0031&amp;lsiSeq=287261&amp;urlMode=lsScJoRltInfoR",
+      "https://www.law.go.kr/LSW/lsSideInfoP.do?docCls=jo&amp;joBrNo=00&amp;joNo=0023&amp;lsiSeq=287261&amp;urlMode=lsScJoRltInfoR",
+      "/blog/early-move-deposit-return/",
+      "/blog/maintenance-fee-rent-compare/",
+      "/blog/early-move-deposit-return/",
+      "https://www.law.go.kr/LSW/lsSideInfoP.do?docCls=jo&amp;joBrNo=00&amp;joNo=0030&amp;lsiSeq=284009&amp;urlMode=lsScJoRltInfoR",
+      "https://www.law.go.kr/LSW/lsSideInfoP.do?docCls=jo&amp;joBrNo=00&amp;joNo=0031&amp;lsiSeq=287261&amp;urlMode=lsScJoRltInfoR",
+      "https://www.law.go.kr/LSW/lsSideInfoP.do?docCls=jo&amp;joBrNo=00&amp;joNo=0023&amp;lsiSeq=287261&amp;urlMode=lsScJoRltInfoR",
+      "https://easylaw.go.kr/CSP/CnpClsMain.laf?ccfNo=5&amp;cciNo=3&amp;cnpClsNo=3&amp;csmSeq=629",
+      "https://www.law.go.kr/LSW/lsSideInfoP.do?docCls=jo&amp;joBrNo=00&amp;joNo=0002&amp;lsiSeq=284009&amp;urlMode=lsScJoRltInfoR",
+      "/blog/"
+    ],
+    "body_preserved": true,
+    "date_note": "Published and modified 2026-10-05.",
+    "raster_images_in_body": 0,
+    "preservation_hashes": {
+      "title_outer_html": {
+        "utf8_sha256": "32938f972e85cfd2e0d55d03525a9e9ffa21ec8f77132d9f180d321325a36fa7",
+        "char_start": 127,
+        "char_end": 187,
+        "utf8_bytes": 108
+      },
+      "body_outer_html": {
+        "utf8_sha256": "b6e53ad874af23924d9dd248503782af886cb126264a069212e938cef7e4116e",
+        "char_start": 3371,
+        "char_end": 12127,
+        "utf8_bytes": 15779
+      },
+      "literal_table_html": [
+        {
+          "utf8_sha256": "96309cfb38c6be80f92cf762393fc3295cd73c0dfec096351dc8d37b183651b4",
+          "char_start": 6051,
+          "char_end": 6376,
+          "utf8_bytes": 552
+        },
+        {
+          "utf8_sha256": "808f47d748e2359d949f6a7eaf9ceaef992c2f95640919704d06d2a3931b818a",
+          "char_start": 6882,
+          "char_end": 7336,
+          "utf8_bytes": 592
+        }
+      ],
+      "scope_note": "Hashes are exact original-source outer HTML slices, UTF-8, including whitespace. Body includes runtime scripts and prerendered content; literal tables may include JS template markup. Keep original source hash as canonical."
+    }
+  }
+]
