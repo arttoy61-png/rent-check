@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-10T03:23:26",
+  "generated_at": "2026-10-10T09:52:13",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
@@ -23,7 +23,7 @@
       ],
       "fresh_count": 8,
       "carried_count": 7,
-      "failure_streak": 29
+      "failure_streak": 30
     },
     "SH": {
       "count": 18,
@@ -111,7 +111,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311087",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.10.08.(목) ~2026.10.22.(목) 15시까지",
-        "verified_at": "2026-10-10T03:23:12"
+        "verified_at": "2026-10-10T09:51:57"
       },
       "sh_schedule_version": 1
     },
