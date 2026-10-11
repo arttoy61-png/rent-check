@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-11T14:47:14",
+  "generated_at": "2026-10-11T21:49:48",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
@@ -23,7 +23,7 @@
       ],
       "fresh_count": 8,
       "carried_count": 7,
-      "failure_streak": 34
+      "failure_streak": 35
     },
     "SH": {
       "count": 18,
@@ -37,19 +37,19 @@
     "TOTAL": {
       "count": 31,
       "duplicates_removed": 5,
-      "excluded_non_housing": 3,
+      "excluded_non_housing": 2,
       "excluded_outside_seoul": 0,
-      "published_count": 32
+      "published_count": 33
     }
   },
   "summary": {
-    "total": 32,
+    "total": 33,
     "gangseo": 3,
-    "new": 0,
+    "new": 1,
     "updated": 0,
-    "open_or_check": 12,
+    "open_or_check": 13,
     "by_housing_type": {
-      "기타임대": 5,
+      "기타임대": 6,
       "매입임대": 9,
       "공공임대": 5,
       "든든전세": 1,
@@ -68,7 +68,7 @@
       "다자녀": 1
     },
     "by_agency": {
-      "SH": 18,
+      "SH": 19,
       "LH": 14
     }
   },
@@ -111,7 +111,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311087",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.10.08.(목) ~2026.10.22.(목) 15시까지",
-        "verified_at": "2026-10-11T14:46:56"
+        "verified_at": "2026-10-11T21:49:30"
       },
       "sh_schedule_version": 1
     },
@@ -347,6 +347,39 @@
       "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311205",
       "source": "SH 공식 주택임대 게시판",
       "content_signature": "badfc3ca2de8d3ae3eb41f7a7d33c9e3abb9c44f63742be34219b52d759ced48",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "published_source": "official_list_registration",
+      "notice_kind": "recruitment",
+      "application_start": "",
+      "schedule_type": "unknown",
+      "deadline_precision": "unknown",
+      "schedule_source": "unknown",
+      "schedule_note": "신청기간은 공식 공고문 확인이 필요합니다.",
+      "application_windows": [],
+      "schedule_evidence": {},
+      "sh_schedule_version": 1
+    },
+    {
+      "id": "SH:seq:310976",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "[토지임대부 사회주택] 옥류서원 입주자 모집 공고문",
+      "housing_types": [
+        "기타임대"
+      ],
+      "audiences": [],
+      "region": "서울",
+      "published_at": "2026-10-07",
+      "deadline": "",
+      "open_state": "확인필요",
+      "event": "신규",
+      "change": "신규",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310976",
+      "source": "SH 공식 주택임대 게시판",
+      "content_signature": "dd69fb26480e8bbd7d316c1aff015fa0cfbe3cfba282bdc51e0cb5dba1f4361e",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "published_source": "official_list_registration",
       "notice_kind": "recruitment",
