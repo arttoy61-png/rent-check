@@ -1,19 +1,19 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-13T11:16:34.620894+09:00",
+  "checked_at": "2026-10-13T12:03:23.593054+09:00",
   "day": "2026-10-13",
-  "state": "needs_retry",
+  "state": "retry_reserved",
   "collection": {
     "state": "failed",
     "reason": "Workflow did not complete successfully",
     "run_id": 38334816935
   },
   "retry": {
-    "day": "2026-10-10",
-    "requested_at": "2026-10-10T10:45:29.930887+09:00",
-    "checker_run_id": "38014384404",
-    "status": "requested"
+    "day": "2026-10-13",
+    "requested_at": "2026-10-13T12:03:23.593054+09:00",
+    "checker_run_id": "38339839152",
+    "status": "claimed"
   },
   "dry_run": false,
-  "allow_retry": false
+  "allow_retry": true
 }
