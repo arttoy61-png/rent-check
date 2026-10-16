@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-16T06:23:58",
+  "generated_at": "2026-10-16T13:31:29",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
@@ -23,10 +23,10 @@
       ],
       "fresh_count": 8,
       "carried_count": 7,
-      "failure_streak": 51
+      "failure_streak": 52
     },
     "SH": {
-      "count": 17,
+      "count": 16,
       "errors": []
     },
     "SEOUL": {
@@ -35,9 +35,9 @@
       "excluded_noise": 16
     },
     "TOTAL": {
-      "count": 31,
+      "count": 30,
       "duplicates_removed": 4,
-      "excluded_non_housing": 4,
+      "excluded_non_housing": 3,
       "excluded_outside_seoul": 0,
       "published_count": 31
     }
@@ -45,26 +45,26 @@
   "summary": {
     "total": 31,
     "gangseo": 5,
-    "new": 0,
+    "new": 1,
     "updated": 0,
-    "open_or_check": 10,
+    "open_or_check": 9,
     "by_housing_type": {
-      "매입임대": 9,
+      "매입임대": 10,
       "공공임대": 5,
       "든든전세": 1,
       "기타임대": 8,
-      "행복주택": 6,
       "기숙사": 1,
       "통합공공임대": 2,
+      "행복주택": 5,
       "국민임대": 1,
       "영구임대": 1,
-      "장기전세": 1
+      "장기전세": 2
     },
     "by_audience": {
       "청년": 3,
       "고령자": 1,
-      "신혼부부": 7,
-      "신생아": 7
+      "신혼부부": 8,
+      "신생아": 8
     },
     "by_agency": {
       "LH": 14,
@@ -138,7 +138,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311087",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.10.08.(목) ~2026.10.22.(목) 15시까지",
-        "verified_at": "2026-10-16T06:23:53"
+        "verified_at": "2026-10-16T13:31:24"
       },
       "sh_schedule_version": 1
     },
@@ -176,7 +176,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311549",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.10.21.(수) ~ 10.28.(수)",
-        "verified_at": "2026-10-16T06:23:41"
+        "verified_at": "2026-10-16T13:31:17"
       },
       "sh_schedule_version": 1
     },
@@ -215,43 +215,8 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311349",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026. 10. 26.(월) ~ 2026.11. 06.(금) 18시까지",
-        "verified_at": "2026-10-16T06:23:49"
+        "verified_at": "2026-10-16T13:31:20"
       },
-      "sh_schedule_version": 1
-    },
-    {
-      "id": "SH:seq:311407",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "행복주택 예비자 계약결과알림",
-      "housing_types": [
-        "행복주택"
-      ],
-      "audiences": [],
-      "region": "서울",
-      "published_at": "2026-10-13",
-      "deadline": "",
-      "open_state": "확인필요",
-      "event": "신규",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [
-        "행복주택"
-      ],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311407",
-      "source": "SH 공식 주택임대 게시판",
-      "content_signature": "087dad738dbd04d48e9ed252c8609b6281a143f8b6698f98e3ce89e85b90c883",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "published_source": "official_list_registration",
-      "notice_kind": "recruitment",
-      "application_start": "",
-      "schedule_type": "unknown",
-      "deadline_precision": "unknown",
-      "schedule_source": "unknown",
-      "schedule_note": "신청기간은 공식 공고문 확인이 필요합니다.",
-      "application_windows": [],
-      "schedule_evidence": {},
       "sh_schedule_version": 1
     },
     {
@@ -994,6 +959,47 @@
       "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311474",
       "source": "SH 공식 주택임대 게시판",
       "content_signature": "d28d746ce694610cf3be88c537f8fb8d9566082c9aa866dc760b58484310091d",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "published_source": "official_list_registration",
+      "notice_kind": "result",
+      "application_start": "",
+      "schedule_type": "not_applicable",
+      "deadline_precision": "unknown",
+      "schedule_source": "not_applicable",
+      "schedule_note": "신규 신청공고가 아닌 결과·입주 안내입니다.",
+      "application_windows": [],
+      "schedule_evidence": {},
+      "sh_schedule_version": 1
+    },
+    {
+      "id": "SH:seq:311645",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "NEW [당첨자발표] 2025년 1차 미리내집(신혼신생아매입임대주택2) 예비5차 당첨자 발표",
+      "housing_types": [
+        "매입임대",
+        "장기전세"
+      ],
+      "audiences": [
+        "신혼부부",
+        "신생아"
+      ],
+      "region": "서울",
+      "published_at": "2026-10-16",
+      "deadline": "",
+      "open_state": "신청대상아님",
+      "event": "결과",
+      "change": "신규",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [
+        "매입임대",
+        "신혼",
+        "미리내집"
+      ],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311645",
+      "source": "SH 공식 주택임대 게시판",
+      "content_signature": "1cde4a342762286323101057d4e8d2416b1e7d7c1f49c03ff463fd0ea4caf26e",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "published_source": "official_list_registration",
       "notice_kind": "result",
