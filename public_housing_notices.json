@@ -1,13 +1,15 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-17T08:37:04",
+  "generated_at": "2026-10-17T13:35:21",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
     "LH": {
       "count": 8,
       "errors": [
-        "LH OpenAPI: 06/1:HTTP Error 403: Forbidden; 13/1:HTTP Error 403: Forbidden; 39/1:HTTP Error 403: Forbidden"
+        "서울주거포털 LH 연계 실패: https://housing.seoul.go.kr/site/main/lh/publicLease/list?cnpCdNm=seoul&cp=1:재시도 3회 실패:URLError: <urlopen error timed out>",
+        "서울주거포털 LH 연계 실패: https://housing.seoul.go.kr/site/main/lh/publicSale/list?cnpCdNm=seoul&cp=1:재시도 3회 실패:URLError: <urlopen error timed out>",
+        "LH OpenAPI: 06/1:<urlopen error timed out>; 13/1:<urlopen error timed out>; 39/1:<urlopen error timed out>"
       ],
       "official_count": 8,
       "api_count": 0,
@@ -19,40 +21,48 @@
       "warnings": [],
       "status": "부분수집",
       "diagnostic_errors": [
-        "LH OpenAPI: 06/1:HTTP Error 403: Forbidden; 13/1:HTTP Error 403: Forbidden; 39/1:HTTP Error 403: Forbidden"
+        "서울주거포털 LH 연계 실패: https://housing.seoul.go.kr/site/main/lh/publicLease/list?cnpCdNm=seoul&cp=1:재시도 3회 실패:URLError: <urlopen error timed out>",
+        "서울주거포털 LH 연계 실패: https://housing.seoul.go.kr/site/main/lh/publicSale/list?cnpCdNm=seoul&cp=1:재시도 3회 실패:URLError: <urlopen error timed out>",
+        "LH OpenAPI: 06/1:<urlopen error timed out>; 13/1:<urlopen error timed out>; 39/1:<urlopen error timed out>"
       ],
       "fresh_count": 8,
       "carried_count": 7,
-      "failure_streak": 56
+      "failure_streak": 57
     },
     "SH": {
-      "count": 20,
-      "errors": []
+      "count": 14,
+      "errors": [
+        "https://youth.seoul.go.kr/api/sh/list.do?key=2309250014 :: <urlopen error timed out>"
+      ]
     },
     "SEOUL": {
-      "count": 7,
-      "errors": [],
-      "excluded_noise": 17
+      "count": 0,
+      "errors": [
+        "https://housing.seoul.go.kr/site/main/sh/publicLease/list :: <urlopen error timed out>",
+        "https://housing.seoul.go.kr/ :: <urlopen error timed out>",
+        "https://youth.seoul.go.kr/bbs/list.do?key=2303300002&sc_bbsCtgrySn=2304110001 :: <urlopen error timed out>",
+        "https://youth.seoul.go.kr/infoData/sprtInfo/list.do?key=2309130006 :: <urlopen error timed out>"
+      ],
+      "excluded_noise": 0
     },
     "TOTAL": {
-      "count": 32,
-      "duplicates_removed": 6,
-      "excluded_non_housing": 2,
+      "count": 22,
+      "duplicates_removed": 1,
+      "excluded_non_housing": 1,
       "excluded_outside_seoul": 0,
-      "published_count": 34
+      "published_count": 30
     }
   },
   "summary": {
-    "total": 34,
+    "total": 30,
     "gangseo": 5,
     "new": 0,
     "updated": 0,
-    "open_or_check": 10,
+    "open_or_check": 8,
     "by_housing_type": {
-      "기타임대": 10,
+      "기타임대": 9,
       "장기전세": 2,
-      "매입임대": 9,
-      "기숙사": 1,
+      "매입임대": 7,
       "통합공공임대": 2,
       "공공임대": 4,
       "든든전세": 1,
@@ -64,11 +74,11 @@
     "by_audience": {
       "청년": 5,
       "고령자": 1,
-      "신혼부부": 6,
-      "신생아": 6
+      "신혼부부": 4,
+      "신생아": 4
     },
     "by_agency": {
-      "SH": 20,
+      "SH": 16,
       "LH": 14
     }
   },
@@ -89,7 +99,7 @@
       "deadline": "2026-10-22",
       "open_state": "접수중",
       "event": "신규",
-      "change": "동일",
+      "change": "수집오류-이전값유지",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -148,7 +158,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311613",
         "kind": "official_notice_body",
         "excerpt": "신청기간 : 2026.11.2.( 월 ) ~ 2026.11.4.( 수 )",
-        "verified_at": "2026-10-17T08:36:48"
+        "verified_at": "2026-10-17T13:35:11"
       },
       "sh_schedule_version": 1
     },
@@ -190,7 +200,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311521",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.10.26.(월) ~ 2026.10.30.(금)",
-        "verified_at": "2026-10-17T08:36:52"
+        "verified_at": "2026-10-17T13:35:15"
       },
       "sh_schedule_version": 1
     },
@@ -230,7 +240,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311653",
         "kind": "official_notice_body",
         "excerpt": "접수기간: 2026.10.19(월) ~ 2026.11.19(목)",
-        "verified_at": "2026-10-17T08:36:55"
+        "verified_at": "2026-10-17T13:35:18"
       },
       "sh_schedule_version": 1
     },
@@ -268,7 +278,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311549",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.10.21.(수) ~ 10.28.(수)",
-        "verified_at": "2026-10-17T08:36:57"
+        "verified_at": "2026-10-17T13:35:21"
       },
       "sh_schedule_version": 1
     },
@@ -288,7 +298,7 @@
       "deadline": "2026-11-06",
       "open_state": "접수예정",
       "event": "신규",
-      "change": "동일",
+      "change": "수집오류-이전값유지",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [],
@@ -345,72 +355,6 @@
       "sh_schedule_version": 1
     },
     {
-      "id": "SHYOUTH:1bc36f4d0dee04087287",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "2026년 신정도시마을 잔여세대 입주자모집공고(26. 9. 23.)",
-      "housing_types": [
-        "기타임대"
-      ],
-      "audiences": [],
-      "region": "서울",
-      "published_at": "2026-09-23",
-      "deadline": "",
-      "open_state": "확인필요",
-      "event": "신규",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [],
-      "url": "https://youth.seoul.go.kr/api/sh/list.do?key=2309250014#none",
-      "source": "청년몽땅 SH 공고목록",
-      "content_signature": "2b94b5bc41fabe7ff5572a92273edc372a2fd6289f4597f5d1945cae345f74ba",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "notice_kind": "recruitment",
-      "application_start": "",
-      "schedule_type": "unknown",
-      "deadline_precision": "unknown",
-      "schedule_source": "unknown",
-      "schedule_note": "신청기간은 공식 공고문 확인이 필요합니다.",
-      "application_windows": [],
-      "schedule_evidence": {},
-      "sh_schedule_version": 1
-    },
-    {
-      "id": "SHYOUTH:16da04d0f88309079939",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "2026년 2차 희망하우징(공공기숙사) 입주자 모집공고(2026. 9. 17.)",
-      "housing_types": [
-        "기숙사"
-      ],
-      "audiences": [],
-      "region": "서울",
-      "published_at": "2026-09-17",
-      "deadline": "",
-      "open_state": "확인필요",
-      "event": "신규",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [
-        "기숙사"
-      ],
-      "url": "https://youth.seoul.go.kr/api/sh/list.do?key=2309250014#none",
-      "source": "청년몽땅 SH 공고목록",
-      "content_signature": "ca97b01501044355158cdcdb76c2c11c16dff81bf0f51f90e00eef6308c9bcd6",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "notice_kind": "recruitment",
-      "application_start": "",
-      "schedule_type": "unknown",
-      "deadline_precision": "unknown",
-      "schedule_source": "unknown",
-      "schedule_note": "신청기간은 공식 공고문 확인이 필요합니다.",
-      "application_windows": [],
-      "schedule_evidence": {},
-      "sh_schedule_version": 1
-    },
-    {
       "id": "SH:seq:311200",
       "agency": "SH",
       "agency_group": "SH",
@@ -424,7 +368,7 @@
       "deadline": "",
       "open_state": "확인필요",
       "event": "신규",
-      "change": "동일",
+      "change": "수집오류-이전값유지",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [],
@@ -555,82 +499,6 @@
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "2026-10-14",
       "schedule_source": "official_detail_html"
-    },
-    {
-      "id": "SHYOUTH:23a63706ef0b942659cb",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "2026년 하반기 신혼·신생아 매입임대주택Ⅱ 입주자 모집공고(2026.09.30.)",
-      "housing_types": [
-        "매입임대"
-      ],
-      "audiences": [
-        "신혼부부",
-        "신생아"
-      ],
-      "region": "서울",
-      "published_at": "2026-09-30",
-      "deadline": "2026-10-15",
-      "open_state": "마감",
-      "event": "신규",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [
-        "매입임대",
-        "신혼"
-      ],
-      "url": "https://youth.seoul.go.kr/api/sh/list.do?key=2309250014#none",
-      "source": "청년몽땅 SH 공고목록",
-      "content_signature": "784d01879b30763276303449939fbf5f374be6b4285a57cf32da6d22b1e88972",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "notice_kind": "recruitment",
-      "application_start": "2026-10-13",
-      "schedule_type": "single",
-      "deadline_precision": "date",
-      "schedule_source": "verified_regression",
-      "schedule_note": "공식 공고 검증 일정입니다. 접수시각과 대상은 공고문을 확인하세요.",
-      "application_windows": [],
-      "schedule_evidence": {},
-      "sh_schedule_version": 1
-    },
-    {
-      "id": "SHYOUTH:e14f796069d603741e53",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "2026년 하반기 신혼·신생아 매입임대주택Ⅰ 입주자 모집공고(2026.09.30.)",
-      "housing_types": [
-        "매입임대"
-      ],
-      "audiences": [
-        "신혼부부",
-        "신생아"
-      ],
-      "region": "서울",
-      "published_at": "2026-09-30",
-      "deadline": "2026-10-15",
-      "open_state": "마감",
-      "event": "신규",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [
-        "매입임대",
-        "신혼"
-      ],
-      "url": "https://youth.seoul.go.kr/api/sh/list.do?key=2309250014#none",
-      "source": "청년몽땅 SH 공고목록",
-      "content_signature": "a446939ad2de87844c4ac1cdd392f01326af5963bfe175f9fa29894037fc4793",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "notice_kind": "recruitment",
-      "application_start": "2026-10-13",
-      "schedule_type": "single",
-      "deadline_precision": "date",
-      "schedule_source": "verified_regression",
-      "schedule_note": "공식 공고 검증 일정입니다. 접수시각과 대상은 공고문을 확인하세요.",
-      "application_windows": [],
-      "schedule_evidence": {},
-      "sh_schedule_version": 1
     },
     {
       "id": "LH:panId:2015122300020759",
