@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-17T13:35:21",
+  "generated_at": "2026-10-17T19:50:50",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
@@ -9,7 +9,7 @@
       "errors": [
         "서울주거포털 LH 연계 실패: https://housing.seoul.go.kr/site/main/lh/publicLease/list?cnpCdNm=seoul&cp=1:재시도 3회 실패:URLError: <urlopen error timed out>",
         "서울주거포털 LH 연계 실패: https://housing.seoul.go.kr/site/main/lh/publicSale/list?cnpCdNm=seoul&cp=1:재시도 3회 실패:URLError: <urlopen error timed out>",
-        "LH OpenAPI: 06/1:<urlopen error timed out>; 13/1:<urlopen error timed out>; 39/1:<urlopen error timed out>"
+        "LH OpenAPI: 06/1:HTTP Error 403: Forbidden; 13/1:HTTP Error 403: Forbidden; 39/1:HTTP Error 403: Forbidden"
       ],
       "official_count": 8,
       "api_count": 0,
@@ -23,11 +23,11 @@
       "diagnostic_errors": [
         "서울주거포털 LH 연계 실패: https://housing.seoul.go.kr/site/main/lh/publicLease/list?cnpCdNm=seoul&cp=1:재시도 3회 실패:URLError: <urlopen error timed out>",
         "서울주거포털 LH 연계 실패: https://housing.seoul.go.kr/site/main/lh/publicSale/list?cnpCdNm=seoul&cp=1:재시도 3회 실패:URLError: <urlopen error timed out>",
-        "LH OpenAPI: 06/1:<urlopen error timed out>; 13/1:<urlopen error timed out>; 39/1:<urlopen error timed out>"
+        "LH OpenAPI: 06/1:HTTP Error 403: Forbidden; 13/1:HTTP Error 403: Forbidden; 39/1:HTTP Error 403: Forbidden"
       ],
       "fresh_count": 8,
       "carried_count": 7,
-      "failure_streak": 57
+      "failure_streak": 58
     },
     "SH": {
       "count": 14,
@@ -158,7 +158,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311613",
         "kind": "official_notice_body",
         "excerpt": "신청기간 : 2026.11.2.( 월 ) ~ 2026.11.4.( 수 )",
-        "verified_at": "2026-10-17T13:35:11"
+        "verified_at": "2026-10-17T19:50:41"
       },
       "sh_schedule_version": 1
     },
@@ -200,7 +200,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311521",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.10.26.(월) ~ 2026.10.30.(금)",
-        "verified_at": "2026-10-17T13:35:15"
+        "verified_at": "2026-10-17T19:50:46"
       },
       "sh_schedule_version": 1
     },
@@ -240,7 +240,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311653",
         "kind": "official_notice_body",
         "excerpt": "접수기간: 2026.10.19(월) ~ 2026.11.19(목)",
-        "verified_at": "2026-10-17T13:35:18"
+        "verified_at": "2026-10-17T19:50:48"
       },
       "sh_schedule_version": 1
     },
@@ -278,7 +278,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311549",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.10.21.(수) ~ 10.28.(수)",
-        "verified_at": "2026-10-17T13:35:21"
+        "verified_at": "2026-10-17T19:50:50"
       },
       "sh_schedule_version": 1
     },
