@@ -1,0 +1,1856 @@
+{
+  "cleanup-gaepo3": {
+    "point": [
+      37.4841586,
+      127.0673123
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201211160062",
+    "verified": true
+  },
+  "cleanup-gaepo5": {
+    "point": [
+      37.4876153,
+      127.0684982
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201710270374",
+    "verified": true
+  },
+  "cleanup-wooseong6": {
+    "point": [
+      37.4762895,
+      127.0568457
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ202203280001",
+    "verified": true
+  },
+  "cleanup-kvNK2YB3": {
+    "point": [
+      37.4803785,
+      127.0589843
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201303260090",
+    "verified": true
+  },
+  "cleanup-ssang2": {
+    "point": [
+      37.4994752,
+      127.0704923
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201710270373",
+    "verified": true
+  },
+  "cleanup-the-eunma": {
+    "point": [
+      37.4974141,
+      127.0652782
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11680AGZ202212050001",
+    "verified": true
+  },
+  "cleanup-A768OvYc": {
+    "point": [
+      37.5016341,
+      127.0616501
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201410270198",
+    "verified": true
+  },
+  "cleanup-urban9": {
+    "point": [
+      37.5030852,
+      127.060809
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201410280199",
+    "verified": true
+  },
+  "cleanup-gaepowoosung4": {
+    "point": [
+      37.4853294,
+      127.0493902
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11680AGZ200202200001",
+    "verified": true
+  },
+  "cleanup-dogoksamho": {
+    "point": [
+      37.4933625,
+      127.0453067
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201710250367",
+    "verified": true
+  },
+  "cleanup-samik869": {
+    "point": [
+      37.4908864,
+      127.0420852
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201211150060",
+    "verified": true
+  },
+  "cleanup-dogokwoosung": {
+    "point": [
+      37.4885406,
+      127.0367361
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11680AGZ202306050001",
+    "verified": true
+  },
+  "cleanup-wooseong7": {
+    "point": [
+      37.4922858,
+      127.0782896
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11680AGZ202112290001",
+    "verified": true
+  },
+  "cleanup-cheongdam": {
+    "point": [
+      37.521936,
+      127.0592032
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ202301100001",
+    "verified": true
+  },
+  "cleanup-in814VyA": {
+    "point": [
+      37.5579283,
+      127.1635757
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201303220088",
+    "verified": true
+  },
+  "cleanup-jM4s43od": {
+    "point": [
+      37.5593291,
+      127.1489865
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201704140344",
+    "verified": true
+  },
+  "cleanup-rPjHkSQA": {
+    "point": [
+      37.5341218,
+      127.1465372
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ200412274439",
+    "verified": true
+  },
+  "cleanup-goduk4apt": {
+    "point": [
+      37.5510654,
+      127.1630727
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201109059973",
+    "verified": true
+  },
+  "cleanup-jQ9IH7J2": {
+    "point": [
+      37.5493201,
+      127.1678144
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201001269850",
+    "verified": true
+  },
+  "cleanup-u1OG3XV9": {
+    "point": [
+      37.5267317,
+      127.1282126
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201701030325",
+    "verified": true
+  },
+  "cleanup-chunho1": {
+    "point": [
+      37.5413037,
+      127.1279525
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201909050094",
+    "verified": true
+  },
+  "cleanup-llllll": {
+    "point": [
+      37.6197965,
+      127.0329606
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ202206020001",
+    "verified": true
+  },
+  "cleanup-mia101": {
+    "point": [
+      37.6127552,
+      127.0258569
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201010267902",
+    "verified": true
+  },
+  "cleanup-rchEsG60": {
+    "point": [
+      37.6123536,
+      127.0233138
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ202010200004",
+    "verified": true
+  },
+  "cleanup-bun44346": {
+    "point": [
+      37.6354111,
+      127.0274202
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11305AGZ202407290001",
+    "verified": true
+  },
+  "cleanup-bun45461": {
+    "point": [
+      37.6365027,
+      127.0349692
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11305AGZ202405290001",
+    "verified": true
+  },
+  "cleanup-banghwa5recons": {
+    "point": [
+      37.5648689,
+      126.8138056
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11500AGZ202109010002",
+    "verified": true
+  },
+  "cleanup-b938y0z8": {
+    "point": [
+      37.5489288,
+      126.8599002
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201711160394",
+    "verified": true
+  },
+  "cleanup-F9613aZn": {
+    "point": [
+      37.5641717,
+      126.817932
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11500AGZ202301200003",
+    "verified": true
+  },
+  "cleanup-banghwa3": {
+    "point": [
+      37.5656393,
+      126.8091562
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ202310130001",
+    "verified": true
+  },
+  "cleanup-banghwa6": {
+    "point": [
+      37.565231,
+      126.815685
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201806200498",
+    "verified": true
+  },
+  "cleanup-x78I9xGE": {
+    "point": [
+      37.4816673,
+      126.9448311
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ200912297814",
+    "verified": true
+  },
+  "cleanup-sinlim3": {
+    "point": [
+      37.4606569,
+      126.9326572
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201903180086",
+    "verified": true
+  },
+  "cleanup-silim2": {
+    "point": [
+      37.4637068,
+      126.9302438
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ200901087672",
+    "verified": true
+  },
+  "cleanup-srseven": {
+    "point": [
+      37.4626855,
+      126.916107
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11620AGZ202407040001",
+    "verified": true
+  },
+  "cleanup-jayang1": {
+    "point": [
+      37.537541,
+      127.0629984
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11215AGZ202307180001",
+    "verified": true
+  },
+  "cleanup-jayang7": {
+    "point": [
+      37.5318138,
+      127.0733291
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201810300016",
+    "verified": true
+  },
+  "cleanup-shinhyang": {
+    "point": [
+      37.5660668,
+      127.0874937
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11215AGZ202205030001",
+    "verified": true
+  },
+  "cleanup-sanupin": {
+    "point": [
+      37.5044498,
+      126.8667922
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201705170350",
+    "verified": true
+  },
+  "cleanup-kochuck4": {
+    "point": [
+      37.5034484,
+      126.8586749
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201406248369",
+    "verified": true
+  },
+  "cleanup-bogwang": {
+    "point": [
+      37.4954893,
+      126.8862139
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201606140291",
+    "verified": true
+  },
+  "cleanup-q0l9uko6": {
+    "point": [
+      37.490322,
+      126.823405
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201412020219",
+    "verified": true
+  },
+  "cleanup-mggapt": {
+    "point": [
+      37.4560523,
+      126.8983344
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201703300340",
+    "verified": true
+  },
+  "cleanup-hyundail220": {
+    "point": [
+      37.4535474,
+      126.9142436
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ202001280002",
+    "verified": true
+  },
+  "cleanup-sanggye6": {
+    "point": [
+      37.671266,
+      127.0817301
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ200209234042",
+    "verified": true
+  },
+  "cleanup-R60TOrwV": {
+    "point": [
+      37.6406029,
+      127.0528729
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201211148211",
+    "verified": true
+  },
+  "cleanup-dobong62580": {
+    "point": [
+      37.6752683,
+      127.0457739
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11320AGZ202410040001",
+    "verified": true
+  },
+  "cleanup-W0zS4n6n": {
+    "point": [
+      37.6483042,
+      127.0230987
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ200812307663",
+    "verified": true
+  },
+  "cleanup-Tkdans": {
+    "point": [
+      37.646124,
+      127.0264753
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11320AGZ202305230001",
+    "verified": true
+  },
+  "cleanup-eotls21": {
+    "point": [
+      37.6373082,
+      127.0419674
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11320AGZ202504280001",
+    "verified": true
+  },
+  "cleanup-seoulhousing": {
+    "point": [
+      37.5666424,
+      127.0605756
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201409298394",
+    "verified": true
+  },
+  "cleanup-dapsimni14": {
+    "point": [
+      37.5677339,
+      127.0595042
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201101277915",
+    "verified": true
+  },
+  "cleanup-s3sxO3bw": {
+    "point": [
+      37.5754981,
+      127.0362329
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201108048006",
+    "verified": true
+  },
+  "cleanup-jangan-hyundaiapt1": {
+    "point": [
+      37.581158,
+      127.0691852
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201711030378",
+    "verified": true
+  },
+  "cleanup-jnong11": {
+    "point": [
+      37.5765056,
+      127.0494393
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201808060051",
+    "verified": true
+  },
+  "cleanup-Wd7A6HX5": {
+    "point": [
+      37.5758693,
+      127.0463026
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ200907167746",
+    "verified": true
+  },
+  "cleanup-Jm4L110Z": {
+    "point": [
+      37.5842282,
+      127.0420696
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201808060157",
+    "verified": true
+  },
+  "cleanup-dH49599v": {
+    "point": [
+      37.588754,
+      127.041321
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ200811267597",
+    "verified": true
+  },
+  "cleanup-Lt58S9vM": {
+    "point": [
+      37.5900904,
+      127.0537675
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201108098012",
+    "verified": true
+  },
+  "cleanup-gnlrud5": {
+    "point": [
+      37.5852446,
+      127.0666213
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11230AGZ202304040001",
+    "verified": true
+  },
+  "cleanup-noryangjin4": {
+    "point": [
+      37.508002,
+      126.9420889
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ202408070002",
+    "verified": true
+  },
+  "cleanup-noryangjin5": {
+    "point": [
+      37.5106961,
+      126.9354183
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ202305240002",
+    "verified": true
+  },
+  "cleanup-noryang2": {
+    "point": [
+      37.5069718,
+      126.939118
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ202504030002",
+    "verified": true
+  },
+  "cleanup-noryangin1": {
+    "point": [
+      37.510124,
+      126.9379989
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ202301300002",
+    "verified": true
+  },
+  "cleanup-sadang3": {
+    "point": [
+      37.4927707,
+      126.980261
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11590AGZ202303290001",
+    "verified": true
+  },
+  "cleanup-N1Kpva7A": {
+    "point": [
+      37.4884503,
+      126.9732757
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201105179950",
+    "verified": true
+  },
+  "cleanup-oOJD6Ubw": {
+    "point": [
+      37.5045259,
+      126.9597221
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201306258259",
+    "verified": true
+  },
+  "cleanup-CjN70HC9": {
+    "point": [
+      37.5525194,
+      126.9032377
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201207160028",
+    "verified": true
+  },
+  "cleanup-seongsansy": {
+    "point": [
+      37.5697101,
+      126.9022352
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11440AGZ202312190001",
+    "verified": true
+  },
+  "cleanup-WMrak31u": {
+    "point": [
+      37.5535596,
+      126.9530918
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201112058077",
+    "verified": true
+  },
+  "cleanup-Lcu8f9Vh": {
+    "point": [
+      37.5532817,
+      126.9479546
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201708238635",
+    "verified": true
+  },
+  "cleanup-bukgajua6": {
+    "point": [
+      37.5772077,
+      126.9060773
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201406180174",
+    "verified": true
+  },
+  "cleanup-buk7880": {
+    "point": [
+      37.55861,
+      126.9531704
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ200812127658",
+    "verified": true
+  },
+  "cleanup-zLe95R3j": {
+    "point": [
+      37.5605546,
+      126.9531455
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201308298290",
+    "verified": true
+  },
+  "cleanup-hongeun1": {
+    "point": [
+      37.5924845,
+      126.9428951
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11410AGZ202310300002",
+    "verified": true
+  },
+  "cleanup-c91hJVJ6": {
+    "point": [
+      37.5945383,
+      126.9400324
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11410AGZ202303150001",
+    "verified": true
+  },
+  "cleanup-i4XX3BfD": {
+    "point": [
+      37.5934219,
+      126.94172
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ200901027666",
+    "verified": true
+  },
+  "cleanup-h18apt": {
+    "point": [
+      37.5847155,
+      126.949835
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11410AGZ202109300001",
+    "verified": true
+  },
+  "cleanup-LkC1S7nf": {
+    "point": [
+      37.5904814,
+      126.9416511
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201412229160",
+    "verified": true
+  },
+  "cleanup-shinbanpo3": {
+    "point": [
+      37.5068642,
+      126.9981186
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201903080921",
+    "verified": true
+  },
+  "cleanup-banpohyundai": {
+    "point": [
+      37.5032873,
+      127.0161936
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201711300458",
+    "verified": true
+  },
+  "cleanup-banpomido1": {
+    "point": [
+      37.5013285,
+      127.0087789
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11650AGZ202406250001",
+    "verified": true
+  },
+  "cleanup-banpojk": {
+    "point": [
+      37.5037051,
+      126.9871493
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201711300456",
+    "verified": true
+  },
+  "cleanup-cleanup43-9": {
+    "point": [
+      37.4804486,
+      126.986261
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ202303060001",
+    "verified": true
+  },
+  "cleanup-bangbaesinsamho": {
+    "point": [
+      37.4971525,
+      126.9897455
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ202408210001",
+    "verified": true
+  },
+  "cleanup-bangbae3": {
+    "point": [
+      37.4797453,
+      127.0025124
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201812060940",
+    "verified": true
+  },
+  "cleanup-edqat05F": {
+    "point": [
+      37.4974274,
+      127.0223616
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11650AGZ202408270002",
+    "verified": true
+  },
+  "cleanup-shinbanpo13": {
+    "point": [
+      37.5171082,
+      127.0137301
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201711300455",
+    "verified": true
+  },
+  "cleanup-W8N045i7": {
+    "point": [
+      37.5144783,
+      127.0070182
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201812110947",
+    "verified": true
+  },
+  "cleanup-kumho13": {
+    "point": [
+      37.5552809,
+      127.0185456
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201612058598",
+    "verified": true
+  },
+  "cleanup-bxP5EfNQ": {
+    "point": [
+      37.5514314,
+      127.0183155
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ200812017639",
+    "verified": true
+  },
+  "cleanup-kbret02": {
+    "point": [
+      37.542968,
+      127.0459937
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201612050316",
+    "verified": true
+  },
+  "cleanup-hDI0jH9w": {
+    "point": [
+      37.5478291,
+      127.013217
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201704198609",
+    "verified": true
+  },
+  "cleanup-janganpyeong": {
+    "point": [
+      37.559833,
+      127.0662278
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201809170026",
+    "verified": true
+  },
+  "cleanup-donam5": {
+    "point": [
+      37.6005459,
+      127.0228571
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ200901207681",
+    "verified": true
+  },
+  "cleanup-FyZug0mX": {
+    "point": [
+      37.5991375,
+      127.0127956
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201603258556",
+    "verified": true
+  },
+  "cleanup-bomun2": {
+    "point": [
+      37.586707,
+      127.0197868
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201512168543",
+    "verified": true
+  },
+  "cleanup-K9P2ZhIS": {
+    "point": [
+      37.5850067,
+      127.0203392
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201809130116",
+    "verified": true
+  },
+  "cleanup-K83R314G": {
+    "point": [
+      37.5830772,
+      127.0162082
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ200811257594",
+    "verified": true
+  },
+  "cleanup-bomun3": {
+    "point": [
+      37.5799626,
+      127.0184817
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201205078140",
+    "verified": true
+  },
+  "cleanup-seokgwan1-2": {
+    "point": [
+      37.6081002,
+      127.0579331
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11290AGZ202406260001",
+    "verified": true
+  },
+  "cleanup-nDinXQkG": {
+    "point": [
+      37.6075249,
+      127.0536223
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ200811257593",
+    "verified": true
+  },
+  "cleanup-mv8c1LWO": {
+    "point": [
+      37.6016995,
+      127.011276
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201512168520",
+    "verified": true
+  },
+  "cleanup-VKEmLr86": {
+    "point": [
+      37.6144836,
+      127.0016984
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201209058189",
+    "verified": true
+  },
+  "cleanup-dfvX7I3G": {
+    "point": [
+      37.6018054,
+      127.0347826
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ200810297534",
+    "verified": true
+  },
+  "cleanup-woosung01": {
+    "point": [
+      37.4966264,
+      127.1178086
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11710AGZ202312200001",
+    "verified": true
+  },
+  "cleanup-samhwan": {
+    "point": [
+      37.4953582,
+      127.1367779
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201807120619",
+    "verified": true
+  },
+  "cleanup-garakgd": {
+    "point": [
+      37.4956971,
+      127.1326758
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201807120617",
+    "verified": true
+  },
+  "cleanup-hCmUm22k": {
+    "point": [
+      37.4976825,
+      127.1069288
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201901280920",
+    "verified": true
+  },
+  "cleanup-geoyeo2": {
+    "point": [
+      37.4938458,
+      127.1501907
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ200902168727",
+    "verified": true
+  },
+  "cleanup-geoyeosae": {
+    "point": [
+      37.4916447,
+      127.1488077
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ202304250003",
+    "verified": true
+  },
+  "cleanup-macheon-1": {
+    "point": [
+      37.5008164,
+      127.1535604
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ197312013062",
+    "verified": true
+  },
+  "cleanup-machun5": {
+    "point": [
+      37.4991147,
+      127.1493526
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11710AGZ202408070001",
+    "verified": true
+  },
+  "cleanup-daelim": {
+    "point": [
+      37.5075449,
+      127.1241814
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11710AGZ202108270001",
+    "verified": true
+  },
+  "cleanup-hanyang3": {
+    "point": [
+      37.5061309,
+      127.1226347
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201909110252",
+    "verified": true
+  },
+  "cleanup-J5qnq21Z": {
+    "point": [
+      37.5026293,
+      127.1199887
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ200512219700",
+    "verified": true
+  },
+  "cleanup-jjapt16": {
+    "point": [
+      37.5183664,
+      127.1106883
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11710AGZ202107260001",
+    "verified": true
+  },
+  "cleanup-ogeumhyundai": {
+    "point": [
+      37.5059619,
+      127.1263987
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11710AGZ202404160001",
+    "verified": true
+  },
+  "cleanup-woochang": {
+    "point": [
+      37.4992301,
+      127.1369081
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11710AGZ202508070001",
+    "verified": true
+  },
+  "cleanup-Q1qk5nF6": {
+    "point": [
+      37.5064785,
+      127.0733289
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201607250294",
+    "verified": true
+  },
+  "cleanup-mokdong6danji": {
+    "point": [
+      37.5345583,
+      126.8848317
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ202408260001",
+    "verified": true
+  },
+  "cleanup-shinwol1": {
+    "point": [
+      37.5329821,
+      126.8268247
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ200911247804",
+    "verified": true
+  },
+  "cleanup-XT7rO2w9": {
+    "point": [
+      37.5229456,
+      126.8439035
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201612160320",
+    "verified": true
+  },
+  "cleanup-sinwol7-2": {
+    "point": [
+      37.5214826,
+      126.8319175
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11470AGZ202403070002",
+    "verified": true
+  },
+  "cleanup-mokdong13": {
+    "point": [
+      37.5145205,
+      126.8660039
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11470AGZ202501220002",
+    "verified": true
+  },
+  "cleanup-rgw5lT43": {
+    "point": [
+      37.5202617,
+      126.8563534
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201106137966",
+    "verified": true
+  },
+  "cleanup-Shinjeong1152": {
+    "point": [
+      37.5161282,
+      126.8503759
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11470AGZ202309070001",
+    "verified": true
+  },
+  "cleanup-youwon1": {
+    "point": [
+      37.5298771,
+      126.8961091
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201410170194",
+    "verified": true
+  },
+  "cleanup-Zmvb0Xkt": {
+    "point": [
+      37.5101245,
+      126.9004937
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201411068408",
+    "verified": true
+  },
+  "cleanup-samsungapart": {
+    "point": [
+      37.4963506,
+      126.9111396
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201511300261",
+    "verified": true
+  },
+  "cleanup-YPshindongaapt": {
+    "point": [
+      37.5221437,
+      126.886521
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201107139967",
+    "verified": true
+  },
+  "cleanup-yangpyung14": {
+    "point": [
+      37.5238713,
+      126.885065
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201311259092",
+    "verified": true
+  },
+  "cleanup-gongjak": {
+    "point": [
+      37.5265055,
+      126.9298124
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11560AGZ202210050001",
+    "verified": true
+  },
+  "cleanup-ysbapt": {
+    "point": [
+      37.5207045,
+      126.9371328
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11560AGZ202411080002",
+    "verified": true
+  },
+  "cleanup-dongja4": {
+    "point": [
+      37.5513266,
+      126.973342
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201311229089",
+    "verified": true
+  },
+  "cleanup-iw14v164": {
+    "point": [
+      37.5311894,
+      126.9975745
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ202107080003",
+    "verified": true
+  },
+  "cleanup-han158": {
+    "point": [
+      37.5338806,
+      126.9746547
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201201169008",
+    "verified": true
+  },
+  "cleanup-sinyongsan2": {
+    "point": [
+      37.5311244,
+      126.9683529
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201808100124",
+    "verified": true
+  },
+  "cleanup-nokbun2": {
+    "point": [
+      37.6041497,
+      126.936252
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201904020031",
+    "verified": true
+  },
+  "cleanup-nokbun1": {
+    "point": [
+      37.6017433,
+      126.9367563
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201901080074",
+    "verified": true
+  },
+  "cleanup-O95iGDl8": {
+    "point": [
+      37.6186952,
+      126.9348585
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ200808057491",
+    "verified": true
+  },
+  "cleanup-bulgwang1": {
+    "point": [
+      37.6205325,
+      126.9325985
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11380AGZ202405280001",
+    "verified": true
+  },
+  "cleanup-dokbawee": {
+    "point": [
+      37.6183481,
+      126.9319943
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11380AGZ202308080001",
+    "verified": true
+  },
+  "cleanup-bulgwang": {
+    "point": [
+      37.6111908,
+      126.9322041
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ202411130001",
+    "verified": true
+  },
+  "cleanup-ppphc1948": {
+    "point": [
+      37.5986315,
+      126.9264761
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201608178588",
+    "verified": true
+  },
+  "cleanup-e3092760": {
+    "point": [
+      37.5922229,
+      126.9220015
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ200911029842",
+    "verified": true
+  },
+  "cleanup-eungam9": {
+    "point": [
+      37.5880763,
+      126.9241435
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201201208094",
+    "verified": true
+  },
+  "cleanup-Mm8IZX24": {
+    "point": [
+      37.5701614,
+      126.9646409
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ202212210002",
+    "verified": true
+  },
+  "cleanup-sy1apt": {
+    "point": [
+      37.5996522,
+      126.9621306
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201710198656",
+    "verified": true
+  },
+  "cleanup-changsin": {
+    "point": [
+      37.577628,
+      127.0134576
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11110AGZ202409300002",
+    "verified": true
+  },
+  "cleanup-mrdapt2": {
+    "point": [
+      37.5541861,
+      126.9634235
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201109288040",
+    "verified": true
+  },
+  "cleanup-sindang8": {
+    "point": [
+      37.558153,
+      127.0154776
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11140AGZ202302130001",
+    "verified": true
+  },
+  "cleanup-joongnim398": {
+    "point": [
+      37.5583428,
+      126.9632365
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11140AGZ202302230001",
+    "verified": true
+  },
+  "cleanup-paX41R06": {
+    "point": [
+      37.6020709,
+      127.1067265
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11260AGZ202501160001",
+    "verified": true
+  },
+  "cleanup-sangbong13": {
+    "point": [
+      37.5952999,
+      127.0956599
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11260AGZ202502070001",
+    "verified": true
+  },
+  "cleanup-Wo7MD7NG": {
+    "point": [
+      37.5795918,
+      127.0937868
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201909270092",
+    "verified": true
+  },
+  "cleanup-myeonmok9": {
+    "point": [
+      37.5783728,
+      127.0928216
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11260AGZ202601140001",
+    "verified": true
+  },
+  "cleanup-mook1dong": {
+    "point": [
+      37.6162044,
+      127.082579
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ201707180356",
+    "verified": true
+  },
+  "cleanup-sangbong10": {
+    "point": [
+      37.5995278,
+      127.0941835
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11260AGZ202305100001",
+    "verified": true
+  },
+  "cleanup-junhwa5": {
+    "point": [
+      37.600294,
+      127.0838783
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/map/mapPopup.html?recordCode=11000AGZ202312120001",
+    "verified": true
+  },
+  "moa-urban-8812": {
+    "point": [
+      37.4557211,
+      126.9071394
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8812",
+    "verified": true
+  },
+  "moa-urban-8791": {
+    "point": [
+      37.533836,
+      126.8403842
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8791",
+    "verified": true
+  },
+  "moa-urban-8828": {
+    "point": [
+      37.5549155,
+      126.8995315
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8828",
+    "verified": true
+  },
+  "moa-urban-8858": {
+    "point": [
+      37.5326279,
+      126.826862
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8858",
+    "verified": true
+  },
+  "moa-urban-8811": {
+    "point": [
+      37.4405273,
+      126.9055452
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8811",
+    "verified": true
+  },
+  "moa-urban-8876": {
+    "point": [
+      37.5907977,
+      127.0912201
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8876",
+    "verified": true
+  },
+  "moa-urban-8849": {
+    "point": [
+      37.6101645,
+      127.0128208
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8849",
+    "verified": true
+  },
+  "moa-urban-8881": {
+    "point": [
+      37.5995607,
+      127.0751589
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8881",
+    "verified": true
+  },
+  "moa-urban-4873558": {
+    "point": [
+      37.530681,
+      127.0842239
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=4873558",
+    "verified": true
+  },
+  "moa-urban-8778": {
+    "point": [
+      37.638594,
+      127.0335721
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8778",
+    "verified": true
+  },
+  "moa-urban-4901774": {
+    "point": [
+      37.5357248,
+      127.0908427
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=4901774",
+    "verified": true
+  },
+  "moa-urban-8810": {
+    "point": [
+      37.4434526,
+      126.9059964
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8810",
+    "verified": true
+  },
+  "moa-urban-4901096": {
+    "point": [
+      37.5328139,
+      127.0823138
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=4901096",
+    "verified": true
+  },
+  "moa-urban-4758608": {
+    "point": [
+      37.5388186,
+      127.076738
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=4758608",
+    "verified": true
+  },
+  "moa-urban-8800": {
+    "point": [
+      37.5355561,
+      127.0782284
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8800",
+    "verified": true
+  },
+  "moa-urban-8803": {
+    "point": [
+      37.5384268,
+      127.0802352
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8803",
+    "verified": true
+  },
+  "moa-urban-8801": {
+    "point": [
+      37.5299282,
+      127.0807822
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8801",
+    "verified": true
+  },
+  "moa-urban-4900091": {
+    "point": [
+      37.5419795,
+      127.0911325
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=4900091",
+    "verified": true
+  },
+  "moa-urban-4901028": {
+    "point": [
+      37.5310417,
+      127.0771152
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=4901028",
+    "verified": true
+  },
+  "moa-urban-4900482": {
+    "point": [
+      37.5482802,
+      127.1035187
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=4900482",
+    "verified": true
+  },
+  "moa-urban-8822": {
+    "point": [
+      37.5682821,
+      127.05376
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8822",
+    "verified": true
+  },
+  "moa-urban-8782": {
+    "point": [
+      37.6384498,
+      127.0186142
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8782",
+    "verified": true
+  },
+  "moa-urban-8824": {
+    "point": [
+      37.4884932,
+      126.9649993
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8824",
+    "verified": true
+  },
+  "moa-urban-8878": {
+    "point": [
+      37.6079326,
+      127.0749124
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8878",
+    "verified": true
+  },
+  "moa-urban-8875": {
+    "point": [
+      37.5852792,
+      127.0918674
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8875",
+    "verified": true
+  },
+  "moa-urban-8877": {
+    "point": [
+      37.5871489,
+      127.0905123
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8877",
+    "verified": true
+  },
+  "moa-urban-8873": {
+    "point": [
+      37.5852702,
+      127.082026
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8873",
+    "verified": true
+  },
+  "moa-urban-8874": {
+    "point": [
+      37.5825539,
+      127.0919636
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8874",
+    "verified": true
+  },
+  "moa-urban-8871": {
+    "point": [
+      37.5887638,
+      127.0953058
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8871",
+    "verified": true
+  },
+  "moa-urban-8870": {
+    "point": [
+      37.6022588,
+      127.1023081
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8870",
+    "verified": true
+  },
+  "moa-urban-8869": {
+    "point": [
+      37.5924743,
+      127.0947668
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8869",
+    "verified": true
+  },
+  "moa-urban-8868": {
+    "point": [
+      37.5894248,
+      127.1005385
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8868",
+    "verified": true
+  },
+  "moa-urban-8857": {
+    "point": [
+      37.5341351,
+      126.8325744
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8857",
+    "verified": true
+  },
+  "moa-urban-8854": {
+    "point": [
+      37.5409493,
+      126.8715241
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8854",
+    "verified": true
+  },
+  "moa-urban-8799": {
+    "point": [
+      37.4803682,
+      126.9405281
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8799",
+    "verified": true
+  },
+  "moa-urban-8798": {
+    "point": [
+      37.4883478,
+      126.9418866
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8798",
+    "verified": true
+  },
+  "moa-urban-8797": {
+    "point": [
+      37.4889865,
+      126.9400189
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8797",
+    "verified": true
+  },
+  "moa-urban-8796": {
+    "point": [
+      37.4677365,
+      126.9211899
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8796",
+    "verified": true
+  },
+  "moa-urban-8795": {
+    "point": [
+      37.4880649,
+      126.9537739
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8795",
+    "verified": true
+  },
+  "moa-urban-8794": {
+    "point": [
+      37.4656133,
+      126.9187333
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8794",
+    "verified": true
+  },
+  "moa-urban-8856": {
+    "point": [
+      37.545672,
+      126.8637032
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8856",
+    "verified": true
+  },
+  "moa-urban-8855": {
+    "point": [
+      37.5368318,
+      126.8649196
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8855",
+    "verified": true
+  },
+  "moa-urban-8863": {
+    "point": [
+      37.6131084,
+      126.9223557
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8863",
+    "verified": true
+  },
+  "moa-urban-8834": {
+    "point": [
+      37.602318,
+      126.9485313
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8834",
+    "verified": true
+  },
+  "moa-urban-8832": {
+    "point": [
+      37.5690899,
+      126.9603019
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8832",
+    "verified": true
+  },
+  "moa-urban-8775": {
+    "point": [
+      37.5432459,
+      127.1214561
+    ],
+    "basis": "verified_official_boundary_centroid",
+    "source": "https://urban.seoul.go.kr/view/html/PMNU1100000001?seq=8775",
+    "verified": true
+  }
+}

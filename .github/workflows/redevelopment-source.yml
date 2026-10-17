@@ -1,0 +1,37 @@
+name: Refresh isolated redevelopment map feed
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/redevelopment-source.yml']
+  workflow_dispatch:
+  schedule:
+    - cron: '17 19 * * *' # 04:17 Asia/Seoul
+permissions:
+  contents: write
+concurrency:
+  group: redevelopment-isolated-source-v1
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 100
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 1
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+      - name: Validate collector and durable-budget tests without network
+        run: python -m unittest discover -s automation/redevelopment -p 'test_*.py'
+      - name: Collect strictly and update only isolated state and map feed
+        env:
+          MOLIT_API_KEY: ${{ secrets.MOLIT_API_KEY }}
+          KAKAO_REST_KEY: ${{ secrets.KAKAO_REST_KEY }}
+        run: >-
+          python automation/redevelopment/isolated_refresh.py
+          --repo "$GITHUB_WORKSPACE"
+          --temp "$RUNNER_TEMP/redevelopment"
+          --address-limit 598
+      # Raw source and response bodies stay in runner temp. No upload-artifact step.
