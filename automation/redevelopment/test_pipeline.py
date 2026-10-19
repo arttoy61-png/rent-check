@@ -1,6 +1,7 @@
-import copy,gzip,json,tempfile,unittest
+import copy,gzip,json,os,tempfile,unittest
 from pathlib import Path
 from datetime import datetime,date,timezone,timedelta
+from unittest.mock import patch
 from pipeline import *
 
 NOW=datetime(2026,10,16,16,0,tzinfo=timezone.utc)
@@ -19,6 +20,11 @@ def fixtures(cancelled=False):
 
 class PipelineTests(unittest.TestCase):
     def setUp(self):
+        # Fixtures are local replays, even when their parent CI was scheduled.
+        # Restore the runner environment after each test; do not alter production
+        # status_record or suppress the real scheduled_run flag.
+        execution_env=patch.dict(os.environ,{'GITHUB_ACTIONS':'false','GITHUB_EVENT_NAME':''})
+        execution_env.start();self.addCleanup(execution_env.stop)
         self.tmp=tempfile.TemporaryDirectory();self.root=Path(self.tmp.name)
         self.feed=self.root/'feed';self.map=self.root/'map';self.source_state=self.root/'source-state';self.map_state=self.root/'map-state'
         self.parts=fixtures();self.cache=self.root/'cache.json';self.projects=self.root/'projects.json'
@@ -32,6 +38,20 @@ class PipelineTests(unittest.TestCase):
         self.good();status=read_json(self.map/STATUS_FILE);snapshot=read_json(self.map/MAP_FILE)
         self.assertEqual(snapshot['meta']['complete_districts'],25);self.assertEqual(snapshot['meta']['raw_rows'],1)
         self.assertFalse(status['scheduled_run']);self.assertFalse(status['scheduler_registered_locally']);self.assertEqual(status['network_requests'],0)
+    def test_round_trip_records_execution_context_without_registering_scheduler(self):
+        cases=[('false','schedule','local',False),('true','schedule','github_actions',True),('true','workflow_dispatch','github_actions',False),('true','push','github_actions',False),('true','pull_request','github_actions',False)]
+        for actions,event,environment,scheduled in cases:
+            with self.subTest(actions=actions,event=event):
+                with patch.dict(os.environ,{'GITHUB_ACTIONS':actions,'GITHUB_EVENT_NAME':event}):
+                    self.good()
+                    for path in [self.feed/'status.json',self.map/STATUS_FILE]:
+                        status=read_json(path)
+                        self.assertEqual(status['execution_environment'],environment)
+                        self.assertEqual(status['scheduled_run'],scheduled)
+                        self.assertFalse(status['scheduler_registered_locally'])
+                        self.assertEqual(status['network_requests'],0)
+                self.assertEqual(os.environ['GITHUB_ACTIONS'],'false')
+                self.assertEqual(os.environ['GITHUB_EVENT_NAME'],'')
     def test_rolling_month_year_boundary(self):self.assertEqual(rolling_months(date(2027,1,5)),['202611','202612','202701'])
     def test_future_cutoff_rejected(self):
         with self.assertRaisesRegex(GateError,'future_collection_cutoff'):validate_partitions(self.parts,['202610'],date(2026,10,18),NOW)
