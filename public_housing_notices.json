@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-20T09:20:57",
+  "generated_at": "2026-10-20T17:32:00",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
@@ -23,10 +23,10 @@
       ],
       "fresh_count": 7,
       "carried_count": 7,
-      "failure_streak": 70
+      "failure_streak": 71
     },
     "SH": {
-      "count": 21,
+      "count": 20,
       "errors": []
     },
     "SEOUL": {
@@ -39,36 +39,36 @@
       "duplicates_removed": 5,
       "excluded_non_housing": 3,
       "excluded_outside_seoul": 0,
-      "published_count": 34
+      "published_count": 33
     }
   },
   "summary": {
-    "total": 34,
+    "total": 33,
     "gangseo": 3,
-    "new": 0,
-    "updated": 0,
-    "open_or_check": 10,
+    "new": 4,
+    "updated": 1,
+    "open_or_check": 11,
     "by_housing_type": {
-      "기타임대": 10,
-      "장기전세": 1,
+      "기타임대": 9,
+      "매입임대": 10,
+      "장기전세": 2,
       "기숙사": 1,
       "통합공공임대": 2,
       "공공임대": 4,
-      "매입임대": 9,
       "든든전세": 1,
       "행복주택": 5,
-      "국민임대": 3,
+      "국민임대": 1,
       "영구임대": 1,
       "안심주택": 1
     },
     "by_audience": {
-      "청년": 4,
+      "청년": 5,
       "고령자": 1,
-      "신혼부부": 7,
-      "신생아": 7
+      "신혼부부": 6,
+      "신생아": 6
     },
     "by_agency": {
-      "SH": 20,
+      "SH": 19,
       "LH": 14
     }
   },
@@ -110,7 +110,47 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311087",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.10.08.(목) ~2026.10.22.(목) 15시까지",
-        "verified_at": "2026-10-20T09:20:57"
+        "verified_at": "2026-10-20T17:32:00"
+      },
+      "sh_schedule_version": 1
+    },
+    {
+      "id": "SH:seq:311849",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "NEW 2026년 빈집활용 건설약정방식 매입임대주택 본 공고",
+      "housing_types": [
+        "매입임대"
+      ],
+      "audiences": [],
+      "region": "서울",
+      "published_at": "2026-10-20",
+      "deadline": "2026-12-04",
+      "open_state": "접수예정",
+      "event": "신규",
+      "change": "신규",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [
+        "매입임대"
+      ],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311849",
+      "source": "SH 공식 주택임대 게시판",
+      "content_signature": "b331af07b3c334d26cc1427a95f803b140885b8a9836fd4b5246a73688fe253f",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "published_source": "official_list_registration",
+      "notice_kind": "recruitment",
+      "application_start": "2026-11-30",
+      "schedule_type": "single",
+      "deadline_precision": "date",
+      "schedule_source": "official_detail_html",
+      "schedule_note": "공식 상세본문 신청기간 기준입니다. 정확한 접수시각과 대상은 공고문을 확인하세요.",
+      "application_windows": [],
+      "schedule_evidence": {
+        "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311849",
+        "kind": "official_notice_body",
+        "excerpt": "접수기간 : 2026.11.30.(월) ~ 2026.12.04.(금)",
+        "verified_at": "2026-10-20T17:31:42"
       },
       "sh_schedule_version": 1
     },
@@ -148,49 +188,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311613",
         "kind": "official_notice_body",
         "excerpt": "신청기간 : 2026.11.2.( 월 ) ~ 2026.11.4.( 수 )",
-        "verified_at": "2026-10-20T09:20:45"
-      },
-      "sh_schedule_version": 1
-    },
-    {
-      "id": "SH:seq:311521",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "서초구 청년예술인주택 서리풀 청년아트타운(수요자맞춤형) 잔여세대 모집 공고",
-      "housing_types": [
-        "기타임대"
-      ],
-      "audiences": [
-        "청년"
-      ],
-      "region": "서울",
-      "published_at": "2026-10-16",
-      "deadline": "2026-10-30",
-      "open_state": "접수예정",
-      "event": "신규",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [
-        "청년"
-      ],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311521",
-      "source": "SH 공식 주택임대 게시판",
-      "content_signature": "f5be470b672938ed017ead7dc3c849429b61d5d28337bcf1210c1e4afb2729aa",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "published_source": "official_list_registration",
-      "notice_kind": "recruitment",
-      "application_start": "2026-10-26",
-      "schedule_type": "single",
-      "deadline_precision": "date",
-      "schedule_source": "official_detail_html",
-      "schedule_note": "공식 상세본문 신청기간 기준입니다. 정확한 접수시각과 대상은 공고문을 확인하세요.",
-      "application_windows": [],
-      "schedule_evidence": {
-        "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311521",
-        "kind": "official_notice_body",
-        "excerpt": "접수기간 : 2026.10.26.(월) ~ 2026.10.30.(금)",
-        "verified_at": "2026-10-20T09:20:47"
+        "verified_at": "2026-10-20T17:31:45"
       },
       "sh_schedule_version": 1
     },
@@ -229,7 +227,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311349",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026. 10. 26.(월) ~ 2026.11. 06.(금) 18시까지",
-        "verified_at": "2026-10-20T09:20:53"
+        "verified_at": "2026-10-20T17:31:55"
       },
       "sh_schedule_version": 1
     },
@@ -266,33 +264,72 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311549",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.10.21.(수) ~ 10.28.(수)",
-        "verified_at": "2026-10-20T09:20:51"
+        "verified_at": "2026-10-20T17:31:52"
       },
       "sh_schedule_version": 1
     },
     {
-      "id": "SH:seq:311754",
+      "id": "SH:seq:311521",
       "agency": "SH",
       "agency_group": "SH",
-      "title": "(유니버설하우징협동조합) 토지임대부 사회주택 유니버설하우징협동조합 수유 입주자 모집공고",
+      "title": "서초구 청년예술인주택 서리풀 청년아트타운(수요자맞춤형) 잔여세대 모집 공고",
+      "housing_types": [
+        "기타임대"
+      ],
+      "audiences": [
+        "청년"
+      ],
+      "region": "서울",
+      "published_at": "",
+      "deadline": "2026-10-30",
+      "open_state": "접수예정",
+      "event": "수정",
+      "change": "수정",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [
+        "청년"
+      ],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311521",
+      "source": "서울주거포털",
+      "content_signature": "b58e16f73aa1fd17e8ce4b282b67ecd4a326223bd3572738c38d73d12ec0af7c",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "notice_kind": "recruitment",
+      "application_start": "2026-10-26",
+      "schedule_type": "single",
+      "deadline_precision": "date",
+      "schedule_source": "official_detail_html",
+      "schedule_note": "공식 상세본문 신청기간 기준입니다. 정확한 접수시각과 대상은 공고문을 확인하세요.",
+      "application_windows": [],
+      "schedule_evidence": {
+        "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311521",
+        "kind": "official_notice_body",
+        "excerpt": "접수기간 : 2026.10.26.(월) ~ 2026.10.30.(금)",
+        "verified_at": "2026-10-20T17:31:50"
+      },
+      "sh_schedule_version": 1
+    },
+    {
+      "id": "SH:seq:311802",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "NEW 2026-10차 재개발임대주택 철거민 특별공급",
       "housing_types": [
         "기타임대"
       ],
       "audiences": [],
       "region": "서울",
-      "published_at": "2026-10-19",
+      "published_at": "2026-10-20",
       "deadline": "",
       "open_state": "확인필요",
       "event": "신규",
-      "change": "동일",
+      "change": "신규",
       "status_text": "",
       "is_gangseo": false,
-      "keywords": [
-        "협동조합"
-      ],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311754",
+      "keywords": [],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311802",
       "source": "SH 공식 주택임대 게시판",
-      "content_signature": "34df8c5567bc23a8e4ccda05b9c6a4967cd5bc36f8d0a2b138528dd8c381794f",
+      "content_signature": "8bfa1e65b12fbccd499467913ff1e523748a0095e108044df89fb79d7603f2c9",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "published_source": "official_list_registration",
       "notice_kind": "recruitment",
@@ -903,6 +940,79 @@
       "schedule_source": "official_detail_html"
     },
     {
+      "id": "SH:seq:311881",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "NEW 청년 매입임대주택(2025년 2차 예비3차) 전자계약시스템 오류 및 계약기간 연장 안내",
+      "housing_types": [
+        "매입임대"
+      ],
+      "audiences": [
+        "청년"
+      ],
+      "region": "서울",
+      "published_at": "2026-10-20",
+      "deadline": "",
+      "open_state": "신청대상아님",
+      "event": "결과",
+      "change": "신규",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [
+        "청년",
+        "매입임대"
+      ],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311881",
+      "source": "SH 공식 주택임대 게시판",
+      "content_signature": "3bccf8b4c9cd37d42783461d76f691e9ba1be3ee16c11e756fc680ed5096a96d",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "published_source": "official_list_registration",
+      "notice_kind": "result",
+      "application_start": "",
+      "schedule_type": "not_applicable",
+      "deadline_precision": "unknown",
+      "schedule_source": "not_applicable",
+      "schedule_note": "신규 신청공고가 아닌 결과·입주 안내입니다.",
+      "application_windows": [],
+      "schedule_evidence": {},
+      "sh_schedule_version": 1
+    },
+    {
+      "id": "SH:seq:311867",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "NEW 제7차 미리내집(장기전세주택2) 본당첨자 계약 관련 안내(한국부동산원 전자계약시스템 계약이력이 보이지 않는 분 관련)",
+      "housing_types": [
+        "장기전세"
+      ],
+      "audiences": [],
+      "region": "서울",
+      "published_at": "2026-10-20",
+      "deadline": "",
+      "open_state": "신청대상아님",
+      "event": "결과",
+      "change": "신규",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [
+        "미리내집"
+      ],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311867",
+      "source": "SH 공식 주택임대 게시판",
+      "content_signature": "b95521ced26ab93294e79c5aa9462463d7fa49ddf984c1a0f7e2595b5db613de",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "published_source": "official_list_registration",
+      "notice_kind": "result",
+      "application_start": "",
+      "schedule_type": "not_applicable",
+      "deadline_precision": "unknown",
+      "schedule_source": "not_applicable",
+      "schedule_note": "신규 신청공고가 아닌 결과·입주 안내입니다.",
+      "application_windows": [],
+      "schedule_evidence": {},
+      "sh_schedule_version": 1
+    },
+    {
       "id": "SH:seq:311798",
       "agency": "SH",
       "agency_group": "SH",
@@ -1014,111 +1124,6 @@
       "sh_schedule_version": 1
     },
     {
-      "id": "SH:seq:311655",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "2026년 하반기 신혼·신생아 매입임대주택 입주자 모집공고(2026. 9. 30.) 최종 경쟁률 안내",
-      "housing_types": [
-        "매입임대"
-      ],
-      "audiences": [
-        "신혼부부",
-        "신생아"
-      ],
-      "region": "서울",
-      "published_at": "2026-10-16",
-      "deadline": "",
-      "open_state": "신청대상아님",
-      "event": "결과",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [
-        "매입임대",
-        "신혼"
-      ],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311655",
-      "source": "SH 공식 주택임대 게시판",
-      "content_signature": "de2c78be22120ceb5a4f8c180019d902d0d8e7caa301b4a1847def6fe6934e9a",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "published_source": "official_list_registration",
-      "notice_kind": "result",
-      "application_start": "",
-      "schedule_type": "not_applicable",
-      "deadline_precision": "unknown",
-      "schedule_source": "not_applicable",
-      "schedule_note": "신규 신청공고가 아닌 결과·입주 안내입니다.",
-      "application_windows": [],
-      "schedule_evidence": {},
-      "sh_schedule_version": 1
-    },
-    {
-      "id": "SH:seq:311674",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "2026년 2차 임대상가 재공급 모집공고(2026.09.16.) 당첨자 및 예비당첨자 발표",
-      "housing_types": [
-        "기타임대"
-      ],
-      "audiences": [],
-      "region": "서울",
-      "published_at": "2026-10-16",
-      "deadline": "",
-      "open_state": "신청대상아님",
-      "event": "결과",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311674",
-      "source": "SH 공식 주택임대 게시판",
-      "content_signature": "32a8369d4a584e15874a9837f70121808ff12df09e1759754f0f025117dd3bb1",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "published_source": "official_list_registration",
-      "notice_kind": "result",
-      "application_start": "",
-      "schedule_type": "not_applicable",
-      "deadline_precision": "unknown",
-      "schedule_source": "not_applicable",
-      "schedule_note": "신규 신청공고가 아닌 결과·입주 안내입니다.",
-      "application_windows": [],
-      "schedule_evidence": {},
-      "sh_schedule_version": 1
-    },
-    {
-      "id": "SH:seq:311477",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "2025년 제1차 국민임대주택(2025.08.20.공고) 예비4차 당첨자 및 동호배정 결과",
-      "housing_types": [
-        "국민임대"
-      ],
-      "audiences": [],
-      "region": "서울",
-      "published_at": "2026-10-16",
-      "deadline": "",
-      "open_state": "신청대상아님",
-      "event": "결과",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311477",
-      "source": "SH 공식 주택임대 게시판",
-      "content_signature": "7c6e09df76afde9f0deaf57a946345b14d9c0e68174bcedb854fbcf5c046d06e",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "published_source": "official_list_registration",
-      "notice_kind": "result",
-      "application_start": "",
-      "schedule_type": "not_applicable",
-      "deadline_precision": "unknown",
-      "schedule_source": "not_applicable",
-      "schedule_note": "신규 신청공고가 아닌 결과·입주 안내입니다.",
-      "application_windows": [],
-      "schedule_evidence": {},
-      "sh_schedule_version": 1
-    },
-    {
       "id": "SH:seq:311661",
       "agency": "SH",
       "agency_group": "SH",
@@ -1144,39 +1149,6 @@
       "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311661",
       "source": "SH 공식 주택임대 게시판",
       "content_signature": "f900739075c9510139748a49e4825d974f0a7780dc21cac2e6f730eee099d399",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "published_source": "official_list_registration",
-      "notice_kind": "result",
-      "application_start": "",
-      "schedule_type": "not_applicable",
-      "deadline_precision": "unknown",
-      "schedule_source": "not_applicable",
-      "schedule_note": "신규 신청공고가 아닌 결과·입주 안내입니다.",
-      "application_windows": [],
-      "schedule_evidence": {},
-      "sh_schedule_version": 1
-    },
-    {
-      "id": "SH:seq:311481",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "2023년 제1차 국민임대주택(2023.06.23.공고) 예비17차 당첨자 및 동호배정 결과",
-      "housing_types": [
-        "국민임대"
-      ],
-      "audiences": [],
-      "region": "서울",
-      "published_at": "2026-10-16",
-      "deadline": "",
-      "open_state": "신청대상아님",
-      "event": "결과",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311481",
-      "source": "SH 공식 주택임대 게시판",
-      "content_signature": "e686825490657134f0d2482156415f1ca2e804371504de08b8ee74e62df51b59",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "published_source": "official_list_registration",
       "notice_kind": "result",
