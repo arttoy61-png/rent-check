@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-22T20:50:52",
+  "generated_at": "2026-10-23T02:10:59",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
@@ -23,10 +23,10 @@
       ],
       "fresh_count": 6,
       "carried_count": 8,
-      "failure_streak": 80
+      "failure_streak": 81
     },
     "SH": {
-      "count": 21,
+      "count": 20,
       "errors": []
     },
     "SEOUL": {
@@ -35,8 +35,8 @@
       "excluded_noise": 14
     },
     "TOTAL": {
-      "count": 34,
-      "duplicates_removed": 5,
+      "count": 33,
+      "duplicates_removed": 4,
       "excluded_non_housing": 3,
       "excluded_outside_seoul": 0,
       "published_count": 34
@@ -45,12 +45,12 @@
   "summary": {
     "total": 34,
     "gangseo": 3,
-    "new": 0,
+    "new": 1,
     "updated": 0,
-    "open_or_check": 12,
+    "open_or_check": 11,
     "by_housing_type": {
-      "매입임대": 11,
-      "기타임대": 10,
+      "매입임대": 12,
+      "기타임대": 9,
       "장기전세": 1,
       "기숙사": 1,
       "통합공공임대": 2,
@@ -62,9 +62,9 @@
     },
     "by_audience": {
       "고령자": 1,
-      "청년": 4,
-      "신혼부부": 6,
-      "신생아": 6
+      "청년": 3,
+      "신혼부부": 7,
+      "신생아": 7
     },
     "by_agency": {
       "SH": 20,
@@ -108,7 +108,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311950",
         "kind": "official_notice_body",
         "excerpt": "접수 기간: 2026.10.21.(수) ~ 2026.10.30.(금)",
-        "verified_at": "2026-10-22T20:50:34"
+        "verified_at": "2026-10-23T02:10:37"
       },
       "sh_schedule_version": 1
     },
@@ -145,7 +145,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311549",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.10.21.(수) ~ 10.28.(수)",
-        "verified_at": "2026-10-22T20:50:45"
+        "verified_at": "2026-10-23T02:10:51"
       },
       "sh_schedule_version": 1
     },
@@ -183,7 +183,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311613",
         "kind": "official_notice_body",
         "excerpt": "신청기간 : 2026.11.2.( 월 ) ~ 2026.11.4.( 수 )",
-        "verified_at": "2026-10-22T20:50:39"
+        "verified_at": "2026-10-23T02:10:44"
       },
       "sh_schedule_version": 1
     },
@@ -222,7 +222,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311349",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026. 10. 26.(월) ~ 2026.11. 06.(금) 18시까지",
-        "verified_at": "2026-10-22T20:50:47"
+        "verified_at": "2026-10-23T02:10:54"
       },
       "sh_schedule_version": 1
     },
@@ -263,7 +263,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311521",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.10.26.(월) ~ 2026.10.30.(금)",
-        "verified_at": "2026-10-22T20:50:43"
+        "verified_at": "2026-10-23T02:10:49"
       },
       "sh_schedule_version": 1
     },
@@ -454,42 +454,6 @@
       "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311656",
       "source": "서울주거포털",
       "content_signature": "288622e5ef464ee5153edf417882562bf85769463f31e715825c47fec484b89d",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "notice_kind": "recruitment",
-      "application_start": "",
-      "schedule_type": "unknown",
-      "deadline_precision": "unknown",
-      "schedule_source": "unknown",
-      "schedule_note": "신청기간은 공식 공고문 확인이 필요합니다.",
-      "application_windows": [],
-      "schedule_evidence": {},
-      "sh_schedule_version": 1
-    },
-    {
-      "id": "SH:seq:311087",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "강동구 청년창업가,예술인주택(수요자맞춤형) 잔여세대 모집 공고",
-      "housing_types": [
-        "기타임대"
-      ],
-      "audiences": [
-        "청년"
-      ],
-      "region": "서울",
-      "published_at": "",
-      "deadline": "",
-      "open_state": "확인필요",
-      "event": "신규",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [
-        "청년"
-      ],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311087",
-      "source": "서울주거포털",
-      "content_signature": "2a795e9c68cafdae9865144dbdfc03e49e52c7559af66e05cbeaf3046e0f14b8",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "notice_kind": "recruitment",
       "application_start": "",
@@ -967,6 +931,44 @@
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "2025-11-24",
       "schedule_source": "official_detail_html"
+    },
+    {
+      "id": "SH:seq:310650",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "매입2026년 하반기 신혼·신생아 매입임대주택Ⅰ 입주자 모집공고(2026.09.30.)",
+      "housing_types": [
+        "매입임대"
+      ],
+      "audiences": [
+        "신혼부부",
+        "신생아"
+      ],
+      "region": "서울",
+      "published_at": "",
+      "deadline": "2026-10-15",
+      "open_state": "마감",
+      "event": "신규",
+      "change": "신규",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [
+        "매입임대",
+        "신혼"
+      ],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=310650",
+      "source": "서울주거포털",
+      "content_signature": "dd9ead29c64ee6725529905755ab7058b8ec9a7393a6d3a0335c38b39c30bc8f",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "notice_kind": "recruitment",
+      "application_start": "2026-10-13",
+      "schedule_type": "single",
+      "deadline_precision": "date",
+      "schedule_source": "verified_regression",
+      "schedule_note": "공식 공고 검증 일정입니다. 접수시각과 대상은 공고문을 확인하세요.",
+      "application_windows": [],
+      "schedule_evidence": {},
+      "sh_schedule_version": 1
     },
     {
       "id": "SH:seq:311800",
