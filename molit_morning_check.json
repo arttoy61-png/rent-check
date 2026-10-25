@@ -1,12 +1,15 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-25T09:20:37.811622+09:00",
+  "checked_at": "2026-10-25T20:21:34.540336+09:00",
   "day": "2026-10-25",
-  "state": "retry_requested",
+  "state": "recovered",
   "collection": {
-    "state": "failed",
-    "reason": "Workflow did not complete successfully",
-    "run_id": 40138670864
+    "state": "healthy",
+    "attempted": 144,
+    "expected": 144,
+    "succeeded": 144,
+    "failed": 0,
+    "run_id": 40188393794
   },
   "retry": {
     "day": "2026-10-25",
@@ -15,5 +18,5 @@
     "status": "requested"
   },
   "dry_run": false,
-  "allow_retry": true
+  "allow_retry": false
 }
