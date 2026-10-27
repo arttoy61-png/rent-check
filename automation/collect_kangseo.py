@@ -52,7 +52,9 @@ def _recent_months(count=2):
     return result
 
 
-def main():
+_collection = {}
+
+def _collect():
     print("=" * 50)
     print(f"  강서구 전체 실거래 수집 (최근 {MONTHS_BACK}개월)")
     print("=" * 50)
@@ -70,20 +72,22 @@ def main():
     )
 
     # fetch_multi가 남긴 수집 상태를 정규화 전에 보존
-    collection_complete = bool(df.attrs.get("complete", False))
+    collection_complete = bool(df is not None and df.attrs.get("complete", False))
     successful_keys = {
-        tuple(x) for x in df.attrs.get("successful_keys", [])
+        tuple(x) for x in (df.attrs if df is not None else {}).get("successful_keys", [])
     }
-    requested_months = set(df.attrs.get("requested_months", []))
+    requested_months = set((df.attrs if df is not None else {}).get("requested_months", []))
 
     out_path = Path("data/molit_kangseo.csv")
     out_path.parent.mkdir(exist_ok=True)
+
+    _collection.update(df.attrs if df is not None else {})
 
     if df is None or len(df) == 0:
         print("\n수집된 데이터 없음 — 기존 CSV를 그대로 둡니다")
         if out_path.exists():
             print(f"  기존 파일 유지: {out_path}")
-            sys.exit(0)
+            sys.exit(1)
         sys.exit(1)
 
     print(f"\n강서구 전체 수집: {len(df):,}건")
@@ -198,6 +202,22 @@ def main():
         ym_counts = normalized["deal_ym"].value_counts().sort_index()
         for ym, cnt in ym_counts.items():
             print(f"  {ym}: {cnt:,}건")
+
+
+def main():
+    from collection_metadata import digest, load_collection, record
+    path = Path("data/molit_kangseo.csv")
+    previous, before = load_collection(path), digest(path)
+    _collection.clear()
+    accepted = False
+    try:
+        _collect()
+        accepted = True
+    except Exception as error:
+        _collection.update(getattr(error, 'collection', {}))
+        raise
+    finally:
+        record(path, previous, before, _collection, accepted)
 
 
 if __name__ == "__main__":

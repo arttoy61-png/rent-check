@@ -74,6 +74,12 @@ jobs:
             echo "복원 생략 (이미 있거나 루트에 CSV 없음)"
           fi
 
+      - name: Seed previous collection evidence
+        run: |
+          if [ -f molit_kangseo.collection.json ]; then
+            cp molit_kangseo.collection.json automation/data/molit_kangseo.collection.json
+          fi
+
       - name: Collect MOLIT data (강서)
         id: collect
         continue-on-error: true
@@ -171,7 +177,9 @@ jobs:
           PY
 
       - name: Publish CSV
-        run: cp automation/data/molit_kangseo.csv molit_kangseo.csv
+        run: |
+          cp automation/data/molit_kangseo.csv molit_kangseo.csv
+          cp automation/data/molit_kangseo.collection.json molit_kangseo.collection.json
 
       - name: Commit
         run: |
@@ -182,7 +190,7 @@ jobs:
           # 충돌을 숨긴 채 detached HEAD에서 push를 시도하지 않는다.
           git pull --rebase --autostash
 
-          git add widget_data.json hwagok_apt_data.json gangseo_apt_summary.json gangseo_apt_detail.json molit_kangseo.csv 2>/dev/null || true
+          git add molit_kangseo.collection.json widget_data.json hwagok_apt_data.json gangseo_apt_summary.json gangseo_apt_detail.json molit_kangseo.csv 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "변경 없음"
             exit 0

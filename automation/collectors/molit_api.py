@@ -43,8 +43,8 @@ ENDPOINTS = {
 CACHE_DIR = Path("data/cache")
 CACHE_DIR.mkdir(parents=True, exist_ok=True)
 
-# v4: v3 캐시는 1,000건 초과 월이 잘렸을 수 있어 전부 무효화
-CACHE_VERSION = "v4"
+# v5: 이전 캐시는 페이지 완전성이 검증되지 않았으므로 재사용하지 않음
+CACHE_VERSION = "v5"
 
 
 def _safe_text(item, tag: str) -> str:
@@ -94,6 +94,8 @@ def _request_page(
                 msg = result_msg_el.text if result_msg_el is not None else "알 수 없는 에러"
                 raise RuntimeError(f"API 에러 [{result_code_el.text}] {msg}")
 
+            if root.findtext(".//resultCode", "").strip() not in ("00", "000"):
+                raise RuntimeError("Missing API success code")
             return root
         except Exception as e:
             last_err = e
@@ -153,16 +155,21 @@ def fetch_one_month(
             url, params, deal_type, lawd_cd, deal_ym, max_retries, timeout
         )
 
-        if total_count is None:
-            total_el = root.find(".//totalCount")
-            if total_el is not None and total_el.text:
-                try:
-                    total_count = int(total_el.text.strip())
-                except ValueError:
-                    total_count = None
+        try:
+            reported_total = int(root.findtext(".//totalCount", ""))
+            reported_page = int(root.findtext(".//pageNo", str(page_no)))
+        except ValueError:
+            raise RuntimeError("Missing or invalid pagination count") from None
+        if reported_total < 0 or reported_page != page_no:
+            raise RuntimeError("Invalid pagination response")
+        if total_count is not None and reported_total != total_count:
+            raise RuntimeError("Pagination total changed during collection")
+        total_count = reported_total
 
         items = root.findall(".//item")
         if not items:
+            if total_count is not None and len(rows) != total_count:
+                raise RuntimeError("Incomplete pagination")
             break
 
         for item in items:
@@ -228,11 +235,15 @@ def fetch_one_month(
         if total_count is not None and len(rows) >= total_count:
             break
         if len(items) < page_size:
+            if total_count is not None and len(rows) != total_count:
+                raise RuntimeError("Incomplete pagination")
             break
 
         page_no += 1
         time.sleep(0.1)
 
+    if total_count is not None and len(rows) != total_count:
+        raise RuntimeError("Pagination count mismatch")
     df = pd.DataFrame(rows)
 
     # 최근 달도 캐시는 최신 스냅샷으로 덮어두되, 읽을 때는 최근 2개월 캐시를 무시한다.
@@ -316,7 +327,8 @@ def fetch_multi(
                     fail_cnt += 1
                     failed_keys.append((lawd, ym, dt))
                     consecutive_fail += 1
-                    print(f"  ✗ 실패({consecutive_fail}연속): {e}")
+                    kind = "timeout" if "timeout" in str(e).lower() else "collection_error"
+                    print(f"  ✗ 실패({consecutive_fail}연속): {kind}")
                     if consecutive_fail >= max_consecutive_fail:
                         print(
                             f"\n🚨 연속 {consecutive_fail}회 실패 — "

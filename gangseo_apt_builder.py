@@ -5,6 +5,7 @@ molit_kangseo.csv → gangseo_apt_summary.json + gangseo_apt_detail.json
 - 최근 6개월 거래/중위/전세가율 계산
 - 카카오 지오코딩 캐시를 재사용해 강서구 전체 단지 좌표 부여
 """
+from automation.collection_metadata import load_collection
 import calendar
 import csv
 import hashlib
@@ -318,7 +319,7 @@ def main():
     }
     generated_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
     OUT_SUM.write_text(
-        json.dumps({"meta": meta, "generated_at": generated_at, "dongs": dongs, "complexes": complexes},
+        json.dumps({"meta": meta, "collection": load_collection(CSV), "generated_at": generated_at, "dongs": dongs, "complexes": complexes},
                    ensure_ascii=False, separators=(",", ":")),
         encoding="utf-8",
     )
