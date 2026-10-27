@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-27T17:59:48",
+  "generated_at": "2026-10-28T00:22:47",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
@@ -23,7 +23,7 @@
       ],
       "fresh_count": 6,
       "carried_count": 8,
-      "failure_streak": 101
+      "failure_streak": 102
     },
     "SH": {
       "count": 17,
@@ -32,7 +32,7 @@
     "SEOUL": {
       "count": 7,
       "errors": [],
-      "excluded_noise": 16
+      "excluded_noise": 15
     },
     "TOTAL": {
       "count": 28,
@@ -45,8 +45,8 @@
   "summary": {
     "total": 31,
     "gangseo": 3,
-    "new": 1,
-    "updated": 0,
+    "new": 0,
+    "updated": 1,
     "open_or_check": 10,
     "by_housing_type": {
       "기타임대": 11,
@@ -104,7 +104,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311549",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.10.21.(수) ~ 10.28.(수)",
-        "verified_at": "2026-10-27T17:59:46"
+        "verified_at": "2026-10-28T00:22:45"
       },
       "sh_schedule_version": 1
     },
@@ -145,7 +145,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311521",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.10.26.(월) ~ 2026.10.30.(금)",
-        "verified_at": "2026-10-27T17:59:44"
+        "verified_at": "2026-10-28T00:22:42"
       },
       "sh_schedule_version": 1
     },
@@ -183,7 +183,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311908",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.10.23.(금) ~11.09.(월)",
-        "verified_at": "2026-10-27T17:59:40"
+        "verified_at": "2026-10-28T00:22:39"
       },
       "sh_schedule_version": 1
     },
@@ -222,7 +222,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311349",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026. 10. 26.(월) ~ 2026.11. 06.(금) 18시까지",
-        "verified_at": "2026-10-27T17:59:48"
+        "verified_at": "2026-10-28T00:22:47"
       },
       "sh_schedule_version": 1
     },
@@ -264,7 +264,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311965",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.11.02.(월) ~ 11.12.(목) 18시까지",
-        "verified_at": "2026-10-27T17:59:32"
+        "verified_at": "2026-10-28T00:22:31"
       },
       "sh_schedule_version": 1
     },
@@ -302,7 +302,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=312021",
         "kind": "official_notice_body",
         "excerpt": "신청기간 : 2026.11.9.( 월 ) ~ 2026.11.11.( 수 )",
-        "verified_at": "2026-10-27T17:59:38"
+        "verified_at": "2026-10-28T00:22:37"
       },
       "sh_schedule_version": 1
     },
@@ -907,7 +907,7 @@
       "id": "SH:seq:312294",
       "agency": "SH",
       "agency_group": "SH",
-      "title": "NEW 제50차 장기전세주택 입주자 모집공고(2026.04.27.) 당첨자 및 예비입주자 발표",
+      "title": "제50차 장기전세주택 입주자 모집공고(2026.04.27.) 당첨자 및 예비입주자 발표",
       "housing_types": [
         "장기전세"
       ],
@@ -917,13 +917,13 @@
       "deadline": "",
       "open_state": "신청대상아님",
       "event": "결과",
-      "change": "신규",
+      "change": "수정",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [],
       "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=312294",
       "source": "SH 공식 주택임대 게시판",
-      "content_signature": "238706581c1b086d1ebe7c80110d2858539abcac1ed020c3623d18a00006aeff",
+      "content_signature": "238ab5f2411377d17eea8947cf5ea2224435c8cf8b3439e1d6299f8448d2f9cc",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "published_source": "official_list_registration",
       "notice_kind": "result",
