@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-27T09:27:39",
+  "generated_at": "2026-10-27T17:59:48",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
@@ -23,7 +23,7 @@
       ],
       "fresh_count": 6,
       "carried_count": 8,
-      "failure_streak": 100
+      "failure_streak": 101
     },
     "SH": {
       "count": 17,
@@ -32,7 +32,7 @@
     "SEOUL": {
       "count": 7,
       "errors": [],
-      "excluded_noise": 15
+      "excluded_noise": 16
     },
     "TOTAL": {
       "count": 28,
@@ -45,17 +45,17 @@
   "summary": {
     "total": 31,
     "gangseo": 3,
-    "new": 0,
+    "new": 1,
     "updated": 0,
     "open_or_check": 10,
     "by_housing_type": {
       "기타임대": 11,
-      "장기전세": 2,
+      "장기전세": 3,
       "통합공공임대": 2,
       "공공임대": 4,
       "매입임대": 7,
       "든든전세": 1,
-      "행복주택": 6,
+      "행복주택": 5,
       "국민임대": 1,
       "영구임대": 1
     },
@@ -104,7 +104,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311549",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.10.21.(수) ~ 10.28.(수)",
-        "verified_at": "2026-10-27T09:27:36"
+        "verified_at": "2026-10-27T17:59:46"
       },
       "sh_schedule_version": 1
     },
@@ -145,7 +145,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311521",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.10.26.(월) ~ 2026.10.30.(금)",
-        "verified_at": "2026-10-27T09:27:34"
+        "verified_at": "2026-10-27T17:59:44"
       },
       "sh_schedule_version": 1
     },
@@ -183,7 +183,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311908",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.10.23.(금) ~11.09.(월)",
-        "verified_at": "2026-10-27T09:27:29"
+        "verified_at": "2026-10-27T17:59:40"
       },
       "sh_schedule_version": 1
     },
@@ -222,7 +222,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311349",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026. 10. 26.(월) ~ 2026.11. 06.(금) 18시까지",
-        "verified_at": "2026-10-27T09:27:39"
+        "verified_at": "2026-10-27T17:59:48"
       },
       "sh_schedule_version": 1
     },
@@ -264,7 +264,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311965",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.11.02.(월) ~ 11.12.(목) 18시까지",
-        "verified_at": "2026-10-27T09:27:18"
+        "verified_at": "2026-10-27T17:59:32"
       },
       "sh_schedule_version": 1
     },
@@ -302,7 +302,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=312021",
         "kind": "official_notice_body",
         "excerpt": "신청기간 : 2026.11.9.( 월 ) ~ 2026.11.11.( 수 )",
-        "verified_at": "2026-10-27T09:27:26"
+        "verified_at": "2026-10-27T17:59:38"
       },
       "sh_schedule_version": 1
     },
@@ -904,6 +904,39 @@
       "schedule_source": "official_detail_html"
     },
     {
+      "id": "SH:seq:312294",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "NEW 제50차 장기전세주택 입주자 모집공고(2026.04.27.) 당첨자 및 예비입주자 발표",
+      "housing_types": [
+        "장기전세"
+      ],
+      "audiences": [],
+      "region": "서울",
+      "published_at": "2026-10-27",
+      "deadline": "",
+      "open_state": "신청대상아님",
+      "event": "결과",
+      "change": "신규",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=312294",
+      "source": "SH 공식 주택임대 게시판",
+      "content_signature": "238706581c1b086d1ebe7c80110d2858539abcac1ed020c3623d18a00006aeff",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "published_source": "official_list_registration",
+      "notice_kind": "result",
+      "application_start": "",
+      "schedule_type": "not_applicable",
+      "deadline_precision": "unknown",
+      "schedule_source": "not_applicable",
+      "schedule_note": "신규 신청공고가 아닌 결과·입주 안내입니다.",
+      "application_windows": [],
+      "schedule_evidence": {},
+      "sh_schedule_version": 1
+    },
+    {
       "id": "SH:seq:312183",
       "agency": "SH",
       "agency_group": "SH",
@@ -992,41 +1025,6 @@
       "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311936",
       "source": "SH 공식 주택임대 게시판",
       "content_signature": "8a0eea3ebd3231d7c93dbf4153a25507c61f041facdc6c5175611b06a48086ef",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "published_source": "official_list_registration",
-      "notice_kind": "result",
-      "application_start": "",
-      "schedule_type": "not_applicable",
-      "deadline_precision": "unknown",
-      "schedule_source": "not_applicable",
-      "schedule_note": "신규 신청공고가 아닌 결과·입주 안내입니다.",
-      "application_windows": [],
-      "schedule_evidence": {},
-      "sh_schedule_version": 1
-    },
-    {
-      "id": "SH:seq:311800",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "행복주택 예비당첨자 게시",
-      "housing_types": [
-        "행복주택"
-      ],
-      "audiences": [],
-      "region": "서울",
-      "published_at": "2026-10-21",
-      "deadline": "",
-      "open_state": "신청대상아님",
-      "event": "결과",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [
-        "행복주택"
-      ],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311800",
-      "source": "SH 공식 주택임대 게시판",
-      "content_signature": "34da47e6011ba7288b3b91f10ca8311fdb7d1757ac61d97fd1d2df6dd3342dc6",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "published_source": "official_list_registration",
       "notice_kind": "result",
