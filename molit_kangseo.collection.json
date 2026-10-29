@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "status": "success",
-  "attempted_at": "2026-10-28T12:47:38+00:00",
-  "last_success_at": "2026-10-28T12:47:38+00:00",
-  "snapshot_sha256": "84c879e38ff8f59fd50f56af206bc5b9b9a5ed6b3d3098f816832a5c5778092e",
-  "snapshot_changed": false,
+  "attempted_at": "2026-10-29T00:00:50+00:00",
+  "last_success_at": "2026-10-29T00:00:50+00:00",
+  "snapshot_sha256": "9c5226a1b72ec968ba4557dec674a8768ddd48c5c3a8f14347a8bb440019944e",
+  "snapshot_changed": true,
   "expected_partitions": 144,
   "succeeded_partitions": 144,
   "cache_policy": "recent_two_months_live; older_months_may_use_cache"
