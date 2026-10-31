@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-10-31T14:40:28",
+  "generated_at": "2026-10-31T21:26:06",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
@@ -23,7 +23,7 @@
       ],
       "fresh_count": 6,
       "carried_count": 8,
-      "failure_streak": 114
+      "failure_streak": 115
     },
     "SH": {
       "count": 18,
@@ -108,7 +108,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311962",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.10.28.(수) ~ 2026.11.12.(목) 18시까지",
-        "verified_at": "2026-10-31T14:40:14"
+        "verified_at": "2026-10-31T21:25:54"
       },
       "sh_schedule_version": 1
     },
@@ -147,7 +147,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311349",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026. 10. 26.(월) ~ 2026.11. 06.(금) 18시까지",
-        "verified_at": "2026-10-31T14:40:28"
+        "verified_at": "2026-10-31T21:26:06"
       },
       "sh_schedule_version": 1
     },
@@ -184,7 +184,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311908",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.10.23.(금) ~11.09.(월)",
-        "verified_at": "2026-10-31T14:40:23"
+        "verified_at": "2026-10-31T21:26:02"
       },
       "sh_schedule_version": 1
     },
@@ -225,7 +225,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311965",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.11.02.(월) ~ 11.12.(목) 18시까지",
-        "verified_at": "2026-10-31T14:40:21"
+        "verified_at": "2026-10-31T21:26:00"
       },
       "sh_schedule_version": 1
     },
