@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-05T06:21:36",
+  "generated_at": "2026-11-05T15:44:59",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
@@ -23,10 +23,10 @@
       ],
       "fresh_count": 6,
       "carried_count": 8,
-      "failure_streak": 129
+      "failure_streak": 130
     },
     "SH": {
-      "count": 21,
+      "count": 19,
       "errors": []
     },
     "SEOUL": {
@@ -35,9 +35,9 @@
       "excluded_noise": 14
     },
     "TOTAL": {
-      "count": 33,
+      "count": 31,
       "duplicates_removed": 5,
-      "excluded_non_housing": 3,
+      "excluded_non_housing": 1,
       "excluded_outside_seoul": 0,
       "published_count": 33
     }
@@ -45,12 +45,13 @@
   "summary": {
     "total": 33,
     "gangseo": 4,
-    "new": 0,
-    "updated": 3,
+    "new": 1,
+    "updated": 0,
     "open_or_check": 10,
     "by_housing_type": {
-      "기타임대": 8,
+      "기타임대": 7,
       "장기전세": 4,
+      "안심주택": 1,
       "기숙사": 1,
       "통합공공임대": 2,
       "공공임대": 4,
@@ -108,7 +109,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311349",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026. 10. 26.(월) ~ 2026.11. 06.(금) 18시까지",
-        "verified_at": "2026-11-05T06:21:36"
+        "verified_at": "2026-11-05T15:44:59"
       },
       "sh_schedule_version": 1
     },
@@ -145,7 +146,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311908",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.10.23.(금) ~11.09.(월)",
-        "verified_at": "2026-11-05T06:21:31"
+        "verified_at": "2026-11-05T15:44:53"
       },
       "sh_schedule_version": 1
     },
@@ -182,7 +183,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311962",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.10.28.(수) ~ 2026.11.12.(목) 18시까지",
-        "verified_at": "2026-11-05T06:21:24"
+        "verified_at": "2026-11-05T15:44:45"
       },
       "sh_schedule_version": 1
     },
@@ -223,7 +224,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311965",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.11.02.(월) ~ 11.12.(목) 18시까지",
-        "verified_at": "2026-11-05T06:21:29"
+        "verified_at": "2026-11-05T15:44:50"
       },
       "sh_schedule_version": 1
     },
@@ -263,26 +264,28 @@
       "sh_schedule_version": 1
     },
     {
-      "id": "SH:seq:312351",
+      "id": "SH:seq:312668",
       "agency": "SH",
       "agency_group": "SH",
-      "title": "[토지지원 사회주택]유니버설디자인하우스_수락 입주자 모집 공고",
+      "title": "NEW 장기안심주택 2027년 4월 재계약 대상자 입주자격 심사서류 제출 안내",
       "housing_types": [
-        "기타임대"
+        "안심주택"
       ],
       "audiences": [],
       "region": "서울",
-      "published_at": "2026-11-02",
+      "published_at": "2026-11-05",
       "deadline": "",
       "open_state": "확인필요",
       "event": "신규",
-      "change": "동일",
+      "change": "신규",
       "status_text": "",
       "is_gangseo": false,
-      "keywords": [],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=312351",
+      "keywords": [
+        "안심주택"
+      ],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=312668",
       "source": "SH 공식 주택임대 게시판",
-      "content_signature": "78238c0708ddf9a8d1237d548a7f5a1d77f4bf8864a72275c833a872b4652249",
+      "content_signature": "3667edebe3531fb2de79f8c2c1b8fa05659b5b79db6474633e0f2521b58659d0",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "published_source": "official_list_registration",
       "notice_kind": "recruitment",
@@ -905,8 +908,8 @@
       "published_at": "2026-11-04",
       "deadline": "",
       "open_state": "신청대상아님",
-      "event": "수정",
-      "change": "수정",
+      "event": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [],
@@ -939,7 +942,7 @@
       "deadline": "",
       "open_state": "신청대상아님",
       "event": "결과",
-      "change": "수정",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [],
@@ -974,7 +977,7 @@
       "deadline": "",
       "open_state": "신청대상아님",
       "event": "결과",
-      "change": "수정",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
