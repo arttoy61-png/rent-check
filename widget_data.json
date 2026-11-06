@@ -1,8 +1,80 @@
 {
   "region": "화곡동",
-  "generated_at": "2026-11-05T23:35:12.463539",
-  "total_deals": 21260,
+  "generated_at": "2026-11-06T09:59:04.837431",
+  "total_deals": 21288,
   "deals": [
+    {
+      "building_name": "아덴하임",
+      "type": "오피스텔",
+      "area_m2": 29.57,
+      "pyung": 8.9,
+      "deposit": 22000,
+      "monthly_rent": 0,
+      "deal_period": "2026.11.04",
+      "floor": "8",
+      "build_year": "2020",
+      "is_jeonse": true
+    },
+    {
+      "building_name": "더프라임",
+      "type": "오피스텔",
+      "area_m2": 27.42,
+      "pyung": 8.3,
+      "deposit": 5000,
+      "monthly_rent": 90,
+      "deal_period": "2026.11.04",
+      "floor": "7",
+      "build_year": "2023",
+      "is_jeonse": false
+    },
+    {
+      "building_name": "연우넥스트파크뷰",
+      "type": "오피스텔",
+      "area_m2": 15.29,
+      "pyung": 4.6,
+      "deposit": 13500,
+      "monthly_rent": 9,
+      "deal_period": "2026.11.05",
+      "floor": "10",
+      "build_year": "2019",
+      "is_jeonse": false
+    },
+    {
+      "building_name": "아덴하임",
+      "type": "오피스텔",
+      "area_m2": 29.57,
+      "pyung": 8.9,
+      "deposit": 22000,
+      "monthly_rent": 0,
+      "deal_period": "2026.11.04",
+      "floor": "7",
+      "build_year": "2020",
+      "is_jeonse": true
+    },
+    {
+      "building_name": "혜성오피아파트",
+      "type": "오피스텔",
+      "area_m2": 46.58,
+      "pyung": 14.1,
+      "deposit": 4000,
+      "monthly_rent": 73,
+      "deal_period": "2026.11.02",
+      "floor": "2",
+      "build_year": "2019",
+      "is_jeonse": false
+    },
+    {
+      "building_name": "아덴하임",
+      "type": "오피스텔",
+      "area_m2": 29.57,
+      "pyung": 8.9,
+      "deposit": 22000,
+      "monthly_rent": 0,
+      "deal_period": "2026.11.04",
+      "floor": "8",
+      "build_year": "2020",
+      "is_jeonse": true
+    },
     {
       "building_name": "제이투리더스뷰 2차",
       "type": "오피스텔",
@@ -74,6 +146,114 @@
       "floor": "14",
       "build_year": "2019",
       "is_jeonse": false
+    },
+    {
+      "building_name": "국민쉐르빌",
+      "type": "빌라",
+      "area_m2": 50.1,
+      "pyung": 15.2,
+      "deposit": 13000,
+      "monthly_rent": 20,
+      "deal_period": "2026.11.05",
+      "floor": "2",
+      "build_year": "2010",
+      "is_jeonse": false
+    },
+    {
+      "building_name": "강남빌라",
+      "type": "빌라",
+      "area_m2": 56.6,
+      "pyung": 17.1,
+      "deposit": 1000,
+      "monthly_rent": 90,
+      "deal_period": "2026.11.05",
+      "floor": "2",
+      "build_year": "1987",
+      "is_jeonse": false
+    },
+    {
+      "building_name": "에스엠파크빌(346-94외)",
+      "type": "빌라",
+      "area_m2": 32.81,
+      "pyung": 9.9,
+      "deposit": 330,
+      "monthly_rent": 110,
+      "deal_period": "2026.11.04",
+      "floor": "4",
+      "build_year": "2015",
+      "is_jeonse": false
+    },
+    {
+      "building_name": "호경주택",
+      "type": "빌라",
+      "area_m2": 42.71,
+      "pyung": 12.9,
+      "deposit": 11500,
+      "monthly_rent": 0,
+      "deal_period": "2026.11.05",
+      "floor": "5",
+      "build_year": "2002",
+      "is_jeonse": true
+    },
+    {
+      "building_name": "연우넥스트뷰",
+      "type": "빌라",
+      "area_m2": 13.16,
+      "pyung": 4.0,
+      "deposit": 1000,
+      "monthly_rent": 67,
+      "deal_period": "2026.11.05",
+      "floor": "15",
+      "build_year": "2018",
+      "is_jeonse": false
+    },
+    {
+      "building_name": "이든빌리지",
+      "type": "빌라",
+      "area_m2": 16.1,
+      "pyung": 4.9,
+      "deposit": 1000,
+      "monthly_rent": 60,
+      "deal_period": "2026.11.02",
+      "floor": "4",
+      "build_year": "2011",
+      "is_jeonse": false
+    },
+    {
+      "building_name": "제이투리더스",
+      "type": "빌라",
+      "area_m2": 27.96,
+      "pyung": 8.5,
+      "deposit": 21000,
+      "monthly_rent": 0,
+      "deal_period": "2026.11.05",
+      "floor": "2",
+      "build_year": "2023",
+      "is_jeonse": true
+    },
+    {
+      "building_name": "우성",
+      "type": "빌라",
+      "area_m2": 37.15,
+      "pyung": 11.2,
+      "deposit": 3000,
+      "monthly_rent": 110,
+      "deal_period": "2026.11.03",
+      "floor": "4",
+      "build_year": "2016",
+      "is_jeonse": false
+    },
+    {
+      "building_name": "블루힐",
+      "type": "빌라",
+      "area_m2": 27.67,
+      "pyung": 8.4,
+      "deposit": 25000,
+      "monthly_rent": 0,
+      "deal_period": "2026.11.04",
+      "floor": "4",
+      "build_year": "2020",
+      "is_jeonse": true
     },
     {
       "building_name": "블루밍하우스",
@@ -436,6 +616,30 @@
       "is_jeonse": false
     },
     {
+      "building_name": "강서힐스테이트",
+      "type": "아파트",
+      "area_m2": 84.99,
+      "pyung": 25.7,
+      "deposit": 15000,
+      "monthly_rent": 290,
+      "deal_period": "2026.11.03",
+      "floor": "5",
+      "build_year": "2015",
+      "is_jeonse": false
+    },
+    {
+      "building_name": "에스타워",
+      "type": "아파트",
+      "area_m2": 29.86,
+      "pyung": 9.0,
+      "deposit": 16100,
+      "monthly_rent": 15,
+      "deal_period": "2026.11.04",
+      "floor": "9",
+      "build_year": "2017",
+      "is_jeonse": false
+    },
+    {
       "building_name": "리치아파트",
       "type": "아파트",
       "area_m2": 19.81,
@@ -493,6 +697,42 @@
       "deal_period": "2026.10.05",
       "floor": "4",
       "build_year": "2016",
+      "is_jeonse": true
+    },
+    {
+      "building_name": "연우넥스트파크뷰",
+      "type": "오피스텔",
+      "area_m2": 15.29,
+      "pyung": 4.6,
+      "deposit": 1000,
+      "monthly_rent": 70,
+      "deal_period": "2026.10.14",
+      "floor": "13",
+      "build_year": "2019",
+      "is_jeonse": false
+    },
+    {
+      "building_name": "양지",
+      "type": "오피스텔",
+      "area_m2": 28.56,
+      "pyung": 8.6,
+      "deposit": 5000,
+      "monthly_rent": 100,
+      "deal_period": "2026.10.29",
+      "floor": "10",
+      "build_year": "2023",
+      "is_jeonse": false
+    },
+    {
+      "building_name": "연우넥스트파크뷰",
+      "type": "오피스텔",
+      "area_m2": 24.07,
+      "pyung": 7.3,
+      "deposit": 21000,
+      "monthly_rent": 0,
+      "deal_period": "2026.10.24",
+      "floor": "11",
+      "build_year": "2019",
       "is_jeonse": true
     },
     {
@@ -2485,6 +2725,90 @@
       "deal_period": "2026.10.20",
       "floor": "2",
       "build_year": "2014",
+      "is_jeonse": false
+    },
+    {
+      "building_name": "우성그린빌라",
+      "type": "빌라",
+      "area_m2": 36.15,
+      "pyung": 10.9,
+      "deposit": 5000,
+      "monthly_rent": 50,
+      "deal_period": "2026.10.24",
+      "floor": "4",
+      "build_year": "1993",
+      "is_jeonse": false
+    },
+    {
+      "building_name": "아네스하우스",
+      "type": "빌라",
+      "area_m2": 65.72,
+      "pyung": 19.9,
+      "deposit": 13500,
+      "monthly_rent": 47,
+      "deal_period": "2026.10.28",
+      "floor": "1",
+      "build_year": "2002",
+      "is_jeonse": false
+    },
+    {
+      "building_name": "드림하우스",
+      "type": "빌라",
+      "area_m2": 29.67,
+      "pyung": 9.0,
+      "deposit": 12500,
+      "monthly_rent": 0,
+      "deal_period": "2026.10.27",
+      "floor": "4",
+      "build_year": "2012",
+      "is_jeonse": true
+    },
+    {
+      "building_name": "홍익빌라",
+      "type": "빌라",
+      "area_m2": 78.0,
+      "pyung": 23.6,
+      "deposit": 15000,
+      "monthly_rent": 50,
+      "deal_period": "2026.10.13",
+      "floor": "1",
+      "build_year": "1995",
+      "is_jeonse": false
+    },
+    {
+      "building_name": "파크그린빌라",
+      "type": "빌라",
+      "area_m2": 53.69,
+      "pyung": 16.2,
+      "deposit": 15240,
+      "monthly_rent": 14,
+      "deal_period": "2026.10.28",
+      "floor": "3",
+      "build_year": "2001",
+      "is_jeonse": false
+    },
+    {
+      "building_name": "비전쉐르빌",
+      "type": "빌라",
+      "area_m2": 41.18,
+      "pyung": 12.5,
+      "deposit": 12000,
+      "monthly_rent": 16,
+      "deal_period": "2026.10.27",
+      "floor": "2",
+      "build_year": "2002",
+      "is_jeonse": false
+    },
+    {
+      "building_name": "(98-23)",
+      "type": "빌라",
+      "area_m2": 65.57,
+      "pyung": 19.8,
+      "deposit": 25625,
+      "monthly_rent": 12,
+      "deal_period": "2026.10.09",
+      "floor": "2",
+      "build_year": "2018",
       "is_jeonse": false
     },
     {
@@ -4790,18 +5114,6 @@
       "floor": "5",
       "build_year": "2021",
       "is_jeonse": true
-    },
-    {
-      "building_name": "대동빌라나동",
-      "type": "빌라",
-      "area_m2": 33.19,
-      "pyung": 10.0,
-      "deposit": 1000,
-      "monthly_rent": 80,
-      "deal_period": "2026.10.22",
-      "floor": "4",
-      "build_year": "2002",
-      "is_jeonse": false
     },
     {
       "building_name": "(미상)",
@@ -7658,6 +7970,30 @@
       "floor": "12",
       "build_year": "2015",
       "is_jeonse": true
+    },
+    {
+      "building_name": "강서힐스테이트",
+      "type": "아파트",
+      "area_m2": 128.81,
+      "pyung": 39.0,
+      "deposit": 107400,
+      "monthly_rent": 0,
+      "deal_period": "2026.10.05",
+      "floor": "4",
+      "build_year": "2015",
+      "is_jeonse": true
+    },
+    {
+      "building_name": "성재센트리움아파트",
+      "type": "아파트",
+      "area_m2": 25.18,
+      "pyung": 7.6,
+      "deposit": 3000,
+      "monthly_rent": 80,
+      "deal_period": "2026.10.31",
+      "floor": "5",
+      "build_year": "2016",
+      "is_jeonse": false
     },
     {
       "building_name": "NS파크APT",
@@ -255127,6 +255463,66 @@
   "by_pyung_range": {
     "10평 이하": [
       {
+        "building_name": "아덴하임",
+        "type": "오피스텔",
+        "area_m2": 29.57,
+        "pyung": 8.9,
+        "deposit": 22000,
+        "monthly_rent": 0,
+        "deal_period": "2026.11.04",
+        "floor": "8",
+        "build_year": "2020",
+        "is_jeonse": true
+      },
+      {
+        "building_name": "더프라임",
+        "type": "오피스텔",
+        "area_m2": 27.42,
+        "pyung": 8.3,
+        "deposit": 5000,
+        "monthly_rent": 90,
+        "deal_period": "2026.11.04",
+        "floor": "7",
+        "build_year": "2023",
+        "is_jeonse": false
+      },
+      {
+        "building_name": "연우넥스트파크뷰",
+        "type": "오피스텔",
+        "area_m2": 15.29,
+        "pyung": 4.6,
+        "deposit": 13500,
+        "monthly_rent": 9,
+        "deal_period": "2026.11.05",
+        "floor": "10",
+        "build_year": "2019",
+        "is_jeonse": false
+      },
+      {
+        "building_name": "아덴하임",
+        "type": "오피스텔",
+        "area_m2": 29.57,
+        "pyung": 8.9,
+        "deposit": 22000,
+        "monthly_rent": 0,
+        "deal_period": "2026.11.04",
+        "floor": "7",
+        "build_year": "2020",
+        "is_jeonse": true
+      },
+      {
+        "building_name": "아덴하임",
+        "type": "오피스텔",
+        "area_m2": 29.57,
+        "pyung": 8.9,
+        "deposit": 22000,
+        "monthly_rent": 0,
+        "deal_period": "2026.11.04",
+        "floor": "8",
+        "build_year": "2020",
+        "is_jeonse": true
+      },
+      {
         "building_name": "제이투리더스뷰 2차",
         "type": "오피스텔",
         "area_m2": 28.07,
@@ -255197,6 +255593,66 @@
         "floor": "14",
         "build_year": "2019",
         "is_jeonse": false
+      },
+      {
+        "building_name": "에스엠파크빌(346-94외)",
+        "type": "빌라",
+        "area_m2": 32.81,
+        "pyung": 9.9,
+        "deposit": 330,
+        "monthly_rent": 110,
+        "deal_period": "2026.11.04",
+        "floor": "4",
+        "build_year": "2015",
+        "is_jeonse": false
+      },
+      {
+        "building_name": "연우넥스트뷰",
+        "type": "빌라",
+        "area_m2": 13.16,
+        "pyung": 4.0,
+        "deposit": 1000,
+        "monthly_rent": 67,
+        "deal_period": "2026.11.05",
+        "floor": "15",
+        "build_year": "2018",
+        "is_jeonse": false
+      },
+      {
+        "building_name": "이든빌리지",
+        "type": "빌라",
+        "area_m2": 16.1,
+        "pyung": 4.9,
+        "deposit": 1000,
+        "monthly_rent": 60,
+        "deal_period": "2026.11.02",
+        "floor": "4",
+        "build_year": "2011",
+        "is_jeonse": false
+      },
+      {
+        "building_name": "제이투리더스",
+        "type": "빌라",
+        "area_m2": 27.96,
+        "pyung": 8.5,
+        "deposit": 21000,
+        "monthly_rent": 0,
+        "deal_period": "2026.11.05",
+        "floor": "2",
+        "build_year": "2023",
+        "is_jeonse": true
+      },
+      {
+        "building_name": "블루힐",
+        "type": "빌라",
+        "area_m2": 27.67,
+        "pyung": 8.4,
+        "deposit": 25000,
+        "monthly_rent": 0,
+        "deal_period": "2026.11.04",
+        "floor": "4",
+        "build_year": "2020",
+        "is_jeonse": true
       },
       {
         "building_name": "승윤노블리안시티",
@@ -255331,6 +255787,18 @@
         "is_jeonse": true
       },
       {
+        "building_name": "에스타워",
+        "type": "아파트",
+        "area_m2": 29.86,
+        "pyung": 9.0,
+        "deposit": 16100,
+        "monthly_rent": 15,
+        "deal_period": "2026.11.04",
+        "floor": "9",
+        "build_year": "2017",
+        "is_jeonse": false
+      },
+      {
         "building_name": "리치아파트",
         "type": "아파트",
         "area_m2": 19.81,
@@ -255364,6 +255832,42 @@
         "deal_period": "2026.10.21",
         "floor": "2",
         "build_year": "2022",
+        "is_jeonse": true
+      },
+      {
+        "building_name": "연우넥스트파크뷰",
+        "type": "오피스텔",
+        "area_m2": 15.29,
+        "pyung": 4.6,
+        "deposit": 1000,
+        "monthly_rent": 70,
+        "deal_period": "2026.10.14",
+        "floor": "13",
+        "build_year": "2019",
+        "is_jeonse": false
+      },
+      {
+        "building_name": "양지",
+        "type": "오피스텔",
+        "area_m2": 28.56,
+        "pyung": 8.6,
+        "deposit": 5000,
+        "monthly_rent": 100,
+        "deal_period": "2026.10.29",
+        "floor": "10",
+        "build_year": "2023",
+        "is_jeonse": false
+      },
+      {
+        "building_name": "연우넥스트파크뷰",
+        "type": "오피스텔",
+        "area_m2": 24.07,
+        "pyung": 7.3,
+        "deposit": 21000,
+        "monthly_rent": 0,
+        "deal_period": "2026.10.24",
+        "floor": "11",
+        "build_year": "2019",
         "is_jeonse": true
       },
       {
@@ -257129,6 +257633,18 @@
         "floor": "2",
         "build_year": "2014",
         "is_jeonse": false
+      },
+      {
+        "building_name": "드림하우스",
+        "type": "빌라",
+        "area_m2": 29.67,
+        "pyung": 9.0,
+        "deposit": 12500,
+        "monthly_rent": 0,
+        "deal_period": "2026.10.27",
+        "floor": "4",
+        "build_year": "2012",
+        "is_jeonse": true
       },
       {
         "building_name": "국도드림빌",
@@ -259661,6 +260177,18 @@
         "floor": "5",
         "build_year": "2021",
         "is_jeonse": true
+      },
+      {
+        "building_name": "성재센트리움아파트",
+        "type": "아파트",
+        "area_m2": 25.18,
+        "pyung": 7.6,
+        "deposit": 3000,
+        "monthly_rent": 80,
+        "deal_period": "2026.10.31",
+        "floor": "5",
+        "build_year": "2016",
+        "is_jeonse": false
       },
       {
         "building_name": "NS파크APT",
@@ -384921,6 +385449,42 @@
     ],
     "10~15평": [
       {
+        "building_name": "혜성오피아파트",
+        "type": "오피스텔",
+        "area_m2": 46.58,
+        "pyung": 14.1,
+        "deposit": 4000,
+        "monthly_rent": 73,
+        "deal_period": "2026.11.02",
+        "floor": "2",
+        "build_year": "2019",
+        "is_jeonse": false
+      },
+      {
+        "building_name": "호경주택",
+        "type": "빌라",
+        "area_m2": 42.71,
+        "pyung": 12.9,
+        "deposit": 11500,
+        "monthly_rent": 0,
+        "deal_period": "2026.11.05",
+        "floor": "5",
+        "build_year": "2002",
+        "is_jeonse": true
+      },
+      {
+        "building_name": "우성",
+        "type": "빌라",
+        "area_m2": 37.15,
+        "pyung": 11.2,
+        "deposit": 3000,
+        "monthly_rent": 110,
+        "deal_period": "2026.11.03",
+        "floor": "4",
+        "build_year": "2016",
+        "is_jeonse": false
+      },
+      {
         "building_name": "블루밍하우스",
         "type": "빌라",
         "area_m2": 36.48,
@@ -385242,6 +385806,30 @@
         "deal_period": "2026.10.01",
         "floor": "15",
         "build_year": "2018",
+        "is_jeonse": false
+      },
+      {
+        "building_name": "우성그린빌라",
+        "type": "빌라",
+        "area_m2": 36.15,
+        "pyung": 10.9,
+        "deposit": 5000,
+        "monthly_rent": 50,
+        "deal_period": "2026.10.24",
+        "floor": "4",
+        "build_year": "1993",
+        "is_jeonse": false
+      },
+      {
+        "building_name": "비전쉐르빌",
+        "type": "빌라",
+        "area_m2": 41.18,
+        "pyung": 12.5,
+        "deposit": 12000,
+        "monthly_rent": 16,
+        "deal_period": "2026.10.27",
+        "floor": "2",
+        "build_year": "2002",
         "is_jeonse": false
       },
       {
@@ -385975,18 +386563,6 @@
         "floor": "3",
         "build_year": "2001",
         "is_jeonse": true
-      },
-      {
-        "building_name": "대동빌라나동",
-        "type": "빌라",
-        "area_m2": 33.19,
-        "pyung": 10.0,
-        "deposit": 1000,
-        "monthly_rent": 80,
-        "deal_period": "2026.10.22",
-        "floor": "4",
-        "build_year": "2002",
-        "is_jeonse": false
       },
       {
         "building_name": "(미상)",
@@ -439607,6 +440183,30 @@
     ],
     "15~20평": [
       {
+        "building_name": "국민쉐르빌",
+        "type": "빌라",
+        "area_m2": 50.1,
+        "pyung": 15.2,
+        "deposit": 13000,
+        "monthly_rent": 20,
+        "deal_period": "2026.11.05",
+        "floor": "2",
+        "build_year": "2010",
+        "is_jeonse": false
+      },
+      {
+        "building_name": "강남빌라",
+        "type": "빌라",
+        "area_m2": 56.6,
+        "pyung": 17.1,
+        "deposit": 1000,
+        "monthly_rent": 90,
+        "deal_period": "2026.11.05",
+        "floor": "2",
+        "build_year": "1987",
+        "is_jeonse": false
+      },
+      {
         "building_name": "황제아이파크",
         "type": "빌라",
         "area_m2": 52.02,
@@ -439749,6 +440349,42 @@
         "floor": "11",
         "build_year": "2024",
         "is_jeonse": true
+      },
+      {
+        "building_name": "아네스하우스",
+        "type": "빌라",
+        "area_m2": 65.72,
+        "pyung": 19.9,
+        "deposit": 13500,
+        "monthly_rent": 47,
+        "deal_period": "2026.10.28",
+        "floor": "1",
+        "build_year": "2002",
+        "is_jeonse": false
+      },
+      {
+        "building_name": "파크그린빌라",
+        "type": "빌라",
+        "area_m2": 53.69,
+        "pyung": 16.2,
+        "deposit": 15240,
+        "monthly_rent": 14,
+        "deal_period": "2026.10.28",
+        "floor": "3",
+        "build_year": "2001",
+        "is_jeonse": false
+      },
+      {
+        "building_name": "(98-23)",
+        "type": "빌라",
+        "area_m2": 65.57,
+        "pyung": 19.8,
+        "deposit": 25625,
+        "monthly_rent": 12,
+        "deal_period": "2026.10.09",
+        "floor": "2",
+        "build_year": "2018",
+        "is_jeonse": false
       },
       {
         "building_name": "대덕빌라",
@@ -481143,6 +481779,18 @@
       {
         "building_name": "강서힐스테이트",
         "type": "아파트",
+        "area_m2": 84.99,
+        "pyung": 25.7,
+        "deposit": 15000,
+        "monthly_rent": 290,
+        "deal_period": "2026.11.03",
+        "floor": "5",
+        "build_year": "2015",
+        "is_jeonse": false
+      },
+      {
+        "building_name": "강서힐스테이트",
+        "type": "아파트",
         "area_m2": 128.81,
         "pyung": 39.0,
         "deposit": 40000,
@@ -481163,6 +481811,18 @@
         "floor": "-1",
         "build_year": "2003",
         "is_jeonse": false
+      },
+      {
+        "building_name": "강서힐스테이트",
+        "type": "아파트",
+        "area_m2": 128.81,
+        "pyung": 39.0,
+        "deposit": 107400,
+        "monthly_rent": 0,
+        "deal_period": "2026.10.05",
+        "floor": "4",
+        "build_year": "2015",
+        "is_jeonse": true
       },
       {
         "building_name": "우장산아이파크,이편한세상",
@@ -500547,6 +501207,18 @@
     ],
     "20~25평": [
       {
+        "building_name": "홍익빌라",
+        "type": "빌라",
+        "area_m2": 78.0,
+        "pyung": 23.6,
+        "deposit": 15000,
+        "monthly_rent": 50,
+        "deal_period": "2026.10.13",
+        "floor": "1",
+        "build_year": "1995",
+        "is_jeonse": false
+      },
+      {
         "building_name": "삼광아트빌",
         "type": "빌라",
         "area_m2": 72.79,
@@ -518087,7 +518759,7 @@
     },
     {
       "name": "연우넥스트뷰",
-      "type": "오피스텔"
+      "type": "빌라"
     },
     {
       "name": "연우넥스트파크뷰",
@@ -518495,7 +519167,7 @@
     },
     {
       "name": "우성",
-      "type": "아파트"
+      "type": "빌라"
     },
     {
       "name": "우성(105-9외)",
