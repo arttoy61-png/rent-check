@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-09T13:22:46",
+  "generated_at": "2026-11-09T15:24:24",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
@@ -23,7 +23,7 @@
       ],
       "fresh_count": 6,
       "carried_count": 8,
-      "failure_streak": 142
+      "failure_streak": 143
     },
     "SH": {
       "count": 22,
@@ -55,7 +55,7 @@
   "summary": {
     "total": 39,
     "gangseo": 5,
-    "new": 6,
+    "new": 0,
     "updated": 0,
     "open_or_check": 17,
     "by_housing_type": {
@@ -100,7 +100,7 @@
       "deadline": "2026-11-10",
       "open_state": "마감임박",
       "event": "신규",
-      "change": "신규",
+      "change": "동일",
       "status_text": "마감임박",
       "is_gangseo": false,
       "keywords": [
@@ -155,7 +155,7 @@
       "deadline": "2026-11-10",
       "open_state": "마감임박",
       "event": "신규",
-      "change": "신규",
+      "change": "동일",
       "status_text": "마감임박",
       "is_gangseo": false,
       "keywords": [
@@ -210,7 +210,7 @@
       "deadline": "2026-11-10",
       "open_state": "마감임박",
       "event": "신규",
-      "change": "신규",
+      "change": "동일",
       "status_text": "마감임박",
       "is_gangseo": false,
       "keywords": [
@@ -265,7 +265,7 @@
       "deadline": "2026-11-10",
       "open_state": "마감임박",
       "event": "신규",
-      "change": "신규",
+      "change": "동일",
       "status_text": "마감임박",
       "is_gangseo": false,
       "keywords": [
@@ -337,7 +337,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311962",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.10.28.(수) ~ 2026.11.12.(목) 18시까지",
-        "verified_at": "2026-11-09T13:22:35"
+        "verified_at": "2026-11-09T15:24:12"
       },
       "sh_schedule_version": 1
     },
@@ -378,7 +378,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311965",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.11.02.(월) ~ 11.12.(목) 18시까지",
-        "verified_at": "2026-11-09T13:22:40"
+        "verified_at": "2026-11-09T15:24:17"
       },
       "sh_schedule_version": 1
     },
@@ -398,7 +398,7 @@
       "deadline": "2026-11-15",
       "open_state": "접수예정",
       "event": "신규",
-      "change": "신규",
+      "change": "동일",
       "status_text": "접수예정",
       "is_gangseo": true,
       "keywords": [
@@ -454,7 +454,7 @@
       "deadline": "2026-11-15",
       "open_state": "접수예정",
       "event": "신규",
-      "change": "신규",
+      "change": "동일",
       "status_text": "접수예정",
       "is_gangseo": false,
       "keywords": [
