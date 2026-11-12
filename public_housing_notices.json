@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-12T04:35:59",
+  "generated_at": "2026-11-12T11:17:52",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
@@ -23,16 +23,16 @@
       ],
       "fresh_count": 6,
       "carried_count": 8,
-      "failure_streak": 150
+      "failure_streak": 151
     },
     "SH": {
-      "count": 18,
+      "count": 19,
       "errors": []
     },
     "SEOUL": {
       "count": 12,
       "errors": [],
-      "excluded_noise": 15
+      "excluded_noise": 16
     },
     "SOCO": {
       "count": 6,
@@ -45,22 +45,22 @@
       "source_url": "https://soco.seoul.go.kr/youth/pgm/home/yohome/bbsListJson.json"
     },
     "TOTAL": {
-      "count": 36,
+      "count": 37,
       "duplicates_removed": 3,
-      "excluded_non_housing": 2,
+      "excluded_non_housing": 3,
       "excluded_outside_seoul": 0,
       "published_count": 39
     }
   },
   "summary": {
     "total": 39,
-    "gangseo": 5,
-    "new": 5,
-    "updated": 2,
+    "gangseo": 4,
+    "new": 1,
+    "updated": 0,
     "open_or_check": 13,
     "by_housing_type": {
       "안심주택": 9,
-      "기타임대": 8,
+      "기타임대": 7,
       "매입임대": 10,
       "기숙사": 2,
       "통합공공임대": 2,
@@ -68,7 +68,8 @@
       "든든전세": 1,
       "행복주택": 5,
       "국민임대": 1,
-      "영구임대": 1
+      "영구임대": 1,
+      "장기전세": 1
     },
     "by_audience": {
       "청년": 9,
@@ -227,7 +228,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311962",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.10.28.(수) ~ 2026.11.12.(목) 18시까지",
-        "verified_at": "2026-11-12T04:35:48"
+        "verified_at": "2026-11-12T11:17:41"
       },
       "sh_schedule_version": 1
     },
@@ -268,7 +269,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=311965",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.11.02.(월) ~ 11.12.(목) 18시까지",
-        "verified_at": "2026-11-12T04:35:52"
+        "verified_at": "2026-11-12T11:17:45"
       },
       "sh_schedule_version": 1
     },
@@ -285,8 +286,8 @@
       "published_at": "2026-11-11",
       "deadline": "",
       "open_state": "확인필요",
-      "event": "수정",
-      "change": "수정",
+      "event": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [],
@@ -320,8 +321,8 @@
       "published_at": "2026-11-11",
       "deadline": "",
       "open_state": "확인필요",
-      "event": "수정",
-      "change": "수정",
+      "event": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -393,7 +394,7 @@
       "deadline": "",
       "open_state": "확인필요",
       "event": "수정",
-      "change": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [],
@@ -425,7 +426,7 @@
       "deadline": "",
       "open_state": "확인필요",
       "event": "신규",
-      "change": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [],
@@ -457,7 +458,7 @@
       "deadline": "",
       "open_state": "확인필요",
       "event": "신규",
-      "change": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -926,7 +927,7 @@
       "deadline": "2026-10-15",
       "open_state": "마감",
       "event": "신규",
-      "change": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -964,7 +965,7 @@
       "deadline": "2026-10-15",
       "open_state": "마감",
       "event": "신규",
-      "change": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -1301,32 +1302,29 @@
       "sh_schedule_version": 1
     },
     {
-      "id": "SH:seq:312844",
+      "id": "SH:seq:313221",
       "agency": "SH",
       "agency_group": "SH",
-      "title": "2026년 가양동 육아 협동조합주택(이음채) 잔여세대 입주자 모집공고(2026. 6. 23.) 예비 1차 당첨자 발표",
+      "title": "NEW [입주안내문] 동작보라매역 프리센트(제50차 장기전세)",
       "housing_types": [
-        "기타임대"
+        "장기전세"
       ],
       "audiences": [],
       "region": "서울",
-      "published_at": "2026-11-09",
+      "published_at": "2026-11-12",
       "deadline": "",
       "open_state": "신청대상아님",
-      "event": "결과",
-      "change": "동일",
+      "event": "신규",
+      "change": "신규",
       "status_text": "",
-      "is_gangseo": true,
-      "keywords": [
-        "가양",
-        "협동조합"
-      ],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=312844",
+      "is_gangseo": false,
+      "keywords": [],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313221",
       "source": "SH 공식 주택임대 게시판",
-      "content_signature": "ac6386c1a96409984659d2b666a3a71ea74ef39cb6cb449cbb784d3125140719",
+      "content_signature": "086859ce44f2e25b1040797d4fd31a5411d74eff810c98fa903113e0c57740e2",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "published_source": "official_list_registration",
-      "notice_kind": "result",
+      "notice_kind": "move_in",
       "application_start": "",
       "schedule_type": "not_applicable",
       "deadline_precision": "unknown",
