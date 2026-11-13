@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-13T19:58:18",
+  "generated_at": "2026-11-14T04:41:18",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
@@ -23,7 +23,7 @@
       ],
       "fresh_count": 6,
       "carried_count": 8,
-      "failure_streak": 155
+      "failure_streak": 156
     },
     "SH": {
       "count": 21,
@@ -55,8 +55,8 @@
   "summary": {
     "total": 48,
     "gangseo": 5,
-    "new": 4,
-    "updated": 0,
+    "new": 0,
+    "updated": 4,
     "open_or_check": 19,
     "by_housing_type": {
       "안심주택": 16,
@@ -640,7 +640,7 @@
       "id": "SH:seq:313316",
       "agency": "SH",
       "agency_group": "SH",
-      "title": "NEW 제47차 장기전세주택(2025.04.30.) 예비 6차 입주대상자 발표",
+      "title": "제47차 장기전세주택(2025.04.30.) 예비 6차 입주대상자 발표",
       "housing_types": [
         "장기전세"
       ],
@@ -649,14 +649,14 @@
       "published_at": "2026-11-13",
       "deadline": "",
       "open_state": "확인필요",
-      "event": "신규",
-      "change": "신규",
+      "event": "수정",
+      "change": "수정",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [],
       "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313316",
       "source": "SH 공식 주택임대 게시판",
-      "content_signature": "212ea5380d5db65976abfc510108917bfcd5b7d9dd7137ad4d258b49c6eef625",
+      "content_signature": "2a5a4833eee3c11ec2f5cbec9f258dc360828f337cbdfe776d6f16f421be5542",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "published_source": "official_list_registration",
       "notice_kind": "recruitment",
@@ -673,7 +673,7 @@
       "id": "SH:seq:313326",
       "agency": "SH",
       "agency_group": "SH",
-      "title": "NEW 소규모 매입임대주택 신규 입주세대 공동생활 수칙 안내",
+      "title": "소규모 매입임대주택 신규 입주세대 공동생활 수칙 안내",
       "housing_types": [
         "매입임대"
       ],
@@ -682,8 +682,8 @@
       "published_at": "2026-11-13",
       "deadline": "",
       "open_state": "확인필요",
-      "event": "신규",
-      "change": "신규",
+      "event": "수정",
+      "change": "수정",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -691,7 +691,7 @@
       ],
       "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313326",
       "source": "SH 공식 주택임대 게시판",
-      "content_signature": "544ca3bba49f66911f333c0f75749c601328ab22310d14b9c68ed10807cdb40e",
+      "content_signature": "a67479c8df4ff8af58a3de85d6cf334ccfe9169d96e952520f709a04a682d569",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "published_source": "official_list_registration",
       "notice_kind": "recruitment",
@@ -1861,7 +1861,7 @@
       "id": "SH:seq:313306",
       "agency": "SH",
       "agency_group": "SH",
-      "title": "NEW 제50차 장기전세주택 [엘리프미아역] 입주안내문 게시",
+      "title": "제50차 장기전세주택 [엘리프미아역] 입주안내문 게시",
       "housing_types": [
         "장기전세"
       ],
@@ -1870,14 +1870,14 @@
       "published_at": "2026-11-13",
       "deadline": "",
       "open_state": "신청대상아님",
-      "event": "신규",
-      "change": "신규",
+      "event": "수정",
+      "change": "수정",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [],
       "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313306",
       "source": "SH 공식 주택임대 게시판",
-      "content_signature": "e38e4cc93e5616f33c64ce3fa8faf651ef0905499b07a879c2d768a35ef90168",
+      "content_signature": "149eca2fabd80c3c7800e14e086b2ef3b2b2c124f666799d71f270101150a576",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "published_source": "official_list_registration",
       "notice_kind": "move_in",
@@ -1894,7 +1894,7 @@
       "id": "SH:seq:313303",
       "agency": "SH",
       "agency_group": "SH",
-      "title": "NEW 2026년 3차 희망하우징(공공기숙사) 잔여세대 입주자 모집공고(2026. 10. 28.) 서류심사대상자 발표",
+      "title": "2026년 3차 희망하우징(공공기숙사) 잔여세대 입주자 모집공고(2026. 10. 28.) 서류심사대상자 발표",
       "housing_types": [
         "기숙사"
       ],
@@ -1904,7 +1904,7 @@
       "deadline": "",
       "open_state": "신청대상아님",
       "event": "결과",
-      "change": "신규",
+      "change": "수정",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -1912,7 +1912,7 @@
       ],
       "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313303",
       "source": "SH 공식 주택임대 게시판",
-      "content_signature": "45bc8eed59bad761208701854c006de62f067fd3efd5f98bc4a790c5eca4b705",
+      "content_signature": "cfbdc14d383a66a0546aa8ae6e768cfd69fa6621f4efc5b296b82b4819f493c6",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "published_source": "official_list_registration",
       "notice_kind": "result",
