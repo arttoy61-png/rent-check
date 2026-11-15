@@ -1,7 +1,7 @@
 {
   "region": "화곡동",
-  "generated_at": "2026-11-15T22:53:46.209507",
-  "total_deals": 21506,
+  "generated_at": "2026-11-16T08:58:56.394062",
+  "total_deals": 21507,
   "deals": [
     {
       "building_name": "화곡팰리스",
@@ -1981,6 +1981,18 @@
       "deal_period": "2026.11.02",
       "floor": "3",
       "build_year": "2002",
+      "is_jeonse": false
+    },
+    {
+      "building_name": "화곡보람",
+      "type": "아파트",
+      "area_m2": 84.0,
+      "pyung": 25.4,
+      "deposit": 30000,
+      "monthly_rent": 100,
+      "deal_period": "2026.11.12",
+      "floor": "15",
+      "build_year": "2004",
       "is_jeonse": false
     },
     {
@@ -496536,6 +496548,18 @@
         "deal_period": "2026.11.09",
         "floor": "2",
         "build_year": "2007",
+        "is_jeonse": false
+      },
+      {
+        "building_name": "화곡보람",
+        "type": "아파트",
+        "area_m2": 84.0,
+        "pyung": 25.4,
+        "deposit": 30000,
+        "monthly_rent": 100,
+        "deal_period": "2026.11.12",
+        "floor": "15",
+        "build_year": "2004",
         "is_jeonse": false
       },
       {
