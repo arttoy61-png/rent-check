@@ -1,17 +1,17 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-19T11:34:46",
+  "generated_at": "2026-11-19T20:37:59",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
     "LH": {
-      "count": 3,
+      "count": 4,
       "errors": [
         "LH OpenAPI: 06/1:HTTP Error 403: Forbidden; 13/1:HTTP Error 403: Forbidden; 39/1:HTTP Error 403: Forbidden"
       ],
-      "official_count": 3,
+      "official_count": 4,
       "api_count": 0,
-      "html_count": 3,
+      "html_count": 4,
       "mirror_count": 0,
       "mirror_latest_published_at": "",
       "mirror_stale": false,
@@ -21,109 +21,133 @@
       "diagnostic_errors": [
         "LH OpenAPI: 06/1:HTTP Error 403: Forbidden; 13/1:HTTP Error 403: Forbidden; 39/1:HTTP Error 403: Forbidden"
       ],
-      "fresh_count": 3,
+      "fresh_count": 4,
       "carried_count": 12,
-      "failure_streak": 171
+      "failure_streak": 172
     },
     "SH": {
-      "count": 15,
+      "count": 18,
       "errors": []
     },
     "SEOUL": {
-      "count": 21,
+      "count": 32,
       "errors": [],
-      "excluded_noise": 14
+      "excluded_noise": 13
     },
     "SOCO": {
-      "count": 14,
+      "count": 25,
       "errors": [],
-      "pages": 3,
+      "pages": 4,
       "status": "정상",
-      "latest_published_at": "2026-11-12",
+      "latest_published_at": "2026-11-19",
       "lookback_start": "2026-11-01",
       "unknown_schedule_count": 0,
       "source_url": "https://soco.seoul.go.kr/youth/pgm/home/yohome/bbsListJson.json"
     },
     "TOTAL": {
-      "count": 37,
-      "duplicates_removed": 3,
+      "count": 53,
+      "duplicates_removed": 4,
       "excluded_non_housing": 1,
       "excluded_outside_seoul": 0,
-      "published_count": 47
+      "published_count": 61
     }
   },
   "summary": {
-    "total": 47,
+    "total": 61,
     "gangseo": 5,
-    "new": 2,
-    "updated": 0,
-    "open_or_check": 13,
+    "new": 18,
+    "updated": 1,
+    "open_or_check": 25,
     "by_housing_type": {
-      "안심주택": 14,
+      "행복주택": 8,
+      "안심주택": 25,
+      "기타임대": 9,
       "영구임대": 3,
-      "기타임대": 7,
-      "행복주택": 7,
-      "장기전세": 1,
-      "기숙사": 3,
+      "기숙사": 2,
       "통합공공임대": 2,
       "공공임대": 4,
       "매입임대": 8,
       "든든전세": 1,
-      "국민임대": 1
+      "국민임대": 3
     },
     "by_audience": {
-      "청년": 17,
-      "신혼부부": 6,
-      "고령자": 1,
+      "청년": 28,
+      "고령자": 2,
+      "신혼부부": 7,
       "신생아": 5
     },
     "by_agency": {
-      "SEOUL": 14,
-      "SH": 18,
-      "LH": 15
+      "LH": 16,
+      "SEOUL": 25,
+      "SH": 20
     }
   },
   "items": [
     {
-      "id": "SOCOS:boardId:6727",
+      "id": "LH:panId:2015122300021098",
+      "agency": "LH",
+      "agency_group": "LH",
+      "title": "서울삼전,강동천호,LH수서1,LH수서2 행복주택 예비입주자 모집공고",
+      "housing_types": [
+        "행복주택"
+      ],
+      "audiences": [],
+      "region": "서울특별시",
+      "published_at": "2026-11-19",
+      "deadline": "2026-12-01",
+      "open_state": "접수예정",
+      "event": "신규",
+      "change": "신규",
+      "status_text": "공고중",
+      "is_gangseo": false,
+      "keywords": [
+        "행복주택"
+      ],
+      "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300021098&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=10&mi=1026",
+      "source": "LH청약플러스 실제 공고표",
+      "content_signature": "7d9c38fe5d5ce17d73cc4a67624bfe5111acce03f77ba9f4595329a52e9bf1e4",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "2026-11-30",
+      "schedule_source": "official_detail_html"
+    },
+    {
+      "id": "SOCOS:boardId:6796",
       "agency": "서울시 청년안심주택",
       "agency_group": "SEOUL",
-      "title": "[민간임대] 화곡역 보눔하우스 화곡 추가모집공고",
+      "title": "[민간임대] 장한평역 유니트125(UNIT125) 추가모집공고",
       "housing_types": [
         "안심주택"
       ],
       "audiences": [
         "청년"
       ],
-      "region": "서울 강서구",
-      "published_at": "2026-11-12",
-      "deadline": "2026-11-19",
-      "open_state": "마감임박",
+      "region": "서울 동대문구",
+      "published_at": "2026-11-19",
+      "deadline": "2026-11-24",
+      "open_state": "접수예정",
       "event": "신규",
-      "change": "동일",
-      "status_text": "마감임박",
-      "is_gangseo": true,
+      "change": "신규",
+      "status_text": "접수예정",
+      "is_gangseo": false,
       "keywords": [
-        "강서",
-        "화곡",
         "청년",
         "안심주택"
       ],
-      "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6727&menuNo=400008",
+      "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6796&menuNo=400008",
       "source": "서울시 청년안심주택",
-      "content_signature": "3e1c5562b2a96c5f7a85c251efcf261ae384e0af30c2f1c280e986854cd7c849",
+      "content_signature": "0922d3a5969c6dbefe6b336f7e6e838a5a1d61878ebd603cc9639f08b5bd8adf",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "notice_kind": "recruitment",
-      "application_start": "2026-11-18",
-      "application_start_at": "2026-11-18T00:00:00+09:00",
-      "deadline_at": "2026-11-19T18:00:00+09:00",
+      "application_start": "2026-11-23",
+      "application_start_at": "2026-11-23T09:00:00+09:00",
+      "deadline_at": "2026-11-25T00:00:00+09:00",
       "application_windows": [
         {
           "label": "청약신청",
-          "start": "2026-11-18",
-          "end": "2026-11-19",
-          "start_at": "2026-11-18T00:00:00+09:00",
-          "end_at": "2026-11-19T18:00:00+09:00",
+          "start": "2026-11-23",
+          "end": "2026-11-25",
+          "start_at": "2026-11-23T09:00:00+09:00",
+          "end_at": "2026-11-25T00:00:00+09:00",
           "precision": "minute",
           "conditional": false,
           "restricted": false,
@@ -133,16 +157,648 @@
       "schedule_type": "single",
       "deadline_precision": "minute",
       "schedule_source": "official_detail_html",
-      "schedule_note": "공식 본문: 청약신청 : ‘26. 11. 18. (수) ~ 11. 19. (목) 00:00 ~ 18:00",
+      "schedule_note": "공식 본문: 청약신청 : ‘26. 11. 23. (월) 09:00 ~ 11. 24. (화) 24:00",
       "schedule_evidence": {
-        "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6727&menuNo=400008",
+        "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6796&menuNo=400008",
         "kind": "official_notice_body",
-        "excerpt": "청약신청 : ‘26. 11. 18. (수) ~ 11. 19. (목) 00:00 ~ 18:00"
+        "excerpt": "청약신청 : ‘26. 11. 23. (월) 09:00 ~ 11. 24. (화) 24:00"
       },
       "source_id": "SOCO"
     },
     {
-      "id": "SH:seq:313537",
+      "id": "SOCOS:boardId:6797",
+      "agency": "서울시 청년안심주택",
+      "agency_group": "SEOUL",
+      "title": "[민간임대] 왕십리역 라봄성동 추가모집공고",
+      "housing_types": [
+        "안심주택"
+      ],
+      "audiences": [
+        "청년"
+      ],
+      "region": "서울 성동구",
+      "published_at": "2026-11-19",
+      "deadline": "2026-11-23",
+      "open_state": "접수예정",
+      "event": "신규",
+      "change": "신규",
+      "status_text": "접수예정",
+      "is_gangseo": false,
+      "keywords": [
+        "청년",
+        "안심주택"
+      ],
+      "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6797&menuNo=400008",
+      "source": "서울시 청년안심주택",
+      "content_signature": "bb2d2311eb29abeb6c9b4cbfeddf3379a48f2124c2f0bccc0a27af1fc5beb65e",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "notice_kind": "recruitment",
+      "application_start": "2026-11-20",
+      "application_start_at": "2026-11-20T10:00:00+09:00",
+      "deadline_at": "2026-11-23T10:00:00+09:00",
+      "application_windows": [
+        {
+          "label": "청약신청",
+          "start": "2026-11-20",
+          "end": "2026-11-23",
+          "start_at": "2026-11-20T10:00:00+09:00",
+          "end_at": "2026-11-23T10:00:00+09:00",
+          "precision": "minute",
+          "conditional": false,
+          "restricted": false,
+          "condition": ""
+        }
+      ],
+      "schedule_type": "single",
+      "deadline_precision": "minute",
+      "schedule_source": "official_detail_html",
+      "schedule_note": "공식 본문: 청약신청 : ‘26. 11. 20.(금) 10:00 ~ 11. 23. (월) 10:00",
+      "schedule_evidence": {
+        "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6797&menuNo=400008",
+        "kind": "official_notice_body",
+        "excerpt": "청약신청 : ‘26. 11. 20.(금) 10:00 ~ 11. 23. (월) 10:00"
+      },
+      "source_id": "SOCO"
+    },
+    {
+      "id": "SOCOS:boardId:6803",
+      "agency": "서울시 청년안심주택",
+      "agency_group": "SEOUL",
+      "title": "[민간임대] 쌍문역 인히어쌍문 추가모집공고",
+      "housing_types": [
+        "안심주택"
+      ],
+      "audiences": [
+        "청년"
+      ],
+      "region": "서울 도봉구",
+      "published_at": "2026-11-19",
+      "deadline": "2026-11-25",
+      "open_state": "접수예정",
+      "event": "신규",
+      "change": "신규",
+      "status_text": "접수예정",
+      "is_gangseo": false,
+      "keywords": [
+        "청년",
+        "안심주택"
+      ],
+      "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6803&menuNo=400008",
+      "source": "서울시 청년안심주택",
+      "content_signature": "3ca45d1b4f3bce6289171dc46a7c50d77bfa594c15a465e029bccfa0794f2c3f",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "notice_kind": "recruitment",
+      "application_start": "2026-11-25",
+      "application_start_at": "2026-11-25T00:00:00+09:00",
+      "deadline_at": "2026-11-25T23:00:00+09:00",
+      "application_windows": [
+        {
+          "label": "청약신청",
+          "start": "2026-11-25",
+          "end": "2026-11-25",
+          "start_at": "2026-11-25T00:00:00+09:00",
+          "end_at": "2026-11-25T23:00:00+09:00",
+          "precision": "minute",
+          "conditional": false,
+          "restricted": false,
+          "condition": ""
+        }
+      ],
+      "schedule_type": "single",
+      "deadline_precision": "minute",
+      "schedule_source": "official_detail_html",
+      "schedule_note": "공식 본문: 청약신청 : ‘26. 11. 25. (수) 00:00 ~ 23:00",
+      "schedule_evidence": {
+        "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6803&menuNo=400008",
+        "kind": "official_notice_body",
+        "excerpt": "청약신청 : ‘26. 11. 25. (수) 00:00 ~ 23:00"
+      },
+      "source_id": "SOCO"
+    },
+    {
+      "id": "SOCOS:boardId:6800",
+      "agency": "서울시 청년안심주택",
+      "agency_group": "SEOUL",
+      "title": "[민간임대] 서초역 서초꽃마을 주얼리 추가모집공고",
+      "housing_types": [
+        "안심주택"
+      ],
+      "audiences": [
+        "청년"
+      ],
+      "region": "서울 서초구",
+      "published_at": "2026-11-19",
+      "deadline": "2026-11-23",
+      "open_state": "접수예정",
+      "event": "신규",
+      "change": "신규",
+      "status_text": "접수예정",
+      "is_gangseo": false,
+      "keywords": [
+        "청년",
+        "안심주택"
+      ],
+      "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6800&menuNo=400008",
+      "source": "서울시 청년안심주택",
+      "content_signature": "69200b37102417640a0a4103a06ae34769f91e38a8109f2bce29e5fe0871a39c",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "notice_kind": "recruitment",
+      "application_start": "2026-11-23",
+      "application_start_at": "2026-11-23T10:00:00+09:00",
+      "deadline_at": "2026-11-23T17:00:00+09:00",
+      "application_windows": [
+        {
+          "label": "청약신청",
+          "start": "2026-11-23",
+          "end": "2026-11-23",
+          "start_at": "2026-11-23T10:00:00+09:00",
+          "end_at": "2026-11-23T17:00:00+09:00",
+          "precision": "minute",
+          "conditional": false,
+          "restricted": false,
+          "condition": ""
+        }
+      ],
+      "schedule_type": "single",
+      "deadline_precision": "minute",
+      "schedule_source": "official_detail_html",
+      "schedule_note": "공식 본문: 청약신청 : ‘26. 11. 23. (월) 10:00 ~ 17:00",
+      "schedule_evidence": {
+        "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6800&menuNo=400008",
+        "kind": "official_notice_body",
+        "excerpt": "청약신청 : ‘26. 11. 23. (월) 10:00 ~ 17:00"
+      },
+      "source_id": "SOCO"
+    },
+    {
+      "id": "SOCOS:boardId:6804",
+      "agency": "서울시 청년안심주택",
+      "agency_group": "SEOUL",
+      "title": "[민간임대] 상봉역 제이스타상봉 추가모집공고",
+      "housing_types": [
+        "안심주택"
+      ],
+      "audiences": [
+        "청년"
+      ],
+      "region": "서울 중랑구",
+      "published_at": "2026-11-19",
+      "deadline": "2026-11-23",
+      "open_state": "접수예정",
+      "event": "신규",
+      "change": "신규",
+      "status_text": "접수예정",
+      "is_gangseo": false,
+      "keywords": [
+        "청년",
+        "안심주택"
+      ],
+      "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6804&menuNo=400008",
+      "source": "서울시 청년안심주택",
+      "content_signature": "b2e7f666e91fd8d96e5b7017332adae2f4f0db88166662ab5cd5221676cc3c2f",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "notice_kind": "recruitment",
+      "application_start": "2026-11-23",
+      "application_start_at": "2026-11-23T10:00:00+09:00",
+      "deadline_at": "2026-11-23T23:00:00+09:00",
+      "application_windows": [
+        {
+          "label": "청약신청",
+          "start": "2026-11-23",
+          "end": "2026-11-23",
+          "start_at": "2026-11-23T10:00:00+09:00",
+          "end_at": "2026-11-23T23:00:00+09:00",
+          "precision": "minute",
+          "conditional": false,
+          "restricted": false,
+          "condition": ""
+        }
+      ],
+      "schedule_type": "single",
+      "deadline_precision": "minute",
+      "schedule_source": "official_detail_html",
+      "schedule_note": "공식 본문: 청약신청 : ‘26. 11. 23. (월) 10:00 ~ 23:00",
+      "schedule_evidence": {
+        "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6804&menuNo=400008",
+        "kind": "official_notice_body",
+        "excerpt": "청약신청 : ‘26. 11. 23. (월) 10:00 ~ 23:00"
+      },
+      "source_id": "SOCO"
+    },
+    {
+      "id": "SOCOS:boardId:6798",
+      "agency": "서울시 청년안심주택",
+      "agency_group": "SEOUL",
+      "title": "[민간임대] 미아사거리역 미아 헤리츠타워 추가모집공고",
+      "housing_types": [
+        "안심주택"
+      ],
+      "audiences": [
+        "청년"
+      ],
+      "region": "서울 성북구",
+      "published_at": "2026-11-19",
+      "deadline": "2026-11-25",
+      "open_state": "접수예정",
+      "event": "신규",
+      "change": "신규",
+      "status_text": "접수예정",
+      "is_gangseo": false,
+      "keywords": [
+        "청년",
+        "안심주택"
+      ],
+      "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6798&menuNo=400008",
+      "source": "서울시 청년안심주택",
+      "content_signature": "d1829e0035e552a7c19d94ab0a1a2bf747812287232a832d7e45d02925284062",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "notice_kind": "recruitment",
+      "application_start": "2026-11-23",
+      "application_start_at": "2026-11-23T09:00:00+09:00",
+      "deadline_at": "2026-11-25T23:00:00+09:00",
+      "application_windows": [
+        {
+          "label": "청약신청",
+          "start": "2026-11-23",
+          "end": "2026-11-25",
+          "start_at": "2026-11-23T09:00:00+09:00",
+          "end_at": "2026-11-25T23:00:00+09:00",
+          "precision": "minute",
+          "conditional": false,
+          "restricted": false,
+          "condition": ""
+        }
+      ],
+      "schedule_type": "single",
+      "deadline_precision": "minute",
+      "schedule_source": "official_detail_html",
+      "schedule_note": "공식 본문: 청약신청 : ‘26. 11. 23. (월) 09:00 ~ 11. 25. (수) 23:00",
+      "schedule_evidence": {
+        "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6798&menuNo=400008",
+        "kind": "official_notice_body",
+        "excerpt": "청약신청 : ‘26. 11. 23. (월) 09:00 ~ 11. 25. (수) 23:00"
+      },
+      "source_id": "SOCO"
+    },
+    {
+      "id": "SOCOS:boardId:6805",
+      "agency": "서울시 청년안심주택",
+      "agency_group": "SEOUL",
+      "title": "[민간임대] 동묘앞역 청계로벤하임 추가모집공고",
+      "housing_types": [
+        "안심주택"
+      ],
+      "audiences": [
+        "청년"
+      ],
+      "region": "서울 종로구",
+      "published_at": "2026-11-19",
+      "deadline": "2026-11-23",
+      "open_state": "접수예정",
+      "event": "신규",
+      "change": "신규",
+      "status_text": "접수예정",
+      "is_gangseo": false,
+      "keywords": [
+        "청년",
+        "안심주택"
+      ],
+      "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6805&menuNo=400008",
+      "source": "서울시 청년안심주택",
+      "content_signature": "5e444f04228b2d3497bd0339db567d1554ccc0ed7379213a9b479dadba639936",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "notice_kind": "recruitment",
+      "application_start": "2026-11-23",
+      "application_start_at": "2026-11-23T00:00:00+09:00",
+      "deadline_at": "2026-11-23T23:00:00+09:00",
+      "application_windows": [
+        {
+          "label": "청약신청",
+          "start": "2026-11-23",
+          "end": "2026-11-23",
+          "start_at": "2026-11-23T00:00:00+09:00",
+          "end_at": "2026-11-23T23:00:00+09:00",
+          "precision": "minute",
+          "conditional": false,
+          "restricted": false,
+          "condition": ""
+        }
+      ],
+      "schedule_type": "single",
+      "deadline_precision": "minute",
+      "schedule_source": "official_detail_html",
+      "schedule_note": "공식 본문: 청약신청 : ‘26. 11. 23. (월) 00:00 ~ 23:00",
+      "schedule_evidence": {
+        "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6805&menuNo=400008",
+        "kind": "official_notice_body",
+        "excerpt": "청약신청 : ‘26. 11. 23. (월) 00:00 ~ 23:00"
+      },
+      "source_id": "SOCO"
+    },
+    {
+      "id": "SOCOS:boardId:6802",
+      "agency": "서울시 청년안심주택",
+      "agency_group": "SEOUL",
+      "title": "[민간임대] 구로디지털단지역 유벤투스 240 추가모집공고",
+      "housing_types": [
+        "안심주택"
+      ],
+      "audiences": [
+        "청년"
+      ],
+      "region": "서울 관악구",
+      "published_at": "2026-11-19",
+      "deadline": "2026-11-23",
+      "open_state": "접수예정",
+      "event": "신규",
+      "change": "신규",
+      "status_text": "접수예정",
+      "is_gangseo": false,
+      "keywords": [
+        "청년",
+        "안심주택"
+      ],
+      "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6802&menuNo=400008",
+      "source": "서울시 청년안심주택",
+      "content_signature": "ae91e6ed12c50d9570749de54509b4e75dc7f848560ea76b209402771bc72e00",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "notice_kind": "recruitment",
+      "application_start": "2026-11-23",
+      "application_start_at": "2026-11-23T00:00:00+09:00",
+      "deadline_at": "2026-11-23T23:00:00+09:00",
+      "application_windows": [
+        {
+          "label": "청약신청",
+          "start": "2026-11-23",
+          "end": "2026-11-23",
+          "start_at": "2026-11-23T00:00:00+09:00",
+          "end_at": "2026-11-23T23:00:00+09:00",
+          "precision": "minute",
+          "conditional": false,
+          "restricted": false,
+          "condition": ""
+        }
+      ],
+      "schedule_type": "single",
+      "deadline_precision": "minute",
+      "schedule_source": "official_detail_html",
+      "schedule_note": "공식 본문: 청약신청 : ‘26. 11. 23. (월) 00:00 ~ 23:00",
+      "schedule_evidence": {
+        "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6802&menuNo=400008",
+        "kind": "official_notice_body",
+        "excerpt": "청약신청 : ‘26. 11. 23. (월) 00:00 ~ 23:00"
+      },
+      "source_id": "SOCO"
+    },
+    {
+      "id": "SOCOS:boardId:6806",
+      "agency": "서울시 청년안심주택",
+      "agency_group": "SEOUL",
+      "title": "[민간임대] 광운대역 현대프라힐스 추가모집공고",
+      "housing_types": [
+        "안심주택"
+      ],
+      "audiences": [
+        "청년"
+      ],
+      "region": "서울 노원구",
+      "published_at": "2026-11-19",
+      "deadline": "2026-11-23",
+      "open_state": "접수예정",
+      "event": "신규",
+      "change": "신규",
+      "status_text": "접수예정",
+      "is_gangseo": false,
+      "keywords": [
+        "청년",
+        "안심주택"
+      ],
+      "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6806&menuNo=400008",
+      "source": "서울시 청년안심주택",
+      "content_signature": "6e33370178d4c36d7deeed77a3b562509dced1b8bbf43c381b82b69321da167d",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "notice_kind": "recruitment",
+      "application_start": "2026-11-23",
+      "application_start_at": "2026-11-23T00:00:00+09:00",
+      "deadline_at": "2026-11-23T23:00:00+09:00",
+      "application_windows": [
+        {
+          "label": "청약신청",
+          "start": "2026-11-23",
+          "end": "2026-11-23",
+          "start_at": "2026-11-23T00:00:00+09:00",
+          "end_at": "2026-11-23T23:00:00+09:00",
+          "precision": "minute",
+          "conditional": false,
+          "restricted": false,
+          "condition": ""
+        }
+      ],
+      "schedule_type": "single",
+      "deadline_precision": "minute",
+      "schedule_source": "official_detail_html",
+      "schedule_note": "공식 본문: 청약신청 : ‘26. 11. 23. (월) 00:00 ~ 23:00",
+      "schedule_evidence": {
+        "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6806&menuNo=400008",
+        "kind": "official_notice_body",
+        "excerpt": "청약신청 : ‘26. 11. 23. (월) 00:00 ~ 23:00"
+      },
+      "source_id": "SOCO"
+    },
+    {
+      "id": "SOCOS:boardId:6801",
+      "agency": "서울시 청년안심주택",
+      "agency_group": "SEOUL",
+      "title": "[민간임대] 개봉역 세이지움 개봉 추가모집공고",
+      "housing_types": [
+        "안심주택"
+      ],
+      "audiences": [
+        "청년"
+      ],
+      "region": "서울 구로구",
+      "published_at": "2026-11-19",
+      "deadline": "2026-11-24",
+      "open_state": "접수예정",
+      "event": "신규",
+      "change": "신규",
+      "status_text": "접수예정",
+      "is_gangseo": false,
+      "keywords": [
+        "청년",
+        "안심주택"
+      ],
+      "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6801&menuNo=400008",
+      "source": "서울시 청년안심주택",
+      "content_signature": "1b68f21c33fcccc3e25ab35441796e17152ea62a2710f41d578a091c54222e41",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "notice_kind": "recruitment",
+      "application_start": "2026-11-23",
+      "application_start_at": "2026-11-23T00:00:00+09:00",
+      "deadline_at": "2026-11-24T23:00:00+09:00",
+      "application_windows": [
+        {
+          "label": "청약신청",
+          "start": "2026-11-23",
+          "end": "2026-11-24",
+          "start_at": "2026-11-23T00:00:00+09:00",
+          "end_at": "2026-11-24T23:00:00+09:00",
+          "precision": "minute",
+          "conditional": false,
+          "restricted": false,
+          "condition": ""
+        }
+      ],
+      "schedule_type": "single",
+      "deadline_precision": "minute",
+      "schedule_source": "official_detail_html",
+      "schedule_note": "공식 본문: 청약신청 : ‘26. 11. 23. (월) 00:00 ~ 11. 24. (화) 23:00",
+      "schedule_evidence": {
+        "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6801&menuNo=400008",
+        "kind": "official_notice_body",
+        "excerpt": "청약신청 : ‘26. 11. 23. (월) 00:00 ~ 11. 24. (화) 23:00"
+      },
+      "source_id": "SOCO"
+    },
+    {
+      "id": "SOCOS:boardId:6799",
+      "agency": "서울시 청년안심주택",
+      "agency_group": "SEOUL",
+      "title": "[민간임대] 강변역 비바힐스강변 추가모집공고",
+      "housing_types": [
+        "안심주택"
+      ],
+      "audiences": [
+        "청년"
+      ],
+      "region": "서울 광진구",
+      "published_at": "2026-11-19",
+      "deadline": "2026-11-23",
+      "open_state": "접수예정",
+      "event": "신규",
+      "change": "신규",
+      "status_text": "접수예정",
+      "is_gangseo": false,
+      "keywords": [
+        "청년",
+        "안심주택"
+      ],
+      "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6799&menuNo=400008",
+      "source": "서울시 청년안심주택",
+      "content_signature": "cfd7a9d243c64f90066ce561ba11dfc983e046cfa490d19e688c19710426a193",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "notice_kind": "recruitment",
+      "application_start": "2026-11-23",
+      "application_start_at": "2026-11-23T10:00:00+09:00",
+      "deadline_at": "2026-11-23T16:00:00+09:00",
+      "application_windows": [
+        {
+          "label": "청약신청",
+          "start": "2026-11-23",
+          "end": "2026-11-23",
+          "start_at": "2026-11-23T10:00:00+09:00",
+          "end_at": "2026-11-23T16:00:00+09:00",
+          "precision": "minute",
+          "conditional": false,
+          "restricted": false,
+          "condition": ""
+        }
+      ],
+      "schedule_type": "single",
+      "deadline_precision": "minute",
+      "schedule_source": "official_detail_html",
+      "schedule_note": "공식 본문: 청약신청 : ‘26. 11. 23. (월) 10:00 ~ 16:00",
+      "schedule_evidence": {
+        "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6799&menuNo=400008",
+        "kind": "official_notice_body",
+        "excerpt": "청약신청 : ‘26. 11. 23. (월) 10:00 ~ 16:00"
+      },
+      "source_id": "SOCO"
+    },
+    {
+      "id": "SH:seq:313227",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "NEW 2026년 하반기 금천구 홀몸어르신(수요자맞춤형)주택 잔여세대 입주자 모집 공고",
+      "housing_types": [
+        "기타임대"
+      ],
+      "audiences": [
+        "고령자"
+      ],
+      "region": "서울",
+      "published_at": "2026-11-19",
+      "deadline": "2026-12-07",
+      "open_state": "접수예정",
+      "event": "신규",
+      "change": "신규",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313227",
+      "source": "SH 공식 주택임대 게시판",
+      "content_signature": "b1004ae982d91e6fe4c5c879763875d1385cfa21c9d8d1a1e433c1d3e41ca186",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "published_source": "official_list_registration",
+      "notice_kind": "recruitment",
+      "application_start": "2026-11-24",
+      "schedule_type": "single",
+      "deadline_precision": "date",
+      "schedule_source": "official_detail_html",
+      "schedule_note": "공식 상세본문 신청기간 기준입니다. 정확한 접수시각과 대상은 공고문을 확인하세요.",
+      "application_windows": [],
+      "schedule_evidence": {
+        "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313227",
+        "kind": "official_notice_body",
+        "excerpt": "접수기간 : 2026.11.24.(화) ~ 2026.12.07.(월)",
+        "verified_at": "2026-11-19T20:37:38"
+      },
+      "sh_schedule_version": 1
+    },
+    {
+      "id": "SH:seq:313225",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "NEW 2026년 하반기 금천구 신혼부부(수요자맞춤형)주택 잔여세대 입주자 모집 공고",
+      "housing_types": [
+        "기타임대"
+      ],
+      "audiences": [
+        "신혼부부"
+      ],
+      "region": "서울",
+      "published_at": "2026-11-19",
+      "deadline": "2026-12-07",
+      "open_state": "접수예정",
+      "event": "신규",
+      "change": "신규",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [
+        "신혼"
+      ],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313225",
+      "source": "SH 공식 주택임대 게시판",
+      "content_signature": "4d175d0c7ef7adf737d1d6e153e0283903edf358849525658beab31f919e0838",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "published_source": "official_list_registration",
+      "notice_kind": "recruitment",
+      "application_start": "2026-11-24",
+      "schedule_type": "single",
+      "deadline_precision": "date",
+      "schedule_source": "official_detail_html",
+      "schedule_note": "공식 상세본문 신청기간 기준입니다. 정확한 접수시각과 대상은 공고문을 확인하세요.",
+      "application_windows": [],
+      "schedule_evidence": {
+        "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313225",
+        "kind": "official_notice_body",
+        "excerpt": "접수기간 : 2026.11.24.(화) ~ 12.07.(월) 18시까지",
+        "verified_at": "2026-11-19T20:37:40"
+      },
+      "sh_schedule_version": 1
+    },
+    {
+      "id": "SH:seq:313606",
       "agency": "SH",
       "agency_group": "SH",
       "title": "NEW 2026년 영구임대주택 예비입주자 모집 공고",
@@ -159,9 +815,9 @@
       "status_text": "",
       "is_gangseo": false,
       "keywords": [],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313537",
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313606",
       "source": "SH 공식 주택임대 게시판",
-      "content_signature": "f91086901928d6501a86a09191987bb52a1bbab24b77b1226ca9e3a4a0dfd94f",
+      "content_signature": "6e5858400a6f1c5138d61237cce7cbb73c1081e2f961c8c6817e264fa44fc208",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "published_source": "official_list_registration",
       "notice_kind": "recruitment",
@@ -172,10 +828,10 @@
       "schedule_note": "공식 상세본문 신청기간 기준입니다. 정확한 접수시각과 대상은 공고문을 확인하세요.",
       "application_windows": [],
       "schedule_evidence": {
-        "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313537",
+        "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313606",
         "kind": "official_notice_body",
         "excerpt": "신청기간 : 2026. 11. 30.(월) ~ 2026. 12. 4.(금) - 접수 첫째날 30일 월요일은 동 주민센터 업무량 증가로 혼잡이 예상되니 가급적 다른 요일을 이용하시기 바랍니다.",
-        "verified_at": "2026-11-19T11:34:28"
+        "verified_at": "2026-11-19T20:37:44"
       },
       "sh_schedule_version": 1
     },
@@ -193,7 +849,7 @@
       "deadline": "2026-12-04",
       "open_state": "접수예정",
       "event": "신규",
-      "change": "신규",
+      "change": "동일",
       "status_text": "공고중",
       "is_gangseo": false,
       "keywords": [],
@@ -244,7 +900,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313424",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.11.25.(수) ~ 2026.12.04.(금) 18시까지",
-        "verified_at": "2026-11-19T11:34:30"
+        "verified_at": "2026-11-19T20:37:46"
       },
       "sh_schedule_version": 1
     },
@@ -260,19 +916,18 @@
         "고령자"
       ],
       "region": "서울",
-      "published_at": "2026-11-16",
+      "published_at": "",
       "deadline": "2026-12-04",
       "open_state": "접수예정",
-      "event": "신규",
-      "change": "동일",
+      "event": "수정",
+      "change": "수정",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [],
       "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313268",
-      "source": "SH 공식 주택임대 게시판",
-      "content_signature": "0324fd7fce2e38157296de9c27dc1f49142585a4b1d682a121c45858c4d914d8",
+      "source": "서울주거포털",
+      "content_signature": "7a09845a31f1942928f4886a4d8efe4dc330344c5a77e739a37a16d002fd5078",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "published_source": "official_list_registration",
       "notice_kind": "recruitment",
       "application_start": "2026-11-23",
       "schedule_type": "single",
@@ -284,7 +939,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313268",
         "kind": "official_notice_body",
         "excerpt": "접수 기간 : 2026.11.23.(월) ~ 12.04.(금) 18시까지",
-        "verified_at": "2026-11-19T11:34:35"
+        "verified_at": "2026-11-19T20:37:51"
       },
       "sh_schedule_version": 1
     },
@@ -311,39 +966,6 @@
       "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313484",
       "source": "SH 공식 주택임대 게시판",
       "content_signature": "296026f775e9609fc8e213a7e144802b3be3f610bedede2fab54cab8b83e139f",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "published_source": "official_list_registration",
-      "notice_kind": "recruitment",
-      "application_start": "",
-      "schedule_type": "unknown",
-      "deadline_precision": "unknown",
-      "schedule_source": "unknown",
-      "schedule_note": "신청기간은 공식 공고문 확인이 필요합니다.",
-      "application_windows": [],
-      "schedule_evidence": {},
-      "sh_schedule_version": 1
-    },
-    {
-      "id": "SH:seq:313316",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "제47차 장기전세주택(2025.04.30.) 예비 6차 입주대상자 발표",
-      "housing_types": [
-        "장기전세"
-      ],
-      "audiences": [],
-      "region": "서울",
-      "published_at": "2026-11-13",
-      "deadline": "",
-      "open_state": "확인필요",
-      "event": "신규",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313316",
-      "source": "SH 공식 주택임대 게시판",
-      "content_signature": "2a5a4833eee3c11ec2f5cbec9f258dc360828f337cbdfe776d6f16f421be5542",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "published_source": "official_list_registration",
       "notice_kind": "recruitment",
@@ -551,6 +1173,63 @@
       "application_windows": [],
       "schedule_evidence": {},
       "sh_schedule_version": 1
+    },
+    {
+      "id": "SOCOS:boardId:6727",
+      "agency": "서울시 청년안심주택",
+      "agency_group": "SEOUL",
+      "title": "[민간임대] 화곡역 보눔하우스 화곡 추가모집공고",
+      "housing_types": [
+        "안심주택"
+      ],
+      "audiences": [
+        "청년"
+      ],
+      "region": "서울 강서구",
+      "published_at": "2026-11-12",
+      "deadline": "2026-11-19",
+      "open_state": "마감",
+      "event": "신규",
+      "change": "동일",
+      "status_text": "마감",
+      "is_gangseo": true,
+      "keywords": [
+        "강서",
+        "화곡",
+        "청년",
+        "안심주택"
+      ],
+      "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6727&menuNo=400008",
+      "source": "서울시 청년안심주택",
+      "content_signature": "3e1c5562b2a96c5f7a85c251efcf261ae384e0af30c2f1c280e986854cd7c849",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "notice_kind": "recruitment",
+      "application_start": "2026-11-18",
+      "application_start_at": "2026-11-18T00:00:00+09:00",
+      "deadline_at": "2026-11-19T18:00:00+09:00",
+      "application_windows": [
+        {
+          "label": "청약신청",
+          "start": "2026-11-18",
+          "end": "2026-11-19",
+          "start_at": "2026-11-18T00:00:00+09:00",
+          "end_at": "2026-11-19T18:00:00+09:00",
+          "precision": "minute",
+          "conditional": false,
+          "restricted": false,
+          "condition": ""
+        }
+      ],
+      "schedule_type": "single",
+      "deadline_precision": "minute",
+      "schedule_source": "official_detail_html",
+      "schedule_note": "공식 본문: 청약신청 : ‘26. 11. 18. (수) ~ 11. 19. (목) 00:00 ~ 18:00",
+      "schedule_evidence": {
+        "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6727&menuNo=400008",
+        "kind": "official_notice_body",
+        "excerpt": "청약신청 : ‘26. 11. 18. (수) ~ 11. 19. (목) 00:00 ~ 18:00"
+      },
+      "source_id": "SOCO"
     },
     {
       "id": "SOCOS:boardId:6719",
@@ -1774,6 +2453,110 @@
       "sh_schedule_version": 1
     },
     {
+      "id": "SH:seq:313382",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "NEW [당첨자발표] 청년 매입임대주택 예비자 공급 계약대상자 발표(2025년 2차 예비4차) 및 계약안내",
+      "housing_types": [
+        "매입임대"
+      ],
+      "audiences": [
+        "청년"
+      ],
+      "region": "서울",
+      "published_at": "2026-11-19",
+      "deadline": "",
+      "open_state": "신청대상아님",
+      "event": "결과",
+      "change": "신규",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [
+        "청년",
+        "매입임대"
+      ],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313382",
+      "source": "SH 공식 주택임대 게시판",
+      "content_signature": "06d1486cb581e4719359264d8c37ceecd190d5e637431c1a8e287e3742a86bad",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "published_source": "official_list_registration",
+      "notice_kind": "result",
+      "application_start": "",
+      "schedule_type": "not_applicable",
+      "deadline_precision": "unknown",
+      "schedule_source": "not_applicable",
+      "schedule_note": "신규 신청공고가 아닌 결과·입주 안내입니다.",
+      "application_windows": [],
+      "schedule_evidence": {},
+      "sh_schedule_version": 1
+    },
+    {
+      "id": "SH:seq:313468",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "NEW 2024년 제1차 국민임대주택(2024.09.26.공고) 예비10차 당첨자 및 동호배정 결과",
+      "housing_types": [
+        "국민임대"
+      ],
+      "audiences": [],
+      "region": "서울",
+      "published_at": "2026-11-19",
+      "deadline": "",
+      "open_state": "신청대상아님",
+      "event": "결과",
+      "change": "신규",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313468",
+      "source": "SH 공식 주택임대 게시판",
+      "content_signature": "b6db29e0e972f0021a1bf865d15d33424047e676da5d98459d781d087fdfe639",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "published_source": "official_list_registration",
+      "notice_kind": "result",
+      "application_start": "",
+      "schedule_type": "not_applicable",
+      "deadline_precision": "unknown",
+      "schedule_source": "not_applicable",
+      "schedule_note": "신규 신청공고가 아닌 결과·입주 안내입니다.",
+      "application_windows": [],
+      "schedule_evidence": {},
+      "sh_schedule_version": 1
+    },
+    {
+      "id": "SH:seq:313467",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "NEW 2021년 제1차 국민임대주택(2021.09.24.공고) 예비24차 당첨자 및 동호배정 결과",
+      "housing_types": [
+        "국민임대"
+      ],
+      "audiences": [],
+      "region": "서울",
+      "published_at": "2026-11-19",
+      "deadline": "",
+      "open_state": "신청대상아님",
+      "event": "결과",
+      "change": "신규",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313467",
+      "source": "SH 공식 주택임대 게시판",
+      "content_signature": "5d0c9d8a418ffffad1bf4993c777e07d6a44b266ca59599a47208bdacd243a9b",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "published_source": "official_list_registration",
+      "notice_kind": "result",
+      "application_start": "",
+      "schedule_type": "not_applicable",
+      "deadline_precision": "unknown",
+      "schedule_source": "not_applicable",
+      "schedule_note": "신규 신청공고가 아닌 결과·입주 안내입니다.",
+      "application_windows": [],
+      "schedule_evidence": {},
+      "sh_schedule_version": 1
+    },
+    {
       "id": "SH:seq:313455",
       "agency": "SH",
       "agency_group": "SH",
@@ -1829,79 +2612,6 @@
       "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313462",
       "source": "SH 공식 주택임대 게시판",
       "content_signature": "32417b7d64c1ea02b713316fb40144fb62343309171fc78d35387643ea491244",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "published_source": "official_list_registration",
-      "notice_kind": "result",
-      "application_start": "",
-      "schedule_type": "not_applicable",
-      "deadline_precision": "unknown",
-      "schedule_source": "not_applicable",
-      "schedule_note": "신규 신청공고가 아닌 결과·입주 안내입니다.",
-      "application_windows": [],
-      "schedule_evidence": {},
-      "sh_schedule_version": 1
-    },
-    {
-      "id": "SH:seq:313303",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "2026년 3차 희망하우징(공공기숙사) 잔여세대 입주자 모집공고(2026. 10. 28.) 서류심사대상자 발표",
-      "housing_types": [
-        "기숙사"
-      ],
-      "audiences": [],
-      "region": "서울",
-      "published_at": "2026-11-13",
-      "deadline": "",
-      "open_state": "신청대상아님",
-      "event": "결과",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [
-        "기숙사"
-      ],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313303",
-      "source": "SH 공식 주택임대 게시판",
-      "content_signature": "cfbdc14d383a66a0546aa8ae6e768cfd69fa6621f4efc5b296b82b4819f493c6",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "published_source": "official_list_registration",
-      "notice_kind": "result",
-      "application_start": "",
-      "schedule_type": "not_applicable",
-      "deadline_precision": "unknown",
-      "schedule_source": "not_applicable",
-      "schedule_note": "신규 신청공고가 아닌 결과·입주 안내입니다.",
-      "application_windows": [],
-      "schedule_evidence": {},
-      "sh_schedule_version": 1
-    },
-    {
-      "id": "SH:seq:313233",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "[당첨자발표] 청년 매입임대주택 예비자 공급 계약대상자 발표(2025년 1차 예비6차) 및 계약안내",
-      "housing_types": [
-        "매입임대"
-      ],
-      "audiences": [
-        "청년"
-      ],
-      "region": "서울",
-      "published_at": "2026-11-12",
-      "deadline": "",
-      "open_state": "신청대상아님",
-      "event": "결과",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [
-        "청년",
-        "매입임대"
-      ],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313233",
-      "source": "SH 공식 주택임대 게시판",
-      "content_signature": "5423ecd022066c5e237e6cd6404e46b9f4ddfa829c994f4e036197253376c847",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "published_source": "official_list_registration",
       "notice_kind": "result",
