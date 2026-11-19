@@ -1,32 +1,32 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-19T05:31:33",
+  "generated_at": "2026-11-19T11:34:46",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
     "LH": {
-      "count": 2,
+      "count": 3,
       "errors": [
         "LH OpenAPI: 06/1:HTTP Error 403: Forbidden; 13/1:HTTP Error 403: Forbidden; 39/1:HTTP Error 403: Forbidden"
       ],
-      "official_count": 2,
+      "official_count": 3,
       "api_count": 0,
-      "html_count": 2,
+      "html_count": 3,
       "mirror_count": 0,
       "mirror_latest_published_at": "",
       "mirror_stale": false,
-      "official_latest_published_at": "2026-10-01",
+      "official_latest_published_at": "2026-11-19",
       "warnings": [],
       "status": "부분수집",
       "diagnostic_errors": [
         "LH OpenAPI: 06/1:HTTP Error 403: Forbidden; 13/1:HTTP Error 403: Forbidden; 39/1:HTTP Error 403: Forbidden"
       ],
-      "fresh_count": 2,
+      "fresh_count": 3,
       "carried_count": 12,
-      "failure_streak": 170
+      "failure_streak": 171
     },
     "SH": {
-      "count": 16,
+      "count": 15,
       "errors": []
     },
     "SEOUL": {
@@ -47,20 +47,21 @@
     "TOTAL": {
       "count": 37,
       "duplicates_removed": 3,
-      "excluded_non_housing": 2,
+      "excluded_non_housing": 1,
       "excluded_outside_seoul": 0,
-      "published_count": 46
+      "published_count": 47
     }
   },
   "summary": {
-    "total": 46,
+    "total": 47,
     "gangseo": 5,
-    "new": 1,
-    "updated": 4,
-    "open_or_check": 12,
+    "new": 2,
+    "updated": 0,
+    "open_or_check": 13,
     "by_housing_type": {
       "안심주택": 14,
-      "기타임대": 8,
+      "영구임대": 3,
+      "기타임대": 7,
       "행복주택": 7,
       "장기전세": 1,
       "기숙사": 3,
@@ -68,8 +69,7 @@
       "공공임대": 4,
       "매입임대": 8,
       "든든전세": 1,
-      "국민임대": 1,
-      "영구임대": 1
+      "국민임대": 1
     },
     "by_audience": {
       "청년": 17,
@@ -80,7 +80,7 @@
     "by_agency": {
       "SEOUL": 14,
       "SH": 18,
-      "LH": 14
+      "LH": 15
     }
   },
   "items": [
@@ -142,6 +142,69 @@
       "source_id": "SOCO"
     },
     {
+      "id": "SH:seq:313537",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "NEW 2026년 영구임대주택 예비입주자 모집 공고",
+      "housing_types": [
+        "영구임대"
+      ],
+      "audiences": [],
+      "region": "서울",
+      "published_at": "2026-11-19",
+      "deadline": "2026-12-04",
+      "open_state": "접수예정",
+      "event": "신규",
+      "change": "신규",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313537",
+      "source": "SH 공식 주택임대 게시판",
+      "content_signature": "f91086901928d6501a86a09191987bb52a1bbab24b77b1226ca9e3a4a0dfd94f",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "published_source": "official_list_registration",
+      "notice_kind": "recruitment",
+      "application_start": "2026-11-30",
+      "schedule_type": "single",
+      "deadline_precision": "date",
+      "schedule_source": "official_detail_html",
+      "schedule_note": "공식 상세본문 신청기간 기준입니다. 정확한 접수시각과 대상은 공고문을 확인하세요.",
+      "application_windows": [],
+      "schedule_evidence": {
+        "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313537",
+        "kind": "official_notice_body",
+        "excerpt": "신청기간 : 2026. 11. 30.(월) ~ 2026. 12. 4.(금) - 접수 첫째날 30일 월요일은 동 주민센터 업무량 증가로 혼잡이 예상되니 가급적 다른 요일을 이용하시기 바랍니다.",
+        "verified_at": "2026-11-19T11:34:28"
+      },
+      "sh_schedule_version": 1
+    },
+    {
+      "id": "LH:panId:2015122300021109",
+      "agency": "LH",
+      "agency_group": "LH",
+      "title": "2026년 서울특별시 영구임대주택 예비입주자 모집",
+      "housing_types": [
+        "영구임대"
+      ],
+      "audiences": [],
+      "region": "서울특별시",
+      "published_at": "2026-11-19",
+      "deadline": "2026-12-04",
+      "open_state": "접수예정",
+      "event": "신규",
+      "change": "신규",
+      "status_text": "공고중",
+      "is_gangseo": false,
+      "keywords": [],
+      "url": "https://apply.lh.or.kr/lhapply/apply/wt/wrtanc/selectWrtancInfo.do?panId=2015122300021109&ccrCnntSysDsCd=03&uppAisTpCd=06&aisTpCd=09&mi=1026",
+      "source": "LH청약플러스 실제 공고표",
+      "content_signature": "3b8f0f3e7491e222568c06d7a6f3cee3068f93ac918fbcd87ba6ff89004a09d2",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "2026-11-30",
+      "schedule_source": "official_detail_html"
+    },
+    {
       "id": "SH:seq:313424",
       "agency": "SH",
       "agency_group": "SH",
@@ -157,8 +220,8 @@
       "published_at": "2026-11-18",
       "deadline": "2026-12-04",
       "open_state": "접수예정",
-      "event": "수정",
-      "change": "수정",
+      "event": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -181,7 +244,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313424",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.11.25.(수) ~ 2026.12.04.(금) 18시까지",
-        "verified_at": "2026-11-19T05:31:12"
+        "verified_at": "2026-11-19T11:34:30"
       },
       "sh_schedule_version": 1
     },
@@ -221,7 +284,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313268",
         "kind": "official_notice_body",
         "excerpt": "접수 기간 : 2026.11.23.(월) ~ 12.04.(금) 18시까지",
-        "verified_at": "2026-11-19T05:31:17"
+        "verified_at": "2026-11-19T11:34:35"
       },
       "sh_schedule_version": 1
     },
@@ -294,39 +357,6 @@
       "sh_schedule_version": 1
     },
     {
-      "id": "SH:seq:313161",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "[토지임대부 사회주택] 옥류서원 입주자 모집 공고문",
-      "housing_types": [
-        "기타임대"
-      ],
-      "audiences": [],
-      "region": "서울",
-      "published_at": "2026-11-11",
-      "deadline": "",
-      "open_state": "확인필요",
-      "event": "신규",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313161",
-      "source": "SH 공식 주택임대 게시판",
-      "content_signature": "d017ba7ab02b1dc71656b73089f565b3d297f9c4cceaa65859ff011fe613c2bd",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "published_source": "official_list_registration",
-      "notice_kind": "recruitment",
-      "application_start": "",
-      "schedule_type": "unknown",
-      "deadline_precision": "unknown",
-      "schedule_source": "unknown",
-      "schedule_note": "신청기간은 공식 공고문 확인이 필요합니다.",
-      "application_windows": [],
-      "schedule_evidence": {},
-      "sh_schedule_version": 1
-    },
-    {
       "id": "SHYOUTH:1f4bd36cd85fe4c83b57",
       "agency": "SH",
       "agency_group": "SH",
@@ -340,7 +370,7 @@
       "deadline": "",
       "open_state": "확인필요",
       "event": "수정",
-      "change": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [],
@@ -438,7 +468,7 @@
       "deadline": "",
       "open_state": "확인필요",
       "event": "수정",
-      "change": "수정",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [],
@@ -1757,7 +1787,7 @@
       "deadline": "",
       "open_state": "신청대상아님",
       "event": "결과",
-      "change": "수정",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -1792,7 +1822,7 @@
       "deadline": "",
       "open_state": "신청대상아님",
       "event": "결과",
-      "change": "수정",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [],
