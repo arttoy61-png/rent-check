@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-21T11:14:22",
+  "generated_at": "2026-11-21T20:00:28",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
@@ -23,16 +23,16 @@
       ],
       "fresh_count": 4,
       "carried_count": 12,
-      "failure_streak": 177
+      "failure_streak": 178
     },
     "SH": {
       "count": 21,
       "errors": []
     },
     "SEOUL": {
-      "count": 32,
+      "count": 33,
       "errors": [],
-      "excluded_noise": 15
+      "excluded_noise": 14
     },
     "SOCO": {
       "count": 25,
@@ -45,25 +45,25 @@
       "source_url": "https://soco.seoul.go.kr/youth/pgm/home/yohome/bbsListJson.json"
     },
     "TOTAL": {
-      "count": 57,
+      "count": 58,
       "duplicates_removed": 5,
       "excluded_non_housing": 1,
       "excluded_outside_seoul": 0,
-      "published_count": 63
+      "published_count": 64
     }
   },
   "summary": {
-    "total": 63,
+    "total": 64,
     "gangseo": 6,
-    "new": 0,
+    "new": 1,
     "updated": 0,
-    "open_or_check": 25,
+    "open_or_check": 26,
     "by_housing_type": {
       "안심주택": 26,
       "장기전세": 1,
       "행복주택": 6,
       "영구임대": 3,
-      "기타임대": 10,
+      "기타임대": 11,
       "기숙사": 3,
       "통합공공임대": 2,
       "공공임대": 4,
@@ -72,13 +72,13 @@
       "국민임대": 3
     },
     "by_audience": {
-      "청년": 31,
+      "청년": 32,
       "고령자": 2,
       "신혼부부": 6,
       "신생아": 4
     },
     "by_agency": {
-      "SEOUL": 25,
+      "SEOUL": 26,
       "SH": 22,
       "LH": 16
     }
@@ -173,7 +173,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313613",
         "kind": "official_notice_body",
         "excerpt": "신청기간 : 2026.11.30.( 월 ) ~ 2026.12.2.( 수 )",
-        "verified_at": "2026-11-21T11:13:59"
+        "verified_at": "2026-11-21T20:00:06"
       },
       "sh_schedule_version": 1
     },
@@ -814,7 +814,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313268",
         "kind": "official_notice_body",
         "excerpt": "접수 기간 : 2026.11.23.(월) ~ 12.04.(금) 18시까지",
-        "verified_at": "2026-11-21T11:14:19"
+        "verified_at": "2026-11-21T20:00:25"
       },
       "sh_schedule_version": 1
     },
@@ -853,7 +853,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313227",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.11.24.(화) ~ 2026.12.07.(월)",
-        "verified_at": "2026-11-21T11:14:12"
+        "verified_at": "2026-11-21T20:00:18"
       },
       "sh_schedule_version": 1
     },
@@ -894,7 +894,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313225",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.11.24.(화) ~ 12.07.(월) 18시까지",
-        "verified_at": "2026-11-21T11:14:14"
+        "verified_at": "2026-11-21T20:00:20"
       },
       "sh_schedule_version": 1
     },
@@ -937,7 +937,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313424",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.11.25.(수) ~ 2026.12.04.(금) 18시까지",
-        "verified_at": "2026-11-21T11:14:17"
+        "verified_at": "2026-11-21T20:00:23"
       },
       "sh_schedule_version": 1
     },
@@ -1139,6 +1139,35 @@
       "application_windows": [],
       "schedule_evidence": {},
       "sh_schedule_version": 1
+    },
+    {
+      "id": "SEOUL:df8e1b04c6d817dcfc6e",
+      "agency": "청년몽땅",
+      "agency_group": "SEOUL",
+      "title": "서울청년센터 서초<(공공분양+청약 연습)주거가 자산이 되는 곳: 공공주택정보 아카데미> 참여자 모집 .....2791321",
+      "housing_types": [
+        "기타임대"
+      ],
+      "audiences": [
+        "청년"
+      ],
+      "region": "서울",
+      "published_at": "",
+      "deadline": "",
+      "open_state": "확인필요",
+      "event": "신규",
+      "change": "신규",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [
+        "청년"
+      ],
+      "url": "https://youth.seoul.go.kr/infoData/sprtInfo/list.do?key=2309130006#none",
+      "source": "청년몽땅",
+      "content_signature": "b37e2787f80a49f7df85b64b284f89bed4bd59921ac40cc8623cefdbc06fb9f6",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "application_start": "",
+      "schedule_source": "source_list"
     },
     {
       "id": "SH:seq:313610",
