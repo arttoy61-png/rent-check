@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-22T10:19:02",
+  "generated_at": "2026-11-22T20:20:41",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
@@ -23,7 +23,7 @@
       ],
       "fresh_count": 3,
       "carried_count": 13,
-      "failure_streak": 180
+      "failure_streak": 181
     },
     "SH": {
       "count": 21,
@@ -173,7 +173,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313613",
         "kind": "official_notice_body",
         "excerpt": "신청기간 : 2026.11.30.( 월 ) ~ 2026.12.2.( 수 )",
-        "verified_at": "2026-11-22T10:18:42"
+        "verified_at": "2026-11-22T20:20:25"
       },
       "sh_schedule_version": 1
     },
@@ -814,7 +814,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313268",
         "kind": "official_notice_body",
         "excerpt": "접수 기간 : 2026.11.23.(월) ~ 12.04.(금) 18시까지",
-        "verified_at": "2026-11-22T10:18:59"
+        "verified_at": "2026-11-22T20:20:40"
       },
       "sh_schedule_version": 1
     },
@@ -853,7 +853,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313227",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.11.24.(화) ~ 2026.12.07.(월)",
-        "verified_at": "2026-11-22T10:18:53"
+        "verified_at": "2026-11-22T20:20:34"
       },
       "sh_schedule_version": 1
     },
@@ -894,7 +894,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313225",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.11.24.(화) ~ 12.07.(월) 18시까지",
-        "verified_at": "2026-11-22T10:18:55"
+        "verified_at": "2026-11-22T20:20:36"
       },
       "sh_schedule_version": 1
     },
@@ -937,7 +937,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313424",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.11.25.(수) ~ 2026.12.04.(금) 18시까지",
-        "verified_at": "2026-11-22T10:18:57"
+        "verified_at": "2026-11-22T20:20:38"
       },
       "sh_schedule_version": 1
     },
