@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-25T08:55:30",
+  "generated_at": "2026-11-25T17:15:24",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
@@ -23,7 +23,7 @@
       ],
       "fresh_count": 4,
       "carried_count": 13,
-      "failure_streak": 187
+      "failure_streak": 188
     },
     "SH": {
       "count": 20,
@@ -32,7 +32,7 @@
     "SEOUL": {
       "count": 32,
       "errors": [],
-      "excluded_noise": 15
+      "excluded_noise": 14
     },
     "SOCO": {
       "count": 26,
@@ -55,24 +55,24 @@
   "summary": {
     "total": 61,
     "gangseo": 5,
-    "new": 0,
-    "updated": 1,
-    "open_or_check": 17,
+    "new": 1,
+    "updated": 0,
+    "open_or_check": 18,
     "by_housing_type": {
-      "안심주택": 27,
+      "안심주택": 28,
       "기타임대": 7,
       "행복주택": 7,
       "장기전세": 2,
       "영구임대": 3,
       "매입임대": 8,
-      "기숙사": 3,
+      "기숙사": 2,
       "통합공공임대": 2,
       "공공임대": 4,
       "든든전세": 1,
       "국민임대": 1
     },
     "by_audience": {
-      "청년": 32,
+      "청년": 31,
       "고령자": 2,
       "신혼부부": 6,
       "신생아": 4
@@ -137,7 +137,11 @@
         "kind": "official_notice_body",
         "excerpt": "청약신청 : ‘26. 11. 25. (수) 00:00 ~ 23:00"
       },
-      "source_id": "SOCO"
+      "source_id": "SOCO",
+      "naver_detail": {
+        "post_id": "224490697442",
+        "kind": "plan"
+      }
     },
     {
       "id": "SOCOS:boardId:6798",
@@ -192,7 +196,11 @@
         "kind": "official_notice_body",
         "excerpt": "청약신청 : ‘26. 11. 23. (월) 09:00 ~ 11. 25. (수) 23:00"
       },
-      "source_id": "SOCO"
+      "source_id": "SOCO",
+      "naver_detail": {
+        "post_id": "224490692426",
+        "kind": "plan"
+      }
     },
     {
       "id": "SH:seq:313268",
@@ -229,9 +237,10 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313268",
         "kind": "official_notice_body",
         "excerpt": "접수 기간 : 2026.11.23.(월) ~ 12.04.(금) 18시까지",
-        "verified_at": "2026-11-25T08:55:28"
+        "verified_at": "2026-11-25T17:15:14"
       },
-      "sh_schedule_version": 1
+      "sh_schedule_version": 1,
+      "naver_detail": null
     },
     {
       "id": "SH:seq:313227",
@@ -268,9 +277,10 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313227",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.11.24.(화) ~ 2026.12.07.(월)",
-        "verified_at": "2026-11-25T08:55:22"
+        "verified_at": "2026-11-25T17:15:07"
       },
-      "sh_schedule_version": 1
+      "sh_schedule_version": 1,
+      "naver_detail": null
     },
     {
       "id": "SH:seq:313225",
@@ -309,9 +319,13 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313225",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.11.24.(화) ~ 12.07.(월) 18시까지",
-        "verified_at": "2026-11-25T08:55:24"
+        "verified_at": "2026-11-25T17:15:10"
       },
-      "sh_schedule_version": 1
+      "sh_schedule_version": 1,
+      "naver_detail": {
+        "post_id": "224489178253",
+        "kind": "terms"
+      }
     },
     {
       "id": "SH:seq:313424",
@@ -352,9 +366,10 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313424",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.11.25.(수) ~ 2026.12.04.(금) 18시까지",
-        "verified_at": "2026-11-25T08:55:26"
+        "verified_at": "2026-11-25T17:15:12"
       },
-      "sh_schedule_version": 1
+      "sh_schedule_version": 1,
+      "naver_detail": null
     },
     {
       "id": "SOCOS:boardId:6833",
@@ -371,8 +386,8 @@
       "published_at": "2026-11-24",
       "deadline": "2026-12-07",
       "open_state": "접수예정",
-      "event": "수정",
-      "change": "수정",
+      "event": "신규",
+      "change": "동일",
       "status_text": "접수예정",
       "is_gangseo": false,
       "keywords": [
@@ -409,7 +424,8 @@
         "kind": "official_notice_body",
         "excerpt": "청약신청 : ‘26. 12. 05. (토) 00:00 ~ 12. 07. (월) 23:00"
       },
-      "source_id": "SOCO"
+      "source_id": "SOCO",
+      "naver_detail": null
     },
     {
       "id": "LH:panId:2015122300021131",
@@ -436,7 +452,8 @@
       "content_signature": "9fe3456e6346e349262328a84c1062b99f68a5b062e4ea0a87c6b144e1f2d901",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "2026-11-30",
-      "schedule_source": "official_detail_html"
+      "schedule_source": "official_detail_html",
+      "naver_detail": null
     },
     {
       "id": "SH:seq:313613",
@@ -472,9 +489,10 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313613",
         "kind": "official_notice_body",
         "excerpt": "신청기간 : 2026.11.30.( 월 ) ~ 2026.12.2.( 수 )",
-        "verified_at": "2026-11-25T08:55:17"
+        "verified_at": "2026-11-25T17:15:03"
       },
-      "sh_schedule_version": 1
+      "sh_schedule_version": 1,
+      "naver_detail": null
     },
     {
       "id": "LH:panId:2015122300021109",
@@ -499,7 +517,44 @@
       "content_signature": "3b8f0f3e7491e222568c06d7a6f3cee3068f93ac918fbcd87ba6ff89004a09d2",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "2026-11-30",
-      "schedule_source": "official_detail_html"
+      "schedule_source": "official_detail_html",
+      "naver_detail": null
+    },
+    {
+      "id": "SH:seq:313843",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "NEW 2026년 제2차 보증금지원형 장기안심주택 입주자 모집공고",
+      "housing_types": [
+        "안심주택"
+      ],
+      "audiences": [],
+      "region": "서울",
+      "published_at": "2026-11-25",
+      "deadline": "",
+      "open_state": "확인필요",
+      "event": "신규",
+      "change": "신규",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [
+        "안심주택"
+      ],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313843",
+      "source": "SH 공식 주택임대 게시판",
+      "content_signature": "b84d0394216f1abe7e1b65df6b10ea7a7c51e676bbdfd4bfa593f409172e75ec",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "published_source": "official_list_registration",
+      "notice_kind": "recruitment",
+      "application_start": "",
+      "schedule_type": "unknown",
+      "deadline_precision": "unknown",
+      "schedule_source": "unknown",
+      "schedule_note": "신청기간은 공식 공고문 확인이 필요합니다.",
+      "application_windows": [],
+      "schedule_evidence": {},
+      "sh_schedule_version": 1,
+      "naver_detail": null
     },
     {
       "id": "SH:seq:313647",
@@ -532,7 +587,8 @@
       "schedule_note": "신청기간은 공식 공고문 확인이 필요합니다.",
       "application_windows": [],
       "schedule_evidence": {},
-      "sh_schedule_version": 1
+      "sh_schedule_version": 1,
+      "naver_detail": null
     },
     {
       "id": "SH:seq:313481",
@@ -571,7 +627,8 @@
       "schedule_note": "신청기간은 공식 공고문 확인이 필요합니다.",
       "application_windows": [],
       "schedule_evidence": {},
-      "sh_schedule_version": 1
+      "sh_schedule_version": 1,
+      "naver_detail": null
     },
     {
       "id": "SH:seq:313741",
@@ -606,7 +663,8 @@
       "schedule_note": "신청기간은 공식 공고문 확인이 필요합니다.",
       "application_windows": [],
       "schedule_evidence": {},
-      "sh_schedule_version": 1
+      "sh_schedule_version": 1,
+      "naver_detail": null
     },
     {
       "id": "SHYOUTH:db49a71539fdb015a17d",
@@ -640,7 +698,8 @@
       "schedule_note": "신청기간은 공식 공고문 확인이 필요합니다.",
       "application_windows": [],
       "schedule_evidence": {},
-      "sh_schedule_version": 1
+      "sh_schedule_version": 1,
+      "naver_detail": null
     },
     {
       "id": "SHYOUTH:1f4bd36cd85fe4c83b57",
@@ -672,7 +731,8 @@
       "schedule_note": "신청기간은 공식 공고문 확인이 필요합니다.",
       "application_windows": [],
       "schedule_evidence": {},
-      "sh_schedule_version": 1
+      "sh_schedule_version": 1,
+      "naver_detail": null
     },
     {
       "id": "SH:seq:312339",
@@ -706,7 +766,11 @@
       "schedule_note": "신청기간은 공식 공고문 확인이 필요합니다.",
       "application_windows": [],
       "schedule_evidence": {},
-      "sh_schedule_version": 1
+      "sh_schedule_version": 1,
+      "naver_detail": {
+        "post_id": "224472341052",
+        "kind": "guide"
+      }
     },
     {
       "id": "SH:seq:313610",
@@ -738,7 +802,8 @@
       "schedule_note": "신청기간은 공식 공고문 확인이 필요합니다.",
       "application_windows": [],
       "schedule_evidence": {},
-      "sh_schedule_version": 1
+      "sh_schedule_version": 1,
+      "naver_detail": null
     },
     {
       "id": "SOCOS:boardId:6727",
@@ -795,7 +860,11 @@
         "kind": "official_notice_body",
         "excerpt": "청약신청 : ‘26. 11. 18. (수) ~ 11. 19. (목) 00:00 ~ 18:00"
       },
-      "source_id": "SOCO"
+      "source_id": "SOCO",
+      "naver_detail": {
+        "post_id": "224475603174",
+        "kind": "terms"
+      }
     },
     {
       "id": "SOCOS:boardId:6719",
@@ -851,7 +920,11 @@
         "kind": "official_notice_body",
         "excerpt": "청약신청 : ‘26. 11. 11. (수) 09:00 ~ 11. 15. (일) 23:00"
       },
-      "source_id": "SOCO"
+      "source_id": "SOCO",
+      "naver_detail": {
+        "post_id": "224471056747",
+        "kind": "terms"
+      }
     },
     {
       "id": "LH:panId:2015122300020807",
@@ -880,7 +953,8 @@
       "content_signature": "878d9c5c25aafded78c73781f4c61543cedaf58278e6c74f74a177d216459c5c",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "2026-09-29",
-      "schedule_source": "official_detail_html"
+      "schedule_source": "official_detail_html",
+      "naver_detail": null
     },
     {
       "id": "LH:panId:2015122300020753",
@@ -909,7 +983,8 @@
       "content_signature": "fa2d628796241a0a1341cab8ae4282cae313a88bce49e1672d136efab62e3614",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "2026-09-29",
-      "schedule_source": "official_detail_html"
+      "schedule_source": "official_detail_html",
+      "naver_detail": null
     },
     {
       "id": "LH:panId:2015122300019657",
@@ -936,7 +1011,8 @@
       "content_signature": "4b891a308dd8c8747bc17c199a158e7c63144cc456f5570fdb8b739c3d1e4797",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "2026-04-23",
-      "schedule_source": "official_detail_html"
+      "schedule_source": "official_detail_html",
+      "naver_detail": null
     },
     {
       "id": "SOCOS:boardId:6796",
@@ -991,7 +1067,11 @@
         "kind": "official_notice_body",
         "excerpt": "청약신청 : ‘26. 11. 23. (월) 09:00 ~ 11. 24. (화) 24:00"
       },
-      "source_id": "SOCO"
+      "source_id": "SOCO",
+      "naver_detail": {
+        "post_id": "224489549131",
+        "kind": "terms"
+      }
     },
     {
       "id": "SOCOS:boardId:6797",
@@ -1046,7 +1126,8 @@
         "kind": "official_notice_body",
         "excerpt": "청약신청 : ‘26. 11. 20.(금) 10:00 ~ 11. 23. (월) 10:00"
       },
-      "source_id": "SOCO"
+      "source_id": "SOCO",
+      "naver_detail": null
     },
     {
       "id": "SOCOS:boardId:6800",
@@ -1101,7 +1182,11 @@
         "kind": "official_notice_body",
         "excerpt": "청약신청 : ‘26. 11. 23. (월) 10:00 ~ 17:00"
       },
-      "source_id": "SOCO"
+      "source_id": "SOCO",
+      "naver_detail": {
+        "post_id": "224487677719",
+        "kind": "terms"
+      }
     },
     {
       "id": "SOCOS:boardId:6804",
@@ -1156,7 +1241,11 @@
         "kind": "official_notice_body",
         "excerpt": "청약신청 : ‘26. 11. 23. (월) 10:00 ~ 23:00"
       },
-      "source_id": "SOCO"
+      "source_id": "SOCO",
+      "naver_detail": {
+        "post_id": "224488225568",
+        "kind": "terms"
+      }
     },
     {
       "id": "SOCOS:boardId:6805",
@@ -1211,7 +1300,8 @@
         "kind": "official_notice_body",
         "excerpt": "청약신청 : ‘26. 11. 23. (월) 00:00 ~ 23:00"
       },
-      "source_id": "SOCO"
+      "source_id": "SOCO",
+      "naver_detail": null
     },
     {
       "id": "SOCOS:boardId:6802",
@@ -1266,7 +1356,11 @@
         "kind": "official_notice_body",
         "excerpt": "청약신청 : ‘26. 11. 23. (월) 00:00 ~ 23:00"
       },
-      "source_id": "SOCO"
+      "source_id": "SOCO",
+      "naver_detail": {
+        "post_id": "224487683336",
+        "kind": "terms"
+      }
     },
     {
       "id": "SOCOS:boardId:6806",
@@ -1321,7 +1415,11 @@
         "kind": "official_notice_body",
         "excerpt": "청약신청 : ‘26. 11. 23. (월) 00:00 ~ 23:00"
       },
-      "source_id": "SOCO"
+      "source_id": "SOCO",
+      "naver_detail": {
+        "post_id": "224487696443",
+        "kind": "terms"
+      }
     },
     {
       "id": "SOCOS:boardId:6801",
@@ -1376,7 +1474,11 @@
         "kind": "official_notice_body",
         "excerpt": "청약신청 : ‘26. 11. 23. (월) 00:00 ~ 11. 24. (화) 23:00"
       },
-      "source_id": "SOCO"
+      "source_id": "SOCO",
+      "naver_detail": {
+        "post_id": "224489191839",
+        "kind": "terms"
+      }
     },
     {
       "id": "SOCOS:boardId:6799",
@@ -1431,7 +1533,11 @@
         "kind": "official_notice_body",
         "excerpt": "청약신청 : ‘26. 11. 23. (월) 10:00 ~ 16:00"
       },
-      "source_id": "SOCO"
+      "source_id": "SOCO",
+      "naver_detail": {
+        "post_id": "224487672883",
+        "kind": "layout"
+      }
     },
     {
       "id": "SOCOS:boardId:6726",
@@ -1486,7 +1592,11 @@
         "kind": "official_notice_body",
         "excerpt": "청약신청 : ‘26. 11. 16. (월) 10:00 ~ 16:00"
       },
-      "source_id": "SOCO"
+      "source_id": "SOCO",
+      "naver_detail": {
+        "post_id": "224478479393",
+        "kind": "terms"
+      }
     },
     {
       "id": "SOCOS:boardId:6728",
@@ -1541,7 +1651,8 @@
         "kind": "official_notice_body",
         "excerpt": "청약신청 : ‘26. 11. 16. (월) 00:00 ~ 11. 17. (화) 23:00"
       },
-      "source_id": "SOCO"
+      "source_id": "SOCO",
+      "naver_detail": null
     },
     {
       "id": "SOCOS:boardId:6725",
@@ -1596,7 +1707,11 @@
         "kind": "official_notice_body",
         "excerpt": "청약신청 : ‘26. 11. 16. (월) 10:00 ~ 16:00"
       },
-      "source_id": "SOCO"
+      "source_id": "SOCO",
+      "naver_detail": {
+        "post_id": "224478478314",
+        "kind": "terms"
+      }
     },
     {
       "id": "SOCOS:boardId:6729",
@@ -1651,7 +1766,11 @@
         "kind": "official_notice_body",
         "excerpt": "청약신청 : ‘26. 11. 16. (월) 00:00 ~ 23:00"
       },
-      "source_id": "SOCO"
+      "source_id": "SOCO",
+      "naver_detail": {
+        "post_id": "224478482164",
+        "kind": "terms"
+      }
     },
     {
       "id": "SOCOS:boardId:6731",
@@ -1706,7 +1825,11 @@
         "kind": "official_notice_body",
         "excerpt": "청약신청 : ‘26. 11. 16. (월) 09:00 ~ 11. 17. (화) 18:00"
       },
-      "source_id": "SOCO"
+      "source_id": "SOCO",
+      "naver_detail": {
+        "post_id": "224475608275",
+        "kind": "plan"
+      }
     },
     {
       "id": "SOCOS:boardId:6730",
@@ -1761,7 +1884,8 @@
         "kind": "official_notice_body",
         "excerpt": "청약신청 : ‘26. 11. 16. (월) 00:00 ~ 23:00"
       },
-      "source_id": "SOCO"
+      "source_id": "SOCO",
+      "naver_detail": null
     },
     {
       "id": "SOCOS:boardId:6732",
@@ -1816,7 +1940,11 @@
         "kind": "official_notice_body",
         "excerpt": "청약신청 : ‘26. 11. 16. (월) 00:00 ~ 11. 18. (수) 23:00"
       },
-      "source_id": "SOCO"
+      "source_id": "SOCO",
+      "naver_detail": {
+        "post_id": "224475524157",
+        "kind": "plan"
+      }
     },
     {
       "id": "SOCOS:boardId:6724",
@@ -1871,7 +1999,8 @@
         "kind": "official_notice_body",
         "excerpt": "청약신청 : ‘26. 11. 06. (금) 09:00 ~ 11. 10. (화) 23:00"
       },
-      "source_id": "SOCO"
+      "source_id": "SOCO",
+      "naver_detail": null
     },
     {
       "id": "SOCOS:boardId:6721",
@@ -1926,7 +2055,8 @@
         "kind": "official_notice_body",
         "excerpt": "청약신청 : ‘26. 11. 09. (월) 00:00 ~ 11. 10. (화) 23:00"
       },
-      "source_id": "SOCO"
+      "source_id": "SOCO",
+      "naver_detail": null
     },
     {
       "id": "SOCOS:boardId:6720",
@@ -1981,7 +2111,8 @@
         "kind": "official_notice_body",
         "excerpt": "청약신청 : ‘26. 11. 09. (월) ~ 11. 10. (화) 00:00 ~ 23:00"
       },
-      "source_id": "SOCO"
+      "source_id": "SOCO",
+      "naver_detail": null
     },
     {
       "id": "SOCOS:boardId:6722",
@@ -2036,7 +2167,8 @@
         "kind": "official_notice_body",
         "excerpt": "청약신청 : ‘26. 11. 09. (월) 00:00 ~ 11. 10. (화) 23:00"
       },
-      "source_id": "SOCO"
+      "source_id": "SOCO",
+      "naver_detail": null
     },
     {
       "id": "SOCOS:boardId:6718",
@@ -2091,7 +2223,11 @@
         "kind": "official_notice_body",
         "excerpt": "청약신청 : ‘26. 11. 12. (목) 00:00 ~ 11. 15. (일) 24:00"
       },
-      "source_id": "SOCO"
+      "source_id": "SOCO",
+      "naver_detail": {
+        "post_id": "224471055481",
+        "kind": "plan"
+      }
     },
     {
       "id": "LH:panId:2015122300020843",
@@ -2120,7 +2256,8 @@
       "content_signature": "1b994ed3f3bbca6736a85cc8d3197ba4957b3d3f77d0ac466194d89755c5c40b",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "2026-10-14",
-      "schedule_source": "official_detail_html"
+      "schedule_source": "official_detail_html",
+      "naver_detail": null
     },
     {
       "id": "SHYOUTH:23a63706ef0b942659cb",
@@ -2158,7 +2295,8 @@
       "schedule_note": "공식 공고 검증 일정입니다. 접수시각과 대상은 공고문을 확인하세요.",
       "application_windows": [],
       "schedule_evidence": {},
-      "sh_schedule_version": 1
+      "sh_schedule_version": 1,
+      "naver_detail": null
     },
     {
       "id": "SHYOUTH:e14f796069d603741e53",
@@ -2196,7 +2334,8 @@
       "schedule_note": "공식 공고 검증 일정입니다. 접수시각과 대상은 공고문을 확인하세요.",
       "application_windows": [],
       "schedule_evidence": {},
-      "sh_schedule_version": 1
+      "sh_schedule_version": 1,
+      "naver_detail": null
     },
     {
       "id": "LH:panId:2015122300020759",
@@ -2226,7 +2365,8 @@
       "content_signature": "dff805821ae0dc900bdee0d9e431d0c3588030cd7703d946f87a4780b2a9e854",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "2026-09-28",
-      "schedule_source": "official_detail_html"
+      "schedule_source": "official_detail_html",
+      "naver_detail": null
     },
     {
       "id": "LH:panId:2015122300020749",
@@ -2257,7 +2397,8 @@
       "content_signature": "8500f38286b81dc0b7b903b84c2ca431d6e8c94770c6485c9a2b589db8584619",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "2026-09-28",
-      "schedule_source": "official_detail_html"
+      "schedule_source": "official_detail_html",
+      "naver_detail": null
     },
     {
       "id": "LH:panId:2015122300020750",
@@ -2288,7 +2429,8 @@
       "content_signature": "bbbdd7ed1130f0ee0a516452e5d60e83416b28e490c214fc6c6b7b33f9193061",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "2026-09-28",
-      "schedule_source": "official_detail_html"
+      "schedule_source": "official_detail_html",
+      "naver_detail": null
     },
     {
       "id": "LH:panId:2015122300020605",
@@ -2315,7 +2457,8 @@
       "content_signature": "2d62f0257b8e5b0eff5da6aa9cec5a75a312b6f1f0b53a0e4d36af3eb98998e2",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "2026-08-31",
-      "schedule_source": "official_detail_html"
+      "schedule_source": "official_detail_html",
+      "naver_detail": null
     },
     {
       "id": "LH:panId:2015122300020326",
@@ -2342,7 +2485,8 @@
       "content_signature": "646a5033a7971ddb18d0c5087a4590a326add7038a9322e2380f3c70c253318b",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "2026-07-27",
-      "schedule_source": "official_detail_html"
+      "schedule_source": "official_detail_html",
+      "naver_detail": null
     },
     {
       "id": "LH:panId:2015122300019941",
@@ -2369,7 +2513,8 @@
       "content_signature": "c79291c6431d8ef5ed3db625de08912d9503f59843a98b5d3470bf6a2ea0341e",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "2026-05-27",
-      "schedule_source": "official_detail_html"
+      "schedule_source": "official_detail_html",
+      "naver_detail": null
     },
     {
       "id": "LH:panId:2015122300019968",
@@ -2396,7 +2541,8 @@
       "content_signature": "71dffaee21177d93b6a97dd8c50d761b95aaa2164bfaf92349b46fb983381cf4",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "2026-05-27",
-      "schedule_source": "official_detail_html"
+      "schedule_source": "official_detail_html",
+      "naver_detail": null
     },
     {
       "id": "LH:panId:2015122300019890",
@@ -2423,7 +2569,8 @@
       "content_signature": "6a776bb58a4db4fc230f278af09798be97d578e3cf418634dc5fbe384e68f13a",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "2026-05-19",
-      "schedule_source": "official_detail_html"
+      "schedule_source": "official_detail_html",
+      "naver_detail": null
     },
     {
       "id": "LH:panId:2015122300018941",
@@ -2448,7 +2595,8 @@
       "content_signature": "a13631c08352671fc9304a36fec3c9f94fcedb1d19e0e19929d9496f17e24e54",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "2025-09-16",
-      "schedule_source": "official_detail_html"
+      "schedule_source": "official_detail_html",
+      "naver_detail": null
     },
     {
       "id": "LH:panId:2015122300019045",
@@ -2473,7 +2621,8 @@
       "content_signature": "c17efcc77289899284dbff1146889ea50b43fb42e95e44b8b03edc86d75a7ace",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "application_start": "2025-11-24",
-      "schedule_source": "official_detail_html"
+      "schedule_source": "official_detail_html",
+      "naver_detail": null
     },
     {
       "id": "SH:seq:313552",
@@ -2508,7 +2657,8 @@
       "schedule_note": "신규 신청공고가 아닌 결과·입주 안내입니다.",
       "application_windows": [],
       "schedule_evidence": {},
-      "sh_schedule_version": 1
+      "sh_schedule_version": 1,
+      "naver_detail": null
     },
     {
       "id": "SH:seq:313645",
@@ -2546,45 +2696,8 @@
       "schedule_note": "신규 신청공고가 아닌 결과·입주 안내입니다.",
       "application_windows": [],
       "schedule_evidence": {},
-      "sh_schedule_version": 1
-    },
-    {
-      "id": "SH:seq:313476",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "2026년 1차 기숙사형청년주택 입주자모집(2026.06.26.) 당첨자 및 예비자 발표",
-      "housing_types": [
-        "기숙사"
-      ],
-      "audiences": [
-        "청년"
-      ],
-      "region": "서울",
-      "published_at": "2026-11-20",
-      "deadline": "",
-      "open_state": "신청대상아님",
-      "event": "결과",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [
-        "청년",
-        "기숙사"
-      ],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313476",
-      "source": "SH 공식 주택임대 게시판",
-      "content_signature": "897b81ca031c0c73e860fecd376c53f7af89449890ac9964c586bfc00396ec39",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "published_source": "official_list_registration",
-      "notice_kind": "result",
-      "application_start": "",
-      "schedule_type": "not_applicable",
-      "deadline_precision": "unknown",
-      "schedule_source": "not_applicable",
-      "schedule_note": "신규 신청공고가 아닌 결과·입주 안내입니다.",
-      "application_windows": [],
-      "schedule_evidence": {},
-      "sh_schedule_version": 1
+      "sh_schedule_version": 1,
+      "naver_detail": null
     },
     {
       "id": "SH:seq:313652",
@@ -2617,7 +2730,8 @@
       "schedule_note": "신규 신청공고가 아닌 결과·입주 안내입니다.",
       "application_windows": [],
       "schedule_evidence": {},
-      "sh_schedule_version": 1
+      "sh_schedule_version": 1,
+      "naver_detail": null
     },
     {
       "id": "SH:seq:313617",
@@ -2655,7 +2769,8 @@
       "schedule_note": "신규 신청공고가 아닌 결과·입주 안내입니다.",
       "application_windows": [],
       "schedule_evidence": {},
-      "sh_schedule_version": 1
+      "sh_schedule_version": 1,
+      "naver_detail": null
     }
   ]
 }
