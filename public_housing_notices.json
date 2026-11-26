@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-26T04:17:29",
+  "generated_at": "2026-11-26T12:35:30",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
@@ -23,7 +23,7 @@
       ],
       "fresh_count": 4,
       "carried_count": 13,
-      "failure_streak": 190
+      "failure_streak": 191
     },
     "SH": {
       "count": 19,
@@ -32,7 +32,7 @@
     "SEOUL": {
       "count": 32,
       "errors": [],
-      "excluded_noise": 11
+      "excluded_noise": 12
     },
     "SOCO": {
       "count": 26,
@@ -56,7 +56,7 @@
     "total": 59,
     "gangseo": 5,
     "new": 0,
-    "updated": 2,
+    "updated": 0,
     "open_or_check": 15,
     "by_housing_type": {
       "기타임대": 7,
@@ -119,7 +119,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313268",
         "kind": "official_notice_body",
         "excerpt": "접수 기간 : 2026.11.23.(월) ~ 12.04.(금) 18시까지",
-        "verified_at": "2026-11-26T04:17:18"
+        "verified_at": "2026-11-26T12:35:18"
       },
       "sh_schedule_version": 1,
       "naver_detail": null
@@ -159,7 +159,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313227",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.11.24.(화) ~ 2026.12.07.(월)",
-        "verified_at": "2026-11-26T04:17:12"
+        "verified_at": "2026-11-26T12:35:11"
       },
       "sh_schedule_version": 1,
       "naver_detail": null
@@ -179,8 +179,8 @@
       "published_at": "",
       "deadline": "2026-12-07",
       "open_state": "접수중",
-      "event": "수정",
-      "change": "수정",
+      "event": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -201,7 +201,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313225",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.11.24.(화) ~ 12.07.(월) 18시까지",
-        "verified_at": "2026-11-26T04:17:14"
+        "verified_at": "2026-11-26T12:35:13"
       },
       "sh_schedule_version": 1,
       "naver_detail": {
@@ -248,7 +248,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313424",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.11.25.(수) ~ 2026.12.04.(금) 18시까지",
-        "verified_at": "2026-11-26T04:17:16"
+        "verified_at": "2026-11-26T12:35:16"
       },
       "sh_schedule_version": 1,
       "naver_detail": null
@@ -371,7 +371,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313613",
         "kind": "official_notice_body",
         "excerpt": "신청기간 : 2026.11.30.( 월 ) ~ 2026.12.2.( 수 )",
-        "verified_at": "2026-11-26T04:17:07"
+        "verified_at": "2026-11-26T12:35:06"
       },
       "sh_schedule_version": 1,
       "naver_detail": null
@@ -415,8 +415,8 @@
       "published_at": "2026-11-25",
       "deadline": "",
       "open_state": "확인필요",
-      "event": "수정",
-      "change": "수정",
+      "event": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
