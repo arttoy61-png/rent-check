@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-27T10:47:44",
+  "generated_at": "2026-11-27T21:15:30",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
@@ -23,16 +23,16 @@
       ],
       "fresh_count": 4,
       "carried_count": 13,
-      "failure_streak": 193
+      "failure_streak": 194
     },
     "SH": {
-      "count": 20,
+      "count": 19,
       "errors": []
     },
     "SEOUL": {
       "count": 41,
       "errors": [],
-      "excluded_noise": 11
+      "excluded_noise": 15
     },
     "SOCO": {
       "count": 34,
@@ -45,9 +45,9 @@
       "source_url": "https://soco.seoul.go.kr/youth/pgm/home/yohome/bbsListJson.json"
     },
     "TOTAL": {
-      "count": 64,
+      "count": 63,
       "duplicates_removed": 7,
-      "excluded_non_housing": 2,
+      "excluded_non_housing": 1,
       "excluded_outside_seoul": 0,
       "published_count": 69
     }
@@ -175,7 +175,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313268",
         "kind": "official_notice_body",
         "excerpt": "접수 기간 : 2026.11.23.(월) ~ 12.04.(금) 18시까지",
-        "verified_at": "2026-11-27T10:47:33"
+        "verified_at": "2026-11-27T21:15:19"
       },
       "sh_schedule_version": 1,
       "naver_detail": null
@@ -215,7 +215,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313227",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.11.24.(화) ~ 2026.12.07.(월)",
-        "verified_at": "2026-11-27T10:47:21"
+        "verified_at": "2026-11-27T21:15:13"
       },
       "sh_schedule_version": 1,
       "naver_detail": null
@@ -257,7 +257,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313225",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.11.24.(화) ~ 12.07.(월) 18시까지",
-        "verified_at": "2026-11-27T10:47:25"
+        "verified_at": "2026-11-27T21:15:15"
       },
       "sh_schedule_version": 1,
       "naver_detail": {
@@ -304,7 +304,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313424",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.11.25.(수) ~ 2026.12.04.(금) 18시까지",
-        "verified_at": "2026-11-27T10:47:29"
+        "verified_at": "2026-11-27T21:15:17"
       },
       "sh_schedule_version": 1,
       "naver_detail": null
@@ -3056,6 +3056,45 @@
       "naver_detail": null
     },
     {
+      "id": "SH:seq:313993",
+      "agency": "SH",
+      "agency_group": "SH",
+      "title": "NEW 2025년 2차 청년안심주택(2025. 7. 30. 공고) 예비6차 당첨자 발표",
+      "housing_types": [
+        "안심주택"
+      ],
+      "audiences": [
+        "청년"
+      ],
+      "region": "서울",
+      "published_at": "2026-11-27",
+      "deadline": "",
+      "open_state": "신청대상아님",
+      "event": "결과",
+      "change": "신규",
+      "status_text": "",
+      "is_gangseo": false,
+      "keywords": [
+        "청년",
+        "안심주택"
+      ],
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313993",
+      "source": "SH 공식 주택임대 게시판",
+      "content_signature": "f10550506f857cf63436d2284c226c77bb18476204ba365b9dcbfd06cd07e0e4",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "published_source": "official_list_registration",
+      "notice_kind": "result",
+      "application_start": "",
+      "schedule_type": "not_applicable",
+      "deadline_precision": "unknown",
+      "schedule_source": "not_applicable",
+      "schedule_note": "신규 신청공고가 아닌 결과·입주 안내입니다.",
+      "application_windows": [],
+      "schedule_evidence": {},
+      "sh_schedule_version": 1,
+      "naver_detail": null
+    },
+    {
       "id": "SH:seq:313983",
       "agency": "SH",
       "agency_group": "SH",
@@ -3069,7 +3108,7 @@
       "deadline": "",
       "open_state": "신청대상아님",
       "event": "결과",
-      "change": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [],
@@ -3146,45 +3185,6 @@
       "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313652",
       "source": "SH 공식 주택임대 게시판",
       "content_signature": "52d87bdca93af04096b25a578e3b0e4b3f26611771acc0c6bb5a80220b280e9d",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "published_source": "official_list_registration",
-      "notice_kind": "result",
-      "application_start": "",
-      "schedule_type": "not_applicable",
-      "deadline_precision": "unknown",
-      "schedule_source": "not_applicable",
-      "schedule_note": "신규 신청공고가 아닌 결과·입주 안내입니다.",
-      "application_windows": [],
-      "schedule_evidence": {},
-      "sh_schedule_version": 1,
-      "naver_detail": null
-    },
-    {
-      "id": "SH:seq:313617",
-      "agency": "SH",
-      "agency_group": "SH",
-      "title": "2025년 3차 청년안심주택(2025. 12. 30. 공고) 예비5차 당첨자 발표",
-      "housing_types": [
-        "안심주택"
-      ],
-      "audiences": [
-        "청년"
-      ],
-      "region": "서울",
-      "published_at": "2026-11-20",
-      "deadline": "",
-      "open_state": "신청대상아님",
-      "event": "결과",
-      "change": "동일",
-      "status_text": "",
-      "is_gangseo": false,
-      "keywords": [
-        "청년",
-        "안심주택"
-      ],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313617",
-      "source": "SH 공식 주택임대 게시판",
-      "content_signature": "a051ae07f801eccbe99003f8c6e01927e5fa2af9ec8b09b2fda4bd51dbf92b73",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "published_source": "official_list_registration",
       "notice_kind": "result",
