@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-27T21:15:30",
+  "generated_at": "2026-11-28T06:18:16",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
@@ -23,7 +23,7 @@
       ],
       "fresh_count": 4,
       "carried_count": 13,
-      "failure_streak": 194
+      "failure_streak": 195
     },
     "SH": {
       "count": 19,
@@ -55,8 +55,8 @@
   "summary": {
     "total": 69,
     "gangseo": 5,
-    "new": 1,
-    "updated": 0,
+    "new": 0,
+    "updated": 1,
     "open_or_check": 25,
     "by_housing_type": {
       "안심주택": 37,
@@ -175,7 +175,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313268",
         "kind": "official_notice_body",
         "excerpt": "접수 기간 : 2026.11.23.(월) ~ 12.04.(금) 18시까지",
-        "verified_at": "2026-11-27T21:15:19"
+        "verified_at": "2026-11-28T06:18:06"
       },
       "sh_schedule_version": 1,
       "naver_detail": null
@@ -215,7 +215,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313227",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.11.24.(화) ~ 2026.12.07.(월)",
-        "verified_at": "2026-11-27T21:15:13"
+        "verified_at": "2026-11-28T06:18:00"
       },
       "sh_schedule_version": 1,
       "naver_detail": null
@@ -257,7 +257,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313225",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.11.24.(화) ~ 12.07.(월) 18시까지",
-        "verified_at": "2026-11-27T21:15:15"
+        "verified_at": "2026-11-28T06:18:02"
       },
       "sh_schedule_version": 1,
       "naver_detail": {
@@ -304,7 +304,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313424",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.11.25.(수) ~ 2026.12.04.(금) 18시까지",
-        "verified_at": "2026-11-27T21:15:17"
+        "verified_at": "2026-11-28T06:18:04"
       },
       "sh_schedule_version": 1,
       "naver_detail": null
@@ -3059,7 +3059,7 @@
       "id": "SH:seq:313993",
       "agency": "SH",
       "agency_group": "SH",
-      "title": "NEW 2025년 2차 청년안심주택(2025. 7. 30. 공고) 예비6차 당첨자 발표",
+      "title": "2025년 2차 청년안심주택(2025. 7. 30. 공고) 예비6차 당첨자 발표",
       "housing_types": [
         "안심주택"
       ],
@@ -3071,7 +3071,7 @@
       "deadline": "",
       "open_state": "신청대상아님",
       "event": "결과",
-      "change": "신규",
+      "change": "수정",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -3080,7 +3080,7 @@
       ],
       "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313993",
       "source": "SH 공식 주택임대 게시판",
-      "content_signature": "f10550506f857cf63436d2284c226c77bb18476204ba365b9dcbfd06cd07e0e4",
+      "content_signature": "83f4b35c41866c40510d48b1a5ec7fef3aaf5b71674b2f0ef4600467b9b1ffe7",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "published_source": "official_list_registration",
       "notice_kind": "result",
