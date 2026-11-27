@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-27T01:55:12",
+  "generated_at": "2026-11-27T10:47:44",
   "scope": "서울 공공주거·주거비 공고: LH 서울권·SH·서울주거포털",
   "classification_policy": "청년뿐 아니라 신혼부부·신생아·고령자·장애인·다자녀 등 대상과 매입/전세/국민/행복/영구/공공/장기전세 등 주택유형을 함께 분류합니다. 제목 기반 탐색용 태그이며 공식 자격 판정이 아닙니다.",
   "source_status": {
@@ -23,7 +23,7 @@
       ],
       "fresh_count": 4,
       "carried_count": 13,
-      "failure_streak": 192
+      "failure_streak": 193
     },
     "SH": {
       "count": 20,
@@ -31,9 +31,7 @@
     },
     "SEOUL": {
       "count": 41,
-      "errors": [
-        "https://youth.seoul.go.kr/infoData/sprtInfo/list.do?key=2309130006 :: <urlopen error _ssl.c:1001: The handshake operation timed out>"
-      ],
+      "errors": [],
       "excluded_noise": 11
     },
     "SOCO": {
@@ -57,12 +55,12 @@
   "summary": {
     "total": 69,
     "gangseo": 5,
-    "new": 12,
+    "new": 1,
     "updated": 0,
     "open_or_check": 25,
     "by_housing_type": {
-      "기타임대": 8,
       "안심주택": 37,
+      "기타임대": 8,
       "행복주택": 7,
       "영구임대": 3,
       "장기전세": 3,
@@ -74,18 +72,74 @@
       "국민임대": 1
     },
     "by_audience": {
+      "청년": 38,
       "고령자": 2,
       "신혼부부": 6,
-      "청년": 38,
       "신생아": 3
     },
     "by_agency": {
-      "SH": 18,
       "SEOUL": 35,
+      "SH": 18,
       "LH": 16
     }
   },
   "items": [
+    {
+      "id": "SOCOS:boardId:6883",
+      "agency": "서울시 청년안심주택",
+      "agency_group": "SEOUL",
+      "title": "[민간임대] 왕십리역 라봄성동 추가모집공고",
+      "housing_types": [
+        "안심주택"
+      ],
+      "audiences": [
+        "청년"
+      ],
+      "region": "서울 성동구",
+      "published_at": "2026-11-26",
+      "deadline": "2026-11-30",
+      "open_state": "마감임박",
+      "event": "신규",
+      "change": "동일",
+      "status_text": "마감임박",
+      "is_gangseo": false,
+      "keywords": [
+        "청년",
+        "안심주택"
+      ],
+      "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6883&menuNo=400008",
+      "source": "서울시 청년안심주택",
+      "content_signature": "d0c0925f9495e1de4c6adba75316f51c1e6cb92315701782853878f64b24db58",
+      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
+      "notice_kind": "recruitment",
+      "application_start": "2026-11-27",
+      "application_start_at": "2026-11-27T10:00:00+09:00",
+      "deadline_at": "2026-11-30T10:00:00+09:00",
+      "application_windows": [
+        {
+          "label": "청약신청",
+          "start": "2026-11-27",
+          "end": "2026-11-30",
+          "start_at": "2026-11-27T10:00:00+09:00",
+          "end_at": "2026-11-30T10:00:00+09:00",
+          "precision": "minute",
+          "conditional": false,
+          "restricted": false,
+          "condition": ""
+        }
+      ],
+      "schedule_type": "single",
+      "deadline_precision": "minute",
+      "schedule_source": "official_detail_html",
+      "schedule_note": "공식 본문: 청약신청 : ‘26. 11. 27.(금) 10:00 ~ 11. 30. (월) 10:00",
+      "schedule_evidence": {
+        "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6883&menuNo=400008",
+        "kind": "official_notice_body",
+        "excerpt": "청약신청 : ‘26. 11. 27.(금) 10:00 ~ 11. 30. (월) 10:00"
+      },
+      "source_id": "SOCO",
+      "naver_detail": null
+    },
     {
       "id": "SH:seq:313268",
       "agency": "SH",
@@ -121,7 +175,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313268",
         "kind": "official_notice_body",
         "excerpt": "접수 기간 : 2026.11.23.(월) ~ 12.04.(금) 18시까지",
-        "verified_at": "2026-11-27T01:54:59"
+        "verified_at": "2026-11-27T10:47:33"
       },
       "sh_schedule_version": 1,
       "naver_detail": null
@@ -161,7 +215,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313227",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.11.24.(화) ~ 2026.12.07.(월)",
-        "verified_at": "2026-11-27T01:54:51"
+        "verified_at": "2026-11-27T10:47:21"
       },
       "sh_schedule_version": 1,
       "naver_detail": null
@@ -203,7 +257,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313225",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.11.24.(화) ~ 12.07.(월) 18시까지",
-        "verified_at": "2026-11-27T01:54:54"
+        "verified_at": "2026-11-27T10:47:25"
       },
       "sh_schedule_version": 1,
       "naver_detail": {
@@ -250,7 +304,7 @@
         "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313424",
         "kind": "official_notice_body",
         "excerpt": "접수기간 : 2026.11.25.(수) ~ 2026.12.04.(금) 18시까지",
-        "verified_at": "2026-11-27T01:54:56"
+        "verified_at": "2026-11-27T10:47:29"
       },
       "sh_schedule_version": 1,
       "naver_detail": null
@@ -271,7 +325,7 @@
       "deadline": "2026-11-30",
       "open_state": "접수예정",
       "event": "신규",
-      "change": "신규",
+      "change": "동일",
       "status_text": "접수예정",
       "is_gangseo": false,
       "keywords": [
@@ -327,7 +381,7 @@
       "deadline": "2026-12-01",
       "open_state": "접수예정",
       "event": "신규",
-      "change": "신규",
+      "change": "동일",
       "status_text": "접수예정",
       "is_gangseo": false,
       "keywords": [
@@ -368,62 +422,6 @@
       "naver_detail": null
     },
     {
-      "id": "SOCOS:boardId:6883",
-      "agency": "서울시 청년안심주택",
-      "agency_group": "SEOUL",
-      "title": "[민간임대] 왕십리역 라봄성동 추가모집공고",
-      "housing_types": [
-        "안심주택"
-      ],
-      "audiences": [
-        "청년"
-      ],
-      "region": "서울 성동구",
-      "published_at": "2026-11-26",
-      "deadline": "2026-11-30",
-      "open_state": "접수예정",
-      "event": "신규",
-      "change": "신규",
-      "status_text": "접수예정",
-      "is_gangseo": false,
-      "keywords": [
-        "청년",
-        "안심주택"
-      ],
-      "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6883&menuNo=400008",
-      "source": "서울시 청년안심주택",
-      "content_signature": "d0c0925f9495e1de4c6adba75316f51c1e6cb92315701782853878f64b24db58",
-      "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
-      "notice_kind": "recruitment",
-      "application_start": "2026-11-27",
-      "application_start_at": "2026-11-27T10:00:00+09:00",
-      "deadline_at": "2026-11-30T10:00:00+09:00",
-      "application_windows": [
-        {
-          "label": "청약신청",
-          "start": "2026-11-27",
-          "end": "2026-11-30",
-          "start_at": "2026-11-27T10:00:00+09:00",
-          "end_at": "2026-11-30T10:00:00+09:00",
-          "precision": "minute",
-          "conditional": false,
-          "restricted": false,
-          "condition": ""
-        }
-      ],
-      "schedule_type": "single",
-      "deadline_precision": "minute",
-      "schedule_source": "official_detail_html",
-      "schedule_note": "공식 본문: 청약신청 : ‘26. 11. 27.(금) 10:00 ~ 11. 30. (월) 10:00",
-      "schedule_evidence": {
-        "url": "https://soco.seoul.go.kr/youth/bbs/BMSR00015/view.do?boardId=6883&menuNo=400008",
-        "kind": "official_notice_body",
-        "excerpt": "청약신청 : ‘26. 11. 27.(금) 10:00 ~ 11. 30. (월) 10:00"
-      },
-      "source_id": "SOCO",
-      "naver_detail": null
-    },
-    {
       "id": "SOCOS:boardId:6884",
       "agency": "서울시 청년안심주택",
       "agency_group": "SEOUL",
@@ -439,7 +437,7 @@
       "deadline": "2026-11-30",
       "open_state": "접수예정",
       "event": "신규",
-      "change": "신규",
+      "change": "동일",
       "status_text": "접수예정",
       "is_gangseo": false,
       "keywords": [
@@ -495,7 +493,7 @@
       "deadline": "2026-11-30",
       "open_state": "접수예정",
       "event": "신규",
-      "change": "신규",
+      "change": "동일",
       "status_text": "접수예정",
       "is_gangseo": false,
       "keywords": [
@@ -551,7 +549,7 @@
       "deadline": "2026-11-30",
       "open_state": "접수예정",
       "event": "신규",
-      "change": "신규",
+      "change": "동일",
       "status_text": "접수예정",
       "is_gangseo": false,
       "keywords": [
@@ -607,7 +605,7 @@
       "deadline": "2026-12-10",
       "open_state": "접수예정",
       "event": "신규",
-      "change": "신규",
+      "change": "동일",
       "status_text": "접수예정",
       "is_gangseo": false,
       "keywords": [
@@ -663,7 +661,7 @@
       "deadline": "2026-12-02",
       "open_state": "접수예정",
       "event": "신규",
-      "change": "신규",
+      "change": "동일",
       "status_text": "접수예정",
       "is_gangseo": false,
       "keywords": [
@@ -827,7 +825,7 @@
       "deadline": "",
       "open_state": "확인필요",
       "event": "신규",
-      "change": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [],
@@ -861,7 +859,7 @@
       "deadline": "",
       "open_state": "확인필요",
       "event": "수정",
-      "change": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [],
@@ -1111,7 +1109,7 @@
       "deadline": "",
       "open_state": "확인필요",
       "event": "신규",
-      "change": "신규",
+      "change": "동일",
       "status_text": "",
       "is_gangseo": false,
       "keywords": [
@@ -3058,7 +3056,7 @@
       "naver_detail": null
     },
     {
-      "id": "SH:seq:313945",
+      "id": "SH:seq:313983",
       "agency": "SH",
       "agency_group": "SH",
       "title": "고덕강일지구 3단지 토지임대부 분양주택 본청약 당첨자 발표 및 서류제출 안내",
@@ -3075,9 +3073,9 @@
       "status_text": "",
       "is_gangseo": false,
       "keywords": [],
-      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313945",
+      "url": "https://www.i-sh.co.kr/main/lay2/program/S1T294C295/www/brd/m_241/view.do?seq=313983",
       "source": "SH 공식 주택임대 게시판",
-      "content_signature": "9ca80901b0be8659f4e5649d6c0992a088c0d96d0c05d2a2a6e21204158f8584",
+      "content_signature": "f940ae5f2c6dd4e3531f0fef6521e38eadf99bc6be44c4e0145ff91165c76043",
       "classification_note": "주택유형·대상은 공고 제목/목록 문구 기반 탐색용 분류이며 공식 자격 판정이 아닙니다.",
       "published_source": "official_list_registration",
       "notice_kind": "result",
