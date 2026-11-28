@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "status": "failed",
-  "attempted_at": "2026-11-28T02:47:38+00:00",
+  "attempted_at": "2026-11-28T04:01:53+00:00",
   "last_success_at": "2026-11-27T02:51:46+00:00",
   "snapshot_sha256": "46521820c3fca9c322de0d66fe5b5f6289c580e736ab9a4a1b8c1608a99c64f3",
   "snapshot_changed": false,
